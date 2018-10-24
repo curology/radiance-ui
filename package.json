@@ -1,0 +1,58 @@
+{
+  "name": "radiance",
+  "version": "1.0.0",
+  "description": "Curology's React based component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PocketDerm/radiance.git"
+  },
+  "keywords": [
+    "curology",
+    "component-library",
+    "react"
+  ],
+  "author": "Curology <engineering@curology.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PocketDerm/radiance/issues"
+  },
+  "homepage": "https://github.com/PocketDerm/radiance#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-curology": "^1.0.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-import-resolver-webpack": "^0.10.1",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-curology": "^0.0.4",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "1.14.3",
+    "tinycolor2": "^1.4.1"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "concurrent": false,
+    "subTaskConcurrency": 1,
+    "linters": {
+      "resources/**/!(style|styles).js": [
+        "prettier --write --single-quote",
+        "eslint --fix",
+        "git add"
+      ]
+    }
+  }
+}
