@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Curology's React based component library",
   "main": "index.js",
+  "engines": {
+      "node": ">=8.12.0"
+  },
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 9001 -c .storybook"
