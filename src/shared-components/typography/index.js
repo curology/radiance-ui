@@ -1,46 +1,32 @@
 import styled, { css } from 'react-emotion';
 import round from 'lodash.round';
 
-import { COLORS } from 'src/constants';
-
-export const FONT_SIZE = {
-  display: '2.25rem', // 36px
-  heading: '1.5rem', // 24px
-  title: '1.25rem', // 20px
-  body: '1rem', // 16px
-  caption: '0.875rem', // 14px
-  label: '0.75rem', // 12px
-};
-
-export const FONT_WEIGHT = {
-  bold: 'bold',
-  normal: 400,
-};
+import { COLORS, TYPOGRAPHY } from 'src/constants';
 
 const displayStyle = css`
   color: ${COLORS.primary};
-  font-size: ${FONT_SIZE.display};
-  font-weight: ${FONT_WEIGHT.bold};
+  font-size: ${TYPOGRAPHY.fontSize.display};
+  font-weight: ${TYPOGRAPHY.fontWeight.bold};
   line-height: ${round(48 / 36, 2)};
 `;
 
 const headingStyle = css`
   color: ${COLORS.primary};
-  font-size: ${FONT_SIZE.heading};
-  font-weight: ${FONT_WEIGHT.bold};
+  font-size: ${TYPOGRAPHY.fontSize.heading};
+  font-weight: ${TYPOGRAPHY.fontWeight.bold};
   line-height: ${round(40 / 24, 2)};
 `;
 
 const titleStyle = css`
   color: ${COLORS.primary};
-  font-size: ${FONT_SIZE.title};
+  font-size: ${TYPOGRAPHY.fontSize.title};
   line-height: ${round(32 / 20, 2)};
-  font-weight: ${FONT_WEIGHT.bold};
+  font-weight: ${TYPOGRAPHY.fontWeight.bold};
 `;
 
 export const baseBodyStyles = `
   color: ${COLORS.purpleTint1};
-  font-size: ${FONT_SIZE.body};
+  font-size: ${TYPOGRAPHY.fontSize.body};
   line-height: ${round(28 / 16, 2)};
 `;
 
@@ -48,7 +34,7 @@ const bodyStyle = css(baseBodyStyles);
 
 const captionStyle = css`
   color: ${COLORS.purpleTint2};
-  font-size: ${FONT_SIZE.caption};
+  font-size: ${TYPOGRAPHY.fontSize.caption};
   line-height: ${round(24 / 14, 2)};
 `;
 
@@ -64,13 +50,13 @@ const successStyle = css`
 
 const labelStyle = css`
   color: ${COLORS.purpleTint1};
-  font-size: ${FONT_SIZE.label};
+  font-size: ${TYPOGRAPHY.fontSize.label};
   line-height: ${round(20 / 12, 2)};
 `;
 
 const buttonStyle = css`
   ${labelStyle};
-  font-weight: ${FONT_WEIGHT.bold};
+  font-weight: ${TYPOGRAPHY.fontWeight.bold};
   letter-spacing: 1px;
   text-transform: uppercase;
 `;

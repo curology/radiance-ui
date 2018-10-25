@@ -5,8 +5,6 @@ import { withInfo } from '@storybook/addon-info';
 
 import { COLORS } from 'src/constants';
 import {
-  DisplayText,
-  HeadingText,
   Title,
   Caption,
   ErrorText,
@@ -14,6 +12,7 @@ import {
   Label,
   ButtonText,
 } from 'src/shared-components/typography';
+import { Typography } from 'src/shared-components';
 
 const Row = styled.div`
   display: flex;
@@ -126,7 +125,7 @@ stories.add(
       <hr />
 
       <SampleText
-        component={DisplayText}
+        component={Typography.DisplayText}
         componentName="DisplayText"
         styleName="display"
       />
@@ -134,7 +133,7 @@ stories.add(
       <hr />
 
       <SampleText
-        component={HeadingText}
+        component={Typography.HeadingText}
         componentName="HeadingText"
         styleName="heading"
       />

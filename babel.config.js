@@ -5,5 +5,6 @@ module.exports = {
   ],
   plugins: [
     'emotion',
+    '@babel/plugin-proposal-export-namespace-from',
   ],
 };

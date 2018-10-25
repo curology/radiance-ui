@@ -1,5 +1,5 @@
-import { COLORS, FONTS } from 'src/constants';
-import { baseBodyStyles, FONT_WEIGHT } from 'src/shared-components/typography';
+import { COLORS, FONTS, TYPOGRAPHY } from 'src/constants';
+import { baseBodyStyles } from 'src/shared-components/typography';
 
 export const resetStyles = `
   html {
@@ -195,7 +195,7 @@ export const brandStyles = `
     ${baseBodyStyles};
     background-color: ${COLORS.white};
     font-family: ${FONTS.baseFont};
-    font-weight: ${FONT_WEIGHT.normal};
+    font-weight: ${TYPOGRAPHY.fontWeight.normal};
     margin: 0;
     transition-timing-function: ease-in-out;
   }
