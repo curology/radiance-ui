@@ -1,3 +1,20 @@
 {
-  "extends": "curology"
+  "extends": "curology",
+  "overrides": [
+     {
+       "files": ["test.js"],
+       "rules": {
+         "no-undef": "off"
+       }
+     }
+   ],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./.storybook/webpack.config.js"
+      }
+    },
+    "import/extensions": [".js", ".jsx"]
+  }
+
 }
