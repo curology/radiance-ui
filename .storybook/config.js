@@ -30,7 +30,7 @@ injectGlobal`
 
 injectGlobalStyles();
 
-const req = require.context('../src/stories', true, /.js$/);
+const req = require.context('../stories', true, /.js$/);
 function loadStories() {
   req.keys().forEach(req);
 }

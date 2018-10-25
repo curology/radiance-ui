@@ -1,4 +1,4 @@
-import { SPACING } from 'src/constants';
+import SPACING from 'src/constants/spacing';
 
 export default {
   xsContentMaxWidth: '350px',

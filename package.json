@@ -38,6 +38,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
+    "circular-dependency-plugin": "^5.0.2",
     "emotion": "^9.2.12",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
