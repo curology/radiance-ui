@@ -20,7 +20,7 @@
     "build": "run-s clean && run-p build:rollup build:babel",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
-    "publish-package": "run-s build && yarn version && yarn publish"
+    "publish-package": "run-s build && yarn publish"
   },
   "repository": {
     "type": "git",
