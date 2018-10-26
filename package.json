@@ -2,13 +2,20 @@
   "name": "radiance-ui",
   "version": "1.0.0",
   "description": "Curology's React based component library",
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.es.js",
+  "files": [ "dist", "lib", "lib/constants", "lib/utils"],
   "engines": {
-      "node": ">=8.12.0"
+    "node": ">=8.12.0"
   },
   "scripts": {
     "test": "jest",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "clean": "rimraf dist lib",
+    "build": "run-s clean && run-p build:rollup build:babel",
+    "build:rollup": "rollup -c",
+    "build:babel": "babel src -d lib",
+    "publish": "run-s build version publish"
   },
   "repository": {
     "type": "git",
@@ -26,6 +33,7 @@
   },
   "homepage": "https://github.com/PocketDerm/radiance-ui#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
@@ -64,12 +72,14 @@
     "react-dom": "^16.6.0",
     "react-emotion": "^9.2.12",
     "regenerator-runtime": "^0.12.1",
+    "rimraf": "^2.6.2",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "tinycolor2": "^1.4.1",
-    "webpack": "^4.23.0"
+    "webpack": "^4.23.0",
+    "yarn-run-all": "^3.1.1"
   },
   "dependencies": {},
   "husky": {
