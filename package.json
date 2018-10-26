@@ -1,10 +1,15 @@
 {
   "name": "radiance-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Curology's React based component library",
   "main": "dist/bundle.js",
   "module": "dist/bundle.es.js",
-  "files": [ "dist", "lib", "lib/constants", "lib/utils"],
+  "files": [
+    "dist",
+    "lib",
+    "lib/constants",
+    "lib/utils"
+  ],
   "engines": {
     "node": ">=8.12.0"
   },
@@ -15,7 +20,7 @@
     "build": "run-s clean && run-p build:rollup build:babel",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
-    "publish": "run-s build version publish"
+    "publish": "run-s build && yarn version && yarn publish"
   },
   "repository": {
     "type": "git",
