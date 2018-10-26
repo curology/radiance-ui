@@ -1,7 +1,7 @@
 import styled, { css } from 'react-emotion';
 import round from 'lodash.round';
 
-import { COLORS, TYPOGRAPHY } from 'src/constants';
+import { COLORS, TYPOGRAPHY } from '../../constants';
 
 const displayStyle = css`
   color: ${COLORS.primary};

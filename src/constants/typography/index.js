@@ -1,4 +1,4 @@
-import throwOnUndefinedProperty from 'src/utils/throwOnUndefinedProperty';
+import { throwOnUndefinedProperty } from '../../utils';
 
 const fontSize = throwOnUndefinedProperty({
   display: '2.25rem', // 36px

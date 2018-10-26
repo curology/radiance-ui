@@ -1,4 +1,4 @@
-import { transparentize } from 'src/utils';
+import { transparentize } from '../../utils';
 
 const boxShadowColor = '#2d2d30';
 const boxShadowOverlayColor = '#505050';

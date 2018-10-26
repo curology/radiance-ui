@@ -1,4 +1,4 @@
-import throwOnUndefinedProperty from 'src/utils/throwOnUndefinedProperty';
+import { throwOnUndefinedProperty } from '../../utils';
 
 export const BREAKPOINTS = {
   xs: 330,

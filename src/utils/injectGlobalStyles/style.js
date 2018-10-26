@@ -1,5 +1,5 @@
-import { COLORS, FONTS, TYPOGRAPHY } from 'src/constants';
-import { baseBodyStyles } from 'src/shared-components/typography';
+import { COLORS, FONTS, TYPOGRAPHY } from '../../constants';
+import { baseBodyStyles } from '../../shared-components/typography';
 
 export const resetStyles = `
   html {
