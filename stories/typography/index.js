@@ -4,14 +4,6 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
 import { COLORS } from 'src/constants';
-import {
-  Title,
-  Caption,
-  ErrorText,
-  SuccessText,
-  Label,
-  ButtonText,
-} from 'src/shared-components/typography';
 import { Typography } from 'src/shared-components';
 
 const Row = styled.div`
@@ -57,133 +49,128 @@ const SampleText = ({ component, componentName, styleName }) => {
 const stories = storiesOf('Typography', module);
 
 stories.add(
-  'Styles',
+  'Usage',
   withInfo(`
-    # Usage
     These are preconfigured typography styles. They can be used as is or included as part of
     another styled component with overrides.
-    ~~~js
-    <br />
-    ~~~
+
     ---
-    ## Named Export (default styling)
-    To use them as is, import the named export. All named import components accept color as a prop for easy override.
-    ~~~js
-    <br />
-    ~~~
+    ## Typography Component
+    To use the default component for the particular style, import Typography and access
+    the component as part of the object's attribute:
 
     ~~~js
-    import { HeadingText } from 'shared-components/typography';
+    import { Typography } from 'radiant-ui';
 
-    < HeadingText >Header 1< /HeadingText >
-    < HeadingText color="red">Header 1< /HeadingText >
-    ~~~
-    ~~~js
-    <br />
+    <Typography.Display>Header 1</Typography.Display>
     ~~~
 
     ---
-    ## Default Export (override styling)
-    To use them as a base style with overrides, import the default export and use it as part
-    of the styled component definition.
-    ~~~js
-    <br />
-    ~~~
+    ## Typography Style (css)
+    To grab the typography's style to compose as part of an Emotion component, impor
+    TypographyStyle and access the style as part of the object's attribute:
 
     ~~~js
     import styled from 'react-emotion';
-    import TYPOGRAPHY from 'shared-components/typography';
+    import { TypographyStyle } from 'radiant-ui';
 
     const newTextStyle = styled.div\`
-      \${TYPOGRAPHY.heading}
+      \${TypographyStyle.display}
       font-size: 55px;
     \`;
-    ~~~
-
-    ~~~js
-    <br />
     ~~~
   `)(() => (
     <div style={{ padding: '2rem', backgroundColor: COLORS.background }}>
       <div>
         <Row>
-          <Named>Named Import</Named>
-          <Default>Default Import key name</Default>
+          <Named>Component Name</Named>
+          <Default>Style Name</Default>
         </Row>
-        <p css="padding-bottom: 8px;">
-          Each typography style is exported as a styled component named export,
-          specified by the first name (i.e. DisplayText, HeadingText).
+        <p css="padding-bottom: 16px;">
+          Each typography style is exported on the Typography object and
+          can be accessed as an attribute of that object. The name of the
+          attribute is specified by the “Component Name”. (i.e. Typography.Display,
+          Typography.Heading).
         </p>
-        <p css="padding-bottom: 8px;">
-          Each style is also exported as part of the default object as a css
-          class. The key is specified by the second name (i.e. display,
-          heading).
+        <p css="padding-bottom: 16px;">
+          Each style is also exported as TypographyStyle object as a css
+          class. The styles can be accessed the same way that the components
+          are accessed. The name of the attribute is specified by the
+          “Style Name”. (i.e. TypographyStyle.display, TypographyStyle.heading)
         </p>
-        <p css="padding-bottom: 8px;">See more info for details.</p>
+        <p css="padding-bottom: 16px;">See <strong>Show Info</strong> for details.</p>
       </div>
 
       <hr />
 
       <SampleText
-        component={Typography.DisplayText}
-        componentName="DisplayText"
-        styleName="display"
+        component={Typography.Display}
+        componentName="Typography.Display"
+        styleName="TypographyStyle.display"
       />
 
       <hr />
 
       <SampleText
-        component={Typography.HeadingText}
-        componentName="HeadingText"
-        styleName="heading"
-      />
-
-      <hr />
-
-      <SampleText component={Title} componentName="Title" styleName="title" />
-
-      <hr />
-
-      <SampleText component={Title} componentName="Title" styleName="title" />
-
-      <hr />
-
-      <SampleText component="p" componentName="p" styleName="body" />
-
-      <hr />
-
-      <SampleText
-        component={Caption}
-        componentName="Caption"
-        styleName="caption"
+        component={Typography.Heading}
+        componentName="Typography.Heading"
+        styleName="TypographyStyle.heading"
       />
 
       <hr />
 
       <SampleText
-        component={ErrorText}
-        componentName="ErrorText"
-        styleName="error"
+        component={Typography.Title}
+        componentName="Typography.Title"
+        styleName="TypographyStyle.title"
       />
 
       <hr />
 
       <SampleText
-        component={SuccessText}
-        componentName="SuccessText"
-        styleName="success"
+        component="p"
+        componentName="p"
+        styleName="TypographyStyle.body"
       />
 
       <hr />
 
-      <SampleText component={Label} componentName="Label" styleName="label" />
+      <SampleText
+        component={Typography.Caption}
+        componentName="Typography.Caption"
+        styleName="TypographyStyle.caption"
+      />
 
       <hr />
 
       <SampleText
-        component={ButtonText}
-        componentName="ButtonText"
-        styleName="button"
+        component={Typography.ErrorText}
+        componentName="Typography.ErrorText"
+        styleName="TypographyStyle.error"
+      />
+
+      <hr />
+
+      <SampleText
+        component={Typography.SuccessText}
+        componentName="Typography.SuccessText"
+        styleName="TypographyStyle.success"
+      />
+
+      <hr />
+
+      <SampleText
+        component={Typography.Label}
+        componentName="Typography.Label"
+        styleName="TypographyStyle.label"
+      />
+
+      <hr />
+
+      <SampleText
+        component={Typography.ButtonText}
+        componentName="Typography.ButtonText"
+        styleName="TypographyStyle.button"
       />
     </div>
   ))

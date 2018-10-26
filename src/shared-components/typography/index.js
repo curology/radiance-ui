@@ -76,17 +76,7 @@ const linkStyle = css`
   }
 `;
 
-export const DisplayText = styled.h1(displayStyle);
-export const HeadingText = styled.h2(headingStyle);
-export const Title = styled.h3(titleStyle);
-export const Caption = styled.p(captionStyle);
-export const ErrorText = styled.p(errorStyle);
-export const SuccessText = styled.p(successStyle);
-export const Label = styled.label(labelStyle);
-export const ButtonText = styled.span(buttonStyle);
-export const LinkTag = styled.a(linkStyle);
-
-export default {
+export const style =  {
   display: displayStyle,
   heading: headingStyle,
   title: titleStyle,
@@ -99,3 +89,24 @@ export default {
   link: linkStyle,
 };
 
+const ButtonText = styled.span(buttonStyle);
+const Caption = styled.p(captionStyle);
+const Display = styled.h1(displayStyle);
+const ErrorText = styled.p(errorStyle);
+const Heading = styled.h2(headingStyle);
+const Label = styled.label(labelStyle);
+const LinkTag = styled.a(linkStyle);
+const SuccessText = styled.p(successStyle);
+const Title = styled.h3(titleStyle);
+
+export default {
+  ButtonText,
+  Caption,
+  Display,
+  ErrorText,
+  Heading,
+  Label,
+  LinkTag,
+  SuccessText,
+  Title,
+};
