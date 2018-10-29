@@ -1,32 +1,32 @@
 import styled, { css } from 'react-emotion';
 import round from 'lodash.round';
 
-import { COLORS, TYPOGRAPHY } from '../../constants';
+import { COLORS, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 const displayStyle = css`
   color: ${COLORS.primary};
-  font-size: ${TYPOGRAPHY.fontSize.display};
-  font-weight: ${TYPOGRAPHY.fontWeight.bold};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.display};
+  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   line-height: ${round(48 / 36, 2)};
 `;
 
 const headingStyle = css`
   color: ${COLORS.primary};
-  font-size: ${TYPOGRAPHY.fontSize.heading};
-  font-weight: ${TYPOGRAPHY.fontWeight.bold};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.heading};
+  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   line-height: ${round(40 / 24, 2)};
 `;
 
 const titleStyle = css`
   color: ${COLORS.primary};
-  font-size: ${TYPOGRAPHY.fontSize.title};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.title};
   line-height: ${round(32 / 20, 2)};
-  font-weight: ${TYPOGRAPHY.fontWeight.bold};
+  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
 `;
 
 export const baseBodyStyles = `
   color: ${COLORS.purpleTint1};
-  font-size: ${TYPOGRAPHY.fontSize.body};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.body};
   line-height: ${round(28 / 16, 2)};
 `;
 
@@ -34,7 +34,7 @@ const bodyStyle = css(baseBodyStyles);
 
 const captionStyle = css`
   color: ${COLORS.purpleTint2};
-  font-size: ${TYPOGRAPHY.fontSize.caption};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   line-height: ${round(24 / 14, 2)};
 `;
 
@@ -50,13 +50,13 @@ const successStyle = css`
 
 const labelStyle = css`
   color: ${COLORS.purpleTint1};
-  font-size: ${TYPOGRAPHY.fontSize.label};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.label};
   line-height: ${round(20 / 12, 2)};
 `;
 
 const buttonStyle = css`
   ${labelStyle};
-  font-weight: ${TYPOGRAPHY.fontWeight.bold};
+  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   letter-spacing: 1px;
   text-transform: uppercase;
 `;

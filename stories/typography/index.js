@@ -1,31 +1,16 @@
 import React from 'react';
-import styled from 'react-emotion';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
 import { COLORS } from 'src/constants';
 import { Typography } from 'src/shared-components';
 
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  padding-bottom: 8px;
-`;
-
-const Named = styled.p`
-  padding-right: 10px;
-  border-right: 1px solid black;
-`;
-
-const Default = styled.p`
-  padding-left: 5px;
-  padding-right: 5px;
-`;
-
-const Example = styled.div`
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-`;
+import {
+  Row,
+  Named,
+  Default,
+  Example,
+} from './style';
 
 // eslint-disable-next-line react/prop-types
 const SampleText = ({ component, componentName, styleName }) => {
