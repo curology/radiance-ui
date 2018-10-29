@@ -15,12 +15,14 @@
   },
   "scripts": {
     "test": "jest",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -c .storybook -s ./public",
+    "build-storybook": "build-storybook -c .storybook -o .out -s ./public",
     "clean": "rimraf dist lib",
     "build": "run-s clean && run-p build:rollup build:babel",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
-    "publish-package": "run-s build && yarn publish"
+    "publish-package": "run-s build && yarn publish",
+    "heroku-postbuild": "yarn run build-storybook"
   },
   "repository": {
     "type": "git",
@@ -44,12 +46,12 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "@storybook/addon-actions": "4.0.0-alpha.25",
-    "@storybook/addon-info": "4.0.0-alpha.25",
-    "@storybook/addon-knobs": "4.0.0-alpha.25",
-    "@storybook/addon-links": "4.0.0-alpha.25",
-    "@storybook/react": "4.0.0-alpha.25",
-    "@storybook/storybook-deployer": "^2.3.0",
+    "@storybook/addon-actions": "4.0.0",
+    "@storybook/addon-info": "4.0.0",
+    "@storybook/addon-knobs": "4.0.0",
+    "@storybook/addon-links": "4.0.0",
+    "@storybook/addon-options": "^4.0.0",
+    "@storybook/react": "4.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
@@ -82,6 +84,7 @@
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
+    "storybook-readme": "^4.0.2",
     "tinycolor2": "^1.4.1",
     "webpack": "^4.23.0",
     "yarn-run-all": "^3.1.1"

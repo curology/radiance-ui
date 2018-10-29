@@ -3,6 +3,8 @@ import { injectGlobal } from 'react-emotion';
 
 import injectGlobalStyles from 'src/utils/injectGlobalStyles';
 
+import optionConfig from './optionConfig';
+
 injectGlobal`
   @font-face {
     font-family: 'nocturno';
