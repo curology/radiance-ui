@@ -12,13 +12,17 @@ import Color from './Color';
 
 const stories = storiesOf('CONSTANTS', module);
 
+const CONSTANTS_WITH_OWN_STORY = [
+  'COLORS',
+];
+
 stories.add(
   'available constants',
   withDocs(ConstantsReadme, () => (
     <div css="text-align: left;">
       {
         Object.keys(CONSTANTS).map(category => {
-          if (['COLORS'].includes(category)) {
+          if (CONSTANTS_WITH_OWN_STORY.includes(category)) {
             // COLORS is handled on its own story
             return null;
           }
