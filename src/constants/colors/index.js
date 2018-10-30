@@ -29,12 +29,16 @@ export const brandColors = {
   // Status
   statusGreen: '#317f3b',
   statusGreenBackground: '#eaf2eb',
+  statusGreenBorder: '#DAECDC',
   statusPurple: '#a6a1e2',
   statusPurpleBackground: '#f6f5fc',
+  statusPurpleBorder: '#EBEAF9',
   statusRed: '#ff5e4d',
   statusRedBackground: '#ffeeed',
+  statusRedBorder: '#FFE4E2',
   statusGrey: '#858298',
   statusGreyBackground: '#ededf0',
+  statusGreyBorder: '#e1e0e6',
 
   // Misc
   black: '#000000',
