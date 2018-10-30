@@ -23,7 +23,6 @@ stories.add(
       {
         Object.keys(CONSTANTS).map(category => {
           if (CONSTANTS_WITH_OWN_STORY.includes(category)) {
-            // COLORS is handled on its own story
             return null;
           }
 
