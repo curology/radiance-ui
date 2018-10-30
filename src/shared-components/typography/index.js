@@ -1,6 +1,7 @@
 import styled, { css } from 'react-emotion';
 import round from 'lodash.round';
 
+import { withDeprecationWarning } from '../../utils';
 import { COLORS, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 const displayStyle = css`
@@ -89,24 +90,39 @@ export const style =  {
   link: linkStyle,
 };
 
-const ButtonText = styled.span(buttonStyle);
+const Button = styled.span(buttonStyle);
 const Caption = styled.p(captionStyle);
 const Display = styled.h1(displayStyle);
-const ErrorText = styled.p(errorStyle);
+const ErrorComponent = styled.p(errorStyle);
 const Heading = styled.h2(headingStyle);
 const Label = styled.label(labelStyle);
-const LinkTag = styled.a(linkStyle);
-const SuccessText = styled.p(successStyle);
+const Link = styled.a(linkStyle);
+const Success = styled.p(successStyle);
 const Title = styled.h3(titleStyle);
 
-export default {
-  ButtonText,
+const Typography = {
+  Button,
   Caption,
   Display,
-  ErrorText,
+  Error: ErrorComponent,
   Heading,
   Label,
-  LinkTag,
-  SuccessText,
+  Link,
+  Success,
   Title,
+
+  // Legacy names. Will be removed in v2 (next major)
+  LinkTag: Link,
+  ButtonText: Button,
+  SuccessText: Success,
+  ErrorText: ErrorComponent,
 };
+
+const deprecatedProperties = {
+  LinkTag: 'LinkTag will be deprecated in v2. Use Link instead',
+  ButtonText: 'ButtonText will be deprecated in v2. Use Button instead',
+  SuccessText: 'SuccessText will be deprecated in v2. Use Success instead',
+  ErrorText: 'ErrorText will be deprecated in v2. Use Error instead',
+};
+
+export default withDeprecationWarning(Typography, deprecatedProperties);
