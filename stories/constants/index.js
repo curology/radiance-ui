@@ -1,36 +1,41 @@
 import React from 'react';
+import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
 
 import * as COLORS from 'src/constants/colors';
 import * as CONSTANTS from 'src/constants';
 import { Typography } from 'src/shared-components';
+import ConstantsReadme from 'docs/constants.md';
 
 import renderConstantsMap from './renderConstantsMap';
 import Color from './Color';
 
 const stories = storiesOf('CONSTANTS', module);
 
-stories.add('available constants', () => (
-  <div>
-    {
-      Object.keys(CONSTANTS).map(category => {
-        if (['COLORS'].includes(category)) {
-          // COLORS is handled on its own story
-          return null;
-        }
+stories.add(
+  'available constants',
+  withDocs(ConstantsReadme, () => (
+    <div css="text-align: left;">
+      {
+        Object.keys(CONSTANTS).map(category => {
+          if (['COLORS'].includes(category)) {
+            // COLORS is handled on its own story
+            return null;
+          }
 
-        const categoryConstant = CONSTANTS[category];
+          const categoryConstant = CONSTANTS[category];
 
-        return (
-          <div css={`padding-bottom: ${CONSTANTS.SPACING.small};`}>
-            <Typography.Heading>{category}</Typography.Heading>
-            {renderConstantsMap(categoryConstant)}
-          </div>
-        );
-      })
-    }
-  </div>
-));
+          return (
+            <div css={`padding-bottom: ${CONSTANTS.SPACING.small};`}>
+              <Typography.Heading>{category}</Typography.Heading>
+              {renderConstantsMap(categoryConstant)}
+            </div>
+          );
+        })
+      }
+    </div>
+  ))
+);
 
 stories.add('COLORS', () => (
   <React.Fragment>
