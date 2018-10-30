@@ -60,7 +60,6 @@ export const colorAliases = {
   purple: brandColors.purple100,
   purpleTint1: brandColors.purple80,
   purpleTint2: brandColors.purple60,
-  purpleTint3: brandColors.purple40,
 
   // brand colors
   primary: brandColors.purple100,
@@ -111,7 +110,6 @@ export const postcardColors = {
   postcardOrange: legacyColors.orange,
   postcardBlack: '#414141',
   postcardGrey: '#bfc6cb',
-  postcardPurple: legacyColors.purple,
   postcardYellow: brandColors.yellow,
 };
 
