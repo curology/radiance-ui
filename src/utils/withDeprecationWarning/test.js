@@ -30,14 +30,14 @@ describe('property that is not in deprecatedProperties', () => {
 });
 
 describe('property that is in deprecatedProperties', () => {
-  test('does warns in console', () => {
+  test('warns in console', () => {
     const warn = jest.spyOn(console, 'warn');
     const subject = withDeprecationWarning(testObj, deprecatedProperties);
 
     // eslint-disable-next-line no-unused-expressions
     subject.deprecated
 
-    expect(warn).toHaveBeenCalledWith(`[Deprecation Warning] ${deprecatedMessage}`);
+    expect(warn).toHaveBeenCalledWith(`[Deprecation Warning]: ${deprecatedMessage}`);
     warn.mockRestore();
   });
 
