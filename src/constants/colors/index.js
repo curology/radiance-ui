@@ -29,12 +29,16 @@ export const brandColors = {
   // Status
   statusGreen: '#317f3b',
   statusGreenBackground: '#eaf2eb',
+  statusGreenBorder: '#DAECDC',
   statusPurple: '#a6a1e2',
   statusPurpleBackground: '#f6f5fc',
+  statusPurpleBorder: '#EBEAF9',
   statusRed: '#ff5e4d',
   statusRedBackground: '#ffeeed',
+  statusRedBorder: '#FFE4E2',
   statusGrey: '#858298',
   statusGreyBackground: '#ededf0',
+  statusGreyBorder: '#e1e0e6',
 
   // Misc
   black: '#000000',
@@ -56,7 +60,6 @@ export const colorAliases = {
   purple: brandColors.purple100,
   purpleTint1: brandColors.purple80,
   purpleTint2: brandColors.purple60,
-  purpleTint3: brandColors.purple40,
 
   // brand colors
   primary: brandColors.purple100,
@@ -107,7 +110,6 @@ export const postcardColors = {
   postcardOrange: legacyColors.orange,
   postcardBlack: '#414141',
   postcardGrey: '#bfc6cb',
-  postcardPurple: legacyColors.purple,
   postcardYellow: brandColors.yellow,
 };
 
