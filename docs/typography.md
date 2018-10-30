@@ -10,10 +10,10 @@ import { Typography } from 'radiance-ui';
 <p>Body</p>
 <Typography.Caption>Caption</Typography.Caption>
 <Typography.Label>Label</Typography.Label>
-<Typography.ErrorText>ErrorText</Typography.ErrorText>
-<Typography.SuccessText>SuccessText</Typography.SuccessText>
-<Typography.LinkTag>LinkTag</Typography.LinkTag>
-<Typography.ButtonText>ButtonText</Typography.ButtonText>
+<Typography.Error>Error</Typography.Error>
+<Typography.Success>Success</Typography.Success>
+<Typography.Link>Link</Typography.Link>
+<Typography.Button>Button</Typography.Button>
 ```
 
 <!-- STORY -->
