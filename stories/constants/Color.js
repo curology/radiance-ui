@@ -7,10 +7,8 @@ const ColorContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  padding: 16px;
-
   flex: 1;
+  padding: 16px;
 `;
 
 const ColorSample = styled.div`
