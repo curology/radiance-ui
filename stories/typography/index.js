@@ -22,12 +22,12 @@ stories.add(
         <p>Body</p>
         <Typography.Caption>Caption</Typography.Caption>
         <Typography.Label>Label</Typography.Label>
-        <Typography.ErrorText>ErrorText</Typography.ErrorText>
-        <Typography.SuccessText>SuccessText</Typography.SuccessText>
+        <Typography.Error>Error</Typography.Error>
+        <Typography.Success>Success</Typography.Success>
         <div>
-          <Typography.LinkTag>LinkTag</Typography.LinkTag>
+          <Typography.Link>Link</Typography.Link>
         </div>
-        <Typography.ButtonText>ButtonText</Typography.ButtonText>
+        <Typography.Button>Button</Typography.Button>
       </div>
       <div css={`text-align: left; padding-top: ${SPACING.small};`}>
         <Typography.Heading>With Knobs</Typography.Heading>

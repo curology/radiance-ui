@@ -89,24 +89,30 @@ export const style =  {
   link: linkStyle,
 };
 
-const ButtonText = styled.span(buttonStyle);
+const Button = styled.span(buttonStyle);
 const Caption = styled.p(captionStyle);
 const Display = styled.h1(displayStyle);
-const ErrorText = styled.p(errorStyle);
+const ErrorComponent = styled.p(errorStyle);
 const Heading = styled.h2(headingStyle);
 const Label = styled.label(labelStyle);
-const LinkTag = styled.a(linkStyle);
-const SuccessText = styled.p(successStyle);
+const Link = styled.a(linkStyle);
+const Success = styled.p(successStyle);
 const Title = styled.h3(titleStyle);
 
 export default {
-  ButtonText,
+  Button,
   Caption,
   Display,
-  ErrorText,
+  Error: ErrorComponent,
   Heading,
   Label,
-  LinkTag,
-  SuccessText,
+  Link,
+  Success,
   Title,
+
+  // Legacy names. Will be removed in v2 (next major)
+  LinkTag: Link,
+  ButtonText: Button,
+  SuccessText: Success,
+  ErrorText: ErrorComponent,
 };
