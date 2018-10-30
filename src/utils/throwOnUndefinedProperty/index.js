@@ -1,6 +1,10 @@
 export default function throwOnUndefinedProperty(obj) {
   const handler = {
     get(target, property) {
+      if (property === "__isProxy") {
+        return true;
+      }
+
       if (property in target) {
         return target[property];
       }
