@@ -6,6 +6,17 @@ module.exports = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
     extensions: ['.js', '.jsx'],
   },
+  module: {
+    rules: [
+      {
+        test: /\.svg$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      }
+    ],
+  },
   plugins: [
     new CircularDependencyPlugin({
       exclude: /node_modules/,
