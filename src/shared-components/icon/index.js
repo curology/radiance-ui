@@ -35,6 +35,7 @@ const Icon = ({
   duskId,
   ...rest
 }) => {
+  // eslint-disable-next-line no-undef
   const icon = window.__SVG_INLINE__
     ? `#${iconName}`
     : `${iconFilePath}#${iconName}`;
