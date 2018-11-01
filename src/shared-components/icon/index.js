@@ -45,6 +45,8 @@ const Icon = ({
       css={`
         display: ${inline ? 'inline-block' : 'block'};
         transform: rotate(${rotate}deg);
+        color: ${fill};
+        transition: color 350ms;
         ${className};
       `}
       {...rest}
