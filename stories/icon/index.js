@@ -30,7 +30,6 @@ stories.add(
         inline={boolean('inline display option', false)}
         rotate={number('Rotation degrees', 0)}
         className={text('additional css class names', '')}
-        duskId={text('dusk id for integration testing', '')}
       />
     </React.Fragment>
   ))

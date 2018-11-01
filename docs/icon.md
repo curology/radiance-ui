@@ -19,7 +19,6 @@ import { Icon } from 'radiance-ui';
 | fill      | string        | -        | COLORS.primary |                                   |
 | inline    | bool          | -        | false          |                                   |
 | className | string        | -        | ""             |                                   |
-| duskId    | string        | -        | -              |                                   |
 
 ### Notes
 See **Icon Library** for all available `iconName` options and previews.

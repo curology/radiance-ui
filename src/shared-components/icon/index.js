@@ -12,7 +12,6 @@ const propTypes = {
   fill: PropTypes.string,
   inline: PropTypes.bool,
   className: PropTypes.string,
-  duskId: PropTypes.string,
 };
 
 const defaultProps = {
@@ -32,7 +31,6 @@ const Icon = ({
   inline,
   rotate,
   width,
-  duskId,
   ...rest
 }) => {
   // eslint-disable-next-line no-undef
@@ -44,12 +42,9 @@ const Icon = ({
       width={width}
       height={height}
       fill={fill}
-      data-dusk-id={duskId}
       css={`
         display: ${inline ? 'inline-block' : 'block'};
         transform: rotate(${rotate}deg);
-        color: ${fill};
-        transition: color 350ms;
         ${className};
       `}
       {...rest}
@@ -63,4 +58,3 @@ Icon.propTypes = propTypes;
 Icon.defaultProps = defaultProps;
 
 export default Icon;
-
