@@ -24,8 +24,8 @@ stories.add(
       </Typography.Heading>
       <Icon
         iconName={text('Icon Id', 'camera')}
-        width={number('width', 15)}
-        height={number('height', 15)}
+        width={number('width', 16)}
+        height={number('height', 16)}
         fill={text('Icon fill color', COLORS.primary)}
         inline={boolean('inline display option', false)}
         rotate={number('Rotation degrees', 0)}

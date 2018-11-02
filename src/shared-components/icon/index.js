@@ -17,10 +17,10 @@ const propTypes = {
 const defaultProps = {
   className: '',
   fill: COLORS.primary,
-  height: 15,
+  height: 16,
   inline: false,
   rotate: 0,
-  width: 15,
+  width: 16,
 };
 
 const Icon = ({

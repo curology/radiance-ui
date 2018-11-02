@@ -13,8 +13,8 @@ import { Icon } from 'radiance-ui';
 | prop      | propType      | required | default        | description                       |
 |-----------|---------------|----------|----------------|-----------------------------------|
 | iconName  | string        | yes      | -              | id for desired icon               |
-| width     | number|string | -        | "15"           |                                   |
-| height    | number|string | -        | "15"           |                                   |
+| width     | number|string | -        | "16"           |                                   |
+| height    | number|string | -        | "16"           |                                   |
 | rotate    | number        | -        | "0"            | degrees to for clockwise rotation |
 | fill      | string        | -        | COLORS.primary |                                   |
 | inline    | bool          | -        | false          |                                   |
