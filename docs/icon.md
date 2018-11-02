@@ -4,7 +4,7 @@
 ```jsx
 import { Icon } from 'radiance-ui';
 
-<Icon width={14} height={14} iconName="camera" />
+<Icon width={16} height={16} iconName="camera" />
 ```
 
 <!-- STORY -->
