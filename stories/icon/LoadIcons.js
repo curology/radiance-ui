@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Sprite from 'src/svgs/icons.svg';
+import Sprite from '../../src/svgs/icons.svg';
 
 class LoadIcons extends React.Component {
   state = { icons: [] };

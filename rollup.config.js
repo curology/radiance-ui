@@ -21,6 +21,9 @@ export default {
     {
       file: 'dist/bundle.es.js',
       format: 'esm',
+      globals: {
+        react: 'react',
+      },
     },
   ],
   plugins: [
@@ -29,7 +32,9 @@ export default {
         moduleDirectory: [path.resolve(__dirname, '.'), 'node_modules'],
       },
     }),
-    commonjs(),
+    commonjs({
+      include: 'node_modules/**',
+    }),
     babel(),
   ],
   external: [
