@@ -24,10 +24,13 @@ class Alert extends React.Component {
     text: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    onClick: PropTypes.func.isRequired,
+    onExit: PropTypes.func.isRequired,
   };
 
-  state = { exiting: false };
+  state = {
+    exiting: false,
+    exited: false,
+  };
 
   componentDidMount() {
     const { duration } = this.props;
@@ -36,7 +39,7 @@ class Alert extends React.Component {
       // eslint-disable-next-line no-undef
       this.timer = window.setTimeout(
         this.exit,
-        Number(duration) - ANIMATION_DELAY
+        Number(duration) * 1000 - ANIMATION_DELAY
       );
     }
   }
@@ -49,25 +52,33 @@ class Alert extends React.Component {
   }
 
   exit = () => {
-    const { onClick, ...rest} = this.props;
+    const { onExit, ...rest} = this.props;
     this.setState({ exiting: true });
 
     // eslint-disable-next-line no-undef
-    window.setTimeout(() => onClick({...rest}), ANIMATION_DELAY);
+    window.setTimeout(() => {
+      onExit({...rest});
+      this.setState({exited: true });
+    }, ANIMATION_DELAY);
   };
 
   render() {
     const { text, type } = this.props;
+    const { exiting, exited } = this.state;
+
+    if (exited) { return null; }
+
     return (
       <AlertContainer
         alertType={type}
-        exiting={this.state.exiting}
+        exiting={exiting}
         onClick={this.exit}
       >
         <AlertContentContainer>
           <Icon
             className={alertIconStyles}
             iconName={alertIconMapping[type]}
+            fill="currentColor"
           />
           {text}
         </AlertContentContainer>

@@ -15,7 +15,7 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #332e54;
+  color: currentColor;
   -webkit-transition: color 350ms;
   transition: color 350ms;
   min-width: 1rem;
@@ -84,7 +84,7 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   >
     <svg
       className="emotion-0"
-      fill="#332e54"
+      fill="currentColor"
       height={16}
       width={16}
     >
@@ -112,7 +112,7 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #332e54;
+  color: currentColor;
   -webkit-transition: color 350ms;
   transition: color 350ms;
   min-width: 1rem;
@@ -153,7 +153,8 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   margin-bottom: 0.5rem;
   background-color: #ededf0;
   color: #858298;
-  fill: #858298 border-width:1px;
+  fill: #858298;
+  border-width: 1px;
   border-color: #e1e0e6;
   border-style: solid;
 }
@@ -180,7 +181,7 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   >
     <svg
       className="emotion-0"
-      fill="#332e54"
+      fill="currentColor"
       height={16}
       width={16}
     >
@@ -260,7 +261,7 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #332e54;
+  color: currentColor;
   -webkit-transition: color 350ms;
   transition: color 350ms;
   min-width: 1rem;
@@ -277,7 +278,7 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   >
     <svg
       className="emotion-0"
-      fill="#332e54"
+      fill="currentColor"
       height={16}
       width={16}
     >

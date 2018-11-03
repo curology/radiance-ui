@@ -17,7 +17,7 @@ describe('Alert UI snapshots', () => {
         text={testAlert.text}
         type="success"
         duration={testAlert.duration}
-        onClick={() => {}}
+        onExit={() => {}}
       />
     );
 
@@ -31,7 +31,7 @@ describe('Alert UI snapshots', () => {
         text={testAlert.text}
         type="danger"
         duration={testAlert.duration}
-        onClick={() => {}}
+        onExit={() => {}}
       />
     );
 
@@ -45,7 +45,7 @@ describe('Alert UI snapshots', () => {
         text={testAlert.text}
         type="info"
         duration={testAlert.duration}
-        onClick={() => {}}
+        onExit={() => {}}
       />
     );
 
@@ -54,10 +54,10 @@ describe('Alert UI snapshots', () => {
   });
 });
 
-test('Alert onClick is triggered on click', () => {
+test('Alert onExit is triggered on click', () => {
   jest.useFakeTimers();
   const spy = jest.fn();
-  const alert = shallow(<Alert onClick={spy} {...testAlert} />);
+  const alert = shallow(<Alert onExit={spy} {...testAlert} />);
 
   alert.simulate('click');
   jest.runAllTimers();

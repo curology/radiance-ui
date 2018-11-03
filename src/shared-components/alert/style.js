@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from 'react-emotion';
+
 import {
   COLORS,
   MEDIA_QUERIES,
@@ -6,7 +7,7 @@ import {
   SPACING,
   ANIMATION,
   TYPOGRAPHY_CONSTANTS,
-} from 'radiance-ui/lib/constants';
+} from '../../constants';
 
 const fadeInDesktop = keyframes`
   from { opacity: 0; transform: translate3d(24px, 0, 0); }
@@ -39,7 +40,7 @@ const errorAlertStyles = css`
 const defaultAlertStyles = css`
   background-color: ${COLORS.statusGreyBackground};
   color: ${COLORS.statusGrey};
-  fill: ${COLORS.statusGrey}
+  fill: ${COLORS.statusGrey};
   border-width: 1px;
   border-color: ${COLORS.statusGreyBorder};
   border-style: solid;
