@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert UI snapshots renders danger type and text 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+}
+
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms;
+  transition: color 350ms;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin: 2.5px 1.5rem 0px 0px;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-animation: animation-mhflgt 350ms 1;
+  animation: animation-mhflgt 350ms 1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0px;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  width: 327px;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  background-color: #ffeeed;
+  color: #ff5e4d;
+  fill: #ff5e4d;
+  border-width: 1px;
+  border-color: #FFE4E2;
+  border-style: solid;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    -webkit-animation: animation-yhl9l6 350ms 1;
+    animation: animation-yhl9l6 350ms 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="#332e54"
+      height={16}
+      width={16}
+    >
+      <use
+        xlinkHref="#error"
+      />
+    </svg>
+    Your email address was updated successfully!
+  </div>
+</div>
+`;
+
+exports[`Alert UI snapshots renders info type and text 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+}
+
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms;
+  transition: color 350ms;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin: 2.5px 1.5rem 0px 0px;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-animation: animation-mhflgt 350ms 1;
+  animation: animation-mhflgt 350ms 1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0px;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  width: 327px;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  background-color: #ededf0;
+  color: #858298;
+  fill: #858298 border-width:1px;
+  border-color: #e1e0e6;
+  border-style: solid;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    -webkit-animation: animation-yhl9l6 350ms 1;
+    animation: animation-yhl9l6 350ms 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="#332e54"
+      height={16}
+      width={16}
+    >
+      <use
+        xlinkHref="#info"
+      />
+    </svg>
+    Your email address was updated successfully!
+  </div>
+</div>
+`;
+
+exports[`Alert UI snapshots renders success type and text 1`] = `
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-animation: animation-mhflgt 350ms 1;
+  animation: animation-mhflgt 350ms 1;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0px;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  opacity: 1;
+  position: relative;
+  text-align: left;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  width: 327px;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  background-color: #eaf2eb;
+  color: #317f3b;
+  fill: #317f3b;
+  border-width: 1px;
+  border-color: #DAECDC;
+  border-style: solid;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    -webkit-animation: animation-yhl9l6 350ms 1;
+    animation: animation-yhl9l6 350ms 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+}
+
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms;
+  transition: color 350ms;
+  min-width: 1rem;
+  min-height: 1rem;
+  margin: 2.5px 1.5rem 0px 0px;
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="#332e54"
+      height={16}
+      width={16}
+    >
+      <use
+        xlinkHref="#done"
+      />
+    </svg>
+    Your email address was updated successfully!
+  </div>
+</div>
+`;
