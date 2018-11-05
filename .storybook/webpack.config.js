@@ -11,10 +11,11 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: 'file-loader',
+        include: [path.resolve(__dirname, '..')],
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
         }
-      }
+      },
     ],
   },
   plugins: [
@@ -25,6 +26,6 @@ module.exports = {
       allowAsyncCycles: false,
       // set the current working directory for displaying module paths
       cwd: process.cwd(),
-    })
-  ]
+    }),
+  ],
 };
