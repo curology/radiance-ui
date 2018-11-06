@@ -6,8 +6,8 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   padding: 0.25rem 1.5rem;
+  width: 100%;
 }
 
 .emotion-0 {
@@ -18,9 +18,9 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   color: currentColor;
   -webkit-transition: color 350ms;
   transition: color 350ms;
-  min-width: 1rem;
-  min-height: 1rem;
   margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
 }
 
 .emotion-3 {
@@ -30,18 +30,22 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   align-items: flex-start;
   -webkit-animation: animation-mhflgt 350ms 1;
   animation: animation-mhflgt 350ms 1;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.5rem 0px;
   font-size: 0.875rem;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
+  margin: 0 auto 0.5rem;
   opacity: 1;
+  padding: 0.5rem 0px;
   position: relative;
   text-align: left;
   -webkit-transform: translate3d(0,0,0);
@@ -50,28 +54,22 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   width: 327px;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
   background-color: #ffeeed;
+  border-color: #FFE4E2;
   color: #ff5e4d;
   fill: #ff5e4d;
-  border-width: 1px;
-  border-color: #FFE4E2;
-  border-style: solid;
 }
 
 @media (min-width:992px) {
   .emotion-3 {
     -webkit-animation: animation-yhl9l6 350ms 1;
     animation: animation-yhl9l6 350ms 1;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    padding: 0.5rem 0px;
   }
 }
 
@@ -103,8 +101,8 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   padding: 0.25rem 1.5rem;
+  width: 100%;
 }
 
 .emotion-0 {
@@ -115,9 +113,9 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   color: currentColor;
   -webkit-transition: color 350ms;
   transition: color 350ms;
-  min-width: 1rem;
-  min-height: 1rem;
   margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
 }
 
 .emotion-3 {
@@ -127,18 +125,22 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   align-items: flex-start;
   -webkit-animation: animation-mhflgt 350ms 1;
   animation: animation-mhflgt 350ms 1;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.5rem 0px;
   font-size: 0.875rem;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
+  margin: 0 auto 0.5rem;
   opacity: 1;
+  padding: 0.5rem 0px;
   position: relative;
   text-align: left;
   -webkit-transform: translate3d(0,0,0);
@@ -147,28 +149,22 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   width: 327px;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
   background-color: #ededf0;
+  border-color: #e1e0e6;
   color: #858298;
   fill: #858298;
-  border-width: 1px;
-  border-color: #e1e0e6;
-  border-style: solid;
 }
 
 @media (min-width:992px) {
   .emotion-3 {
     -webkit-animation: animation-yhl9l6 350ms 1;
     animation: animation-yhl9l6 350ms 1;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    padding: 0.5rem 0px;
   }
 }
 
@@ -202,18 +198,22 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   align-items: flex-start;
   -webkit-animation: animation-mhflgt 350ms 1;
   animation: animation-mhflgt 350ms 1;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.5rem 0px;
   font-size: 0.875rem;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
+  margin: 0 auto 0.5rem;
   opacity: 1;
+  padding: 0.5rem 0px;
   position: relative;
   text-align: left;
   -webkit-transform: translate3d(0,0,0);
@@ -222,28 +222,22 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   width: 327px;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
   background-color: #eaf2eb;
+  border-color: #DAECDC;
   color: #317f3b;
   fill: #317f3b;
-  border-width: 1px;
-  border-color: #DAECDC;
-  border-style: solid;
 }
 
 @media (min-width:992px) {
   .emotion-3 {
     -webkit-animation: animation-yhl9l6 350ms 1;
     animation: animation-yhl9l6 350ms 1;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    padding: 0.5rem 0px;
   }
 }
 
@@ -252,8 +246,8 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   padding: 0.25rem 1.5rem;
+  width: 100%;
 }
 
 .emotion-0 {
@@ -264,9 +258,9 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   color: currentColor;
   -webkit-transition: color 350ms;
   transition: color 350ms;
-  min-width: 1rem;
-  min-height: 1rem;
   margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
 }
 
 <div
