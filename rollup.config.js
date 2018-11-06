@@ -1,6 +1,8 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
+import { sizeSnapshot } from "rollup-plugin-size-snapshot";
+import url from "rollup-plugin-url"
 
 const path = require('path');
 
@@ -27,6 +29,7 @@ export default {
     },
   ],
   plugins: [
+    url(),
     resolve({
       customResolveOptions: {
         moduleDirectory: [path.resolve(__dirname, '.'), 'node_modules'],
@@ -36,6 +39,7 @@ export default {
       include: 'node_modules/**',
     }),
     babel(),
+    sizeSnapshot(),
   ],
   external: [
     'emotion',
