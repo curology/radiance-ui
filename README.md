@@ -5,7 +5,7 @@ Curology's React based component library
 
 ## Storybook
 Radiance UI has a built in storybook. Every time a new commit is made to
-mastter, it is automatically deployed to
+master, it is automatically deployed to
 [https://radiance-ui.curology.com](https://radiance-ui.curology.com).
 
 To run Storybook locally, use `yarn run storybook`.
