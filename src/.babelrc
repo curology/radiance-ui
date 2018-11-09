@@ -5,6 +5,9 @@
     }],
     "@babel/react"
   ],
+  "plugins": [
+    "emotion",
+  ],
   "env": {
     "test": {
       "presets": [["@babel/env"], "@babel/react"],

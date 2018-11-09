@@ -11,21 +11,24 @@ export default {
   output: [
     {
       file: 'dist/bundle.js',
+      format: 'cjs',
+      name: 'radianceUi',
+    },
+    {
+      file: 'dist/bundle.umd.js',
       format: 'umd',
       name: 'radianceUi',
       globals: {
         emotion: 'emotion',
-        'prop-types': 'prop-types',
-        react: 'react',
-        'react-emotion': 'react-emotion',
+        'prop-types': 'PropTypes',
+        react: 'React',
+        'react-emotion': 'styled',
+        tinycolor2: 'tinycolor',
       },
     },
     {
       file: 'dist/bundle.es.js',
       format: 'esm',
-      globals: {
-        react: 'react',
-      },
     },
   ],
   plugins: [
@@ -38,7 +41,9 @@ export default {
     commonjs({
       include: 'node_modules/**',
     }),
-    babel(),
+    babel({
+      exclude: 'node_modules/**',
+    }),
     sizeSnapshot(),
   ],
   external: [
@@ -46,5 +51,6 @@ export default {
     'prop-types',
     'react',
     'react-emotion',
+    'tinycolor2',
   ],
 };
