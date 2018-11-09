@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.0.7
+- Change main bundle to cjs format. But also add a UMD specific bundle
+  separately.
+- Update depedencies in `package.json`
+
 ## v1.0.6
 - ([PR #4](https://github.com/PocketDerm/radiance-ui/pull/4)) Add new
   Icon component and add stories
