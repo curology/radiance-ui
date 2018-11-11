@@ -10,11 +10,7 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'file-loader',
-        include: [path.resolve(__dirname, '..')],
-        options: {
-          name: '[name].[ext]',
-        }
+        use: ['@svgr/webpack'],
       },
     ],
   },
