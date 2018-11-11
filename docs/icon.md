@@ -2,9 +2,9 @@
 ### Usage
 
 ```jsx
-import { Icon } from 'radiance-ui';
+import { CameraIcon } from 'radiance-ui/lib/icons';
 
-<Icon width={16} height={16} iconName="camera" />
+<CameraIcon width={16} height={16} />
 ```
 
 <!-- STORY -->
@@ -12,7 +12,6 @@ import { Icon } from 'radiance-ui';
 ### Proptypes
 | prop      | propType           | required | default        | description                       |
 |-----------|--------------------|----------|----------------|-----------------------------------|
-| iconName  | string             | yes      | -              | id for desired icon               |
 | width     | number&#124;string | -        | "16"           |                                   |
 | height    | number&#124;string | -        | "16"           |                                   |
 | rotate    | number             | -        | "0"            | degrees to for clockwise rotation |
@@ -21,8 +20,7 @@ import { Icon } from 'radiance-ui';
 | className | string             | -        | ""             |                                   |
 
 ### Notes
-See **Icon Library** for all available `iconName` options and previews.
+See **Icon Library** for all available icon components and previews.
 
-In order to add new `iconName` options, add a new SVG to
-'src/svgs/icons.svg'
+In order to add new icon, add an svg file to `src/svgs/` directory.
 
