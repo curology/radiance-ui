@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import DoneIcon from '../../svgs/done.svg';
-import ErrorIcon from '../../svgs/error.svg';
-import InfoIcon from '../../svgs/info.svg';
+import DoneIcon from '../../svgs/done-icon.svg';
+import ErrorIcon from '../../svgs/error-icon.svg';
+import InfoIcon from '../../svgs/info-icon.svg';
 import {
   AlertsContainer,
   AlertContainer,
