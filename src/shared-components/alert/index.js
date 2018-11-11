@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from '../icon';
+import DoneIcon from '../../svgs/done.svg';
+import ErrorIcon from '../../svgs/error.svg';
+import InfoIcon from '../../svgs/info.svg';
 import {
   AlertsContainer,
   AlertContainer,
@@ -12,9 +14,9 @@ import {
 const ANIMATION_DELAY = 500;
 
 const alertIconMapping = {
-  success: 'done',
-  danger: 'error',
-  info: 'info',
+  success: DoneIcon,
+  danger: ErrorIcon,
+  info: InfoIcon,
 };
 
 class Alert extends React.Component {
@@ -65,6 +67,7 @@ class Alert extends React.Component {
   render() {
     const { text, type } = this.props;
     const { exiting, exited } = this.state;
+    const Icon = alertIconMapping[type];
 
     if (exited) { return null; }
 
@@ -77,7 +80,6 @@ class Alert extends React.Component {
         <AlertContentContainer>
           <Icon
             className={alertIconStyles}
-            iconName={alertIconMapping[type]}
             fill="currentColor"
           />
           {text}

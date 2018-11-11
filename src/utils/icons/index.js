@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
 
-import { COLORS } from '../constants';
+import { COLORS } from '../../constants';
 
 export const propTypes = {
   inline: PropTypes.bool,
@@ -16,13 +16,13 @@ export const propTypes = {
 export const defaultProps = {
   className: '',
   fill: COLORS.primary,
-  inline: false,
+  inline: undefined,
   rotate: 0,
   width: 16,
   height: 16,
 };
 
-export const iconStyle = props => css`
+export const iconStyles = props => css`
   display: ${props.inline ? "inline-block" : "block"};
   transform: rotate(${props.rotate}deg);
   color: ${props.fill};
