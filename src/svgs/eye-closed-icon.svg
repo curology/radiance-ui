@@ -1,0 +1,11 @@
+<svg viewBox="0 0 17 9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Eye Closed</title>
+  <g stroke='#353A39' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'>
+    <path d='M1.3665,0.49711 C2.4575,3.47911 5.3205,5.60711 8.6795,5.60711 C12.0405,5.60711 14.9035,3.47911 15.9945,0.49711' />
+    <path d='M8.68,5.84971 L8.68,8.17871' />
+    <path d='M12.2142,5.15341 L13.1952,7.26541' />
+    <path d='M15.2513,3.08991 L16.8653,4.76791' />
+    <path d='M5.1497,5.15341 L4.1687,7.26541' />
+    <path d='M2.1126,3.08991 L0.4976,4.76791' />
+  </g>
+</svg>
