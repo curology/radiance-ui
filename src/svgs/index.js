@@ -53,5 +53,4 @@ export { default as ThumbsUpFilledIcon } from './thumbs-up-filled-icon.svg';
 export { default as ThumbsUpIcon } from './thumbs-up-icon.svg';
 export { default as TruckIcon } from './truck-icon.svg';
 export { default as TwitterIcon } from './twitter-icon.svg';
-export { default as Zz } from './zz.svg';
 
