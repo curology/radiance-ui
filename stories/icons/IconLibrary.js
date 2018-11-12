@@ -1,6 +1,6 @@
 import React from 'react';
 
-import * as iconComponents from 'src/svgs';
+import * as iconComponents from 'src/svgs/icons';
 
 import {
   Icons,

@@ -6,7 +6,7 @@ import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
 import IconReadme from 'docs/icon.md';
 import { Typography } from 'src/shared-components';
 import { COLORS, SPACING } from 'src/constants';
-import CameraIcon from 'src/svgs/camera-icon.svg';
+import CameraIcon from 'src/svgs/icons/camera-icon.svg';
 
 import IconList from './IconLibrary';
 
@@ -38,10 +38,6 @@ stories.add(
   ))
 );
 
-// Asynchronously read svg sprite file and
-// render the icons. Currently using method
-// described in this GH issue:
-// https://github.com/storybooks/storybook/issues/696
 stories.add('Icon Library', () => (
   <IconList />
 ));

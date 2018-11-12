@@ -22,5 +22,5 @@ import { CameraIcon } from 'radiance-ui/lib/icons';
 ### Notes
 See **Icon Library** for all available icon components and previews.
 
-In order to add new icon, add an svg file to `src/svgs/` directory.
+In order to add new icon, add an svg file to `src/svgs/icons/` directory.
 
