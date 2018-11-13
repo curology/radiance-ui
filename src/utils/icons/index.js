@@ -14,7 +14,6 @@ export const propTypes = {
 };
 
 export const defaultProps = {
-  className: '',
   fill: COLORS.primary,
   inline: undefined,
   rotate: 0,

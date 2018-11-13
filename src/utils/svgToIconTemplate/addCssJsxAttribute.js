@@ -5,8 +5,8 @@
  *
  *
    `
-     ${iconStyles(props)};
-     ${props.className};
+     ${iconStyles(rest)};
+     ${className};
    `
  */
 
@@ -28,29 +28,19 @@ function addCssJsxAttribute(jsx) {
             arguments: [
               {
                 type: "Identifier",
-                name: "props",
+                name: "rest",
               },
             ],
           },
           {
-            type: "MemberExpression",
-            object: {
-              type: "Identifier",
-              name: "props",
-            },
-            property: {
-              type: "Identifier",
-              name: "className",
-            },
-            computed: false,
+            type: "Identifier",
+            name: "className",
           },
         ],
         quasis: [
           {
             type: "TemplateElement",
-            value: {
-              raw: "",
-            },
+            value: { raw: "" },
           },
           {
             type: "TemplateElement",

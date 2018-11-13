@@ -20,7 +20,7 @@
     "build-storybook": "build-storybook -c .storybook -o .out -s ./public",
     "clean": "rimraf dist lib src/icons/",
     "build": "run-s clean && run-s build:icons build:icons:index && run-p build:rollup build:babel",
-    "build:icons": "npx @svgr/cli --expand-props start --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
+    "build:icons": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
     "build:icons:index": "create-index src/icons/",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
