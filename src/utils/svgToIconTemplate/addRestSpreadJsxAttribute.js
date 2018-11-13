@@ -10,7 +10,6 @@
 function addRestSpreadJsxAttribute(jsx) {
   jsx.openingElement.attributes.push({
     type: "JSXSpreadAttribute",
-    name: { name: 'rest' },
     argument: {
       type: "Identifier",
       name: "rest",
