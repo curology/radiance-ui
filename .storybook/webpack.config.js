@@ -1,5 +1,8 @@
 const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin')
+const transformTemplateForUtilLocation = require('../src/utils/svgToIconTemplate/transformTemplateForUtilLocation.js');
+
+const UTIL_LOCATION = '../../utils/icons';
 
 module.exports = {
   resolve: {
@@ -10,11 +13,14 @@ module.exports = {
     rules: [
       {
         test: /\.svg$/,
-        loader: 'file-loader',
-        include: [path.resolve(__dirname, '..')],
-        options: {
-          name: '[name].[ext]',
-        }
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              template: transformTemplateForUtilLocation(UTIL_LOCATION),
+            },
+          }
+        ],
       },
     ],
   },

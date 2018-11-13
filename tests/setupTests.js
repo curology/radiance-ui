@@ -6,6 +6,5 @@ import { createSerializer } from 'jest-emotion'
 configure({ adapter: new Adapter() });
 /* eslint-disable no-undef */
 expect.addSnapshotSerializer(createSerializer(emotion))
-window.__SVG_INLINE__ = true;
 /* eslint-enable no-undef */
 
