@@ -1,0 +1,26 @@
+<svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Vitamin C</title>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#FEFEFE" d="M80,39.9999 C80,62.0919 62.091,79.9999 40,79.9999 C17.909,79.9999 0,62.0919 0,39.9999 C0,17.9089 17.909,-0.0001 40,-0.0001 C62.091,-0.0001 80,17.9089 80,39.9999"/>
+    <path fill="#FEFEFE" d="M80,39.9999 C80,62.0919 62.091,79.9999 40,79.9999 C17.909,79.9999 0,62.0919 0,39.9999 C0,17.9089 17.909,-0.0001 40,-0.0001 C62.091,-0.0001 80,17.9089 80,39.9999"/>
+    <g transform="translate(24 12)">
+      <path fill="#FEFEFE" d="M0.9473,57.162 L31.2553,0.838"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M0.9473,57.162 L31.2553,0.838"/>
+    </g>
+    <polyline stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="53.376 20.166 67.276 27.52 55.225 12.968"/>
+    <g transform="translate(24 12)">
+      <path fill="#FEFEFE" d="M31.0527,57.162 L0.7447,0.838"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M31.0527,57.162 L0.7447,0.838"/>
+    </g>
+    <polyline stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="26.625 20.166 12.723 27.52 24.774 12.968"/>
+    <path fill="#FEFEFE" d="M26.3056,29.8827 L26.5596,48.8237 C26.6996,56.4727 40.6686,63.1717 40.6686,63.1717 C40.6686,63.1717 54.3826,56.0017 54.2386,48.3487 L53.9446,29.4467 L26.3056,29.8827 Z"/>
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.3056,29.8827 L26.5596,48.8237 C26.6996,56.4727 40.6686,63.1717 40.6686,63.1717 C40.6686,63.1717 54.3826,56.0017 54.2386,48.3487 L53.9446,29.4467 L26.3056,29.8827 Z"/>
+    <path fill="#FEFEFE" d="M26.3056,29.8827 L26.5596,48.8237 C26.6996,56.4727 40.6686,63.1717 40.6686,63.1717 C40.6686,63.1717 54.3826,56.0017 54.2386,48.3487 L53.9446,29.4467 L26.3056,29.8827 Z"/>
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.3056,29.8827 L26.5596,48.8237 C26.6996,56.4727 40.6686,63.1717 40.6686,63.1717 C40.6686,63.1717 54.3826,56.0017 54.2386,48.3487 L53.9446,29.4467 L26.3056,29.8827 Z"/>
+    <g transform="translate(34 38)">
+      <path fill="#FEFEFE" d="M11.1523,10.8661 C10.0883,11.9661 8.6043,12.6581 6.9533,12.6841 C3.6523,12.7361 0.9333,10.1021 0.8813,6.8011 C0.8293,3.4991 3.4633,0.7811 6.7643,0.7281 C8.3613,0.7031 9.8223,1.3061 10.9103,2.3101"/>
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.1523,10.8661 C10.0883,11.9661 8.6043,12.6581 6.9533,12.6841 C3.6523,12.7361 0.9333,10.1021 0.8813,6.8011 C0.8293,3.4991 3.4633,0.7811 6.7643,0.7281 C8.3613,0.7031 9.8223,1.3061 10.9103,2.3101"/>
+    </g>
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M40.2724 29.663L40.2724 33.555M40.6689 63.1718L40.6689 56.0808M27.3056 44.7059L29.1936 44.7059M54.1821 44.7059L51.5931 44.7059"/>
+  </g>
+</svg>
