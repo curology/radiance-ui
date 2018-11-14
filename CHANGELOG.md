@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.0.8
+- Deprecate `Icon` component since it never worked in the first place.
+- ([PR #13](https://github.com/PocketDerm/radiance-ui/pull/13)) Introduce new inline icon with SVGR.
+- Add all icons, [emojis](https://github.com/PocketDerm/radiance-ui/pull/19), and [glyphs](https://github.com/PocketDerm/radiance-ui/pull/20) to new inline icon set.
+
 ## v1.0.7
 - Change main bundle to cjs format. But also add a UMD specific bundle
   separately.
