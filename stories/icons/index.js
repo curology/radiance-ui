@@ -29,7 +29,7 @@ stories.add(
           width={number('width', 16)}
           height={number('height', 16)}
           fill={text('Icon fill color', COLORS.primary)}
-          inline={boolean('inline display option', false)}
+          inline={boolean('inline display option', undefined)}
           rotate={number('Rotation degrees', 0)}
           className={text('additional css class names', '')}
         />

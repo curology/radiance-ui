@@ -24,7 +24,7 @@
     "build:icons:index": "create-index src/icons/",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
-    "build:svgs:index": "create-index src/svgs/icons --extensions svg",
+    "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build-storybook"
   },
