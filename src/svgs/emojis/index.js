@@ -18,7 +18,7 @@ export { default as PreparedFilledEmoji } from './prepared-filled-emoji.svg';
 export { default as SatisfiedEmoji } from './satisfied-emoji.svg';
 export { default as SatisfiedFilledEmoji } from './satisfied-filled-emoji.svg';
 export { default as SparkleEmoji } from './sparkle-emoji.svg';
-export { default as SparkleFiledEmoji } from './sparkle-filed-emoji.svg';
+export { default as SparkleFilledEmoji } from './sparkle-filled-emoji.svg';
 export { default as SupportedEmoji } from './supported-emoji.svg';
 export { default as SupportedFilledEmoji } from './supported-filled-emoji.svg';
 export { default as UnsatisfiedEmoji } from './unsatisfied-emoji.svg';
