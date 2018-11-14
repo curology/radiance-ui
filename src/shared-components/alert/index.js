@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import DoneIcon from '../../svgs/icons/done-icon.svg';
+import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
 import {
@@ -14,7 +14,7 @@ import {
 const ANIMATION_DELAY = 500;
 
 const alertIconMapping = {
-  success: DoneIcon,
+  success: CheckmarkIcon,
   danger: ErrorIcon,
   info: InfoIcon,
 };

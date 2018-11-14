@@ -2,8 +2,6 @@
 import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
 
-import { COLORS } from '../../constants';
-
 export const propTypes = {
   inline: PropTypes.bool,
   rotate: PropTypes.number,
@@ -14,8 +12,6 @@ export const propTypes = {
 };
 
 export const defaultProps = {
-  fill: COLORS.primary,
-  inline: undefined,
   rotate: 0,
   width: 16,
   height: 16,

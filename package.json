@@ -20,11 +20,14 @@
     "build-storybook": "build-storybook -c .storybook -o .out -s ./public",
     "clean": "rimraf dist lib src/icons/",
     "build": "run-s clean && run-s build:icons build:icons:index && run-p build:rollup build:babel",
-    "build:icons": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
+    "build:icons": "run-s build:icons:icons build:icons:emojis build:icons:glyphs",
+    "build:icons:icons": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
+    "build:icons:emojis": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/emojis/",
+    "build:icons:glyphs": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/glyphs/",
     "build:icons:index": "create-index src/icons/",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
-    "build:svgs:index": "create-index src/svgs/icons --extensions svg",
+    "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build-storybook"
   },
@@ -110,7 +113,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint-staged"
+      "pre-commit": "yarn run build:svgs:index && yarn run lint-staged"
     }
   },
   "lint-staged": {

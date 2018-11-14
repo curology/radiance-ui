@@ -15,11 +15,17 @@ module.exports = {
         test: /\.svg$/,
         use: [
           {
+            loader: 'babel-loader',
+            options: require('../babel.config.js'),
+          },
+          {
             loader: '@svgr/webpack',
             options: {
               template: transformTemplateForUtilLocation(UTIL_LOCATION),
+              expandProps: false,
+              babel: false,
             },
-          }
+          },
         ],
       },
     ],
