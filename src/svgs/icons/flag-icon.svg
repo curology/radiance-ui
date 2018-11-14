@@ -1,5 +1,8 @@
-<svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <title>Flag</title>
-  <path d='M24.9,1.7l-6.2,6.2l6.2,6.2h-17v-1.5H1.7v12.4H0.1V0.1h9.3v1.5H24.9z M1.7,11h6.2V1.7H1.7V11z M9.4,12.5h11.7l-4.6-4.6l4.6-4.6H9.4V12.5z' />
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g fill="#332E54">
+      <rect x="0" y="0" width="16" height="16" />
+    </g>
+  </g>
 </svg>
-
