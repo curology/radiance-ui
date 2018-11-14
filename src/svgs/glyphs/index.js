@@ -1,7 +1,42 @@
 // @create-index
 
+export { default as AcneFewGlyph } from './acne-few-glyph.svg';
+export { default as AcneGlyph } from './acne-glyph.svg';
+export { default as AcneManyGlyph } from './acne-many-glyph.svg';
+export { default as AcneSeveralGlyph } from './acne-several-glyph.svg';
+export { default as AcneSomeGlyph } from './acne-some-glyph.svg';
+export { default as AzelaicAcidGlyph } from './azelaic-acid-glyph.svg';
+export { default as BodyGlyph } from './body-glyph.svg';
+export { default as ChatBubbleGlyph } from './chat-bubble-glyph.svg';
 export { default as CheckBadgeGlyph } from './check-badge-glyph.svg';
+export { default as ClindamycinGlyph } from './clindamycin-glyph.svg';
+export { default as CloggedPoresGlyph } from './clogged-pores-glyph.svg';
+export { default as CombinationGlyph } from './combination-glyph.svg';
+export { default as DarkSpotsGlyph } from './dark-spots-glyph.svg';
+export { default as DropperGlyph } from './dropper-glyph.svg';
+export { default as FaceGlyph } from './face-glyph.svg';
+export { default as FemaleGlyph } from './female-glyph.svg';
+export { default as FirmnessGlyph } from './firmness-glyph.svg';
+export { default as HandWritingGlyph } from './hand-writing-glyph.svg';
+export { default as MaleGlyph } from './male-glyph.svg';
+export { default as MortorGlyph } from './mortor-glyph.svg';
+export { default as NeckGlyph } from './neck-glyph.svg';
+export { default as NiacinamideGlyph } from './niacinamide-glyph.svg';
+export { default as NoneGlyph } from './none-glyph.svg';
+export { default as OftenDryGlyph } from './often-dry-glyph.svg';
+export { default as OftenOilyGlyph } from './often-oily-glyph.svg';
+export { default as OtherGlyph } from './other-glyph.svg';
 export { default as PillsGlyph } from './pills-glyph.svg';
 export { default as SelfieGlyph } from './selfie-glyph.svg';
+export { default as SkinTextureGlyph } from './skin-texture-glyph.svg';
 export { default as SunGlyph } from './sun-glyph.svg';
+export { default as SunscreenBottleGlyph } from './sunscreen-bottle-glyph.svg';
+export { default as SunscreenDropGlyph } from './sunscreen-drop-glyph.svg';
+export { default as SunscreenTubGlyph } from './sunscreen-tub-glyph.svg';
+export { default as TretinoinGlyph } from './tretinoin-glyph.svg';
+export { default as VeryDryGlyph } from './very-dry-glyph.svg';
+export { default as VeryOilyGlyph } from './very-oily-glyph.svg';
+export { default as VitaminCGlyph } from './vitamin-c-glyph.svg';
+export { default as WrinklesGlyph } from './wrinkles-glyph.svg';
+export { default as ZincGlyph } from './zinc-glyph.svg';
 
