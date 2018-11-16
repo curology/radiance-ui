@@ -2,6 +2,8 @@
 import PropTypes from 'prop-types';
 import { css } from 'react-emotion';
 
+import { ANIMATION } from '../../constants';
+
 export const propTypes = {
   inline: PropTypes.bool,
   rotate: PropTypes.number,
@@ -21,5 +23,5 @@ export const iconStyles = props => css`
   display: ${props.inline ? "inline-block" : "block"};
   transform: rotate(${props.rotate}deg);
   color: ${props.fill};
-  transition: color 350ms;
+  transition: color ${ANIMATION.defaultTiming}, transform ${ANIMATION.defaultTiming};
 `;
