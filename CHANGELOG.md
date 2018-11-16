@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.9
+- Add 2 new glyph icons ([PR #22](https://github.com/PocketDerm/radiance-ui/pull/22))
+- Add transformation transition to icons ([PR #21](https://github.com/PocketDerm/radiance-ui/pull/21))
+
 ## v1.0.8
 - Deprecate `Icon` component since it never worked in the first place.
 - ([PR #13](https://github.com/PocketDerm/radiance-ui/pull/13)) Introduce new inline icon with SVGR.
