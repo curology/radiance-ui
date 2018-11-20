@@ -1,5 +1,6 @@
 const addCssJsxAttribute = require('./addCssJsxAttribute.js');
 const addRestSpreadJsxAttribute = require('./addRestSpreadJsxAttribute.js');
+const deprecatedIcons = require('../icons/deprecatedList.js');
 
 function transformTemplateForUtilLocation (utilLocation) {
   return function transformTemplate (
@@ -11,14 +12,26 @@ function transformTemplateForUtilLocation (utilLocation) {
     addCssJsxAttribute(jsx);
     addRestSpreadJsxAttribute(jsx);
 
+    // componentName comes through as an AST node with "Svg" prepended
+    // normalize the name so we can look it up on our deprecation list
+    const normalizedComponentName = componentName.name.replace(/Svg/, '');
+    const deprecationMessage = deprecatedIcons[normalizedComponentName];
+    const deprecationNotice = deprecationMessage
+      ?  `console.warn('[Deprecation Warning]: ${deprecationMessage}');`
+      : '';
+
     return template.ast`
       ${imports}
 
       import { propTypes, defaultProps, iconStyles } from '${utilLocation}';
 
-      const ${componentName} = ({ className, ...rest }) => (
-        ${jsx}
-      );
+      const ${componentName} = ({ className, ...rest }) => {
+        ${deprecationNotice}
+
+        return (
+          ${jsx}
+        );
+      };
 
       ${componentName}.propTypes = propTypes;
       ${componentName}.defaultProps = defaultProps;

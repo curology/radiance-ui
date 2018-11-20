@@ -25,3 +25,4 @@ export const iconStyles = props => css`
   color: ${props.fill};
   transition: color ${ANIMATION.defaultTiming}, transform ${ANIMATION.defaultTiming};
 `;
+
