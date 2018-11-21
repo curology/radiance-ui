@@ -24,6 +24,7 @@ export { default as HeartIcon } from './heart-icon.svg';
 export { default as InfoIcon } from './info-icon.svg';
 export { default as LockIcon } from './lock-icon.svg';
 export { default as LogoCIcon } from './logo-c-icon.svg';
+export { default as LogoCondensedIcon } from './logo-condensed-icon.svg';
 export { default as LogoIcon } from './logo-icon.svg';
 export { default as LogoutIcon } from './logout-icon.svg';
 export { default as MailIcon } from './mail-icon.svg';
