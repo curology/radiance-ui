@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.10
+- Create alternate naming for LogoCIcon ([PR #23](https://github.com/PocketDerm/radiance-ui/pull/23))
+- Add deprecation notice on LogoCIcon ([PR #23](https://github.com/PocketDerm/radiance-ui/pull/23))
+
 ## v1.0.9
 - Add 2 new glyph icons ([PR #22](https://github.com/PocketDerm/radiance-ui/pull/22))
 - Add transformation transition to icons ([PR #21](https://github.com/PocketDerm/radiance-ui/pull/21))
