@@ -2,10 +2,13 @@ import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
-import url from 'rollup-plugin-url';
 import svgr from '@svgr/rollup';
 
 const path = require('path');
+
+const transformTemplateForUtilLocation = require('./src/utils/svgToIconTemplate/transformTemplateForUtilLocation.js');
+
+const UTIL_LOCATION = '../../utils/icons';
 
 export default {
   input: 'src/index.js',
@@ -33,8 +36,10 @@ export default {
     },
   ],
   plugins: [
-    url(),
-    svgr(),
+    svgr({
+      template: transformTemplateForUtilLocation(UTIL_LOCATION),
+      expandProps: false,
+    }),
     resolve({
       customResolveOptions: {
         moduleDirectory: [path.resolve(__dirname, '.'), 'node_modules'],
