@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.12
+- Fix bundle to handle components with icons ([PR #24](https://github.com/PocketDerm/radiance-ui/pull/24))
+
 ## v1.0.11
 - Create alternate naming for LogoCIcon ([PR #23](https://github.com/PocketDerm/radiance-ui/pull/23))
 - Add deprecation notice on LogoCIcon ([PR #23](https://github.com/PocketDerm/radiance-ui/pull/23))
