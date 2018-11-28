@@ -2,79 +2,89 @@
 
 exports[`<RadioButton /> UI snapshots when checked type is primary 1`] = `
 .emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus .emotion-4 {
+  border-radius: 100%;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
 .emotion-3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
 }
 
 .emotion-5 {
-  margin-top: 0.25rem;
   margin-left: 1rem;
+  margin-top: 0.25rem;
   min-width: 125px;
+  text-align: left;
 }
 
 .emotion-0 {
   color: #ffffff;
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
   position: absolute;
+  top: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
-  cursor: pointer;
 }
 
 .emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 100%;
+  border: 2px solid;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  border-radius: 100%;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
+  width: 2rem;
   background-color: #332e54;
   border-color: #332e54;
 }
@@ -87,6 +97,8 @@ exports[`<RadioButton /> UI snapshots when checked type is primary 1`] = `
 <div
   className="emotion-7 emotion-8"
   onClick={[Function]}
+  onKeyPress={[Function]}
+  tabindex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -116,79 +128,89 @@ exports[`<RadioButton /> UI snapshots when checked type is primary 1`] = `
 
 exports[`<RadioButton /> UI snapshots when checked type is secondary 1`] = `
 .emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus .emotion-4 {
+  border-radius: 100%;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
 .emotion-3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
 }
 
 .emotion-5 {
-  margin-top: 0.25rem;
   margin-left: 1rem;
+  margin-top: 0.25rem;
   min-width: 125px;
+  text-align: left;
 }
 
 .emotion-0 {
   color: #ffffff;
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
   position: absolute;
+  top: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
-  cursor: pointer;
 }
 
 .emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 100%;
+  border: 2px solid;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  border-radius: 100%;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
+  width: 2rem;
   background-color: #a6a1e2;
   border-color: #a6a1e2;
 }
@@ -201,6 +223,8 @@ exports[`<RadioButton /> UI snapshots when checked type is secondary 1`] = `
 <div
   className="emotion-7 emotion-8"
   onClick={[Function]}
+  onKeyPress={[Function]}
+  tabindex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -231,72 +255,81 @@ exports[`<RadioButton /> UI snapshots when checked type is secondary 1`] = `
 exports[`<RadioButton /> UI snapshots when children is a node 1`] = `
 .emotion-0 {
   color: transparent;
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
   position: absolute;
+  top: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
-  cursor: pointer;
 }
 
 .emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:focus .emotion-4 {
+  border-radius: 100%;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
 .emotion-3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
 }
 
 .emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 100%;
+  border: 2px solid;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  border-radius: 100%;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
+  width: 2rem;
   background-color: transparent;
   border-color: #332e54;
 }
@@ -307,14 +340,17 @@ exports[`<RadioButton /> UI snapshots when children is a node 1`] = `
 }
 
 .emotion-5 {
-  margin-top: 0.25rem;
   margin-left: 1rem;
+  margin-top: 0.25rem;
   min-width: 125px;
+  text-align: left;
 }
 
 <div
   className="emotion-7 emotion-8"
   onClick={[Function]}
+  onKeyPress={[Function]}
+  tabindex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -345,72 +381,81 @@ exports[`<RadioButton /> UI snapshots when children is a node 1`] = `
 exports[`<RadioButton /> UI snapshots when children is undefined 1`] = `
 .emotion-0 {
   color: transparent;
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
   position: absolute;
+  top: 50%;
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
-  cursor: pointer;
 }
 
 .emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  cursor: pointer;
   margin-bottom: 20px;
 }
 
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5:focus .emotion-4 {
+  border-radius: 100%;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
 .emotion-3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
 }
 
 .emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 100%;
+  border: 2px solid;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  border-radius: 100%;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
+  width: 2rem;
   background-color: transparent;
   border-color: #332e54;
 }
@@ -423,6 +468,8 @@ exports[`<RadioButton /> UI snapshots when children is undefined 1`] = `
 <div
   className="emotion-5 emotion-6"
   onClick={[Function]}
+  onKeyPress={[Function]}
+  tabindex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -442,233 +489,5 @@ exports[`<RadioButton /> UI snapshots when children is undefined 1`] = `
       type="primary"
     />
   </div>
-</div>
-`;
-
-exports[`<RadioButton /> UI snapshots when type is primary 1`] = `
-.emotion-0 {
-  color: transparent;
-  position: absolute;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
-  cursor: pointer;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.emotion-3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  border-radius: 100%;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  background-color: transparent;
-  border-color: #332e54;
-}
-
-.emotion-1:active,
-.emotion-1:focus {
-  outline: none;
-}
-
-.emotion-5 {
-  margin-top: 0.25rem;
-  margin-left: 1rem;
-  min-width: 125px;
-}
-
-<div
-  className="emotion-7 emotion-8"
-  onClick={[Function]}
->
-  <div
-    className="emotion-3 emotion-4"
-  >
-    <<svg viewBox="0 0 18 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Done</title>
-  <path d="M6.48528137,12.0710678 L1.70710678,7.29289322 C1.31658249,6.90236893 0.683417511,6.90236893 0.292893219,7.29289322 C-0.0976310729,7.68341751 -0.0976310729,8.31658249 0.292893219,8.70710678 L5.77817459,14.1923882 C6.16869888,14.5829124 6.80186386,14.5829124 7.19238816,14.1923882 L17.6776695,3.70710678 C18.0681938,3.31658249 18.0681938,2.68341751 17.6776695,2.29289322 C17.2871452,1.90236893 16.6539803,1.90236893 16.263456,2.29289322 L6.48528137,12.0710678 Z"/>
-</svg>
-
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
-    <div
-      checked={false}
-      className="emotion-1 emotion-2"
-      type="primary"
-    />
-  </div>
-  <p
-    className="emotion-5 emotion-6"
-  >
-    RadioButton Text
-  </p>
-</div>
-`;
-
-exports[`<RadioButton /> UI snapshots when type is secondary 1`] = `
-.emotion-0 {
-  color: transparent;
-  position: absolute;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
-  cursor: pointer;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-
-.emotion-3 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  height: 2rem;
-  width: 2rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  border-radius: 100%;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  background-color: transparent;
-  border-color: #332e54;
-}
-
-.emotion-1:active,
-.emotion-1:focus {
-  outline: none;
-}
-
-.emotion-5 {
-  margin-top: 0.25rem;
-  margin-left: 1rem;
-  min-width: 125px;
-}
-
-<div
-  className="emotion-7 emotion-8"
-  onClick={[Function]}
->
-  <div
-    className="emotion-3 emotion-4"
-  >
-    <<svg viewBox="0 0 18 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Done</title>
-  <path d="M6.48528137,12.0710678 L1.70710678,7.29289322 C1.31658249,6.90236893 0.683417511,6.90236893 0.292893219,7.29289322 C-0.0976310729,7.68341751 -0.0976310729,8.31658249 0.292893219,8.70710678 L5.77817459,14.1923882 C6.16869888,14.5829124 6.80186386,14.5829124 7.19238816,14.1923882 L17.6776695,3.70710678 C18.0681938,3.31658249 18.0681938,2.68341751 17.6776695,2.29289322 C17.2871452,1.90236893 16.6539803,1.90236893 16.263456,2.29289322 L6.48528137,12.0710678 Z"/>
-</svg>
-
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
-    <div
-      checked={false}
-      className="emotion-1 emotion-2"
-      type="secondary"
-    />
-  </div>
-  <p
-    className="emotion-5 emotion-6"
-  >
-    RadioButton Text
-  </p>
 </div>
 `;
