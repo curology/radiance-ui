@@ -1,4 +1,5 @@
 import { transparentize } from '../../utils';
+import COLORS from '../colors';
 
 const boxShadowColor = '#2d2d30';
 const boxShadowOverlayColor = '#505050';
@@ -7,6 +8,7 @@ const BASE_CONFIG = {
   clickable: `0 1px 3px 0 ${transparentize(boxShadowColor, 0.06)}`,
   clickableHover: `0 1px 3px 0 ${transparentize(boxShadowColor, 0.15)}`,
   message: `0 12px 20px 0 ${transparentize(boxShadowColor, 0.05)}`,
+  focusSecondary: `0 0 2px 2px ${transparentize(COLORS.secondary, 0.5)}`,
 };
 
 const OLD_BASE_CONFIG = {

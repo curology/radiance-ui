@@ -26,7 +26,29 @@ describe('<RadioButton />', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    // TODO test for primary and secondary type
+    test('when checked type is primary', () => {
+      const tree = renderer
+        .create(
+          <RadioButton checked onClick={() => {}} type='primary'>
+            RadioButton Text
+          </RadioButton>
+        )
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    test('when checked type is secondary', () => {
+      const tree = renderer
+        .create(
+          <RadioButton checked onClick={() => {}} type='secondary'>
+            RadioButton Text
+          </RadioButton>
+        )
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 
   describe('onClick callback', () => {

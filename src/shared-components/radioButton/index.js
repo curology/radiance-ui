@@ -1,20 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { COLORS } from 'radiance-ui/lib/constants';
-import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 
+import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
+import { COLORS } from '../../constants';
 import {
-  RadioButtonContainer,
-  RadioButtonStyles,
-  RadioButtonText,
+  OuterContainer,
+  Radio,
+  RadioContainer,
+  TextContainer,
   radioIcon,
-  radioIconContainer,
 } from './style';
 
 const propTypes = {
   checked: PropTypes.bool.isRequired,
   onClick: PropTypes.func,
-  justify: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -30,18 +29,17 @@ const defaultProps = {
 const RadioButton = ({
   checked,
   onClick,
-  justify,
   children,
   type,
   ...rest
 }) => (
-  <RadioButtonContainer
+  <OuterContainer
     onClick={onClick}
-    checked={checked}
-    justify={justify}
+    onKeyPress={onClick}
+    tabindex="0"
     {...rest}
   >
-    <div className={radioIconContainer}>
+    <RadioContainer>
       <CheckmarkIcon
         css={`
           color: ${checked ? COLORS.white : 'transparent'};
@@ -50,13 +48,13 @@ const RadioButton = ({
         width={11}
         height={11}
       />
-      <RadioButtonStyles type={type} checked={checked} />
-    </div>
+      <Radio type={type} checked={checked} />
+    </RadioContainer>
 
     {children && (
-      <RadioButtonText checked={checked}>{children}</RadioButtonText>
+      <TextContainer>{children}</TextContainer>
     )}
-  </RadioButtonContainer>
+  </OuterContainer>
 );
 
 RadioButton.propTypes = propTypes;

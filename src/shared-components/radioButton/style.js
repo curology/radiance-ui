@@ -1,80 +1,86 @@
 import styled, { css } from 'react-emotion';
+
 import {
   COLORS,
   SPACING,
   ANIMATION,
-  TYPOGRAPHY_CONSTANTS,
-} from 'radiance-ui/lib/constants';
+  BOX_SHADOWS,
+} from '../../constants';
 
-export const RadioButtonContainer = styled.div`
-  display: flex;
+export const RadioContainer = styled.div`
   align-items: center;
-  justify-content: ${({ justify }) => justify || 'flex-start'};
-  cursor: pointer;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 `;
 
-export const radioIconContainer = css`
-  position: relative;
-  display: flex;
+export const OuterContainer = styled.div`
   align-items: center;
-  justify-content: center;
-  z-index: 5;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+  :focus {
+    outline: none;
+    ${RadioContainer} {
+      border-radius: 100%;
+      box-shadow: ${BOX_SHADOWS.focusSecondary};
+    }
+  }
 `;
 
 export const radioIcon = css`
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  fill: currentColor;
   cursor: pointer;
-  z-index: 5;
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 `;
 
-const primaryRadioButtonStyle = checked => css`
+const primaryRadioStyle = checked => css`
   background-color: ${checked ? COLORS.primary : 'transparent'};
   border-color: ${COLORS.primary};
 `;
 
-const secondaryRadioButtonStyle = checked => css`
+const secondaryRadioStyle = checked => css`
   background-color: ${checked ? COLORS.secondary : 'transparent'};
   border-color: ${checked ? COLORS.secondary : COLORS.primary};
 `;
 
-export const RadioButtonStyles = styled.div`
-  display: flex;
+export const Radio = styled.div`
   align-items: center;
-  justify-content: center;
-  height: ${SPACING.medium};
-  width: ${SPACING.medium};
   appearance: none;
+  border-radius: 100%;
   border: 2px solid;
   cursor: pointer;
-  border-radius: 100%;
+  display: flex;
+  height: ${SPACING.medium};
+  justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
+  width: ${SPACING.medium};
 
   ${({ type, checked }) => {
     switch (type) {
       case 'primary':
-        return primaryRadioButtonStyle(checked);
+        return primaryRadioStyle(checked);
       case 'secondary':
-        return secondaryRadioButtonStyle(checked);
+        return secondaryRadioStyle(checked);
       default:
-        return primaryRadioButtonStyle(checked);
+        return primaryRadioStyle(checked);
     }
-  }} &:active,
+  }}
+
+  &:active,
   &:focus {
     outline: none;
   }
 `;
 
-export const RadioButtonText = styled.p`
-  color: ${({ checked }) => (checked ? COLORS.primary : COLORS.primaryTint1)};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.body}
-  line-height: 1.7;
-  margin-top: ${SPACING.xxsmall};
+export const TextContainer = styled.p`
   margin-left: ${SPACING.small};
+  margin-top: ${SPACING.xxsmall};
   min-width: 125px;
-  transition: ${ANIMATION.defaultTiming};
+  text-align: left;
 `;
