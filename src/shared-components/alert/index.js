@@ -58,6 +58,9 @@ class Alert extends React.Component {
     this.setState({ exiting: true });
 
     // eslint-disable-next-line no-undef
+    window.clearTimeout(this.timer);
+
+    // eslint-disable-next-line no-undef
     window.setTimeout(() => {
       onExit({...rest});
       this.setState({exited: true });
