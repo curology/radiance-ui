@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
 import AlertReadme from 'docs/alert.md';
 import { Alert, Typography } from 'src/shared-components';
@@ -45,7 +46,7 @@ stories.add(
         text={text('text', 'This is an alert')}
         type={select('type', ['success', 'info', 'danger'], 'info')}
         duration='sticky'
-        onExit={() => {}}
+        onExit={action('alert exited')}
       />
     </React.Fragment>
   ))
