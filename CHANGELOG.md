@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.13
+- Add `<RadioButton />` component + story ([PR #26](https://github.com/PocketDerm/radiance-ui/pull/26))
+- Fixes an issue with `<Alert />` where it was calling exit multiple times ([PR #25](https://github.com/PocketDerm/radiance-ui/pull/25))
+
 ## v1.0.12
 - Fix bundle to handle components with icons ([PR #24](https://github.com/PocketDerm/radiance-ui/pull/24))
 
