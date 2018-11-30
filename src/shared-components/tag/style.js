@@ -6,25 +6,33 @@ import { COLORS, SPACING } from '../../constants';
 const closedStyle = css`
   background-color: ${COLORS.statusGreyBackground};
   border-color: ${COLORS.statusGreyBorder};
-  color: ${COLORS.statusGrey};
+  span {
+    color: ${COLORS.statusGrey};
+  }
 `;
 
 const errorStyle = css`
   background-color: ${COLORS.statusRedBackground};
   border-color: ${COLORS.statusRedBorder};
-  color: ${COLORS.statusRed};
+  span {
+    color: ${COLORS.statusRed};
+  }
 `;
 
 const pendingStyle = css`
   background-color: ${COLORS.statusPurpleBackground};
   border-color: ${COLORS.statusPurpleBorder};
-  color: ${COLORS.statusPurple};
+  span {
+    color: ${COLORS.statusPurple};
+  }
 `;
 
 const successStyle = css`
   background-color: ${COLORS.statusGreenBackground};
   border-color: ${COLORS.statusGreenBorder};
-  color: ${COLORS.statusGreen};
+  span {
+    color: ${COLORS.statusGreen};
+  }
 `;
 
 export const TagStyles = styled.div`
