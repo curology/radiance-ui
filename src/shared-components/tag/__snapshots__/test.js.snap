@@ -20,6 +20,9 @@ exports[`<Tags /> UI snapshots renders the correct css and text 1`] = `
   min-width: 2rem;
   background-color: #eaf2eb;
   border-color: #DAECDC;
+}
+
+.emotion-2 span {
   color: #317f3b;
 }
 
