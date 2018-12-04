@@ -3,6 +3,18 @@ import styled, { css } from 'react-emotion';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, SPACING } from '../../constants';
 
+/* eslint-disable */
+export const ChipText = styled.span`
+  ${TYPOGRAPHY_STYLE.button};
+  letter-spacing: 0.5px;
+  font-size: 10px;
+  line-height: 1;
+  padding: ${SPACING.xsmall} 12px;
+  position: relative;
+  top: 0.5px;
+`;
+/* eslint-enable */
+
 const closedStyle = css`
   background-color: ${COLORS.statusGreyBackground};
   border-color: ${COLORS.statusGreyBorder};
@@ -14,7 +26,7 @@ const closedStyle = css`
 const errorStyle = css`
   background-color: ${COLORS.statusRedBackground};
   border-color: ${COLORS.statusRedBorder};
-  span {
+  ${ChipText} {
     color: ${COLORS.statusRed};
   }
 `;
@@ -22,7 +34,7 @@ const errorStyle = css`
 const pendingStyle = css`
   background-color: ${COLORS.statusPurpleBackground};
   border-color: ${COLORS.statusPurpleBorder};
-  span {
+  ${ChipText} {
     color: ${COLORS.statusPurple};
   }
 `;
@@ -30,12 +42,12 @@ const pendingStyle = css`
 const successStyle = css`
   background-color: ${COLORS.statusGreenBackground};
   border-color: ${COLORS.statusGreenBorder};
-  span {
+  ${ChipText} {
     color: ${COLORS.statusGreen};
   }
 `;
 
-export const TagStyles = styled.div`
+export const ChipStyles = styled.div`
   align-items: center;
   border-radius: ${SPACING.small};
   border: 1px solid;
@@ -59,16 +71,4 @@ export const TagStyles = styled.div`
     }
   }};
 `;
-
-/* eslint-disable */
-export const TagText = styled.span`
-  ${TYPOGRAPHY_STYLE.button};
-  letter-spacing: 0.5px;
-  font-size: 10px;
-  line-height: 1;
-  padding: ${SPACING.xsmall} 12px;
-  position: relative;
-  top: 0.5px;
-`;
-/* eslint-enable */
 

@@ -1,13 +1,13 @@
-# Alert
+# Chip
 ### Usage
 
 ```jsx
-import { Tag } from 'radiance-ui';
+import { Chip } from 'radiance-ui';
 
-<Tag status="success" text="Success" />
-<Tag status="error" text="Error" />
-<Tag status="pending" text="Pending" />
-<Tag status="closed" text="Closed" />
+<Chip status="success" text="Success" />
+<Chip status="error" text="Error" />
+<Chip status="pending" text="Pending" />
+<Chip status="closed" text="Closed" />
 ```
 
 <!-- STORY -->
@@ -15,11 +15,11 @@ import { Tag } from 'radiance-ui';
 ### Proptypes
 | prop     | propType           | required | default | description                                                                                                                  |
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| text     | string             | yes      | -       | content of tag |
+| text     | string             | yes      | -       | content of chip |
 | status   | string             | yes      | -       | must be one of: 'success', 'error', 'pending', 'closed' |
 
 ### Notes
-The `<Tag />` component has variations that alert the user of a
+The `<Chip />` component has variations that alert the user of a
 particular status with a combination of color and text. This component
 does not take any children. Rather, you will need to pass in the content
-of the tag as the `text` prop.
+of the chip as the `text` prop.
