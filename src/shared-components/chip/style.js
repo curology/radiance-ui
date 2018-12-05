@@ -18,7 +18,7 @@ export const ChipText = styled.span`
 const closedStyle = css`
   background-color: ${COLORS.statusGreyBackground};
   border-color: ${COLORS.statusGreyBorder};
-  span {
+  ${ChipText} {
     color: ${COLORS.statusGrey};
   }
 `;
