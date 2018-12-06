@@ -1,6 +1,26 @@
-import { Container, ClickableContainer, MessageContainer } from './style';
+import {
+  Container,
+  ClickableContainer,
+  MessageContainer,
+  Section,
+  Divider,
+  Image,
+} from './style';
 
-Container.Clickable = ClickableContainer;
-Container.Message = MessageContainer;
+Container.Section = Section;
+Container.Divider = Divider;
+Container.Image = Image;
 
-export default Container;
+ClickableContainer.Section = Section;
+ClickableContainer.Divider = Divider;
+ClickableContainer.Image = Image;
+
+MessageContainer.Section = Section;
+MessageContainer.Divider = Divider;
+MessageContainer.Image = Image;
+
+export {
+  Container,
+  ClickableContainer,
+  MessageContainer,
+};
