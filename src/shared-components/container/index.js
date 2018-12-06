@@ -1,7 +1,7 @@
+import PropTypes from 'prop-types';
+
 import {
   Container,
-  ClickableContainer,
-  MessageContainer,
   Section,
   Divider,
   Image,
@@ -11,16 +11,8 @@ Container.Section = Section;
 Container.Divider = Divider;
 Container.Image = Image;
 
-ClickableContainer.Section = Section;
-ClickableContainer.Divider = Divider;
-ClickableContainer.Image = Image;
-
-MessageContainer.Section = Section;
-MessageContainer.Divider = Divider;
-MessageContainer.Image = Image;
-
-export {
-  Container,
-  ClickableContainer,
-  MessageContainer,
+Container.propTypes = {
+  type: PropTypes.oneOf(['message', 'clickable']),
 };
+
+export default Container;

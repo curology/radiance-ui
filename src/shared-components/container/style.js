@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 
 import {
   SPACING,
@@ -7,12 +7,7 @@ import {
   MEDIA_QUERIES,
 } from '../../constants';
 
-export const Container = styled.div`
-  background-color: ${COLORS.white};
-  border: 1px solid ${COLORS.border};
-`;
-
-export const ClickableContainer = styled(Container)`
+const clickableStyle = css`
   box-shadow: ${BOX_SHADOWS.clickable};
   cursor: pointer;
   transition: box-shadow 200ms;
@@ -22,9 +17,25 @@ export const ClickableContainer = styled(Container)`
   }
 `;
 
-export const MessageContainer = styled(Container)`
+const messageStyle = css`
   border-radius: 16px;
   box-shadow: ${BOX_SHADOWS.message};
+`;
+
+export const Container = styled.div`
+  background-color: ${COLORS.white};
+  border: 1px solid ${COLORS.border};
+
+  ${({ type }) => {
+    switch (type) {
+      case 'message':
+        return messageStyle;
+      case 'clickable':
+        return clickableStyle;
+      default:
+        return null;
+    }
+  }};
 `;
 
 // TODO update desktop padding to 48px
