@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.14
+- Add `<Container />` component + story ([PR #28](https://github.com/PocketDerm/radiance-ui/pull/28))
+- Add `<Chip />` component + story ([PR #27](https://github.com/PocketDerm/radiance-ui/pull/27))
+
 ## v1.0.13
 - Add `<RadioButton />` component + story ([PR #26](https://github.com/PocketDerm/radiance-ui/pull/26))
 - Fixes an issue with `<Alert />` where it was calling exit multiple times ([PR #25](https://github.com/PocketDerm/radiance-ui/pull/25))
