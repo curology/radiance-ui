@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.15
+- Hotfix Radio Button styling ([PR #31](https://github.com/PocketDerm/radiance-ui/pull/31))
+
 ## v1.0.14
 - Add `<Container />` component + story ([PR #28](https://github.com/PocketDerm/radiance-ui/pull/28))
 - Add `<Chip />` component + story ([PR #27](https://github.com/PocketDerm/radiance-ui/pull/27))
