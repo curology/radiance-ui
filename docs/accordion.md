@@ -4,13 +4,42 @@
 ```jsx
 import { Accordion } from 'radiance-ui';
 
-<Accordion
-  title={<div>Title</div>}
-  isOpen={boolean}
-  onClick={() => {}}
->
-  <div>Expandable portion as children</div>
-</Accordion>
+<Accordion.Container>
+  <Accordion
+    title={<div>Title</div>}
+    isOpen={false}
+    onClick={() => {}}
+  >
+    <div>Expansion</div>
+  </Accordion>
+  <Accordion
+    title={
+      <Accordion.Truncate>
+        Title
+      </Accordion.Truncate>
+    }
+    isOpen={false}
+    onClick={() => {}}
+  >
+    <div>Expansion</div>
+  </Accordion>
+  <Accordion
+    title={<div>Title</div>}
+    isOpen={false}
+    onClick={() => {}}
+    noBorder
+  >
+    <div>Expansion</div>
+  </Accordion>
+  <Accordion
+    title={<div>Title</div>}
+    isOpen={false}
+    onClick={() => {}}
+    disabled
+  >
+    <div>Expansion</div>
+  </Accordion>
+</Accordion.Container>
 
 ```
 
@@ -69,9 +98,9 @@ Container to hold instances of `<Accordion>`
 import { Accordion } from 'radiance-ui';
 
 <Accordion.Container> 
-  <Accordion />
-  <Accordion />
-  <Accordion />
+  <Accordion {...props} />
+  <Accordion {...props} />
+  <Accordion {...props} />
 </Accordion.Container>
 ```
 
@@ -82,12 +111,12 @@ Wraps padding around children nodes
 import { Accordion } from 'radiance-ui';
 
 <Accordion
-  title={<Accordion.Content>Title here</Accordion.Content>}
-  isOpen={bool}
+  title={<Accordion.Content>Title</Accordion.Content>}
+  isOpen={true}
   onClick={() => {}}
 >
   <Accordion.Content>
-    Padding is added around this
+    Expansion with content padding
   </Accordion.Content>
 </Accordion>
 ```

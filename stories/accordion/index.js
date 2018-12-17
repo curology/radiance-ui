@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
 
 import AccordionReadme from 'docs/accordion.md';
 import { Accordion, Typography } from 'src/shared-components';
@@ -32,7 +33,7 @@ stories.add(
                   </Accordion.Truncate>
                 </Accordion.Content>
               }
-              onClick={() => {}}
+              onClick={() => action('Accordion clicked')}
               isOpen={boolean('isOpen', false)}
               noBorder={boolean('noBorder', false)}
               disabled={boolean('disabled', false)}
