@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.16
+- Added Accordion to component library ([PR #32](https://github.com/PocketDerm/radiance-ui/pull/32))
+
 ## v1.0.15
 - Hotfix Radio Button styling ([PR #31](https://github.com/PocketDerm/radiance-ui/pull/31))
 
