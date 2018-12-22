@@ -3,15 +3,58 @@
 
 ```jsx
 import { Button } from 'radiance-ui';
+import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 
-<Button.Container>
-  <Button
-    text="Your photos were uploaded successfully!"
-    type="success"
-    duration={4}
-    onExit={() => {}}
-  />
-</Button.Container>
+<React.Fragment>
+  <Button.Container>
+    <Button>Primary Button</Button>
+    <Button buttonType="secondary">Secondary Button</Button>
+    <Button buttonType="tertiary">Tertiary Button</Button>
+    <Button buttonType="quaternary">Quaternary Button</Button>
+    <Button disabled>Disabled Button</Button>
+    <Button loading>Primary Loading</Button>
+    <Button loading buttonType="secondary">
+      Secondary Loading
+    </Button>
+    <Button buttonType="tertiary" loading>
+      Tertiary Loading
+    </Button>
+    <Button buttonType="quaternary" loading>
+      Quaternary Loading
+    </Button>
+  </Button.Container>
+
+  <Button.Container>
+    <Button icon={<CheckmarkIcon />}>Primary Button</Button>
+    <Button buttonType="secondary" icon={<CheckmarkIcon />}>
+      Secondary Button
+    </Button>
+    <Button buttonType="tertiary" icon={<CheckmarkIcon />}>
+      Tertiary Button
+    </Button>
+
+    <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
+      Quaternary Button
+    </Button>
+
+    <Button disabled icon={<CheckmarkIcon />}>
+      Disabled Button
+    </Button>
+    <Button loading icon={<CheckmarkIcon />}>
+      Primary Loading
+    </Button>
+    <Button loading buttonType="secondary" icon={<CheckmarkIcon />}>
+      Secondary Loading
+    </Button>
+    <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
+      Tertiary Loading
+    </Button>
+
+    <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
+      Quaternary Loading
+    </Button>
+  </Button.Container>
+</React.Fragment>
 ```
 
 <!-- STORY -->
@@ -21,9 +64,9 @@ import { Button } from 'radiance-ui';
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
 | buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`. |
 | children | node | yes | - | node to be rendered inside the button.  Recommended to be the button text |
-| disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will be updated |
+| disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will look disabled |
 | icon | node | no | null | icon to render in the button. Recommended to use one of Radiance's icons |
-| loading  | bool               | no       | false   | renders loading state and prevents click listner from being called |
+| loading  | bool               | no       | false   | renders loading state and prevents click listener from being called |
 | onClick   | func              | no      | () => {} | callback function called on click of the button |
 
 ### Notes
