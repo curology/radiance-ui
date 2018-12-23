@@ -29,7 +29,7 @@
     "build:babel": "babel src -d lib",
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
-    "heroku-postbuild": "yarn run build-storybook"
+    "heroku-postbuild": "yarn run build:icons && yarn run build-storybook"
   },
   "repository": {
     "type": "git",
