@@ -1,7 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> UI snapshots renders with props 1`] = `
+exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 .emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
   color: #5C5876;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -38,64 +58,39 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   color: #c3c0cd;
   cursor: not-allowed;
   fill: #c3c0cd;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
 }
 
-.emotion-6:hover {
+.emotion-2:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-6:active,
-.emotion-6:focus {
+.emotion-2:active,
+.emotion-2:focus {
   outline: none;
 }
 
-.emotion-6:visited,
-.emotion-6:hover {
+.emotion-2:visited,
+.emotion-2:hover {
   opacity: 1;
   color: #c3c0cd;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem 0;
-  -webkit-transition: -webkit-transform 350ms;
-  -webkit-transition: transform 350ms;
-  transition: transform 350ms;
-  width: 100%;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
 }
 
 .emotion-2 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
-  margin-right: 1rem;
-  margin-top: -5px;
+  margin: 0 auto;
 }
 
 .emotion-0 {
-  line-height: 1.5;
-  margin: 0;
-  padding-top: 2px;
-  padding-top: 2px;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -115,9 +110,11 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   margin-top: -6px;
   width: 38px;
   opacity: 0;
+  width: 36px;
+  margin-top: -3px;
 }
 
-.emotion-4 span {
+.emotion-0 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -125,29 +122,38 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-4 span:nth-of-type(1) {
+.emotion-0 span:nth-of-type(1) {
   -webkit-animation: animation-1rzke1i 1750ms infinite linear;
   animation: animation-1rzke1i 1750ms infinite linear;
 }
 
-.emotion-4 span:nth-of-type(2) {
+.emotion-0 span:nth-of-type(2) {
   -webkit-animation: animation-1rzke1i 1750ms infinite linear -300ms;
   animation: animation-1rzke1i 1750ms infinite linear -300ms;
 }
 
-.emotion-4 span:nth-of-type(3) {
+.emotion-0 span:nth-of-type(3) {
   -webkit-animation: animation-1rzke1i 1750ms infinite linear -600ms;
   animation: animation-1rzke1i 1750ms infinite linear -600ms;
 }
 
-<button
+.emotion-0 span {
+  background-color: #ffffff;
+}
+
+.emotion-4 {
+  margin: 10px 0;
+}
+
+<div
   className="emotion-6 emotion-7"
   disabled={true}
   onClick={[Function]}
-  type="button"
 >
-  <div
+  <button
     className="emotion-2 emotion-3"
+    disabled={true}
+    type="button"
   >
     <<svg viewBox="0 0 14 14"
   xmlns="http://www.w3.org/2000/svg"
@@ -157,21 +163,21 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   <path d="M2.3415,13.2222175 C1.72124776,13.2243884 1.1256551,12.9795144 0.686302332,12.541694 C0.246949561,12.1038736 -3.79906535e-06,11.5091402 0,10.8888889 L3.98675044e-11,3.88889676 C-1.30063478e-05,2.60432174 1.03827132,1.56134402 2.32633333,1.55555556 L3.24468077,1.55555556 L4.22931385,0.570740729 C4.60939929,0.214048524 5.10813173,0.0107799344 5.64511111,0 L8.37073343,0.000161405677 C8.89186827,0.0107799344 9.39060071,0.214048524 9.78859533,0.588095946 L10.7554275,1.5555576 L11.6771667,1.55556343 C12.9617287,1.56134402 14.000013,2.60432174 14,3.88888889 L13.9999903,10.9005508 C13.9935642,12.1873494 12.946611,13.2259319 11.6599904,13.2222222 L2.3415,13.2222175 Z M11.6612222,11.6666667 C12.0930564,11.6681787 12.4423113,11.3218821 12.4444444,10.8966667 L12.4444444,3.88888101 C12.4444488,3.46068934 12.098354,3.1130301 11.6736667,3.11111111 L10.1107967,3.11111111 L9.88296023,2.88312628 L8.70620274,1.70503705 C8.60651968,1.61148922 8.4757197,1.55817902 8.35488889,1.55555556 L5.66095565,1.55539415 C5.5242803,1.55817902 5.39348032,1.61148922 5.31170644,1.68768183 L3.88920327,3.11111111 L3.56688889,3.11111111 L2.32983333,3.11110324 C1.90164599,3.1130301 1.55555122,3.46068934 1.55555556,3.88888889 L1.55555556,10.8888937 C1.55555429,11.0956457 1.63787208,11.2938902 1.784323,11.4398303 C1.93077392,11.5857704 2.12930481,11.6673951 2.33877778,11.6666667 L11.6612222,11.6666667 Z M7,10.8888889 C4.85222597,10.8888889 3.11111111,9.14777403 3.11111111,7 C3.11111111,4.85222597 4.85222597,3.11111111 7,3.11111111 C9.14777403,3.11111111 10.8888889,4.85222597 10.8888889,7 C10.8888889,9.14777403 9.14777403,10.8888889 7,10.8888889 Z M7,9.33333333 C8.28866442,9.33333333 9.33333333,8.28866442 9.33333333,7 C9.33333333,5.71133558 8.28866442,4.66666667 7,4.66666667 C5.71133558,4.66666667 4.66666667,5.71133558 4.66666667,7 C4.66666667,8.28866442 5.71133558,9.33333333 7,9.33333333 Z"/>
 </svg>
  />
-    <span
+    <div
       className="emotion-0 emotion-1"
+      disabled={true}
     >
-      Button Text
-    </span>
-  </div>
-  <div
-    className="emotion-4 emotion-5"
-    disabled={true}
-  >
-    <div>
-      <span />
-      <span />
-      <span />
+      <div>
+        <span />
+        <span />
+        <span />
+      </div>
     </div>
-  </div>
-</button>
+  </button>
+  <p
+    className="emotion-4 emotion-5"
+  >
+    Button Text
+  </p>
+</div>
 `;

@@ -71,4 +71,5 @@ class Button extends React.Component {
   }
 }
 
+export  RoundButton from './components/roundButton';
 export default Button;

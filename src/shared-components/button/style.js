@@ -66,7 +66,7 @@ const loadingStyles = css`
   }
 `;
 
-export const disabledStyles = css`
+const disabledStyles = css`
   background-color: ${COLORS.disabled};
   border-color: ${COLORS.disabled};
   color: ${COLORS.textDisabled};
@@ -112,12 +112,12 @@ const baseButtonStyles = ({ disabled, buttonType, loading }) => css`
   opacity: 1;
   padding: 0 ${SPACING.base};
   position: relative;
-  transition: all ${ANIMATION.defaulTiming} ease-in-out;
+  transition: all ${ANIMATION.defaultTiming} ease-in-out;
   text-decoration: none;
   width: max-content;
 
   &:hover {
-    transition: all ${ANIMATION.defaulTiming} ease-in-out;
+    transition: all ${ANIMATION.defaultTiming} ease-in-out;
   }
 
   &:active,
@@ -137,7 +137,7 @@ export const ButtonContents = styled.div`
   height: 100%;
   justify-content: center;
   padding: ${SPACING.small} 0;
-  transition: transform ${ANIMATION.defaulTiming};
+  transition: transform ${ANIMATION.defaultTiming};
   width: 100%;
 
   ${({ loading, hasIcon }) => {
