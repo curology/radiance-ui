@@ -54,9 +54,7 @@ class Button extends React.Component {
           <ButtonText
             loading={loading}
             hasIcon={!!icon}
-            css="
-              padding-top: 2px;
-            "
+            css="padding-top: 2px;"
           >
             {children}
           </ButtonText>
@@ -71,5 +69,5 @@ class Button extends React.Component {
   }
 }
 
-export  RoundButton from './components/roundButton';
+export RoundButton from './components/roundButton';
 export default Button;
