@@ -24,8 +24,11 @@ export const OuterContainer = styled.div`
   :focus {
     outline: none;
     ${SelectorContainer} {
-      border-radius: 100%;
       box-shadow: ${BOX_SHADOWS.focusSecondary};
+
+      ${({ selector }) => css`
+        border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+      `}
     }
   }
 `;
@@ -52,7 +55,6 @@ const secondarySelectorStyle = checked => css`
 export const Selector = styled.div`
   align-items: center;
   appearance: none;
-  border-radius: 100%;
   border: 2px solid;
   cursor: pointer;
   display: flex;
@@ -61,8 +63,8 @@ export const Selector = styled.div`
   transition: background-color ${ANIMATION.defaultTiming};
   width: ${SPACING.medium};
 
-  ${({ selector }) => selector === 'checkbox' && css`
-    border-radius: 4px;
+  ${({ selector }) => css`
+    border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
   `}
 
   ${({ type, checked }) => {
