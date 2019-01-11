@@ -11,7 +11,11 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="secondary">Secondary Button</Button>
     <Button buttonType="tertiary">Tertiary Button</Button>
     <Button buttonType="quaternary">Quaternary Button</Button>
+    <div css="background-color: lavender">
+      <Button buttonType="quinary">Quinary Button</Button>
+    </div>
     <Button disabled>Disabled Button</Button>
+
     <Button loading>Primary Loading</Button>
     <Button loading buttonType="secondary">
       Secondary Loading
@@ -22,6 +26,11 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="quaternary" loading>
       Quaternary Loading
     </Button>
+    <div css="background-color: lavender">
+      <Button buttonType="quinary" loading>
+        Quinary Loading
+      </Button>
+    </div>
   </Button.Container>
 
   <Button.Container>
@@ -32,10 +41,14 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="tertiary" icon={<CheckmarkIcon />}>
       Tertiary Button
     </Button>
-
     <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Button
     </Button>
+    <div css="background-color: lavender">
+      <Button buttonType="quinary" icon={<CheckmarkIcon />}>
+        Quinary Button
+      </Button>
+    </div>
 
     <Button disabled icon={<CheckmarkIcon />}>
       Disabled Button
@@ -49,10 +62,14 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
       Tertiary Loading
     </Button>
-
     <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Loading
     </Button>
+    <div css="background-color: lavender">
+      <Button loading buttonType="quinary" icon={<CheckmarkIcon />}>
+        Quinary Loading
+      </Button>
+    </div>
   </Button.Container>
 </React.Fragment>
 ```
@@ -62,7 +79,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 ### Proptypes
 | prop     | propType           | required | default | description                                                                                                                  |
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`. |
+| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `quinary`. |
 | children | node | yes | - | node to be rendered inside the button.  Recommended to be the button text |
 | disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will look disabled |
 | icon | node | no | null | icon to render in the button. Recommended to use one of Radiance's icons |

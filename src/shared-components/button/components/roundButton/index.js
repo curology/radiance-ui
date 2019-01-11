@@ -14,7 +14,13 @@ const propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   children: PropTypes.node,
-  buttonType: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
+  buttonType: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'quaternary',
+    'quinary',
+  ]),
   loading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
 };

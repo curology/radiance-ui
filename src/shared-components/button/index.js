@@ -17,6 +17,7 @@ class Button extends React.Component {
       'secondary',
       'tertiary',
       'quaternary',
+      'quinary',
     ]),
     loading: PropTypes.bool,
     icon: PropTypes.node,

@@ -26,6 +26,7 @@ Loader.propTypes = {
     'secondary',
     'tertiary',
     'quaternary',
+    'quinary',
   ]),
   className: PropTypes.string,
 };

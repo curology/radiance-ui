@@ -6,9 +6,9 @@ import { action } from '@storybook/addon-actions';
 
 import ButtonReadme from 'docs/button.md';
 import RoundButtonReadme from 'docs/roundButton.md';
-import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/icons';
+import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/svgs/icons';
 import { Button, RoundButton, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACING, COLORS } from 'src/constants';
 
 const stories = storiesOf('Buttons', module);
 
@@ -26,7 +26,11 @@ stories.add(
         <Button buttonType="secondary">Secondary Button</Button>
         <Button buttonType="tertiary">Tertiary Button</Button>
         <Button buttonType="quaternary">Quaternary Button</Button>
+        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
+          <Button buttonType="quinary">Quinary Button</Button>
+        </div>
         <Button disabled>Disabled Button</Button>
+
         <Button loading>Primary Loading</Button>
         <Button loading buttonType="secondary">
           Secondary Loading
@@ -37,7 +41,13 @@ stories.add(
         <Button buttonType="quaternary" loading>
           Quaternary Loading
         </Button>
+        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
+          <Button buttonType="quinary" loading>
+            Quinary Loading
+          </Button>
+        </div>
       </Button.Container>
+
       <Button.Container css="width: 50%; display: inline-block;">
         <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
           With Icon
@@ -49,14 +59,18 @@ stories.add(
         <Button buttonType="tertiary" icon={<CheckmarkIcon />}>
           Tertiary Button
         </Button>
-
         <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
           Quaternary Button
         </Button>
-
+        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
+          <Button buttonType="quinary" icon={<CheckmarkIcon />}>
+            Quinary Button
+          </Button>
+        </div>
         <Button disabled icon={<CheckmarkIcon />}>
           Disabled Button
         </Button>
+
         <Button loading icon={<CheckmarkIcon />}>
           Primary Loading
         </Button>
@@ -66,16 +80,21 @@ stories.add(
         <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
           Tertiary Loading
         </Button>
-
         <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
           Quaternary Loading
         </Button>
+        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
+          <Button loading buttonType="quinary" icon={<CheckmarkIcon />}>
+            Quinary Loading
+          </Button>
+        </div>
+
       </Button.Container>
       <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <Button
-        buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
+        buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary'], 'primary')}
         loading={boolean('loading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
@@ -104,6 +123,12 @@ stories.add(
           Quaternary
         </RoundButton>
       </RoundButton.Container>
+      <RoundButton.Container multi css={`background-color: ${COLORS.lavender60};`}>
+        <RoundButton buttonType="quinary" icon={<CheckmarkIcon />}>
+          Quinary
+        </RoundButton>
+      </RoundButton.Container>
+
       <RoundButton.Container multi>
         <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
           Disabled
@@ -125,12 +150,18 @@ stories.add(
           Quaternary Loading
         </RoundButton>
       </RoundButton.Container>
+      <RoundButton.Container multi css={`background-color: ${COLORS.lavender60};`}>
+        <RoundButton buttonType="quinary" icon={<ArrowLeftIcon />} loading>
+          Quinary Loading
+        </RoundButton>
+      </RoundButton.Container>
+
       <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <RoundButton.Container>
         <RoundButton
-          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
+          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary'], 'primary')}
           loading={boolean('loading', false)}
           disabled={boolean('disabled', false)}
           onClick={action('button clicked')}

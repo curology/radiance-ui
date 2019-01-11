@@ -20,11 +20,17 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
       Quaternary
     </RoundButton>
   </RoundButton.Container>
+  <RoundButton.Container multi css="background-color: lavender">
+    <RoundButton buttonType="quinary" icon={<CheckmarkIcon />}>
+      Quinary
+    </RoundButton>
+  </RoundButton.Container>
   <RoundButton.Container multi>
     <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
       Disabled
     </RoundButton>
   </RoundButton.Container>
+
   <RoundButton.Container multi>
     <RoundButton icon={<ArrowLeftIcon />} loading>
       Primary Loading
@@ -41,6 +47,11 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
       Quaternary Loading
     </RoundButton>
   </RoundButton.Container>
+  <RoundButton.Container multi css="background-color: lavender">
+    <RoundButton buttonType="quinary" icon={<ArrowLeftIcon />} loading>
+      Quinary Loading
+    </RoundButton>
+  </RoundButton.Container>
 </React.Fragment>
 ```
 
@@ -49,7 +60,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 ### Proptypes
 | prop     | propType           | required | default | description                                                                                                                  |
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`. |
+| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `quinary`. |
 | children | node | yes | - | node to be rendered inside the button.  Recommended to be the button text |
 | disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will look disabled |
 | icon | node | yes | null | icon to render in the button. Recommended to use one of Radiance's icons |
