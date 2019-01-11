@@ -2,13 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import RadioButton from './index';
+import SelectorButton from './index';
 
-describe('<RadioButton />', () => {
+describe('<SelectorButton />', () => {
   describe('UI snapshots', () => {
     test('when children is undefined', () => {
       const tree = renderer
-        .create(<RadioButton checked={false} onClick={() => {}} />)
+        .create(<SelectorButton checked={false} onClick={() => {}} />)
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -17,9 +17,9 @@ describe('<RadioButton />', () => {
     test('when children is a node', () => {
       const tree = renderer
         .create(
-          <RadioButton checked={false} onClick={() => {}}>
-            RadioButton Text
-          </RadioButton>
+          <SelectorButton checked={false} onClick={() => {}}>
+            SelectorButton Text
+          </SelectorButton>
         )
         .toJSON();
 
@@ -29,9 +29,9 @@ describe('<RadioButton />', () => {
     test('when checked type is primary', () => {
       const tree = renderer
         .create(
-          <RadioButton checked onClick={() => {}} type='primary'>
-            RadioButton Text
-          </RadioButton>
+          <SelectorButton checked onClick={() => {}} type='primary'>
+            SelectorButton Text
+          </SelectorButton>
         )
         .toJSON();
 
@@ -41,9 +41,21 @@ describe('<RadioButton />', () => {
     test('when checked type is secondary', () => {
       const tree = renderer
         .create(
-          <RadioButton checked onClick={() => {}} type='secondary'>
-            RadioButton Text
-          </RadioButton>
+          <SelectorButton checked onClick={() => {}} type='secondary'>
+            SelectorButton Text
+          </SelectorButton>
+        )
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+
+    test('when is checkbox', () => {
+      const tree = renderer
+        .create(
+          <SelectorButton checked={false} onClick={() => {}} selector="checkbox">
+            SelectorButton Text
+          </SelectorButton>
         )
         .toJSON();
 
@@ -54,7 +66,7 @@ describe('<RadioButton />', () => {
   describe('onClick callback', () => {
     it('is invoked on click', () => {
       const spy = jest.fn();
-      const wrapper = shallow(<RadioButton checked={false} onClick={spy} />);
+      const wrapper = shallow(<SelectorButton checked={false} onClick={spy} />);
 
       wrapper.simulate('click');
       expect(spy).toHaveBeenCalled();

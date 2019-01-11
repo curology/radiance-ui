@@ -7,7 +7,7 @@ import {
   BOX_SHADOWS,
 } from '../../constants';
 
-export const RadioContainer = styled.div`
+export const SelectorContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
@@ -23,14 +23,14 @@ export const OuterContainer = styled.div`
 
   :focus {
     outline: none;
-    ${RadioContainer} {
+    ${SelectorContainer} {
       border-radius: 100%;
       box-shadow: ${BOX_SHADOWS.focusSecondary};
     }
   }
 `;
 
-export const radioIcon = css`
+export const selectorIcon = css`
   cursor: pointer;
   fill: currentColor;
   left: 50%;
@@ -39,17 +39,17 @@ export const radioIcon = css`
   transform: translate(-50%, -50%);
 `;
 
-const primaryRadioStyle = checked => css`
+const primarySelectorStyle = checked => css`
   background-color: ${checked ? COLORS.primary : 'transparent'};
   border-color: ${COLORS.primary};
 `;
 
-const secondaryRadioStyle = checked => css`
+const secondarySelectorStyle = checked => css`
   background-color: ${checked ? COLORS.secondary : 'transparent'};
   border-color: ${checked ? COLORS.secondary : COLORS.primary};
 `;
 
-export const Radio = styled.div`
+export const Selector = styled.div`
   align-items: center;
   appearance: none;
   border-radius: 100%;
@@ -61,14 +61,18 @@ export const Radio = styled.div`
   transition: background-color ${ANIMATION.defaultTiming};
   width: ${SPACING.medium};
 
+  ${({ selector }) => selector === 'checkbox' && css`
+    border-radius: 4px;
+  `}
+
   ${({ type, checked }) => {
     switch (type) {
       case 'primary':
-        return primaryRadioStyle(checked);
+        return primarySelectorStyle(checked);
       case 'secondary':
-        return secondaryRadioStyle(checked);
+        return secondarySelectorStyle(checked);
       default:
-        return primaryRadioStyle(checked);
+        return primarySelectorStyle(checked);
     }
   }}
 
