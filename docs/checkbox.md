@@ -4,7 +4,7 @@
  ```jsx
 import { Checkbox } from 'radiance-ui';
 
- <Checkbox type='primary' checked>
+<Checkbox type='primary' checked>
   This is a primary checkbox
 </Checkbox>
 <Checkbox type='secondary' checked>

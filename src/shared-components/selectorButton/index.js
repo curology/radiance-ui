@@ -25,7 +25,7 @@ const propTypes = {
 const defaultProps = {
   onClick: () => {},
   type: 'primary',
-  selector: "radio",
+  selector: 'radio',
 };
 
 const SelectorButton = ({
