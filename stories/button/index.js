@@ -6,7 +6,7 @@ import { action } from '@storybook/addon-actions';
 
 import ButtonReadme from 'docs/button.md';
 import RoundButtonReadme from 'docs/roundButton.md';
-import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/icons';
+import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/svgs/icons';
 import { Button, RoundButton, Typography } from 'src/shared-components';
 import { SPACING } from 'src/constants';
 
