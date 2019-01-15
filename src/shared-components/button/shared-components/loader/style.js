@@ -52,7 +52,7 @@ const ButtonLoader = styled.div`
   }};
 
     ${({ textColor, disabled }) => !!textColor && !disabled && `
-      background-color: ${textColor}
+      background-color: ${textColor};
     `}
 
     border-radius: 50%;
