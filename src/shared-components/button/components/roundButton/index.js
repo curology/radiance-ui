@@ -19,10 +19,10 @@ const propTypes = {
     'secondary',
     'tertiary',
     'quaternary',
-    'quinary',
   ]),
   loading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
+  textColor: PropTypes.string,
 };
 
 const defaultProps = {
@@ -31,6 +31,7 @@ const defaultProps = {
   loading: false,
   onClick() {},
   children: '',
+  textColor: '',
 };
 
 const RoundButton = ({
@@ -40,6 +41,7 @@ const RoundButton = ({
   buttonType,
   loading,
   icon,
+  textColor,
   ...rest
 }) => (
   <RoundButtonWrapper
@@ -52,6 +54,7 @@ const RoundButton = ({
       buttonType={buttonType}
       loading={loading}
       type="button"
+      textColor={textColor}
       {...rest}
     >
       {icon}
@@ -60,6 +63,7 @@ const RoundButton = ({
         disabled={disabled}
         buttonType={buttonType}
         className={roundButtonLoader(disabled)}
+        textColor={textColor}
       />
     </RoundButtonBase>
     {children && <RoundButtonText>{children}</RoundButtonText>}

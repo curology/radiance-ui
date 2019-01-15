@@ -26,9 +26,6 @@ stories.add(
         <Button buttonType="secondary">Secondary Button</Button>
         <Button buttonType="tertiary">Tertiary Button</Button>
         <Button buttonType="quaternary">Quaternary Button</Button>
-        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
-          <Button buttonType="quinary">Quinary Button</Button>
-        </div>
         <Button disabled>Disabled Button</Button>
 
         <Button loading>Primary Loading</Button>
@@ -41,11 +38,6 @@ stories.add(
         <Button buttonType="quaternary" loading>
           Quaternary Loading
         </Button>
-        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
-          <Button buttonType="quinary" loading>
-            Quinary Loading
-          </Button>
-        </div>
       </Button.Container>
 
       <Button.Container css="width: 50%; display: inline-block;">
@@ -62,11 +54,6 @@ stories.add(
         <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
           Quaternary Button
         </Button>
-        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
-          <Button buttonType="quinary" icon={<CheckmarkIcon />}>
-            Quinary Button
-          </Button>
-        </div>
         <Button disabled icon={<CheckmarkIcon />}>
           Disabled Button
         </Button>
@@ -83,21 +70,17 @@ stories.add(
         <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
           Quaternary Loading
         </Button>
-        <div css={`width 100%; background-color: ${COLORS.lavender60};`}>
-          <Button loading buttonType="quinary" icon={<CheckmarkIcon />}>
-            Quinary Loading
-          </Button>
-        </div>
 
       </Button.Container>
       <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <Button
-        buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary'], 'primary')}
+        buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
         loading={boolean('loading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
+        textColor={text('textColor', '')}
       >
         {text('children', 'Click me!')}
       </Button>
@@ -123,11 +106,6 @@ stories.add(
           Quaternary
         </RoundButton>
       </RoundButton.Container>
-      <RoundButton.Container multi css={`background-color: ${COLORS.lavender60};`}>
-        <RoundButton buttonType="quinary" icon={<CheckmarkIcon />}>
-          Quinary
-        </RoundButton>
-      </RoundButton.Container>
 
       <RoundButton.Container multi>
         <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
@@ -150,22 +128,18 @@ stories.add(
           Quaternary Loading
         </RoundButton>
       </RoundButton.Container>
-      <RoundButton.Container multi css={`background-color: ${COLORS.lavender60};`}>
-        <RoundButton buttonType="quinary" icon={<ArrowLeftIcon />} loading>
-          Quinary Loading
-        </RoundButton>
-      </RoundButton.Container>
 
       <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <RoundButton.Container>
         <RoundButton
-          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary', 'quinary'], 'primary')}
+          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
           loading={boolean('loading', false)}
           disabled={boolean('disabled', false)}
           onClick={action('button clicked')}
           icon={<CheckmarkIcon />}
+          textColor={text('textColor', '')}
         >
           {text('children', 'Click me!')}
         </RoundButton>

@@ -11,9 +11,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="secondary">Secondary Button</Button>
     <Button buttonType="tertiary">Tertiary Button</Button>
     <Button buttonType="quaternary">Quaternary Button</Button>
-    <div css="background-color: lavender">
-      <Button buttonType="quinary">Quinary Button</Button>
-    </div>
     <Button disabled>Disabled Button</Button>
 
     <Button loading>Primary Loading</Button>
@@ -26,11 +23,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="quaternary" loading>
       Quaternary Loading
     </Button>
-    <div css="background-color: lavender">
-      <Button buttonType="quinary" loading>
-        Quinary Loading
-      </Button>
-    </div>
   </Button.Container>
 
   <Button.Container>
@@ -44,11 +36,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Button
     </Button>
-    <div css="background-color: lavender">
-      <Button buttonType="quinary" icon={<CheckmarkIcon />}>
-        Quinary Button
-      </Button>
-    </div>
 
     <Button disabled icon={<CheckmarkIcon />}>
       Disabled Button
@@ -65,11 +52,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Loading
     </Button>
-    <div css="background-color: lavender">
-      <Button loading buttonType="quinary" icon={<CheckmarkIcon />}>
-        Quinary Loading
-      </Button>
-    </div>
   </Button.Container>
 </React.Fragment>
 ```
@@ -79,12 +61,13 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 ### Proptypes
 | prop     | propType           | required | default | description                                                                                                                  |
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `quinary`. |
+| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`. |
 | children | node | yes | - | node to be rendered inside the button.  Recommended to be the button text |
 | disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will look disabled |
 | icon | node | no | null | icon to render in the button. Recommended to use one of Radiance's icons |
 | loading  | bool               | no       | false   | renders loading state and prevents click listener from being called |
 | onClick   | func              | no      | () => {} | callback function called on click of the button |
+| textColor | string | no | '' | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
 Buttons can be used as a main call-to-action (CTA). Try to avoid using

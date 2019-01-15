@@ -66,6 +66,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 | icon | node | yes | null | icon to render in the button. Recommended to use one of Radiance's icons |
 | loading  | bool               | no       | false   | renders loading state and prevents click listener from being called |
 | onClick   | func              | no      | () => {} | callback function called on click of the button |
+| textColor | string | no | '' | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
 `<RoundButton />` behaves mostly the same as `<Button />` except that it

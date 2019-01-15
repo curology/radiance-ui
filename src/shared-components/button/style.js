@@ -58,18 +58,6 @@ const quaternaryStyles = css`
   }
 `;
 
-const quinaryStyles = css`
-  border-color: transparent;
-  background-color: transparent;
-  color: ${COLORS.white};
-  fill: ${COLORS.white};
-
-  &:hover {
-    opacity: 0.8;
-    background-color: transparent;
-  }
-`;
-
 const loadingStyles = css`
   cursor: not-allowed;
 
@@ -104,14 +92,12 @@ function parseTheme(disabled, buttonType, loading) {
       return tertiaryStyles;
     case 'quaternary':
       return quaternaryStyles;
-    case 'quinary':
-      return quinaryStyles;
     default:
       return primaryStyles;
   }
 }
 
-const baseButtonStyles = ({ disabled, buttonType, loading }) => css`
+const baseButtonStyles = ({ disabled, buttonType, loading, textColor }) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
   border-radius: 0;
@@ -141,6 +127,11 @@ const baseButtonStyles = ({ disabled, buttonType, loading }) => css`
 
   ${parseTheme(disabled, buttonType, loading)};
   ${loading && loadingStyles};
+
+  ${!!textColor && !disabled && `
+    color: ${textColor};
+    fill: ${textColor};
+  `}
 `;
 
 export const ButtonBase = styled.button(baseButtonStyles);
