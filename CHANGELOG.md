@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.17
+- Added Checkbox to component library ([PR #35](https://github.com/PocketDerm/radiance-ui/pull/35))
+- Refactored the Radio component ([PR #35](https://github.com/PocketDerm/radiance-ui/pull/35))
+
 ## v1.0.16
 - Added Accordion to component library ([PR #32](https://github.com/PocketDerm/radiance-ui/pull/32))
 

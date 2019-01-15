@@ -18,7 +18,7 @@ const defaultProps = {
   type: 'primary',
 };
 
-const RadioButton = ({
+const Checkbox = ({
   checked,
   onClick,
   children,
@@ -26,7 +26,7 @@ const RadioButton = ({
   ...rest
 }) => (
   <SelectorButton
-    selector="radio"
+    selector="checkbox"
     checked={checked}
     onClick={onClick}
     type={type}
@@ -36,8 +36,8 @@ const RadioButton = ({
   </SelectorButton>
 );
 
-RadioButton.propTypes = propTypes;
-RadioButton.defaultProps = defaultProps;
+Checkbox.propTypes = propTypes;
+Checkbox.defaultProps = defaultProps;
 
-export default RadioButton;
+export default Checkbox;
 
