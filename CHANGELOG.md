@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.0.18
+- Added `textColor` prop to Button and RoundButton ([PR #36](https://github.com/PocketDerm/radiance-ui/pull/36))
+- Bug fix in dot notation of Accordion subcomponents ([PR #36](https://github.com/PocketDerm/radiance-ui/pull/36))
+
 ## v1.0.17
 - Added Checkbox to component library ([PR #35](https://github.com/PocketDerm/radiance-ui/pull/35))
 - Refactored the Radio component ([PR #35](https://github.com/PocketDerm/radiance-ui/pull/35))
