@@ -31,13 +31,13 @@ class Accordion extends React.Component {
     disabled: false,
   };
 
-  static Container = ({ children }) => <Container>{children}</Container>;
+  static Container = Container;
 
-  static Content = ({ children }) => <Content>{children}</Content>;
+  static Content = Content;
 
-  static Thumbnails = ({ photoSrcs }) => <Thumbnails photoSrcs={photoSrcs} />;
+  static Thumbnails = Thumbnails;
 
-  static Truncate = ({ children }) => <Truncate>{children}</Truncate>;
+  static Truncate = Truncate;
 
   contentRef = React.createRef();
 

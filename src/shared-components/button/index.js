@@ -20,6 +20,7 @@ class Button extends React.Component {
     ]),
     loading: PropTypes.bool,
     icon: PropTypes.node,
+    textColor: PropTypes.string,
   };
 
   static defaultProps = {
@@ -27,6 +28,7 @@ class Button extends React.Component {
     buttonType: 'primary',
     loading: false,
     onClick() {},
+    textColor: '',
   };
 
   render() {
@@ -37,6 +39,7 @@ class Button extends React.Component {
       buttonType,
       loading,
       icon,
+      textColor,
       ...rest
     } = this.props;
 
@@ -47,6 +50,7 @@ class Button extends React.Component {
         buttonType={buttonType}
         loading={loading}
         type="button"
+        textColor={textColor}
         {...rest}
       >
         <ButtonContents loading={loading} hasIcon={!!icon}>
@@ -63,6 +67,7 @@ class Button extends React.Component {
           loading={loading}
           disabled={disabled}
           buttonType={buttonType}
+          textColor={textColor}
         />
       </ButtonBase>
     );

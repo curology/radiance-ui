@@ -8,7 +8,7 @@ import ButtonReadme from 'docs/button.md';
 import RoundButtonReadme from 'docs/roundButton.md';
 import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/svgs/icons';
 import { Button, RoundButton, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACING, COLORS } from 'src/constants';
 
 const stories = storiesOf('Buttons', module);
 
@@ -27,6 +27,7 @@ stories.add(
         <Button buttonType="tertiary">Tertiary Button</Button>
         <Button buttonType="quaternary">Quaternary Button</Button>
         <Button disabled>Disabled Button</Button>
+
         <Button loading>Primary Loading</Button>
         <Button loading buttonType="secondary">
           Secondary Loading
@@ -38,6 +39,7 @@ stories.add(
           Quaternary Loading
         </Button>
       </Button.Container>
+
       <Button.Container css="width: 50%; display: inline-block;">
         <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
           With Icon
@@ -49,14 +51,13 @@ stories.add(
         <Button buttonType="tertiary" icon={<CheckmarkIcon />}>
           Tertiary Button
         </Button>
-
         <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
           Quaternary Button
         </Button>
-
         <Button disabled icon={<CheckmarkIcon />}>
           Disabled Button
         </Button>
+
         <Button loading icon={<CheckmarkIcon />}>
           Primary Loading
         </Button>
@@ -66,10 +67,10 @@ stories.add(
         <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
           Tertiary Loading
         </Button>
-
         <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
           Quaternary Loading
         </Button>
+
       </Button.Container>
       <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
@@ -79,6 +80,7 @@ stories.add(
         loading={boolean('loading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
+        textColor={text('textColor', '')}
       >
         {text('children', 'Click me!')}
       </Button>
@@ -104,6 +106,7 @@ stories.add(
           Quaternary
         </RoundButton>
       </RoundButton.Container>
+
       <RoundButton.Container multi>
         <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
           Disabled
@@ -125,6 +128,7 @@ stories.add(
           Quaternary Loading
         </RoundButton>
       </RoundButton.Container>
+
       <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
@@ -135,6 +139,7 @@ stories.add(
           disabled={boolean('disabled', false)}
           onClick={action('button clicked')}
           icon={<CheckmarkIcon />}
+          textColor={text('textColor', '')}
         >
           {text('children', 'Click me!')}
         </RoundButton>

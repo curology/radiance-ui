@@ -97,7 +97,7 @@ function parseTheme(disabled, buttonType, loading) {
   }
 }
 
-const baseButtonStyles = ({ disabled, buttonType, loading }) => css`
+const baseButtonStyles = ({ disabled, buttonType, loading, textColor }) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
   border-radius: 0;
@@ -127,6 +127,11 @@ const baseButtonStyles = ({ disabled, buttonType, loading }) => css`
 
   ${parseTheme(disabled, buttonType, loading)};
   ${loading && loadingStyles};
+
+  ${!!textColor && !disabled && `
+    color: ${textColor};
+    fill: ${textColor};
+  `}
 `;
 
 export const ButtonBase = styled.button(baseButtonStyles);

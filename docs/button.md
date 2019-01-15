@@ -12,6 +12,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="tertiary">Tertiary Button</Button>
     <Button buttonType="quaternary">Quaternary Button</Button>
     <Button disabled>Disabled Button</Button>
+
     <Button loading>Primary Loading</Button>
     <Button loading buttonType="secondary">
       Secondary Loading
@@ -32,7 +33,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="tertiary" icon={<CheckmarkIcon />}>
       Tertiary Button
     </Button>
-
     <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Button
     </Button>
@@ -49,7 +49,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
       Tertiary Loading
     </Button>
-
     <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Loading
     </Button>
@@ -68,6 +67,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 | icon | node | no | null | icon to render in the button. Recommended to use one of Radiance's icons |
 | loading  | bool               | no       | false   | renders loading state and prevents click listener from being called |
 | onClick   | func              | no      | () => {} | callback function called on click of the button |
+| textColor | string | no | '' | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
 Buttons can be used as a main call-to-action (CTA). Try to avoid using
