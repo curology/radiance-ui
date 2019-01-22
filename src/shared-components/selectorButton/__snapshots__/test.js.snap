@@ -98,7 +98,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   className="emotion-7 emotion-8"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabindex="0"
+  tabIndex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -224,7 +224,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   className="emotion-7 emotion-8"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabindex="0"
+  tabIndex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -350,7 +350,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   className="emotion-7 emotion-8"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabindex="0"
+  tabIndex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -469,7 +469,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   className="emotion-5 emotion-6"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabindex="0"
+  tabIndex="0"
 >
   <div
     className="emotion-3 emotion-4"
@@ -590,7 +590,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   className="emotion-7 emotion-8"
   onClick={[Function]}
   onKeyPress={[Function]}
-  tabindex="0"
+  tabIndex="0"
 >
   <div
     className="emotion-3 emotion-4"
