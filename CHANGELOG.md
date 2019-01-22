@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.19
+- Fixing a console warning about `tabindex`. Changed to `tabIndex` ([PR #37](https://github.com/PocketDerm/radiance-ui/pull/37))
+
 ## v1.0.18
 - Added `textColor` prop to Button and RoundButton ([PR #36](https://github.com/PocketDerm/radiance-ui/pull/36))
 - Bug fix in dot notation of Accordion subcomponents ([PR #36](https://github.com/PocketDerm/radiance-ui/pull/36))
