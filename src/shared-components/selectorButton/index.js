@@ -39,7 +39,7 @@ const SelectorButton = ({
   <OuterContainer
     onClick={onClick}
     onKeyPress={onClick}
-    tabindex="0"
+    tabIndex="0"
     selector={selector}
     {...rest}
   >
