@@ -5,7 +5,7 @@ styles and used in composing Emotion components.
 ### Usage
 
 ```jsx
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { TYPOGRAPHY_STYLE } from 'radiance-ui';
 
 export const Container = styled.div`

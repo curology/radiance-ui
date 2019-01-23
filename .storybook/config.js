@@ -1,5 +1,5 @@
 import { configure } from '@storybook/react';
-import { injectGlobal } from 'react-emotion';
+import { injectGlobal } from 'emotion';
 
 import injectGlobalStyles from 'src/utils/injectGlobalStyles';
 

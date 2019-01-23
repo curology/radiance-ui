@@ -1,6 +1,6 @@
 // If you change the  name of this file, update iconTemplate.js
 import PropTypes from 'prop-types';
-import { css } from 'react-emotion';
+import { css } from '@emotion/core';
 
 import { ANIMATION } from '../../constants';
 

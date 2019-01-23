@@ -81,6 +81,7 @@
     "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-babel": "^5.2.1",
     "eslint-plugin-curology": "^0.0.4",
+    "eslint-plugin-emotion": "^10.0.6",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
@@ -105,10 +106,11 @@
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
-    "emotion": "^9.2.12",
+    "@emotion/core": "^10.0.6",
+    "@emotion/styled": "^10.0.6",
+    "emotion": "^10.0.6",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
-    "react-emotion": "^9.2.12",
     "tinycolor2": "^1.4.1"
   },
   "husky": {
