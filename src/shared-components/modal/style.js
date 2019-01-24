@@ -1,10 +1,9 @@
-import styled, { injectGlobal } from 'react-emotion';
+import styled from 'react-emotion';
 
 import Typography from '../typography';
 import { COLORS, MEDIA_QUERIES, SPACING } from '../../constants';
 
-/* eslint-disable-next-line no-unused-expressions */
-injectGlobal`
+export const ModalContainer = styled.div`
   .ReactModalPortal {
     position: relative;
     z-index: 99999999;
@@ -30,9 +29,9 @@ export const ModalOverlay = styled.div`
   }
 `;
 
-function determineScale({ isVisible }) {
-  return isVisible ? 'scale(1, 1)' : 'scale(0.95, 0.95)';
-}
+const determineScale = ({ isVisible }) => (
+  isVisible ? 'scale(1, 1)' : 'scale(0.95, 0.95)'
+);
 
 export const ModalBox = styled.div`
   background-color: ${COLORS.white};

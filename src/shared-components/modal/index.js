@@ -6,6 +6,7 @@ import CloseIcon from '../../svgs/icons/close-icon.svg';
 import keyPressMatch from '../../utils/keyPressMatch';
 import KEYCODES from '../../constants/keycodes';
 import {
+  ModalContainer,
   ModalOverlay,
   ModalBox,
   ModalCloseIcon,
@@ -44,7 +45,6 @@ class Modal extends React.Component {
   static Body = Body;
 
   static Footer = Footer;
-
 
   state = {
     isVisible: false,
@@ -93,31 +93,32 @@ class Modal extends React.Component {
     } = this.props;
 
     return (
-      <ReactModal
-        className={`prevent-default ${className}`}
-        contentLabel="Modal"
-        isOpen={isOpen}
-        onAfterOpen={this.afterOpen}
-        onRequestClose={this.requestClose}
-        parentSelector={this.getParent}
-      >
-        <ModalOverlay
-          isVisible={isVisible}
-          canBeClosed={canBeClosed}
-          onClick={this.closeModal}
-          id="modal-overlay"
+      <ModalContainer>
+        <ReactModal
+          className={`prevent-default ${className}`}
+          contentLabel="Modal"
+          isOpen={isOpen}
+          onAfterOpen={this.afterOpen}
+          onRequestClose={this.requestClose}
+          parentSelector={this.getParent}
         >
-          <ModalBox isVisible={isVisible} onClick={this.stopPropagation}>
-            {canBeClosed && (
-              <ModalCloseIcon onClick={this.closeModal}>
-                <CloseIcon />
-              </ModalCloseIcon>
-            )}
-
-            {children}
-          </ModalBox>
-        </ModalOverlay>
-      </ReactModal>
+          <ModalOverlay
+            isVisible={isVisible}
+            canBeClosed={canBeClosed}
+            onClick={this.closeModal}
+            id="modal-overlay"
+          >
+            <ModalBox isVisible={isVisible} onClick={this.stopPropagation}>
+              {canBeClosed && (
+                <ModalCloseIcon onClick={this.closeModal}>
+                  <CloseIcon />
+                </ModalCloseIcon>
+              )}
+              {children}
+            </ModalBox>
+          </ModalOverlay>
+        </ReactModal>
+      </ModalContainer>
     );
   }
 }

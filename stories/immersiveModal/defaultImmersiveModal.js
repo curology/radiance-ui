@@ -48,7 +48,9 @@ class DefaultImmersiveModal extends React.Component {
           </ImmersiveModal>
         )}
         <br />
-        <Button onClick={() => this.onOpenModal('header')}>Open ImmersiveModal with Header</Button>
+        <Button onClick={() => this.onOpenModal('header')}>
+          Open ImmersiveModal with Header
+        </Button>
         {headerIsOpen && (
           <ImmersiveModal
             onClose={this.onClose}
