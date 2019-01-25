@@ -109,6 +109,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-emotion": "^9.2.12",
+    "react-modal": "^3.8.1",
     "tinycolor2": "^1.4.1"
   },
   "husky": {

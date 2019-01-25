@@ -28,6 +28,7 @@ export { default as LogoCondensedIcon } from './logo-condensed-icon.svg';
 export { default as LogoIcon } from './logo-icon.svg';
 export { default as LogoutIcon } from './logout-icon.svg';
 export { default as MailIcon } from './mail-icon.svg';
+export { default as MenuIcon } from './menu-icon.svg';
 export { default as MessageIcon } from './message-icon.svg';
 export { default as MoreIcon } from './more-icon.svg';
 export { default as NotificationsIcon } from './notifications-icon.svg';
