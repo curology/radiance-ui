@@ -36,10 +36,10 @@ class DefaultImmersiveModal extends React.Component {
         <Button onClick={() => this.onOpenModal('default')}>Open ImmersiveModal</Button>
         {defaultIsOpen && (
           <ImmersiveModal onClose={this.onClose}>
-            <ImmersiveModal.Title>This is styled with ImmersiveModalTitle</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModalBody.</ImmersiveModal.Body>
+            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
+            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body.</ImmersiveModal.Body>
             <ImmersiveModal.Footer>
-              This is styled with ImmersiveModalFooter. It gives us a padding to separate
+              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
               from the body.
               <Button.Container>
                 <Button onClick={this.onClose}>Close ImmersiveModal</Button>
@@ -56,10 +56,10 @@ class DefaultImmersiveModal extends React.Component {
             onClose={this.onClose}
             header={<HeaderImage />}
           >
-            <ImmersiveModal.Title>This is styled with ImmersiveModalTitle</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModalBody.</ImmersiveModal.Body>
+            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
+            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body</ImmersiveModal.Body>
             <ImmersiveModal.Footer>
-              This is styled with ImmersiveModalFooter. It gives us a padding to separate
+              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
               from the body.
               <Button.Container>
                 <Button onClick={this.onClose}>Close ImmersiveModal</Button>

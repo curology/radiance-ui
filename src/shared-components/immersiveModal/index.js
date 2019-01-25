@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import KEYCODES from '../../constants/keycodes';
+import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
 import CloseIcon from '../../svgs/icons/close-icon.svg';
 import {
@@ -43,13 +45,27 @@ class ImmersiveModal extends React.Component {
 
   componentDidMount() {
     this.htmlNode.classList.add('no-scroll');
+
+    document
+      .getElementsByTagName('body')[0]
+      .addEventListener('keydown', this.handleEscapeKey);
   }
 
   componentWillUnmount() {
     this.htmlNode.classList.remove('no-scroll');
+
+    document
+      .getElementsByTagName('body')[0]
+      .removeEventListener('keydown', this.handleEscapeKey);
   }
 
-  onOffClick = () => {
+  handleEscapeKey = event => {
+    if (keyPressMatch(event, KEYCODES.escape)) {
+      this.closeModal();
+    }
+  };
+
+  closeModal = () => {
     const { canBeClosed, onClose } = this.props;
     if (canBeClosed) {
       onClose();
@@ -63,7 +79,7 @@ class ImmersiveModal extends React.Component {
     return ReactDOM.createPortal(
       <Overlay>
         <ModalContainer>
-          <OffClickWrapper onOffClick={this.onOffClick}>
+          <OffClickWrapper onOffClick={this.closeModal}>
             {canBeClosed && (
               <CloseIconContainer onClick={onClose}>
                 <CloseIcon />

@@ -23,10 +23,10 @@ class DefaultModal extends React.Component {
         <Button onClick={this.onOpenModal}>Open Modal</Button>
         <Modal isOpen={isOpen} onClose={this.onClose}>
           <Modal.ContentContainer>
-            <Modal.Title>This is styled with ModalTitle</Modal.Title>
-            <Modal.Body>This is styled with ModalBody.</Modal.Body>
+            <Modal.Title>This is styled with Modal.Title</Modal.Title>
+            <Modal.Body>This is styled with Modal.Body.</Modal.Body>
             <Modal.Footer>
-              This is styled with ModalFooter. It gives us a padding to separate
+              This is styled with Modal.Footer. It gives us a padding to separate
               from the body.
               <Button.Container>
                 <Button onClick={this.onClose}>Close Modal</Button>
@@ -46,7 +46,7 @@ class DefaultModal extends React.Component {
 ### Proptypes
 | prop     | propType           | required | default | description                                                                                                                  |
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| onClose | func | no | () => {} | Function is that executed when the close icon is clicked |
+| onClose | func | no | () => {} | Function that is executed when the close icon is clicked |
 | isOpen | bool | no | false | Determines if the modal is open (visible) |
 | canBeClosed | bool | no | true | If false, the close icon does not render |
 | className | string | no | '' | Class name that will be passed to the modal |
