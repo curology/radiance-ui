@@ -15,7 +15,7 @@ describe('<ImmersiveModal />', () => {
         </ImmersiveModal>
       );
 
-      wrapper.instance().onOffClick();
+      wrapper.instance().closeModal();
 
       expect(spy).toHaveBeenCalled();
     });
