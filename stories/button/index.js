@@ -8,7 +8,7 @@ import ButtonReadme from 'docs/button.md';
 import RoundButtonReadme from 'docs/roundButton.md';
 import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/svgs/icons';
 import { Button, RoundButton, Typography } from 'src/shared-components';
-import { SPACING, COLORS } from 'src/constants';
+import { SPACING } from 'src/constants';
 
 const stories = storiesOf('Buttons', module);
 

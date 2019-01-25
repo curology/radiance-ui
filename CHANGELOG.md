@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.20
+- Added `Modal` and `ImmersiveModal` to component library. ([PR #39](https://github.com/PocketDerm/radiance-ui/pull/39))
+
 ## v1.0.19
 - Fixing a console warning about `tabindex`. Changed to `tabIndex` ([PR #37](https://github.com/PocketDerm/radiance-ui/pull/37))
 

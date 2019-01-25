@@ -1,5 +1,8 @@
 {
   "extends": "curology",
+  "globals": {
+    "document": false,
+  },
   "overrides": [
     {
       "files": ["test.js"],
