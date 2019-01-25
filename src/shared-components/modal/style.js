@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import { COLORS, MEDIA_QUERIES, SPACING } from '../../constants';
