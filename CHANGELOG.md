@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.0
+- Updated to Emotion 10. ([PR #41](https://github.com/PocketDerm/radiance-ui/pull/41))
+
 ## v1.0.20
 - Added `Modal` and `ImmersiveModal` to component library. ([PR #39](https://github.com/PocketDerm/radiance-ui/pull/39))
 
