@@ -42,6 +42,7 @@ people (mostly within the Curology organization).
 1. Commit an update to the CHANGELONG.md file with details.
 2. Run `yarn run publish-package` to build the bundled files and publish
    to NPM.
-3. On GitHub, tag a release with the proper version and details. You can
+3. Push changes made to `package.json` to remote repository
+4. On GitHub, tag a release with the proper version and details. You can
    do that
 [here](https://github.com/PocketDerm/radiance-ui/releases/new).
