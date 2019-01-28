@@ -4,13 +4,17 @@
     "document": false,
   },
   "overrides": [
-     {
-       "files": ["test.js"],
-       "rules": {
-         "no-undef": "off"
-       }
-     }
-   ],
+    {
+      "files": ["test.js"],
+      "rules": {
+        "no-undef": "off",
+        "emotion/jsx-import": "error",
+        "emotion/no-vanilla": "error",
+        "emotion/import-from-emotion": "error",
+        "emotion/styled-import": "error"
+      }
+    }
+  ],
   "settings": {
     "import/resolver": {
       "webpack": {
@@ -19,5 +23,4 @@
     },
     "import/extensions": [".js", ".jsx"]
   }
-
 }

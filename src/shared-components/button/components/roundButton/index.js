@@ -62,7 +62,7 @@ const RoundButton = ({
         loading={loading}
         disabled={disabled}
         buttonType={buttonType}
-        className={roundButtonLoader(disabled)}
+        css={[roundButtonLoader(disabled)]}
         textColor={textColor}
       />
     </RoundButtonBase>

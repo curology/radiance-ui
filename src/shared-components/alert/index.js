@@ -82,7 +82,7 @@ class Alert extends React.Component {
       >
         <AlertContentContainer>
           <Icon
-            className={alertIconStyles}
+            css={[alertIconStyles]}
             fill="currentColor"
           />
           {text}
