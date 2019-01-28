@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
+.emotion-0 {
+  color: #ffffff;
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -48,18 +60,6 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   margin-top: 0.25rem;
   min-width: 125px;
   text-align: left;
-}
-
-.emotion-0 {
-  color: #ffffff;
-  cursor: pointer;
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 }
 
 .emotion-1 {
@@ -127,6 +127,18 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
+.emotion-0 {
+  color: #ffffff;
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -174,18 +186,6 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   margin-top: 0.25rem;
   min-width: 125px;
   text-align: left;
-}
-
-.emotion-0 {
-  color: #ffffff;
-  cursor: pointer;
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 }
 
 .emotion-1 {

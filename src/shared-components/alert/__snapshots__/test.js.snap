@@ -1,6 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert UI snapshots renders danger type and text 1`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
 .emotion-0 {
   margin: 2.5px 1.5rem 0px 0px;
   min-height: 1rem;
@@ -21,8 +85,8 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-animation: animation-mhflgt 350ms 1;
-  animation: animation-mhflgt 350ms 1;
+  -webkit-animation: animation-0 350ms 1;
+  animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
   box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
@@ -55,8 +119,8 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
 
 @media (min-width:992px) {
   .emotion-3 {
-    -webkit-animation: animation-yhl9l6 350ms 1;
-    animation: animation-yhl9l6 350ms 1;
+    -webkit-animation: animation-1 350ms 1;
+    animation: animation-1 350ms 1;
     font-size: 0.875rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0px;
@@ -89,6 +153,102 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
 `;
 
 exports[`Alert UI snapshots renders info type and text 1`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
 .emotion-0 {
   margin: 2.5px 1.5rem 0px 0px;
   min-height: 1rem;
@@ -109,8 +269,8 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-animation: animation-mhflgt 350ms 1;
-  animation: animation-mhflgt 350ms 1;
+  -webkit-animation: animation-0 350ms 1;
+  animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
   box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
@@ -143,8 +303,8 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
 
 @media (min-width:992px) {
   .emotion-3 {
-    -webkit-animation: animation-yhl9l6 350ms 1;
-    animation: animation-yhl9l6 350ms 1;
+    -webkit-animation: animation-1 350ms 1;
+    animation: animation-1 350ms 1;
     font-size: 0.875rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0px;
@@ -175,6 +335,38 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
 `;
 
 exports[`Alert UI snapshots renders success type and text 1`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
 .emotion-0 {
   margin: 2.5px 1.5rem 0px 0px;
   min-height: 1rem;
@@ -186,8 +378,8 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-animation: animation-mhflgt 350ms 1;
-  animation: animation-mhflgt 350ms 1;
+  -webkit-animation: animation-0 350ms 1;
+  animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
   box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
@@ -220,8 +412,8 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
 
 @media (min-width:992px) {
   .emotion-3 {
-    -webkit-animation: animation-yhl9l6 350ms 1;
-    animation: animation-yhl9l6 350ms 1;
+    -webkit-animation: animation-1 350ms 1;
+    animation: animation-1 350ms 1;
     font-size: 0.875rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0px;
