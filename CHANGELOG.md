@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.1
+- Bug fix for Gatsby compatibility ([PR #46](https://github.com/PocketDerm/radiance-ui/pull/46))
+
 ## v2.0.0
 - Updated to Emotion 10. ([PR #41](https://github.com/PocketDerm/radiance-ui/pull/41))
 
