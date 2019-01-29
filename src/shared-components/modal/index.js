@@ -16,11 +16,6 @@ import {
   Footer,
 } from './style';
 
-const el = document.querySelector('#reactPortalSection')
-  ? '#reactPortalSection'
-  : 'body';
-ReactModal.setAppElement(el);
-
 class Modal extends React.Component {
   static propTypes = {
     onClose: PropTypes.func,
@@ -50,6 +45,13 @@ class Modal extends React.Component {
     isVisible: false,
     parentNode: document.querySelector('#reactPortalSection') || document.body,
   };
+
+  componentWillMount() {
+    const el = document.querySelector('#reactPortalSection')
+      ? '#reactPortalSection'
+      : 'body';
+    ReactModal.setAppElement(el);
+  }
 
   componentDidMount() {
     document
