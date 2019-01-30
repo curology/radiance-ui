@@ -135,6 +135,7 @@ export const guideColors = {
 export default Object.assign(
   {},
   brandColors,
+  legacyColors,
   colorAliases,
   postcardColors,
   guideColors
