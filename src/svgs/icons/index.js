@@ -6,6 +6,7 @@ export { default as CameraIcon } from './camera-icon.svg';
 export { default as CheckmarkCircleIcon } from './checkmark-circle-icon.svg';
 export { default as CheckmarkIcon } from './checkmark-icon.svg';
 export { default as ChevronIcon } from './chevron-icon.svg';
+export { default as ClipboardIcon } from './clipboard-icon.svg';
 export { default as CloseIcon } from './close-icon.svg';
 export { default as CreditCardIcon } from './credit-card-icon.svg';
 export { default as DeleteIcon } from './delete-icon.svg';
