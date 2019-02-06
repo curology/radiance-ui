@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Alert UI snapshots renders danger type and text 1`] = `
+exports[`Banner UI snapshots renders danger type and text 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
@@ -124,9 +124,6 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
     font-size: 0.875rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
   }
 }
 
@@ -152,7 +149,7 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
 </div>
 `;
 
-exports[`Alert UI snapshots renders info type and text 1`] = `
+exports[`Banner UI snapshots renders info type and text 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
@@ -308,9 +305,6 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
     font-size: 0.875rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
   }
 }
 
@@ -334,7 +328,7 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
 </div>
 `;
 
-exports[`Alert UI snapshots renders success type and text 1`] = `
+exports[`Banner UI snapshots renders success type and text 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
@@ -417,9 +411,6 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
     font-size: 0.875rem;
     margin-bottom: 1rem;
     padding: 0.5rem 0px;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
   }
 }
 
