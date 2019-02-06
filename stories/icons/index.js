@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
+import { css } from '@emotion/core';
 
 import IconReadme from 'docs/icon.md';
 import { Typography } from 'src/shared-components';
@@ -18,13 +19,13 @@ stories.add(
   'Usage',
   withDocs(IconReadme, () => (
     <React.Fragment>
-      <div css="text-align: left;">
+      <div css={css`text-align: left;`}>
         <CameraIcon width={16} height={16} />
       </div>
-      <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
-      <div css="text-align: left;">
+      <div css={css`text-align: left;`}>
         <CameraIcon
           width={number('width', 16)}
           height={number('height', 16)}

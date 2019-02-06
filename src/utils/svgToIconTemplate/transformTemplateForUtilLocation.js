@@ -22,10 +22,11 @@ function transformTemplateForUtilLocation (utilLocation) {
 
     return template.ast`
       ${imports}
+      import { css } from '@emotion/core';
 
       import { propTypes, defaultProps, iconStyles } from '${utilLocation}';
 
-      const ${componentName} = ({ className, ...rest }) => {
+      const ${componentName} = (props) => {
         ${deprecationNotice}
 
         return (

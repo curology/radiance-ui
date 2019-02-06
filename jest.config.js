@@ -1,6 +1,7 @@
 const { defaults } = require('jest-config');
 
 module.exports = {
+  snapshotSerializers: ['jest-emotion'],
   setupTestFrameworkScriptFile: "<rootDir>tests/setupTests.js",
   testPathIgnorePatterns: [...defaults.testPathIgnorePatterns, "/lib/"],
   moduleNameMapper: {

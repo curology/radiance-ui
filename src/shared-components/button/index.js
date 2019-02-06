@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { css } from '@emotion/core';
 
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
@@ -58,7 +59,7 @@ class Button extends React.Component {
           <ButtonText
             loading={loading}
             hasIcon={!!icon}
-            css="padding-top: 2px;"
+            css={css`padding-top: 2px;`}
           >
             {children}
           </ButtonText>

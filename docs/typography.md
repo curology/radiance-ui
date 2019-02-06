@@ -29,7 +29,7 @@ designs specify that we do. In order to override the style, use the
 
 Using a `css` prop:
 ```jsx
-<Typography.Display css={ color: COLORS.failure }>
+<Typography.Display css={css`color: ${COLORS.failure};`}>
   Override!
 </Typography.Display>
 ```

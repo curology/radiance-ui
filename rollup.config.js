@@ -23,10 +23,10 @@ export default {
       format: 'umd',
       name: 'radianceUi',
       globals: {
-        emotion: 'emotion',
+        '@emtion/styled': 'styled',
         'prop-types': 'PropTypes',
         react: 'React',
-        'react-emotion': 'styled',
+        '@emotion/core': '@emotion/core',
         tinycolor2: 'tinycolor',
       },
     },
@@ -54,10 +54,10 @@ export default {
     sizeSnapshot(),
   ],
   external: [
-    'emotion',
+    '@emotion/styled',
     'prop-types',
     'react',
-    'react-emotion',
+    '@emotion/core',
     'tinycolor2',
   ],
 };

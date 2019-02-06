@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { css } from '@emotion/core';
 
 import AccordionReadme from 'docs/accordion.md';
 import { Accordion, Typography } from 'src/shared-components';
@@ -18,12 +19,12 @@ stories.add(
   'Usage',
   withDocs(AccordionReadme, () => (
     <React.Fragment>
-      <div css="text-align: left;" >
+      <div css={css`text-align: left;`}>
         <DefaultAccordion />
-        <Typography.Heading css={`padding: ${SPACING.base} 0 ${SPACING.small};`}>
+        <Typography.Heading css={css`padding: ${SPACING.base} 0 ${SPACING.small};`}>
           With Knobs
         </Typography.Heading>
-        <div css="width: 400px;">
+        <div css={css`width: 400px;`}>
           <Accordion.Container>
             <Accordion
               title={

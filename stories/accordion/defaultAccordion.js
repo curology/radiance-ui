@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from '@emotion/core';
 
 import { Accordion } from 'src/shared-components';
 
@@ -20,7 +21,7 @@ class DefaultAccordion extends React.Component {
     } = this.state;
 
     return (
-      <div css="width: 400px;">
+      <div css={css`width: 400px;`}>
         <Accordion.Container>
           <Accordion
             title={
