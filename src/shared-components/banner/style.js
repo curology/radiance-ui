@@ -20,28 +20,28 @@ const fadeInMobile = keyframes`
   to { opacity: 1; transform: translate3d(0, 0px, 0); }
 `;
 
-const successAlertStyles = css`
+const successBannerStyles = css`
   background-color: ${COLORS.statusGreenBackground};
   border-color: ${COLORS.statusGreenBorder};
   color: ${COLORS.statusGreen};
   fill: ${COLORS.statusGreen};
 `;
 
-const errorAlertStyles = css`
+const errorBannerStyles = css`
   background-color: ${COLORS.statusRedBackground};
   border-color: ${COLORS.statusRedBorder};
   color: ${COLORS.statusRed};
   fill: ${COLORS.statusRed};
 `;
 
-const defaultAlertStyles = css`
+const defaultBannerStyles = css`
   background-color: ${COLORS.statusGreyBackground};
   border-color: ${COLORS.statusGreyBorder};
   color: ${COLORS.statusGrey};
   fill: ${COLORS.statusGrey};
 `;
 
-export const AlertContainer = styled.div`
+export const BannerContainer = styled.div`
   align-items: flex-start;
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   border-width: 1px;
@@ -62,13 +62,13 @@ export const AlertContainer = styled.div`
   ${props => props.fullWidth ? '' : 'width: 327px;'}
 
   ${(props => {
-    switch (props.alertType) {
+    switch (props.bannerType) {
       case 'danger':
-        return errorAlertStyles;
+        return errorBannerStyles;
       case 'success':
-        return successAlertStyles;
+        return successBannerStyles;
       default:
-        return defaultAlertStyles;
+        return defaultBannerStyles;
     }
   })}
 
@@ -80,7 +80,7 @@ export const AlertContainer = styled.div`
   }
 `;
 
-export const AlertsContainer = styled.div`
+export const BannersContainer = styled.div`
   align-items: flex-end;
   display: flex;
   flex-direction: column;
@@ -97,13 +97,13 @@ export const AlertsContainer = styled.div`
   }
 `;
 
-export const AlertContentContainer = styled.div`
+export const BannerContentContainer = styled.div`
   display: flex;
   padding: ${SPACING.xxsmall} ${SPACING.base};
   width: 100%;
 `;
 
-export const alertIconStyles = css`
+export const bannerIconStyles = css`
   margin: 2.5px ${SPACING.base} 0px 0px;
   min-height: ${SPACING.small};
   min-width: ${SPACING.small};

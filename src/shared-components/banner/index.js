@@ -5,22 +5,22 @@ import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
 import {
-  AlertsContainer,
-  AlertContainer,
-  AlertContentContainer,
-  alertIconStyles,
+  BannersContainer,
+  BannerContainer,
+  BannerContentContainer,
+  bannerIconStyles,
 } from './style';
 
 const ANIMATION_DELAY = 500;
 
-const alertIconMapping = {
+const bannerIconMapping = {
   success: CheckmarkIcon,
   danger: ErrorIcon,
   info: InfoIcon,
 };
 
-class Alert extends React.Component {
-  static Container = ({ children }) => <AlertsContainer>{children}</AlertsContainer>;
+class Banner extends React.Component {
+  static Container = ({ children }) => <BannersContainer>{children}</BannersContainer>;
 
   static propTypes = {
     text: PropTypes.string.isRequired,
@@ -71,27 +71,27 @@ class Alert extends React.Component {
   render() {
     const { text, type, fullWidth } = this.props;
     const { exiting, exited } = this.state;
-    const Icon = alertIconMapping[type];
+    const Icon = bannerIconMapping[type];
 
     if (exited) { return null; }
 
     return (
-      <AlertContainer
-        alertType={type}
+      <BannerContainer
+        bannerType={type}
         exiting={exiting}
         onClick={this.exit}
         fullWidth={fullWidth}
       >
-        <AlertContentContainer>
+        <BannerContentContainer>
           <Icon
-            css={[alertIconStyles]}
+            css={[bannerIconStyles]}
             fill="currentColor"
           />
           {text}
-        </AlertContentContainer>
-      </AlertContainer>
+        </BannerContentContainer>
+      </BannerContainer>
     );
   }
 }
 
-export default Alert;
+export default Banner;

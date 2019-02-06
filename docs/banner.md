@@ -2,36 +2,36 @@
 ### Usage
 
 ```jsx
-import { Alert } from 'radiance-ui';
+import { Banner } from 'radiance-ui';
 
-<Alert.Container>
-  <Alert
+<Banner.Container>
+  <Banner
     text="Your photos were uploaded successfully!"
     type="success"
     duration={4}
     onExit={() => {}}
   />
-  <Alert
+  <Banner
     text="Your photos were uploaded successfully!"
     type="success"
     duration="sticky"
     onExit={() => {}}
   />
-  <Alert
+  <Banner
     text="Support has been notified."
     type="info"
     duration="sticky"
     onExit={() => {}}
   />
-  <Alert
+  <Banner
     text="Oops! We couldn't update your information!"
     type="danger"
     duration="sticky"
     onExit={() => {}}
   />
-</Alert.Container>
-  <Alert
-    text="This is a unconstrainted alert"
+</Banner.Container>
+  <Banner
+    text="This is a unconstrainted banner"
     type="danger"
     duration="sticky"
     fullWidth
@@ -51,7 +51,7 @@ import { Alert } from 'radiance-ui';
 | fullWidth| bool               | no       | -       | if true, it won't set the hardcoded width on the alert container, so the alert will expand to fill the container             |
 
 ### Notes
-The `<Alert />` component provides only the styling for and enter/exit
+The `<Banner />` component provides only the styling for and enter/exit
 behavior for alerts. Management of what alerts are showing on the screen
 must be handled from outside of this component.
 
@@ -59,5 +59,5 @@ All alerts are dimissable by clicking on them. However, you can use the
 `duration` prop to determine if the alert is sticky or dismissed on a
 timer (in units of seconds).
 
-The `onExit` handler will always receive the `<Alert />` component's
+The `onExit` handler will always receive the `<Banner />` component's
 props as its argument.
