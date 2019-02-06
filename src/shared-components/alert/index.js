@@ -27,6 +27,7 @@ class Alert extends React.Component {
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     onExit: PropTypes.func.isRequired,
+    fullWidth: PropTypes.string,
   };
 
   state = {
@@ -54,7 +55,7 @@ class Alert extends React.Component {
   }
 
   exit = () => {
-    const { onExit, ...rest} = this.props;
+    const { onExit, ...rest } = this.props;
     this.setState({ exiting: true });
 
     // eslint-disable-next-line no-undef
@@ -62,13 +63,13 @@ class Alert extends React.Component {
 
     // eslint-disable-next-line no-undef
     window.setTimeout(() => {
-      onExit({...rest});
-      this.setState({exited: true });
+      onExit({ ...rest });
+      this.setState({ exited: true });
     }, ANIMATION_DELAY);
   };
 
   render() {
-    const { text, type } = this.props;
+    const { text, type, fullWidth } = this.props;
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
@@ -79,6 +80,7 @@ class Alert extends React.Component {
         alertType={type}
         exiting={exiting}
         onClick={this.exit}
+        fullWidth={fullWidth}
       >
         <AlertContentContainer>
           <Icon

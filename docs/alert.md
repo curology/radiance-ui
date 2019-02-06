@@ -30,6 +30,13 @@ import { Alert } from 'radiance-ui';
     onExit={() => {}}
   />
 </Alert.Container>
+  <Alert
+    text="This is a unconstrainted alert"
+    type="danger"
+    duration="sticky"
+    fullWidth
+    onExit={() => {}}
+  />
 ```
 
 <!-- STORY -->
@@ -41,6 +48,7 @@ import { Alert } from 'radiance-ui';
 | type     | string             | yes      | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
 | duration | number&#124;string | yes      | -       | can be 'sticky' or number in seconds before the alert is dismissed                                                           |
 | onExit   | func               | yes      | -       | callback function called on dismissal of  the alert. The function will receive all  of the component's props as the argument |
+| fullWidth| bool               | no       | -       | if true, it won't set the hardcoded width on the alert container, so the alert will expand to fill the container             |
 
 ### Notes
 The `<Alert />` component provides only the styling for and enter/exit

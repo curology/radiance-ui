@@ -59,7 +59,7 @@ export const AlertContainer = styled.div`
   transform: ${props =>
     props.exiting ? 'translate3d(0, -24px, 0)' : 'translate3d(0, 0, 0)'};
   transition: ${ANIMATION.defaultTiming};
-  width: 327px;
+  ${props => props.fullWidth ? '' : 'width: 327px;'}
 
   ${(props => {
     switch (props.alertType) {
@@ -82,7 +82,7 @@ export const AlertContainer = styled.div`
   }
 `;
 
-export const AlertsContainer= styled.div`
+export const AlertsContainer = styled.div`
   align-items: flex-end;
   display: flex;
   flex-direction: column;
