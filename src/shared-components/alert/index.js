@@ -27,7 +27,6 @@ class Alert extends React.Component {
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     onExit: PropTypes.func.isRequired,
-    fullWidth: PropTypes.string,
   };
 
   state = {

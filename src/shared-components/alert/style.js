@@ -77,6 +77,8 @@ export const AlertContainer = styled.div`
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
     margin-bottom: ${SPACING.small};
     padding: ${SPACING.xsmall} 0px;
+    transform: ${props =>
+    props.exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
   }
 `;
 
