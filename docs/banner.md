@@ -32,7 +32,7 @@ import { Banner } from 'radiance-ui';
 | type        | string             | yes      | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
 | duration    | number&#124;string | yes      | -       | can be 'sticky' or number in seconds before the banner is dismissed                                                          |
 | onClick     | func               | yes      | -       | callback function called on clicking the banner. The function will receive all  of the component's props as the argument     |
-| fullWidth   | bool               | no       | true    | if false, it will use the hardcoded width instead of expanding to fill the container                                         |
+| fullWidth   | bool               | no       | false   | if false, it will use the hardcoded width instead of expanding to fill the container                                         |
 | allowDismiss| bool               | no       | false   | if true, it will allow you to dismiss the banner                                                                             |
 
 ### Notes
