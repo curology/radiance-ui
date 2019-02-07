@@ -17,7 +17,7 @@ describe('Banner UI snapshots', () => {
         text={testBanner.text}
         type="success"
         duration={testBanner.duration}
-        onExit={() => { }}
+        onClick={() => { }}
       />
     );
 
@@ -31,7 +31,7 @@ describe('Banner UI snapshots', () => {
         text={testBanner.text}
         type="danger"
         duration={testBanner.duration}
-        onExit={() => { }}
+        onClick={() => { }}
       />
     );
 
@@ -45,7 +45,7 @@ describe('Banner UI snapshots', () => {
         text={testBanner.text}
         type="info"
         duration={testBanner.duration}
-        onExit={() => { }}
+        onClick={() => { }}
       />
     );
 
@@ -54,10 +54,10 @@ describe('Banner UI snapshots', () => {
   });
 });
 
-test('Banner onExit is triggered on click', () => {
+test('Banner onClick is triggered on click', () => {
   jest.useFakeTimers();
   const spy = jest.fn();
-  const banner = shallow(<Banner onExit={spy} {...testBanner} />);
+  const banner = shallow(<Banner onClick={spy} {...testBanner} />);
 
   banner.simulate('click');
   jest.runAllTimers();

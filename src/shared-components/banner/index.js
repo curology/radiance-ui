@@ -28,12 +28,12 @@ class Banner extends React.Component {
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     onClick: PropTypes.func.isRequired,
     allowDismiss: PropTypes.bool,
-    fullWidth: PropTypes.string,
+    fullWidth: PropTypes.bool,
   };
 
   static defaultProps = {
     allowDismiss: false,
-    fullWidth: true,
+    fullWidth: false,
   }
 
   state = {
