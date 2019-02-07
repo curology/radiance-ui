@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.30
+- Add clipboard icon. ([PR #50](https://github.com/PocketDerm/radiance-ui/pull/50))
+
 ## v1.0.20
 - Added `Modal` and `ImmersiveModal` to component library. ([PR #39](https://github.com/PocketDerm/radiance-ui/pull/39))
 
