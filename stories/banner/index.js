@@ -14,45 +14,26 @@ stories.add(
   'Usage',
   withDocs(BannerReadme, () => (
     <React.Fragment>
-      <Banner.Container>
-        <Banner
-          text="Your photos were uploaded successfully!"
-          type="success"
-          duration={4}
-          onExit={() => { }}
-        />
-        <Banner
-          text="Your photos were uploaded successfully!"
-          type="success"
-          duration="sticky"
-          onExit={() => { }}
-        />
-        <Banner
-          text="Support has been notified."
-          type="info"
-          duration="sticky"
-          onExit={() => { }}
-        />
-        <Banner
-          text="Oops! We couldn't update your information!"
-          type="danger"
-          duration="sticky"
-          onExit={() => { }}
-        />
-      </Banner.Container>
       <Banner
-        text="This is a unconstrainted banner"
+        text="This banner will go away automatically"
+        type="success"
+        allowDismiss
+        duration={3}
+        onClick={() => { console.log('clicking dissapearing banner') }}
+      />
+      <Banner
+        text="This is a not dismissable banner"
         type="danger"
-        duration="sticky"
         fullWidth
-        onExit={() => { }}
+        onClick={() => { console.log('clicking undismissable banner') }}
       />
       <Typography.Heading>With Knobs</Typography.Heading>
       <Banner
-        text={text('text', 'This is an banner')}
+        text={text('text', 'This is an dismissable banner')}
         type={select('type', ['success', 'info', 'danger'], 'info')}
         duration='sticky'
-        onExit={action('banner exited')}
+        onClick={() => { console.log('dismissable banner exited') }}
+        allowDismiss
       />
     </React.Fragment>
   ))

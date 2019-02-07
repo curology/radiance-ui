@@ -26,9 +26,15 @@ class Banner extends React.Component {
     text: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-    onExit: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired,
+    allowDismiss: PropTypes.bool,
     fullWidth: PropTypes.string,
   };
+
+  static defaultProps = {
+    allowDismiss: false,
+    fullWidth: true,
+  }
 
   state = {
     exiting: false,
@@ -36,12 +42,12 @@ class Banner extends React.Component {
   };
 
   componentDidMount() {
-    const { duration } = this.props;
+    const { duration, allowDismiss } = this.props;
 
-    if (duration !== 'sticky') {
+    if (duration !== 'sticky' && allowDismiss) {
       // eslint-disable-next-line no-undef
       this.timer = window.setTimeout(
-        this.exit,
+        this.onClick,
         Number(duration) * 1000 - ANIMATION_DELAY
       );
     }
@@ -54,18 +60,24 @@ class Banner extends React.Component {
     }
   }
 
-  exit = () => {
-    const { onExit, ...rest } = this.props;
-    this.setState({ exiting: true });
+  onClick = () => {
+    const { onClick, allowDismiss, ...rest } = this.props;
 
-    // eslint-disable-next-line no-undef
-    window.clearTimeout(this.timer);
+    if (allowDismiss) {
+      this.setState({ exiting: true });
 
-    // eslint-disable-next-line no-undef
-    window.setTimeout(() => {
-      onExit({ ...rest });
-      this.setState({ exited: true });
-    }, ANIMATION_DELAY);
+      // eslint-disable-next-line no-undef
+      window.clearTimeout(this.timer);
+
+      // eslint-disable-next-line no-undef
+      window.setTimeout(() => {
+        onClick({ ...rest });
+        this.setState({ exited: true });
+      }, ANIMATION_DELAY);
+    } else {
+      onClick();
+    }
+
   };
 
   render() {
@@ -79,7 +91,7 @@ class Banner extends React.Component {
       <BannerContainer
         bannerType={type}
         exiting={exiting}
-        onClick={this.exit}
+        onClick={this.onClick}
         fullWidth={fullWidth}
       >
         <BannerContentContainer>
