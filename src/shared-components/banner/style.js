@@ -1,24 +1,13 @@
 import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/core';
+import { css } from '@emotion/core';
 
 import {
   COLORS,
   MEDIA_QUERIES,
   BOX_SHADOWS,
   SPACING,
-  ANIMATION,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
-
-const fadeInDesktop = keyframes`
-  from { opacity: 0; transform: translate3d(24px, 0, 0); }
-  to { opacity: 1; transform: translate3d(0, 0, 0); }
-`;
-
-const fadeInMobile = keyframes`
-  from { opacity: 0; transform: translate3d(0, -24px, 0);  }
-  to { opacity: 1; transform: translate3d(0, 0px, 0); }
-`;
 
 const successBannerStyles = css`
   background-color: ${COLORS.statusGreenBackground};
@@ -43,7 +32,6 @@ const defaultBannerStyles = css`
 
 export const BannerContainer = styled.div`
   align-items: flex-start;
-  animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   border-width: 1px;
   border-style: solid;
   box-shadow: ${BOX_SHADOWS.message};
@@ -52,13 +40,9 @@ export const BannerContainer = styled.div`
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   justify-content: space-around;
   margin: 0 auto ${SPACING.xsmall};
-  opacity: ${props => (props.exiting ? '0' : '1')};
   padding: ${SPACING.xsmall} 0px;
   position: relative;
   text-align: left;
-  transform: ${props =>
-    props.exiting ? 'translate3d(0, -24px, 0)' : 'translate3d(0, 0, 0)'};
-  transition: ${ANIMATION.defaultTiming};
 
   ${(props => {
     switch (props.bannerType) {
@@ -72,7 +56,6 @@ export const BannerContainer = styled.div`
   })}
 
   ${MEDIA_QUERIES.lgUp} {
-    animation: ${fadeInDesktop} ${ANIMATION.defaultTiming} 1;
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
     margin-bottom: ${SPACING.small};
     padding: ${SPACING.xsmall} 0px;

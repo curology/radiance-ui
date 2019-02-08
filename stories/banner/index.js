@@ -18,7 +18,7 @@ stories.add(
       <Banner
         content={<div>This is a banner <a href="#">something</a></div>}
         type={select('type', ['success', 'info', 'danger'], 'info')}
-        onClick={() => { console.log('dismissable banner exited') }}
+        onClick={() => { console.log('banner clicked') }}
       />
     </React.Fragment >
   ))

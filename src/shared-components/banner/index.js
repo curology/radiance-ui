@@ -26,22 +26,13 @@ class Banner extends React.Component {
     onClick: PropTypes.func.isRequired,
   };
 
-  state = {
-    exiting: false,
-    exited: false,
-  };
-
   render() {
     const { content, type, onClick } = this.props;
-    const { exiting, exited } = this.state;
     const Icon = bannerIconMapping[type];
-
-    if (exited) { return null; }
 
     return (
       <BannerContainer
         bannerType={type}
-        exiting={exiting}
         onClick={onClick}
       >
         <BannerContentContainer>
