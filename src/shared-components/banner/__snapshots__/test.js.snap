@@ -110,7 +110,6 @@ exports[`Banner UI snapshots renders danger type and text 1`] = `
   transform: translate3d(0,0,0);
   -webkit-transition: 350ms;
   transition: 350ms;
-  width: 327px;
   background-color: #ffeeed;
   border-color: #FFE4E2;
   color: #ff5e4d;
@@ -144,7 +143,9 @@ exports[`Banner UI snapshots renders danger type and text 1`] = `
       className="emotion-0"
       fill="currentColor"
     />
-    Your email address was updated successfully!
+    <div>
+      Your email address was updated successfully!
+    </div>
   </div>
 </div>
 `;
@@ -291,7 +292,6 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   transform: translate3d(0,0,0);
   -webkit-transition: 350ms;
   transition: 350ms;
-  width: 327px;
   background-color: #ededf0;
   border-color: #e1e0e6;
   color: #858298;
@@ -323,7 +323,9 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
       className="emotion-0"
       fill="currentColor"
     />
-    Your email address was updated successfully!
+    <div>
+      Your email address was updated successfully!
+    </div>
   </div>
 </div>
 `;
@@ -397,7 +399,6 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   transform: translate3d(0,0,0);
   -webkit-transition: 350ms;
   transition: 350ms;
-  width: 327px;
   background-color: #eaf2eb;
   border-color: #DAECDC;
   color: #317f3b;
@@ -438,7 +439,9 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
       className="emotion-0"
       fill="currentColor"
     />
-    Your email address was updated successfully!
+    <div>
+      Your email address was updated successfully!
+    </div>
   </div>
 </div>
 `;

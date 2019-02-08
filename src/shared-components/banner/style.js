@@ -59,7 +59,6 @@ export const BannerContainer = styled.div`
   transform: ${props =>
     props.exiting ? 'translate3d(0, -24px, 0)' : 'translate3d(0, 0, 0)'};
   transition: ${ANIMATION.defaultTiming};
-  ${props => props.fullWidth ? '' : 'width: 327px;'}
 
   ${(props => {
     switch (props.bannerType) {

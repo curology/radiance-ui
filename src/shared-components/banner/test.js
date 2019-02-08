@@ -5,18 +5,16 @@ import { shallow } from 'enzyme';
 import Banner from './index';
 
 const testBanner = {
-  text: 'Your email address was updated successfully!',
+  content: <div>Your email address was updated successfully!</div>,
   type: 'success',
-  duration: 'sticky',
 };
 
 describe('Banner UI snapshots', () => {
   test('renders success type and text', () => {
     const component = renderer.create(
       <Banner
-        text={testBanner.text}
+        content={testBanner.content}
         type="success"
-        duration={testBanner.duration}
         onClick={() => { }}
       />
     );
@@ -28,9 +26,8 @@ describe('Banner UI snapshots', () => {
   test('renders danger type and text', () => {
     const component = renderer.create(
       <Banner
-        text={testBanner.text}
+        content={testBanner.content}
         type="danger"
-        duration={testBanner.duration}
         onClick={() => { }}
       />
     );
@@ -42,9 +39,8 @@ describe('Banner UI snapshots', () => {
   test('renders info type and text', () => {
     const component = renderer.create(
       <Banner
-        text={testBanner.text}
+        content={testBanner.content}
         type="info"
-        duration={testBanner.duration}
         onClick={() => { }}
       />
     );
