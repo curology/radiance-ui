@@ -7,7 +7,7 @@ const appPreloader = translateX => keyframes`
   100% { opacity: 0; transform: translate3d(-${translateX}, 0, 0) }
 `;
 
-export const LoadingContainer = styled.section`
+export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@ export const LoadingContainer = styled.section`
   background-color: ${props => props.bgColor};
 `;
 
-export const LoadingOverlay = styled.div`
+export const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,7 @@ export const LoadingOverlay = styled.div`
   position: relative;
 `;
 
-export const LoadingDot = styled.span`
+export const Dot = styled.span`
   display: block;
   height: ${props => props.size};
   width: ${props => props.size};

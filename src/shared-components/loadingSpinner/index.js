@@ -2,33 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { COLORS } from '../../constants';
-import { LoadingContainer, LoadingOverlay, LoadingDot } from './style';
+import { Container, Overlay, Dot } from './style';
 
 const LoadingSpinner = ({
   bgColor, color, translateX, duration, size, 
 }) => (
-  <LoadingContainer bgColor={bgColor} id="loading-spinner">
-    <LoadingOverlay>
-      <LoadingDot
+  <Container bgColor={bgColor} id="loading-spinner">
+    <Overlay>
+      <Dot
         color={color}
         translateX={translateX}
         duration={duration}
         size={size}
       />
-      <LoadingDot
+      <Dot
         color={color}
         translateX={translateX}
         duration={duration}
         size={size}
       />
-      <LoadingDot
+      <Dot
         color={color}
         translateX={translateX}
         duration={duration}
         size={size}
       />
-    </LoadingOverlay>
-  </LoadingContainer>
+    </Overlay>
+  </Container>
 );
 
 LoadingSpinner.propTypes = {
