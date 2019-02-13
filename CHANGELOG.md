@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.3
+- Add LoadingSpinner component ([PR #53](https://github.com/PocketDerm/radiance-ui/pull/53))
+
 ## v2.0.2
 - Add clipboard icon ([PR #48](https://github.com/PocketDerm/radiance-ui/pull/48))
 
