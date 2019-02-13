@@ -5,6 +5,7 @@ export { default as Checkbox } from './checkbox';
 export { default as Chip } from './chip';
 export { default as Container } from './container';
 export { default as ImmersiveModal } from './immersiveModal';
+export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
 export { default as OffClickWrapper } from './offClickWrapper';
 export { default as RadioButton } from './radioButton';
