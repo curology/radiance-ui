@@ -9,26 +9,28 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
-const successBannerStyles = css`
-  background-color: ${COLORS.statusGreenBackground};
-  border-color: ${COLORS.statusGreenBorder};
-  color: ${COLORS.statusGreen};
-  fill: ${COLORS.statusGreen};
+const bannerStyles = styleObj => css`
+  background-color: ${styleObj.backgroundColor};
+  border-color: ${styleObj.borderColor};
+  color: ${styleObj.color};
+  fill: ${styleObj.color};
 `;
 
-const errorBannerStyles = css`
-  background-color: ${COLORS.statusRedBackground};
-  border-color: ${COLORS.statusRedBorder};
-  color: ${COLORS.statusRed};
-  fill: ${COLORS.statusRed};
-`;
-
-const defaultBannerStyles = css`
-  background-color: ${COLORS.statusGreyBackground};
-  border-color: ${COLORS.statusGreyBorder};
-  color: ${COLORS.statusGrey};
-  fill: ${COLORS.statusGrey};
-`;
+const errorStyle = {
+  backgroundColor: COLORS.statusRedBackground,
+  borderColor: COLORS.statusRedBorder,
+  color: COLORS.statusRed,
+}
+const successStyle = {
+  backgroundColor: COLORS.statusGreenBackground,
+  borderColor: COLORS.statusGreenBorder,
+  color: COLORS.statusGreen,
+}
+const defaultStyle = {
+  backgroundColor: COLORS.statusGreyBackground,
+  borderColor: COLORS.statusGreyBorder,
+  color: COLORS.statusGrey,
+}
 
 export const BannerContainer = styled.div`
   align-items: flex-start;
@@ -47,11 +49,11 @@ export const BannerContainer = styled.div`
   ${(props => {
     switch (props.bannerType) {
       case 'danger':
-        return errorBannerStyles;
+        return bannerStyles(errorStyle);
       case 'success':
-        return successBannerStyles;
+        return bannerStyles(successStyle);
       default:
-        return defaultBannerStyles;
+        return bannerStyles(defaultStyle);
     }
   })}
 
@@ -59,23 +61,6 @@ export const BannerContainer = styled.div`
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
     margin-bottom: ${SPACING.small};
     padding: ${SPACING.xsmall} 0px;
-  }
-`;
-
-export const BannersContainer = styled.div`
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: ${SPACING.small};
-  z-index: 99999;
-
-  ${MEDIA_QUERIES.mdUp} {
-    left: auto;
-    right: ${SPACING.small};
-    top: ${SPACING.small};
   }
 `;
 

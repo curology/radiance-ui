@@ -15,9 +15,9 @@ import { Banner } from 'radiance-ui';
 ### Proptypes
 | prop        | propType           | required | default | description                                                                                                                  |
 |-------------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| content     | string             | yes      | -       | banner content to be displayed                                                                                               |
+| content     | node               | yes      | -       | banner content to be displayed                                                                                               |
 | type        | string             | yes      | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
-| onClick     | func               | yes      | -       | callback function called on clicking the banner. The function will receive all  of the component's props as the argument     |
+| onClick     | func               | no       | -       | callback function called on clicking the banner. The function will receive all  of the component's props as the argument     |
 
 ### Notes
 The `<Banner />` component provides only the styling for and onClick

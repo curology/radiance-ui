@@ -5,7 +5,6 @@ import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
 import {
-  BannersContainer,
   BannerContainer,
   BannerContentContainer,
   bannerIconStyles,
@@ -18,12 +17,10 @@ const bannerIconMapping = {
 };
 
 class Banner extends React.Component {
-  static Container = ({ children }) => <BannersContainer>{children}</BannersContainer>;
-
   static propTypes = {
     content: PropTypes.node.isRequired,
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
-    onClick: PropTypes.func.isRequired,
+    onClick: PropTypes.func,
   };
 
   render() {
