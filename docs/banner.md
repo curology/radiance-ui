@@ -6,7 +6,7 @@ import { Banner } from 'radiance-ui';
 <Banner
   content={<div>This is a banner <a href="#">something</a></div>}
   type={select('type', ['success', 'info', 'danger'], 'info')}
-  onClick={() => { console.log('banner clicked')}}
+  onClick={action('clicked')}
 />
 ```
 
@@ -15,7 +15,7 @@ import { Banner } from 'radiance-ui';
 ### Proptypes
 | prop        | propType           | required | default | description                                                                                                                  |
 |-------------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| content     | node               | yes      | -       | banner content to be displayed                                                                                               |
+| content     | node                | yes      | -       | banner content to be displayed                                                                                               |
 | type        | string             | yes      | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
 | onClick     | func               | no       | -       | callback function called on clicking the banner. The function will receive all  of the component's props as the argument     |
 

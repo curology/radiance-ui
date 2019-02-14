@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
+import { action } from '@storybook/addon-actions';
 import { withKnobs, select } from '@storybook/addon-knobs';
 
 import BannerReadme from 'docs/banner.md';
@@ -18,7 +19,7 @@ stories.add(
       <Banner
         content={<div>This is a banner <a href="#">something</a></div>}
         type={select('type', ['success', 'info', 'danger'], 'info')}
-        onClick={() => { console.log('banner clicked') }}
+        onClick={action('clicked')}
       />
     </React.Fragment >
   ))
