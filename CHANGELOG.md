@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.4
+- Fix icons for Emotion 10 and a few other upgrade items. ([PR #51](https://github.com/PocketDerm/radiance-ui/pull/51))
+
 ## v2.0.3
 - Add LoadingSpinner component ([PR #53](https://github.com/PocketDerm/radiance-ui/pull/53))
 
