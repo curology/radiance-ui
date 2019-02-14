@@ -3,10 +3,8 @@
     ["@babel/env", {
       "modules": false
     }],
-    "@babel/react"
-  ],
-  "plugins": [
-    "emotion",
+    "@babel/react",
+    "@emotion/babel-preset-css-prop"
   ],
   "env": {
     "test": {

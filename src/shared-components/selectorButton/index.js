@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { css } from '@emotion/core';
 
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import { COLORS } from '../../constants';
@@ -45,9 +46,9 @@ const SelectorButton = ({
   >
     <SelectorContainer>
       <CheckmarkIcon
-        css={`
-          color: ${checked ? COLORS.white : 'transparent'};
+        css={css`
           ${selectorIcon};
+          color: ${checked ? COLORS.white : 'transparent'};
         `}
         width={11}
         height={11}

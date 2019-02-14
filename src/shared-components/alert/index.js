@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { css } from '@emotion/core';
 
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
@@ -82,7 +83,7 @@ class Alert extends React.Component {
       >
         <AlertContentContainer>
           <Icon
-            css={[alertIconStyles]}
+            css={css`${alertIconStyles};`}
             fill="currentColor"
           />
           {text}

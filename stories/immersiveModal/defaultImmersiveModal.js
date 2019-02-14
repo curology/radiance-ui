@@ -1,11 +1,12 @@
 import React from 'react';
+import { css } from '@emotion/core';
 
 import { ImmersiveModal, Button } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 
 const HeaderImage = () => (
   <div
-    css={`
+    css={css`
       height: 8rem;
       background-color: ${COLORS.lavender100};
       padding: 2rem;

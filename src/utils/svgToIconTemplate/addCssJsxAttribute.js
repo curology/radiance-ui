@@ -10,47 +10,44 @@
    `
  */
 
+
 function addCssJsxAttribute(jsx) {
   jsx.openingElement.attributes.push({
-    type: 'JSXAttribute',
-    name: { type: 'JSXIdentifier', name: 'css' },
+    type: "JSXAttribute",
+    name: { type: "JSXIdentifier", name: "css" },
     value: {
-      type: 'JSXExpressionContainer',
+      type: "JSXExpressionContainer",
       expression: {
-        type: 'TemplateLiteral',
-        expressions: [
-          {
-            type: "CallExpression",
-            callee: {
-              type: "Identifier",
-              name: "iconStyles",
-            },
-            arguments: [
-              {
+        type: "TaggedTemplateExpression",
+        tag: { type: "Identifier", name: "css" },
+        quasi: {
+          type: "TemplateLiteral",
+          expressions: [
+            {
+              type: "CallExpression",
+              callee: {
                 type: "Identifier",
-                name: "rest",
+                name: "iconStyles",
               },
-            ],
-          },
-          {
-            type: "Identifier",
-            name: "className",
-          },
-        ],
-        quasis: [
-          {
-            type: "TemplateElement",
-            value: { raw: "" },
-          },
-          {
-            type: "TemplateElement",
-            value: { raw: ";" },
-          },
-          {
-            type: "TemplateElement",
-            value: { raw: ";" },
-          },
-        ],
+              arguments: [
+                {
+                  type: "Identifier",
+                  name: "props",
+                },
+              ],
+            },
+          ],
+          quasis: [
+            {
+              type: "TemplateElement",
+              value: { raw: "" },
+            },
+            {
+              type: "TemplateElement",
+              value: { raw: ";" },
+            },
+          ],
+        },
       },
     },
   });

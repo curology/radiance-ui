@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { css } from '@emotion/core';
 
 import ModalReadme from 'docs/modal.md';
 import { Modal, Typography, Container } from 'src/shared-components';
@@ -11,7 +12,7 @@ import { COLORS } from 'src/constants';
 import DefaultModal from './defaultModal';
 
 const ModalChild = () => (
-  <Modal.ContentContainer css={`background-color: ${COLORS.purple15};`}>
+  <Modal.ContentContainer css={css`background-color: ${COLORS.purple15};`}>
     <Modal.Title>Modal is Open!</Modal.Title>
   </Modal.ContentContainer>
 );

@@ -65,12 +65,6 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   }
 }
 
-.emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,6 +72,12 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   display: flex;
   padding: 0.25rem 1.5rem;
   width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
 }
 
 .emotion-3 {
@@ -249,12 +249,6 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   }
 }
 
-.emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -262,6 +256,12 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   display: flex;
   padding: 0.25rem 1.5rem;
   width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
 }
 
 .emotion-3 {
@@ -367,12 +367,6 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   }
 }
 
-.emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
 .emotion-3 {
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -430,6 +424,12 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   display: flex;
   padding: 0.25rem 1.5rem;
   width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
 }
 
 <div

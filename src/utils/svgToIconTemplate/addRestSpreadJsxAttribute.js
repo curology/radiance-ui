@@ -12,7 +12,7 @@ function addRestSpreadJsxAttribute(jsx) {
     type: "JSXSpreadAttribute",
     argument: {
       type: "Identifier",
-      name: "rest",
+      name: "props",
     },
   });
 };

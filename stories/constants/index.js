@@ -1,6 +1,7 @@
 import React from 'react';
 import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
+import { css } from '@emotion/core';
 
 import * as COLORS from 'src/constants/colors';
 import * as CONSTANTS from 'src/constants';
@@ -19,7 +20,7 @@ const CONSTANTS_WITH_OWN_STORY = [
 stories.add(
   'available constants',
   withDocs(ConstantsReadme, () => (
-    <div css="text-align: left;">
+    <div css={css`text-align: left;`}>
       {
         Object.keys(CONSTANTS).map(category => {
           if (CONSTANTS_WITH_OWN_STORY.includes(category)) {
@@ -29,7 +30,7 @@ stories.add(
           const categoryConstant = CONSTANTS[category];
 
           return (
-            <div css={`padding-bottom: ${CONSTANTS.SPACING.small};`}>
+            <div key={category} css={css`padding-bottom: ${CONSTANTS.SPACING.small};`}>
               <Typography.Heading>{category}</Typography.Heading>
               {renderConstantsMap(categoryConstant)}
             </div>
@@ -50,12 +51,12 @@ stories.add('COLORS', () => (
       const categoryColors = COLORS[category];
 
       return (
-        <React.Fragment>
-          <div css="font-size: 16px;">{category}</div>
-          <div css="display: flex; flex-wrap: wrap;">
+        <React.Fragment key={category}>
+          <div css={css`font-size: 16px;`}>{category}</div>
+          <div css={css`display: flex; flex-wrap: wrap;`}>
             {Object.keys(categoryColors).map(color => {
               const colorHex = categoryColors[color];
-              return <Color colorName={color} colorHex={colorHex} />;
+              return <Color key={color} colorName={color} colorHex={colorHex} />;
             })}
           </div>
           <br />

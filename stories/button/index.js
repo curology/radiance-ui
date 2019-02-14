@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { css } from '@emotion/core';
 
 import ButtonReadme from 'docs/button.md';
 import RoundButtonReadme from 'docs/roundButton.md';
@@ -18,8 +19,8 @@ stories.add(
   'Button',
   withDocs(ButtonReadme, () => (
     <React.Fragment>
-      <Button.Container css="width: 50%; display: inline-block;">
-        <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Button.Container css={css`width: 50%; display: inline-block;`}>
+        <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
           Without Icon
         </Typography.Heading>
         <Button>Primary Button</Button>
@@ -40,8 +41,8 @@ stories.add(
         </Button>
       </Button.Container>
 
-      <Button.Container css="width: 50%; display: inline-block;">
-        <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Button.Container css={css`width: 50%; display: inline-block;`}>
+        <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
           With Icon
         </Typography.Heading>
         <Button icon={<CheckmarkIcon />}>Primary Button</Button>
@@ -72,7 +73,7 @@ stories.add(
         </Button>
 
       </Button.Container>
-      <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <Button
@@ -129,7 +130,7 @@ stories.add(
         </RoundButton>
       </RoundButton.Container>
 
-      <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <RoundButton.Container>

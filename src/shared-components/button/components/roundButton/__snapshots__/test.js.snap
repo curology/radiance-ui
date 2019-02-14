@@ -91,16 +91,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   }
 }
 
-.emotion-0 {
-  width: 36px;
-  margin-top: -3px;
-}
-
-.emotion-0 span {
-  background-color: #ffffff;
-}
-
-.emotion-7 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -120,7 +111,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-3 {
+.emotion-2 {
   color: #5C5876;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -166,30 +157,30 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   padding: 0;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-2:active,
+.emotion-2:focus {
   outline: none;
 }
 
-.emotion-3:visited,
-.emotion-3:hover {
+.emotion-2:visited,
+.emotion-2:hover {
   opacity: 1;
   color: #c3c0cd;
 }
 
-.emotion-3 > svg {
+.emotion-2 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   margin: 0 auto;
 }
 
-.emotion-1 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -209,9 +200,11 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   margin-top: -6px;
   width: 38px;
   opacity: 0;
+  width: 36px;
+  margin-top: -3px;
 }
 
-.emotion-1 span {
+.emotion-0 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -219,32 +212,36 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-1 span:nth-of-type(1) {
+.emotion-0 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-1 span:nth-of-type(2) {
+.emotion-0 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-1 span:nth-of-type(3) {
+.emotion-0 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
-.emotion-5 {
+.emotion-0 span {
+  background-color: #ffffff;
+}
+
+.emotion-4 {
   margin: 10px 0;
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-6 emotion-7"
   disabled={true}
   onClick={[Function]}
 >
   <button
-    className="emotion-3 emotion-4"
+    className="emotion-2 emotion-3"
     disabled={true}
     type="button"
   >
@@ -257,7 +254,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 </svg>
  />
     <div
-      className="emotion-0 emotion-1 emotion-2"
+      className="emotion-0 emotion-1"
       disabled={true}
     >
       <div>
@@ -268,7 +265,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
     </div>
   </button>
   <p
-    className="emotion-5 emotion-6"
+    className="emotion-4 emotion-5"
   >
     Button Text
   </p>

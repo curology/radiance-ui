@@ -91,11 +91,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   }
 }
 
-.emotion-0 {
-  padding-top: 2px;
-}
-
-.emotion-7 {
+.emotion-6 {
   color: #5C5876;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -134,23 +130,23 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   fill: #c3c0cd;
 }
 
-.emotion-7:hover {
+.emotion-6:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-7:active,
-.emotion-7:focus {
+.emotion-6:active,
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-7:visited,
-.emotion-7:hover {
+.emotion-6:visited,
+.emotion-6:hover {
   opacity: 1;
   color: #c3c0cd;
 }
 
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -174,7 +170,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   transform: translateX(0);
 }
 
-.emotion-3 > svg {
+.emotion-2 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
@@ -182,13 +178,14 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   margin-top: -5px;
 }
 
-.emotion-1 {
+.emotion-0 {
   line-height: 1.5;
   margin: 0;
   padding-top: 2px;
+  padding-top: 2px;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -210,7 +207,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   opacity: 0;
 }
 
-.emotion-5 span {
+.emotion-4 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -218,29 +215,29 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-5 span:nth-of-type(1) {
+.emotion-4 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-5 span:nth-of-type(2) {
+.emotion-4 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-5 span:nth-of-type(3) {
+.emotion-4 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <button
-  className="emotion-7 emotion-8"
+  className="emotion-6 emotion-7"
   disabled={true}
   onClick={[Function]}
   type="button"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-2 emotion-3"
   >
     <<svg viewBox="0 0 14 14"
   xmlns="http://www.w3.org/2000/svg"
@@ -251,13 +248,13 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 </svg>
  />
     <span
-      className="emotion-0 emotion-1 emotion-2"
+      className="emotion-0 emotion-1"
     >
       Button Text
     </span>
   </div>
   <div
-    className="emotion-5 emotion-6"
+    className="emotion-4 emotion-5"
     disabled={true}
   >
     <div>

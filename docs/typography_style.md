@@ -28,8 +28,6 @@ export const Container = styled.div`
 <div css={`TYPOGRAPHY_STYLE.button`}>button</div>
 ```
 
-**Note**: The above code uses [babel-emotion-plugin](https://github.com/emotion-js/emotion/tree/master/packages/babel-plugin-emotion) to write the `css` prop.
-
 <!-- STORY -->
 
 ### Proptypes

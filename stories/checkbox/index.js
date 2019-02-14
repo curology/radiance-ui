@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
+import { css } from '@emotion/core';
 
 import CheckboxReadme from 'docs/checkbox.md';
 import { Checkbox, Typography } from 'src/shared-components';
@@ -22,7 +23,7 @@ stories.add(
       <Checkbox type='secondary' checked>
         This is a secondary checkbox
       </Checkbox>
-      <Typography.Heading css={`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
         With Knobs
       </Typography.Heading>
       <Checkbox
