@@ -17,17 +17,16 @@ describe('Container UI snapshots', () => {
         <Container.Section>
           Section 1
         </Container.Section>
-        <Container.Divider />
-
         <Container.Image src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg" />
         <Container.Section>
           <div>Section 2</div>
         </Container.Section>
-        <Container css={{"display": "flex"}}>
+        <Container.Divider />
+        <div css={{"display": "flex"}}>
           <Container.Section>Section 3</Container.Section>
           <Container.VerticalDivider/>
           <Container.Section>Section 4</Container.Section>
-        </Container>
+        </div>
       </Container>
     );
 

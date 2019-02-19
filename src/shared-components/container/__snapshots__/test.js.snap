@@ -36,7 +36,7 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 `;
 
 exports[`Container UI snapshots renders container helper components 1`] = `
-.emotion-16 {
+.emotion-15 {
   background-color: #ffffff;
   border: 1px solid #ededf0;
 }
@@ -53,25 +53,23 @@ exports[`Container UI snapshots renders container helper components 1`] = `
 }
 
 .emotion-2 {
-  margin: 0 1.5rem;
-  border-bottom: 1px solid #ededf0;
-}
-
-@media (min-width:992px) {
-  .emotion-2 {
-    margin: 0 2.5rem;
-  }
-}
-
-.emotion-4 {
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
 
+.emotion-6 {
+  margin: 0 1.5rem;
+  border-bottom: 1px solid #ededf0;
+}
+
+@media (min-width:992px) {
+  .emotion-6 {
+    margin: 0 2.5rem;
+  }
+}
+
 .emotion-14 {
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -90,18 +88,15 @@ exports[`Container UI snapshots renders container helper components 1`] = `
 }
 
 <div
-  className="emotion-16 emotion-15"
+  className="emotion-15 emotion-16"
 >
   <div
     className="emotion-0 emotion-1"
   >
     Section 1
   </div>
-  <div
-    className="emotion-2 emotion-3"
-  />
   <img
-    className="emotion-4 emotion-5"
+    className="emotion-2 emotion-3"
     src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg"
   />
   <div
@@ -112,7 +107,10 @@ exports[`Container UI snapshots renders container helper components 1`] = `
     </div>
   </div>
   <div
-    className="emotion-14 emotion-15"
+    className="emotion-6 emotion-7"
+  />
+  <div
+    className="emotion-14"
   >
     <div
       className="emotion-0 emotion-1"
