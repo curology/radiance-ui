@@ -4,11 +4,12 @@ import {
   Container,
   Section,
   Divider,
-  Image,
+  Image, VerticalDivider,
 } from './style';
 
 Container.Section = Section;
 Container.Divider = Divider;
+Container.VerticalDivider = VerticalDivider;
 Container.Image = Image;
 
 Container.propTypes = {

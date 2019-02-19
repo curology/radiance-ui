@@ -36,7 +36,7 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 `;
 
 exports[`Container UI snapshots renders container helper components 1`] = `
-.emotion-8 {
+.emotion-16 {
   background-color: #ffffff;
   border: 1px solid #ededf0;
 }
@@ -69,8 +69,28 @@ exports[`Container UI snapshots renders container helper components 1`] = `
   object-fit: cover;
 }
 
+.emotion-14 {
+  background-color: #ffffff;
+  border: 1px solid #ededf0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-10 {
+  margin: 1.5rem 0;
+  border-left: 1px solid #ededf0;
+}
+
+@media (min-width:992px) {
+  .emotion-10 {
+    margin: 2.5rem0;
+  }
+}
+
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-16 emotion-15"
 >
   <div
     className="emotion-0 emotion-1"
@@ -89,6 +109,23 @@ exports[`Container UI snapshots renders container helper components 1`] = `
   >
     <div>
       Section 2
+    </div>
+  </div>
+  <div
+    className="emotion-14 emotion-15"
+  >
+    <div
+      className="emotion-0 emotion-1"
+    >
+      Section 3
+    </div>
+    <div
+      className="emotion-10 emotion-11"
+    />
+    <div
+      className="emotion-0 emotion-1"
+    >
+      Section 4
     </div>
   </div>
 </div>

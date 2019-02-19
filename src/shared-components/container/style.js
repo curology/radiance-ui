@@ -58,6 +58,15 @@ export const Divider = styled.div`
   }
 `;
 
+export const VerticalDivider = styled.div`
+  margin: ${SPACING.base} 0;
+  border-left: 1px solid ${COLORS.divider};
+
+  ${MEDIA_QUERIES.lgUp} {
+    margin: ${SPACING.large}0;
+  }
+`;
+
 export const Image = styled.img`
   width: 100%;
   overflow: hidden;

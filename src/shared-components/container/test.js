@@ -23,6 +23,11 @@ describe('Container UI snapshots', () => {
         <Container.Section>
           <div>Section 2</div>
         </Container.Section>
+        <Container css={{"display": "flex"}}>
+          <Container.Section>Section 3</Container.Section>
+          <Container.VerticalDivider/>
+          <Container.Section>Section 4</Container.Section>
+        </Container>
       </Container>
     );
 
