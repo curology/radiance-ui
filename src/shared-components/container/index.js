@@ -4,7 +4,8 @@ import {
   Container,
   Section,
   Divider,
-  Image, VerticalDivider,
+  Image, 
+  VerticalDivider,
 } from './style';
 
 Container.Section = Section;
