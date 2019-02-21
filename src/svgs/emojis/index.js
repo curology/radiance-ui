@@ -17,6 +17,7 @@ export { default as PreparedEmoji } from './prepared-emoji.svg';
 export { default as PreparedFilledEmoji } from './prepared-filled-emoji.svg';
 export { default as SatisfiedEmoji } from './satisfied-emoji.svg';
 export { default as SatisfiedFilledEmoji } from './satisfied-filled-emoji.svg';
+export { default as SevereAcneEmoji } from './severe-acne-emoji.svg';
 export { default as SparkleEmoji } from './sparkle-emoji.svg';
 export { default as SparkleFilledEmoji } from './sparkle-filled-emoji.svg';
 export { default as SupportedEmoji } from './supported-emoji.svg';
