@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.5
+- Add glyphs for new Treatment page. ([PR #60](https://github.com/PocketDerm/radiance-ui/pull/60))
+
 ## v2.0.4
 - Fix icons for Emotion 10 and a few other upgrade items. ([PR #51](https://github.com/PocketDerm/radiance-ui/pull/51))
 
