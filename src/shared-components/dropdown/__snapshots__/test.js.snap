@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
+.emotion-4 {
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.06);
+  background: #ffffff;
+  background-image: none;
+  width: 100%;
+  min-height: 3.5rem;
+  max-height: 3.5rem;
+  border: 1px solid #ededf0;
+  border-radius: 0;
+  color: #332e54;
+  line-height: 52px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 3px 2rem 4px 1rem;
+  text-align: left;
+  text-align-last: left;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.emotion-0:hover {
+  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.15);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.emotion-0:focus {
+  outline: none;
+}
+
+.emotion-0::-moz-focus-inner {
+  border: 0;
+}
+
+.emotion-2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1.5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.emotion-2 svg {
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  -webkit-transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+}
+
+.emotion-1 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <select
+    className="emotion-0"
+    onChange={[Function]}
+    value={null}
+  >
+    <option
+      value="test1"
+    >
+      Test1
+    </option>
+    <option
+      value="test2"
+    >
+      Test2
+    </option>
+    <option
+      value="test3"
+    >
+      Test3
+    </option>
+  </select>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <svg
+      className="emotion-1"
+      height={10}
+      rotate={0}
+      viewBox="0 0 10 10"
+      width={10}
+    >
+      <path
+        d="M3 10a.999.999 0 0 1-.707-1.707L5.586 5 2.293 1.707A.999.999 0 1 1 3.707.293l4 4a.999.999 0 0 1 0 1.414l-4 4A.997.997 0 0 1 3 10"
+      />
+    </svg>
+  </div>
+</div>
+`;
