@@ -1,0 +1,52 @@
+# Dropdown
+
+`<Dropdown />` is a controlled component used for choosing an option from a selection. The component should be wrapped by a parent to control the dropdown's state - See example below. This ships with a mobile implementation that will handle mobile devices automatically.
+
+<!-- STORY -->
+
+```jsx
+class DropdownExample extends React.Component {
+  state = { value: null };
+
+  options = [
+    { value: 1, label: 'First option' },
+    { value: 2, label: 'Second option (disabled)', disabled: true },
+    { value: 3, label: 'Third option' },
+    { value: 4, label: 'Fourth option' }
+  ];
+
+  onChange = ({ value }) => {
+    this.setState({ value: parseInt(value, 10) });
+  };
+
+  render() {
+    return (
+      <div>
+        Select an option:
+        <Dropdown
+          value={this.state.value}
+          options={this.options}
+          onChange={this.onChange}
+        />
+      </div>
+    );
+  }
+}
+```
+
+### Proptypes
+
+| prop      | propType | required | default  | description                                           |
+| --------- | -------- | -------- | -------- | ----------------------------------------------------- |
+| value     | any      | yes      | -        | The currently selected option. Can mount as `null`    |
+| options   | array    | yes      | -        | The list of options (see proptypes below)             |
+| textAlign | string   | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
+| onChange  | func     | no       | () => {} | The handler to be invoked on option change            |
+
+#### `options` Proptypes
+
+| prop     | propType | description                             |
+| -------- | -------- | --------------------------------------- |
+| value    | any      | The option indentifier                  |
+| label    | string   | The text to be displayed for the option |
+| disabled | bool     | if true, the option cannot be selected  |
