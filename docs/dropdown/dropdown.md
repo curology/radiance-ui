@@ -36,12 +36,12 @@ class DropdownExample extends React.Component {
 
 ### Proptypes
 
-| prop      | propType | required | default  | description                                           |
-| --------- | -------- | -------- | -------- | ----------------------------------------------------- |
-| value     | any      | yes      | -        | The currently selected option. Can mount as `null`    |
-| options   | array    | yes      | -        | The list of options (see proptypes below)             |
-| textAlign | string   | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
-| onChange  | func     | no       | () => {} | The handler to be invoked on option change            |
+| prop      | propType         | required | default  | description                                           |
+| --------- | ---------------- | -------- | -------- | ----------------------------------------------------- |
+| value     | any              | yes      | -        | The currently selected option. Can mount as `null`    |
+| options   | array of objects | yes      | -        | The list of options (see proptypes below)             |
+| textAlign | string           | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
+| onChange  | func             | no       | () => {} | The handler to be invoked on option change            |
 
 #### `options` Proptypes
 

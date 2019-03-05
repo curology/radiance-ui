@@ -5,7 +5,7 @@ import { shallow, mount } from 'enzyme';
 import DesktopDropdown from './desktopDropdown';
 import MobileDropdown from './mobileDropdown';
 
-import DropDown from './index';
+import Dropdown from './index';
 
 const options = [
   { value: 'test1', label: 'Test1' },
@@ -13,11 +13,11 @@ const options = [
   { value: 'test3', label: 'Test3' },
 ];
 
-describe('<DropDown />', () => {
+describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       global.document.documentElement.ontouchstart = () => {};
-      const wrapper = shallow(<DropDown value="test1" options={options} />);
+      const wrapper = shallow(<Dropdown value="test1" options={options} />);
 
       delete global.document.documentElement.ontouchstart;
       expect(wrapper.text()).toEqual('<MobileDropdown />');
@@ -26,7 +26,7 @@ describe('<DropDown />', () => {
 
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
-      const wrapper = shallow(<DropDown value="test1" options={options} />);
+      const wrapper = shallow(<Dropdown value="test1" options={options} />);
       expect(wrapper.text()).toEqual('<DesktopDropdown />');
     });
   });

@@ -9,14 +9,6 @@ const DropdownContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const MobileExampleDoc = `
-# Mobile Dropdown Example
-The mobile dropdown is built into the \`<Dropdown />\` component and cannot 
-be used individually.\n\n\`<Dropdown /> \` will determine if the user is on 
-a mobile device and render a true \`select\` tag with \`option\`(s). This is 
-purely an example for desktop viewing. <!-- STORY -->
-`;
-
 class MobileExample extends React.Component {
   state = { value: null };
 
@@ -26,9 +18,13 @@ class MobileExample extends React.Component {
     { value: 3, label: 'Third option' },
   ];
 
-  onChange = ({ value }) => {
-    this.setState({ value: parseInt(value, 10) });
-  };
+  onChange = event => {
+    const { value, selectedOptions } = event.target;
+
+    if (selectedOptions && selectedOptions.length) {
+      this.setState({ value });
+    }
+  }
 
   render() {
     return (
@@ -37,7 +33,7 @@ class MobileExample extends React.Component {
         <MobileDropdown
           value={this.state.value}
           options={this.options}
-          onChange={this.onChange}
+          onSelectChange={this.onChange}
         />
       </DropdownContainer>
     );

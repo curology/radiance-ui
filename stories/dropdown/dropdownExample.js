@@ -12,7 +12,6 @@ const DropdownContainer = styled.div`
 class DropdownExample extends React.Component {
   state = { value: null };
 
-
   options = [
     { value: 1, label: 'First option' },
     { value: 2, label: 'Second option (disabled)', disabled: true },
