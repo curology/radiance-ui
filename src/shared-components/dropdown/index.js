@@ -9,11 +9,15 @@ const defaultProps = {
   onChange() {},
 };
 
+const allowNull = wrapper => (props, propName, ...rest) =>
+  props[propName] === null ? null : wrapper(props, propName, ...rest);
+
 const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any.isRequired,
+  value: allowNull(PropTypes.any.isRequired),
   options: PropTypes.arrayOf(
     PropTypes.shape({
+      // eslint-disable-next-line react/forbid-prop-types
       value: PropTypes.any,
       label: PropTypes.string,
       disabled: PropTypes.bool,
@@ -40,9 +44,8 @@ class Dropdown extends React.Component {
   };
 
   onOptionClick = event => {
-    if (event.target.hasAttribute('disabled')) {
-      return;
-    }
+    if (event.target.hasAttribute('disabled')) return;
+    
     const value = event.target.getAttribute('value');
     const label = event.target.innerText;
     this.props.onChange({ value, label });

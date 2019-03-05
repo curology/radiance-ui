@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
 import OffClickWrapper from '../offClickWrapper';
-import { ChevronIcon } from '../../icons';
+import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import {
-  SelectOuterContainer,
-  selectInputStyle,
+  DropdownContainer,
+  dropdownInputStyle,
   IconContainer,
-  SelectOptionsContainer,
-  SelectOption,
+  DropdownOptionsContainer,
+  DropdownOption,
 } from './style';
 
 const DesktopDropdown = ({
@@ -23,9 +23,9 @@ const DesktopDropdown = ({
   isOpen,
 }) => (
   <OffClickWrapper onOffClick={closeDropdown} css={css`width: 100%;`}>
-    <SelectOuterContainer textAlign={textAlign}>
+    <DropdownContainer textAlign={textAlign}>
       <div id="select-input-box" onClick={onSelectClick}>
-        <div css={selectInputStyle({ textAlign })}>
+        <div css={dropdownInputStyle({ textAlign })}>
           {currentOption && currentOption.label}
         </div>
         <IconContainer>
@@ -33,21 +33,25 @@ const DesktopDropdown = ({
         </IconContainer>
       </div>
 
-      <SelectOptionsContainer isOpen={isOpen}>
-        {options.map(option => (
-          <SelectOption
-            key={option.value}
-            value={option.value}
-            selected={value === option.value}
-            disabled={option.disabled}
-            onClick={onOptionClick}
-            data-dusk-id={`selectOption-${option.value}`}
-          >
-            {option.label}
-          </SelectOption>
-        ))}
-      </SelectOptionsContainer>
-    </SelectOuterContainer>
+      <DropdownOptionsContainer isOpen={isOpen}>
+        {options.map(option => {
+          const { value: optionValue, disabled, label, ...rest } = option;
+
+          return (
+            <DropdownOption
+              key={optionValue}
+              value={optionValue}
+              selected={value === optionValue}
+              disabled={disabled}
+              onClick={onOptionClick}
+              {...rest}
+            >
+              {option.label}
+            </DropdownOption>
+          )
+        })}
+      </DropdownOptionsContainer>
+    </DropdownContainer>
   </OffClickWrapper>
 );
 

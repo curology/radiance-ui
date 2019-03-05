@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { COLORS, BOX_SHADOWS, SPACING } from '../../constants';
+import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
 
-export const itemHeight = '52px';
+const optionsContainerMaxHeight = '250px';
 
-export const SelectOuterContainer = styled.div`
+export const DropdownContainer = styled.div`
   position: relative;
   width: 100%;
   text-align: ${({ textAlign }) => textAlign};
 `;
 
-export const selectInputStyle = ({ textAlign }) => css`
+export const dropdownInputStyle = ({ textAlign }) => css`
   appearance: none;
   box-shadow: ${BOX_SHADOWS.clickable};
   background: ${COLORS.white};
@@ -25,12 +25,12 @@ export const selectInputStyle = ({ textAlign }) => css`
   border-radius: 0;
 
   color: ${COLORS.primary};
-  line-height: ${itemHeight};
+  line-height: ${SPACING.xlarge};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  padding: 3px ${SPACING.medium} 4px ${SPACING.small};
+  padding: 0 ${SPACING.medium} 0 ${SPACING.small};
   text-align: ${textAlign};
   text-align-last: ${textAlign};
   transition: 200ms ease-in-out;
@@ -63,12 +63,16 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: start;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   & svg {
-    transition: transform 300ms ease-in-out;
+    transition: transform ${ANIMATION.defaultTiming} ease-in-out;
   }
 `;
 
-export const SelectOptionsContainer = styled.ul`
+export const DropdownOptionsContainer = styled.ul`
   position: absolute;
   top: 100%;
   left: 0;
@@ -86,7 +90,7 @@ export const SelectOptionsContainer = styled.ul`
 
   overflow-y: auto;
   max-height: 0;
-  transition: max-height 300ms ease-in-out;
+  transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
 
   list-style: none;
   -webkit-overflow-scrolling: touch;
@@ -94,17 +98,15 @@ export const SelectOptionsContainer = styled.ul`
   ${({ isOpen }) =>
     isOpen &&
     css`
-      max-height: 250px;
+      max-height: ${optionsContainerMaxHeight};
       border-bottom-width: 1px;
-      transition: max-height 300ms ease-in-out;
+      transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
     `};
 `;
 
-export const SelectOption = styled.li`
+export const DropdownOption = styled.li`
   color: ${COLORS.primary};
-  line-height: 1.7;
   min-height: ${SPACING.xlarge};
-  max-height: 88px;
 
   background-color: ${COLORS.white};
   cursor: pointer;

@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ChevronIcon } from '../../icons';
-import { SelectOuterContainer, selectInputStyle, IconContainer } from './style';
+import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
+import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
 const MobileDropdown = ({
   textAlign, value, onSelectChange, options, 
 }) => (
-  <SelectOuterContainer textAlign={textAlign}>
+  <DropdownContainer textAlign={textAlign}>
     <select
-      css={selectInputStyle({ textAlign })}
-      value={value}
+      css={dropdownInputStyle({ textAlign })}
+      value={value || ''}
       onChange={onSelectChange}
     >
       {options.map(option => (
@@ -26,7 +26,7 @@ const MobileDropdown = ({
     <IconContainer>
       <ChevronIcon width={10} height={10} />
     </IconContainer>
-  </SelectOuterContainer>
+  </DropdownContainer>
 );
 
 MobileDropdown.defaultProps = {
@@ -41,6 +41,7 @@ MobileDropdown.propTypes = {
   value: PropTypes.any,
   options: PropTypes.arrayOf(
     PropTypes.shape({
+      // eslint-disable-next-line react/forbid-prop-types
       value: PropTypes.any,
       label: PropTypes.string,
       disabled: PropTypes.bool,
