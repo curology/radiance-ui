@@ -13,6 +13,7 @@ export { default as DeleteIcon } from './delete-icon.svg';
 export { default as DownloadIcon } from './download-icon.svg';
 export { default as DropletIcon } from './droplet-icon.svg';
 export { default as EditIcon } from './edit-icon.svg';
+export { default as EqualsIcon } from './equals-icon.svg';
 export { default as ErrorIcon } from './error-icon.svg';
 export { default as EyeClosedIcon } from './eye-closed-icon.svg';
 export { default as FacebookIcon } from './facebook-icon.svg';
