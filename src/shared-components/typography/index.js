@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import round from 'lodash.round';
 
 import { withDeprecationWarning } from '../../utils';
@@ -32,7 +32,9 @@ export const baseBodyStyles = `
   line-height: ${round(28 / 16, 2)};
 `;
 
-const bodyStyle = css(baseBodyStyles);
+const bodyStyle = css`
+  ${baseBodyStyles}
+`;
 
 const captionStyle = css`
   color: ${COLORS.purpleTint2};
