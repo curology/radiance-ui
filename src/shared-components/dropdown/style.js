@@ -1,7 +1,13 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
+import {
+  COLORS,
+  BOX_SHADOWS,
+  SPACING,
+  ANIMATION,
+  TYPOGRAPHY_CONSTANTS,
+} from '../../constants';
 
 const optionsContainerMaxHeight = '250px';
 
@@ -113,13 +119,13 @@ export const DropdownOption = styled.li`
   padding: 18px ${SPACING.small} 14px ${SPACING.small};
 
   &:hover {
-    background-color: ${COLORS.hover};
+    background-color: ${COLORS.statusPurpleBackground};
   }
 
   ${({ selected }) =>
     selected &&
     css`
-      background-color: ${COLORS.hover};
+      font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
     `};
 
   ${({ disabled }) =>
