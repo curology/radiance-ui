@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 
 import MobileDropdown from './mobileDropdown';
 import DesktopDropdown from './desktopDropdown';
+import allowNullPropType from '../../utils/allowNullPropType';
 
 const defaultProps = {
   textAlign: 'left',
   onChange() {},
 };
 
-const allowNull = wrapper => (props, propName, ...rest) =>
-  props[propName] === null ? null : wrapper(props, propName, ...rest);
-
 const propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
-  value: allowNull(PropTypes.any.isRequired),
+  value: allowNullPropType(PropTypes.any.isRequired),
   options: PropTypes.arrayOf(
     PropTypes.shape({
       // eslint-disable-next-line react/forbid-prop-types
@@ -44,7 +42,9 @@ class Dropdown extends React.Component {
   };
 
   onOptionClick = event => {
-    if (event.target.hasAttribute('disabled')) return;
+    if (event.target.hasAttribute('disabled')) {
+      return;
+    }
     
     const value = event.target.getAttribute('value');
     const label = event.target.innerText;
