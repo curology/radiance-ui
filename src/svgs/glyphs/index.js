@@ -34,6 +34,7 @@ export { default as OtherGlyph } from './other-glyph.svg';
 export { default as PillsGlyph } from './pills-glyph.svg';
 export { default as SelfieGlyph } from './selfie-glyph.svg';
 export { default as SkinTextureGlyph } from './skin-texture-glyph.svg';
+export { default as SpaceshipGlyph } from './spaceship-glyph.svg';
 export { default as SunGlyph } from './sun-glyph.svg';
 export { default as SunscreenBottleGlyph } from './sunscreen-bottle-glyph.svg';
 export { default as SunscreenDropGlyph } from './sunscreen-drop-glyph.svg';
