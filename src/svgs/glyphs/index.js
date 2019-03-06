@@ -13,6 +13,7 @@ export { default as ClindamycinGlyph } from './clindamycin-glyph.svg';
 export { default as ClipboardStackGlyph } from './clipboard-stack-glyph.svg';
 export { default as CloggedPoresGlyph } from './clogged-pores-glyph.svg';
 export { default as CombinationGlyph } from './combination-glyph.svg';
+export { default as CourseGlyph } from './course-glyph.svg';
 export { default as DarkSpotsGlyph } from './dark-spots-glyph.svg';
 export { default as DropperGlyph } from './dropper-glyph.svg';
 export { default as FaceGlyph } from './face-glyph.svg';
