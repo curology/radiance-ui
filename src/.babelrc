@@ -10,8 +10,6 @@
     "test": {
       "presets": [["@babel/env"], "@babel/react"],
       "plugins": [
-        "emotion",
-        "transform-svg-import-to-string",
         ["@babel/plugin-proposal-class-properties", { "loose": true }]
       ]
     }
