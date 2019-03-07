@@ -25,7 +25,7 @@ export const ModalContainer = styled.div`
   background-color: ${COLORS.white};
   height: 100vh;
   margin: 0 auto;
-  max-width: ${BREAKPOINTS.sm}px;
+  max-width: ${({width}) => (width === 'medium' ? `${BREAKPOINTS.md}px` : `${BREAKPOINTS.sm}px`)}
   overflow-y: auto;
   position: relative;
   width: 100%;
