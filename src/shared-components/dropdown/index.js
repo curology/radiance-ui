@@ -70,12 +70,12 @@ class Dropdown extends React.Component {
 
     return (
       <DesktopDropdown
-        {...this.props}
         isOpen={isOpen}
         onOptionClick={this.onOptionClick}
         closeDropdown={this.closeDropdown}
         onSelectClick={this.onSelectClick}
         currentOption={currentOption}
+        {...this.props}
       />
     );
   }
