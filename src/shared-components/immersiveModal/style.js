@@ -25,13 +25,14 @@ export const ModalContainer = styled.div`
   background-color: ${COLORS.white};
   height: 100vh;
   margin: 0 auto;
-  max-width: ${({width}) => (width === 'medium' ? `${BREAKPOINTS.md}px` : `${BREAKPOINTS.sm}px`)}
+  max-width: ${BREAKPOINTS.sm}px;
   overflow-y: auto;
   position: relative;
   width: 100%;
 
-  ${MEDIA_QUERIES.smUp} {
+  ${MEDIA_QUERIES.mdUp} {
     height: auto;
+    max-width: ${({maxWidth}) => (maxWidth === 'medium' ? `${BREAKPOINTS.md}px` : `${BREAKPOINTS.sm}px`)};
     margin-bottom: ${SPACING.base};
     margin-top: ${SPACING.base};
   }
