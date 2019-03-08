@@ -19,7 +19,7 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   max-height: 3.5rem;
   border: 1px solid #ededf0;
   border-radius: 0;
-  color: #332e54;
+  color: #5C5876;
   line-height: 3.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
