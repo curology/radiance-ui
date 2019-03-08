@@ -30,7 +30,7 @@ export const dropdownInputStyle = ({ textAlign }) => css`
   border: 1px solid ${COLORS.border};
   border-radius: 0;
 
-  color: ${COLORS.primary};
+  color: ${COLORS.purple80};
   line-height: ${SPACING.xlarge};
   overflow: hidden;
   text-overflow: ellipsis;
@@ -111,7 +111,7 @@ export const DropdownOptionsContainer = styled.ul`
 `;
 
 export const DropdownOption = styled.li`
-  color: ${COLORS.primary};
+  color: ${COLORS.purple80};
   min-height: ${SPACING.xlarge};
 
   background-color: ${COLORS.white};
