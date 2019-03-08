@@ -3,7 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-
 import AlertReadme from 'docs/alert.md';
 import { Alert, Typography } from 'src/shared-components';
 
@@ -20,25 +19,25 @@ stories.add(
           text="Your photos were uploaded successfully!"
           type="success"
           duration={4}
-          onExit={() => {}}
+          onExit={() => { }}
         />
         <Alert
           text="Your photos were uploaded successfully!"
           type="success"
           duration="sticky"
-          onExit={() => {}}
+          onExit={() => { }}
         />
         <Alert
           text="Support has been notified."
           type="info"
           duration="sticky"
-          onExit={() => {}}
+          onExit={() => { }}
         />
         <Alert
           text="Oops! We couldn't update your information!"
           type="danger"
           duration="sticky"
-          onExit={() => {}}
+          onExit={() => { }}
         />
       </Alert.Container>
       <Typography.Heading>With Knobs</Typography.Heading>

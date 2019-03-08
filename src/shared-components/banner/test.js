@@ -2,22 +2,20 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
-import Alert from './index';
+import Banner from './index';
 
-const testAlert = {
-  text: 'Your email address was updated successfully!',
+const testBanner = {
+  content: <div>Your email address was updated successfully!</div>,
   type: 'success',
-  duration: 'sticky',
 };
 
-describe('Alert UI snapshots', () => {
+describe('Banner UI snapshots', () => {
   test('renders success type and text', () => {
     const component = renderer.create(
-      <Alert
-        text={testAlert.text}
+      <Banner
+        content={testBanner.content}
         type="success"
-        duration={testAlert.duration}
-        onExit={() => { }}
+        onClick={() => { }}
       />
     );
 
@@ -27,11 +25,10 @@ describe('Alert UI snapshots', () => {
 
   test('renders danger type and text', () => {
     const component = renderer.create(
-      <Alert
-        text={testAlert.text}
+      <Banner
+        content={testBanner.content}
         type="danger"
-        duration={testAlert.duration}
-        onExit={() => { }}
+        onClick={() => { }}
       />
     );
 
@@ -41,11 +38,10 @@ describe('Alert UI snapshots', () => {
 
   test('renders info type and text', () => {
     const component = renderer.create(
-      <Alert
-        text={testAlert.text}
+      <Banner
+        content={testBanner.content}
         type="info"
-        duration={testAlert.duration}
-        onExit={() => { }}
+        onClick={() => { }}
       />
     );
 
@@ -54,12 +50,12 @@ describe('Alert UI snapshots', () => {
   });
 });
 
-test('Alert onExit is triggered on click', () => {
+test('Banner onClick is triggered on click', () => {
   jest.useFakeTimers();
   const spy = jest.fn();
-  const alert = shallow(<Alert onExit={spy} {...testAlert} />);
+  const banner = shallow(<Banner onClick={spy} {...testBanner} />);
 
-  alert.simulate('click');
+  banner.simulate('click');
   jest.runAllTimers();
   expect(spy).toHaveBeenCalled();
 });

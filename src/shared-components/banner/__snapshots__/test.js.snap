@@ -1,0 +1,225 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner UI snapshots renders danger type and text 1`] = `
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  width: 100%;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0.5rem;
+  padding: 0.5rem 0px;
+  position: relative;
+  text-align: left;
+  background-color: #ffeeed;
+  border-color: #FFE4E2;
+  color: #ff5e4d;
+  fill: #ff5e4d;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <<svg viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Error</title>
+  <path d="M9,0.0002 C4.029,0.0002 0,4.0292 0,9.0002 C0,13.9712 4.029,18.0002 9,18.0002 C13.971,18.0002 18,13.9712 18,9.0002 C18,4.0292 13.971,0.0002 9,0.0002 M9,2.0002 C12.86,2.0002 16,5.1402 16,9.0002 C16,12.8592 12.86,16.0002 9,16.0002 C5.14,16.0002 2,12.8592 2,9.0002 C2,5.1402 5.14,2.0002 9,2.0002" />
+  <path d="M9,9.8274 C8.447,9.8274 8,9.3804 8,8.8274 L8,5.9314 C8,5.3784 8.447,4.9314 9,4.9314 C9.553,4.9314 10,5.3784 10,5.9314 L10,8.8274 C10,9.3804 9.553,9.8274 9,9.8274" />
+  <path d="M10.2061,12.1516 C10.2061,12.8186 9.6661,13.3586 9.0001,13.3586 C8.3341,13.3586 7.7941,12.8186 7.7941,12.1516 C7.7941,11.4856 8.3341,10.9456 9.0001,10.9456 C9.6661,10.9456 10.2061,11.4856 10.2061,12.1516" />
+</svg>
+
+      className="emotion-0"
+      fill="currentColor"
+    />
+    <div>
+      Your email address was updated successfully!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Banner UI snapshots renders info type and text 1`] = `
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  width: 100%;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0.5rem;
+  padding: 0.5rem 0px;
+  position: relative;
+  text-align: left;
+  background-color: #ededf0;
+  border-color: #e1e0e6;
+  color: #858298;
+  fill: #858298;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <<svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Info</title>
+  <path d="M10,16 L11.0029699,16 C11.5536144,16 12,16.4438648 12,17 C12,17.5522847 11.5469637,18 11.0029699,18 L6.99703014,18 C6.4463856,18 6,17.5561352 6,17 C6,16.4477153 6.45303631,16 6.99703014,16 L8,16 L8,7 L7.0093689,7 C6.45190985,7 6,6.55613518 6,6 C6,5.44771525 6.44335318,5 7.0093689,5 L8.9906311,5 C9.54809015,5 10,5.44386482 10,6 L10,16 Z M10,1.5 C10,0.671572875 9.32842712,0 8.5,0 C7.67157288,0 7,0.671572875 7,1.5 C7,2.32842712 7.67157288,3 8.5,3 C9.32842712,3 10,2.32842712 10,1.5 Z"/>
+</svg>
+
+      className="emotion-0"
+      fill="currentColor"
+    />
+    <div>
+      Your email address was updated successfully!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Banner UI snapshots renders success type and text 1`] = `
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0.5rem;
+  padding: 0.5rem 0px;
+  position: relative;
+  text-align: left;
+  background-color: #eaf2eb;
+  border-color: #DAECDC;
+  color: #317f3b;
+  fill: #317f3b;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  width: 100%;
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <<svg viewBox="0 0 18 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Done</title>
+  <path d="M6.48528137,12.0710678 L1.70710678,7.29289322 C1.31658249,6.90236893 0.683417511,6.90236893 0.292893219,7.29289322 C-0.0976310729,7.68341751 -0.0976310729,8.31658249 0.292893219,8.70710678 L5.77817459,14.1923882 C6.16869888,14.5829124 6.80186386,14.5829124 7.19238816,14.1923882 L17.6776695,3.70710678 C18.0681938,3.31658249 18.0681938,2.68341751 17.6776695,2.29289322 C17.2871452,1.90236893 16.6539803,1.90236893 16.263456,2.29289322 L6.48528137,12.0710678 Z"/>
+</svg>
+
+      className="emotion-0"
+      fill="currentColor"
+    />
+    <div>
+      Your email address was updated successfully!
+    </div>
+  </div>
+</div>
+`;
