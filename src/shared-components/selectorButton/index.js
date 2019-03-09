@@ -53,8 +53,8 @@ const SelectorButton = ({
           css={css`
           ${selectorIcon};
         `}
-          width={11}
-          height={11}
+          width={29}
+          height={29}
         />
       ) : (
         <CheckmarkIcon

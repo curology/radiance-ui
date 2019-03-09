@@ -6,8 +6,9 @@ import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
 
 import RadioButtonReadme from 'docs/radioButton.md';
-import { RadioButton, Typography } from 'src/shared-components';
+import {Checkbox, RadioButton, Typography} from 'src/shared-components';
 import { SPACING } from 'src/constants';
+import * as glyphComponents from "../../src/svgs/glyphs";
 
 const stories = storiesOf('RadioButton', module);
 
@@ -30,6 +31,7 @@ stories.add(
         checked={boolean('checked', false)}
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('radio button clicked')}
+        Icon={glyphComponents.DarkSpotsGlyph}
       >
         {text('children', 'Render radio label here')}
       </RadioButton>
