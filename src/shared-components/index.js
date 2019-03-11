@@ -9,5 +9,6 @@ export { default as ImmersiveModal } from './immersiveModal';
 export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
 export { default as OffClickWrapper } from './offClickWrapper';
+export { default as Dropdown } from './dropdown';
 export { default as RadioButton } from './radioButton';
 export { default as Typography, style as TYPOGRAPHY_STYLE } from './typography';
