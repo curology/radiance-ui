@@ -6,7 +6,7 @@ import {action} from '@storybook/addon-actions';
 import {css} from '@emotion/core';
 
 import RadioButtonReadme from 'docs/radioButton.md';
-import {RadioButton, Typography} from 'src/shared-components';
+import { RadioButton, Typography } from 'src/shared-components';
 import {SPACING} from 'src/constants';
 import { ThumbsUpIcon } from "src/svgs/icons";
 
@@ -32,8 +32,8 @@ stories.add(
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('radio button clicked')}
         Icon={boolean('icon', false) ? ThumbsUpIcon : null}
-        iconWidth={number('iconWidth')}
-        iconHeight={number('iconHeight')}
+        iconWidth={number('iconWidth', 11)}
+        iconHeight={number('iconHeight', 11)}
       >
         {text('children', 'Render radio label here')}
       </RadioButton>
