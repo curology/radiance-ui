@@ -1,7 +1,7 @@
 import React from 'react';
 import {storiesOf} from '@storybook/react';
 import {withDocs} from 'storybook-readme';
-import {withKnobs, text, boolean, select} from '@storybook/addon-knobs';
+import {withKnobs, text, boolean, select, number} from '@storybook/addon-knobs';
 import {action} from '@storybook/addon-actions';
 import {css} from '@emotion/core';
 
@@ -32,6 +32,8 @@ stories.add(
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('radio button clicked')}
         Icon={boolean('icon', false) ? AcneManyGlyph : null}
+        iconWidth={number('iconWidth')}
+        iconHeight={number('iconHeight')}
       >
         {text('children', 'Render radio label here')}
       </RadioButton>

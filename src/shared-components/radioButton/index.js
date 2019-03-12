@@ -12,6 +12,8 @@ const propTypes = {
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
   Icon: PropTypes.node,
+  iconWidth: PropTypes.number,
+  iconHeight: PropTypes.number,
 };
 
 const defaultProps = {

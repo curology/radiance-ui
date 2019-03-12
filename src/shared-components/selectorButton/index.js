@@ -22,6 +22,8 @@ const propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary']),
   selector: PropTypes.oneOf(['radio', 'checkbox']),
   Icon: PropTypes.node,
+  iconWidth: PropTypes.number,
+  iconHeight: PropTypes.number,
 };
 
 const defaultProps = {
@@ -38,6 +40,8 @@ const SelectorButton = ({
   type,
   selector,
   Icon,
+  iconWidth,
+  iconHeight,
   ...rest
 }) => (
   <OuterContainer
@@ -53,8 +57,8 @@ const SelectorButton = ({
           css={css`
           ${selectorIcon};
         `}
-          width={29}
-          height={29}
+          width={iconWidth}
+          height={iconHeight}
         />
       ) : (
         <CheckmarkIcon
