@@ -8,8 +8,7 @@ import {css} from '@emotion/core';
 import RadioButtonReadme from 'docs/radioButton.md';
 import {RadioButton, Typography} from 'src/shared-components';
 import {SPACING} from 'src/constants';
-
-import * as glyphComponents from "../../src/svgs/glyphs";
+import { AcneManyGlyph } from "src/svgs/glyphs";
 
 const stories = storiesOf('RadioButton', module);
 
@@ -32,7 +31,7 @@ stories.add(
         checked={boolean('checked', false)}
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('radio button clicked')}
-        Icon={boolean('icon', false) ? glyphComponents.AcneManyGlyph : null}
+        Icon={boolean('icon', false) ? AcneManyGlyph : null}
       >
         {text('children', 'Render radio label here')}
       </RadioButton>
