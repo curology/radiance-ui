@@ -31,6 +31,8 @@ const defaultProps = {
   },
   type: 'primary',
   selector: 'radio',
+  iconWidth: 16,
+  iconHeight: 16,
 };
 
 const SelectorButton = ({

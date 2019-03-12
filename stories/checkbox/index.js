@@ -32,8 +32,8 @@ stories.add(
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('checkbox clicked')}
         Icon={boolean('icon', false) ? ThumbsUpIcon : null}
-        iconWidth={number('iconWidth', 11)}
-        iconHeight={number('iconHeight', 11)}
+        iconWidth={number('iconWidth', 16)}
+        iconHeight={number('iconHeight', 16)}
       >
         {text('children', 'Render checkbox label here')}
       </Checkbox>
