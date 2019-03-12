@@ -26,6 +26,8 @@ const RadioButton = ({
   onClick,
   children,
   type,
+  iconWidth,
+  iconHeight,
   ...rest
 }) => (
   <SelectorButton
@@ -33,6 +35,8 @@ const RadioButton = ({
     checked={checked}
     onClick={onClick}
     type={type}
+    iconWidth={iconWidth}
+    iconHeight={iconHeight}
     {...rest}
   >
     {children}
