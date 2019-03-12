@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<SelectorButton /> UI snapshots when Icon added 1`] = `ShallowWrapper {}`;
+
 exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 .emotion-7 {
   -webkit-align-items: center;
