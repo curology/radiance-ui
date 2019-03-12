@@ -15,12 +15,15 @@ import { Checkbox } from 'radiance-ui';
  <!-- STORY -->
 
  ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                  |
-|----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| checked  | bool               | yes      | -       | control prop for checked state                                                                                               |
-| type     | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                       |
-| children | node               | no       | -       | text label displayed next to the checkbox                                                                                |
-| onClick  | func               | no       | () => {}| callback function called on click of the checkbox. This can be used to wire up the controlled component                  |
+| prop      | propType           | required | default | description                                                                                                                   |
+|-----------|--------------------|----------|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| checked   | bool               | yes      | -       | control prop for checked state                                                                                                |
+| type      | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                        |
+| Icon      | node               | no       | -       | icon optionally displayed inside the radio button                                                                             |
+| iconWidth | number             | no       | 11      | icon width                                                                                                                    |
+| iconHeight| number             | no       | 11      | icon height                                                                                                                   |
+| children  | node               | no       | -       | text label displayed next to the checkbox                                                                                     |
+| onClick   | func               | no       | () => {}| callback function called on click of the checkbox. This can be used to wire up the controlled component                       |
 
  ### Notes
 `<Checkbox />` is a controlled component that represents a checkbox

@@ -15,8 +15,8 @@ import { RadioButton } from 'radiance-ui';
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                   |
-|----------|--------------------|----------|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| prop      | propType           | required | default | description                                                                                                                  |
+|-----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
 | checked   | bool               | yes      | -       | control prop for checked state                                                                                               |
 | type      | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                       |
 | Icon      | node               | no       | -       | icon optionally displayed inside the radio button                                                                            |
