@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectorButton /> UI snapshots when Icon added 1`] = `
-.emotion-3 {
+.emotion-4 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -17,14 +17,25 @@ exports[`<SelectorButton /> UI snapshots when Icon added 1`] = `
   position: relative;
 }
 
-.emotion-5 {
+.emotion-0 {
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.emotion-6 {
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
   text-align: left;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -41,16 +52,16 @@ exports[`<SelectorButton /> UI snapshots when Icon added 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-7:focus {
+.emotion-8:focus {
   outline: none;
 }
 
-.emotion-7:focus .emotion-4 {
+.emotion-8:focus .emotion-5 {
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
   border-radius: 4px;
 }
 
-.emotion-1 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -77,44 +88,36 @@ exports[`<SelectorButton /> UI snapshots when Icon added 1`] = `
   border-color: #332e54;
 }
 
-.emotion-1:active,
-.emotion-1:focus {
+.emotion-2:active,
+.emotion-2:focus {
   outline: none;
 }
 
-.emotion-0 {
-  cursor: pointer;
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
   tabIndex="0"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      height={16}
-      width={16}
-    />
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        height={16}
+        width={16}
+      />
+    </div>
     <div
       checked={false}
-      className="emotion-1 emotion-2"
+      className="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-5 emotion-6"
+    className="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>
@@ -122,7 +125,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
-.emotion-7 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -139,16 +142,16 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-7:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7:focus .emotion-4 {
+.emotion-9:focus .emotion-6 {
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
   border-radius: 100%;
 }
 
-.emotion-3 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -164,14 +167,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   position: relative;
 }
 
-.emotion-5 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-0 {
+.emotion-1 {
   cursor: pointer;
   fill: currentColor;
   left: 50%;
@@ -180,10 +176,20 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+
+.emotion-7 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
+}
+
+.emotion-0 {
   color: #ffffff;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -210,33 +216,37 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   border-color: #332e54;
 }
 
-.emotion-1:active,
-.emotion-1:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
   tabIndex="0"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-5 emotion-6"
   >
-    <svg
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
+    <div
+      className="emotion-1 emotion-2"
+    >
+      <svg
+        className="emotion-0"
+        height={11}
+        width={11}
+      />
+    </div>
     <div
       checked={true}
-      className="emotion-1 emotion-2"
+      className="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-5 emotion-6"
+    className="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -244,7 +254,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
-.emotion-7 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -261,16 +271,16 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-7:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7:focus .emotion-4 {
+.emotion-9:focus .emotion-6 {
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
   border-radius: 100%;
 }
 
-.emotion-3 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -286,14 +296,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   position: relative;
 }
 
-.emotion-5 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-0 {
+.emotion-1 {
   cursor: pointer;
   fill: currentColor;
   left: 50%;
@@ -302,10 +305,20 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+
+.emotion-7 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
+}
+
+.emotion-0 {
   color: #ffffff;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -332,33 +345,37 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   border-color: #a6a1e2;
 }
 
-.emotion-1:active,
-.emotion-1:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
   tabIndex="0"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-5 emotion-6"
   >
-    <svg
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
+    <div
+      className="emotion-1 emotion-2"
+    >
+      <svg
+        className="emotion-0"
+        height={11}
+        width={11}
+      />
+    </div>
     <div
       checked={true}
-      className="emotion-1 emotion-2"
+      className="emotion-3 emotion-4"
       type="secondary"
     />
   </div>
   <p
-    className="emotion-5 emotion-6"
+    className="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -366,7 +383,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
-.emotion-7 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -383,16 +400,16 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   margin-bottom: 20px;
 }
 
-.emotion-7:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7:focus .emotion-4 {
+.emotion-9:focus .emotion-6 {
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
   border-radius: 100%;
 }
 
-.emotion-3 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -408,7 +425,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   cursor: pointer;
   fill: currentColor;
   left: 50%;
@@ -417,10 +434,13 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+
+.emotion-0 {
   color: transparent;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -447,12 +467,12 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   border-color: #332e54;
 }
 
-.emotion-1:active,
-.emotion-1:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
 }
 
-.emotion-5 {
+.emotion-7 {
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -460,27 +480,31 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
   tabIndex="0"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-5 emotion-6"
   >
-    <svg
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
+    <div
+      className="emotion-1 emotion-2"
+    >
+      <svg
+        className="emotion-0"
+        height={11}
+        width={11}
+      />
+    </div>
     <div
       checked={false}
-      className="emotion-1 emotion-2"
+      className="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-5 emotion-6"
+    className="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -488,151 +512,6 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.emotion-5:focus {
-  outline: none;
-}
-
-.emotion-5:focus .emotion-4 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
-  border-radius: 100%;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-0 {
-  cursor: pointer;
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  color: transparent;
-}
-
-.emotion-1 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 2px solid;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  width: 2rem;
-  border-radius: 100%;
-  background-color: transparent;
-  border-color: #332e54;
-}
-
-.emotion-1:active,
-.emotion-1:focus {
-  outline: none;
-}
-
-<div
-  className="emotion-5 emotion-6"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  tabIndex="0"
->
-  <div
-    className="emotion-3 emotion-4"
-  >
-    <svg
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
-    <div
-      checked={false}
-      className="emotion-1 emotion-2"
-      type="primary"
-    />
-  </div>
-</div>
-`;
-
-exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-0 {
-  cursor: pointer;
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  color: transparent;
-}
-
-.emotion-5 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
 .emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -654,12 +533,167 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   outline: none;
 }
 
-.emotion-7:focus .emotion-4 {
+.emotion-7:focus .emotion-6 {
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  border-radius: 100%;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.emotion-0 {
+  color: transparent;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: background-color 350ms;
+  transition: background-color 350ms;
+  width: 2rem;
+  border-radius: 100%;
+  background-color: transparent;
+  border-color: #332e54;
+}
+
+.emotion-3:active,
+.emotion-3:focus {
+  outline: none;
+}
+
+<div
+  className="emotion-7 emotion-8"
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  tabIndex="0"
+>
+  <div
+    className="emotion-5 emotion-6"
+  >
+    <div
+      className="emotion-1 emotion-2"
+    >
+      <svg
+        className="emotion-0"
+        height={11}
+        width={11}
+      />
+    </div>
+    <div
+      checked={false}
+      className="emotion-3 emotion-4"
+      type="primary"
+    />
+  </div>
+</div>
+`;
+
+exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.emotion-0 {
+  color: transparent;
+}
+
+.emotion-7 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
+}
+
+.emotion-9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus .emotion-6 {
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
   border-radius: 4px;
 }
 
-.emotion-1 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -686,33 +720,37 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   border-color: #332e54;
 }
 
-.emotion-1:active,
-.emotion-1:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
 }
 
 <div
-  className="emotion-7 emotion-8"
+  className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
   tabIndex="0"
 >
   <div
-    className="emotion-3 emotion-4"
+    className="emotion-5 emotion-6"
   >
-    <svg
-      className="emotion-0"
-      height={11}
-      width={11}
-    />
+    <div
+      className="emotion-1 emotion-2"
+    >
+      <svg
+        className="emotion-0"
+        height={11}
+        width={11}
+      />
+    </div>
     <div
       checked={false}
-      className="emotion-1 emotion-2"
+      className="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-5 emotion-6"
+    className="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
