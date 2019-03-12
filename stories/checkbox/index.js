@@ -1,14 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
+import {withKnobs, text, boolean, select, number} from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
 
 import CheckboxReadme from 'docs/checkbox.md';
 import { Checkbox, Typography } from 'src/shared-components';
 import { SPACING } from 'src/constants';
-import * as glyphComponents from 'src/svgs/glyphs';
+import { ThumbsUpIcon } from 'src/svgs/icons';
 
 const stories = storiesOf('Checkbox', module);
 
@@ -31,7 +31,9 @@ stories.add(
         checked={boolean('checked', false)}
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('checkbox clicked')}
-        Icon={glyphComponents.AcneSomeGlyph}
+        Icon={boolean('icon', false) ? ThumbsUpIcon : null}
+        iconWidth={number('iconWidth', 11)}
+        iconHeight={number('iconHeight', 11)}
       >
         {text('children', 'Render checkbox label here')}
       </Checkbox>
