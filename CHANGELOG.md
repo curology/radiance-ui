@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.7
+- Add Dropdown component. ([PR #61](https://github.com/PocketDerm/radiance-ui/pull/61))
+
 ## v2.0.6
 - Add new Banner component. ([PR #49](https://github.com/PocketDerm/radiance-ui/pull/49))
 - Modified ImmersiveModal to take width param ([PR #66](https://github.com/PocketDerm/radiance-ui/pull/66))
