@@ -34,7 +34,7 @@ export const OuterContainer = styled.div`
   }
 `;
 
-export const selectorIcon = css`
+export const SelectorIcon = styled.div`
   cursor: pointer;
   fill: currentColor;
   left: 50%;

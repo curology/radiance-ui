@@ -11,9 +11,7 @@ const propTypes = {
     PropTypes.node,
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
-  Icon: PropTypes.node,
-  iconWidth: PropTypes.number,
-  iconHeight: PropTypes.number,
+  icon: PropTypes.node,
 };
 
 const defaultProps = {
@@ -26,9 +24,7 @@ const Checkbox = ({
   onClick,
   children,
   type,
-  Icon,
-  iconWidth,
-  iconHeight,
+  icon,
   ...rest
 }) => (
   <SelectorButton
@@ -36,9 +32,7 @@ const Checkbox = ({
     checked={checked}
     onClick={onClick}
     type={type}
-    Icon={Icon}
-    iconWidth={iconWidth}
-    iconHeight={iconHeight}
+    icon={icon}
     {...rest}
   >
     {children}

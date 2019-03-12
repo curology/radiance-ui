@@ -31,7 +31,7 @@ stories.add(
         checked={boolean('checked', false)}
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('checkbox clicked')}
-        Icon={boolean('icon', false) ? ThumbsUpIcon : null}
+        icon={boolean('icon', false) ? <ThumbsUpIcon width={16} height={16} />: null}
         iconWidth={number('iconWidth', 16)}
         iconHeight={number('iconHeight', 16)}
       >

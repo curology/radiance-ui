@@ -9,7 +9,7 @@ import {
   Selector,
   SelectorContainer,
   TextContainer,
-  selectorIcon,
+  SelectorIcon,
 } from './style';
 
 const propTypes = {
@@ -21,9 +21,7 @@ const propTypes = {
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
   selector: PropTypes.oneOf(['radio', 'checkbox']),
-  Icon: PropTypes.node,
-  iconWidth: PropTypes.number,
-  iconHeight: PropTypes.number,
+  icon: PropTypes.node,
 };
 
 const defaultProps = {
@@ -31,8 +29,6 @@ const defaultProps = {
   },
   type: 'primary',
   selector: 'radio',
-  iconWidth: 16,
-  iconHeight: 16,
 };
 
 const SelectorButton = ({
@@ -41,9 +37,7 @@ const SelectorButton = ({
   children,
   type,
   selector,
-  Icon,
-  iconWidth,
-  iconHeight,
+  icon,
   ...rest
 }) => (
   <OuterContainer
@@ -54,24 +48,17 @@ const SelectorButton = ({
     {...rest}
   >
     <SelectorContainer>
-      {Icon ? (
-        <Icon
-          css={css`
-          ${selectorIcon};
-        `}
-          width={iconWidth}
-          height={iconHeight}
-        />
-      ) : (
-        <CheckmarkIcon
-          css={css`
-            ${selectorIcon};
-            color: ${checked ? COLORS.white : 'transparent'};
-          `}
-          width={11}
-          height={11}
-        />
-      )}
+      <SelectorIcon>
+        {icon || (
+          <CheckmarkIcon
+            css={css`
+              color: ${checked ? COLORS.white : 'transparent'};
+            `}
+            width={11}
+            height={11}
+          />
+        )}
+      </SelectorIcon>
       <Selector type={type} checked={checked} selector={selector}/>
     </SelectorContainer>
 

@@ -73,7 +73,7 @@ describe('<SelectorButton />', () => {
     test('when Icon added', () => {
       const tree = renderer.create(
         <SelectorButton checked={false} onClick={() => {
-        }} selector="checkbox" Icon={AcneFewGlyph}>
+        }} selector="checkbox" icon={<AcneFewGlyph width={16} height={16} />}>
           SelectorButton Text
         </SelectorButton>,
       );
