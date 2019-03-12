@@ -1,8 +1,5 @@
 # Dropdown
-
-`<Dropdown />` is a controlled component used for choosing an option from a selection. The component should be wrapped by a parent to control the dropdown's state - See example below. This ships with a mobile implementation that will handle mobile devices automatically.
-
-<!-- STORY -->
+### Usage
 
 ```jsx
 class DropdownExample extends React.Component {
@@ -34,6 +31,8 @@ class DropdownExample extends React.Component {
 }
 ```
 
+<!-- STORY -->
+
 ### Proptypes
 
 | prop      | propType         | required | default  | description                                           |
@@ -50,3 +49,7 @@ class DropdownExample extends React.Component {
 | value    | any      | The option indentifier                  |
 | label    | string   | The text to be displayed for the option |
 | disabled | bool     | if true, the option cannot be selected  |
+
+### Notes
+
+`<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state - See example above. This ships with a mobile implementation that will handle mobile devices automatically.
