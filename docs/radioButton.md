@@ -15,13 +15,15 @@ import { RadioButton } from 'radiance-ui';
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                  |
-|----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| checked  | bool               | yes      | -       | control prop for checked state                                                                                               |
-| type     | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                       |
-| Icon     | node               | no       | -       | icon optionally dsplayed inside the radio button                                                                              |
-| children | node               | no       | -       | text label displayed next to the radio button                                                                                |
-| onClick  | func               | no       | () => {}| callback function called on click of the radio button. This can be used to wire up the controlled component                  |
+| prop     | propType           | required | default | description                                                                                                                   |
+|----------|--------------------|----------|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| checked   | bool               | yes      | -       | control prop for checked state                                                                                               |
+| type      | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                       |
+| Icon      | node               | no       | -       | icon optionally displayed inside the radio button                                                                            |
+| iconWidth | number             | no       | 11      | icon width                                                                                                                   |
+| iconHeight| number             | no       | 11      | icon height                                                                                                                  |
+| children  | node               | no       | -       | text label displayed next to the radio button                                                                                |
+| onClick   | func               | no       | () => {}| callback function called on click of the radio button. This can be used to wire up the controlled component                  |
 
 ### Notes
 `<RadioButton />` is a controlled component that represents a radio
