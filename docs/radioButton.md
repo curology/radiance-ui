@@ -19,9 +19,7 @@ import { RadioButton } from 'radiance-ui';
 |-----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
 | checked   | bool               | yes      | -       | control prop for checked state                                                                                               |
 | type      | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                       |
-| Icon      | node               | no       | -       | icon optionally displayed inside the radio button                                                                            |
-| iconWidth | number             | no       | 16      | icon width                                                                                                                   |
-| iconHeight| number             | no       | 16      | icon height                                                                                                                  |
+| icon      | node               | no       | -       | icon optionally displayed inside the radio button                                                                            |                                                                                                 |
 | children  | node               | no       | -       | text label displayed next to the radio button                                                                                |
 | onClick   | func               | no       | () => {}| callback function called on click of the radio button. This can be used to wire up the controlled component                  |
 
