@@ -82,7 +82,7 @@ export const AlertContainer = styled.div`
   }
 `;
 
-export const AlertsContainer= styled.div`
+export const AlertsContainer = styled.div`
   align-items: flex-end;
   display: flex;
   flex-direction: column;

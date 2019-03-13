@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner UI snapshots renders danger type and text 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0.5rem;
+  padding: 0.5rem 0px;
+  position: relative;
+  text-align: left;
+  background-color: #ffeeed;
+  border-color: #FFE4E2;
+  color: #ff5e4d;
+  fill: #ff5e4d;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="currentColor"
+    />
+    <div>
+      Your email address was updated successfully!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Banner UI snapshots renders info type and text 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0.5rem;
+  padding: 0.5rem 0px;
+  position: relative;
+  text-align: left;
+  background-color: #ededf0;
+  border-color: #e1e0e6;
+  color: #858298;
+  fill: #858298;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="currentColor"
+    />
+    <div>
+      Your email address was updated successfully!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Banner UI snapshots renders success type and text 1`] = `
+.emotion-3 {
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin: 0 auto 0.5rem;
+  padding: 0.5rem 0px;
+  position: relative;
+  text-align: left;
+  background-color: #eaf2eb;
+  border-color: #DAECDC;
+  color: #317f3b;
+  fill: #317f3b;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0px;
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1.5rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="currentColor"
+    />
+    <div>
+      Your email address was updated successfully!
+    </div>
+  </div>
+</div>
+`;

@@ -36,13 +36,14 @@ Documentation around usage, you can also see it with knobs at: [https://radiance
 - [Typography Style](docs/typography-style.md)
 
 ## Publishing to NPM
-You'll need access to publish to NPM so this part only applies to few
+You'll need access to publish to NPM so this part only applies to a few
 people (mostly within the Curology organization).
 
-1. Commit an update to the CHANGELONG.md file with details.
-2. Run `yarn run publish-package` to build the bundled files and publish
+1. Pull latest master and check out the master branch.
+2. Commit an update to the CHANGELOG.md file with details.
+3. Run `yarn run publish-package` to build the bundled files and publish
    to NPM.
-3. Push changes made to `package.json` to remote repository
-4. On GitHub, tag a release with the proper version and details. You can
+4. Push changes made to `package.json` to remote repository
+5. On GitHub, tag a release with the proper version and details. You can
    do that
 [here](https://github.com/PocketDerm/radiance-ui/releases/new).

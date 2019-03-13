@@ -20,6 +20,7 @@ class DefaultImmersiveModal extends React.Component {
   state = {
     defaultIsOpen: false,
     headerIsOpen: false,
+    mediumIsOpen: false,
   };
 
   onOpenModal = modal => this.setState({ [`${modal}IsOpen`]: true });
@@ -27,10 +28,11 @@ class DefaultImmersiveModal extends React.Component {
   onClose = () => this.setState({
     defaultIsOpen: false,
     headerIsOpen: false,
+    mediumIsOpen: false,
   });
 
   render() {
-    const { defaultIsOpen, headerIsOpen } = this.state;
+    const { defaultIsOpen, headerIsOpen, mediumIsOpen} = this.state;
 
     return (
       <div>
@@ -68,6 +70,23 @@ class DefaultImmersiveModal extends React.Component {
             </ImmersiveModal.Footer>
           </ImmersiveModal>
         )}
+        <br/>
+        <Button onClick={() => this.onOpenModal('medium')}>
+          Open medium width ImmersiveModal
+        </Button>
+        {mediumIsOpen && (
+          <ImmersiveModal onClose={this.onClose} width="medium">
+            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
+            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body.</ImmersiveModal.Body>
+            <ImmersiveModal.Footer>
+              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
+              from the body.
+              <Button.Container>
+                <Button onClick={this.onClose}>Close ImmersiveModal</Button>
+              </Button.Container>
+            </ImmersiveModal.Footer>
+          </ImmersiveModal>
+        )}        
       </div>
     );
   }

@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## v2.0.7
+- Add Dropdown component. ([PR #61](https://github.com/PocketDerm/radiance-ui/pull/61))
+
+## v2.0.6
+- Add new Banner component. ([PR #49](https://github.com/PocketDerm/radiance-ui/pull/49))
+- Modified ImmersiveModal to take width param ([PR #66](https://github.com/PocketDerm/radiance-ui/pull/66))
+- Added new Glyphs
+    *  equals-icon ([PR #58](https://github.com/PocketDerm/radiance-ui/pull/58))
+    *  spaceship-glyph ([PR #56](https://github.com/PocketDerm/radiance-ui/pull/56))
+    *  mild-acne-emoji ([PR #63](https://github.com/PocketDerm/radiance-ui/pull/63))
+    *  severe-acne-emoji ([PR #65](https://github.com/PocketDerm/radiance-ui/pull/65))
+    *  minus-icon ([PR #55](https://github.com/PocketDerm/radiance-ui/pull/55))
+    *  course-glyph ([PR #57](https://github.com/PocketDerm/radiance-ui/pull/57))
+- fix body style for emotion 10 : ([PR #54](https://github.com/PocketDerm/radiance-ui/pull/54))
+
+## v2.0.5
+- Add new Treatment page glyphs. ([PR #60](https://github.com/PocketDerm/radiance-ui/pull/60))
+
 ## v2.0.4
 - Fix icons for Emotion 10 and a few other upgrade items. ([PR #51](https://github.com/PocketDerm/radiance-ui/pull/51))
 
