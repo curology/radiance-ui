@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkButton/> UI snapshots renders with props 1`] = `
+.emotion-4 {
+  color: #5C5876;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  max-width: 325px;
+  min-height: 52px;
+  min-width: 208px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #332e54;
+  border-color: #332e54;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.emotion-4:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-4:active,
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4:visited,
+.emotion-4:hover {
+  opacity: 0.8;
+}
+
+.emotion-4:focus,
+.emotion-4:not([href]):not([tabindex]):hover,
+.emotion-4:not([href]):not([tabindex]):focus {
+  color: #ffffff;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 0;
+  -webkit-transition: -webkit-transform 350ms;
+  -webkit-transition: transform 350ms;
+  transition: transform 350ms;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.emotion-2 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin-right: 1rem;
+  margin-top: -5px;
+}
+
+.emotion-0 {
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 2px;
+}
+
+<a
+  className="emotion-4"
+  disabled={false}
+  href="#"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <span
+      className="emotion-0 emotion-1"
+    >
+      Click me!
+    </span>
+  </div>
+</a>
+`;
