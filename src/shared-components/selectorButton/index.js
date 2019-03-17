@@ -49,15 +49,16 @@ const SelectorButton = ({
   >
     <SelectorContainer>
       <SelectorIcon>
-        {icon || (
+        {checked ?
           <CheckmarkIcon
             css={css`
-              color: ${checked ? COLORS.white : 'transparent'};
+              color: ${COLORS.white};
             `}
             width={11}
             height={11}
-          />
-        )}
+          /> :
+          icon
+        }
       </SelectorIcon>
       <Selector type={type} checked={checked} selector={selector}/>
     </SelectorContainer>
