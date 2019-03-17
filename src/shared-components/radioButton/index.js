@@ -12,6 +12,7 @@ const propTypes = {
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.node,
+  size: PropTypes.oneOf(['large', 'small']),
 };
 
 const defaultProps = {
@@ -25,6 +26,7 @@ const RadioButton = ({
   children,
   type,
   icon,
+  size,
   ...rest
 }) => (
   <SelectorButton
@@ -33,6 +35,7 @@ const RadioButton = ({
     onClick={onClick}
     type={type}
     icon={icon}
+    size={size}
     {...rest}
   >
     {children}

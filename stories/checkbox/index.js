@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import {withKnobs, text, boolean, select, number} from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
 
@@ -32,8 +32,7 @@ stories.add(
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('checkbox clicked')}
         icon={boolean('icon', false) ? <ThumbsUpIcon width={16} height={16} fill="#332e54"/>: null}
-        iconWidth={number('iconWidth', 16)}
-        iconHeight={number('iconHeight', 16)}
+        size={select('size', ['large', 'small'], 'large')}
       >
         {text('children', 'Render checkbox label here')}
       </Checkbox>

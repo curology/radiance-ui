@@ -22,6 +22,7 @@ const propTypes = {
   type: PropTypes.oneOf(['primary', 'secondary']),
   selector: PropTypes.oneOf(['radio', 'checkbox']),
   icon: PropTypes.node,
+  size: PropTypes.oneOf(['large', 'small']),
 };
 
 const defaultProps = {
@@ -38,36 +39,41 @@ const SelectorButton = ({
   type,
   selector,
   icon,
+  size,
   ...rest
-}) => (
-  <OuterContainer
-    onClick={onClick}
-    onKeyPress={onClick}
-    tabIndex="0"
-    selector={selector}
-    {...rest}
-  >
-    <SelectorContainer>
-      <SelectorIcon>
-        {checked ?
-          <CheckmarkIcon
-            css={css`
+}) => {
+  const iconOrNull = size === 'large' ? icon : null;
+  const checkmarkSize = size === 'large' ? 22 : 11;
+  return (
+    <OuterContainer
+      onClick={onClick}
+      onKeyPress={onClick}
+      tabIndex="0"
+      selector={selector}
+      {...rest}
+    >
+      <SelectorContainer>
+        <SelectorIcon>
+          {checked ?
+            <CheckmarkIcon
+              css={css`
               color: ${COLORS.white};
             `}
-            width={11}
-            height={11}
-          /> :
-          icon
-        }
-      </SelectorIcon>
-      <Selector type={type} checked={checked} selector={selector}/>
-    </SelectorContainer>
+              width={checkmarkSize}
+              height={checkmarkSize}
+            /> :
+            iconOrNull
+          }
+        </SelectorIcon>
+        <Selector type={type} checked={checked} selector={selector}/>
+      </SelectorContainer>
 
-    {children && (
-      <TextContainer>{children}</TextContainer>
-    )}
-  </OuterContainer>
-);
+      {children && (
+        <TextContainer>{children}</TextContainer>
+      )}
+    </OuterContainer>
+  );
+};
 
 SelectorButton.propTypes = propTypes;
 SelectorButton.defaultProps = defaultProps;
