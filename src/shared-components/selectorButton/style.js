@@ -59,10 +59,12 @@ export const Selector = styled.div`
   border: 2px solid;
   cursor: pointer;
   display: flex;
-  height: ${SPACING.medium};
+  ${({ size }) => css`
+    width: ${size === 'large' ? '3rem' : SPACING.medium};
+    height: ${size === 'large' ? '3rem' : SPACING.medium};
+  `}
   justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
-  width: ${SPACING.medium};
 
   ${({ selector }) => css`
     border-radius: ${selector === 'checkbox' ? '4px' : '100%'};

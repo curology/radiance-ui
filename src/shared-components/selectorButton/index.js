@@ -43,7 +43,6 @@ const SelectorButton = ({
   ...rest
 }) => {
   const iconOrNull = size === 'large' ? icon : null;
-  const checkmarkSize = size === 'large' ? 22 : 11;
   return (
     <OuterContainer
       onClick={onClick}
@@ -59,13 +58,13 @@ const SelectorButton = ({
               css={css`
               color: ${COLORS.white};
             `}
-              width={checkmarkSize}
-              height={checkmarkSize}
+              width={16}
+              height={16}
             /> :
             iconOrNull
           }
         </SelectorIcon>
-        <Selector type={type} checked={checked} selector={selector}/>
+        <Selector type={type} checked={checked} selector={selector} size={size}/>
       </SelectorContainer>
 
       {children && (
