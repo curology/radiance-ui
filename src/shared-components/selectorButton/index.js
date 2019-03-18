@@ -42,6 +42,7 @@ const SelectorButton = ({
   size,
   ...rest
 }) => {
+  const iconOrNull = size === 'large' ? icon : null;
   return (
     <OuterContainer
       onClick={onClick}
@@ -60,7 +61,7 @@ const SelectorButton = ({
               width={16}
               height={16}
             /> :
-            icon
+            iconOrNull
           }
         </SelectorIcon>
         <Selector type={type} checked={checked} selector={selector} size={size}/>
