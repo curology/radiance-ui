@@ -20,7 +20,7 @@ import { Checkbox } from 'radiance-ui';
 | checked   | bool               | yes      | -       | control prop for checked state                                                                                                |
 | type      | string             | no       | primary | must be one of: 'primary', 'secondary'                                                                                        |
 | icon      | node               | no       | -       | icon optionally displayed inside the radio button                                                                             |
-| size      | string             | no       | large   | must be one of: 'large', 'small'                                                                                              |                                                                                                 |
+| size      | string             | no       | small   | must be one of: 'large', 'small'                                                                                              |                                                                                                 |
 | children  | node               | no       | -       | text label displayed next to the checkbox                                                                                     |
 | onClick   | func               | no       | () => {}| callback function called on click of the checkbox. This can be used to wire up the controlled component                       |
 

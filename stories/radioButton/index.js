@@ -32,7 +32,7 @@ stories.add(
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('radio button clicked')}
         icon={boolean('icon', false) ? <AcneGlyph width={40} height={40} fill="#332e54"/> : null}
-        size={select('size', ['large', 'small'], 'large')}
+        size={select('size', ['large', 'small'], 'small')}
       >
         {text('children', 'Render radio label here')}
       </RadioButton>

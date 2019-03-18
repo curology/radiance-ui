@@ -18,6 +18,7 @@ const propTypes = {
 const defaultProps = {
   onClick: () => {},
   type: 'primary',
+  size: 'small',
 };
 
 const Checkbox = ({
