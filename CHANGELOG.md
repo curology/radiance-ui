@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.9
+- Added clarifications to storybook on icon display behavior.
+
 ## v2.0.8
 - Added icon support and multiple sizes to selector button components. ([PR #70](https://github.com/PocketDerm/radiance-ui/pull/70))
 
