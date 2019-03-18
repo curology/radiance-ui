@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
+import {css} from '@emotion/core';
 
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import { COLORS } from '../../constants';
+import {COLORS} from '../../constants';
 import {
   OuterContainer,
   Selector,
   SelectorContainer,
   TextContainer,
-  selectorIcon,
+  SelectorIcon,
 } from './style';
 
 const propTypes = {
@@ -21,10 +21,13 @@ const propTypes = {
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
   selector: PropTypes.oneOf(['radio', 'checkbox']),
+  icon: PropTypes.node,
+  size: PropTypes.oneOf(['large', 'small']),
 };
 
 const defaultProps = {
-  onClick: () => {},
+  onClick: () => {
+  },
   type: 'primary',
   selector: 'radio',
 };
@@ -35,6 +38,8 @@ const SelectorButton = ({
   children,
   type,
   selector,
+  icon,
+  size,
   ...rest
 }) => (
   <OuterContainer
@@ -45,15 +50,19 @@ const SelectorButton = ({
     {...rest}
   >
     <SelectorContainer>
-      <CheckmarkIcon
-        css={css`
-          ${selectorIcon};
-          color: ${checked ? COLORS.white : 'transparent'};
-        `}
-        width={11}
-        height={11}
-      />
-      <Selector type={type} checked={checked} selector={selector} />
+      <SelectorIcon>
+        {checked ?
+          <CheckmarkIcon
+            css={css`
+              color: ${COLORS.white};
+            `}
+            width={16}
+            height={16}
+          /> :
+          size === 'large' && icon
+        }
+      </SelectorIcon>
+      <Selector type={type} checked={checked} selector={selector} size={size}/>
     </SelectorContainer>
 
     {children && (
