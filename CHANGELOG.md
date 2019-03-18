@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.8
+- Added icon support and multiple sizes to selector button components. ([PR #70](https://github.com/PocketDerm/radiance-ui/pull/70))
+
 ## v2.0.7
 - Add Dropdown component. ([PR #61](https://github.com/PocketDerm/radiance-ui/pull/61))
 
