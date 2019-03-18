@@ -70,15 +70,72 @@ describe('<SelectorButton />', () => {
     });
 
 
-    test('when Icon added', () => {
-      const tree = renderer.create(
-        <SelectorButton checked={false} onClick={() => {
-        }} selector="checkbox" icon={<AcneFewGlyph width={16} height={16} />}>
-          SelectorButton Text
-        </SelectorButton>,
-      );
+    describe('when Icon added', () => {
+      it('hides icon for checkbox with size \'small\'', () => {
+        const tree = renderer.create(
+          <SelectorButton checked={false} onClick={() => {
+          }} selector="checkbox" icon={<AcneFewGlyph width={16} height={16}/>} size="small">
+            SelectorButton Text
+          </SelectorButton>,
+        );
 
-      expect(tree).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('hides icon for radio button size \'small\'', () => {
+        const tree = renderer.create(
+          <SelectorButton checked={false} onClick={() => {
+          }} selector="radio" icon={<AcneFewGlyph width={16} height={16}/>} size="small">
+            SelectorButton Text
+          </SelectorButton>,
+        );
+
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('displays icon for checkbox with size \'large\'', () => {
+        const tree = renderer.create(
+          <SelectorButton checked={false} onClick={() => {
+          }} selector="checkbox" icon={<AcneFewGlyph width={16} height={16}/>} size="large">
+            SelectorButton Text
+          </SelectorButton>,
+        );
+
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('displays icon for radio button with size \'large\'', () => {
+        const tree = renderer.create(
+          <SelectorButton checked={false} onClick={() => {
+          }} selector="radio" icon={<AcneFewGlyph width={16} height={16}/>} size="large">
+            SelectorButton Text
+          </SelectorButton>,
+        );
+
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('displays check mark for checked checkbox', () => {
+        const tree = renderer.create(
+          <SelectorButton checked onClick={() => {
+          }} selector="checkbox" icon={<AcneFewGlyph width={16} height={16}/>} size="large">
+            SelectorButton Text
+          </SelectorButton>,
+        );
+
+        expect(tree).toMatchSnapshot();
+      });
+
+      it('displays check mark for checked radio button', () => {
+        const tree = renderer.create(
+          <SelectorButton checked onClick={() => {
+          }} selector="radio" icon={<AcneFewGlyph width={16} height={16}/>} size="large">
+            SelectorButton Text
+          </SelectorButton>,
+        );
+
+        expect(tree).toMatchSnapshot();
+      });
     });
   });
 
