@@ -47,4 +47,3 @@ RadioButton.propTypes = propTypes;
 RadioButton.defaultProps = defaultProps;
 
 export default RadioButton;
-
