@@ -41,38 +41,35 @@ const SelectorButton = ({
   icon,
   size,
   ...rest
-}) => {
-  const iconOrNull = size === 'large' ? icon : null;
-  return (
-    <OuterContainer
-      onClick={onClick}
-      onKeyPress={onClick}
-      tabIndex="0"
-      selector={selector}
-      {...rest}
-    >
-      <SelectorContainer>
-        <SelectorIcon>
-          {checked ?
-            <CheckmarkIcon
-              css={css`
+}) => (
+  <OuterContainer
+    onClick={onClick}
+    onKeyPress={onClick}
+    tabIndex="0"
+    selector={selector}
+    {...rest}
+  >
+    <SelectorContainer>
+      <SelectorIcon>
+        {checked ?
+          <CheckmarkIcon
+            css={css`
               color: ${COLORS.white};
             `}
-              width={16}
-              height={16}
-            /> :
-            iconOrNull
-          }
-        </SelectorIcon>
-        <Selector type={type} checked={checked} selector={selector} size={size}/>
-      </SelectorContainer>
+            width={16}
+            height={16}
+          /> :
+          size === 'large' && icon
+        }
+      </SelectorIcon>
+      <Selector type={type} checked={checked} selector={selector} size={size}/>
+    </SelectorContainer>
 
-      {children && (
-        <TextContainer>{children}</TextContainer>
-      )}
-    </OuterContainer>
-  );
-};
+    {children && (
+      <TextContainer>{children}</TextContainer>
+    )}
+  </OuterContainer>
+);
 
 SelectorButton.propTypes = propTypes;
 SelectorButton.defaultProps = defaultProps;
