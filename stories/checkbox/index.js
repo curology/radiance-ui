@@ -8,7 +8,7 @@ import { css } from '@emotion/core';
 import CheckboxReadme from 'docs/checkbox.md';
 import { Checkbox, Typography } from 'src/shared-components';
 import { SPACING } from 'src/constants';
-import { ThumbsUpIcon } from 'src/svgs/icons';
+import { AcneGlyph } from 'src/svgs/glyphs';
 
 const stories = storiesOf('Checkbox', module);
 
@@ -31,7 +31,7 @@ stories.add(
         checked={boolean('checked', false)}
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('checkbox clicked')}
-        icon={boolean('icon', false) ? <ThumbsUpIcon width={16} height={16} fill="#332e54"/>: null}
+        icon={boolean('icon', false) ? <AcneGlyph width={40} height={40} fill="#332e54"/>: null}
         size={select('size', ['large', 'small'], 'large')}
       >
         {text('children', 'Render checkbox label here')}
