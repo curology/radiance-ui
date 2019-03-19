@@ -174,7 +174,7 @@ stories.add(
       </Container>
 
       <Container title="Using React Router Link">
-        <LinkButton to="https://www.google.com/search?q=chem+trails" renderedTag={MockLink}>Router Link</LinkButton>
+        <LinkButton to="https://www.google.com/search?q=chem+trails" as={MockLink}>Router Link</LinkButton>
       </Container>
 
       <Container title="with Knobs">

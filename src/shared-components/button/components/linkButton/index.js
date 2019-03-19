@@ -9,14 +9,14 @@ const propTypes = {
   disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
   buttonType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  renderedTag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   onClick: PropTypes.func,
 };
 
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
-  renderedTag: 'a',
+  as: 'a',
   onClick() {},
 };
 
@@ -24,12 +24,12 @@ const Link = ({
   disabled,
   children,
   buttonType,
-  renderedTag,
+  as,
   onClick,
   textColor,
   ...rest
 }) => {
-  const ContainerTag = renderedTag;
+  const ContainerTag = as;
 
   return (
     <ContainerTag
