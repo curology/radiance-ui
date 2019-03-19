@@ -7,12 +7,12 @@ import { css } from '@emotion/core';
 
 import ButtonReadme from 'docs/button.md';
 import RoundButtonReadme from 'docs/roundButton.md';
+import LinkButtonReadme from 'docs/linkButton.md';
 import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/svgs/icons';
-import { Button, RoundButton, Typography } from 'src/shared-components';
+import { Button, RoundButton, LinkButton, Typography } from 'src/shared-components';
 import { SPACING } from 'src/constants';
 
 const stories = storiesOf('Buttons', module);
-
 stories.addDecorator(withKnobs);
 
 stories.add(
@@ -145,6 +145,49 @@ stories.add(
           {text('children', 'Click me!')}
         </RoundButton>
       </RoundButton.Container>
+    </React.Fragment>
+  ))
+);
+
+// eslint-disable-next-line react/prop-types
+const Container = ({ title, children }) => (
+  <LinkButton.Container css={css`display: block; padding-bottom: 50px;`}>
+    <Typography.Heading css={css`text-align: left;`}>{title}</Typography.Heading>
+    {children}
+  </LinkButton.Container>
+);
+
+// Mock React-Router Link for story.
+const MockLink = ({ to, children, ...rest }) => (
+  <a href={to} {...rest}>{children}</a>
+);
+
+stories.add(
+  'LinkButton',
+  withDocs(LinkButtonReadme, () => (
+    <React.Fragment>
+      <Container title="LinkButton">
+        <LinkButton href="https://www.latlmes.com/arts/return-of-the-golden-age-of-comics-1">Primary</LinkButton>
+        <LinkButton buttonType="secondary">Secondary</LinkButton>
+        <LinkButton buttonType="tertiary">Tertiary</LinkButton>
+        <LinkButton buttonType="quaternary">Quaternary</LinkButton>
+        <LinkButton disabled>Disabled</LinkButton>
+      </Container>
+
+      <Container title="Using React Router Link">
+        <LinkButton to="https://www.google.com/search?q=chem+trails" as={MockLink}>Router Link</LinkButton>
+      </Container>
+
+      <Container title="with Knobs">
+        <LinkButton
+          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
+          disabled={boolean('disabled', false)}
+          onClick={action('You clicked a button')}
+          textColor={text('textColor', '')}
+        >
+          {text('children', 'Click it!')}
+        </LinkButton>
+      </Container>
     </React.Fragment>
   ))
 );

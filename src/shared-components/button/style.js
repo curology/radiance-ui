@@ -98,7 +98,7 @@ function parseTheme(disabled, buttonType, loading) {
   }
 }
 
-const baseButtonStyles = ({ disabled, buttonType, loading, textColor }) => css`
+export const baseButtonStyles = ({ disabled, buttonType, loading, textColor }) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
   border-radius: 0;
@@ -148,17 +148,14 @@ export const ButtonContents = styled.div`
 
   ${({ loading, hasIcon }) => {
     if (loading && hasIcon) {
-      return css`
-        transform: translateX(-30px);
-      `;
-    } else if (loading && !hasIcon) {
-      return css`
-        transform: translateX(-15px);
-      `;
+      return css`transform: translateX(-30px);`;
     }
-    return css`
-      transform: translateX(0);
-    `;
+
+    if (loading && !hasIcon) {
+      return css`transform: translateX(-15px);`;
+    }
+
+    return css`transform: translateX(0);`;
   }};
 
   & > svg {
@@ -169,7 +166,6 @@ export const ButtonContents = styled.div`
   }
 `;
 
-/* eslint-disable indent */
 export const ButtonText = styled.span`
   line-height: 1.5;
   margin: 0;
@@ -183,4 +179,3 @@ export const ButtonText = styled.span`
     }
   }};
 `;
-/* eslint-enable indent */
