@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.10
+- Add LinkButton component ([PR #71](https://github.com/PocketDerm/radiance-ui/pull/71))
+
 ## v2.0.9
 - Added clarifications to storybook on icon display behavior.
 
