@@ -19,6 +19,10 @@ import { LinkButton } from 'radiance-ui';
       Tertiary
     </LinkButton>
 
+    <LinkButton buttonType="quaternary" href="#">
+      Quaternary
+    </LinkButton>
+
     <LinkButton disabled href="#">
       I am Disabled
     </LinkButton>

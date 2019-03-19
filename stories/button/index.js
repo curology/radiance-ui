@@ -170,6 +170,7 @@ stories.add(
         <LinkButton href="https://www.latlmes.com/arts/return-of-the-golden-age-of-comics-1">Primary</LinkButton>
         <LinkButton buttonType="secondary">Secondary</LinkButton>
         <LinkButton buttonType="tertiary">Tertiary</LinkButton>
+        <LinkButton buttonType="quaternary">Quaternary</LinkButton>
         <LinkButton disabled>Disabled</LinkButton>
       </Container>
 
@@ -179,7 +180,7 @@ stories.add(
 
       <Container title="with Knobs">
         <LinkButton
-          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary'], 'primary')}
+          buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
           disabled={boolean('disabled', false)}
           onClick={action('You clicked a button')}
           textColor={text('textColor', '')}

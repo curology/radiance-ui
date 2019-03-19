@@ -8,7 +8,7 @@ import { linkButtonStyles } from './style';
 const propTypes = {
   disabled: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  buttonType: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  buttonType: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'quaternary']),
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   onClick: PropTypes.func,
 };
