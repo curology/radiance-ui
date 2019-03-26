@@ -27,7 +27,7 @@ import { LinkButton } from 'radiance-ui';
       I am Disabled
     </LinkButton>
   </LinkButton.Container>
-</React.Fragment>;
+</React.Fragment>
 ```
 
 #### React Router Link
@@ -38,7 +38,7 @@ import { Link } from 'react-router';
 
 <LinkButton to="/somepath" as={Link}>
   Router Link
-</LinkButton>;
+</LinkButton>
 ```
 
 <!-- STORY -->
