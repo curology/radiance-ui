@@ -18,11 +18,6 @@ import { TextButton } from 'radiance-ui';
 
 ### Proptypes
 
-const propTypes = {
-disabled: PropTypes.bool,
-children: PropTypes.node.isRequired,
-onClick: PropTypes.func,
-};
 
 | prop     | propType | required | default  | description                                             |
 | -------- | -------- | -------- | -------- | ------------------------------------------------------- |
