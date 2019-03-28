@@ -69,7 +69,7 @@ class Alert extends React.Component {
   };
 
   render() {
-    const { text, type, ...rest } = this.props;
+    const { text, type, onExit, ...rest } = this.props;
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
