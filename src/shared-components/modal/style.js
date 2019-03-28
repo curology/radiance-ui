@@ -22,7 +22,7 @@ export const ModalOverlay = styled.div`
   right: 0;
   top: 0;
   z-index: 1000;
-  padding: ${SPACING.medium};
+  padding: ${SPACING.base};
 
   ${MEDIA_QUERIES.lgUp} {
     padding: ${SPACING.xxlarge};
@@ -66,7 +66,7 @@ export const ContentContainer = styled.div`
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: ${SPACING.medium} ${SPACING.large};
+  padding: ${SPACING.medium} ${SPACING.base};
 
   ${MEDIA_QUERIES.mdUp} {
     padding: ${({ tight }) =>
