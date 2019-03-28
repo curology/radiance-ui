@@ -69,7 +69,7 @@ class Alert extends React.Component {
   };
 
   render() {
-    const { text, type } = this.props;
+    const { text, type, onExit, ...rest } = this.props;
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
@@ -80,6 +80,7 @@ class Alert extends React.Component {
         alertType={type}
         exiting={exiting}
         onClick={this.exit}
+        {...rest}
       >
         <AlertContentContainer>
           <Icon
