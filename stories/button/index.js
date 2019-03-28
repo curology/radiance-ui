@@ -5,11 +5,12 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
 
-import ButtonReadme from 'docs/button.md';
-import RoundButtonReadme from 'docs/roundButton.md';
-import LinkButtonReadme from 'docs/linkButton.md';
+import ButtonReadme from 'docs/button/button.md';
+import RoundButtonReadme from 'docs/button/roundButton.md';
+import LinkButtonReadme from 'docs/button/linkButton.md';
+import TextButtonReadme from 'docs/button/textButton.md';
 import { CheckmarkIcon, ArrowLeftIcon, ArrowRightIcon } from 'src/svgs/icons';
-import { Button, RoundButton, LinkButton, Typography } from 'src/shared-components';
+import { Button, RoundButton, LinkButton, TextButton, Typography } from 'src/shared-components';
 import { SPACING } from 'src/constants';
 
 const stories = storiesOf('Buttons', module);
@@ -187,6 +188,23 @@ stories.add(
         >
           {text('children', 'Click it!')}
         </LinkButton>
+      </Container>
+    </React.Fragment>
+  ))
+);
+
+stories.add(
+  'TextButton',
+  withDocs(TextButtonReadme, () => (
+    <React.Fragment>
+      <Container>
+        <TextButton onClick={action('Button was clicked')}>
+          All of this text is clickable
+        </TextButton>
+        <br/>
+        <TextButton disabled>
+          This text button is disabled
+        </TextButton>
       </Container>
     </React.Fragment>
   ))
