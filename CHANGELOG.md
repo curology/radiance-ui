@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v2.0.11
+- Add rest to Alert component ([PR #76](https://github.com/PocketDerm/radiance-ui/pull/76))
+- Add Textbutton component ([PR #75](https://github.com/PocketDerm/radiance-ui/pull/75))
+- Update modal padding ([PR #74](https://github.com/PocketDerm/radiance-ui/pull/74))
+
 ## v2.0.10
 - Add LinkButton component ([PR #71](https://github.com/PocketDerm/radiance-ui/pull/71))
 
