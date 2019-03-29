@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
+.emotion-4 {
+  position: relative;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.emotion-0 {
+  cursor: pointer;
+}
+
+.emotion-2 {
+  top: 120%;
+  background: #ffffff;
+  border: 1px solid #ededf0;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  color: #858298;
+  min-width: 100px;
+  opacity: 0;
+  padding: 1.5rem;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  transform: translateY(-8px);
+  -webkit-transition-delay: 30ms;
+  transition-delay: 30ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  z-index: 5;
+  text-align: left;
+  font-size: 0.875rem;
+  display: block;
+}
+
+.emotion-2::after {
+  top: -10px;
+  -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
+  -ms-transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
+  transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
+  left: 45%;
+  background: #ffffff;
+  border-top-right-radius: 20%;
+  border-color: #ededf0;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: '';
+  height: 12px;
+  position: absolute;
+  width: 12px;
+  margin-top: 3px;
+}
+
+<div>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <div
+      className="emotion-0 emotion-1"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      Tooltip Trigger
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+      open={false}
+    >
+      Tooltip Content
+    </div>
+  </div>
+</div>
+`;

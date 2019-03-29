@@ -1,7 +1,7 @@
 {
   "extends": "curology",
   "globals": {
-    "document": false,
+    "document": false
   },
   "overrides": [
     {
@@ -22,5 +22,8 @@
       }
     },
     "import/extensions": [".js", ".jsx"]
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }
