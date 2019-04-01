@@ -11,4 +11,5 @@ export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
 export { default as OffClickWrapper } from './offClickWrapper';
 export { default as RadioButton } from './radioButton';
+export { default as Tooltip } from './tooltip';
 export { default as Typography, style as TYPOGRAPHY_STYLE } from './typography';
