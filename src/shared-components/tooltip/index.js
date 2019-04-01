@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Global } from '@emotion/core';
 
 import OffClickWrapper from '../offClickWrapper';
 import { MainContainer, Trigger, TooltipBox } from './style';
@@ -88,6 +89,13 @@ class Tooltip extends React.Component {
 
     return (
       <OffClickWrapper onOffClick={this.closeTooltip}>
+        <Global
+          styles={{
+            'body.cursor-pointer': {
+              cursor: 'pointer',
+            },
+          }}
+        />
         <MainContainer>
           <Trigger
             onClick={this.onClick}
