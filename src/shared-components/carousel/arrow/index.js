@@ -5,43 +5,35 @@ import { COLORS } from '../../../constants';
 import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
 import ArrowContainer from './style';
 
-const Arrow = props => {
-  const {
-    style,
-    onClick,
-    onUserInteraction,
-    prev,
-    next,
-    disabled,
-    ...rest
-  } = props;
+class Arrow extends React.Component {
+  static propTypes = {
+    prev: PropTypes.bool,
+    next: PropTypes.bool,
+    disabled: PropTypes.bool,
+    onUserInteraction: PropTypes.func,
+    onClick: PropTypes.func,
+  };
 
-  return (
-    <ArrowContainer
-      {...rest}
-      style={{ ...style }}
-      onClick={() => {
-        onClick();
-        onUserInteraction();
-      }}
-      prev={prev}
-      next={next}
-      disabled={disabled}
-    >
-      {prev && <ArrowLeftIcon fill={COLORS.purple} />}
-      {next && <ArrowRightIcon fill={COLORS.purple} />}
-    </ArrowContainer>
-  );
-};
+  arrowClickHandler = () => {
+    const { onUserInteraction, onClick } = this.props;
+    onClick();
+    onUserInteraction();
+  };
 
-Arrow.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.shape({}),
-  onClick: PropTypes.func,
-  onUserInteraction: PropTypes.func,
-  prev: PropTypes.bool,
-  next: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
+  render() {
+    const { prev, next, disabled } = this.props;
+    return (
+      <ArrowContainer
+        prev={prev}
+        next={next}
+        disabled={disabled}
+        onClick={this.arrowClickHandler}
+      >
+        {prev && <ArrowLeftIcon fill={COLORS.purple} />}
+        {next && <ArrowRightIcon fill={COLORS.purple} />}
+      </ArrowContainer>
+    );
+  }
+}
 
 export default Arrow;

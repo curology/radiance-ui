@@ -13,11 +13,12 @@ const ArrowContainer = styled.div`
   border: 1px solid ${COLORS.border};
   transform: scale(1, 1) translate(0%, -50%);
   transition: all ${ANIMATION.defaultTiming};
+  display: block;
 
   ${({ prev }) => prev && `left: ${SPACING.xsmall};`};
   ${({ next }) => next && `right: ${SPACING.xsmall};`};
 
-  ${({ disabled }) => disabled && `opacity: 0;`};
+  ${({ disabled }) => disabled && `display: none;`};
 
   &:hover {
     transform: scale(1.1, 1.1) translate(0%, -50%);
