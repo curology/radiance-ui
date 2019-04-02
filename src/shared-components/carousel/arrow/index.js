@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { ArrowLeftIcon, ArrowRightIcon } from 'src/icons';
-import { COLORS } from 'src/constants';
-
+import { COLORS } from '../../../constants';
+import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
 import ArrowContainer from './style';
 
 const Arrow = props => {

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACING, COLORS, ANIMATION } from 'src/constants';
+import { SPACING, COLORS, ANIMATION } from '../../../constants';
 
 const ArrowContainer = styled.div`
   cursor: pointer;

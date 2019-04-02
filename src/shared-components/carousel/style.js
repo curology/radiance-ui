@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { SPACING, COLORS } from 'src/constants';
+import { SPACING, COLORS } from '../../constants';
 
 export const Card = styled.div`
   width: 311px !important;
