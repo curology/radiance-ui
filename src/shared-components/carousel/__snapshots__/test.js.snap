@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> UI snapshots renders with props 1`] = `
+.emotion-4 {
+  max-width: 375px;
+}
+
 .emotion-2 {
   overflow: hidden !important;
   padding-bottom: 1.5rem;
@@ -167,65 +171,69 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  className="emotion-2 emotion-3"
-  onClick={[Function]}
+  className="emotion-4 emotion-5"
 >
   <div
-    className="slick-slider slick-initialized"
+    className="emotion-2 emotion-3"
+    onClick={[Function]}
   >
-    
     <div
-      className="slick-list"
+      className="slick-slider slick-initialized"
     >
+      
       <div
-        className="slick-track"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        style={
-          Object {
-            "WebkitTransform": "translate3d(0px, 0px, 0px)",
-            "WebkitTransition": "",
-            "msTransform": "translateX(0px)",
-            "opacity": 1,
-            "transform": "translate3d(0px, 0px, 0px)",
-            "transition": "",
-            "width": -100,
-          }
-        }
+        className="slick-list"
       >
         <div
-          aria-hidden={false}
-          className="slick-slide slick-active slick-center slick-current"
-          data-index={0}
-          onClick={[Function]}
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
           style={
             Object {
-              "outline": "none",
-              "width": null,
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+              "width": -100,
             }
           }
-          tabIndex="-1"
         >
-          <div>
-            <div
-              className="emotion-0 emotion-1"
-              style={
-                Object {
-                  "display": "inline-block",
-                  "width": "100%",
-                }
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-center slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": null,
               }
-              tabIndex={-1}
-            >
-              Card 1
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="emotion-0 emotion-1"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Card 1
+              </div>
             </div>
           </div>
         </div>
       </div>
+      
+      
     </div>
-    
-    
   </div>
 </div>
 `;
