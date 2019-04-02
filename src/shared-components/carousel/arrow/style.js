@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
-import { SPACING, COLORS, ANIMATION } from '../../../constants';
+import { SPACING, COLORS, ANIMATION, Z_SCALE } from '../../../constants';
 
 const ArrowContainer = styled.div`
   cursor: pointer;
   position: absolute;
   top: 50%;
-  z-index: 2000;
+  z-index: ${Z_SCALE.e20};
   padding: ${SPACING.small};
   background-color: ${COLORS.white};
   border-radius: 50%;
