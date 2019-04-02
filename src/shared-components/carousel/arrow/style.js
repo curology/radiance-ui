@@ -6,7 +6,7 @@ const ArrowContainer = styled.div`
   cursor: pointer;
   position: absolute;
   top: 50%;
-  z-index: ${Z_SCALE.e20};
+  z-index: ${Z_SCALE.e2000};
   padding: ${SPACING.small};
   background-color: ${COLORS.white};
   border-radius: 50%;

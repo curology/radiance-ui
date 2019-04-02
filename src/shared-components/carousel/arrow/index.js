@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { COLORS } from '../../../constants';
-import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
+import ArrowLeftIcon from '../../../svgs/icons/arrow-left-icon.svg';
+import ArrowRightIcon from '../../../svgs/icons/arrow-right-icon.svg';
 import ArrowContainer from './style';
 
 class Arrow extends React.Component {

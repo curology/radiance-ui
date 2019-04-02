@@ -1,7 +1,6 @@
 export { default as ANIMATION } from './animation';
 export { default as BOX_SHADOWS } from './boxShadows';
 export { default as BREAKPOINTS } from './breakpoints';
-export { default as CAROUSEL_CONTAINER_SIZES } from './carouselContainerSizes';
 export { default as COLORS } from './colors';
 export { default as FONTS } from './fonts';
 export { default as GRID } from './grid';

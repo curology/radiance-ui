@@ -3,17 +3,38 @@
 
 ```jsx
 import { Carousel } from 'radiance-ui';
-import { CAROUSEL_CONTAINER_SIZES } from 'radiance-ui/lib/constants';
 
-<div style={{maxWidth: CAROUSEL_CONTAINER_SIZES.threeCards}}>
-  <Carousel numCardsVisible={3}>
-    <div>Card 1</div>
-    <div>Card 2</div>
-    <div>Card 3</div>
-    <div>Card 4</div>
-    <div>Card 5</div>
-  </Carousel>
-</div>
+const cards = [
+  <Carousel.Card key={1}>Card 1</Carousel.Card>,
+  <Carousel.Card key={2}>Card 2</Carousel.Card>,
+  <Carousel.Card key={3}>Card 3</Carousel.Card>,
+  <Carousel.Card key={4}>Card 4</Carousel.Card>,
+  <Carousel.Card key={5}>Card 5</Carousel.Card>,
+];
+
+// Default - 1 card
+<Carousel numCardsVisible={1}>{cards}</Carousel>
+
+// 2 cards - Infinite
+<Carousel numCardsVisible={2} infinite>{cards}</Carousel>
+
+// Default - 3 card
+<Carousel numCardsVisible={3}>{cards}</Carousel>
+
+// Autoplay - 5 seconds is default speed
+<Carousel numCardsVisible={1} autoplay>{cards}</Carousel>
+
+// Autoplay Infinite
+<Carousel numCardsVisible={1} autoplay infinite>{cards}</Carousel>
+
+// Hide Dots
+<Carousel numCardsVisible={1} hideDots>{cards}</Carousel>
+
+// Hide Arrows (swipe to navigate)
+<Carousel numCardsVisible={1} hideArrows>{cards}</Carousel>
+
+// Secondary Style - dots are white
+<Carousel numCardsVisible={1} carouselType="secondary">{cards}</Carousel>
 ```
 
 <!-- STORY -->
@@ -29,7 +50,7 @@ import { CAROUSEL_CONTAINER_SIZES } from 'radiance-ui/lib/constants';
 | hideArrows          | bool       | no       | false        | hide the arrows |
 | hideDots            | bool       | no       | false        | hide the dots |
 | infinite            | bool       | no       | false        | creates a carousel loop, i.e. if true you can go backwards form the begining |
-| numCardsVisible     | number     | yes      | -            | number of visible cards |
+| numCardsVisible     | number     | yes      | -            | number of visible cards, must be one of: 1, 2 or 3 |
 
 ### Notes
-You must define a container that wraps the Carousel component with the `max-width` Style set to one of the 3 constants defined in CAROUSEL_CONTAINER_SIZES: `oneCard, twoCards, threeCards`. This value must match the number of visible cards defined by the property `numCardsVisible`.
+The property `numCardsVisible` will define the width of the Carousel Container

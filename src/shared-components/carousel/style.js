@@ -156,7 +156,32 @@ const reactSlickStyles = css`
   }
 `;
 
-export const CarouselContainer = styled.div`
+const parseOuteStyle = numCardsVisible => {
+  let maxWidth;
+  switch (numCardsVisible) {
+    case 1:
+      maxWidth = '375px';
+      break;
+    case 2:
+      maxWidth = '702px';
+      break;
+    case 3:
+      maxWidth = '1029px';
+      break;
+    default:
+      maxWidth = '375px';
+  }
+
+  return css`
+    max-width: ${maxWidth};
+  `;
+};
+
+export const OuterContainer = styled.div`
+  ${({ numCardsVisible }) => parseOuteStyle(numCardsVisible)};
+`;
+
+export const InnerContainer = styled.div`
   overflow: hidden !important;
   padding-bottom: ${SPACING.base};
 

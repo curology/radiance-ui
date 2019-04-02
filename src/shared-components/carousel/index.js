@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import Arrow from './arrow';
-import { CarouselContainer, Card } from './style';
+import { OuterContainer, InnerContainer, Card } from './style';
 
 const BASE_SLIDER_CONFIG = {
   focusOnSelect: true,
@@ -162,18 +162,20 @@ class Carousel extends React.Component {
   }
 
   render() {
-    const { children, carouselType } = this.props;
+    const { children, carouselType, numCardsVisible } = this.props;
     const settings = this.getCarouselSettings();
 
     return (
-      <CarouselContainer
-        carouselType={carouselType}
-        onClick={this.onUserInteraction}
-      >
-        <Slider ref={this.slider} {...settings}>
-          {children}
-        </Slider>
-      </CarouselContainer>
+      <OuterContainer numCardsVisible={numCardsVisible}>
+        <InnerContainer
+          carouselType={carouselType}
+          onClick={this.onUserInteraction}
+        >
+          <Slider ref={this.slider} {...settings}>
+            {children}
+          </Slider>
+        </InnerContainer>
+      </OuterContainer>
     );
   }
 }

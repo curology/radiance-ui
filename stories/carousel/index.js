@@ -13,7 +13,7 @@ import { css } from '@emotion/core';
 
 import CarouselReadme from 'docs/carousel.md';
 import { Carousel, Typography } from 'src/shared-components';
-import { SPACING, COLORS, CAROUSEL_CONTAINER_SIZES } from 'src/constants';
+import { SPACING, COLORS } from 'src/constants';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -27,7 +27,6 @@ const FlexContainer = styled.section`
 `;
 
 const CarouselContainer = styled.div`
-  max-width: ${({ width }) => CAROUSEL_CONTAINER_SIZES[width]};
   background-color: ${({ bgColor }) => bgColor || COLORS.background};
   margin: ${SPACING.small} ${SPACING.base};
   padding: ${SPACING.small} 0;
@@ -63,52 +62,52 @@ stories.add(
       <Typography.Heading>Examples:</Typography.Heading>
 
       <FlexContainer>
-        <CarouselContainer width="oneCard">
+        <CarouselContainer>
           <Header>Default - 1 card</Header>
           <Carousel numCardsVisible={1}>{cards}</Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="twoCards">
+        <CarouselContainer>
           <Header>2 cards - Infinite</Header>
           <Carousel numCardsVisible={2} infinite>
             {cards}
           </Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="threeCards">
+        <CarouselContainer>
           <Header>Default - 3 cards</Header>
           <Carousel numCardsVisible={3}>{cards}</Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="oneCard">
+        <CarouselContainer>
           <Header>Autoplay - 5 seconds is default speed</Header>
           <Carousel numCardsVisible={1} autoplay>
             {cards}
           </Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="oneCard">
+        <CarouselContainer>
           <Header>Autoplay Infinite</Header>
           <Carousel numCardsVisible={1} autoplay infinite>
             {cards}
           </Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="oneCard">
+        <CarouselContainer>
           <Header>Hide Dots</Header>
           <Carousel numCardsVisible={1} hideDots>
             {cards}
           </Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="oneCard">
+        <CarouselContainer>
           <Header>Hide Arrows (swipe to navigate)</Header>
           <Carousel numCardsVisible={1} hideArrows>
             {cards}
           </Carousel>
         </CarouselContainer>
 
-        <CarouselContainer width="oneCard" bgColor={COLORS.lavender100}>
+        <CarouselContainer bgColor={COLORS.lavender100}>
           <Header>Secondary Style - dots are white</Header>
           <Carousel numCardsVisible={1} carouselType="secondary">
             {cards}
@@ -124,31 +123,28 @@ stories.add(
         With Knobs:
       </Typography.Heading>
 
-      <CarouselContainer
-        width={select(
-          'Container width',
-          ['oneCard', 'twoCards', 'threeCards'],
-          'oneCard'
-        )}
-        bgColor={text('Background color', COLORS.background)}
-      >
-        <Carousel
-          autoplay={boolean('autoplay', true)}
-          autoplaySpeed={number('autoplaySpeed, in milliseconds', 5000)}
-          carouselType={select(
-            'carouselType',
-            ['primary', 'secondary'],
-            'primary'
-          )}
-          centerMode={boolean('centerMode', true)}
-          hideArrows={boolean('hideArrows', false)}
-          hideDots={boolean('hideDots', false)}
-          infinite={boolean('infinite', false)}
-          numCardsVisible={number('numCardsVisible', 1)}
+      <FlexContainer>
+        <CarouselContainer
+          bgColor={text('Background color', COLORS.background)}
         >
-          {cards}
-        </Carousel>
-      </CarouselContainer>
+          <Carousel
+            autoplay={boolean('autoplay', true)}
+            autoplaySpeed={number('autoplaySpeed, in milliseconds', 5000)}
+            carouselType={select(
+              'carouselType',
+              ['primary', 'secondary'],
+              'primary'
+            )}
+            centerMode={boolean('centerMode', true)}
+            hideArrows={boolean('hideArrows', false)}
+            hideDots={boolean('hideDots', false)}
+            infinite={boolean('infinite', false)}
+            numCardsVisible={number('numCardsVisible', 1)}
+          >
+            {cards}
+          </Carousel>
+        </CarouselContainer>
+      </FlexContainer>
     </MainContainer>
   ))
 );

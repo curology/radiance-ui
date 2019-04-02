@@ -5,6 +5,7 @@ export default {
   e6: 6,
   e11: 11,
   e20: 20,
+  e2000: 2000,
 
   /*
    * Aliases
