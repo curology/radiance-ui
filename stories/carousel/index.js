@@ -39,9 +39,7 @@ const Header = styled.h3`
 
 const Card = styled(Carousel.Card)`
   background-color: ${COLORS.border};
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: ${SPACING.base};
 `;
 
