@@ -109,7 +109,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
-    "mobx": "^5.9.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-modal": "^3.8.1",

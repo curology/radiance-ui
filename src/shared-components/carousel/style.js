@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { SPACING, COLORS } from 'radiance-ui/lib/constants';
 
-export const CAROUSEL_CONTAINER_SIZES = {
-  oneCard: '375px',
-  twoCards: '702px',
-  threeCards: '1029px',
-};
+import { SPACING, COLORS } from 'src/constants';
 
 export const Card = styled.div`
   width: 311px !important;

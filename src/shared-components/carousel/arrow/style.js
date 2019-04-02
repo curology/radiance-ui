@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { SPACING, COLORS, ANIMATION } from 'radiance-ui/lib/constants';
+
+import { SPACING, COLORS, ANIMATION } from 'src/constants';
 
 const ArrowContainer = styled.div`
   cursor: pointer;

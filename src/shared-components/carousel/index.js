@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
-import { computed } from 'mobx';
 
 import Arrow from './arrow';
-import { CarouselContainer, Card, CAROUSEL_CONTAINER_SIZES } from './style';
+import { CarouselContainer, Card } from './style';
 
 const BASE_SLIDER_CONFIG = {
   focusOnSelect: true,
@@ -77,8 +76,7 @@ class Carousel extends React.Component {
     return numberSlides - numCardsVisible;
   }
 
-  @computed
-  get carouselSettings() {
+  getCarouselSettings() {
     const { currentIndex, lastIndex } = this.state;
     const firstIndex = 0;
 
@@ -165,7 +163,7 @@ class Carousel extends React.Component {
 
   render() {
     const { children, carouselType } = this.props;
-    const settings = this.carouselSettings;
+    const settings = this.getCarouselSettings();
 
     return (
       <CarouselContainer
@@ -181,4 +179,3 @@ class Carousel extends React.Component {
 }
 
 export default Carousel;
-export { CAROUSEL_CONTAINER_SIZES };
