@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.12
+- Add Tooltip component ([PR #77](https://github.com/PocketDerm/radiance-ui/pull/77))
+
 ## v2.0.11
 - Add rest to Alert component ([PR #76](https://github.com/PocketDerm/radiance-ui/pull/76))
 - Add Textbutton component ([PR #75](https://github.com/PocketDerm/radiance-ui/pull/75))
