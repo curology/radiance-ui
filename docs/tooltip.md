@@ -4,7 +4,9 @@
 ```jsx
 import { Tooltip } from 'radiance-ui';
 
-<Tooltip content="Tooltip Content goes here">Trigger Element</Tooltip>
+<Tooltip content="Tooltip Content goes here">
+  Hover or Click here to trigger the Tooltip with default values
+</Tooltip>
 ```
 
 <!-- STORY -->

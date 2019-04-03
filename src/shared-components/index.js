@@ -1,7 +1,13 @@
 export { default as Accordion } from './accordion';
 export { default as Alert } from './alert';
 export { default as Banner } from './banner';
-export { default as Button, RoundButton, LinkButton, TextButton } from './button';
+export {
+  default as Button,
+  RoundButton,
+  LinkButton,
+  TextButton,
+} from './button';
+export { default as Carousel } from './carousel';
 export { default as Checkbox } from './checkbox';
 export { default as Chip } from './chip';
 export { default as Container } from './container';
