@@ -7,7 +7,7 @@ const appPreloader = translateX => keyframes`
   100% { opacity: 0; transform: translate3d(-${translateX}, 0, 0) }
 `;
 
-export const Container = styled.section`
+export const LoadingSpinnerContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
