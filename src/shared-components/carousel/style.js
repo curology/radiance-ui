@@ -156,7 +156,7 @@ const reactSlickStyles = css`
   }
 `;
 
-const parseOuteStyle = numCardsVisible => {
+const parseOuterStyle = numCardsVisible => {
   let maxWidth;
   switch (numCardsVisible) {
     case 1:
@@ -178,7 +178,7 @@ const parseOuteStyle = numCardsVisible => {
 };
 
 export const OuterContainer = styled.div`
-  ${({ numCardsVisible }) => parseOuteStyle(numCardsVisible)};
+  ${({ numCardsVisible }) => parseOuterStyle(numCardsVisible)};
 `;
 
 export const InnerContainer = styled.div`
