@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.13
+- Add Carousel component ([PR #79](https://github.com/PocketDerm/radiance-ui/pull/79))
+
 ## v2.0.12
 - Add Tooltip component ([PR #77](https://github.com/PocketDerm/radiance-ui/pull/77))
 
