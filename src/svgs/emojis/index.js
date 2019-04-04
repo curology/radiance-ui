@@ -12,6 +12,7 @@ export { default as HeartFilledEmoji } from './heart-filled-emoji.svg';
 export { default as HugEmoji } from './hug-emoji.svg';
 export { default as HugFilledEmoji } from './hug-filled-emoji.svg';
 export { default as MildAcneEmoji } from './mild-acne-emoji.svg';
+export { default as NoticeableAcneEmoji } from './noticeable-acne-emoji.svg';
 export { default as OverwhelmedEmoji } from './overwhelmed-emoji.svg';
 export { default as OverwhelmedFilledEmoji } from './overwhelmed-filled-emoji.svg';
 export { default as PreparedEmoji } from './prepared-emoji.svg';

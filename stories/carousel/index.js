@@ -19,7 +19,7 @@ const MainContainer = styled.div`
   text-align: left;
 `;
 
-const FlexContainer = styled.section`
+const FlexContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
