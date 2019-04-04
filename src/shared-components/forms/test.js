@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 
-import { FormSection } from './index';
+import FormSection from './index';
 
 describe('<FormSection />', () => {
   describe('UI Snapshot', () => {

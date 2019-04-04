@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import BulkErrors from './index';
 
-describe('<FormSection />', () => {
+describe('<BulkErrors />', () => {
   describe('with a single error', () => {
     it('renders the error', () => {
       const errors = { foo: 'bar' };
