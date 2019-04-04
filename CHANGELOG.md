@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.15
+- Refactor Loading Spinner HTML ([PR #80](https://github.com/PocketDerm/radiance-ui/pull/80)))
+
 ## v2.0.14
 - Add noticeable-acne-emoji ([PR #64](https://github.com/PocketDerm/radiance-ui/pull/64)))
 
