@@ -10,6 +10,29 @@ export const FormContainer = styled.div`
   margin-bottom: 16px;
 `;
 
+export const errorIconStyles = css`
+  position: relative;
+
+  svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    right: 16px;
+    fill: ${COLORS.statusRed};
+  }
+`;
+
+export const InputContainer = styled.div`
+  svg {
+    display: none;
+  }
+
+  ${({ shouldRenderError }) => shouldRenderError && errorIconStyles};
+`;
+
 export const baseInputStyles = css`
   appearance: none;
   border: 1px solid ${COLORS.border};

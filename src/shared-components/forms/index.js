@@ -3,7 +3,8 @@ import React from 'react';
 
 import Typography from '../typography';
 import HelperText, { ErrorItem, HintItem } from './helperText';
-import { FormContainer } from './style';
+import { FormContainer, InputContainer } from './style';
+import ErrorIcon from '../../svgs/icons/error-icon.svg';
 
 const FormSection = ({
   children,
@@ -24,7 +25,10 @@ const FormSection = ({
         <Typography.Label htmlFor={htmlFor}>{label}</Typography.Label>
       )}
 
-      {children}
+      <InputContainer shouldRenderError={shouldRenderError}>
+        {children}
+        <ErrorIcon />
+      </InputContainer>
 
       <HelperText>
         {shouldRenderError && <ErrorItem key="error">{errorMessage}</ErrorItem>}

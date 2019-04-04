@@ -6,6 +6,7 @@ import { style as TYPOGRAPHY_STYLE } from '../../typography';
 export const List = styled.ul`
   list-style-type: none;
   margin: 8px 0;
+  min-height: 23px;
 `;
 
 export const CenteredList = styled(List)`
