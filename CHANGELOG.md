@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.14
+- Add noticeable-acne-emoji ([PR #64](https://github.com/PocketDerm/radiance-ui/pull/64)))
+
 ## v2.0.13
 - Add Carousel component ([PR #79](https://github.com/PocketDerm/radiance-ui/pull/79))
 
