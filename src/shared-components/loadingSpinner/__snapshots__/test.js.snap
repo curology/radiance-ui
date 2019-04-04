@@ -93,7 +93,7 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css 1`] = `
   animation-delay: -0.5s;
 }
 
-<section
+<div
   className="emotion-8 emotion-9"
   id="loading-spinner"
 >
@@ -116,5 +116,5 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css 1`] = `
       size="14px"
     />
   </div>
-</section>
+</div>
 `;
