@@ -19,23 +19,25 @@ export const baseInputStyles = css`
   padding: 13px 16px;
   transition: border-color 350ms;
   width: 100%;
+  outline: none;
 
   &::placeholder {
     color: ${COLORS.primaryTint3};
   }
-
-  &:focus {
-    outline-color: ${COLORS.border};
-    outline-width: 1px;
-  }
 `;
 
-export const inputStyles = showError => {
-  const borderColor = showError ? COLORS.primary : COLORS.border;
+export const inputStyles = (showError, focusStyle) => {
+  const borderColor = showError ? COLORS.statusRed : false;
+  const focusBorderColor =
+    focusStyle === 'focusSecondary' ? COLORS.secondary : COLORS.primary;
 
   return css`
     ${baseInputStyles};
-    border: 1px solid ${borderColor};
+    border-color: ${borderColor};
+
+    &:focus {
+      border-color: ${borderColor || focusBorderColor};
+    }
   `;
 };
 

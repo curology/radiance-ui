@@ -9,10 +9,10 @@ class InputExample extends React.Component {
   };
 
   onChange = event => {
-    const { target } = event.target;
+    const { value } = event.target;
     this.setState({
-      isValid: this.validate(target.value),
-      value: target.value,
+      isValid: this.validate(value),
+      value,
     });
   };
 
@@ -20,7 +20,7 @@ class InputExample extends React.Component {
 
   render() {
     const { isValid, value } = this.state;
-    const css = inputStyles(!isValid);
+    const css = inputStyles(!isValid, 'focusSecondary');
 
     return (
       <FormSection
