@@ -17,7 +17,7 @@ const inputStyles = css`
   background: ${COLORS.white};
   border: 1px solid ${COLORS.border};
   border-radius: 0;
-  color: ${COLORS.primary};
+  color: ${COLORS.primaryTint1};
   padding: 13px ${SPACING.small};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
