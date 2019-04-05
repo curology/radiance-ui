@@ -112,7 +112,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-2 {
-  color: #5C5876;
+  color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
