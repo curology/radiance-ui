@@ -4,6 +4,7 @@ import { CSSTransitionGroup } from 'react-transition-group';
 import { Global } from '@emotion/core';
 
 import { CenteredList, List, transitionStyles } from './style';
+import { ANIMATION } from '../../../constants';
 
 const HelperText = ({ children, centered }) => (
   <React.Fragment>
@@ -11,8 +12,8 @@ const HelperText = ({ children, centered }) => (
     <CSSTransitionGroup
       component={centered ? CenteredList : List}
       transitionName="expand"
-      transitionEnterTimeout={350}
-      transitionLeaveTimeout={350}
+      transitionEnterTimeout={ANIMATION.defaultTiming}
+      transitionLeaveTimeout={ANIMATION.defaultTiming}
     >
       {children}
     </CSSTransitionGroup>
