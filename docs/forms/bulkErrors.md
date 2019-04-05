@@ -2,14 +2,14 @@
 ### Usage
 
 ```jsx
-import { BulkErrors, baseInputStyles } from 'radiance-ui';
+import { BulkErrors, Field } from 'radiance-ui';
     
 const errors = {
   required: 'This field is required',
   maxLenght: 'Must be at least 8 characters',
 };
 
-<input type="text" css={baseInputStyles} />
+<Field.Input type="text" />
 <BulkErrors errors={errors} />
 ```
 

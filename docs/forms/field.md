@@ -64,7 +64,7 @@ class InputWithValidation extends React.Component {
 ### Proptypes
 | prop                | propType    | required | default    | description                                                                                                                  
 |---------------------|-------------|----------|------------|------------------------------------------------------------------------------------------------------------------------------|
-| children            | node        | yes      | -          | must be one of Field.Input or Field.Textarea |
+| children            | node        | yes      | -          | must be either `Field.Input` or `Field.Textarea` |
 | errorMessage        | string      | no       | -          | the message to display when the input is invalid |
 | hintMessage         | string      | no       | -          | the hint to display below the field. It activates on focus |
 | isValid             | bool        | no       | -          | controls the valid state of the input |
@@ -72,5 +72,5 @@ class InputWithValidation extends React.Component {
 | labelFor            | string      | no       | -          | must match the children id html attribute |
 
 ### Notes
-If you don't need validation, label, hint message; you can use Field.Input or Field.Textarea directly.
+If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly.
 
