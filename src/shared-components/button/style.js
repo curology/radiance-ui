@@ -50,8 +50,8 @@ const tertiaryStyles = css`
 const quaternaryStyles = css`
   border-color: transparent;
   background-color: transparent;
-  color: ${COLORS.purple60};
-  fill: ${COLORS.purple60};
+  color: ${COLORS.purple70};
+  fill: ${COLORS.purple70};
 
   &:hover {
     opacity: 0.8;
@@ -98,7 +98,12 @@ function parseTheme(disabled, buttonType, loading) {
   }
 }
 
-export const baseButtonStyles = ({ disabled, buttonType, loading, textColor }) => css`
+export const baseButtonStyles = ({
+  disabled,
+  buttonType,
+  loading,
+  textColor,
+}) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
   border-radius: 0;
@@ -129,10 +134,12 @@ export const baseButtonStyles = ({ disabled, buttonType, loading, textColor }) =
   ${parseTheme(disabled, buttonType, loading)};
   ${loading && loadingStyles};
 
-  ${!!textColor && !disabled && `
+  ${!!textColor &&
+    !disabled &&
+    `
     color: ${textColor};
     fill: ${textColor};
-  `}
+  `};
 `;
 
 export const ButtonBase = styled.button(baseButtonStyles);
@@ -148,14 +155,20 @@ export const ButtonContents = styled.div`
 
   ${({ loading, hasIcon }) => {
     if (loading && hasIcon) {
-      return css`transform: translateX(-30px);`;
+      return css`
+        transform: translateX(-30px);
+      `;
     }
 
     if (loading && !hasIcon) {
-      return css`transform: translateX(-15px);`;
+      return css`
+        transform: translateX(-15px);
+      `;
     }
 
-    return css`transform: translateX(0);`;
+    return css`
+      transform: translateX(0);
+    `;
   }};
 
   & > svg {

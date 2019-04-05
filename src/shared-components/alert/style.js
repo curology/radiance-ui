@@ -21,24 +21,24 @@ const fadeInMobile = keyframes`
 `;
 
 const successAlertStyles = css`
-  background-color: ${COLORS.statusGreenBackground};
-  border-color: ${COLORS.statusGreenBorder};
-  color: ${COLORS.statusGreen};
-  fill: ${COLORS.statusGreen};
+  background-color: ${COLORS.successBackground};
+  border-color: ${COLORS.successBorder};
+  color: ${COLORS.success};
+  fill: ${COLORS.success};
 `;
 
 const errorAlertStyles = css`
-  background-color: ${COLORS.statusRedBackground};
-  border-color: ${COLORS.statusRedBorder};
-  color: ${COLORS.statusRed};
-  fill: ${COLORS.statusRed};
+  background-color: ${COLORS.errorBackground};
+  border-color: ${COLORS.errorBorder};
+  color: ${COLORS.error};
+  fill: ${COLORS.error};
 `;
 
 const defaultAlertStyles = css`
-  background-color: ${COLORS.statusGreyBackground};
-  border-color: ${COLORS.statusGreyBorder};
-  color: ${COLORS.statusGrey};
-  fill: ${COLORS.statusGrey};
+  background-color: ${COLORS.defaultBackground};
+  border-color: ${COLORS.defaultBorder};
+  color: ${COLORS.default};
+  fill: ${COLORS.default};
 `;
 
 export const AlertContainer = styled.div`
@@ -61,7 +61,7 @@ export const AlertContainer = styled.div`
   transition: ${ANIMATION.defaultTiming};
   width: 327px;
 
-  ${(props => {
+  ${props => {
     switch (props.alertType) {
       case 'danger':
         return errorAlertStyles;
@@ -70,15 +70,13 @@ export const AlertContainer = styled.div`
       default:
         return defaultAlertStyles;
     }
-  })}
-
-  ${MEDIA_QUERIES.lgUp} {
+  }} ${MEDIA_QUERIES.lgUp} {
     animation: ${fadeInDesktop} ${ANIMATION.defaultTiming} 1;
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
     margin-bottom: ${SPACING.small};
     padding: ${SPACING.xsmall} 0px;
     transform: ${props =>
-    props.exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
+      props.exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
   }
 `;
 

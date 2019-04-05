@@ -30,7 +30,7 @@ export const dropdownInputStyle = ({ textAlign }) => css`
   border: 1px solid ${COLORS.border};
   border-radius: 0;
 
-  color: ${COLORS.purple80};
+  color: ${COLORS.purple85};
   line-height: ${SPACING.xlarge};
   overflow: hidden;
   text-overflow: ellipsis;
@@ -111,7 +111,7 @@ export const DropdownOptionsContainer = styled.ul`
 `;
 
 export const DropdownOption = styled.li`
-  color: ${COLORS.purple80};
+  color: ${COLORS.purple85};
   min-height: ${SPACING.xlarge};
 
   background-color: ${COLORS.white};
@@ -119,7 +119,7 @@ export const DropdownOption = styled.li`
   padding: 18px ${SPACING.small} 14px ${SPACING.small};
 
   &:hover {
-    background-color: ${COLORS.statusPurpleBackground};
+    background-color: ${COLORS.infoBackground};
   }
 
   ${({ selected }) =>
