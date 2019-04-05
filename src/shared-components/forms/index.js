@@ -1,58 +1,65 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { FieldContainer, InputContainer, Textarea, Input } from './style';
+import HelperText from './helperText';
+import { ErrorItem, HintItem } from './helperText/style';
 import Typography from '../typography';
-import HelperText, { ErrorItem, HintItem } from './helperText';
-import { FormContainer, InputContainer } from './style';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 
-const FormSection = ({
-  children,
-  displayValidation,
-  errorMessage,
-  isFocused,
-  hint,
-  isValid,
-  label,
-  labelFor,
-}) => {
-  const htmlFor = labelFor || label;
-  const shouldRenderError = !!(errorMessage && !isValid && displayValidation);
-  const shouldRenderHint = !!(hint && isFocused);
-  return (
-    <FormContainer>
-      {!!label && (
-        <Typography.Label htmlFor={htmlFor}>{label}</Typography.Label>
-      )}
+class Field extends React.Component {
+  static propTypes = {
+    children: PropTypes.node,
+    hintMessage: PropTypes.string,
+    errorMessage: PropTypes.string,
+    isValid: PropTypes.bool,
+    label: PropTypes.string,
+    labelFor: PropTypes.string,
+  };
 
-      <InputContainer shouldRenderError={shouldRenderError}>
-        {children}
-        <ErrorIcon />
-      </InputContainer>
+  static defaultProps = {
+    hintMessage: '',
+    errorMessage: '',
+    isValid: true,
+    label: '',
+  };
 
-      <HelperText>
-        {shouldRenderError && <ErrorItem key="error">{errorMessage}</ErrorItem>}
-        {shouldRenderHint && <HintItem key="hint">{hint}</HintItem>}
-      </HelperText>
-    </FormContainer>
-  );
-};
+  static Textarea = Textarea;
 
-FormSection.defaultProps = {
-  isValid: true,
-  displayValidation: true,
-};
+  static Input = Input;
 
-FormSection.propTypes = {
-  children: PropTypes.node,
-  displayValidation: PropTypes.bool,
-  errorMessage: PropTypes.string,
-  isValid: PropTypes.bool,
-  label: PropTypes.string,
-  labelFor: PropTypes.string,
-  isFocused: PropTypes.bool,
-  hint: PropTypes.string,
-};
+  render() {
+    const {
+      label,
+      labelFor,
+      errorMessage,
+      isValid,
+      hintMessage,
+      children,
+    } = this.props;
 
-export { baseInputStyles, inputStyles, Textarea } from './style';
-export default FormSection;
+    const htmlFor = labelFor || label;
+    const showError = !!(errorMessage && !isValid);
+
+    return (
+      <FieldContainer>
+        {!!label && (
+          <Typography.Label htmlFor={htmlFor}>{label}</Typography.Label>
+        )}
+
+        <InputContainer showError={showError}>
+          <ErrorIcon />
+
+          {children}
+
+          <HelperText>
+            {!!hintMessage && <HintItem key="hint">{hintMessage}</HintItem>}
+            {showError && <ErrorItem key="error">{errorMessage}</ErrorItem>}
+          </HelperText>
+        </InputContainer>
+      </FieldContainer>
+    );
+  }
+}
+
+export default Field;

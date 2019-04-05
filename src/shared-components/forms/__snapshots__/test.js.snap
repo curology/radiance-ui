@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FormSection /> UI Snapshot renders with label and labelFor 1`] = `
+exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
 .emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9,7 +9,7 @@ exports[`<FormSection /> UI Snapshot renders with label and labelFor 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .emotion-0 {
@@ -18,11 +18,11 @@ exports[`<FormSection /> UI Snapshot renders with label and labelFor 1`] = `
   line-height: 1.67;
 }
 
-.emotion-2 svg {
+.emotion-4 svg {
   display: none;
 }
 
-.emotion-4 {
+.emotion-2 {
   list-style-type: none;
   margin: 8px 0;
   min-height: 23px;
@@ -38,17 +38,17 @@ exports[`<FormSection /> UI Snapshot renders with label and labelFor 1`] = `
     Test Label
   </label>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-4 emotion-5"
   >
     <svg />
+    <ul
+      className="emotion-2 emotion-3"
+    />
   </div>
-  <ul
-    className="emotion-4 emotion-5"
-  />
 </div>
 `;
 
-exports[`<FormSection /> UI Snapshot renders with label prop 1`] = `
+exports[`<Field /> UI Snapshot renders with label prop 1`] = `
 .emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -57,7 +57,7 @@ exports[`<FormSection /> UI Snapshot renders with label prop 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .emotion-0 {
@@ -66,11 +66,11 @@ exports[`<FormSection /> UI Snapshot renders with label prop 1`] = `
   line-height: 1.67;
 }
 
-.emotion-2 svg {
+.emotion-4 svg {
   display: none;
 }
 
-.emotion-4 {
+.emotion-2 {
   list-style-type: none;
   margin: 8px 0;
   min-height: 23px;
@@ -86,12 +86,12 @@ exports[`<FormSection /> UI Snapshot renders with label prop 1`] = `
     Test Label
   </label>
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-4 emotion-5"
   >
     <svg />
+    <ul
+      className="emotion-2 emotion-3"
+    />
   </div>
-  <ul
-    className="emotion-4 emotion-5"
-  />
 </div>
 `;

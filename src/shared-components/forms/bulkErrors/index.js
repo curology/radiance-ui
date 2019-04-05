@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import HelperText, { ErrorItem } from '../helperText';
+import HelperText from '../helperText';
+import { ErrorItem } from '../helperText/style';
 
 function formatError(error) {
   return Array.isArray(error) ? error.join(', ') : error;

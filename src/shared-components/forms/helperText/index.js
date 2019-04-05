@@ -24,6 +24,6 @@ HelperText.propTypes = {
   children: PropTypes.node,
 };
 
-export { ErrorItem, HintItem } from './style';
-
 export default HelperText;
+
+export { ErrorItem, HintItem } from './style';

@@ -2,18 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
-import FormSectionReadme from 'docs/forms/formSection.md';
-import TextareaReadme from 'docs/forms/textarea.md';
+import FieldReadme from 'docs/forms/field.md';
 import BulkErrorsReadme from 'docs/forms/bulkErrors.md';
-import {
-  Typography,
-  FormSection,
-  inputStyles,
-  baseInputStyles,
-  BulkErrors,
-  Textarea,
-} from 'src/shared-components';
+import { Typography, BulkErrors, Field } from 'src/shared-components';
+
+import InputWithValidation from './inputExample';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -25,84 +20,43 @@ const FormContainer = styled.div`
 `;
 
 const stories = storiesOf('Forms', module);
+stories.addDecorator(withKnobs);
 
 stories.add(
-  'FormSection',
-  withDocs(FormSectionReadme, () => {
-    class InputWithValidation extends React.Component {
-      state = {
-        isValid: true,
-        value: '',
-      };
-
-      onChange = event => {
-        const { value } = event.target;
-        this.setState({
-          isValid: this.validate(value),
-          value,
-        });
-      };
-
-      validate = value => value.length >= 6;
-
-      render() {
-        const { isValid, value } = this.state;
-        const css = inputStyles(!isValid, 'focusSecondary');
-
-        return (
-          <FormSection
-            isValid={isValid}
-            label="Example with Validation"
-            labelFor="example"
-            errorMessage="Must be 6 characters or longer"
-          >
-            <input
-              css={css}
-              id="example"
-              type="text"
-              value={value}
-              onChange={this.onChange}
-            />
-          </FormSection>
-        );
-      }
-    }
-
-    return (
-      <MainContainer>
-        <FormContainer>
-          <InputWithValidation />
-        </FormContainer>
-
-        <FormContainer>
-          <FormSection
-            label="Example with a Hint"
-            labelFor="example-hint"
-            hint="This is a Hint message"
-            isFocused
-          >
-            <input type="text" id="example-hint" css={baseInputStyles} />
-          </FormSection>
-        </FormContainer>
-      </MainContainer>
-    );
-  })
-);
-
-stories.add(
-  'Textarea',
-  withDocs(TextareaReadme, () => (
+  'Field',
+  withDocs(FieldReadme, () => (
     <MainContainer>
-      <Typography.Title>Textarea:</Typography.Title>
+      <Typography.Heading>Examples:</Typography.Heading>
       <FormContainer>
-        <FormSection
-          label="Example Textarea"
-          labelFor="example-textarea"
-          hint="This is a Hint message"
-          isFocused
+        <InputWithValidation />
+      </FormContainer>
+
+      <FormContainer>
+        <Field
+          label="Textarea - no hint - no validation"
+          labelFor="textarea-id"
         >
-          <Textarea id="example-textarea" />
-        </FormSection>
+          <Field.Textarea id="textarea-id" />
+        </Field>
+      </FormContainer>
+
+      <FormContainer>
+        <Field label="Input - disabled">
+          <Field.Input disabled />
+        </Field>
+      </FormContainer>
+
+      <Typography.Heading>With Knobs:</Typography.Heading>
+      <FormContainer>
+        <Field
+          labelFor="input-id"
+          label={text('label', 'Input Label')}
+          errorMessage={text('errorMessage', 'Error Message')}
+          isValid={boolean('isValid', true)}
+          hintMessage={text('hintMessage', 'Hint Message')}
+        >
+          <Field.Input id="input-id" />
+        </Field>
       </FormContainer>
     </MainContainer>
   ))
@@ -119,7 +73,7 @@ stories.add(
       <MainContainer>
         <Typography.Title>Bulk Errors:</Typography.Title>
         <FormContainer>
-          <input type="text" css={baseInputStyles} />
+          <Field.Input type="text" />
           <BulkErrors errors={errors} />
         </FormContainer>
       </MainContainer>
