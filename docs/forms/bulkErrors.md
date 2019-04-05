@@ -6,11 +6,13 @@ import { BulkErrors, Field } from 'radiance-ui';
     
 const errors = {
   required: 'This field is required',
-  maxLenght: 'Must be at least 8 characters',
+  maxLength: 'Must be at least 8 characters',
 };
 
-<Field.Input type="text" />
-<BulkErrors errors={errors} />
+<div>
+  <Field.Input type="text" />
+  <BulkErrors errors={errors} />
+</div>
 ```
 
 <!-- STORY -->
