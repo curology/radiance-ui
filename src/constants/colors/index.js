@@ -12,9 +12,7 @@ export const brandColors = {
   // Primary 1
   purple100: '#332e54',
   purple85: '#524D6E',
-  purple80: '#5C5876',
   purple70: DEFAULT,
-  purple60: '#858298',
   purple30: '#c3c0cd',
   purple15: DEFAULT_BORDER,
   purple10: DEFAULT_BACKGROUND,
@@ -60,8 +58,8 @@ export const legacyColors = {
   orange: '#fc7b65',
   teal: '#d5e9e5',
   yellowLight: '#f4f2b0',
-  purple80: brandColors.purple80,
-  purple60: brandColors.purple60,
+  purple80: '#5C5876',
+  purple60: '#858298',
 };
 
 export const colorAliases = {
@@ -153,14 +151,15 @@ export const guideColors = {
 
 const colorsCompilation = {
   ...brandColors,
+  ...legacyColors,
   ...colorAliases,
   ...postcardColors,
   ...guideColors,
 };
 
 const deprecatedProperties = {
-  purple80: 'purple80 will be deprecated in v2. Use purple85 instead',
-  purple60: 'purple60 will be deprecated in v2. Use purple70 instead',
+  purple80: 'purple80 is deprecated. Use purple85 instead',
+  purple60: 'purple60 is deprecated. Use purple70 instead',
 };
 
 export default withDeprecationWarning(colorsCompilation, deprecatedProperties);

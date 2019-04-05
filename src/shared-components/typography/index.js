@@ -33,7 +33,7 @@ export const baseBodyStyles = `
 `;
 
 const bodyStyle = css`
-  ${baseBodyStyles}
+  ${baseBodyStyles};
 `;
 
 const captionStyle = css`
@@ -44,7 +44,7 @@ const captionStyle = css`
 
 const errorStyle = css`
   ${captionStyle};
-  color: ${COLORS.accent};
+  color: ${COLORS.error};
 `;
 
 const successStyle = css`
@@ -80,7 +80,7 @@ const linkStyle = css`
   }
 `;
 
-export const style =  {
+export const style = {
   display: displayStyle,
   heading: headingStyle,
   title: titleStyle,
@@ -122,10 +122,10 @@ const Typography = {
 };
 
 const deprecatedProperties = {
-  LinkTag: 'LinkTag will be deprecated in v2. Use Link instead',
-  ButtonText: 'ButtonText will be deprecated in v2. Use Button instead',
-  SuccessText: 'SuccessText will be deprecated in v2. Use Success instead',
-  ErrorText: 'ErrorText will be deprecated in v2. Use Error instead',
+  LinkTag: 'LinkTag is deprecated. Use Link instead',
+  ButtonText: 'ButtonText is deprecated. Use Button instead',
+  SuccessText: 'SuccessText is deprecated. Use Success instead',
+  ErrorText: 'ErrorText is deprecated. Use Error instead',
 };
 
 export default withDeprecationWarning(Typography, deprecatedProperties);
