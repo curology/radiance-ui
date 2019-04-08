@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 
 import CameraIcon from '../../../../svgs/icons/camera-icon.svg';
@@ -24,11 +24,13 @@ describe('<RoundButton />', () => {
   describe('onClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const button = shallow(
+      const wrapper = mount(
         <RoundButton onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>
       );
+
+      const button = wrapper.find('button');
 
       button.simulate('click');
       expect(spy).toHaveBeenCalled();
@@ -36,11 +38,13 @@ describe('<RoundButton />', () => {
 
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
-      const button = shallow(
+      const wrapper = mount(
         <RoundButton disabled onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>
       );
+
+      const button = wrapper.find('button');
 
       button.simulate('click');
       expect(spy).not.toHaveBeenCalled();
@@ -48,15 +52,16 @@ describe('<RoundButton />', () => {
 
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
-      const button = shallow(
+      const wrapper = mount(
         <RoundButton loading onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>
       );
+
+      const button = wrapper.find('button');
 
       button.simulate('click');
       expect(spy).not.toHaveBeenCalled();
     });
   });
 });
-
