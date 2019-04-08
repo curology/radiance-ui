@@ -1,5 +1,6 @@
 {
   "extends": "curology",
+  "plugins": ["emotion"],
   "globals": {
     "document": false
   },

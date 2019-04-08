@@ -5,8 +5,7 @@ import styled from '@emotion/styled';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 import FieldReadme from 'docs/forms/field.md';
-import BulkErrorsReadme from 'docs/forms/bulkErrors.md';
-import { Typography, BulkErrors, Field } from 'src/shared-components';
+import { Typography, Field } from 'src/shared-components';
 
 import InputWithValidation from './inputExample';
 
@@ -41,9 +40,7 @@ stories.add(
       </FormContainer>
 
       <FormContainer>
-        <Field label="Input - disabled">
-          <Field.Input disabled />
-        </Field>
+        <Field.Input placeholder="sadasdsd" />
       </FormContainer>
 
       <Typography.Heading>With Knobs:</Typography.Heading>
@@ -51,7 +48,6 @@ stories.add(
         <Field
           labelFor="input-id"
           label={text('label', 'Input Label')}
-          errorMessage={text('errorMessage', 'Error Message')}
           isValid={boolean('isValid', true)}
           hintMessage={text('hintMessage', 'Hint Message')}
         >
@@ -62,21 +58,21 @@ stories.add(
   ))
 );
 
-stories.add(
-  'BulkErrors',
-  withDocs(BulkErrorsReadme, () => {
-    const errors = {
-      required: 'This field is required',
-      maxLenght: 'Must be at least 8 characters',
-    };
-    return (
-      <MainContainer>
-        <Typography.Title>Bulk Errors:</Typography.Title>
-        <FormContainer>
-          <Field.Input type="text" />
-          <BulkErrors errors={errors} />
-        </FormContainer>
-      </MainContainer>
-    );
-  })
-);
+// stories.add(
+//   'BulkErrors',
+//   withDocs(BulkErrorsReadme, () => {
+//     const errors = {
+//       required: 'This field is required',
+//       maxLenght: 'Must be at least 8 characters',
+//     };
+//     return (
+//       <MainContainer>
+//         <Typography.Title>Bulk Errors:</Typography.Title>
+//         <FormContainer>
+//           <Field.Input type="text" />
+//           <BulkErrors errors={errors} />
+//         </FormContainer>
+//       </MainContainer>
+//     );
+//   })
+// );

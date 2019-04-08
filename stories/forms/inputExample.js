@@ -4,29 +4,28 @@ import { Field } from 'src/shared-components';
 
 class InputWithValidation extends React.Component {
   state = {
-    isValid: true,
+    errors: {},
     value: '',
   };
 
   onChange = event => {
     const { value } = event.target;
     this.setState({
-      isValid: this.validate(value),
+      errors: this.validate(value),
       value,
     });
   };
 
-  validate = value => value.length <= 3;
+  validate = value => (value.length <= 3 ? {} : { maxLenght: 'MAXIMUM REQU' });
 
   render() {
-    const { isValid, value } = this.state;
+    const { value, errors } = this.state;
 
     return (
       <Field
         label="Input with Hint and Validation"
         labelFor="input-validation"
-        errorMessage="Must be less than 3 characters"
-        isValid={isValid}
+        errors={errors}
         hintMessage="This hint appears on focus"
       >
         <Field.Input

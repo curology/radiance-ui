@@ -114,5 +114,5 @@ export const InputContainer = styled.div`
     display: none;
   }
 
-  ${({ showError }) => showError && errorStyles};
+  ${({ showErrors }) => showErrors && errorStyles};
 `;

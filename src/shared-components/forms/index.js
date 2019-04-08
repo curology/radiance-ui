@@ -17,18 +17,21 @@ import HelperTransition from './helperTransition';
 
 class Field extends React.Component {
   static propTypes = {
-    children: PropTypes.node,
+    children: PropTypes.element.isRequired,
+    errors: PropTypes.objectOf(
+      PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+      ])
+    ),
     hintMessage: PropTypes.string,
-    errorMessage: PropTypes.string,
-    isValid: PropTypes.bool,
     label: PropTypes.string,
     labelFor: PropTypes.string,
   };
 
   static defaultProps = {
+    errors: {},
     hintMessage: '',
-    errorMessage: '',
-    isValid: true,
     label: '',
   };
 
@@ -36,18 +39,15 @@ class Field extends React.Component {
 
   static Input = Input;
 
+  formatError = errorValue =>
+    Array.isArray(errorValue) ? errorValue.join(', ') : errorValue;
+
   render() {
-    const {
-      label,
-      labelFor,
-      errorMessage,
-      isValid,
-      hintMessage,
-      children,
-    } = this.props;
+    const { children, errors, hintMessage, label, labelFor } = this.props;
 
     const htmlFor = labelFor || label;
-    const showError = !!(errorMessage && !isValid);
+    const errorKeys = Object.keys(errors);
+    const showErrors = errorKeys.length > 0;
 
     return (
       <FieldContainer>
@@ -55,22 +55,23 @@ class Field extends React.Component {
           <Typography.Label htmlFor={htmlFor}>{label}</Typography.Label>
         )}
 
-        <InputContainer showError={showError}>
+        <InputContainer showErrors={showErrors}>
           <ErrorIcon />
 
           {children}
 
           <TransitionGroup component={HelperList}>
             {!!hintMessage && (
-              <HelperTransition>
-                <HintItem key="hint">{hintMessage}</HintItem>
+              <HelperTransition key="hint-message">
+                <HintItem>{hintMessage}</HintItem>
               </HelperTransition>
             )}
-            {showError && (
-              <HelperTransition>
-                <ErrorItem key="error">{errorMessage}</ErrorItem>
-              </HelperTransition>
-            )}
+            {showErrors &&
+              errorKeys.map(key => (
+                <HelperTransition key={key}>
+                  <ErrorItem>{this.formatError(errors[key])}</ErrorItem>
+                </HelperTransition>
+              ))}
           </TransitionGroup>
         </InputContainer>
       </FieldContainer>
