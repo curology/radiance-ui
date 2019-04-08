@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v2.0.17
+- RoundButton - move click handler and adjust styles ([PR #83](https://github.com/PocketDerm/radiance-ui/pull/83))
+- Refactor button stories ([PR #83](https://github.com/PocketDerm/radiance-ui/pull/83))
+
 ## v2.0.16
 - Adjust and Refactor Colors ([PR #84](https://github.com/PocketDerm/radiance-ui/pull/84)))
 
