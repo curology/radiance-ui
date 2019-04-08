@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.16
+- Adjust and Refactor Colors ([PR #84](https://github.com/PocketDerm/radiance-ui/pull/84)))
+
 ## v2.0.15
 - Refactor Loading Spinner HTML ([PR #80](https://github.com/PocketDerm/radiance-ui/pull/80)))
 
