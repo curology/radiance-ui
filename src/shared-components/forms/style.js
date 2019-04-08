@@ -4,11 +4,17 @@ import { css } from '@emotion/core';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
 
-export const ErrorItem = styled.div`
+export const HelperList = styled.ul`
+  list-style-type: none;
+  margin: 8px 0;
+  min-height: 23px;
+`;
+
+export const ErrorItem = styled.li`
   ${TYPOGRAPHY_STYLE.error};
 `;
 
-export const HintItem = styled.div`
+export const HintItem = styled.li`
   ${TYPOGRAPHY_STYLE.caption};
 `;
 
@@ -32,7 +38,8 @@ const inputStyles = css`
 
   ~ ul ${HintItem} {
     transition: opacity ${ANIMATION.defaultTiming};
-    opacity: 0;
+    max-height: 0 !important;
+    opacity: 0 !important;
   }
 
   &:active,
@@ -42,7 +49,8 @@ const inputStyles = css`
     box-shadow: ${BOX_SHADOWS.focusSecondary};
 
     ~ ul ${HintItem} {
-      opacity: 1;
+      max-height: 50px !important;
+      opacity: 1 !important;
     }
   }
 
@@ -107,42 +115,4 @@ export const InputContainer = styled.div`
   }
 
   ${({ showError }) => showError && errorStyles};
-`;
-
-export const List = styled.ul`
-  list-style-type: none;
-  margin: 8px 0;
-  /* min-height: 23px; */
-`;
-
-export const CenteredList = styled(List)`
-  text-align: center;
-`;
-
-export const transitionStyles = css`
-  .expand-enter {
-    opacity: 0;
-    max-height: 0;
-  }
-
-  .expand-enter.expand-enter-active {
-    opacity: 1;
-    max-height: 50px;
-    transition-duration: ${ANIMATION.defaultTiming};
-    transition-property: max-height, opacity;
-    transition-timing-function: ease-in;
-  }
-
-  .expand-exit {
-    opacity: 1;
-    max-height: 50px;
-  }
-
-  .expand-exit.expand-exit-active {
-    opacity: 0;
-    max-height: 0;
-    transition-duration: ${ANIMATION.defaultTiming};
-    transition-property: max-height, opacity;
-    transition-timing-function: ease-in;
-  }
 `;

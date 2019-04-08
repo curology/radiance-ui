@@ -1,21 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Global } from '@emotion/core';
+import { TransitionGroup } from 'react-transition-group';
 
 import {
   FieldContainer,
   InputContainer,
   Textarea,
   Input,
-  transitionStyles,
   ErrorItem,
   HintItem,
+  HelperList,
 } from './style';
-// import HelperText from './helperText';
-// import { ErrorItem, HintItem } from './helperText/style';
 import Typography from '../typography';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
+import HelperTransition from './helperTransition';
 
 class Field extends React.Component {
   static propTypes = {
@@ -53,7 +51,6 @@ class Field extends React.Component {
 
     return (
       <FieldContainer>
-        <Global styles={transitionStyles} />
         {!!label && (
           <Typography.Label htmlFor={htmlFor}>{label}</Typography.Label>
         )}
@@ -63,16 +60,16 @@ class Field extends React.Component {
 
           {children}
 
-          <TransitionGroup component="ul">
+          <TransitionGroup component={HelperList}>
             {!!hintMessage && (
-              <CSSTransition classNames="expand" timeout={350}>
+              <HelperTransition>
                 <HintItem key="hint">{hintMessage}</HintItem>
-              </CSSTransition>
+              </HelperTransition>
             )}
             {showError && (
-              <CSSTransition in appear classNames="expand" timeout={350}>
+              <HelperTransition>
                 <ErrorItem key="error">{errorMessage}</ErrorItem>
-              </CSSTransition>
+              </HelperTransition>
             )}
           </TransitionGroup>
         </InputContainer>
