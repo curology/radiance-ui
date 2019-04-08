@@ -37,7 +37,7 @@ Documentation around usage, you can also see it with knobs at: [https://radiance
 
 ## Publishing to NPM
 You'll need access to publish to NPM so this part only applies to a few
-people (mostly within the Curology organization).
+people (mostly within the Curology organization). Once approved, merge your PR(s) into master and follow these steps:
 
 1. Pull latest master and check out the master branch.
 2. Commit an update to the CHANGELOG.md file with details.
