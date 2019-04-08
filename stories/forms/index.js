@@ -2,9 +2,9 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 
-import FieldReadme from 'docs/forms/field.md';
+import FieldReadme from 'docs/field.md';
 import { Typography, Field } from 'src/shared-components';
 
 import InputWithValidation from './inputExample';
@@ -20,6 +20,12 @@ const FormContainer = styled.div`
 
 const stories = storiesOf('Forms', module);
 stories.addDecorator(withKnobs);
+
+const errorOptions = {
+  'No errors': {},
+  'One error': { e1: 'Error message number 1' },
+  'Two errors': { e1: 'Error message number 1', e2: 'Error message number 2' },
+};
 
 stories.add(
   'Field',
@@ -40,7 +46,13 @@ stories.add(
       </FormContainer>
 
       <FormContainer>
-        <Field.Input placeholder="sadasdsd" />
+        <Field.Input placeholder="You can use Field.Input directly" />
+      </FormContainer>
+
+      <FormContainer>
+        <Field label="Input - disabled">
+          <Field.Input disabled />
+        </Field>
       </FormContainer>
 
       <Typography.Heading>With Knobs:</Typography.Heading>
@@ -48,8 +60,8 @@ stories.add(
         <Field
           labelFor="input-id"
           label={text('label', 'Input Label')}
-          isValid={boolean('isValid', true)}
           hintMessage={text('hintMessage', 'Hint Message')}
+          errors={select('errors', errorOptions, {})}
         >
           <Field.Input id="input-id" />
         </Field>
@@ -57,22 +69,3 @@ stories.add(
     </MainContainer>
   ))
 );
-
-// stories.add(
-//   'BulkErrors',
-//   withDocs(BulkErrorsReadme, () => {
-//     const errors = {
-//       required: 'This field is required',
-//       maxLenght: 'Must be at least 8 characters',
-//     };
-//     return (
-//       <MainContainer>
-//         <Typography.Title>Bulk Errors:</Typography.Title>
-//         <FormContainer>
-//           <Field.Input type="text" />
-//           <BulkErrors errors={errors} />
-//         </FormContainer>
-//       </MainContainer>
-//     );
-//   })
-// );

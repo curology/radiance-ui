@@ -2,34 +2,46 @@
 ### Usage
 
 ```jsx
-import { Field } from 'src/shared-components';
+import { Field } from 'radiance-ui';
 
 // Definition
 class InputWithValidation extends React.Component {
   state = {
-    isValid: true,
+    errors: {},
     value: '',
   };
 
   onChange = event => {
     const { value } = event.target;
     this.setState({
-      isValid: this.validate(value),
+      errors: this.validate(value),
       value,
     });
   };
 
-  validate = value => value.length <= 3;
+  validate = value => {
+    const requiredError =
+      value.length === 0 ? { required: 'This field is required' } : {};
+
+    const maxLengthError =
+      value.length > 3 ? { maxLength: 'Must be 3 or less characters' } : {};
+
+    const numberRegExp = /\d/;
+    const numberRequiredError = numberRegExp.test(value)
+      ? {}
+      : { numberRequired: 'Must contain at least 1 number' };
+    const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
+    return val;
+  };
 
   render() {
-    const { isValid, value } = this.state;
+    const { value, errors } = this.state;
 
     return (
       <Field
         label="Input with Hint and Validation"
         labelFor="input-validation"
-        errorMessage="Must be less than 3 characters"
-        isValid={isValid}
+        errors={errors}
         hintMessage="This hint appears on focus"
       >
         <Field.Input
@@ -53,6 +65,9 @@ class InputWithValidation extends React.Component {
     <Field.Textarea id="textarea-id" />
   </Field>
   
+
+  <Field.Input placeholder="You can use Field.Input directly" />
+
   <Field label="Input - disabled">
     <Field.Input disabled />
   </Field>
@@ -64,13 +79,11 @@ class InputWithValidation extends React.Component {
 ### Proptypes
 | prop                | propType    | required | default    | description                                                                                                                  
 |---------------------|-------------|----------|------------|------------------------------------------------------------------------------------------------------------------------------|
-| children            | node        | yes      | -          | must be either `Field.Input` or `Field.Textarea` |
-| errorMessage        | string      | no       | -          | the message to display when the input is invalid |
+| children            | element     | yes      | -          | must be either `Field.Input` or `Field.Textarea` |
+| errors              | object      | no       | -          | object of key and string message pair. It also accepts an array of string as pair value |
 | hintMessage         | string      | no       | -          | the hint to display below the field. It activates on focus |
-| isValid             | bool        | no       | -          | controls the valid state of the input |
 | label               | string      | no       | -          | the field label |
 | labelFor            | string      | no       | -          | must match the children id html attribute |
 
 ### Notes
-If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly.
-
+If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` without the `Field` wrapper.
