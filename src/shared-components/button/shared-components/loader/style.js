@@ -19,7 +19,7 @@ const accentLoadingStyles = css`
 `;
 
 const quaternaryLoadingStyles = css`
-  background-color: ${COLORS.purple60};
+  background-color: ${COLORS.purple70};
 `;
 
 const ButtonLoader = styled.div`
@@ -36,25 +36,28 @@ const ButtonLoader = styled.div`
 
   & span {
     ${({ disabled, buttonType }) => {
-    if (disabled) {
-      return '';
-    }
+      if (disabled) {
+        return '';
+      }
 
-    switch (buttonType) {
-      case 'secondary':
-        return accentLoadingStyles;
-      case 'tertiary':
-        return accentLoadingStyles;
-      case 'quaternary':
-        return quaternaryLoadingStyles;
-      default:
-        return primaryLoadingStyles;
-    }
-  }};
+      switch (buttonType) {
+        case 'secondary':
+          return accentLoadingStyles;
+        case 'tertiary':
+          return accentLoadingStyles;
+        case 'quaternary':
+          return quaternaryLoadingStyles;
+        default:
+          return primaryLoadingStyles;
+      }
+    }};
 
-    ${({ textColor, disabled }) => !!textColor && !disabled && `
+    ${({ textColor, disabled }) =>
+      !!textColor &&
+      !disabled &&
+      `
       background-color: ${textColor};
-    `}
+    `};
 
     border-radius: 50%;
     display: inline-block;

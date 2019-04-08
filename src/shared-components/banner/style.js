@@ -17,20 +17,20 @@ const bannerStyles = styleObj => css`
 `;
 
 const errorStyle = {
-  backgroundColor: COLORS.statusRedBackground,
-  borderColor: COLORS.statusRedBorder,
-  color: COLORS.statusRed,
-}
+  backgroundColor: COLORS.errorBackground,
+  borderColor: COLORS.errorBorder,
+  color: COLORS.error,
+};
 const successStyle = {
-  backgroundColor: COLORS.statusGreenBackground,
-  borderColor: COLORS.statusGreenBorder,
-  color: COLORS.statusGreen,
-}
+  backgroundColor: COLORS.successBackground,
+  borderColor: COLORS.successBorder,
+  color: COLORS.success,
+};
 const defaultStyle = {
-  backgroundColor: COLORS.statusGreyBackground,
-  borderColor: COLORS.statusGreyBorder,
-  color: COLORS.statusGrey,
-}
+  backgroundColor: COLORS.defaultBackground,
+  borderColor: COLORS.defaultBorder,
+  color: COLORS.default,
+};
 
 export const BannerContainer = styled.div`
   align-items: flex-start;
@@ -46,7 +46,7 @@ export const BannerContainer = styled.div`
   position: relative;
   text-align: left;
 
-  ${(props => {
+  ${props => {
     switch (props.bannerType) {
       case 'danger':
         return bannerStyles(errorStyle);
@@ -55,7 +55,7 @@ export const BannerContainer = styled.div`
       default:
         return bannerStyles(defaultStyle);
     }
-  })}
+  }};
 
   ${MEDIA_QUERIES.lgUp} {
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};

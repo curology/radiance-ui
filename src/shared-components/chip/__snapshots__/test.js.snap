@@ -18,16 +18,16 @@ exports[`<Chip /> UI snapshots renders the correct css and text 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   min-width: 2rem;
-  background-color: #eaf2eb;
-  border-color: #DAECDC;
+  background-color: #EAF1EB;
+  border-color: #DFE9E0;
 }
 
 .emotion-2 .emotion-1 {
-  color: #317f3b;
+  color: #2B6E33;
 }
 
 .emotion-0 {
-  color: #5C5876;
+  color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;

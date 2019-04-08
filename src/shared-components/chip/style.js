@@ -17,34 +17,34 @@ export const ChipText = styled.span`
 /* eslint-enable */
 
 const closedStyle = css`
-  background-color: ${COLORS.statusGreyBackground};
-  border-color: ${COLORS.statusGreyBorder};
+  background-color: ${COLORS.defaultBackground};
+  border-color: ${COLORS.defaultBorder};
   ${ChipText} {
-    color: ${COLORS.statusGrey};
+    color: ${COLORS.default};
   }
 `;
 
 const errorStyle = css`
-  background-color: ${COLORS.statusRedBackground};
-  border-color: ${COLORS.statusRedBorder};
+  background-color: ${COLORS.errorBackground};
+  border-color: ${COLORS.errorBorder};
   ${ChipText} {
-    color: ${COLORS.statusRed};
+    color: ${COLORS.error};
   }
 `;
 
 const pendingStyle = css`
-  background-color: ${COLORS.statusPurpleBackground};
-  border-color: ${COLORS.statusPurpleBorder};
+  background-color: ${COLORS.infoBackground};
+  border-color: ${COLORS.infoBorder};
   ${ChipText} {
-    color: ${COLORS.statusPurple};
+    color: ${COLORS.info};
   }
 `;
 
 const successStyle = css`
-  background-color: ${COLORS.statusGreenBackground};
-  border-color: ${COLORS.statusGreenBorder};
+  background-color: ${COLORS.successBackground};
+  border-color: ${COLORS.successBorder};
   ${ChipText} {
-    color: ${COLORS.statusGreen};
+    color: ${COLORS.success};
   }
 `;
 
@@ -72,4 +72,3 @@ export const ChipStyles = styled.div`
     }
   }};
 `;
-

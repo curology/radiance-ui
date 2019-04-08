@@ -2,15 +2,20 @@
  * Note: Each config is exported separately to be rendered in storybook:
  * https://github.com/PocketDerm/PocketDerm/blob/master/resources/assets/component-library/stories/colors/index.js#L5
  */
+import { withDeprecationWarning } from '../../utils';
+
+const DEFAULT = '#706D87';
+const DEFAULT_BACKGROUND = '#ededf0';
+const DEFAULT_BORDER = '#e1e0e6';
 
 export const brandColors = {
   // Primary 1
   purple100: '#332e54',
-  purple80: '#5C5876',
-  purple60: '#858298',
+  purple85: '#524D6E',
+  purple70: DEFAULT,
   purple30: '#c3c0cd',
-  purple15: '#e1e0e6',
-  purple10: '#ededf0',
+  purple15: DEFAULT_BORDER,
+  purple10: DEFAULT_BACKGROUND,
   purple4: '#f8f8fa', // Tertiary
 
   // Primary 2
@@ -27,18 +32,18 @@ export const brandColors = {
   red: '#ff5e4d',
 
   // Status
-  statusGreen: '#317f3b',
-  statusGreenBackground: '#eaf2eb',
-  statusGreenBorder: '#DAECDC',
-  statusPurple: '#a6a1e2',
-  statusPurpleBackground: '#f6f5fc',
-  statusPurpleBorder: '#EBEAF9',
-  statusRed: '#ff5e4d',
-  statusRedBackground: '#ffeeed',
-  statusRedBorder: '#FFE4E2',
-  statusGrey: '#858298',
-  statusGreyBackground: '#ededf0',
-  statusGreyBorder: '#e1e0e6',
+  statusGreen: '#2B6E33',
+  statusGreenBackground: '#EAF1EB',
+  statusGreenBorder: '#DFE9E0',
+  statusPurple: '#554CB3',
+  statusPurpleBackground: '#EEEDF7',
+  statusPurpleBorder: '#E5E3F3',
+  statusRed: '#BD200F',
+  statusRedBackground: '#F7EAE8',
+  statusRedBorder: '#F3DEDC',
+  statusGrey: DEFAULT,
+  statusGreyBackground: DEFAULT_BACKGROUND,
+  statusGreyBorder: DEFAULT_BORDER,
 
   // Misc
   black: '#000000',
@@ -53,30 +58,42 @@ export const legacyColors = {
   orange: '#fc7b65',
   teal: '#d5e9e5',
   yellowLight: '#f4f2b0',
+  purple80: '#5C5876',
+  purple60: '#858298',
 };
 
 export const colorAliases = {
   // Legacy
   purple: brandColors.purple100,
-  purpleTint1: brandColors.purple80,
-  purpleTint2: brandColors.purple60,
+  purpleTint1: brandColors.purple85,
+  purpleTint2: brandColors.purple70,
 
   // brand colors
   primary: brandColors.purple100,
-  primaryTint1: brandColors.purple80,
-  primaryTint2: brandColors.purple60,
+  primaryTint1: brandColors.purple85,
+  primaryTint2: brandColors.purple70,
   primaryTint3: brandColors.purple30,
   secondary: brandColors.lavender100,
   tertiary: brandColors.purple10,
 
   // general colors
+  success: brandColors.statusGreen,
+  successBackground: brandColors.statusGreenBackground,
+  successBorder: brandColors.statusGreenBorder,
+  info: brandColors.statusPurple,
+  infoBackground: brandColors.statusPurpleBackground,
+  infoBorder: brandColors.statusPurpleBorder,
+  error: brandColors.statusRed,
+  errorBackground: brandColors.statusRedBackground,
+  errorBorder: brandColors.statusRedBorder,
+  default: brandColors.purple70,
+  defaultBackground: brandColors.purple10,
+  defaultBorder: brandColors.purple15,
   accent: brandColors.red,
   disabled: brandColors.purple10,
   failure: brandColors.red,
-  info: legacyColors.teal,
-  success: brandColors.green,
-  warning: legacyColors.yellowLight,
   hover: brandColors.purple4,
+  warning: legacyColors.yellowLight,
 
   // ui colors
   background: brandColors.purple4,
@@ -89,7 +106,7 @@ export const colorAliases = {
   radioBorderSelected: brandColors.lavender100,
 
   // typography
-  textMuted: brandColors.purple60,
+  textMuted: brandColors.purple70,
   textGhost: brandColors.purple30,
   textDisabled: brandColors.purple30,
 
@@ -132,10 +149,17 @@ export const guideColors = {
   recommendedCleansersGuide: '#cad1b5',
 };
 
-export default Object.assign(
-  {},
-  brandColors,
-  colorAliases,
-  postcardColors,
-  guideColors
-);
+const colorsCompilation = {
+  ...brandColors,
+  ...legacyColors,
+  ...colorAliases,
+  ...postcardColors,
+  ...guideColors,
+};
+
+const deprecatedProperties = {
+  purple80: 'purple80 is deprecated. Use purple85 instead',
+  purple60: 'purple60 is deprecated. Use purple70 instead',
+};
+
+export default withDeprecationWarning(colorsCompilation, deprecatedProperties);
