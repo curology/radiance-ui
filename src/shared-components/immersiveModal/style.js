@@ -32,7 +32,8 @@ export const ModalContainer = styled.div`
 
   ${MEDIA_QUERIES.mdUp} {
     height: auto;
-    max-width: ${({maxWidth}) => (maxWidth === 'medium' ? `776px` : `${BREAKPOINTS.sm}px`)};
+    max-width: ${({ maxWidth }) =>
+      maxWidth === 'medium' ? `776px` : `${BREAKPOINTS.sm}px`};
     margin-bottom: ${SPACING.base};
     margin-top: ${SPACING.base};
   }
@@ -69,7 +70,7 @@ export const Title = styled(Typography.Title)`
 `;
 
 export const Body = styled.div`
-  color: ${COLORS.purple80};
+  color: ${COLORS.purple85};
   text-align: left;
 
   &:not(:last-child) {

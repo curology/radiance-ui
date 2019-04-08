@@ -111,10 +111,10 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   width: 327px;
-  background-color: #ffeeed;
-  border-color: #FFE4E2;
-  color: #ff5e4d;
-  fill: #ff5e4d;
+  background-color: #F7EAE8;
+  border-color: #F3DEDC;
+  color: #BD200F;
+  fill: #BD200F;
 }
 
 @media (min-width:992px) {
@@ -291,8 +291,8 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   width: 327px;
   background-color: #ededf0;
   border-color: #e1e0e6;
-  color: #858298;
-  fill: #858298;
+  color: #706D87;
+  fill: #706D87;
 }
 
 @media (min-width:992px) {
@@ -388,10 +388,10 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   width: 327px;
-  background-color: #eaf2eb;
-  border-color: #DAECDC;
-  color: #317f3b;
-  fill: #317f3b;
+  background-color: #EAF1EB;
+  border-color: #DFE9E0;
+  color: #2B6E33;
+  fill: #2B6E33;
 }
 
 @media (min-width:992px) {
