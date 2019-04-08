@@ -3,7 +3,14 @@ import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
-import { HintItem } from './helperText/style';
+
+export const ErrorItem = styled.div`
+  ${TYPOGRAPHY_STYLE.error};
+`;
+
+export const HintItem = styled.div`
+  ${TYPOGRAPHY_STYLE.caption};
+`;
 
 export const FieldContainer = styled.div`
   display: flex;
@@ -33,6 +40,7 @@ const inputStyles = css`
     outline: none;
     border-color: ${COLORS.primary};
     box-shadow: ${BOX_SHADOWS.focusSecondary};
+
     ~ ul ${HintItem} {
       opacity: 1;
     }
@@ -57,7 +65,6 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   ${inputStyles};
-  box-shadow: 0 1px 0 0 ${COLORS.tertiary};
   color: ${COLORS.primary};
   display: block;
   height: 100%;
@@ -100,4 +107,42 @@ export const InputContainer = styled.div`
   }
 
   ${({ showError }) => showError && errorStyles};
+`;
+
+export const List = styled.ul`
+  list-style-type: none;
+  margin: 8px 0;
+  /* min-height: 23px; */
+`;
+
+export const CenteredList = styled(List)`
+  text-align: center;
+`;
+
+export const transitionStyles = css`
+  .expand-enter {
+    opacity: 0;
+    max-height: 0;
+  }
+
+  .expand-enter.expand-enter-active {
+    opacity: 1;
+    max-height: 50px;
+    transition-duration: ${ANIMATION.defaultTiming};
+    transition-property: max-height, opacity;
+    transition-timing-function: ease-in;
+  }
+
+  .expand-exit {
+    opacity: 1;
+    max-height: 50px;
+  }
+
+  .expand-exit.expand-exit-active {
+    opacity: 0;
+    max-height: 0;
+    transition-duration: ${ANIMATION.defaultTiming};
+    transition-property: max-height, opacity;
+    transition-timing-function: ease-in;
+  }
 `;

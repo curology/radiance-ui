@@ -7,7 +7,7 @@ import { ANIMATION } from '../../../constants';
 export const List = styled.ul`
   list-style-type: none;
   margin: 8px 0;
-  min-height: 23px;
+  /* min-height: 23px; */
 `;
 
 export const CenteredList = styled(List)`
@@ -36,12 +36,12 @@ export const transitionStyles = css`
     transition-timing-function: ease-in;
   }
 
-  .expand-leave {
+  .expand-exit {
     opacity: 1;
     max-height: 50px;
   }
 
-  .expand-leave.expand-leave-active {
+  .expand-exit.expand-exit-active {
     opacity: 0;
     max-height: 0;
     transition-duration: ${ANIMATION.defaultTiming};
