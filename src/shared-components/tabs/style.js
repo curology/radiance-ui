@@ -1,21 +1,21 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, SPACING, ANIMATION } from '../../constants';
+import { COLORS, SPACING, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
-export const TabSection = styled.section`
+export const TabsContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-`;
-
-export const TabContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: ${SPACING.xlarge} 0 0;
+  justify-content: flex-start;
+  margin: ${SPACING.large} 0 0 0;
   position: relative;
+  width: 100%;
+
+  ${MEDIA_QUERIES.mdUp} {
+    margin: ${SPACING.xlarge} 0 0 0;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const TabItem = styled.div`

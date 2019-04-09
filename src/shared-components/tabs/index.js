@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { TabSection, TabContainer, TabItem } from './style';
+import { TabsContainer, TabItem } from './style';
 
 class Tabs extends React.Component {
   static propTypes = {
@@ -36,19 +36,17 @@ class Tabs extends React.Component {
     const { activeTabId } = this.state;
 
     return (
-      <TabSection>
-        <TabContainer>
-          {tabItems.map(tab => (
-            <TabItem
-              active={tab.id === activeTabId}
-              key={tab.id}
-              onClick={() => this.onTabClick(tab)}
-            >
-              {tab.text}
-            </TabItem>
-          ))}
-        </TabContainer>
-      </TabSection>
+      <TabsContainer>
+        {tabItems.map(tab => (
+          <TabItem
+            active={tab.id === activeTabId}
+            key={tab.id}
+            onClick={() => this.onTabClick(tab)}
+          >
+            {tab.text}
+          </TabItem>
+        ))}
+      </TabsContainer>
     );
   }
 }
