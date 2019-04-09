@@ -95,6 +95,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
 >
   <label
     className="emotion-0 emotion-1"
+    disabled={false}
     htmlFor="for-input-id"
   >
     Test Label
@@ -105,6 +106,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
     <svg />
     <input
       className="emotion-2 emotion-3"
+      disabled={false}
     />
     <ul
       className="emotion-4 emotion-5"
@@ -208,6 +210,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
 >
   <label
     className="emotion-0 emotion-1"
+    disabled={false}
     htmlFor="Test Label"
   >
     Test Label
@@ -218,6 +221,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
     <svg />
     <input
       className="emotion-2 emotion-3"
+      disabled={false}
     />
     <ul
       className="emotion-4 emotion-5"
