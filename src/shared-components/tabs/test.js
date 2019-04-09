@@ -12,16 +12,16 @@ describe('<Tabs />', () => {
         <Tabs
           activeTabId={1}
           tabItems={[
-            { id: 1, text: 'Rain Drop' },
-            { id: 2, text: 'Drop Top' },
-            { id: 3, text: 'Tab number 3' },
+            { id: 1, text: 'Tab 1' },
+            { id: 2, text: 'Tab 2' },
+            { id: 3, text: 'Tab 3' },
           ]}
         />
       );
 
-      expect(wrapper.html().indexOf('Rain Drop') > -1).toBe(true);
-      expect(wrapper.html().indexOf('Drop Top') > -1).toBe(true);
-      expect(wrapper.html().indexOf('Tab number 3') > -1).toBe(true);
+      expect(wrapper.html().indexOf('Tab 1') > -1).toBe(true);
+      expect(wrapper.html().indexOf('Tab 2') > -1).toBe(true);
+      expect(wrapper.html().indexOf('Tab 3') > -1).toBe(true);
     });
   });
 
@@ -32,9 +32,9 @@ describe('<Tabs />', () => {
         <Tabs
           activeTabId={1}
           tabItems={[
-            { id: 1, text: 'Rain Drop' },
-            { id: 2, text: 'Drop Top' },
-            { id: 3, text: 'If Seiji notices I will stop stop' },
+            { id: 1, text: 'Tab 1' },
+            { id: 2, text: 'Tab 2' },
+            { id: 3, text: 'Tab 3' },
           ]}
           onClick={spy}
         />
@@ -45,7 +45,7 @@ describe('<Tabs />', () => {
         .first()
         .simulate('click');
 
-      expect(spy).toHaveBeenCalledWith({ id: 1, text: 'Rain Drop' });
+      expect(spy).toHaveBeenCalledWith({ id: 1, text: 'Tab 1' });
     });
   });
 });

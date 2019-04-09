@@ -5,19 +5,19 @@ import { TabsContainer, TabItem } from './style';
 
 class Tabs extends React.Component {
   static propTypes = {
+    initialActiveTabId: PropTypes.number,
+    onClick: PropTypes.func,
     tabItems: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         text: PropTypes.string.isRequired,
       })
     ).isRequired,
-    onClick: PropTypes.func,
-    initialActiveTabId: PropTypes.number,
   };
 
   static defaultProps = {
-    onClick() {},
     initialActiveTabId: 1,
+    onClick() {},
   };
 
   constructor(props) {
