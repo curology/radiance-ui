@@ -13,12 +13,12 @@ const MainContainer = styled.div`
   text-align: left;
 `;
 
-const FormContainer = styled.div`
+const FieldContainer = styled.div`
   margin: 1rem 0 2rem 0;
   width: 350px;
 `;
 
-const stories = storiesOf('Forms', module);
+const stories = storiesOf('Field', module);
 stories.addDecorator(withKnobs);
 
 const errorOptions = {
@@ -28,35 +28,35 @@ const errorOptions = {
 };
 
 stories.add(
-  'Field',
+  'Usage',
   withDocs(FieldReadme, () => (
     <MainContainer>
       <Typography.Heading>Examples:</Typography.Heading>
-      <FormContainer>
+      <FieldContainer>
         <InputWithValidation />
-      </FormContainer>
+      </FieldContainer>
 
-      <FormContainer>
+      <FieldContainer>
         <Field
           label="Textarea - no hint - no validation"
           labelFor="textarea-id"
         >
           <Field.Textarea id="textarea-id" />
         </Field>
-      </FormContainer>
+      </FieldContainer>
 
-      <FormContainer>
+      <FieldContainer>
         <Field.Input placeholder="You can use Field.Input directly" />
-      </FormContainer>
+      </FieldContainer>
 
-      <FormContainer>
+      <FieldContainer>
         <Field label="Input - disabled" disabled>
           <Field.Input />
         </Field>
-      </FormContainer>
+      </FieldContainer>
 
       <Typography.Heading>With Knobs:</Typography.Heading>
-      <FormContainer>
+      <FieldContainer>
         <Field
           labelFor="input-id"
           label={text('label', 'Input Label')}
@@ -65,7 +65,7 @@ stories.add(
         >
           <Field.Input id="input-id" />
         </Field>
-      </FormContainer>
+      </FieldContainer>
     </MainContainer>
   ))
 );

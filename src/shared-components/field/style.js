@@ -6,7 +6,7 @@ import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
 
 export const HelperList = styled.ul`
   list-style-type: none;
-  margin: 8px 0;
+  margin: ${SPACING.xsmall} 0;
   min-height: 23px;
 `;
 
@@ -75,6 +75,7 @@ const inputStyles = css`
 
 export const Input = styled.input`
   ${inputStyles};
+  padding-right: ${SPACING.medium};
 `;
 
 export const Textarea = styled.textarea`
@@ -92,16 +93,8 @@ export const Textarea = styled.textarea`
 `;
 
 const errorStyles = css`
-  position: relative;
-
   svg {
-    display: block;
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    margin-top: 20px;
-    right: 16px;
-    fill: ${COLORS.statusRed};
+    opacity: 1;
   }
 
   ${Textarea}, ${Input} {
@@ -116,8 +109,17 @@ const errorStyles = css`
 `;
 
 export const InputContainer = styled.div`
+  position: relative;
+
   svg {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    right: ${SPACING.small};
+    width: 16px;
+    height: 16px;
+    fill: ${COLORS.statusRed};
+    transition: opacity ${ANIMATION.defaultTiming};
   }
 
   ${({ showErrors }) => showErrors && errorStyles};
