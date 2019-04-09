@@ -50,8 +50,8 @@ stories.add(
       </FormContainer>
 
       <FormContainer>
-        <Field label="Input - disabled">
-          <Field.Input disabled />
+        <Field label="Input - disabled" disabled>
+          <Field.Input />
         </Field>
       </FormContainer>
 

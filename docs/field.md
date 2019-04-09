@@ -68,8 +68,8 @@ class InputWithValidation extends React.Component {
 
   <Field.Input placeholder="You can use Field.Input directly" />
 
-  <Field label="Input - disabled">
-    <Field.Input disabled />
+  <Field label="Input - disabled" disabled>
+    <Field.Input />
   </Field>
 </div>
 ```
@@ -80,6 +80,7 @@ class InputWithValidation extends React.Component {
 | prop                | propType    | required | default    | description                                                                                                                  
 |---------------------|-------------|----------|------------|------------------------------------------------------------------------------------------------------------------------------|
 | children            | element     | yes      | -          | must be either `Field.Input` or `Field.Textarea` |
+| disabled            | bool        | no       | false      | change the child input to `disabled` state |
 | errors              | object      | no       | -          | object of key and string message pair. It also accepts an array of string as pair value |
 | hintMessage         | string      | no       | -          | the hint to display below the field. It activates on focus |
 | label               | string      | no       | -          | the field label |

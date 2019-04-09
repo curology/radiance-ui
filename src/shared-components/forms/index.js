@@ -4,6 +4,7 @@ import { TransitionGroup } from 'react-transition-group';
 
 import {
   FieldContainer,
+  Label,
   InputContainer,
   Textarea,
   Input,
@@ -11,13 +12,13 @@ import {
   HintItem,
   HelperList,
 } from './style';
-import Typography from '../typography';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import HelperTransition from './helperTransition';
 
 class Field extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
+    disabled: PropTypes.bool,
     errors: PropTypes.objectOf(
       PropTypes.oneOfType([
         PropTypes.string,
@@ -30,6 +31,7 @@ class Field extends React.Component {
   };
 
   static defaultProps = {
+    disabled: false,
     errors: {},
     hintMessage: '',
     label: '',
@@ -43,7 +45,14 @@ class Field extends React.Component {
     Array.isArray(errorValue) ? errorValue.join(', ') : errorValue;
 
   render() {
-    const { children, errors, hintMessage, label, labelFor } = this.props;
+    const {
+      children: inputChild,
+      disabled,
+      errors,
+      hintMessage,
+      label,
+      labelFor,
+    } = this.props;
 
     const htmlFor = labelFor || label;
     const errorKeys = Object.keys(errors);
@@ -52,13 +61,17 @@ class Field extends React.Component {
     return (
       <FieldContainer>
         {!!label && (
-          <Typography.Label htmlFor={htmlFor}>{label}</Typography.Label>
+          <Label htmlFor={htmlFor} disabled={disabled}>
+            {label}
+          </Label>
         )}
 
         <InputContainer showErrors={showErrors}>
           <ErrorIcon />
 
-          {children}
+          {React.cloneElement(inputChild, {
+            disabled,
+          })}
 
           <TransitionGroup component={HelperList}>
             {!!hintMessage && (

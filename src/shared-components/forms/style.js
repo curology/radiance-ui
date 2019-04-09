@@ -24,6 +24,12 @@ export const FieldContainer = styled.div`
   margin-bottom: ${SPACING.small};
 `;
 
+export const Label = styled.label`
+  ${TYPOGRAPHY_STYLE.label};
+
+  ${({ disabled }) => disabled && `color:${COLORS.purple30};`};
+`;
+
 const inputStyles = css`
   ${TYPOGRAPHY_STYLE.body};
   appearance: none;
