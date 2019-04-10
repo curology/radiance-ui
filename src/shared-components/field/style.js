@@ -4,14 +4,10 @@ import { css } from '@emotion/core';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
 
-export const HelperList = styled.ul`
+export const HintList = styled.ul`
   list-style-type: none;
-  margin: ${SPACING.xsmall} 0;
+  margin: 0;
   min-height: 23px;
-`;
-
-export const ErrorItem = styled.li`
-  ${TYPOGRAPHY_STYLE.error};
 `;
 
 export const HintItem = styled.li`
@@ -41,6 +37,7 @@ const inputStyles = css`
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
   outline: none;
+  margin-bottom: ${SPACING.xsmall};
 
   ~ ul ${HintItem} {
     transition: opacity ${ANIMATION.defaultTiming};
