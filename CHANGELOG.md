@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.19
+- Add Field component ([PR #82](https://github.com/PocketDerm/radiance-ui/pull/82))
+
 ## v2.0.18
 - Add Tabs component ([PR #85](https://github.com/PocketDerm/radiance-ui/pull/85))
 
