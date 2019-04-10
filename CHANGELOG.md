@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.18
+- Add Tabs component ([PR #85](https://github.com/PocketDerm/radiance-ui/pull/85))
+
 ## v2.0.17
 - RoundButton - move click handler and adjust styles ([PR #83](https://github.com/PocketDerm/radiance-ui/pull/83))
 - Refactor button stories ([PR #83](https://github.com/PocketDerm/radiance-ui/pull/83))
