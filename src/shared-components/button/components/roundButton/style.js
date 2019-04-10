@@ -20,16 +20,9 @@ export const RoundButtonContainer = styled.div`
 
 export const RoundButtonWrapper = styled.div`
   align-items: center;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  ${({ loading, disabled }) =>
-    (loading || disabled) &&
-    css`
-      cursor: not-allowed;
-    `};
 `;
 
 export const RoundButtonBase = styled(ButtonBase)`
@@ -60,7 +53,7 @@ export const RoundButtonBase = styled(ButtonBase)`
 
 export const roundButtonLoader = disabled => css`
   width: 36px;
-  margin-top: -3px;
+  margin: -3px -3px 0 0;
   ${disabled && `
     & span {
       background-color: ${COLORS.white};
@@ -71,4 +64,3 @@ export const roundButtonLoader = disabled => css`
 export const RoundButtonText = styled.p`
   margin: 10px 0;
 `;
-

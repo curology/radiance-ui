@@ -44,12 +44,9 @@ const RoundButton = ({
   textColor,
   ...rest
 }) => (
-  <RoundButtonWrapper
-    onClick={!disabled && !loading ? onClick : () => false}
-    disabled={disabled}
-    loading={loading}
-  >
+  <RoundButtonWrapper>
     <RoundButtonBase
+      onClick={!disabled && !loading ? onClick : () => false}
       disabled={disabled}
       buttonType={buttonType}
       loading={loading}
