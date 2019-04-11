@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TransitionGroup } from 'react-transition-group';
 
 import {
   FieldContainer,
@@ -8,11 +7,9 @@ import {
   InputContainer,
   Textarea,
   Input,
-  HintList,
   HintItem,
 } from './style';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import HelperTransition from './helperTransition';
 import BulkErrors from '../bulkErrors';
 
 class Field extends React.Component {
@@ -69,13 +66,7 @@ class Field extends React.Component {
           {React.cloneElement(inputChild, {
             disabled,
           })}
-          {!!hintMessage && (
-            <TransitionGroup component={HintList}>
-              <HelperTransition key="hint-message">
-                <HintItem>{hintMessage}</HintItem>
-              </HelperTransition>
-            </TransitionGroup>
-          )}
+          {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
           <BulkErrors errors={errors} />
         </InputContainer>
       </FieldContainer>

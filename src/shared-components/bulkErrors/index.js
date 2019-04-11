@@ -3,7 +3,7 @@ import React from 'react';
 import { TransitionGroup } from 'react-transition-group';
 
 import { CenteredErrorList, ErrorList, ErrorItem } from './style';
-import HelperTransition from '../field/helperTransition';
+import HelperTransition from '../../utils/helperTransition';
 import formatError from './formatError';
 
 const BulkErrors = ({ errors, centered }) => {
