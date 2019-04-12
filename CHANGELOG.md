@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.20
+- Add Transition components ([PR #87](https://github.com/PocketDerm/radiance-ui/pull/87))
+
 ## v2.0.19
 - Add Field component ([PR #82](https://github.com/PocketDerm/radiance-ui/pull/82))
 
