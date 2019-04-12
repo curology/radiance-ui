@@ -7,9 +7,8 @@ import { FadeInContainer, Container } from 'radiance-ui';
 <FadeInContainer slide>
   <Container type="message">
     <Container.Section>
-      FadeInContainer has an animation on the inital render. <br />
-      You can use this in subcomponents to have a transition between app
-      states.
+      FadeInContainer has an opacity fade in animation on the inital render.<br />
+      You can add the slide property for an extra slide in animation.
     </Container.Section>
   </Container>
 </FadeInContainer>

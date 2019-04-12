@@ -10,7 +10,7 @@ export const CustomFadeInContainer = styled.div`
 `;
 
 <CustomFadeInContainer>
-  opacityInAnimationStyle is a shorthand for a fade in animation to be used in the current style code.
+  opacityInAnimationStyle is a snippet for a fade in animation to be used in the current emotion style code.
 </CustomFadeInContainer>
 ```
 

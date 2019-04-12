@@ -35,6 +35,7 @@ const getAnimationStyle = (slide = false, speed = '350ms') => {
       animation: ${slideInAnimation} ${speed} ease-in-out;
     `;
   }
+
   return css`
     animation: ${opacityInAnimation} ${speed} ease-in-out;
   `;
