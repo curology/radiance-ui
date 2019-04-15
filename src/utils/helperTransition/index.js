@@ -1,7 +1,7 @@
 import React from 'react';
 import { Transition } from 'react-transition-group';
 
-import { ANIMATION } from '../../../constants';
+import { ANIMATION } from '../../constants';
 
 const getStyleForTransitionState = transitionState => {
   switch (transitionState) {

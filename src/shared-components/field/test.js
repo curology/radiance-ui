@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 
-import { ErrorItem } from './style';
+import { ErrorItem } from '../bulkErrors/style';
 
 import Field from './index';
 

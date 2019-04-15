@@ -13,6 +13,7 @@ export { default as Chip } from './chip';
 export { default as Container } from './container';
 export { default as Dropdown } from './dropdown';
 export { default as Field } from './field';
+export { default as BulkErrors } from './bulkErrors';
 export { default as ImmersiveModal } from './immersiveModal';
 export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
