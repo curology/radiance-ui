@@ -1,7 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
-import { AcneGlyph } from 'radiance-ui/lib/icons';
+
+import AcneGlyph from '../../svgs/glyphs/acne-glyph.svg';
 
 import OptionButton from './index';
 
