@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.21
+- Add Bulk Errors component ([PR #86](https://github.com/PocketDerm/radiance-ui/pull/86))
+
 ## v2.0.20
 - Add Transition components ([PR #87](https://github.com/PocketDerm/radiance-ui/pull/87))
 

@@ -4,18 +4,12 @@ import { css } from '@emotion/core';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
 
-export const HelperList = styled.ul`
-  list-style-type: none;
-  margin: ${SPACING.xsmall} 0;
-  min-height: 23px;
-`;
-
-export const ErrorItem = styled.li`
-  ${TYPOGRAPHY_STYLE.error};
-`;
-
-export const HintItem = styled.li`
+export const HintItem = styled.div`
   ${TYPOGRAPHY_STYLE.caption};
+  margin: 0;
+  transition: all ${ANIMATION.defaultTiming};
+  opacity: 0;
+  max-height: 0;
 `;
 
 export const FieldContainer = styled.div`
@@ -41,12 +35,7 @@ const inputStyles = css`
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
   outline: none;
-
-  ~ ul ${HintItem} {
-    transition: opacity ${ANIMATION.defaultTiming};
-    max-height: 0 !important;
-    opacity: 0 !important;
-  }
+  margin-bottom: ${SPACING.xsmall};
 
   &:active,
   &:focus {
@@ -54,9 +43,9 @@ const inputStyles = css`
     border-color: ${COLORS.primary};
     box-shadow: ${BOX_SHADOWS.focusSecondary};
 
-    ~ ul ${HintItem} {
-      max-height: 50px !important;
-      opacity: 1 !important;
+    ~ ${HintItem} {
+      max-height: 23px;
+      opacity: 1;
     }
   }
 

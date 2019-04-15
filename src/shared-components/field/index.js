@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { TransitionGroup } from 'react-transition-group';
 
 import {
   FieldContainer,
@@ -8,12 +7,10 @@ import {
   InputContainer,
   Textarea,
   Input,
-  ErrorItem,
   HintItem,
-  HelperList,
 } from './style';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import HelperTransition from './helperTransition';
+import BulkErrors from '../bulkErrors';
 
 class Field extends React.Component {
   static propTypes = {
@@ -40,9 +37,6 @@ class Field extends React.Component {
   static Textarea = Textarea;
 
   static Input = Input;
-
-  formatError = errorValue =>
-    Array.isArray(errorValue) ? errorValue.join(', ') : errorValue;
 
   render() {
     const {
@@ -72,20 +66,8 @@ class Field extends React.Component {
           {React.cloneElement(inputChild, {
             disabled,
           })}
-
-          <TransitionGroup component={HelperList}>
-            {!!hintMessage && (
-              <HelperTransition key="hint-message">
-                <HintItem>{hintMessage}</HintItem>
-              </HelperTransition>
-            )}
-            {showErrors &&
-              errorKeys.map(key => (
-                <HelperTransition key={key}>
-                  <ErrorItem>{this.formatError(errors[key])}</ErrorItem>
-                </HelperTransition>
-              ))}
-          </TransitionGroup>
+          {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
+          <BulkErrors errors={errors} />
         </InputContainer>
       </FieldContainer>
     );
