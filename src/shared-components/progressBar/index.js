@@ -8,16 +8,16 @@ import { OuterContainer, InnerBar } from './style';
 const ProgressBar = ({
   backgroundColor,
   barColor,
-  customStyles,
   height,
   loadingTime,
   status,
+  ...rest
 }) => (
   <OuterContainer
     status={status}
     height={height}
     backgroundColor={backgroundColor}
-    css={customStyles}
+    {...rest}
   >
     <InnerBar
       status={status}
@@ -31,7 +31,6 @@ const ProgressBar = ({
 ProgressBar.defaultProps = {
   backgroundColor: COLORS.background,
   barColor: COLORS.primary,
-  customStyles: css``,
   height: 4,
   loadingTime: '20s',
 };
@@ -39,8 +38,6 @@ ProgressBar.defaultProps = {
 ProgressBar.propTypes = {
   backgroundColor: PropTypes.string,
   barColor: PropTypes.string,
-  // eslint-disable-next-line react/forbid-prop-types
-  customStyles: PropTypes.object,
   height: PropTypes.number,
   loadingTime: PropTypes.string,
   status: PropTypes.oneOf([

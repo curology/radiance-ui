@@ -17,7 +17,7 @@ const customHeight = 10;
 <ProgressBar
   status={PROGRESS_BAR_STATUS.loading}
   height={customHeight}
-  customStyles={css`
+  css={css`
     top: calc(50% - ${customHeight / 2}px);
     opacity: 0.5;
   `}
@@ -32,7 +32,6 @@ const customHeight = 10;
 |-----------------|------------------|----------|---------------|------------------------------------------------------------------------------------------------------------------------------|
 | backgroundColor | string           | no      | '#f8f8fa'      | set to the COLORS.background constant |
 | barColor        | string           | no      | '#332e54'      | set to the COLORS.primary constant |
-| customStyles    | object           | no      | -              | use the tagged template literal css`` from emotion |
 | height          | number           | no      | 4              | the bar height |
 | loadingTime     | string           | no      | '20s'          | the time that would take to load the bar completely |
 | status          | string           | yes     | -              | must be one of: 'loading', 'success', 'error'. You may use the constant PROGRESS_BAR_STATUS to avoid typos |

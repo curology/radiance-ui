@@ -52,7 +52,7 @@ stories.add(
         <ProgressBar
           status={PROGRESS_BAR_STATUS.loading}
           height={customHeight}
-          customStyles={css`
+          css={css`
             top: calc(50% - ${customHeight / 2}px);
             opacity: 0.5;
           `}
