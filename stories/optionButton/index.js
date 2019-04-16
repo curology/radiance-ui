@@ -48,13 +48,13 @@ stories.add(
             text="Checkbox helper text"
             onClick={() => {}}
             optionType="checkbox"
-            styleType="primary"
+            type="primary"
           />
           <OptionButton
             text="Checkbox helper text"
             onClick={() => {}}
             optionType="checkbox"
-            styleType="primary"
+            type="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
           <OptionButton
@@ -62,14 +62,14 @@ stories.add(
             text="Checkbox helper text"
             onClick={() => {}}
             optionType="checkbox"
-            styleType="primary"
+            type="primary"
           />
           <OptionButton
             selected
             text="Checkbox helper text"
             onClick={() => {}}
             optionType="checkbox"
-            styleType="primary"
+            type="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
         </OptionsContainer>
@@ -78,13 +78,13 @@ stories.add(
             text="Radio helper text"
             onClick={() => {}}
             optionType="radio"
-            styleType="primary"
+            type="primary"
           />
           <OptionButton
             text="Radio helper text"
             onClick={() => {}}
             optionType="radio"
-            styleType="primary"
+            type="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
           <OptionButton
@@ -92,14 +92,14 @@ stories.add(
             text="Radio helper text"
             onClick={() => {}}
             optionType="radio"
-            styleType="primary"
+            type="primary"
           />
           <OptionButton
             selected
             text="Radio helper text"
             onClick={() => {}}
             optionType="radio"
-            styleType="primary"
+            type="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
         </OptionsContainer>
@@ -111,14 +111,14 @@ stories.add(
             text={text('text', 'Helper text')}
             onClick={() => {}}
             optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
-            styleType={select('styleType', ['primary', 'secondary'], 'primary')}
+            type={select('type', ['primary', 'secondary'], 'primary')}
             selected={boolean('selected', false)}
           />
           <OptionButton
             text={text('text', 'Helper text')}
             onClick={() => {}}
             optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
-            styleType={select('styleType', ['primary', 'secondary'], 'primary')}
+            type={select('type', ['primary', 'secondary'], 'primary')}
             selected={boolean('selected', false)}
             icon={<AcneGlyph width={32} height={32} />}
           />

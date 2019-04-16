@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { COLORS, ANIMATION, SPACING } from '../../constants';
+import Container from '../container';
 
 const getOptionTypeStyles = optionType => {
   if (optionType === 'checkbox') {
@@ -14,12 +15,16 @@ const getOptionTypeStyles = optionType => {
   `;
 };
 
-const getStyleTypeColor = styleType => {
-  if (styleType === 'secondary') {
+const getTypeColor = type => {
+  if (type === 'secondary') {
     return COLORS.secondary;
   }
   return COLORS.primary;
 };
+
+export const ClickableContainer = styled(Container)`
+  padding: ${SPACING.base};
+`;
 
 export const FlexContainer = styled.div`
   display: flex;
@@ -28,9 +33,9 @@ export const FlexContainer = styled.div`
   align-items: center;
 `;
 
-const getBaseIconWrapperStyles = ({ selected, optionType, styleType }) => css`
+const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
   border: 2px solid;
-  border-color: ${getStyleTypeColor(styleType)};
+  border-color: ${getTypeColor(type)};
   background: ${COLORS.white};
   width: 32px;
   height: 32px;
@@ -49,7 +54,7 @@ const getBaseIconWrapperStyles = ({ selected, optionType, styleType }) => css`
 
   ${selected &&
     css`
-      background: ${getStyleTypeColor(styleType)};
+      background: ${getTypeColor(type)};
 
       svg {
         opacity: 1;
@@ -70,8 +75,8 @@ export const IconWrapper = styled.div`
 
   svg {
     opacity: 1;
-    color: ${props => getStyleTypeColor(props.styleType)};
-    fill: ${props => getStyleTypeColor(props.styleType)};
+    color: ${props => getTypeColor(props.type)};
+    fill: ${props => getTypeColor(props.type)};
   }
 
   ${({ selected }) =>
@@ -85,6 +90,6 @@ export const IconWrapper = styled.div`
 `;
 
 export const Text = styled.p`
-  color: ${props => getStyleTypeColor(props.styleType)};
+  color: ${COLORS.purple85};
   margin-left: ${SPACING.small};
 `;

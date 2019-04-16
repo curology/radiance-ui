@@ -16,7 +16,7 @@ describe('<OptionButton />', () => {
             onClick={() => {}}
             text="checkbox text"
             optionType="checkbox"
-            styleType="primary"
+            type="primary"
           />
         )
         .toJSON();
@@ -32,7 +32,7 @@ describe('<OptionButton />', () => {
             text="radio text"
             optionType="radio"
             icon={<AcneGlyph />}
-            styleType="secondary"
+            type="secondary"
           />
         )
         .toJSON();

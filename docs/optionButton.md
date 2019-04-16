@@ -8,7 +8,7 @@ import { OptionButton } from 'radiance-ui';
   text="Checkbox helper text"
   onClick={() => {}}
   optionType="checkbox"
-  styleType="primary"
+  type="primary"
 />
 
 // With custom Icon
@@ -16,7 +16,7 @@ import { OptionButton } from 'radiance-ui';
   text="Checkbox helper text"
   onClick={() => {}}
   optionType="checkbox"
-  styleType="primary"
+  type="primary"
   icon={<AcneGlyph width={32} height={32} />}
 />
 
@@ -26,7 +26,7 @@ import { OptionButton } from 'radiance-ui';
   text="Checkbox helper text"
   onClick={() => {}}
   optionType="checkbox"
-  styleType="primary"
+  type="primary"
 />
 ```
 
@@ -39,5 +39,5 @@ import { OptionButton } from 'radiance-ui';
 | text          | string         | yes     | -          | the text label |
 | onClick       | function       | yes     | -          | function to call when the component is clicked |
 | optionType    | string         | yes     | -          | must be either: `checkbox` or `radio` |
-| styleType     | string         | no      | `primary`  | must be either: `primary` or `secondary` |
+| type     | string         | no      | `primary`  | must be either: `primary` or `secondary` |
 | selected      | bool           | no      | false      | controls the selected state  |

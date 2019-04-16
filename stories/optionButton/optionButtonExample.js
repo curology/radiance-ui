@@ -39,7 +39,7 @@ class OptionButtonExample extends React.Component {
               text={text}
               onClick={() => this.onClick(index)}
               optionType="radio"
-              styleType="primary"
+              type="primary"
             />
           </div>
         ))}
