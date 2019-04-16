@@ -19,7 +19,7 @@ const OptionButton = ({
   type,
   ...rest
 }) => (
-  <ClickableContainer onClick={onClick} type="clickable" {...rest}>
+  <ClickableContainer onClick={onClick} type="clickable" tabIndex="0" {...rest}>
     <FlexContainer>
       {icon ? (
         <IconWrapper selected={selected} optionType={optionType} type={type}>

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { COLORS, ANIMATION, SPACING } from '../../constants';
+import { COLORS, ANIMATION, SPACING, BOX_SHADOWS } from '../../constants';
 import Container from '../container';
 
 const getOptionTypeStyles = optionType => {
@@ -24,6 +24,11 @@ const getTypeColor = type => {
 
 export const ClickableContainer = styled(Container)`
   padding: ${SPACING.base};
+
+  :focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focusSecondary};
+  }
 `;
 
 export const FlexContainer = styled.div`
