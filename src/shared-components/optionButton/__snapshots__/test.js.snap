@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`] = `
+.emotion-6 {
+  background-color: #ffffff;
+  border: 1px solid #ededf0;
+  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.06);
+  cursor: pointer;
+  -webkit-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
+  padding: 1.5rem;
+}
+
+.emotion-6:hover {
+  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.15);
+}
+
+.emotion-6:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  border: 2px solid;
+  border-color: #332e54;
+  background: #ffffff;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+  border-radius: 4px;
+  background: #332e54;
+}
+
+.emotion-0 svg {
+  opacity: 0;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+.emotion-0 svg {
+  opacity: 1;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  color: #524D6E;
+  margin-left: 1rem;
+}
+
+<div
+  className="emotion-6 emotion-7"
+  onClick={[Function]}
+  tabIndex="0"
+  type="clickable"
+>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <div
+      className="emotion-0 emotion-1"
+      selected={true}
+      type="primary"
+    >
+      <svg
+        height={16}
+        width={16}
+      />
+    </div>
+    <p
+      className="emotion-2 emotion-3"
+      type="primary"
+    >
+      checkbox text
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`] = `
+.emotion-6 {
+  background-color: #ffffff;
+  border: 1px solid #ededf0;
+  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.06);
+  cursor: pointer;
+  -webkit-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
+  padding: 1.5rem;
+}
+
+.emotion-6:hover {
+  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.15);
+}
+
+.emotion-6:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  color: #524D6E;
+  margin-left: 1rem;
+}
+
+.emotion-0 {
+  border: 2px solid;
+  border-color: #a6a1e2;
+  background: #ffffff;
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.emotion-0 svg {
+  opacity: 0;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+
+.emotion-0 svg {
+  opacity: 1;
+  color: #a6a1e2;
+  fill: #a6a1e2;
+}
+
+<div
+  className="emotion-6 emotion-7"
+  onClick={[Function]}
+  tabIndex="0"
+  type="clickable"
+>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <div
+      className="emotion-0 emotion-1"
+      selected={false}
+      type="secondary"
+    >
+      <svg />
+    </div>
+    <p
+      className="emotion-2 emotion-3"
+      type="secondary"
+    >
+      radio text
+    </p>
+  </div>
+</div>
+`;
