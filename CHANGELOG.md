@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.22
+- Add Progress Bar component ([PR #88](https://github.com/PocketDerm/radiance-ui/pull/88))
+
 ## v2.0.21
 - Add Bulk Errors component ([PR #86](https://github.com/PocketDerm/radiance-ui/pull/86))
 
