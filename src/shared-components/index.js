@@ -19,6 +19,7 @@ export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
 export { default as OffClickWrapper } from './offClickWrapper';
 export { default as OptionButton } from './optionButton';
+export { default as ProgressBar } from './progressBar';
 export { default as RadioButton } from './radioButton';
 export { default as Tabs } from './tabs';
 export { default as Tooltip } from './tooltip';
