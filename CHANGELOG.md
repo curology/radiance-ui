@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.23
+- Add Option Button component ([PR #89](https://github.com/PocketDerm/radiance-ui/pull/89))
+
 ## v2.0.22
 - Add Progress Bar component ([PR #88](https://github.com/PocketDerm/radiance-ui/pull/88))
 
