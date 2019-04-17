@@ -9,6 +9,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
   padding: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .emotion-6:hover {
@@ -120,6 +121,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
   padding: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .emotion-6:hover {

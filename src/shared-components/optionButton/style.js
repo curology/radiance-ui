@@ -24,6 +24,7 @@ const getTypeColor = type => {
 
 export const ClickableContainer = styled(Container)`
   padding: ${SPACING.base};
+  margin-bottom: ${SPACING.small};
 
   :focus {
     outline: none;
