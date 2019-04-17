@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.24
+- Add Option Button component ([PR #90](https://github.com/PocketDerm/radiance-ui/pull/90))
+
 ## v2.0.23
 - Add Option Button component ([PR #89](https://github.com/PocketDerm/radiance-ui/pull/89))
 
