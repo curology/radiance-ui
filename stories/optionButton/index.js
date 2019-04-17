@@ -27,7 +27,6 @@ const FlexContainer = styled.div`
 
 const OptionsContainer = styled.div`
   > div {
-    margin-bottom: ${SPACING.base};
     width: 350px;
   }
 `;
