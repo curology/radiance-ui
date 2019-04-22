@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
 import FieldReadme from 'docs/field.md';
 import { Typography, Field } from 'src/shared-components';
@@ -60,6 +60,7 @@ stories.add(
         <Field
           labelFor="input-id"
           label={text('label', 'Input Label')}
+          hideErrorIcon={boolean('hideErrorIcon', false)}
           hintMessage={text('hintMessage', 'Hint Message')}
           errors={select('errors', errorOptions, {})}
         >

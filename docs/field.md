@@ -82,6 +82,7 @@ class InputWithValidation extends React.Component {
 | children            | element     | yes      | -          | must be either `Field.Input` or `Field.Textarea` |
 | disabled            | bool        | no       | false      | change the child input to `disabled` state |
 | errors              | object      | no       | -          | object of key and string message pair. It also accepts an array of string as pair value |
+| hideErrorIcon       | bool        | no       | false      | hides the error icon at the rightmost part of the input |
 | hintMessage         | string      | no       | -          | the hint to display below the field. It activates on focus |
 | label               | string      | no       | -          | the field label |
 | labelFor            | string      | no       | -          | must match the children id html attribute |

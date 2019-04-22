@@ -22,6 +22,7 @@ class Field extends React.Component {
         PropTypes.arrayOf(PropTypes.string),
       ])
     ),
+    hideErrorIcon: PropTypes.bool,
     hintMessage: PropTypes.string,
     label: PropTypes.string,
     labelFor: PropTypes.string,
@@ -43,6 +44,7 @@ class Field extends React.Component {
       children: inputChild,
       disabled,
       errors,
+      hideErrorIcon,
       hintMessage,
       label,
       labelFor,
@@ -61,11 +63,12 @@ class Field extends React.Component {
         )}
 
         <InputContainer showErrors={showErrors}>
-          <ErrorIcon />
+          {hideErrorIcon || <ErrorIcon className="error-icon" />}
 
           {React.cloneElement(inputChild, {
             disabled,
           })}
+
           {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
           <BulkErrors errors={errors} />
         </InputContainer>
