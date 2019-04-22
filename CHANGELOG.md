@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.25
+- Field SVG error icon fixes ([PR #91](https://github.com/PocketDerm/radiance-ui/pull/91))
+
 ## v2.0.24
 - Option Button - add margin bottom ([PR #90](https://github.com/PocketDerm/radiance-ui/pull/90))
 
