@@ -38,5 +38,5 @@ export const thumbStyle = {
   width: 22,
   border: 'none',
   boxShadow: 'none',
-  background: '#ffffff',
+  background: COLORS.white,
 };
