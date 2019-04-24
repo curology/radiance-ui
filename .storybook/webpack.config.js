@@ -1,5 +1,5 @@
 const path = require('path');
-const CircularDependencyPlugin = require('circular-dependency-plugin')
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 const transformTemplateForUtilLocation = require('../src/utils/svgToIconTemplate/transformTemplateForUtilLocation.js');
 
 const UTIL_LOCATION = '../../utils/icons';
@@ -25,6 +25,15 @@ module.exports = {
               expandProps: false,
               babel: false,
             },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
           },
         ],
       },

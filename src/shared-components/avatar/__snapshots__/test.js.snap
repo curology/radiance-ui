@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> UI snapshot render with size large styles 1`] = `
+.emotion-0 {
+  height: 80px;
+  width: 80px;
+  background-color: #a6a1e2;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+<img
+  alt="avatar"
+  className="emotion-0 emotion-1"
+  size="large"
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+/>
+`;
+
+exports[`<Avatar /> UI snapshot render with size medium styles 1`] = `
+.emotion-0 {
+  height: 48px;
+  width: 48px;
+  background-color: #a6a1e2;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+<img
+  alt="avatar"
+  className="emotion-0 emotion-1"
+  size="medium"
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+/>
+`;
+
+exports[`<Avatar /> UI snapshot renders the component with default props 1`] = `
+.emotion-0 {
+  height: 32px;
+  width: 32px;
+  background-color: #a6a1e2;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+<img
+  alt="avatar"
+  className="emotion-0 emotion-1"
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+/>
+`;
