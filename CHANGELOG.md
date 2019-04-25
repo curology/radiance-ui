@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.26
+- New Avatar component ([PR #93](https://github.com/PocketDerm/radiance-ui/pull/93))
+
 ## v2.0.25
 - Field SVG error icon fixes ([PR #91](https://github.com/PocketDerm/radiance-ui/pull/91))
 
