@@ -21,7 +21,6 @@ const ColorsContainer = styled.div`
 
 const colorsStory = () => (
   <MainContainer>
-    <Typography.Heading>Colors:</Typography.Heading>
     {Object.keys(COLORS).map(category => {
       if (category === 'default') {
         return null;
