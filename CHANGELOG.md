@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.27
+- New Toggle component ([PR #92](https://github.com/PocketDerm/radiance-ui/pull/92))
+
 ## v2.0.26
 - New Avatar component ([PR #93](https://github.com/PocketDerm/radiance-ui/pull/93))
 
