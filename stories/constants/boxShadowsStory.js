@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { SPACING } from 'src/constants';
-import BOX_SHADOWS from 'src/constants/boxShadows';
+import * as BOX_SHADOWS from 'src/constants/boxShadows';
 import { Container, Typography } from 'src/shared-components';
 
 const MainContainer = styled.div`
@@ -25,26 +25,38 @@ const baseBoxStyle = css`
 
 const boxShadowsStory = () => (
   <MainContainer>
-    <Typography.Heading>Box Shadows Examples:</Typography.Heading>
-    <BoxesContainer>
-      {Object.keys(BOX_SHADOWS).map(shadow => {
-        const styles = css`
-          ${baseBoxStyle};
-          box-shadow: ${BOX_SHADOWS[shadow]};
-        `;
+    {Object.keys(BOX_SHADOWS).map(category => {
+      if (category === 'default') {
+        return null;
+      }
 
-        return (
-          <Container css={styles}>
-            <Container.Section>
-              <strong>Key:</strong> {shadow}
-              <br />
-              <br />
-              <strong>Value:</strong> {BOX_SHADOWS[shadow]}
-            </Container.Section>
-          </Container>
-        );
-      })}
-    </BoxesContainer>
+      const categoryBoxShadows = BOX_SHADOWS[category];
+
+      return (
+        <React.Fragment key={category}>
+          <Typography.Title>{category}:</Typography.Title>
+          <BoxesContainer>
+            {Object.keys(categoryBoxShadows).map(shadow => {
+              const styles = css`
+                ${baseBoxStyle};
+                box-shadow: ${BOX_SHADOWS[shadow]};
+              `;
+
+              return (
+                <Container css={styles}>
+                  <Container.Section>
+                    <strong>Key:</strong> {shadow}
+                    <br />
+                    <br />
+                    <strong>Value:</strong> {BOX_SHADOWS[shadow]}
+                  </Container.Section>
+                </Container>
+              );
+            })}
+          </BoxesContainer>
+        </React.Fragment>
+      );
+    })}
   </MainContainer>
 );
 
