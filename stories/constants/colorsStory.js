@@ -5,7 +5,7 @@ import { SPACING } from 'src/constants';
 import { Typography } from 'src/shared-components';
 import * as COLORS from 'src/constants/colors';
 
-import Color from './color';
+import Color from './colorComponent';
 
 const MainContainer = styled.div`
   padding: ${SPACING.medium};
