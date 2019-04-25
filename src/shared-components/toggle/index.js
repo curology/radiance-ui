@@ -26,15 +26,19 @@ const Toggle = ({ checked, label, onChange }) => (
       activeLabel=""
       thumbStyle={thumbStyle}
       trackStyle={trackStyle}
-      thumbAnimateRange={[2, 17]}
+      thumbAnimateRange={[1, 17]}
       colors={{
         active: {
           base: COLORS.secondary,
-          hover: COLORS.secondary,
         },
         inactive: {
-          base: COLORS.purple10,
-          hover: COLORS.purple10,
+          base: COLORS.purple15,
+        },
+        activeThumb: {
+          base: COLORS.white,
+        },
+        inactiveThumb: {
+          base: COLORS.white,
         },
       }}
     />

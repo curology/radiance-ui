@@ -36,7 +36,8 @@ export const trackStyle = {
 export const thumbStyle = {
   height: 22,
   width: 22,
-  border: 'none',
-  boxShadow: 'none',
+  border: `1px solid ${COLORS.border}`,
+  boxShadow: `none`,
   background: COLORS.white,
+  backgroundColor: COLORS.white,
 };
