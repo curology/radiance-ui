@@ -39,7 +39,7 @@ const boxShadowsStory = () => (
             {Object.keys(categoryBoxShadows).map(shadow => {
               const styles = css`
                 ${baseBoxStyle};
-                box-shadow: ${BOX_SHADOWS[shadow]};
+                box-shadow: ${categoryBoxShadows[shadow]};
               `;
 
               return (
@@ -48,7 +48,7 @@ const boxShadowsStory = () => (
                     <strong>Key:</strong> {shadow}
                     <br />
                     <br />
-                    <strong>Value:</strong> {BOX_SHADOWS[shadow]}
+                    <strong>Value:</strong> {categoryBoxShadows[shadow]}
                   </Container.Section>
                 </Container>
               );
