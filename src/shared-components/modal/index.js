@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
+import { Global } from '@emotion/core';
 
 import CloseIcon from '../../svgs/icons/close-icon.svg';
 import keyPressMatch from '../../utils/keyPressMatch';
 import KEYCODES from '../../constants/keycodes';
 import {
-  ModalContainer,
   ModalOverlay,
   ModalBox,
   ModalCloseIcon,
@@ -90,12 +90,18 @@ class Modal extends React.Component {
 
   render() {
     const { isVisible } = this.state;
-    const {
-      isOpen, children, className, canBeClosed, 
-    } = this.props;
+    const { isOpen, children, className, canBeClosed } = this.props;
 
     return (
-      <ModalContainer>
+      <React.Fragment>
+        <Global
+          styles={{
+            '.ReactModalPortal': {
+              position: 'relative',
+              zIndex: 99999999,
+            },
+          }}
+        />
         <ReactModal
           className={`prevent-default ${className}`}
           contentLabel="Modal"
@@ -120,7 +126,7 @@ class Modal extends React.Component {
             </ModalBox>
           </ModalOverlay>
         </ReactModal>
-      </ModalContainer>
+      </React.Fragment>
     );
   }
 }
