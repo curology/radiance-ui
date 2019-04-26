@@ -3,13 +3,6 @@ import styled from '@emotion/styled';
 import Typography from '../typography';
 import { COLORS, MEDIA_QUERIES, SPACING } from '../../constants';
 
-export const ModalContainer = styled.div`
-  .ReactModalPortal {
-    position: relative;
-    z-index: 99999999;
-  }
-`;
-
 export const ModalOverlay = styled.div`
   -webkit-overflow-scrolling: touch;
   background-color: ${COLORS.overlay};
@@ -29,9 +22,8 @@ export const ModalOverlay = styled.div`
   }
 `;
 
-const determineScale = ({ isVisible }) => (
-  isVisible ? 'scale(1, 1)' : 'scale(0.95, 0.95)'
-);
+const determineScale = ({ isVisible }) =>
+  isVisible ? 'scale(1, 1)' : 'scale(0.95, 0.95)';
 
 export const ModalBox = styled.div`
   background-color: ${COLORS.white};
@@ -70,7 +62,7 @@ export const ContentContainer = styled.div`
 
   ${MEDIA_QUERIES.mdUp} {
     padding: ${({ tight }) =>
-    tight ? SPACING.large : `${SPACING.xlarge} 5rem`};
+      tight ? SPACING.large : `${SPACING.xlarge} 5rem`};
   }
 `;
 
