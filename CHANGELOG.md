@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.28
+- Added Box Shadows Example ([PR #94](https://github.com/PocketDerm/radiance-ui/pull/94))
+
 ## v2.0.27
 - New Toggle component ([PR #92](https://github.com/PocketDerm/radiance-ui/pull/92))
 
