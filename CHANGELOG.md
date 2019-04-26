@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.29
+- Modal Component - fix global styles ([PR #95](https://github.com/PocketDerm/radiance-ui/pull/95))
+
 ## v2.0.28
 - Added Box Shadows Example ([PR #94](https://github.com/PocketDerm/radiance-ui/pull/94))
 
