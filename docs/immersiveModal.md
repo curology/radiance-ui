@@ -64,23 +64,6 @@ class DefaultImmersiveModal extends React.Component {
             </ImmersiveModal.Footer>
           </ImmersiveModal>
         )}
-        <br/>
-        <Button onClick={() => this.onOpenModal('medium')}>
-          Open medium width ImmersiveModal
-        </Button>
-        {mediumIsOpen && (
-          <ImmersiveModal onClose={this.onClose} width="medium">
-            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body.</ImmersiveModal.Body>
-            <ImmersiveModal.Footer>
-              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
-              from the body.
-              <Button.Container>
-                <Button onClick={this.onClose}>Close ImmersiveModal</Button>
-              </Button.Container>
-            </ImmersiveModal.Footer>
-          </ImmersiveModal>
-        )}  
       </div>
     );
   }
@@ -96,7 +79,6 @@ class DefaultImmersiveModal extends React.Component {
 | canBeClosed | bool | no | true | If false, the close icon does not render and the onClose function does not execute |
 | children | node | yes | - | Node that will render when the modal is visible |
 | header | node | no | - | Node that will render at the top of the modal and without padding, most commonly used for images |
-| size | string | no | "small" | Sets the max-width for the desktop version. The small or default value is `616px`. You can pass `medium` value for a `776px` version |
 
 ### Notes
 
