@@ -70,12 +70,12 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.25rem 1.5rem;
+  padding: 0 1.5rem 0 1rem;
   width: 100%;
 }
 
 .emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
+  margin: 2.5px 1rem 0px 0px;
   min-height: 1rem;
   min-width: 1rem;
 }
@@ -102,7 +102,7 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   justify-content: space-around;
   margin: 0 auto 0.5rem;
   opacity: 1;
-  padding: 0.5rem 0px;
+  padding: 7px 0px;
   position: relative;
   text-align: left;
   -webkit-transform: translate3d(0,0,0);
@@ -123,7 +123,6 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
     animation: animation-1 350ms 1;
     font-size: 0.875rem;
     margin-bottom: 1rem;
-    padding: 0.5rem 0px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -248,12 +247,12 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.25rem 1.5rem;
+  padding: 0 1.5rem 0 1rem;
   width: 100%;
 }
 
 .emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
+  margin: 2.5px 1rem 0px 0px;
   min-height: 1rem;
   min-width: 1rem;
 }
@@ -280,7 +279,7 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   justify-content: space-around;
   margin: 0 auto 0.5rem;
   opacity: 1;
-  padding: 0.5rem 0px;
+  padding: 7px 0px;
   position: relative;
   text-align: left;
   -webkit-transform: translate3d(0,0,0);
@@ -301,7 +300,6 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
     animation: animation-1 350ms 1;
     font-size: 0.875rem;
     margin-bottom: 1rem;
-    padding: 0.5rem 0px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -379,7 +377,7 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   justify-content: space-around;
   margin: 0 auto 0.5rem;
   opacity: 1;
-  padding: 0.5rem 0px;
+  padding: 7px 0px;
   position: relative;
   text-align: left;
   -webkit-transform: translate3d(0,0,0);
@@ -400,7 +398,6 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
     animation: animation-1 350ms 1;
     font-size: 0.875rem;
     margin-bottom: 1rem;
-    padding: 0.5rem 0px;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -412,12 +409,12 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.25rem 1.5rem;
+  padding: 0 1.5rem 0 1rem;
   width: 100%;
 }
 
 .emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
+  margin: 2.5px 1rem 0px 0px;
   min-height: 1rem;
   min-width: 1rem;
 }
