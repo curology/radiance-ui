@@ -5,6 +5,7 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 
 import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
+import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import OptionButtonReadme from 'docs/optionButton.md';
 import { OptionButton, Typography } from 'src/shared-components';
 import { SPACING } from 'src/constants';
@@ -57,6 +58,14 @@ stories.add(
             icon={<AcneGlyph width={32} height={32} />}
           />
           <OptionButton
+            text="Main text"
+            subtext="subtext"
+            onClick={() => {}}
+            optionType="checkbox"
+            type="primary"
+            icon={<PlusIcon />}
+          />
+          <OptionButton
             selected
             text="Checkbox helper text"
             onClick={() => {}}
@@ -85,6 +94,14 @@ stories.add(
             optionType="radio"
             type="primary"
             icon={<AcneGlyph width={32} height={32} />}
+          />
+          <OptionButton
+            text="Main Text"
+            subtext="subtext"
+            onClick={() => {}}
+            optionType="radio"
+            type="primary"
+            icon={<PlusIcon />}
           />
           <OptionButton
             selected
@@ -108,6 +125,7 @@ stories.add(
         <OptionsContainer>
           <OptionButton
             text={text('text', 'Helper text')}
+            subtext={text('subtext', 'subtext')}
             onClick={() => {}}
             optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
             type={select('type', ['primary', 'secondary'], 'primary')}
@@ -115,6 +133,7 @@ stories.add(
           />
           <OptionButton
             text={text('text', 'Helper text')}
+            subtext={text('subtext', 'subtext')}
             onClick={() => {}}
             optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
             type={select('type', ['primary', 'secondary'], 'primary')}

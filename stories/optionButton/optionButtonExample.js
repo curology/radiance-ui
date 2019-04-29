@@ -2,22 +2,23 @@ import React from 'react';
 import { css } from '@emotion/core';
 
 import { OptionButton } from 'src/shared-components';
+import PlusIcon from 'src/svgs/icons/plus-icon.svg';
+import EqualsIcon from 'src/svgs/icons/equals-icon.svg';
+import MinusIcon from 'src/svgs/icons/minus-icon.svg';
 
 class OptionButtonExample extends React.Component {
   state = {
-    activeIndex: 0,
+    active: '',
   };
 
-  options = ['Good!', 'Not so well...'];
-
-  onClick = index => {
+  onClick = value => {
     this.setState({
-      activeIndex: index,
+      active: value,
     });
   };
 
   render() {
-    const { activeIndex } = this.state;
+    const { active } = this.state;
 
     return (
       <div
@@ -27,22 +28,33 @@ class OptionButtonExample extends React.Component {
           padding-top: 40px;
         `}
       >
-        {this.options.map((text, index) => (
-          <div
-            css={css`
-              margin-bottom: 32px;
-            `}
-            key={text}
-          >
-            <OptionButton
-              selected={activeIndex === index}
-              text={text}
-              onClick={() => this.onClick(index)}
-              optionType="radio"
-              type="primary"
-            />
-          </div>
-        ))}
+        <OptionButton
+          selected={active === 'improving'}
+          text="Improving"
+          subtext="fewer issues"
+          onClick={() => this.onClick('improving')}
+          optionType="radio"
+          type="primary"
+          icon={<PlusIcon />}
+        />
+        <OptionButton
+          selected={active === 'nochange'}
+          text="No Change"
+          subtext="continued issues"
+          onClick={() => this.onClick('nochange')}
+          optionType="radio"
+          type="primary"
+          icon={<EqualsIcon />}
+        />
+        <OptionButton
+          selected={active === 'worsening'}
+          text="Worsening"
+          subtext="more issues than usual"
+          onClick={() => this.onClick('worsening')}
+          optionType="radio"
+          type="primary"
+          icon={<MinusIcon />}
+        />
       </div>
     );
   }
