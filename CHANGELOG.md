@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.30
+- Added OffClickWrapper documentation ([PR #96](https://github.com/PocketDerm/radiance-ui/pull/96))
+
 ## v2.0.29
 - Modal Component - fix global styles ([PR #95](https://github.com/PocketDerm/radiance-ui/pull/95))
 
