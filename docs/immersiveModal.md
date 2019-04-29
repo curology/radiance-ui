@@ -96,6 +96,7 @@ class DefaultImmersiveModal extends React.Component {
 | canBeClosed | bool | no | true | If false, the close icon does not render and the onClose function does not execute |
 | children | node | yes | - | Node that will render when the modal is visible |
 | header | node | no | - | Node that will render at the top of the modal and without padding, most commonly used for images |
+| size | string | no | "small" | Sets the max-width for the desktop version. The small or default value is `616px`. You can pass `medium` value for a `776px` version |
 
 ### Notes
 

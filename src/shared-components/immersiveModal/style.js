@@ -32,8 +32,7 @@ export const ModalContainer = styled.div`
 
   ${MEDIA_QUERIES.mdUp} {
     height: auto;
-    max-width: ${({ maxWidth }) =>
-      maxWidth === 'medium' ? `776px` : `${BREAKPOINTS.sm}px`};
+    max-width: ${({ maxWidth }) => (maxWidth === 'medium' ? `776px` : `616px`)};
     margin-bottom: ${SPACING.base};
     margin-top: ${SPACING.base};
   }
