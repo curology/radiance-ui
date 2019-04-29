@@ -4,7 +4,7 @@ import { OffClickWrapper, Container } from 'src/shared-components';
 
 class OffClickWrapperExample extends React.Component {
   state = {
-    text: '   Click outside this container to call the onOffClick handler...',
+    text: 'Click outside this container to call the onOffClick handler...',
   };
 
   handleOffClick = () => {
