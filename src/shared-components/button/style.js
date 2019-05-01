@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, COLORS, SPACING } from '../../constants';
+import { ANIMATION, COLORS, SPACING, BOX_SHADOWS } from '../../constants';
 
 const primaryStyles = css`
   background-color: ${COLORS.purple};
@@ -59,6 +59,19 @@ const quaternaryStyles = css`
   }
 `;
 
+const actionStyles = loading => css`
+  border-width: 1px;
+  border-color: ${COLORS.border};
+  background-color: ${COLORS.white};
+  color: ${COLORS.purple100};
+  fill: ${COLORS.purple100};
+  box-shadow: ${loading ? 'none' : BOX_SHADOWS.clickable};
+
+  &:hover {
+    box-shadow: ${loading ? 'none' : BOX_SHADOWS.clickableHover};
+  }
+`;
+
 const loadingStyles = css`
   cursor: not-allowed;
 
@@ -93,6 +106,8 @@ function parseTheme(disabled, buttonType, loading) {
       return tertiaryStyles;
     case 'quaternary':
       return quaternaryStyles;
+    case 'action':
+      return actionStyles(loading);
     default:
       return primaryStyles;
   }

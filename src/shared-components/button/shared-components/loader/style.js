@@ -22,6 +22,10 @@ const quaternaryLoadingStyles = css`
   background-color: ${COLORS.purple70};
 `;
 
+const actionLoadingStyles = css`
+  background-color: ${COLORS.purple100};
+`;
+
 const ButtonLoader = styled.div`
   display: flex;
   align-items: center;
@@ -47,6 +51,8 @@ const ButtonLoader = styled.div`
           return accentLoadingStyles;
         case 'quaternary':
           return quaternaryLoadingStyles;
+        case 'action':
+          return actionLoadingStyles;
         default:
           return primaryLoadingStyles;
       }
