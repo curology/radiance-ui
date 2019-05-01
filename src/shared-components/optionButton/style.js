@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
+import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, ANIMATION, SPACING, BOX_SHADOWS } from '../../constants';
 import Container from '../container';
 
@@ -95,7 +96,16 @@ export const IconWrapper = styled.div`
     `};
 `;
 
-export const Text = styled.p`
-  color: ${COLORS.purple85};
+export const TextContainer = styled.div`
   margin-left: ${SPACING.small};
+`;
+
+export const Text = styled.div`
+  color: ${COLORS.purple85};
+  line-height: 1.5;
+`;
+
+export const SubText = styled.div`
+  ${TYPOGRAPHY_STYLE.caption};
+  line-height: 1.5;
 `;

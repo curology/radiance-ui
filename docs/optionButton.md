@@ -11,13 +11,14 @@ import { OptionButton } from 'radiance-ui';
   type="primary"
 />
 
-// With custom Icon
+// With custom Icon and subtext
 <OptionButton
-  text="Checkbox helper text"
+  text="Main text"
+  subtext="subtext"
   onClick={() => {}}
-  optionType="checkbox"
+  optionType="radio"
   type="primary"
-  icon={<AcneGlyph width={32} height={32} />}
+  icon={<PlusIcon />}
 />
 
 // Selected
@@ -41,3 +42,4 @@ import { OptionButton } from 'radiance-ui';
 | optionType    | string         | yes     | -          | must be either: `checkbox` or `radio` |
 | type     | string         | no      | `primary`  | must be either: `primary` or `secondary` |
 | selected      | bool           | no      | false      | controls the selected state  |
+| subtext      | string           | no      | -      | optional text to display below the main label  |
