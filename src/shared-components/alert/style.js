@@ -54,6 +54,9 @@ export const AlertContainer = styled.div`
   margin: 0 auto ${SPACING.xsmall};
   opacity: ${props => (props.exiting ? '0' : '1')};
   padding: 7px 0px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
   position: relative;
   text-align: left;
   transform: ${props =>
