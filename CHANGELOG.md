@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.31
+- Added OptionButton subtext prop ([PR #98](https://github.com/PocketDerm/radiance-ui/pull/98))
+
 ## v2.0.30
 - Added OffClickWrapper documentation ([PR #96](https://github.com/PocketDerm/radiance-ui/pull/96))
 
