@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { Global } from '@emotion/core';
 
+import { RoundButton } from '../button';
 import CloseIcon from '../../svgs/icons/close-icon.svg';
 import keyPressMatch from '../../utils/keyPressMatch';
 import KEYCODES from '../../constants/keycodes';
@@ -118,8 +119,12 @@ class Modal extends React.Component {
           >
             <ModalBox isVisible={isVisible} onClick={this.stopPropagation}>
               {canBeClosed && (
-                <ModalCloseIcon onClick={this.closeModal}>
-                  <CloseIcon />
+                <ModalCloseIcon>
+                  <RoundButton
+                    buttonType="action"
+                    icon={<CloseIcon />}
+                    onClick={this.closeModal}
+                  />
                 </ModalCloseIcon>
               )}
               {children}

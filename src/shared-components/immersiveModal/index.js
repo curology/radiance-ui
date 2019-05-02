@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { RoundButton } from '../button';
 import KEYCODES from '../../constants/keycodes';
 import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
@@ -22,7 +23,7 @@ class ImmersiveModal extends React.Component {
     canBeClosed: PropTypes.bool,
     onClose: PropTypes.func,
     header: PropTypes.node,
-    width: PropTypes.oneOf(['small', 'medium'])
+    width: PropTypes.oneOf(['small', 'medium']),
   };
 
   static defaultProps = {
@@ -74,16 +75,18 @@ class ImmersiveModal extends React.Component {
   };
 
   render() {
-    const {
-      children, canBeClosed, onClose, header, width,
-    } = this.props;
+    const { children, canBeClosed, onClose, header, width } = this.props;
     return ReactDOM.createPortal(
       <Overlay>
         <ModalContainer maxWidth={width}>
           <OffClickWrapper onOffClick={this.closeModal}>
             {canBeClosed && (
-              <CloseIconContainer onClick={onClose}>
-                <CloseIcon />
+              <CloseIconContainer>
+                <RoundButton
+                  buttonType="action"
+                  icon={<CloseIcon />}
+                  onClick={onClose}
+                />
               </CloseIconContainer>
             )}
             {header}
