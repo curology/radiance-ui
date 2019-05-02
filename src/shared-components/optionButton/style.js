@@ -42,7 +42,7 @@ export const FlexContainer = styled.div`
 
 const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
   border: 2px solid;
-  border-color: ${getTypeColor(type)};
+  border-color: ${COLORS.primary};
   background: ${COLORS.white};
   width: 32px;
   height: 32px;
@@ -62,6 +62,7 @@ const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
   ${selected &&
     css`
       background: ${getTypeColor(type)};
+      border-color: ${getTypeColor(type)};
 
       svg {
         opacity: 1;
@@ -82,8 +83,8 @@ export const IconWrapper = styled.div`
 
   svg {
     opacity: 1;
-    color: ${props => getTypeColor(props.type)};
-    fill: ${props => getTypeColor(props.type)};
+    color: ${COLORS.primary};
+    fill: ${COLORS.primary};
   }
 
   ${({ selected }) =>
