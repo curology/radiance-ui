@@ -20,30 +20,35 @@ class DefaultImmersiveModal extends React.Component {
   state = {
     defaultIsOpen: false,
     headerIsOpen: false,
-    mediumIsOpen: false,
   };
 
   onOpenModal = modal => this.setState({ [`${modal}IsOpen`]: true });
 
-  onClose = () => this.setState({
-    defaultIsOpen: false,
-    headerIsOpen: false,
-    mediumIsOpen: false,
-  });
+  onClose = () =>
+    this.setState({
+      defaultIsOpen: false,
+      headerIsOpen: false,
+    });
 
   render() {
-    const { defaultIsOpen, headerIsOpen, mediumIsOpen} = this.state;
+    const { defaultIsOpen, headerIsOpen } = this.state;
 
     return (
       <div>
-        <Button onClick={() => this.onOpenModal('default')}>Open ImmersiveModal</Button>
+        <Button onClick={() => this.onOpenModal('default')}>
+          Open ImmersiveModal
+        </Button>
         {defaultIsOpen && (
           <ImmersiveModal onClose={this.onClose}>
-            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body.</ImmersiveModal.Body>
+            <ImmersiveModal.Title>
+              This is styled with ImmersiveModal.Title
+            </ImmersiveModal.Title>
+            <ImmersiveModal.Body>
+              This is styled with ImmersiveModal.Body.
+            </ImmersiveModal.Body>
             <ImmersiveModal.Footer>
-              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
-              from the body.
+              This is styled with ImmersiveModal.Footer. It gives us a padding
+              to separate from the body.
               <Button.Container>
                 <Button onClick={this.onClose}>Close ImmersiveModal</Button>
               </Button.Container>
@@ -55,38 +60,22 @@ class DefaultImmersiveModal extends React.Component {
           Open ImmersiveModal with Header
         </Button>
         {headerIsOpen && (
-          <ImmersiveModal
-            onClose={this.onClose}
-            header={<HeaderImage />}
-          >
-            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body</ImmersiveModal.Body>
+          <ImmersiveModal onClose={this.onClose} header={<HeaderImage />}>
+            <ImmersiveModal.Title>
+              This is styled with ImmersiveModal.Title
+            </ImmersiveModal.Title>
+            <ImmersiveModal.Body>
+              This is styled with ImmersiveModal.Body
+            </ImmersiveModal.Body>
             <ImmersiveModal.Footer>
-              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
-              from the body.
+              This is styled with ImmersiveModal.Footer. It gives us a padding
+              to separate from the body.
               <Button.Container>
                 <Button onClick={this.onClose}>Close ImmersiveModal</Button>
               </Button.Container>
             </ImmersiveModal.Footer>
           </ImmersiveModal>
         )}
-        <br/>
-        <Button onClick={() => this.onOpenModal('medium')}>
-          Open medium width ImmersiveModal
-        </Button>
-        {mediumIsOpen && (
-          <ImmersiveModal onClose={this.onClose} width="medium">
-            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body.</ImmersiveModal.Body>
-            <ImmersiveModal.Footer>
-              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
-              from the body.
-              <Button.Container>
-                <Button onClick={this.onClose}>Close ImmersiveModal</Button>
-              </Button.Container>
-            </ImmersiveModal.Footer>
-          </ImmersiveModal>
-        )}        
       </div>
     );
   }
