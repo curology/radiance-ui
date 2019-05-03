@@ -42,7 +42,6 @@ const defaultAlertStyles = css`
 `;
 
 export const AlertContainer = styled.div`
-  align-items: flex-start;
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   border-width: 1px;
   border-style: solid;
@@ -50,14 +49,13 @@ export const AlertContainer = styled.div`
   cursor: pointer;
   display: flex;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-  justify-content: space-around;
   margin: 0 auto ${SPACING.xsmall};
   opacity: ${props => (props.exiting ? '0' : '1')};
-  padding: 7px 0px;
-  min-height: 48px;
+  padding: 11px 0px;
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: flex-start;
   text-align: left;
   transform: ${props =>
     props.exiting ? 'translate3d(0, -24px, 0)' : 'translate3d(0, 0, 0)'};
