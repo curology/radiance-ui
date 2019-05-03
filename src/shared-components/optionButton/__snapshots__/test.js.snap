@@ -64,6 +64,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   transition: all 350ms;
   border-radius: 4px;
   background: #332e54;
+  border-color: #332e54;
 }
 
 .emotion-0 svg {
@@ -169,7 +170,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-0 {
   border: 2px solid;
-  border-color: #a6a1e2;
+  border-color: #332e54;
   background: #ffffff;
   width: 32px;
   height: 32px;
@@ -203,8 +204,8 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-0 svg {
   opacity: 1;
-  color: #a6a1e2;
-  fill: #a6a1e2;
+  color: #332e54;
+  fill: #332e54;
 }
 
 <div
