@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import {
-  COLORS,
-  SPACING,
-  ANIMATION,
-  BOX_SHADOWS,
-} from '../../constants';
+import { COLORS, SPACER, ANIMATION, BOX_SHADOWS } from '../../constants';
 
 export const SelectorContainer = styled.div`
   align-items: center;
@@ -29,7 +24,7 @@ export const OuterContainer = styled.div`
 
       ${({ selector }) => css`
         border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
-      `}
+      `};
     }
   }
 `;
@@ -60,17 +55,14 @@ export const Selector = styled.div`
   cursor: pointer;
   display: flex;
   ${({ size }) => css`
-    width: ${size === 'large' ? '3rem' : SPACING.medium};
-    height: ${size === 'large' ? '3rem' : SPACING.medium};
-  `}
-  justify-content: center;
+    width: ${size === 'large' ? '3rem' : SPACER.xlarge};
+    height: ${size === 'large' ? '3rem' : SPACER.xlarge};
+  `} justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
 
   ${({ selector }) => css`
     border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
-  `}
-
-  ${({ type, checked }) => {
+  `} ${({ type, checked }) => {
     switch (type) {
       case 'primary':
         return primarySelectorStyle(checked);
@@ -88,8 +80,8 @@ export const Selector = styled.div`
 `;
 
 export const TextContainer = styled.p`
-  margin-left: ${SPACING.small};
-  margin-top: ${SPACING.xxsmall};
+  margin-left: ${SPACER.medium};
+  margin-top: ${SPACER.xsmall};
   min-width: 125px;
   text-align: left;
 `;

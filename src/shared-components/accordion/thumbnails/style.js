@@ -2,12 +2,12 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../../typography';
-import { COLORS, SPACING } from '../../../constants';
+import { COLORS, SPACER } from '../../../constants';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  margin-left: ${SPACING.base};
+  margin-left: ${SPACER.large};
 `;
 
 const thumbnailBase = css`

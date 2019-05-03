@@ -4,15 +4,25 @@ import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
 
-import ButtonReadme from 'docs/button/button.md'
+import ButtonReadme from 'docs/button/button.md';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import { Button, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 const ButtonStory = withDocs(ButtonReadme, () => (
   <React.Fragment>
-    <Button.Container css={css`width: 50%; display: inline-block;`}>
-      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+    <Button.Container
+      css={css`
+        width: 50%;
+        display: inline-block;
+      `}
+    >
+      <Typography.Heading
+        css={css`
+          text-align: left;
+          padding: ${SPACER.large} 0 ${SPACER.medium};
+        `}
+      >
         Without Icon
       </Typography.Heading>
       <Button>Primary Button</Button>
@@ -33,8 +43,18 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       </Button>
     </Button.Container>
 
-    <Button.Container css={css`width: 50%; display: inline-block;`}>
-      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+    <Button.Container
+      css={css`
+        width: 50%;
+        display: inline-block;
+      `}
+    >
+      <Typography.Heading
+        css={css`
+          text-align: left;
+          padding: ${SPACER.large} 0 ${SPACER.medium};
+        `}
+      >
         With Icon
       </Typography.Heading>
       <Button icon={<CheckmarkIcon />}>Primary Button</Button>
@@ -63,13 +83,21 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
         Quaternary Loading
       </Button>
-
     </Button.Container>
-    <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+    <Typography.Heading
+      css={css`
+        text-align: left;
+        padding: ${SPACER.large} 0 ${SPACER.medium};
+      `}
+    >
       With Knobs
     </Typography.Heading>
     <Button
-      buttonType={select('buttonType', ['primary', 'secondary', 'tertiary', 'quaternary'], 'primary')}
+      buttonType={select(
+        'buttonType',
+        ['primary', 'secondary', 'tertiary', 'quaternary'],
+        'primary'
+      )}
       loading={boolean('loading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}

@@ -2,22 +2,21 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { MEDIA_QUERIES, SPACING } from '../../../../constants';
+import { MEDIA_QUERIES, SPACER } from '../../../../constants';
 
 const reverseStyles = css`
   flex-direction: column-reverse;
 
   & > :not(:last-child) {
     margin-bottom: 0;
-    margin-top: ${SPACING.small};
+    margin-top: ${SPACER.medium};
   }
 `;
-
 
 const flexMdUpStyles = css`
   & > :not(:last-child) {
     margin-bottom: 0;
-    margin-top: ${SPACING.small};
+    margin-top: ${SPACER.medium};
   }
 `;
 
@@ -34,7 +33,7 @@ const ButtonContainer = styled.div`
   }
 
   & > :not(:last-child) {
-    margin-bottom: ${SPACING.small};
+    margin-bottom: ${SPACER.medium};
     margin-top: 0;
   }
 
@@ -42,7 +41,7 @@ const ButtonContainer = styled.div`
 
   ${MEDIA_QUERIES.mdUp} {
     & > :not(:last-child) {
-      margin-bottom: ${SPACING.small};
+      margin-bottom: ${SPACER.medium};
       margin-top: 0;
       margin-right: 0;
     }

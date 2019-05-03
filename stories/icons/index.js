@@ -6,7 +6,7 @@ import { css } from '@emotion/core';
 
 import IconReadme from 'docs/icon.md';
 import { Typography } from 'src/shared-components';
-import { COLORS, SPACING } from 'src/constants';
+import { COLORS, SPACER } from 'src/constants';
 import CameraIcon from 'src/svgs/icons/camera-icon.svg';
 
 import IconList from './IconLibrary';
@@ -19,13 +19,26 @@ stories.add(
   'Usage',
   withDocs(IconReadme, () => (
     <React.Fragment>
-      <div css={css`text-align: left;`}>
+      <div
+        css={css`
+          text-align: left;
+        `}
+      >
         <CameraIcon width={16} height={16} />
       </div>
-      <Typography.Heading css={css`text-align: left; padding: ${SPACING.base} 0 ${SPACING.small};`}>
+      <Typography.Heading
+        css={css`
+          text-align: left;
+          padding: ${SPACER.large} 0 ${SPACER.medium};
+        `}
+      >
         With Knobs
       </Typography.Heading>
-      <div css={css`text-align: left;`}>
+      <div
+        css={css`
+          text-align: left;
+        `}
+      >
         <CameraIcon
           width={number('width', 16)}
           height={number('height', 16)}
@@ -39,6 +52,4 @@ stories.add(
   ))
 );
 
-stories.add('Icon Library', () => (
-  <IconList />
-));
+stories.add('Icon Library', () => <IconList />);

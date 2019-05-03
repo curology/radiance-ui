@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { SPACING, COLORS } from '../../constants';
+import { SPACER, COLORS } from '../../constants';
 
 export const Card = styled.div`
   width: 311px !important;
   min-height: 48px;
-  margin: 0 ${SPACING.xsmall};
+  margin: 0 ${SPACER.small};
 `;
 
 const primaryStyles = css`
@@ -45,13 +45,13 @@ const dotStyles = css`
 
   li {
     border-radius: 50%;
-    height: ${SPACING.xxsmall};
-    width: ${SPACING.xxsmall};
-    margin-right: ${SPACING.xxsmall};
+    height: ${SPACER.xsmall};
+    width: ${SPACER.xsmall};
+    margin-right: ${SPACER.xsmall};
     opacity: 0.25;
 
     &:first-of-type {
-      margin-left: ${SPACING.xxsmall};
+      margin-left: ${SPACER.xsmall};
     }
 
     button {
@@ -71,7 +71,7 @@ const reactSlickStyles = css`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 ${SPACING.base};
+    padding: 0 ${SPACER.large};
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -183,7 +183,7 @@ export const OuterContainer = styled.div`
 
 export const InnerContainer = styled.div`
   overflow: hidden !important;
-  padding-bottom: ${SPACING.base};
+  padding-bottom: ${SPACER.large};
 
   ${reactSlickStyles};
 

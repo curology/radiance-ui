@@ -5,7 +5,7 @@ import {
   COLORS,
   MEDIA_QUERIES,
   BOX_SHADOWS,
-  SPACING,
+  SPACER,
   ANIMATION,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
@@ -49,7 +49,7 @@ export const AlertContainer = styled.div`
   cursor: pointer;
   display: flex;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-  margin: 0 auto ${SPACING.xsmall};
+  margin: 0 auto ${SPACER.small};
   opacity: ${props => (props.exiting ? '0' : '1')};
   padding: 11px 0px;
   display: flex;
@@ -76,7 +76,7 @@ export const AlertContainer = styled.div`
   ${MEDIA_QUERIES.lgUp} {
     animation: ${fadeInDesktop} ${ANIMATION.defaultTiming} 1;
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-    margin-bottom: ${SPACING.small};
+    margin-bottom: ${SPACER.medium};
     transform: ${props =>
       props.exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
   }
@@ -89,24 +89,24 @@ export const AlertsContainer = styled.div`
   left: 0;
   position: fixed;
   right: 0;
-  top: ${SPACING.small};
+  top: ${SPACER.medium};
   z-index: 99999;
 
   ${MEDIA_QUERIES.mdUp} {
     left: auto;
-    right: ${SPACING.small};
-    top: ${SPACING.small};
+    right: ${SPACER.medium};
+    top: ${SPACER.medium};
   }
 `;
 
 export const AlertContentContainer = styled.div`
   display: flex;
-  padding: 0 ${SPACING.base} 0 ${SPACING.small};
+  padding: 0 ${SPACER.large} 0 ${SPACER.medium};
   width: 100%;
 `;
 
 export const alertIconStyles = css`
-  margin: 2.5px ${SPACING.small} 0px 0px;
-  min-height: ${SPACING.small};
-  min-width: ${SPACING.small};
+  margin: 2.5px ${SPACER.medium} 0px 0px;
+  min-height: ${SPACER.medium};
+  min-width: ${SPACER.medium};
 `;

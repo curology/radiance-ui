@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import {
   COLORS,
-  SPACING,
+  SPACER,
   BOX_SHADOWS,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
@@ -95,7 +95,7 @@ export const TooltipBox = styled.div`
   color: ${COLORS.purpleTint2};
   min-width: 100px;
   opacity: ${({ open }) => (open ? '1' : '0')};
-  padding: 11px ${SPACING.small};
+  padding: 11px ${SPACER.medium};
   pointer-events: none;
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};

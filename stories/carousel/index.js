@@ -13,7 +13,7 @@ import { css } from '@emotion/core';
 
 import CarouselReadme from 'docs/carousel.md';
 import { Carousel, Typography } from 'src/shared-components';
-import { SPACING, COLORS } from 'src/constants';
+import { SPACER, COLORS } from 'src/constants';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -28,19 +28,19 @@ const FlexContainer = styled.div`
 
 const CarouselContainer = styled.div`
   background-color: ${({ bgColor }) => bgColor || COLORS.background};
-  margin: ${SPACING.small} ${SPACING.base};
-  padding: ${SPACING.small} 0;
+  margin: ${SPACER.medium} ${SPACER.large};
+  padding: ${SPACER.medium} 0;
 `;
 
 const Header = styled.h3`
-  margin-bottom: ${SPACING.small};
+  margin-bottom: ${SPACER.medium};
   text-align: center;
 `;
 
 const Card = styled(Carousel.Card)`
   background-color: ${COLORS.border};
   text-align: center;
-  padding: ${SPACING.base};
+  padding: ${SPACER.large};
 `;
 
 const cards = [
@@ -115,7 +115,7 @@ stories.add(
 
       <Typography.Heading
         css={css`
-          margin-top: ${SPACING.base};
+          margin-top: ${SPACER.large};
         `}
       >
         With Knobs:

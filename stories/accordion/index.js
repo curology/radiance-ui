@@ -7,7 +7,7 @@ import { css } from '@emotion/core';
 
 import AccordionReadme from 'docs/accordion.md';
 import { Accordion, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 import DefaultAccordion from './defaultAccordion';
 
@@ -19,12 +19,24 @@ stories.add(
   'Usage',
   withDocs(AccordionReadme, () => (
     <React.Fragment>
-      <div css={css`text-align: left;`}>
+      <div
+        css={css`
+          text-align: left;
+        `}
+      >
         <DefaultAccordion />
-        <Typography.Heading css={css`padding: ${SPACING.base} 0 ${SPACING.small};`}>
+        <Typography.Heading
+          css={css`
+            padding: ${SPACER.large} 0 ${SPACER.medium};
+          `}
+        >
           With Knobs
         </Typography.Heading>
-        <div css={css`width: 400px;`}>
+        <div
+          css={css`
+            width: 400px;
+          `}
+        >
           <Accordion.Container>
             <Accordion
               title={

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, COLORS, SPACING, BOX_SHADOWS } from '../../constants';
+import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
 
 const primaryStyles = css`
   background-color: ${COLORS.purple};
@@ -131,7 +131,7 @@ export const baseButtonStyles = ({
   min-height: 52px;
   min-width: 208px;
   opacity: 1;
-  padding: 0 ${SPACING.base};
+  padding: 0 ${SPACER.large};
   position: relative;
   transition: all ${ANIMATION.defaultTiming} ease-in-out;
   text-decoration: none;
@@ -164,7 +164,7 @@ export const ButtonContents = styled.div`
   display: flex;
   height: 100%;
   justify-content: center;
-  padding: ${SPACING.small} 0;
+  padding: ${SPACER.medium} 0;
   transition: transform ${ANIMATION.defaultTiming};
   width: 100%;
 
@@ -189,7 +189,7 @@ export const ButtonContents = styled.div`
   & > svg {
     opacity: ${({ loading }) => (loading ? 0 : 1)};
     transition: opacity ${ANIMATION.defaultTiming};
-    margin-right: ${SPACING.small};
+    margin-right: ${SPACER.medium};
     margin-top: -5px;
   }
 `;
@@ -202,7 +202,7 @@ export const ButtonText = styled.span`
   ${({ loading, hasIcon }) => {
     if (loading && !hasIcon) {
       return css`
-        padding-left: ${SPACING.small};
+        padding-left: ${SPACER.medium};
       `;
     }
   }};

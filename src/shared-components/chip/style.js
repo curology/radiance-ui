@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, SPACING } from '../../constants';
+import { COLORS, SPACER } from '../../constants';
 
 /* eslint-disable */
 export const ChipText = styled.span`
@@ -10,7 +10,7 @@ export const ChipText = styled.span`
   letter-spacing: 0.5px;
   font-size: 10px;
   line-height: 1;
-  padding: ${SPACING.xsmall} 12px;
+  padding: ${SPACER.small} 12px;
   position: relative;
   top: 0.5px;
 `;
@@ -50,12 +50,12 @@ const successStyle = css`
 
 export const ChipStyles = styled.div`
   align-items: center;
-  border-radius: ${SPACING.small};
+  border-radius: ${SPACER.medium};
   border: 1px solid;
   display: inline-flex;
-  height: ${SPACING.base};
+  height: ${SPACER.large};
   justify-content: center;
-  min-width: ${SPACING.medium};
+  min-width: ${SPACER.xlarge};
 
   ${({ status }) => {
     switch (status) {

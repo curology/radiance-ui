@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, BOX_SHADOWS, SPACING, ANIMATION } from '../../constants';
+import { COLORS, BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
 
 export const HintItem = styled.div`
   ${TYPOGRAPHY_STYLE.caption};
@@ -15,7 +15,7 @@ export const HintItem = styled.div`
 export const FieldContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${SPACING.small};
+  margin-bottom: ${SPACER.medium};
 `;
 
 export const Label = styled.label`
@@ -31,11 +31,11 @@ const inputStyles = css`
   border: 1px solid ${COLORS.border};
   border-radius: 0;
   color: ${COLORS.primaryTint1};
-  padding: 13px ${SPACING.small};
+  padding: 13px ${SPACER.medium};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
   outline: none;
-  margin-bottom: ${SPACING.xsmall};
+  margin-bottom: ${SPACER.small};
 
   &:active,
   &:focus {
@@ -64,7 +64,7 @@ const inputStyles = css`
 
 export const Input = styled.input`
   ${inputStyles};
-  padding-right: ${SPACING.medium};
+  padding-right: ${SPACER.xlarge};
 `;
 
 export const Textarea = styled.textarea`
@@ -72,10 +72,10 @@ export const Textarea = styled.textarea`
   color: ${COLORS.primary};
   display: block;
   height: 100%;
-  line-height: ${SPACING.base};
+  line-height: ${SPACER.large};
   margin: 0 auto;
   max-width: 35rem;
-  padding: ${SPACING.small};
+  padding: ${SPACER.medium};
   resize: none;
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
@@ -104,7 +104,7 @@ export const InputContainer = styled.div`
     opacity: 0;
     position: absolute;
     top: 20px;
-    right: ${SPACING.small};
+    right: ${SPACER.medium};
     width: 16px;
     height: 16px;
     fill: ${COLORS.statusRed};

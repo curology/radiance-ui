@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 import AvatarReadme from 'docs/avatar.md';
 import { Avatar, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 import accountImg from './account.png';
 import personImg from './person.jpg';
@@ -15,14 +15,14 @@ const MainContainer = styled.div`
 `;
 
 const AvatarContainer = styled.div`
-  margin: ${SPACING.base} 0 ${SPACING.large} 0;
+  margin: ${SPACER.large} 0 ${SPACER.x2large} 0;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
 
   ${Avatar} {
-    margin-right: ${SPACING.medium};
+    margin-right: ${SPACER.xlarge};
   }
 `;
 

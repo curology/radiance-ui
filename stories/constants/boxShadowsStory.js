@@ -2,16 +2,16 @@ import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 import * as BOX_SHADOWS from 'src/constants/boxShadows';
 import { Container, Typography } from 'src/shared-components';
 
 const MainContainer = styled.div`
-  padding: ${SPACING.medium};
+  padding: ${SPACER.xlarge};
 `;
 
 const BoxesContainer = styled.div`
-  margin: ${SPACING.medium} 0;
+  margin: ${SPACER.xlarge} 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -20,7 +20,7 @@ const BoxesContainer = styled.div`
 
 const baseBoxStyle = css`
   width: 350px;
-  margin: ${SPACING.base};
+  margin: ${SPACER.large};
 `;
 
 const boxShadowsStory = () => (

@@ -34,7 +34,7 @@ stories.add(
           <div
             key={category}
             css={css`
-              padding-bottom: ${CONSTANTS.SPACING.small};
+              padding-bottom: ${CONSTANTS.SPACER.medium};
             `}
           >
             <Typography.Heading>{category}</Typography.Heading>
