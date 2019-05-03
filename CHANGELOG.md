@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.32
+- Fixed Modal/Alerts/Tooltip spacing and secondary color for option button ([PR #97](https://github.com/PocketDerm/radiance-ui/pull/97) and [PR #100](https://github.com/PocketDerm/radiance-ui/pull/100))
+
 ## v2.0.31
 - Added OptionButton subtext prop ([PR #98](https://github.com/PocketDerm/radiance-ui/pull/98))
 

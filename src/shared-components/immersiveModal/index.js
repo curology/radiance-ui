@@ -23,7 +23,6 @@ class ImmersiveModal extends React.Component {
     canBeClosed: PropTypes.bool,
     onClose: PropTypes.func,
     header: PropTypes.node,
-    width: PropTypes.oneOf(['small', 'medium']),
   };
 
   static defaultProps = {
@@ -75,10 +74,10 @@ class ImmersiveModal extends React.Component {
   };
 
   render() {
-    const { children, canBeClosed, onClose, header, width } = this.props;
+    const { children, canBeClosed, onClose, header } = this.props;
     return ReactDOM.createPortal(
       <Overlay>
-        <ModalContainer maxWidth={width}>
+        <ModalContainer>
           <OffClickWrapper onOffClick={this.closeModal}>
             {canBeClosed && (
               <CloseIconContainer>

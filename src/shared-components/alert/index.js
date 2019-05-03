@@ -6,8 +6,8 @@ import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
 import {
-  AlertsContainer,
   AlertContainer,
+  AlertsContainer,
   AlertContentContainer,
   alertIconStyles,
 } from './style';
@@ -21,12 +21,15 @@ const alertIconMapping = {
 };
 
 class Alert extends React.Component {
-  static Container = ({ children }) => <AlertsContainer>{children}</AlertsContainer>;
+  static Container = ({ children }) => (
+    <AlertsContainer>{children}</AlertsContainer>
+  );
 
   static propTypes = {
     text: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
-    duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      .isRequired,
     onExit: PropTypes.func.isRequired,
   };
 
@@ -73,7 +76,9 @@ class Alert extends React.Component {
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
-    if (exited) { return null; }
+    if (exited) {
+      return null;
+    }
 
     return (
       <AlertContainer
@@ -84,7 +89,9 @@ class Alert extends React.Component {
       >
         <AlertContentContainer>
           <Icon
-            css={css`${alertIconStyles};`}
+            css={css`
+              ${alertIconStyles};
+            `}
             fill="currentColor"
           />
           {text}

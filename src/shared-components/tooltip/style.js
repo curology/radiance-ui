@@ -95,7 +95,7 @@ export const TooltipBox = styled.div`
   color: ${COLORS.purpleTint2};
   min-width: 100px;
   opacity: ${({ open }) => (open ? '1' : '0')};
-  padding: ${SPACING.base};
+  padding: 11px ${SPACING.small};
   pointer-events: none;
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};

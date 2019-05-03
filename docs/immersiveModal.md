@@ -64,23 +64,6 @@ class DefaultImmersiveModal extends React.Component {
             </ImmersiveModal.Footer>
           </ImmersiveModal>
         )}
-        <br/>
-        <Button onClick={() => this.onOpenModal('medium')}>
-          Open medium width ImmersiveModal
-        </Button>
-        {mediumIsOpen && (
-          <ImmersiveModal onClose={this.onClose} width="medium">
-            <ImmersiveModal.Title>This is styled with ImmersiveModal.Title</ImmersiveModal.Title>
-            <ImmersiveModal.Body>This is styled with ImmersiveModal.Body.</ImmersiveModal.Body>
-            <ImmersiveModal.Footer>
-              This is styled with ImmersiveModal.Footer. It gives us a padding to separate
-              from the body.
-              <Button.Container>
-                <Button onClick={this.onClose}>Close ImmersiveModal</Button>
-              </Button.Container>
-            </ImmersiveModal.Footer>
-          </ImmersiveModal>
-        )}  
       </div>
     );
   }
