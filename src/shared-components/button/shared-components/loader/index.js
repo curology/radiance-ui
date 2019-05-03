@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ButtonLoader from './style';
 
-const Loader = ({loading, disabled, buttonType, className, textColor }) => (
+const Loader = ({ loading, disabled, buttonType, className, textColor }) => (
   <ButtonLoader
     loading={loading}
     disabled={disabled}
@@ -27,10 +27,10 @@ Loader.propTypes = {
     'secondary',
     'tertiary',
     'quaternary',
+    'action',
   ]),
   className: PropTypes.string,
   textColor: PropTypes.string,
 };
 
 export default Loader;
-

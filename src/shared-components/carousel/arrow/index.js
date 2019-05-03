@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { COLORS } from '../../../constants';
+import { RoundButton } from '../../button';
 import ArrowLeftIcon from '../../../svgs/icons/arrow-left-icon.svg';
 import ArrowRightIcon from '../../../svgs/icons/arrow-right-icon.svg';
 import ArrowContainer from './style';
@@ -24,14 +24,21 @@ class Arrow extends React.Component {
   render() {
     const { prev, next, disabled } = this.props;
     return (
-      <ArrowContainer
-        prev={prev}
-        next={next}
-        disabled={disabled}
-        onClick={this.arrowClickHandler}
-      >
-        {prev && <ArrowLeftIcon fill={COLORS.purple} />}
-        {next && <ArrowRightIcon fill={COLORS.purple} />}
+      <ArrowContainer prev={prev} next={next} disabled={disabled}>
+        {prev && (
+          <RoundButton
+            buttonType="action"
+            icon={<ArrowLeftIcon />}
+            onClick={this.arrowClickHandler}
+          />
+        )}
+        {next && (
+          <RoundButton
+            buttonType="action"
+            icon={<ArrowRightIcon />}
+            onClick={this.arrowClickHandler}
+          />
+        )}
       </ArrowContainer>
     );
   }

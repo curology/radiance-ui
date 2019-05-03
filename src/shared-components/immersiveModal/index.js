@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { RoundButton } from '../button';
 import KEYCODES from '../../constants/keycodes';
 import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
@@ -79,8 +80,12 @@ class ImmersiveModal extends React.Component {
         <ModalContainer>
           <OffClickWrapper onOffClick={this.closeModal}>
             {canBeClosed && (
-              <CloseIconContainer onClick={onClose}>
-                <CloseIcon />
+              <CloseIconContainer>
+                <RoundButton
+                  buttonType="action"
+                  icon={<CloseIcon />}
+                  onClick={onClose}
+                />
               </CloseIconContainer>
             )}
             {header}

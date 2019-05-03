@@ -3,46 +3,34 @@
 
 ```jsx
 import { RoundButton } from 'radiance-ui';
-import { CheckmarkIcon } from 'radiance-ui/lib/icons';
+import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CloseIcon } from 'radiance-ui/lib/icons';
 
-<React.Fragment>
-  <RoundButton.Container multi>
-    <RoundButton icon={<CheckmarkIcon />}>Primary</RoundButton>
-    <RoundButton buttonType="secondary" icon={<ArrowRightIcon />}>
-      Secondary
-    </RoundButton>
-  </RoundButton.Container>
-  <RoundButton.Container multi>
-    <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />}>
-      Tertiary
-    </RoundButton>
-    <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>
-      Quaternary
-    </RoundButton>
-  </RoundButton.Container>
-  <RoundButton.Container multi>
-    <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
-      Disabled
-    </RoundButton>
-  </RoundButton.Container>
+// Default
+<RoundButton icon={<CheckmarkIcon />}>Primary</RoundButton>
+<RoundButton buttonType="secondary" icon={<ArrowRightIcon />}>Secondary</RoundButton>
+<RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />}>Tertiary</RoundButton>
+<RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>Quaternary</RoundButton>
+<RoundButton buttonType="action" icon={<CloseIcon />}>Action</RoundButton>
 
-  <RoundButton.Container multi>
-    <RoundButton icon={<ArrowLeftIcon />} loading>
-      Primary Loading
-    </RoundButton>
-    <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} loading>
-      Secondary Loading
-    </RoundButton>
-  </RoundButton.Container>
-  <RoundButton.Container multi>
-    <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} loading>
-      Tertiary Loading
-    </RoundButton>
-    <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} loading>
-      Quaternary Loading
-    </RoundButton>
-  </RoundButton.Container>
-</React.Fragment>
+// Disabled
+<RoundButton icon={<ArrowLeftIcon />} disabled>Primary</RoundButton>
+<RoundButton buttonType="secondary" icon={<ArrowRightIcon />} disabled>Secondary</RoundButton>
+<RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>Tertiary</RoundButton>
+<RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} disabled>Quaternary</RoundButton>
+<RoundButton buttonType="action" icon={<CloseIcon />} disabled>Action</RoundButton>
+
+// Loading
+<RoundButton icon={<ArrowLeftIcon />} loading>Primary</RoundButton>
+<RoundButton buttonType="secondary" icon={<ArrowRightIcon />} loading>Secondary</RoundButton>
+<RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} loading>Tertiary</RoundButton>
+<RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} loading>Quaternary</RoundButton>
+<RoundButton buttonType="action" icon={<CloseIcon />} loading>Action</RoundButton>
+
+// Within RoundButton.Container (with multi prop)
+<RoundButton.Container multi>
+  <RoundButton icon={<ArrowLeftIcon />} />
+  <RoundButton icon={<ArrowRightIcon />} />
+</RoundButton.Container>
 ```
 
 <!-- STORY -->
@@ -50,7 +38,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 ### Proptypes
 | prop     | propType           | required | default | description                                                                                                                  |
 |----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`. |
+| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `action`. |
 | children | node | yes | - | node to be rendered inside the button.  Recommended to be the button text |
 | disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will look disabled |
 | icon | node | yes | null | icon to render in the button. Recommended to use one of Radiance's icons |

@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import {
-  ANIMATION,
   BREAKPOINTS,
   COLORS,
   MEDIA_QUERIES,
@@ -39,20 +38,10 @@ export const ModalContainer = styled.div`
 `;
 
 export const CloseIconContainer = styled.div`
-  cursor: pointer;
   position: absolute;
   right: ${SPACING.small};
   top: ${SPACING.small};
-  transform: scale(1, 1);
-  transition: all ${ANIMATION.defaultTiming};
-  z-index: 2000;
-  padding: ${SPACING.small};
-  background-color: ${COLORS.white};
-  border-radius: 50%;
-
-  &:hover {
-    transform: scale(1.1, 1.1);
-  }
+  z-index: ${Z_SCALE.e2000};
 `;
 
 export const CopyContainer = styled.div`

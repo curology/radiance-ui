@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import Typography from '../typography';
-import { COLORS, MEDIA_QUERIES, SPACING } from '../../constants';
+import { COLORS, MEDIA_QUERIES, SPACING, Z_SCALE } from '../../constants';
 
 export const ModalOverlay = styled.div`
   -webkit-overflow-scrolling: touch;
@@ -38,19 +38,10 @@ export const ModalBox = styled.div`
 `;
 
 export const ModalCloseIcon = styled.div`
-  cursor: pointer;
-  opacity: 0.75;
   position: absolute;
   right: ${SPACING.small};
   top: ${SPACING.small};
-  transform: scale(1, 1);
-  transition: all 350ms;
-  z-index: 2000;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1.1, 1.1);
-  }
+  z-index: ${Z_SCALE.e2000};
 `;
 
 export const ContentContainer = styled.div`

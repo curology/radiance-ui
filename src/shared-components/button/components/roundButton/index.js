@@ -19,6 +19,7 @@ const propTypes = {
     'secondary',
     'tertiary',
     'quaternary',
+    'action',
   ]),
   loading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
