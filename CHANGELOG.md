@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.33
+- Added RoundButton action type and refactor to use it in ImmersiveModal, Modal and Carousel ([PR #99](https://github.com/PocketDerm/radiance-ui/pull/99))
+
 ## v2.0.32
 - Fixed Modal/Alerts/Tooltip spacing and secondary color for option button ([PR #97](https://github.com/PocketDerm/radiance-ui/pull/97) and [PR #100](https://github.com/PocketDerm/radiance-ui/pull/100))
 
