@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.34
+- Added SPACER constants ([PR #101](https://github.com/PocketDerm/radiance-ui/pull/101))
+
 ## v2.0.33
 - Added RoundButton action type and refactor to use it in ImmersiveModal, Modal and Carousel ([PR #99](https://github.com/PocketDerm/radiance-ui/pull/99))
 
