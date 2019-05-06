@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import {
   COLORS,
   BOX_SHADOWS,
-  SPACING,
+  SPACER,
   ANIMATION,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
@@ -24,19 +24,19 @@ export const dropdownInputStyle = ({ textAlign }) => css`
   background-image: none;
 
   width: 100%;
-  min-height: ${SPACING.xlarge};
-  max-height: ${SPACING.xlarge};
+  min-height: ${SPACER.x4large};
+  max-height: ${SPACER.x4large};
 
   border: 1px solid ${COLORS.border};
   border-radius: 0;
 
   color: ${COLORS.purple85};
-  line-height: ${SPACING.xlarge};
+  line-height: ${SPACER.x4large};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  padding: 0 ${SPACING.medium} 0 ${SPACING.small};
+  padding: 0 ${SPACER.xlarge} 0 ${SPACER.medium};
   text-align: ${textAlign};
   text-align-last: ${textAlign};
   transition: 200ms ease-in-out;
@@ -63,7 +63,7 @@ export const IconContainer = styled.div`
   top: 0;
   bottom: 0;
 
-  width: ${SPACING.base};
+  width: ${SPACER.large};
   height: 100%;
   display: flex;
   align-items: center;
@@ -112,11 +112,11 @@ export const DropdownOptionsContainer = styled.ul`
 
 export const DropdownOption = styled.li`
   color: ${COLORS.purple85};
-  min-height: ${SPACING.xlarge};
+  min-height: ${SPACER.x4large};
 
   background-color: ${COLORS.white};
   cursor: pointer;
-  padding: 18px ${SPACING.small} 14px ${SPACING.small};
+  padding: 18px ${SPACER.medium} 14px ${SPACER.medium};
 
   &:hover {
     background-color: ${COLORS.infoBackground};

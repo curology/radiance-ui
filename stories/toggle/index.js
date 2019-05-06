@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 
 import ToggleReadme from 'docs/toggle.md';
 import { Toggle, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 import ToggleExample from './toggleExample';
 
@@ -15,7 +15,7 @@ const MainContainer = styled.div`
 
 const ToggleContainer = styled.div`
   width: 300px;
-  margin: ${SPACING.base} 0;
+  margin: ${SPACER.large} 0;
 `;
 
 const stories = storiesOf('Toggle', module);

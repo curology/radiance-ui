@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACING, Z_SCALE } from '../../../constants';
+import { SPACER, Z_SCALE } from '../../../constants';
 
 const ArrowContainer = styled.div`
   position: absolute;
@@ -9,8 +9,8 @@ const ArrowContainer = styled.div`
   transform: translate(0%, -50%);
   display: block;
 
-  ${({ prev }) => prev && `left: ${SPACING.xsmall};`};
-  ${({ next }) => next && `right: ${SPACING.xsmall};`};
+  ${({ prev }) => prev && `left: ${SPACER.small};`};
+  ${({ next }) => next && `right: ${SPACER.small};`};
 
   ${({ disabled }) => disabled && `display: none;`};
 `;

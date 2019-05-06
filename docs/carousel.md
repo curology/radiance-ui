@@ -3,12 +3,12 @@
 
 ```jsx
 import { Carousel } from 'radiance-ui';
-import { SPACING, COLORS } from 'radiance-ui/lib/constants';
+import { SPACER, COLORS } from 'radiance-ui/lib/constants';
 
 const Card = styled(Carousel.Card)`
   background-color: ${COLORS.border};
   text-align: center;
-  padding: ${SPACING.base};
+  padding: ${SPACER.large};
 `;
 
 const cards = [

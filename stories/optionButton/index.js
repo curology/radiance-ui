@@ -8,14 +8,14 @@ import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import OptionButtonReadme from 'docs/optionButton.md';
 import { OptionButton, Typography } from 'src/shared-components';
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 import OptionButtonExample from './optionButtonExample';
 
 const MainContainer = styled.div`
   text-align: left;
   > h2 {
-    margin-bottom: ${SPACING.base};
+    margin-bottom: ${SPACER.large};
   }
 `;
 

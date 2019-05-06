@@ -5,7 +5,7 @@ import {
   BREAKPOINTS,
   COLORS,
   MEDIA_QUERIES,
-  SPACING,
+  SPACER,
   Z_SCALE,
 } from '../../constants';
 
@@ -32,28 +32,28 @@ export const ModalContainer = styled.div`
   ${MEDIA_QUERIES.mdUp} {
     height: auto;
     max-width: 616px;
-    margin-bottom: ${SPACING.base};
-    margin-top: ${SPACING.base};
+    margin-bottom: ${SPACER.large};
+    margin-top: ${SPACER.large};
   }
 `;
 
 export const CloseIconContainer = styled.div`
   position: absolute;
-  right: ${SPACING.small};
-  top: ${SPACING.small};
+  right: ${SPACER.medium};
+  top: ${SPACER.medium};
   z-index: ${Z_SCALE.e2000};
 `;
 
 export const CopyContainer = styled.div`
-  padding: ${SPACING.medium} ${SPACING.base};
+  padding: ${SPACER.xlarge} ${SPACER.large};
 
   ${MEDIA_QUERIES.mdUp} {
-    padding: ${SPACING.large} ${SPACING.medium};
+    padding: ${SPACER.x2large} ${SPACER.xlarge};
   }
 `;
 
 export const Title = styled(Typography.Title)`
-  margin-bottom: ${SPACING.small};
+  margin-bottom: ${SPACER.medium};
   text-align: left;
 `;
 
@@ -62,7 +62,7 @@ export const Body = styled.div`
   text-align: left;
 
   &:not(:last-child) {
-    margin-bottom: ${SPACING.base};
+    margin-bottom: ${SPACER.large};
   }
 
   p > a {
@@ -71,5 +71,5 @@ export const Body = styled.div`
 `;
 
 export const Footer = styled.div`
-  margin-bottom: ${SPACING.xsmall};
+  margin-bottom: ${SPACER.small};
 `;

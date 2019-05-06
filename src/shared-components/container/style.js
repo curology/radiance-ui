@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import {
-  SPACING,
-  BOX_SHADOWS,
-  COLORS,
-  MEDIA_QUERIES,
-} from '../../constants';
+import { SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES } from '../../constants';
 
 const clickableStyle = css`
   box-shadow: ${BOX_SHADOWS.clickable};
@@ -40,21 +35,21 @@ export const Container = styled.div`
 `;
 
 // TODO update desktop padding to 48px
-export const Section  = styled.div`
-  padding: ${SPACING.base};
+export const Section = styled.div`
+  padding: ${SPACER.large};
 
   ${MEDIA_QUERIES.lgUp} {
-    padding-left: ${SPACING.large};
-    padding-right: ${SPACING.large};
+    padding-left: ${SPACER.x2large};
+    padding-right: ${SPACER.x2large};
   }
 `;
 
 export const Divider = styled.div`
-  margin: 0 ${SPACING.base};
+  margin: 0 ${SPACER.large};
   border-bottom: 1px solid ${COLORS.divider};
 
   ${MEDIA_QUERIES.lgUp} {
-    margin: 0 ${SPACING.large};
+    margin: 0 ${SPACER.x2large};
   }
 `;
 

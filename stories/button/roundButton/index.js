@@ -13,7 +13,7 @@ import {
   ArrowRightIcon,
   CloseIcon,
 } from 'src/svgs/icons';
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -24,7 +24,7 @@ const ButtonsContainer = styled.div`
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
-  margin: ${SPACING.base} 0 ${SPACING.large};
+  margin: ${SPACER.large} 0 ${SPACER.x2large};
 `;
 
 const RoundButtonStory = withDocs(RoundButtonReadme, () => (
@@ -102,7 +102,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
     <RoundButton.Container
       multi
       css={css`
-        margin: ${SPACING.medium} 0;
+        margin: ${SPACER.xlarge} 0;
       `}
     >
       <RoundButton icon={<ArrowLeftIcon />} />

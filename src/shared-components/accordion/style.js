@@ -6,7 +6,7 @@ import {
   BOX_SHADOWS,
   BREAKPOINTS,
   COLORS,
-  SPACING,
+  SPACER,
 } from '../../constants';
 
 const border = `1px solid ${COLORS.border}`;
@@ -18,7 +18,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: ${SPACING.small};
+  padding: ${SPACER.medium};
   width: 100%;
 `;
 
@@ -56,7 +56,7 @@ export const AccordionBox = styled.div`
 export const ArrowWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 ${SPACING.small};
+  padding: 0 ${SPACER.medium};
 `;
 
 export const TitleWrapper = styled.div`

@@ -13,7 +13,7 @@ import { css } from '@emotion/core';
 
 import TooltipReadme from 'docs/tooltip.md';
 import { Tooltip, Typography } from 'src/shared-components';
-import { SPACING, COLORS } from 'src/constants';
+import { SPACER, COLORS } from 'src/constants';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -26,7 +26,7 @@ const TooltipContainer = styled.div`
 const TriggerContainer = styled.div`
   background: ${COLORS.purple};
   margin: 0 auto;
-  padding: ${SPACING.xsmall};
+  padding: ${SPACER.small};
   color: ${COLORS.white};
   text-align: center;
   width: 100%;
@@ -48,7 +48,7 @@ stories.add(
 
       <Typography.Heading
         css={css`
-          margin-top: ${SPACING.base};
+          margin-top: ${SPACER.large};
         `}
       >
         With Knobs:

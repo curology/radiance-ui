@@ -5,7 +5,7 @@ import {
   COLORS,
   MEDIA_QUERIES,
   BOX_SHADOWS,
-  SPACING,
+  SPACER,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
@@ -41,8 +41,8 @@ export const BannerContainer = styled.div`
   display: flex;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   justify-content: space-around;
-  margin: 0 auto ${SPACING.xsmall};
-  padding: ${SPACING.xsmall} 0px;
+  margin: 0 auto ${SPACER.small};
+  padding: ${SPACER.small} 0px;
   position: relative;
   text-align: left;
 
@@ -59,19 +59,19 @@ export const BannerContainer = styled.div`
 
   ${MEDIA_QUERIES.lgUp} {
     font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-    margin-bottom: ${SPACING.small};
-    padding: ${SPACING.xsmall} 0px;
+    margin-bottom: ${SPACER.medium};
+    padding: ${SPACER.small} 0px;
   }
 `;
 
 export const BannerContentContainer = styled.div`
   display: flex;
-  padding: ${SPACING.xxsmall} ${SPACING.base};
+  padding: ${SPACER.xsmall} ${SPACER.large};
   width: 100%;
 `;
 
 export const bannerIconStyles = css`
-  margin: 2.5px ${SPACING.base} 0px 0px;
-  min-height: ${SPACING.small};
-  min-width: ${SPACING.small};
+  margin: 2.5px ${SPACER.large} 0px 0px;
+  min-height: ${SPACER.medium};
+  min-width: ${SPACER.medium};
 `;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, ANIMATION, SPACING, BOX_SHADOWS } from '../../constants';
+import { COLORS, ANIMATION, SPACER, BOX_SHADOWS } from '../../constants';
 import Container from '../container';
 
 const getOptionTypeStyles = optionType => {
@@ -24,8 +24,8 @@ const getTypeColor = type => {
 };
 
 export const ClickableContainer = styled(Container)`
-  padding: ${SPACING.base};
-  margin-bottom: ${SPACING.small};
+  padding: ${SPACER.large};
+  margin-bottom: ${SPACER.medium};
 
   :focus {
     outline: none;
@@ -98,7 +98,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  margin-left: ${SPACING.small};
+  margin-left: ${SPACER.medium};
 `;
 
 export const Text = styled.div`

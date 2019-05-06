@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { COLORS, SPACING } from '../../constants';
+import { COLORS, SPACER } from '../../constants';
 
 export const Container = styled.div`
   position: relative;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: ${SPACING.small} 0;
+  padding: ${SPACER.medium} 0;
 
   & > input {
     display: none;
@@ -19,12 +19,12 @@ export const Container = styled.div`
 export const Label = styled.span`
   color: ${COLORS.primaryTint1};
   margin: 0;
-  font-size: ${SPACING.small};
-  line-height: ${SPACING.base};
+  font-size: ${SPACER.medium};
+  line-height: ${SPACER.large};
   text-align: left;
   cursor: pointer;
   user-select: none;
-  margin-right: ${SPACING.xsmall};
+  margin-right: ${SPACER.small};
 `;
 
 export const trackStyle = {

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import Typography from '../typography';
-import { COLORS, MEDIA_QUERIES, SPACING, Z_SCALE } from '../../constants';
+import { COLORS, MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
 export const ModalOverlay = styled.div`
   -webkit-overflow-scrolling: touch;
@@ -15,10 +15,10 @@ export const ModalOverlay = styled.div`
   right: 0;
   top: 0;
   z-index: 1000;
-  padding: ${SPACING.base};
+  padding: ${SPACER.large};
 
   ${MEDIA_QUERIES.lgUp} {
-    padding: ${SPACING.xxlarge};
+    padding: ${SPACER.x5large};
   }
 `;
 
@@ -39,8 +39,8 @@ export const ModalBox = styled.div`
 
 export const ModalCloseIcon = styled.div`
   position: absolute;
-  right: ${SPACING.small};
-  top: ${SPACING.small};
+  right: ${SPACER.medium};
+  top: ${SPACER.medium};
   z-index: ${Z_SCALE.e2000};
 `;
 
@@ -49,19 +49,19 @@ export const ContentContainer = styled.div`
   position: relative;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: ${SPACING.medium} ${SPACING.base};
+  padding: ${SPACER.xlarge} ${SPACER.large};
 
   ${MEDIA_QUERIES.mdUp} {
     padding: ${({ tight }) =>
-      tight ? SPACING.large : `${SPACING.xlarge} 5rem`};
+      tight ? SPACER.x2large : `${SPACER.x4large} 5rem`};
   }
 `;
 
 export const Title = styled(Typography.Title)`
-  margin-bottom: ${SPACING.base};
+  margin-bottom: ${SPACER.large};
 
   ${MEDIA_QUERIES.mdUp} {
-    margin-bottom: ${SPACING.large};
+    margin-bottom: ${SPACER.x2large};
   }
 `;
 
@@ -75,10 +75,10 @@ export const Body = styled.div`
 `;
 
 export const Footer = styled.div`
-  padding-top: ${SPACING.base};
+  padding-top: ${SPACER.large};
 
   ${MEDIA_QUERIES.mdUp} {
-    padding-top: ${SPACING.large};
+    padding-top: ${SPACER.x2large};
   }
 
   ${({ align }) =>

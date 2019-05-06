@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { SPACING } from 'src/constants';
+import { SPACER } from 'src/constants';
 import { Typography } from 'src/shared-components';
 import * as COLORS from 'src/constants/colors';
 
 import Color from './color';
 
 const MainContainer = styled.div`
-  padding: ${SPACING.medium};
+  padding: ${SPACER.xlarge};
 `;
 
 const ColorsContainer = styled.div`
-  margin: ${SPACING.medium} 0;
+  margin: ${SPACER.xlarge} 0;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
