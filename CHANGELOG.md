@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.35
+- Added SmileIcon and DropIcon ([PR #102](https://github.com/PocketDerm/radiance-ui/pull/102))
+
 ## v2.0.34
 - Added SPACER constants ([PR #101](https://github.com/PocketDerm/radiance-ui/pull/101))
 
