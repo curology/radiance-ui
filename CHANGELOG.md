@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.36
+- Exclude external dependencies from build ([PR #103](https://github.com/PocketDerm/radiance-ui/pull/103))
+
 ## v2.0.35
 - Added SmileIcon and DropIcon ([PR #102](https://github.com/PocketDerm/radiance-ui/pull/102))
 
