@@ -24,11 +24,11 @@ const renderConstantsMap = constantMap => {
     return newMemo;
   }, {});
 
-  return (
-    Object.keys(sanitizedMap).map(constant => (
-      <p><strong>{constant}</strong>: {sanitizedMap[constant]}</p>
-    ))
-  );
+  return Object.keys(sanitizedMap).map(constant => (
+    <p key={constant}>
+      <strong>{constant}</strong>: {sanitizedMap[constant]}
+    </p>
+  ));
 };
 
 export default renderConstantsMap;
