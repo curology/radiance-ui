@@ -1,11 +1,15 @@
 const allowedEnvironments = ['test', 'development', 'dev'];
-const conditional1 = allowedEnvironments.includes(process.env.NODE_ENV);
+const shouldShowForEnvironment = allowedEnvironments.includes(
+  process.env.NODE_ENV
+);
 
 export default function withDeprecationWarning(obj, deprecatedProperties = {}) {
   const handler = {
     get(target, property) {
-      const conditional2 = Object.keys(deprecatedProperties).includes(property);
-      if (conditional1 && conditional2) {
+      const isDeprecatedProperty = Object.keys(deprecatedProperties).includes(
+        property
+      );
+      if (shouldShowForEnvironment && isDeprecatedProperty) {
         // eslint-disable-next-line no-console
         console.warn(
           `[Deprecation Warning]: ${deprecatedProperties[property]}`
