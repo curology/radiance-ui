@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## v2.0.37
+- Added deprecation warning, only for dev environments ([PR #105](https://github.com/PocketDerm/radiance-ui/pull/105))
+
+## v2.0.37
 - Added calendar icon ([PR #104](https://github.com/PocketDerm/radiance-ui/pull/104))
 
 ## v2.0.36
