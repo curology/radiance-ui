@@ -2,8 +2,8 @@
 
 export { default as ArrowLeftIcon } from './arrow-left-icon.svg';
 export { default as ArrowRightIcon } from './arrow-right-icon.svg';
-export { default as CameraIcon } from './camera-icon.svg';
 export { default as CalendarIcon } from './calendar-icon.svg';
+export { default as CameraIcon } from './camera-icon.svg';
 export { default as CheckmarkCircleIcon } from './checkmark-circle-icon.svg';
 export { default as CheckmarkIcon } from './checkmark-icon.svg';
 export { default as ChevronIcon } from './chevron-icon.svg';

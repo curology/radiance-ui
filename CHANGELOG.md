@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v2.0.37
+## v2.0.38
 - Added deprecation warning, only for dev environments ([PR #105](https://github.com/PocketDerm/radiance-ui/pull/105))
 
 ## v2.0.37
