@@ -3,6 +3,7 @@
 
 ```jsx
 import { Alert } from 'radiance-ui';
+const SampleContentComponent = () => (<div>Your info is updated!  <a href='http://google.com'> Click here to see changes</a></div>);
 
 <Alert.Container>
   <Alert
@@ -29,18 +30,25 @@ import { Alert } from 'radiance-ui';
     duration="sticky"
     onExit={() => {}}
   />
+  <Alert
+	content=<SampleContentComponent/>
+    type="success"
+    duration="sticky"
+    onExit={() => {}}
+  />  
 </Alert.Container>
 ```
 
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                  |
-|----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| text     | string             | yes      | -       | alert text to be displayed                                                                                                   |
-| type     | string             | yes      | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
-| duration | number&#124;string | yes      | -       | can be 'sticky' or number in seconds before the alert is dismissed                                                           |
-| onExit   | func               | yes      | -       | callback function called on dismissal of  the alert. The function will receive all  of the component's props as the argument |
+| prop     | propType                                | required                    | default | description                                                                                                                  |
+|----------|-----------------------------------------|-----------------------------|---------|------------------------------------------------------------------------------------------------------------------------------|
+| text     | string         				         | yes if content prop is empty| -       | alert text to be displayed. Will be deprecated in next major version                                                                                                  |
+| content  | numbers, strings, elements or an array  | yes if text prop is empty   | -       | renders anything passed to component. In future changes alert text.                                                          |
+| type     | string             				     | yes                         | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
+| duration | number&#124;string					     | yes                         | -       | can be 'sticky' or number in seconds before the alert is dismissed                                                           |
+| onExit   | func            					     | yes                         | -       | callback function called on dismissal of  the alert. The function will receive all  of the component's props as the argument |
 
 ### Notes
 The `<Alert />` component provides only the styling for and enter/exit

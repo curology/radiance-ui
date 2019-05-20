@@ -7,7 +7,7 @@ import AlertReadme from 'docs/alert.md';
 import { Alert, Typography } from 'src/shared-components';
 
 const stories = storiesOf('Alert', module);
-
+const SampleContentComponent = () => (<div>Your info is updated!  <a href='http://google.com'> Click here to see changes</a></div>);
 stories.addDecorator(withKnobs);
 
 stories.add(
@@ -36,6 +36,12 @@ stories.add(
         <Alert
           text="Oops! We couldn't update your information!"
           type="danger"
+          duration="sticky"
+          onExit={() => { }}
+        />
+        <Alert
+          content=<SampleContentComponent />
+          type="success"
           duration="sticky"
           onExit={() => { }}
         />
