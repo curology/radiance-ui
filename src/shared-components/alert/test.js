@@ -15,7 +15,7 @@ describe('Alert UI snapshots', () => {
   test('renders success type and text', () => {
     const component = renderer.create(
       <Alert
-        text={testAlert.text}
+        content={testAlert.text}
         type="success"
         duration={testAlert.duration}
         onExit={() => { }}
@@ -29,7 +29,7 @@ describe('Alert UI snapshots', () => {
   test('renders danger type and text', () => {
     const component = renderer.create(
       <Alert
-        text={testAlert.text}
+        content={testAlert.text}
         type="danger"
         duration={testAlert.duration}
         onExit={() => { }}
@@ -43,7 +43,7 @@ describe('Alert UI snapshots', () => {
   test('renders info type and text', () => {
     const component = renderer.create(
       <Alert
-        text={testAlert.text}
+        content={testAlert.text}
         type="info"
         duration={testAlert.duration}
         onExit={() => { }}
@@ -59,6 +59,20 @@ describe('Alert UI snapshots', () => {
       <Alert
         content= {<SampleContentComponent />}
         type="success"
+        duration={testAlert.duration}
+        onExit={() => { }}
+      />
+    );
+
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('renders info type with text prop', () => {
+    const component = renderer.create(
+      <Alert
+        text={testAlert.text}
+        type="info"
         duration={testAlert.duration}
         onExit={() => { }}
       />

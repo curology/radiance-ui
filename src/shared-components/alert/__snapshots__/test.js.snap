@@ -518,6 +518,187 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
 </div>
 `;
 
+exports[`Alert UI snapshots renders info type with text prop 1`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1.5rem 0 1rem;
+  width: 100%;
+}
+
+.emotion-0 {
+  margin: 2.5px 1rem 0px 0px;
+  min-height: 1rem;
+  min-width: 1rem;
+}
+
+.emotion-3 {
+  -webkit-animation: animation-0 350ms 1;
+  animation: animation-0 350ms 1;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.875rem;
+  margin: 0 auto 0.5rem;
+  opacity: 1;
+  padding: 11px 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  width: 327px;
+  background-color: #ededf0;
+  border-color: #e1e0e6;
+  color: #706D87;
+  fill: #706D87;
+}
+
+@media (min-width:992px) {
+  .emotion-3 {
+    -webkit-animation: animation-1 350ms 1;
+    animation: animation-1 350ms 1;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+
+<div
+  className="emotion-3 emotion-4"
+  onClick={[Function]}
+>
+  <div
+    className="emotion-1 emotion-2"
+  >
+    <svg
+      className="emotion-0"
+      fill="currentColor"
+    />
+    Your email address was updated successfully!
+  </div>
+</div>
+`;
+
 exports[`Alert UI snapshots renders success type and text 1`] = `
 @keyframes animation-0 {
   from {

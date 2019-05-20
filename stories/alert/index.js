@@ -7,7 +7,7 @@ import AlertReadme from 'docs/alert.md';
 import { Alert, Typography } from 'src/shared-components';
 
 const stories = storiesOf('Alert', module);
-const SampleContentComponent = () => (<div>Your info is updated!  <a href='http://google.com'> Click here to see changes</a></div>);
+const SampleContentComponent = () => <div>Click <a href='https://google.com'>here</a> to go to Google!</div>;
 stories.addDecorator(withKnobs);
 
 stories.add(
@@ -16,31 +16,31 @@ stories.add(
     <React.Fragment>
       <Alert.Container>
         <Alert
-          text="Your photos were uploaded successfully!"
+          content="Your photos were uploaded successfully!"
           type="success"
           duration={4}
           onExit={() => { }}
         />
         <Alert
-          text="Your photos were uploaded successfully!"
+          content="Your photos were uploaded successfully!"
           type="success"
           duration="sticky"
           onExit={() => { }}
         />
         <Alert
-          text="Support has been notified."
+          content="Support has been notified."
           type="info"
           duration="sticky"
           onExit={() => { }}
         />
         <Alert
-          text="Oops! We couldn't update your information!"
+          content="Oops! We couldn't update your information!"
           type="danger"
           duration="sticky"
           onExit={() => { }}
         />
         <Alert
-          content=<SampleContentComponent />
+          content= <SampleContentComponent />
           type="success"
           duration="sticky"
           onExit={() => { }}
