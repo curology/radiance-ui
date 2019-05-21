@@ -3,7 +3,11 @@
 
 ```jsx
 import { Alert } from 'radiance-ui';
-const SampleContentComponent = () => <div>Click <a href='https://google.com'>here</a> to go to Google!</div>;
+const SampleContentComponent = () => (
+  <div>
+    Click <a href="https://google.com">here</a> to go to Google!
+  </div>
+);
 
 <Alert.Container>
   <Alert
@@ -31,7 +35,7 @@ const SampleContentComponent = () => <div>Click <a href='https://google.com'>her
     onExit={() => {}}
   />
   <Alert
-	content= <SampleContentComponent/>
+    content={<SampleContentComponent />}
     type="success"
     duration="sticky"
     onExit={() => {}}
