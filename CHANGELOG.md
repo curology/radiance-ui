@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.39
+- Update Alert component to take in `content` prop to render ([PR #106](https://github.com/PocketDerm/radiance-ui/pull/106))
+
 ## v2.0.38
 - Added deprecation warning, only for dev environments ([PR #105](https://github.com/PocketDerm/radiance-ui/pull/105))
 
