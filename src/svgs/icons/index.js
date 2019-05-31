@@ -26,6 +26,7 @@ export { default as GiftIcon } from './gift-icon.svg';
 export { default as GoogleIcon } from './google-icon.svg';
 export { default as HeartIcon } from './heart-icon.svg';
 export { default as InfoIcon } from './info-icon.svg';
+export { default as InstagramIcon } from './instagram-icon.svg';
 export { default as LockIcon } from './lock-icon.svg';
 export { default as LogoCIcon } from './logo-c-icon.svg';
 export { default as LogoCondensedIcon } from './logo-condensed-icon.svg';
