@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.40
+- Added InstagramIcon to icon library ([PR #108](https://github.com/PocketDerm/radiance-ui/pull/108))
+
 ## v2.0.39
 - Update Alert component to take in `content` prop to render ([PR #106](https://github.com/PocketDerm/radiance-ui/pull/106))
 
