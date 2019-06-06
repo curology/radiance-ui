@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.0.41
+- Update high severity dependencies ([PR #113])(https://github.com/PocketDerm/radiance-ui/pull/113)
+
 ## v2.0.40
 - Added InstagramIcon to icon library ([PR #108](https://github.com/PocketDerm/radiance-ui/pull/108))
 
