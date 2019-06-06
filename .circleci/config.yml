@@ -42,10 +42,9 @@ jobs:
             - <<: *prospective-merge
             - <<: *yarn-cache-restore
             - run:
-                name: Install and Build
+                name: Install
                 command: |
                     yarn install
-                    yarn build
             - <<: *yarn-cache-save
             - persist_to_workspace:
                 root: *root
