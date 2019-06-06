@@ -2,6 +2,7 @@ export { default as Accordion } from './accordion';
 export { default as Alert } from './alert';
 export { default as Avatar } from './avatar';
 export { default as Banner } from './banner';
+export { default as BulkErrors } from './bulkErrors';
 export {
   default as Button,
   RoundButton,
@@ -14,8 +15,8 @@ export { default as Chip } from './chip';
 export { default as Container } from './container';
 export { default as Dropdown } from './dropdown';
 export { default as Field } from './field';
-export { default as BulkErrors } from './bulkErrors';
 export { default as ImmersiveModal } from './immersiveModal';
+export * from './legalComponents';
 export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
 export { default as OffClickWrapper } from './offClickWrapper';
