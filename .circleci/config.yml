@@ -1,0 +1,85 @@
+version: 2.1
+
+aliases:
+    - &root ~/radiance-ui
+
+    - &defaults
+        working_directory: *root
+
+    - &cache-yarn-key-base yarn-packages-v1-{{ arch }}-
+    - &cache-yarn-key yarn-packages-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+
+    - &yarn-cache-restore
+        restore_cache:
+            keys:
+                - *cache-yarn-key
+                - *cache-yarn-key-base
+
+    - &yarn-cache-save
+        save_cache:
+            key: *cache-yarn-key
+            paths:
+                - ~/.cache/yarn
+
+    # Prospective merging against master.
+    - &prospective-merge
+        run:
+            name: Prospective Merge
+            command: |
+                if [[ ! -z "${CIRCLE_PULL_REQUEST}" ]]; then
+                    git pull --ff-only origin "refs/pull/${CIRCLE_PULL_REQUEST//*pull\//}/merge"
+                fi
+
+jobs:
+    build:
+        <<: *defaults
+
+        docker:
+            - image: circleci/node:10-stretch
+
+        steps:
+            - checkout
+            - <<: *prospective-merge
+            - <<: *yarn-cache-restore
+            - run:
+                name: Install and Build
+                command: |
+                    yarn install
+                    yarn build
+            - <<: *yarn-cache-save
+            - persist_to_workspace:
+                root: *root
+                paths:
+                    - node_modules
+
+    test:
+        <<: *defaults
+
+        docker:
+            - image: circleci/node:10-stretch
+
+        steps:
+            - checkout
+            - <<: *prospective-merge
+            - attach_workspace:
+                at: *root
+            - run:
+                name: Prepare Environment
+                command: mkdir test-results
+            - run:
+                name: Run Jest Tests
+                command: yarn run jest --ci --runInBand --reporters=default --reporters=jest-junit
+                environment:
+                    JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
+            - store_test_results:
+                path: test-results
+
+workflows:
+    version: 2
+
+    build-and-test:
+        jobs:
+            - build
+            - test:
+                requires:
+                    - build
