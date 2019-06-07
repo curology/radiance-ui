@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v2.1.0
+- Add CircleCI (replacing Codeship) ([PR #114](https://github.com/PocketDerm/radiance-ui/pull/114))
+
 ## v2.0.40
 - Added InstagramIcon to icon library ([PR #108](https://github.com/PocketDerm/radiance-ui/pull/108))
 
