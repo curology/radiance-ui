@@ -1,12 +1,9 @@
 import { addParameters } from '@storybook/react';
-import { create } from '@storybook/theming';
+import Theme from './theme';
 
 addParameters({
   options: {
-    theme: create({
-      brandTitle: 'Radiance UI',
-      brandUrl: '#',
-    }),
+    theme: Theme,
     isFullscreen: false,
     showNav: true,
     showPanel: true,
