@@ -1,5 +1,5 @@
 # CONSTANTS
-### Usage
+## Usage
 
 ```jsx
 import { css } from '@emotion/core';

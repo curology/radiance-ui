@@ -1,5 +1,5 @@
 # Carousel
-### Usage
+## Usage
 
 ```jsx
 import { Carousel } from 'radiance-ui';

@@ -1,5 +1,5 @@
 # Avatar
-### Usage
+## Usage
 
 ```jsx
 import { Avatar } from 'radiance-ui';

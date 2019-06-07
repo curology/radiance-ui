@@ -1,6 +1,6 @@
 # LinkButton
 
-### Usage
+## Usage
 
 ```jsx
 import { LinkButton } from 'radiance-ui';

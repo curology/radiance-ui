@@ -1,5 +1,5 @@
 # FadeInContainer
-### Usage
+## Usage
 
 ```jsx
 import { FadeInContainer, Container } from 'radiance-ui';

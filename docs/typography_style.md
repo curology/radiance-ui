@@ -2,7 +2,7 @@
 This import is meant to be used to pull in css of the base typography
 styles and used in composing Emotion components.
 
-### Usage
+## Usage
 
 ```jsx
 import styled from '@emotion/styled'

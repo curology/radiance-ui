@@ -1,5 +1,5 @@
 # Checkbox
-### Usage
+## Usage
 
  ```jsx
 import { Checkbox } from 'radiance-ui';
