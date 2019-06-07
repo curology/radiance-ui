@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-import AccordionReadme from 'docs/accordion.md';
+import AccordionReadme from 'docs/accordion';
 import { Accordion, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 

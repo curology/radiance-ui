@@ -25,7 +25,7 @@ module.exports = ({ config }) => {
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.md'],
   };
 
   const customRules = [
