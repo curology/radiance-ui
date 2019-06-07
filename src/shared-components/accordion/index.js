@@ -24,11 +24,13 @@ class Accordion extends React.Component {
     children: PropTypes.node.isRequired,
     noBorder: PropTypes.bool,
     disabled: PropTypes.bool,
+    rightAlignArrow: PropTypes.bool,
   };
 
   static defaultProps = {
     noBorder: false,
     disabled: false,
+    rightAlignArrow: false,
   };
 
   static Container = Container;
@@ -82,6 +84,7 @@ class Accordion extends React.Component {
       children,
       noBorder,
       disabled,
+      rightAlignArrow,
     } = this.props;
 
     return (
@@ -92,7 +95,7 @@ class Accordion extends React.Component {
       >
         <TitleWrapper onClick={disabled ? noop : onClick} disabled={disabled}>
           <Truncate>{title}</Truncate>
-          <ArrowWrapper>
+          <ArrowWrapper rightAlign={rightAlignArrow}>
             <ChevronIcon
               rotate={isOpen ? 90 : 0}
               width={8}
