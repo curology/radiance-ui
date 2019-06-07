@@ -2143,7 +2143,7 @@
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/components@5.1.3":
+"@storybook/components@5.1.3", "@storybook/components@^5.0.6":
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.1.3.tgz#9c6898f8f66bf6b9dfdb3ecca73370f2d799e546"
   integrity sha512-lM+iSdIl/UlmPlgH3vqo8NhMAdPUrWkgp40CVADfXsM6Yxai/23gpg8/HEoHiU5hFjNxowJUt76gTvwt9ak+gg==
@@ -2167,7 +2167,7 @@
     recompose "^0.30.0"
     simplebar-react "^1.0.0-alpha.6"
 
-"@storybook/core-events@5.1.3":
+"@storybook/core-events@5.1.3", "@storybook/core-events@^5.0.6":
   version "5.1.3"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-5.1.3.tgz#febed0fb83201a107fd1c25b5487e2daec911fa0"
   integrity sha512-oO9b05G/+9rYdNIx1BoOpFW+jwJeIR60PuJbvNMr1lSo9LH0JsG0+TNADjNXrLCChHfk1KMp1+DcpsSdNNNUqg==
@@ -8340,12 +8340,13 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-markdown-loader@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-loader/-/markdown-loader-4.0.0.tgz#502eb94f5db1673beb1721bed82dac9e1d333b9a"
+markdown-loader@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/markdown-loader/-/markdown-loader-5.0.0.tgz#d6af0f2d5fe7713fb692cbd85b547ff0ef26baa8"
+  integrity sha512-CnRuBrTQNJ2VNlyfPJl+14QU6Sfscse4M6TpwuY0KDuCafMHv6vAcVYInphXFtdvtvjG5kMpF+PwN6CWke0M3A==
   dependencies:
-    loader-utils "^1.1.0"
-    marked "^0.5.0"
+    loader-utils "^1.2.3"
+    marked "^0.6.0"
 
 markdown-to-jsx@^6.9.1, markdown-to-jsx@^6.9.3:
   version "6.10.2"
@@ -8355,11 +8356,7 @@ markdown-to-jsx@^6.9.1, markdown-to-jsx@^6.9.3:
     prop-types "^15.6.2"
     unquote "^1.1.0"
 
-marked@^0.5.0:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.1.tgz#062f43b88b02ee80901e8e8d8e6a620ddb3aa752"
-
-marked@^0.6.2:
+marked@^0.6.0, marked@^0.6.1, marked@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.6.2.tgz#c574be8b545a8b48641456ca1dbe0e37b6dccc1a"
   integrity sha512-LqxwVH3P/rqKX4EKGz7+c2G9r98WeM/SW34ybhgNGhUQNKtf1GmmSkJ6cDGJ/t6tiyae49qRkpyTw2B9HOrgUA==
@@ -8757,9 +8754,10 @@ node-dir@^0.1.10:
   dependencies:
     minimatch "^3.0.2"
 
-node-emoji@1.8.1:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.8.1.tgz#6eec6bfb07421e2148c75c6bba72421f8530a826"
+node-emoji@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.10.0.tgz#8886abd25d9c7bb61802a658523d1f8d2a89b2da"
+  integrity sha512-Yt3384If5H6BYGVHiHwTL+99OzJKHhgp82S8/dktEK73T26BazdgZ4JZh92xSVtGNJvz9UbXdNAc5hcrXV42vw==
   dependencies:
     lodash.toarray "^4.4.0"
 
@@ -9664,16 +9662,15 @@ pretty-hrtime@^1.0.3:
   resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
-prismjs@^1.8.4, prismjs@~1.16.0:
+prism-themes@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.1.0.tgz#9f4fadf0c9c7ee415773717ea69c2aaa25aedbfd"
+  integrity sha512-xBkflbKbstGGasW3P68KQzAuObLQeH//I5mn37jKVHVDrRLp4Xct/n8F/tV5h+CKIMa3nDAZ2q0bt8ItSiS72A==
+
+prismjs@^1.16.0, prismjs@^1.8.4, prismjs@~1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.16.0.tgz#406eb2c8aacb0f5f0f1167930cb83835d10a4308"
   integrity sha512-OA4MKxjFZHSvZcisLGe14THYsug/nF6O1f0pAJc0KN0wTyAcLqmsbE+lTGKSpyh+9pEW57+k6pg2AfYR+coyHA==
-  optionalDependencies:
-    clipboard "^2.0.0"
-
-prismjs@^1.9.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
   optionalDependencies:
     clipboard "^2.0.0"
 
@@ -11337,17 +11334,22 @@ store2@^2.7.1:
   resolved "https://registry.yarnpkg.com/store2/-/store2-2.7.1.tgz#22070b7dc04748a792fc6912a58ab99d3a21d788"
   integrity sha512-zzzP5ZY6QWumnAFV6kBRbS44pUMcpZBNER5DWUe1HETlaKXqLcCQxbNu6IHaKr1pUsjuhUGBdOy8sWKmMkL6pQ==
 
-storybook-readme@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/storybook-readme/-/storybook-readme-4.0.2.tgz#35304e7dad1157ecb8dc9b678400db812337202c"
+storybook-readme@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/storybook-readme/-/storybook-readme-5.0.3.tgz#c3944b7dc6d6e334e7e4ed3d138211b0c0c88c8b"
+  integrity sha512-O1y1Njl/gOMjHJ6y0L9g1HAOjuRvtjscIM4EaE7VJHrCk+35+NgOnLIKRVR6gEAaTsPZlC+h8xlnVVh3IyrC7Q==
   dependencies:
+    "@storybook/components" "^5.0.6"
+    "@storybook/core-events" "^5.0.6"
     html-loader "^0.5.5"
-    lodash "^4.17.4"
-    markdown-loader "^4.0.0"
-    marked "^0.5.0"
-    node-emoji "1.8.1"
-    prismjs "^1.9.0"
+    lodash "^4.17.11"
+    markdown-loader "^5.0.0"
+    marked "^0.6.1"
+    node-emoji "1.10.0"
+    prism-themes "^1.1.0"
+    prismjs "^1.16.0"
     string-raw "^1.0.1"
+    vuex "^3.1.0"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
@@ -12177,6 +12179,11 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vuex@^3.1.0:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
+  integrity sha512-ER5moSbLZuNSMBFnEBVGhQ1uCBNJslH9W/Dw2W7GZN23UQA69uapP5GTT9Vm8Trc0PzBSVt6LzF3hGjmv41xcg==
 
 w3c-hr-time@^1.0.1:
   version "1.0.1"

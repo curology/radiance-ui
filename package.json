@@ -105,7 +105,7 @@
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-size-snapshot": "^0.7.0",
-    "storybook-readme": "^4.0.2",
+    "storybook-readme": "^5.0.3",
     "tinycolor2": "^1.4.1",
     "webpack": "^4.23.0",
     "yarn-run-all": "^3.1.1"
