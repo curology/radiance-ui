@@ -4,42 +4,54 @@ const transformTemplateForUtilLocation = require('../src/utils/svgToIconTemplate
 
 const UTIL_LOCATION = '../../utils/icons';
 
-module.exports = {
-  resolve: {
+// SVGs will not load properly if we do not remove the default rule before adding our own
+function removeDefaultStorybookSvgRule(config) {
+  const defaultStorybookLoaderRule = config.module.rules.find(rule =>
+    rule.test.test('.svg')
+  );
+
+  const ruleWithoutSvg = defaultStorybookLoaderRule.test
+    .toString()
+    .replace('svg|', '');
+
+  // Removes forward flashes from regexp string before creating new regexp from string
+  defaultStorybookLoaderRule.test = new RegExp(
+    ruleWithoutSvg.substr(1, ruleWithoutSvg.length - 2)
+  );
+}
+
+module.exports = ({ config }) => {
+  removeDefaultStorybookSvgRule(config);
+
+  config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
     extensions: ['.js', '.jsx'],
-  },
-  module: {
-    rules: [
-      {
-        test: /\.svg$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: require('../babel.config.js'),
+  };
+
+  const customRules = [
+    {
+      test: /\.(png|jpe?g|gif)$/,
+      use: [{ loader: 'file-loader', options: {} }],
+    },
+    {
+      test: /\.svg$/,
+      use: [
+        { loader: 'babel-loader', options: require('../babel.config.js') },
+        {
+          loader: '@svgr/webpack',
+          options: {
+            template: transformTemplateForUtilLocation(UTIL_LOCATION),
+            expandProps: false,
+            babel: false,
           },
-          {
-            loader: '@svgr/webpack',
-            options: {
-              template: transformTemplateForUtilLocation(UTIL_LOCATION),
-              expandProps: false,
-              babel: false,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {},
-          },
-        ],
-      },
-    ],
-  },
-  plugins: [
+        },
+      ],
+    },
+  ];
+
+  customRules.forEach(rule => config.module.rules.push(rule));
+
+  config.plugins.push(
     new CircularDependencyPlugin({
       exclude: /node_modules/,
       // add errors to webpack instead of warnings
@@ -47,6 +59,8 @@ module.exports = {
       allowAsyncCycles: false,
       // set the current working directory for displaying module paths
       cwd: process.cwd(),
-    }),
-  ],
+    })
+  );
+
+  return config;
 };
