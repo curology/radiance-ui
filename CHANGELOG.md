@@ -1,7 +1,7 @@
 # CHANGELOG
 
 ## v2.1.1
-- Added prop to Accoridon ([PR #117](https://github.com/PocketDerm/radiance-ui/pull/117))
+- Added prop to Accordion ([PR #117](https://github.com/PocketDerm/radiance-ui/pull/117))
 
 ## v2.1.0
 - Add CircleCI (replacing Codeship) ([PR #114](https://github.com/PocketDerm/radiance-ui/pull/114))
