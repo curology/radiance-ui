@@ -56,7 +56,11 @@ export const AccordionBox = styled.div`
 export const ArrowWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 0 ${SPACER.medium};
+
+  ${({ rightAlign }) =>
+    rightAlign
+      ? `padding-left: ${SPACER.medium};`
+      : `padding: 0 ${SPACER.medium};`};
 `;
 
 export const TitleWrapper = styled.div`

@@ -49,6 +49,7 @@ stories.add(
               isOpen={boolean('isOpen', false)}
               noBorder={boolean('noBorder', false)}
               disabled={boolean('disabled', false)}
+              rightAlignArrow={boolean('rightAlignArrow', false)}
             >
               <Accordion.Content>
                 {text('Expanded text', 'Accordion expanded content')}

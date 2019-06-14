@@ -39,6 +39,14 @@ import { Accordion } from 'radiance-ui';
   >
     <div>Expansion</div>
   </Accordion>
+  <Accordion
+    title={<div>Title</div>}
+    isOpen={false}
+    onClick={() => {}}
+    rightAlignArrow
+  >
+    <div>Expansion</div>
+  </Accordion>
 </Accordion.Container>
 
 ```
@@ -46,14 +54,15 @@ import { Accordion } from 'radiance-ui';
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                  |
-|----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| title    | node               | yes      | -       | node that will render whether collapsed or expanded |
-| isOpen   | boolean            | yes      | -       | determine if the accordion is collapsed (false) or expanded (true) |
-| onClick  | function           | yes      | -       | invoked when title node is clicked |
-| children | node(s)            | yes      | -       | node(s) that will render only when expanded |
-| noBorder | boolean            | no       | false   | when true, border lines between accordions and title/children nodes will disappear |
-| disabled | boolean            | no       | false   | when true, the accordion will be greyed out and the onClick prop will be disabled |
+| prop            | propType | required | default | description                                                                                                                  |
+|-----------------|----------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
+| title           | node     | yes      | -       | node that will render whether collapsed or expanded |
+| isOpen          | boolean  | yes      | -       | determine if the accordion is collapsed (false) or expanded (true) |
+| onClick         | function | yes      | -       | invoked when title node is clicked |
+| children        | node(s)  | yes      | -       | node(s) that will render only when expanded |
+| noBorder        | boolean  | no       | false   | when true, border lines between accordions and title/children nodes will disappear |
+| disabled        | boolean  | no       | false   | when true, the accordion will be greyed out and the onClick prop will be disabled |
+| rightAlignArrow | boolean  | no       | false   | when true, the arrow is aligned flush with the right side of the component |
 
 
 ### Subcomponents

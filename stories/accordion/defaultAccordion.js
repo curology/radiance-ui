@@ -9,6 +9,7 @@ class DefaultAccordion extends React.Component {
     accordion2: false,
     accordion3: false,
     accordion4: false,
+    accordion5: false,
   };
 
   toggleAccordion = accordion => {
@@ -17,7 +18,7 @@ class DefaultAccordion extends React.Component {
 
   render() {
     const {
-      accordion1, accordion2, accordion3, accordion4, 
+      accordion1, accordion2, accordion3, accordion4, accordion5,
     } = this.state;
 
     return (
@@ -77,6 +78,18 @@ class DefaultAccordion extends React.Component {
             isOpen={accordion4}
             onClick={() => this.toggleAccordion('accordion4')}
             disabled
+          >
+            <Accordion.Content>Expandable</Accordion.Content>
+          </Accordion>
+          <Accordion
+            title={
+              <Accordion.Content>
+                This is a right aligned arrow
+              </Accordion.Content>
+            }
+            isOpen={accordion5}
+            onClick={() => this.toggleAccordion('accordion5')}
+            rightAlignArrow
           >
             <Accordion.Content>Expandable</Accordion.Content>
           </Accordion>
