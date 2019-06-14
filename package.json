@@ -16,8 +16,8 @@
   "scripts": {
     "test": "jest",
     "storybook": "run-s build:svgs:index storybook:dev",
-    "storybook:dev": "start-storybook -p 9001 -c .storybook -s ./public",
-    "build-storybook": "build-storybook -c .storybook -o .out -s ./public",
+    "storybook:dev": "start-storybook --port 9001 --config-dir .storybook --static-dir ./public",
+    "build-storybook": "build-storybook --config-dir .storybook --output-dir .out --static-dir ./public",
     "clean": "rimraf dist lib src/icons/",
     "build": "run-s clean && run-s build:icons build:icons:index && run-p build:rollup build:babel",
     "build:icons": "run-s build:icons:icons build:icons:emojis build:icons:glyphs",
