@@ -1,20 +1,27 @@
-import { addDecorator } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
+import { addParameters, addDecorator } from '@storybook/react';
+import Theme from './theme';
+import { withA11y } from '@storybook/addon-a11y';
+import { addReadme } from 'storybook-readme';
+import centered from '@storybook/addon-centered/react';
 
-addDecorator(
-  withOptions({
-    name: 'Radiance UI',
-    url: '#',
-    goFullScreen: false,
-    showStoriesPanel: true,
-    showAddonPanel: true,
-    showSearchBox: false,
-    addonPanelInRight: true,
-    sortStoriesByKind: false,
+addDecorator(withA11y);
+addDecorator(addReadme);
+addDecorator(centered);
+
+addParameters({
+  options: {
+    theme: Theme,
+    isFullscreen: false,
+    showNav: true,
+    showPanel: true,
+    panelPosition: 'right',
     hierarchySeparator: null,
     hierarchyRootSeparator: null,
     sidebarAnimations: true,
-    selectedAddonPanel: undefined, // The order of addons in the "Addon panel" is the same as you import them in 'addons.js'. The first panel will be opened by default as you run Storybook
     enableShortcuts: true,
-  })
-);
+    isToolshown: true,
+  },
+  viewport: {
+    defaultViewport: 'responsive',
+  },
+});

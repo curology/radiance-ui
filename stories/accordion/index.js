@@ -4,7 +4,6 @@ import { withDocs } from 'storybook-readme';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-
 import AccordionReadme from 'docs/accordion.md';
 import { Accordion, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
@@ -46,7 +45,7 @@ stories.add(
                   </Accordion.Truncate>
                 </Accordion.Content>
               }
-              onClick={() => action('Accordion clicked')}
+              onClick={action('Accordion clicked')}
               isOpen={boolean('isOpen', false)}
               noBorder={boolean('noBorder', false)}
               disabled={boolean('disabled', false)}

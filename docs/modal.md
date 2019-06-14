@@ -1,5 +1,5 @@
 # Modal
-### Usage
+## Usage
 
 ```jsx
 import React from 'react';

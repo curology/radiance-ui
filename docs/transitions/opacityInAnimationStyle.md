@@ -1,5 +1,5 @@
 # opacityInAnimationStyle
-### Usage
+## Usage
 
 ```jsx
 import styled from '@emotion/styled'

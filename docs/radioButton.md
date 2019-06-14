@@ -1,5 +1,5 @@
 # Radio Button
-### Usage
+## Usage
 
 ```jsx
 import { RadioButton } from 'radiance-ui';

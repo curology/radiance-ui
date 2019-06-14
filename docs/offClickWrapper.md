@@ -1,5 +1,5 @@
 # OffClickWrapper
-### Usage
+## Usage
 
 ```jsx
 import { OffClickWrapper } from 'radiance-ui';

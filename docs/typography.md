@@ -1,5 +1,5 @@
 # Typography
-### Usage
+## Usage
 
 ```jsx
 import { Typography } from 'radiance-ui';

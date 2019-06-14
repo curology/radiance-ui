@@ -1,5 +1,5 @@
 # Button
-### Usage
+## Usage
 
 ```jsx
 import { Button } from 'radiance-ui';

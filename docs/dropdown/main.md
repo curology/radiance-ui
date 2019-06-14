@@ -1,5 +1,5 @@
 # Dropdown
-### Usage
+## Usage
 
 ```jsx
 class DropdownExample extends React.Component {
