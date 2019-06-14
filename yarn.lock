@@ -2040,15 +2040,6 @@
     prop-types "^15.7.2"
     qs "^6.6.0"
 
-"@storybook/addon-options@^5.1.8":
-  version "5.1.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-5.1.8.tgz#1cbd261f2fcae9f2ddc2765587adc7c984e3879c"
-  integrity sha512-9gzU03ZP9D4fBZjPZHK1WCpR6N/u9YB7DqWVG5XFmyHae7W8TfSSv45eOQInwsNt9lx7MgqyaP+MAhNyDyo2pQ==
-  dependencies:
-    "@storybook/addons" "5.1.8"
-    core-js "^3.0.1"
-    util-deprecate "^1.0.2"
-
 "@storybook/addon-viewport@^5.1.8":
   version "5.1.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-5.1.8.tgz#6d0dd86907399bb5e8f538a42c673cf21009a586"
@@ -7120,6 +7111,7 @@ is-directory@^0.3.1:
 is-dom@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/is-dom/-/is-dom-1.0.9.tgz#483832d52972073de12b9fe3f60320870da8370d"
+  integrity sha1-SDgy1SlyBz3hK5/j9gMghw2oNw0=
 
 is-dotfile@^1.0.0:
   version "1.0.3"
