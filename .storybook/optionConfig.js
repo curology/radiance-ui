@@ -2,9 +2,11 @@ import { addParameters, addDecorator } from '@storybook/react';
 import Theme from './theme';
 import { withA11y } from '@storybook/addon-a11y';
 import { addReadme } from 'storybook-readme';
+import centered from '@storybook/addon-centered/react';
 
 addDecorator(withA11y);
 addDecorator(addReadme);
+addDecorator(centered);
 
 addParameters({
   options: {
@@ -12,14 +14,12 @@ addParameters({
     isFullscreen: false,
     showNav: true,
     showPanel: true,
-    panelPosition: true,
-    isToolshown: true,
-    sortStoriesByKind: false,
+    panelPosition: 'right',
     hierarchySeparator: null,
     hierarchyRootSeparator: null,
     sidebarAnimations: true,
-    selectedAddonPanel: undefined, // The order of addons in the "Addon panel" is the same as you import them in 'addons.js'. The first panel will be opened by default as you run Storybook
     enableShortcuts: true,
+    isToolshown: true,
   },
   viewport: {
     defaultViewport: 'responsive',

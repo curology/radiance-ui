@@ -59,6 +59,7 @@
     "@emotion/babel-preset-css-prop": "^10.0.7",
     "@storybook/addon-a11y": "^5.1.8",
     "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-centered": "^5.1.8",
     "@storybook/addon-info": "^5.1.8",
     "@storybook/addon-knobs": "^5.1.8",
     "@storybook/addon-links": "^5.1.8",
