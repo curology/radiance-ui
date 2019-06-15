@@ -1,5 +1,5 @@
 # Banner
-### Usage
+## Usage
 
 ```jsx
 import { Banner } from 'radiance-ui';

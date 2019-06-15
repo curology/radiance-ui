@@ -1,5 +1,5 @@
 # Round Button
-### Usage
+## Usage
 
 ```jsx
 import { RoundButton } from 'radiance-ui';

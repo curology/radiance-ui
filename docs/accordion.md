@@ -1,5 +1,5 @@
 # Accordion
-### Usage
+## Usage
 
 ```jsx
 import { Accordion } from 'radiance-ui';

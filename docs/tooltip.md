@@ -1,5 +1,5 @@
 # Tooltip
-### Usage
+## Usage
 
 ```jsx
 import { Tooltip } from 'radiance-ui';

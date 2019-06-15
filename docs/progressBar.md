@@ -1,5 +1,5 @@
 # ProgressBar
-### Usage
+## Usage
 
 The component has `position: absolute` by default. You must provide a container with `position: relative` to contain the progress bar. To further refine the position, you may use custom styles as shown below.
 

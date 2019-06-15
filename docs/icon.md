@@ -1,5 +1,5 @@
 # Icon
-### Usage
+## Usage
 
 ```jsx
 import { CameraIcon } from 'radiance-ui/lib/icons';
