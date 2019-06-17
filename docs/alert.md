@@ -1,5 +1,5 @@
 # Alert
-### Usage
+## Usage
 
 ```jsx
 import { Alert } from 'radiance-ui';

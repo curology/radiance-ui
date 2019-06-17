@@ -46,7 +46,7 @@ stories.add(
                   </Accordion.Truncate>
                 </Accordion.Content>
               }
-              onClick={() => action('Accordion clicked')}
+              onClick={action('Accordion clicked')}
               isOpen={boolean('isOpen', false)}
               noBorder={boolean('noBorder', false)}
               disabled={boolean('disabled', false)}

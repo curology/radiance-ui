@@ -1,5 +1,5 @@
 # LoadingSpinner
-### Usage
+## Usage
 
 ```jsx
 import { LoadingSpinner } from 'radiance-ui';

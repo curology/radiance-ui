@@ -1,6 +1,6 @@
 # TextButton
 
-### Usage
+## Usage
 
 ```jsx
 import { TextButton } from 'radiance-ui';

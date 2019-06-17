@@ -1,5 +1,5 @@
 # Toggle
-### Usage
+## Usage
 
 ```jsx
 import { Toggle } from 'radiance-ui';

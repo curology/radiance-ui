@@ -1,5 +1,5 @@
 # Chip
-### Usage
+## Usage
 
 ```jsx
 import { Chip } from 'radiance-ui';

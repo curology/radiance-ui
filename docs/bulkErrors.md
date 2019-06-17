@@ -1,5 +1,5 @@
 # BulkErrors Component
-### Usage
+## Usage
 
 ```jsx
 import { BulkErrors, Field } from 'radiance-ui';

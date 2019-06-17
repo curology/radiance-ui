@@ -1,5 +1,5 @@
 # Option Button
-### Usage
+## Usage
 
 ```jsx
 import { OptionButton } from 'radiance-ui';

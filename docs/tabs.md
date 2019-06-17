@@ -1,5 +1,5 @@
 # Tabs
-### Usage
+## Usage
 
 ```jsx
 import { Tabs } from 'radiance-ui';

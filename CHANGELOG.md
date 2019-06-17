@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v3.0.0
+- Update Storybook 4 to 5 ([PR #121](https://github.com/PocketDerm/radiance-ui/pull/121))
+
 ## v2.1.1
 - Added prop to Accordion ([PR #117](https://github.com/PocketDerm/radiance-ui/pull/117))
 

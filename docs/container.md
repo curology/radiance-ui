@@ -1,5 +1,5 @@
 # Container
-### Usage
+## Usage
 
 ```jsx
 import { Container } from 'radiance-ui';
