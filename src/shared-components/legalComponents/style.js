@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-import { style as TYPOGRAPHY_STYLE } from '../../typography';
-import { SPACER, FONTS } from '../../../constants';
+import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { SPACER, FONTS } from '../../constants';
 
 // eslint-disable-next-line import/prefer-default-export
 export const LegalContainer = styled.div`
