@@ -17,14 +17,14 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 .emotion-0 {
   background-color: #ffffff;
   border: 1px solid #ededf0;
-  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.06);
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.06);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
 }
 
 .emotion-0:hover {
-  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.15);
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.15);
 }
 
 <div
@@ -99,7 +99,7 @@ exports[`Container UI snapshots renders message type container 1`] = `
   background-color: #ffffff;
   border: 1px solid #ededf0;
   border-radius: 16px;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
 }
 
 <div

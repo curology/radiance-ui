@@ -102,7 +102,7 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
   animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -273,7 +273,7 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -454,7 +454,7 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -635,7 +635,7 @@ exports[`Alert UI snapshots renders info type with text prop 1`] = `
   animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -737,7 +737,7 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   animation: animation-0 350ms 1;
   border-width: 1px;
   border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
