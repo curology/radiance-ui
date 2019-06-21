@@ -1,9 +1,21 @@
 # Accordion
-## Usage
+
+## A list of items that allows each item's content to be expanded and collapsed by clicking its title bar.
+
+### Usage
 
 ```jsx
 import { Accordion } from 'radiance-ui';
+```
 
+\
+The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
+
+#### Standard Accordion
+
+The basic accordion for use on Curology's platform. Should be used whenever possible.
+
+```jsx
 <Accordion.Container>
   <Accordion
     title={<div>Title</div>}
@@ -12,108 +24,112 @@ import { Accordion } from 'radiance-ui';
   >
     <div>Expansion</div>
   </Accordion>
-  <Accordion
-    title={
-      <Accordion.Truncate>
-        Title
-      </Accordion.Truncate>
-    }
-    isOpen={false}
-    onClick={() => {}}
-  >
-    <div>Expansion</div>
-  </Accordion>
-  <Accordion
-    title={<div>Title</div>}
-    isOpen={false}
-    onClick={() => {}}
-    noBorder
-  >
-    <div>Expansion</div>
-  </Accordion>
-  <Accordion
-    title={<div>Title</div>}
-    isOpen={false}
-    onClick={() => {}}
-    disabled
-  >
-    <div>Expansion</div>
-  </Accordion>
-  <Accordion
-    title={<div>Title</div>}
-    isOpen={false}
-    onClick={() => {}}
-    rightAlignArrow
-  >
-    <div>Expansion</div>
-  </Accordion>
-</Accordion.Container>
+<Accordion.Container>
+```
 
+#### Standard Accordion
+
+The basic accordion for use on Curology's platform. Should be used whenever possible.
+
+```jsx
+<Accordion
+  title={<Accordion.Truncate>Title</Accordion.Truncate>}
+  isOpen={false}
+  onClick={() => {}}
+>
+  <div>Expansion</div>
+</Accordion>
+```
+
+#### Accordion with Thumbnails
+
+- **_Subcomponent through Dot Notation_**
+
+The accordion style renders thumbnail images into the right hand side of the accordion header title bar. These thumbnail images represent images actually found in the content section of the accordion.
+
+- **1 image:** Renders thumbnail of image
+
+- **2 images:** Renders thumbnails of both images
+
+- **3+ images:** Renders thumbnail of first image and a counter of additional images
+
+Upon opening of the accordion, the thumbnail images should disapear from the title bar because they'll then be visible in the content container.
+
+```jsx
+import { Accordion } from 'radiance-ui';
+
+<Accordion.Thumbnails photoSrcs={[]} />;
+```
+
+| prop      | propType             | required | default | description                                                                          |
+| --------- | -------------------- | -------- | ------- | ------------------------------------------------------------------------------------ |
+| photoSrcs | array of src strings | yes      | -       | An array of image src strings that Accordion.Thumbails will use to render thumbnails |
+
+#### Disabled Accordion
+
+The disabled accordion should only be used when the user is taking a clearly defined action in a series of tasks. A good example of this component is the photo uploader in the sign up flow. Accordion blocks which represent specific photos the user takes, remain disabled and closed until the respective steps are reached. The user is then auto-advanced through each accordion block.
+
+```jsx
+<Accordion disabled />
+```
+
+#### Truncated Accordion
+
+- **_Subcomponent through Dot Notation_**
+
+Prevents line-wrapping and shortens text with an ellipsis. 
+
+Note: The ellipsis will only be added if the text is a direct child.
+
+```jsx
+<Accordion disabled />
 ```
 
 <!-- STORY -->
 
 ### Proptypes
-| prop            | propType | required | default | description                                                                                                                  |
-|-----------------|----------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| title           | node     | yes      | -       | node that will render whether collapsed or expanded |
-| isOpen          | boolean  | yes      | -       | determine if the accordion is collapsed (false) or expanded (true) |
-| onClick         | function | yes      | -       | invoked when title node is clicked |
-| children        | node(s)  | yes      | -       | node(s) that will render only when expanded |
-| noBorder        | boolean  | no       | false   | when true, border lines between accordions and title/children nodes will disappear |
-| disabled        | boolean  | no       | false   | when true, the accordion will be greyed out and the onClick prop will be disabled |
-| rightAlignArrow | boolean  | no       | false   | when true, the arrow is aligned flush with the right side of the component |
 
+| prop            | propType | required | default | description                                                                        |
+| --------------- | -------- | -------- | ------- | ---------------------------------------------------------------------------------- |
+| title           | node     | yes      | -       | node that will render whether collapsed or expanded                                |
+| isOpen          | boolean  | yes      | -       | determine if the accordion is collapsed (false) or expanded (true)                 |
+| onClick         | function | yes      | -       | invoked when title node is clicked                                                 |
+| children        | node(s)  | yes      | -       | node(s) that will render only when expanded                                        |
+| noBorder        | boolean  | no       | false   | when true, border lines between accordions and title/children nodes will disappear |
+| disabled        | boolean  | no       | false   | when true, the accordion will be greyed out and the onClick prop will be disabled  |
+| rightAlignArrow | boolean  | no       | false   | when true, the arrow is aligned flush with the right side of the component         |
 
 ### Subcomponents
-The `<Accordion />` component has subcomponents available through dot notation. 
 
-#### Thumbnails
-Renders thumbnails of images passed to it: 
-
-- 1 image: renders thumbnail of image
-
-- 2 images: renders thumbnails of both images
-
-- 3+ images: renders thumbnail of first image and a counter of additional images
-
-```jsx
-import { Accordion } from 'radiance-ui';
-
-<Accordion.Thumbnails photoSrcs={[]} />
-```
-
-| prop      | propType             | required | default | description                                                                                                                  |
-|-----------|----------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| photoSrcs | array of src strings | yes      | -       | An array of image src strings that Accordion.Thumbails will use to render thumbnails |
-
+The `<Accordion />` component has subcomponents available through dot notation.
 
 #### Truncate
+
 Prevents line-wrapping and shortens text with an ellipsis. Note: The ellipsis will only
 be added if the text is a direct child.
 
 ```jsx
 import { Accordion } from 'radiance-ui';
 
-<Accordion.Truncate>
-  Text to truncate
-</Accordion.Truncate>
+<Accordion.Truncate>Text to truncate</Accordion.Truncate>;
 ```
 
 #### Container
+
 Container to hold instances of `<Accordion>`
 
 ```jsx
 import { Accordion } from 'radiance-ui';
 
-<Accordion.Container> 
+<Accordion.Container>
   <Accordion {...props} />
   <Accordion {...props} />
   <Accordion {...props} />
-</Accordion.Container>
+</Accordion.Container>;
 ```
 
 #### Content
+
 Wraps padding around children nodes
 
 ```jsx
@@ -124,8 +140,6 @@ import { Accordion } from 'radiance-ui';
   isOpen={true}
   onClick={() => {}}
 >
-  <Accordion.Content>
-    Expansion with content padding
-  </Accordion.Content>
-</Accordion>
+  <Accordion.Content>Expansion with content padding</Accordion.Content>
+</Accordion>;
 ```
