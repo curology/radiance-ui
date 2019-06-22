@@ -5,7 +5,7 @@
 import { transparentize } from '../../utils';
 import COLORS from '../colors';
 
-const boxShadowColor = '#2d2d30';
+const boxShadowColor = `${COLORS.primary}`;
 const boxShadowOverlayColor = '#505050';
 
 export const BASE_CONFIG = {

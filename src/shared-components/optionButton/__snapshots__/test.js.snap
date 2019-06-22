@@ -4,7 +4,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 .emotion-8 {
   background-color: #ffffff;
   border: 1px solid #ededf0;
-  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.06);
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.06);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
@@ -13,7 +13,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 }
 
 .emotion-8:hover {
-  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.15);
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.15);
 }
 
 .emotion-8:focus {
@@ -124,7 +124,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 .emotion-8 {
   background-color: #ffffff;
   border: 1px solid #ededf0;
-  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.06);
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.06);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
@@ -133,7 +133,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 }
 
 .emotion-8:hover {
-  box-shadow: 0 1px 3px 0 rgba(45,45,48,0.15);
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.15);
 }
 
 .emotion-8:focus {
