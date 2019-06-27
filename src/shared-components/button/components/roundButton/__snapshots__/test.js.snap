@@ -239,6 +239,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   <button
     className="emotion-2 emotion-3"
     disabled={true}
+    loading={false}
     onClick={[Function]}
     type="button"
   >
@@ -246,6 +247,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
     <div
       className="emotion-0 emotion-1"
       disabled={true}
+      loading={false}
     >
       <div>
         <span />
