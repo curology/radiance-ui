@@ -19,7 +19,7 @@ class Button extends React.Component {
       'tertiary',
       'quaternary',
     ]),
-    loading: PropTypes.bool,
+    isLoading: PropTypes.bool,
     icon: PropTypes.node,
     textColor: PropTypes.string,
   };
@@ -27,7 +27,7 @@ class Button extends React.Component {
   static defaultProps = {
     disabled: false,
     buttonType: 'primary',
-    loading: false,
+    isLoading: false,
     onClick() {},
     textColor: '',
   };
@@ -38,7 +38,7 @@ class Button extends React.Component {
       disabled,
       children,
       buttonType,
-      loading,
+      isLoading,
       icon,
       textColor,
       ...rest
@@ -47,17 +47,17 @@ class Button extends React.Component {
     return (
       <ButtonBase
         disabled={disabled}
-        onClick={!disabled && !loading ? onClick : event => event.preventDefault()}
+        onClick={!disabled && !isLoading ? onClick : event => event.preventDefault()}
         buttonType={buttonType}
-        loading={loading}
+        isLoading={isLoading}
         type="button"
         textColor={textColor}
         {...rest}
       >
-        <ButtonContents loading={loading} hasIcon={!!icon}>
+        <ButtonContents isLoading={isLoading} hasIcon={!!icon}>
           {icon}
           <ButtonText
-            loading={loading}
+            isLoading={isLoading}
             hasIcon={!!icon}
             css={css`padding-top: 2px;`}
           >
@@ -65,7 +65,7 @@ class Button extends React.Component {
           </ButtonText>
         </ButtonContents>
         <Loader
-          loading={loading}
+          isLoading={isLoading}
           disabled={disabled}
           buttonType={buttonType}
           textColor={textColor}
