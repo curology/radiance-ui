@@ -72,7 +72,7 @@ class Alert extends React.Component {
   };
 
   render() {
-    const { text, content, type, onExit, ...rest } = this.props;
+    const { content, type, onExit, ...rest } = this.props;
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
@@ -94,7 +94,7 @@ class Alert extends React.Component {
             `}
             fill="currentColor"
           />
-          {content || text}
+          {content}
         </AlertContentContainer>
       </AlertContainer>
     );
