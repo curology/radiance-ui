@@ -1,8 +1,6 @@
 import { configure } from '@storybook/react';
 import { injectGlobal } from 'emotion';
 
-import injectGlobalStyles from 'src/utils/injectGlobalStyles';
-
 import optionConfig from './optionConfig';
 
 injectGlobal`
@@ -29,8 +27,6 @@ injectGlobal`
     src: url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.eot?#iefix') format('embedded-opentype'),url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.woff2') format('woff2'),url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.woff') format('woff'),url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.ttf') format('truetype');
   }
 `;
-
-injectGlobalStyles();
 
 const req = require.context('../stories', true, /.js$/);
 function loadStories() {

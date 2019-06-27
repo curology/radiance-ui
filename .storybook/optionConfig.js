@@ -4,11 +4,42 @@ import { withA11y } from '@storybook/addon-a11y';
 import { addReadme } from 'storybook-readme';
 import centered from '@storybook/addon-centered/react';
 import { configureReadme } from 'storybook-readme';
-import { css } from '@emotion/core';
+import { Global, css } from '@emotion/core';
+import { resetStyles, brandStyles } from '../src/utils/injectGlobalStyles/style';
 
 addDecorator(withA11y);
 addDecorator(addReadme);
-configureReadme({ DocPreview: ({ children }) => <div css={css`padding: 1rem;`}>{children}</div>, StoryPreview: ({ children }) => <div css={css`padding: 1rem;`}>{children}</div>})
+configureReadme({
+  DocPreview: ({ children }) => (
+    <div
+      css={css`
+        padding: 1rem;
+      `}
+    >
+      {children}
+    </div>
+  ),
+  StoryPreview: ({ children }) => (
+    <div
+      css={css`
+        padding: 1rem;
+      `}
+    >
+      {children}
+    </div>
+  ),
+});
+
+
+const InjectGlobalStyles = storyFn => (
+  <div>
+    <Global styles={resetStyles} />
+    <Global styles={brandStyles} />
+    {storyFn()}
+  </div>
+);
+
+addDecorator(InjectGlobalStyles);
 
 addDecorator(centered);
 
