@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import ButtonLoader from './style';
 
-const Loader = ({ loading, disabled, buttonType, className, textColor }) => (
+const Loader = ({ isLoading, disabled, buttonType, className, textColor }) => (
   <ButtonLoader
-    loading={loading}
+    isLoading={isLoading}
     disabled={disabled}
     buttonType={buttonType}
     className={className}
@@ -20,7 +20,7 @@ const Loader = ({ loading, disabled, buttonType, className, textColor }) => (
 );
 
 Loader.propTypes = {
-  loading: PropTypes.bool,
+  isLoading: PropTypes.bool,
   disabled: PropTypes.bool,
   buttonType: PropTypes.oneOf([
     'primary',
