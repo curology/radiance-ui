@@ -21,7 +21,7 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
-  loading: PropTypes.bool,
+  isLoading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
   textColor: PropTypes.string,
 };
@@ -29,7 +29,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
-  loading: false,
+  isLoading: false,
   onClick() {},
   children: '',
   textColor: '',
@@ -40,24 +40,24 @@ const RoundButton = ({
   disabled,
   children,
   buttonType,
-  loading,
+  isLoading,
   icon,
   textColor,
   ...rest
 }) => (
   <RoundButtonWrapper>
     <RoundButtonBase
-      onClick={!disabled && !loading ? onClick : () => false}
+      onClick={!disabled && !isLoading ? onClick : () => false}
       disabled={disabled}
       buttonType={buttonType}
-      loading={loading}
+      isLoading={isLoading}
       type="button"
       textColor={textColor}
       {...rest}
     >
       {icon}
       <Loader
-        loading={loading}
+        isLoading={isLoading}
         disabled={disabled}
         buttonType={buttonType}
         css={roundButtonLoader(disabled)}
