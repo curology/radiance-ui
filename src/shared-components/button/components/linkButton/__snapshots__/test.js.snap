@@ -20,9 +20,7 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
   cursor: pointer;
   display: block;
   margin: 0;
-  max-width: 325px;
   min-height: 52px;
-  min-width: 208px;
   opacity: 1;
   padding: 0 1.5rem;
   position: relative;
@@ -30,13 +28,15 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   background-color: #332e54;
   border-color: #332e54;
   color: #ffffff;
   fill: #ffffff;
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .emotion-4:hover {
