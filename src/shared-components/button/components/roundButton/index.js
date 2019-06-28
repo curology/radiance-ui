@@ -9,6 +9,19 @@ import {
   RoundButtonText,
   RoundButtonContainer,
 } from './style';
+import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
+
+const deprecatedProperties = {
+  loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
+};
+
+const isLoadingPropFunction = (props, propName, componentName) => {
+  if (props[propName] !== undefined) {
+    return new Error(
+      `'loading' prop will be deprecated in the next major release. Please rename 'loading' to 'isLoading' in ${componentName}`
+    );
+  }
+};
 
 const propTypes = {
   onClick: PropTypes.func,
@@ -21,6 +34,7 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
+  loading: isLoadingPropFunction,
   isLoading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
   textColor: PropTypes.string,
@@ -40,36 +54,41 @@ const RoundButton = ({
   disabled,
   children,
   buttonType,
+  loading,
   isLoading,
   icon,
   textColor,
   ...rest
-}) => (
-  <RoundButtonWrapper>
-    <RoundButtonBase
-      onClick={!disabled && !isLoading ? onClick : () => false}
-      disabled={disabled}
-      buttonType={buttonType}
-      isLoading={isLoading}
-      type="button"
-      textColor={textColor}
-      {...rest}
-    >
-      {icon}
-      <Loader
-        isLoading={isLoading}
+}) => {
+  const loadingVal = loading === undefined ? isLoading : loading;
+
+  return (
+    <RoundButtonWrapper>
+      <RoundButtonBase
+        onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
-        css={roundButtonLoader(disabled)}
+        isLoading={loadingVal}
+        type="button"
         textColor={textColor}
-      />
-    </RoundButtonBase>
-    {children && <RoundButtonText>{children}</RoundButtonText>}
-  </RoundButtonWrapper>
-);
+        {...rest}
+      >
+        {icon}
+        <Loader
+          isLoading={loadingVal}
+          disabled={disabled}
+          buttonType={buttonType}
+          css={roundButtonLoader(disabled)}
+          textColor={textColor}
+        />
+      </RoundButtonBase>
+      {children && <RoundButtonText>{children}</RoundButtonText>}
+    </RoundButtonWrapper>
+  );
+};
 
 RoundButton.propTypes = propTypes;
 RoundButton.defaultProps = defaultProps;
 RoundButton.Container = RoundButtonContainer;
 
-export default RoundButton;
+export default withDeprecationWarning(RoundButton, deprecatedProperties);

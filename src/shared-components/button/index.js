@@ -5,6 +5,19 @@ import { css } from '@emotion/core';
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
+import withDeprecationWarning from '../../utils/withDeprecationWarning';
+
+const deprecatedProperties = {
+  loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
+};
+
+const isLoadingPropFunction = (props, propName, componentName) => {
+  if (props[propName] !== undefined) {
+    return new Error(
+      `'loading' prop will be deprecated in the next major release. Please rename 'loading' to 'isLoading' in ${componentName}`
+    );
+  }
+};
 
 class Button extends React.Component {
   static Container = Container;
@@ -19,6 +32,7 @@ class Button extends React.Component {
       'tertiary',
       'quaternary',
     ]),
+    loading: isLoadingPropFunction,
     isLoading: PropTypes.bool,
     icon: PropTypes.node,
     textColor: PropTypes.string,
@@ -38,34 +52,41 @@ class Button extends React.Component {
       disabled,
       children,
       buttonType,
+      loading,
       isLoading,
       icon,
       textColor,
       ...rest
     } = this.props;
 
+    const loadingVal = loading === undefined ? isLoading : loading;
+
     return (
       <ButtonBase
         disabled={disabled}
-        onClick={!disabled && !isLoading ? onClick : event => event.preventDefault()}
+        onClick={
+          !disabled && !loadingVal ? onClick : event => event.preventDefault()
+        }
         buttonType={buttonType}
-        isLoading={isLoading}
+        isLoading={loadingVal}
         type="button"
         textColor={textColor}
         {...rest}
       >
-        <ButtonContents isLoading={isLoading} hasIcon={!!icon}>
+        <ButtonContents isLoading={loadingVal} hasIcon={!!icon}>
           {icon}
           <ButtonText
-            isLoading={isLoading}
+            isLoading={loadingVal}
             hasIcon={!!icon}
-            css={css`padding-top: 2px;`}
+            css={css`
+              padding-top: 2px;
+            `}
           >
             {children}
           </ButtonText>
         </ButtonContents>
         <Loader
-          isLoading={isLoading}
+          isLoading={loadingVal}
           disabled={disabled}
           buttonType={buttonType}
           textColor={textColor}
@@ -78,4 +99,4 @@ class Button extends React.Component {
 export LinkButton from './components/linkButton';
 export RoundButton from './components/roundButton';
 export TextButton from './components/textButton';
-export default Button;
+export default withDeprecationWarning(Button, deprecatedProperties);
