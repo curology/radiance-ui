@@ -1,4 +1,5 @@
 # Button
+
 ## Usage
 
 ```jsx
@@ -13,14 +14,14 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="quaternary">Quaternary Button</Button>
     <Button disabled>Disabled Button</Button>
 
-    <Button loading>Primary Loading</Button>
-    <Button loading buttonType="secondary">
+    <Button isLoading>Primary Loading</Button>
+    <Button isLoading buttonType="secondary">
       Secondary Loading
     </Button>
-    <Button buttonType="tertiary" loading>
+    <Button buttonType="tertiary" isLoading>
       Tertiary Loading
     </Button>
-    <Button buttonType="quaternary" loading>
+    <Button buttonType="quaternary" isLoading>
       Quaternary Loading
     </Button>
   </Button.Container>
@@ -40,36 +41,38 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button disabled icon={<CheckmarkIcon />}>
       Disabled Button
     </Button>
-    <Button loading icon={<CheckmarkIcon />}>
+    <Button isLoading icon={<CheckmarkIcon />}>
       Primary Loading
     </Button>
-    <Button loading buttonType="secondary" icon={<CheckmarkIcon />}>
+    <Button isLoading buttonType="secondary" icon={<CheckmarkIcon />}>
       Secondary Loading
     </Button>
-    <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
+    <Button isLoading buttonType="tertiary" icon={<CheckmarkIcon />}>
       Tertiary Loading
     </Button>
-    <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
+    <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Loading
     </Button>
   </Button.Container>
-</React.Fragment>
+</React.Fragment>;
 ```
 
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                  |
-|----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| buttonType | string | no      | primary       | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`. |
-| children | node | yes | - | node to be rendered inside the button.  Recommended to be the button text |
-| disabled | bool               | no       | false   | when disabled, click listener will not be called and the UI will look disabled |
-| icon | node | no | null | icon to render in the button. Recommended to use one of Radiance's icons |
-| loading  | bool               | no       | false   | renders loading state and prevents click listener from being called |
-| onClick   | func              | no      | () => {} | callback function called on click of the button |
-| textColor | string | no | '' | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+
+| prop       | propType | required | default  | description                                                                                                                  |
+| ---------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| buttonType | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`.                   |
+| children   | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
+| disabled   | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
+| icon       | node     | no       | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                     |
+| isLoading  | bool     | no       | false    | renders loading state and prevents click listener from being called                                                          |
+| onClick    | func     | no       | () => {} | callback function called on click of the button                                                                              |
+| textColor  | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
+
 Buttons can be used as a main call-to-action (CTA). Try to avoid using
 buttons of the same `buttonType` next to each other since we want to
 guide the user towards one option.

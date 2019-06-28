@@ -53,7 +53,7 @@ describe('<RoundButton />', () => {
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <RoundButton loading onClick={spy} icon={<CameraIcon />}>
+        <RoundButton isLoading onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>
       );

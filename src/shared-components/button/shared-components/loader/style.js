@@ -36,7 +36,7 @@ const ButtonLoader = styled.div`
   top: 0;
   margin-top: -6px;
   width: 38px;
-  opacity: ${({ loading }) => (loading ? 1 : 0)};
+  opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
 
   & span {
     ${({ disabled, buttonType }) => {
