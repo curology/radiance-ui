@@ -14,7 +14,7 @@ const deprecatedProperties = {
 const isLoadingPropFunction = (props, propName, componentName) => {
   if (props[propName] !== undefined) {
     return new Error(
-      `'loading' prop will be deprecated in the next major release. Please rename 'loading' to 'isLoading' in ${componentName}`
+      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`
     );
   }
 };
