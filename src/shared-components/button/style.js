@@ -20,7 +20,7 @@ const primaryStyles = css`
   }
 `;
 
-const secondaryStyles = loading => css`
+const secondaryStyles = isLoading => css`
   background-color: transparent;
   border-color: ${COLORS.purple};
   color: ${COLORS.purple};
@@ -30,9 +30,9 @@ const secondaryStyles = loading => css`
   &:focus,
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
-    background-color: ${loading ? 'inherit' : COLORS.primary};
-    color: ${loading ? COLORS.primary : COLORS.white};
-    fill: ${loading ? 'inherit' : COLORS.white};
+    background-color: ${isLoading ? 'inherit' : COLORS.primary};
+    color: ${isLoading ? COLORS.primary : COLORS.white};
+    fill: ${isLoading ? 'inherit' : COLORS.white};
   }
 `;
 
@@ -59,16 +59,16 @@ const quaternaryStyles = css`
   }
 `;
 
-const actionStyles = loading => css`
+const actionStyles = isLoading => css`
   border-width: 1px;
   border-color: ${COLORS.border};
   background-color: ${COLORS.white};
   color: ${COLORS.purple100};
   fill: ${COLORS.purple100};
-  box-shadow: ${loading ? 'none' : BOX_SHADOWS.clickable};
+  box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickable};
 
   &:hover {
-    box-shadow: ${loading ? 'none' : BOX_SHADOWS.clickableHover};
+    box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickableHover};
   }
 `;
 
@@ -94,20 +94,20 @@ const disabledStyles = css`
   }
 `;
 
-function parseTheme(disabled, buttonType, loading) {
+function parseTheme(disabled, buttonType, isLoading) {
   if (disabled) {
     return disabledStyles;
   }
 
   switch (buttonType) {
     case 'secondary':
-      return secondaryStyles(loading);
+      return secondaryStyles(isLoading);
     case 'tertiary':
       return tertiaryStyles;
     case 'quaternary':
       return quaternaryStyles;
     case 'action':
-      return actionStyles(loading);
+      return actionStyles(isLoading);
     default:
       return primaryStyles;
   }
@@ -116,7 +116,7 @@ function parseTheme(disabled, buttonType, loading) {
 export const baseButtonStyles = ({
   disabled,
   buttonType,
-  loading,
+  isLoading,
   textColor,
   fullWidth,
 }) => css`
@@ -147,8 +147,8 @@ export const baseButtonStyles = ({
     outline: none;
   }
 
-  ${parseTheme(disabled, buttonType, loading)};
-  ${loading && loadingStyles};
+  ${parseTheme(disabled, buttonType, isLoading)};
+  ${isLoading && loadingStyles};
 
   ${!!textColor &&
     !disabled &&
@@ -174,14 +174,14 @@ export const ButtonContents = styled.div`
   transition: transform ${ANIMATION.defaultTiming};
   width: 100%;
 
-  ${({ loading, hasIcon }) => {
-    if (loading && hasIcon) {
+  ${({ isLoading, hasIcon }) => {
+    if (isLoading && hasIcon) {
       return css`
         transform: translateX(-30px);
       `;
     }
 
-    if (loading && !hasIcon) {
+    if (isLoading && !hasIcon) {
       return css`
         transform: translateX(-15px);
       `;
@@ -193,7 +193,7 @@ export const ButtonContents = styled.div`
   }};
 
   & > svg {
-    opacity: ${({ loading }) => (loading ? 0 : 1)};
+    opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
     transition: opacity ${ANIMATION.defaultTiming};
     margin-right: ${SPACER.medium};
     margin-top: -5px;
@@ -205,8 +205,8 @@ export const ButtonText = styled.span`
   margin: 0;
   padding-top: 2px;
 
-  ${({ loading, hasIcon }) => {
-    if (loading && !hasIcon) {
+  ${({ isLoading, hasIcon }) => {
+    if (isLoading && !hasIcon) {
       return css`
         padding-left: ${SPACER.medium};
       `;

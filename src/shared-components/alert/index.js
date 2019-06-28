@@ -11,7 +11,6 @@ import {
   AlertContentContainer,
   alertIconStyles,
 } from './style';
-import withDeprecationWarning from '../../utils/withDeprecationWarning'
 
 const ANIMATION_DELAY = 500;
 
@@ -21,25 +20,12 @@ const alertIconMapping = {
   info: InfoIcon,
 };
 
-const deprecatedProperties = {
-  text: 'text Prop is deprecated. Use content instead',
-}
-
-const contentOrTextHaveToBeFilled = (props, propName, componentName) =>{
-  if ((!props[propName] || typeof(props[propName])) !== 'string' && ( !props.content || props.content == undefined)) {
-    return new Error(
-      `You need to pass either 'content' or 'text' prop to '${componentName}' component. Prop 'text' will be deprecated with next major version`
-    );
-  }
-}
-
 class Alert extends React.Component {
   static Container = ({ children }) => (
     <AlertsContainer>{children}</AlertsContainer>
   );
 
   static propTypes = {
-    text: contentOrTextHaveToBeFilled,
     content: PropTypes.node,
     type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
@@ -86,7 +72,7 @@ class Alert extends React.Component {
   };
 
   render() {
-    const { text, content, type, onExit, ...rest } = this.props;
+    const { content, type, onExit, ...rest } = this.props;
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
@@ -108,11 +94,11 @@ class Alert extends React.Component {
             `}
             fill="currentColor"
           />
-          {content || text}
+          {content}
         </AlertContentContainer>
       </AlertContainer>
     );
   }
 }
 
-export default withDeprecationWarning(Alert, deprecatedProperties);
+export default Alert;

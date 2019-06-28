@@ -74,7 +74,6 @@
     "babel-plugin-transform-svg-import-to-string": "^0.0.1",
     "circular-dependency-plugin": "^5.0.2",
     "create-index": "PocketDerm/create-index#master",
-    "emotion": "^10.0.7",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.7.0",

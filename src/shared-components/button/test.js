@@ -45,7 +45,7 @@ describe('<Button />', () => {
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
       const button = mount(
-        <Button loading onClick={spy}>
+        <Button isLoading onClick={spy}>
           Button Text
         </Button>
       );

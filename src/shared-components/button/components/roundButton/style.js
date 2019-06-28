@@ -34,8 +34,8 @@ export const RoundButtonBase = styled(ButtonBase)`
   width: 48px;
   padding: 0;
 
-  ${({ loading, disabled }) =>
-    !loading &&
+  ${({ isLoading, disabled }) =>
+    !isLoading &&
     !disabled &&
     css`
       &:hover {
@@ -45,7 +45,7 @@ export const RoundButtonBase = styled(ButtonBase)`
     `};
 
   & > svg {
-    opacity: ${({ loading }) => (loading ? 0 : 1)};
+    opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
     transition: opacity ${ANIMATION.defaultTiming};
     margin: 0 auto;
   }

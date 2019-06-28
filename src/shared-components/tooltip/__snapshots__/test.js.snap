@@ -20,7 +20,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   top: 120%;
   background: #ffffff;
   border: 1px solid #ededf0;
-  box-shadow: 0 12px 20px 0 rgba(45,45,48,0.05);
+  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
   color: #706D87;
   min-width: 100px;
   opacity: 0;
