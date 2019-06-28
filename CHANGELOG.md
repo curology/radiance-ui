@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.0.1
+- Re-releasing due to botched release
+
 # v4.0.0
 - Update deprecation notice warnings ([PR #127](https://github.com/PocketDerm/radiance-ui/pull/127))
 - **BREAKING**: Remove Alert component text prop code ([PR #126](https://github.com/PocketDerm/radiance-ui/pull/126))
