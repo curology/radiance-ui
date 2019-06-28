@@ -80,6 +80,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 | isLoading  | bool     | no       | false    | renders loading state and prevents click listener from being called                                                          |
 | onClick    | func     | no       | () => {} | callback function called on click of the button                                                                              |
 | textColor  | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+| fullWidth  | bool     | no       | false    | adjusts the default button styles so that the button takes the full width of the container                                   |
 
 ### Notes
 
