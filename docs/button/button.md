@@ -13,6 +13,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="tertiary">Tertiary Button</Button>
     <Button buttonType="quaternary">Quaternary Button</Button>
     <Button disabled>Disabled Button</Button>
+    <Button fullWidth>Full Width Button</Button>
 
     <Button isLoading>Primary Loading</Button>
     <Button isLoading buttonType="secondary">
@@ -23,6 +24,9 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     </Button>
     <Button buttonType="quaternary" isLoading>
       Quaternary Loading
+    </Button>
+    <Button fullWidth isLoading>
+      Full Width Loading
     </Button>
   </Button.Container>
 
@@ -37,10 +41,13 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Button
     </Button>
-
     <Button disabled icon={<CheckmarkIcon />}>
       Disabled Button
     </Button>
+    <Button fullWidth icon={<CheckmarkIcon />}>
+      Full Width Button
+    </Button>
+
     <Button isLoading icon={<CheckmarkIcon />}>
       Primary Loading
     </Button>
@@ -52,6 +59,9 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     </Button>
     <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Loading
+    </Button>
+    <Button isLoading fullWidth icon={<CheckmarkIcon />}>
+      Full Width Loading
     </Button>
   </Button.Container>
 </React.Fragment>;
