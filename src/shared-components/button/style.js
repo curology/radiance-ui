@@ -128,15 +128,12 @@ export const baseButtonStyles = ({
   cursor: pointer;
   display: block;
   margin: 0;
-  max-width: 325px;
   min-height: 52px;
-  min-width: 208px;
   opacity: 1;
   padding: 0 ${SPACER.large};
   position: relative;
   transition: all ${ANIMATION.defaultTiming} ease-in-out;
   text-decoration: none;
-  width: max-content;
 
   &:hover {
     transition: all ${ANIMATION.defaultTiming} ease-in-out;
@@ -156,11 +153,17 @@ export const baseButtonStyles = ({
     color: ${textColor};
     fill: ${textColor};
   `};
-  
-  ${fullWidth && 
-  `
-    width: 100%;
-  `}
+
+  ${fullWidth
+    ? `
+      width: 100%;
+    `
+    : `
+    min-width: 208px;
+    max-width: 325px;
+    width: max-content;
+    
+    `};
 `;
 
 export const ButtonBase = styled.button(baseButtonStyles);
