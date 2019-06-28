@@ -30,6 +30,7 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button buttonType="tertiary">Tertiary Button</Button>
       <Button buttonType="quaternary">Quaternary Button</Button>
       <Button disabled>Disabled Button</Button>
+      <Button fullWidth>Full Width Button</Button>
 
       <Button isLoading>Primary Loading</Button>
       <Button isLoading buttonType="secondary">
@@ -40,6 +41,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       </Button>
       <Button buttonType="quaternary" isLoading>
         Quaternary Loading
+      </Button>
+      <Button fullWidth isLoading>
+        Full Width Loading
       </Button>
     </Button.Container>
 
@@ -70,6 +74,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button disabled icon={<CheckmarkIcon />}>
         Disabled Button
       </Button>
+      <Button fullWidth icon={<CheckmarkIcon />}>
+        Full Width Button
+      </Button>
 
       <Button isLoading icon={<CheckmarkIcon />}>
         Primary Loading
@@ -82,6 +89,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       </Button>
       <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
         Quaternary Loading
+      </Button>
+      <Button isLoading fullWidth icon={<CheckmarkIcon />}>
+        Full Width Loading
       </Button>
     </Button.Container>
     <Typography.Heading
