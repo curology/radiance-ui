@@ -13,21 +13,21 @@ const SPACING = {
 
 const deprecatedProperties = {
   xxsmall:
-    'SPACING.xxsmall is deprecated and will be removed in a future version. Use SPACER.xsmall instead',
+    'SPACING.xxsmall is deprecated and will be removed in a future major release. Use SPACER.xsmall instead',
   xsmall:
-    'SPACING.xsmall is deprecated and will be removed in a future version. Use SPACER.small instead',
+    'SPACING.xsmall is deprecated and will be removed in a future major release. Use SPACER.small instead',
   small:
-    'SPACING.small is deprecated and will be removed in a future version. Use SPACER.medium instead',
+    'SPACING.small is deprecated and will be removed in a future major release. Use SPACER.medium instead',
   base:
-    'SPACING.base is deprecated and will be removed in a future version. Use SPACER.large instead',
+    'SPACING.base is deprecated and will be removed in a future major release. Use SPACER.large instead',
   medium:
-    'SPACING.medium is deprecated and will be removed in a future version. Use SPACER.xlarge instead',
+    'SPACING.medium is deprecated and will be removed in a future major release. Use SPACER.xlarge instead',
   large:
-    'SPACING.large is deprecated and will be removed in a future version. Use SPACER.x2large instead',
+    'SPACING.large is deprecated and will be removed in a future major release. Use SPACER.x2large instead',
   xlarge:
-    'SPACING.xlarge is deprecated and will be removed in a future version. Use SPACER.x4large instead',
+    'SPACING.xlarge is deprecated and will be removed in a future major release. Use SPACER.x4large instead',
   xxlarge:
-    'SPACING.xxlarge is deprecated and will be removed in a future version. Use SPACER.x5large instead',
+    'SPACING.xxlarge is deprecated and will be removed in a future major release. Use SPACER.x5large instead',
 };
 
 export default withDeprecationWarning(SPACING, deprecatedProperties);
