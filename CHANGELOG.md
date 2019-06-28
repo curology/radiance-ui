@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v4.0.0
+- Update deprecation notice warnings ([PR #127](https://github.com/PocketDerm/radiance-ui/pull/127))
+- **BREAKING**: Remove Alert component text prop code ([PR #126](https://github.com/PocketDerm/radiance-ui/pull/126))
+- Update Button and RoundButton loading prop usage ([PR #125](https://github.com/PocketDerm/radiance-ui/pull/125))
+- Update emotion dependency usage ([PR #124](https://github.com/PocketDerm/radiance-ui/pull/124))
+- Add Apercu Mono font in monoFont declaration ([PR #123](https://github.com/PocketDerm/radiance-ui/pull/123))
+- Update box-shadow color ([PR #122](https://github.com/PocketDerm/radiance-ui/pull/122))
+
 # v3.0.0
 - Update Storybook 4 to 5 ([PR #121](https://github.com/PocketDerm/radiance-ui/pull/121))
 
