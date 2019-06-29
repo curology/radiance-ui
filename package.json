@@ -130,7 +130,7 @@
     "concurrent": false,
     "subTaskConcurrency": 1,
     "linters": {
-      "resources/**/!(style|styles|test).js": [
+      "!(style|styles|test).js": [
         "prettier --write --single-quote",
         "eslint --fix",
         "git add"
