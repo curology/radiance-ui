@@ -122,7 +122,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run build:svgs:index && yarn run lint-staged"
+      "pre-commit": "yarn run build:svgs:index && yarn run lint-staged",
+      "pre-push": "yarn run test"
     }
   },
   "lint-staged": {
