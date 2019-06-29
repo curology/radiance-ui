@@ -131,7 +131,7 @@
     "subTaskConcurrency": 1,
     "linters": {
       "!(style|styles|test).js": [
-        "prettier --write --single-quote",
+        "prettier --write",
         "eslint --fix",
         "git add"
       ],
