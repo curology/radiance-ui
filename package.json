@@ -135,6 +135,10 @@
         "eslint --fix",
         "git add"
       ],
+      "(style|styles|test).js": [
+        "prettier --write",
+        "git add"
+      ],
       "*.{md,json}": [
         "prettier --write",
         "git add"
