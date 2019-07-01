@@ -3,7 +3,7 @@ module.exports = {
   collectCoverageFrom: [
     'src/shared-components/**',
     '/src/utils/**',
-    '!src/**/__snapshots__/**.js.snap',
+    '!src/**/__snapshots__/*.js.snap',
   ],
   coverageThreshold: {
     global: {
