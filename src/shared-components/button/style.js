@@ -118,7 +118,7 @@ export const baseButtonStyles = ({
   buttonType,
   isLoading,
   textColor,
-  fullWidth,
+  isFullWidth,
 }) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
@@ -154,7 +154,7 @@ export const baseButtonStyles = ({
     fill: ${textColor};
   `};
 
-  ${fullWidth
+  ${isFullWidth
     ? `
       width: 100%;
     `

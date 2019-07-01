@@ -36,7 +36,7 @@ class Button extends React.Component {
     isLoading: PropTypes.bool,
     icon: PropTypes.node,
     textColor: PropTypes.string,
-    fullWidth: PropTypes.bool,
+    isFullWidth: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -45,7 +45,7 @@ class Button extends React.Component {
     isLoading: false,
     onClick() {},
     textColor: '',
-    fullWidth: false,
+    isFullWidth: false,
   };
 
   render() {
@@ -58,7 +58,7 @@ class Button extends React.Component {
       isLoading,
       icon,
       textColor,
-      fullWidth,
+      isFullWidth,
       ...rest
     } = this.props;
 
@@ -74,7 +74,7 @@ class Button extends React.Component {
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
-        fullWidth={fullWidth}
+        isFullWidth={isFullWidth}
         {...rest}
       >
         <ButtonContents isLoading={loadingVal} hasIcon={!!icon}>
