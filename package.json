@@ -122,16 +122,25 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run build:svgs:index && yarn run lint-staged"
+      "pre-commit": "yarn run build:svgs:index && yarn run lint-staged",
+      "pre-push": "yarn run test"
     }
   },
   "lint-staged": {
     "concurrent": false,
     "subTaskConcurrency": 1,
     "linters": {
-      "resources/**/!(style|styles|test).js": [
-        "prettier --write --single-quote",
+      "!(style|styles|test).js": [
+        "prettier --write",
         "eslint --fix",
+        "git add"
+      ],
+      "(style|styles|test).js": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.{md,json}": [
+        "prettier --write",
         "git add"
       ]
     }
