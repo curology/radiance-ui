@@ -77,7 +77,11 @@ class Button extends React.Component {
         isFullWidth={isFullWidth}
         {...rest}
       >
-        <ButtonContents isLoading={loadingVal} hasIcon={!!icon}>
+        <ButtonContents
+          isLoading={loadingVal}
+          hasIcon={!!icon}
+          isFullWidth={isFullWidth}
+        >
           {icon}
           <ButtonText
             isLoading={loadingVal}
@@ -94,6 +98,7 @@ class Button extends React.Component {
           disabled={disabled}
           buttonType={buttonType}
           textColor={textColor}
+          isFullWidth={isFullWidth}
         />
       </ButtonBase>
     );
