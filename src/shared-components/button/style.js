@@ -168,8 +168,17 @@ export const baseButtonStyles = ({
 
 export const ButtonBase = styled.button(baseButtonStyles);
 
+// align-items conditional fixes slight button height misalignment for truthy scenario
+// See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
 export const ButtonContents = styled.div`
-  align-items: center;
+  align-items: ${({ hasIcon, isFullWidth, isLoading }) => {
+    if (isFullWidth && isLoading && hasIcon) {
+      return 'baseline';
+    }
+
+    return 'center';
+  }};
+
   display: flex;
   height: 100%;
   justify-content: center;
