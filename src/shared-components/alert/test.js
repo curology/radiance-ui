@@ -67,20 +67,6 @@ describe('Alert UI snapshots', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-
-  test('renders info type with text prop', () => {
-    const component = renderer.create(
-      <Alert
-        text={testAlert.text}
-        type="info"
-        duration={testAlert.duration}
-        onExit={() => { }}
-      />
-    );
-
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
 });
 
 test('Alert onExit is triggered on click', () => {

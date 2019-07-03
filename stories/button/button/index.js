@@ -31,14 +31,14 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button buttonType="quaternary">Quaternary Button</Button>
       <Button disabled>Disabled Button</Button>
 
-      <Button loading>Primary Loading</Button>
-      <Button loading buttonType="secondary">
+      <Button isLoading>Primary Loading</Button>
+      <Button isLoading buttonType="secondary">
         Secondary Loading
       </Button>
-      <Button buttonType="tertiary" loading>
+      <Button buttonType="tertiary" isLoading>
         Tertiary Loading
       </Button>
-      <Button buttonType="quaternary" loading>
+      <Button buttonType="quaternary" isLoading>
         Quaternary Loading
       </Button>
     </Button.Container>
@@ -71,16 +71,16 @@ const ButtonStory = withDocs(ButtonReadme, () => (
         Disabled Button
       </Button>
 
-      <Button loading icon={<CheckmarkIcon />}>
+      <Button isLoading icon={<CheckmarkIcon />}>
         Primary Loading
       </Button>
-      <Button loading buttonType="secondary" icon={<CheckmarkIcon />}>
+      <Button isLoading buttonType="secondary" icon={<CheckmarkIcon />}>
         Secondary Loading
       </Button>
-      <Button loading buttonType="tertiary" icon={<CheckmarkIcon />}>
+      <Button isLoading buttonType="tertiary" icon={<CheckmarkIcon />}>
         Tertiary Loading
       </Button>
-      <Button loading buttonType="quaternary" icon={<CheckmarkIcon />}>
+      <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
         Quaternary Loading
       </Button>
     </Button.Container>
@@ -98,7 +98,7 @@ const ButtonStory = withDocs(ButtonReadme, () => (
         ['primary', 'secondary', 'tertiary', 'quaternary'],
         'primary'
       )}
-      loading={boolean('loading', false)}
+      isLoading={boolean('isLoading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}
       textColor={text('textColor', '')}

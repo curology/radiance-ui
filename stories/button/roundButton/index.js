@@ -75,23 +75,23 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
 
     <Typography.Title>Loading</Typography.Title>
     <ButtonsContainer>
-      <RoundButton icon={<ArrowLeftIcon />} loading>
+      <RoundButton icon={<ArrowLeftIcon />} isLoading>
         Primary
       </RoundButton>
 
-      <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} loading>
+      <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} isLoading>
         Secondary
       </RoundButton>
 
-      <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} loading>
+      <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} isLoading>
         Tertiary
       </RoundButton>
 
-      <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} loading>
+      <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} isLoading>
         Quaternary
       </RoundButton>
 
-      <RoundButton buttonType="action" icon={<CloseIcon />} loading>
+      <RoundButton buttonType="action" icon={<CloseIcon />} isLoading>
         Action
       </RoundButton>
     </ButtonsContainer>
@@ -121,7 +121,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
           ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
           'primary'
         )}
-        loading={boolean('loading', false)}
+        isLoading={boolean('isLoading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
         icon={<CheckmarkIcon />}
