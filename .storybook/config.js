@@ -1,11 +1,9 @@
-import { configure } from '@storybook/react';
-import { addParameters, addDecorator } from '@storybook/react';
-import Theme from './theme';
+import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { addReadme } from 'storybook-readme';
 import centered from '@storybook/addon-centered/react';
-import { configureReadme } from 'storybook-readme';
 import { Global, css } from '@emotion/core';
+import Theme from './theme';
 import {
   resetStyles,
   brandStyles,
@@ -90,8 +88,8 @@ addParameters({
     showNav: true,
     showPanel: true,
     panelPosition: 'right',
-    hierarchySeparator: null,
-    hierarchyRootSeparator: null,
+    hierarchySeparator: /\/|\./, // matches a . or /
+    hierarchyRootSeparator: /\|/, //matches a |
     sidebarAnimations: true,
     enableShortcuts: true,
     isToolshown: true,
