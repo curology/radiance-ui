@@ -55,6 +55,13 @@ module.exports = webpackSettings => {
 
   customRules.forEach(rule => config.module.rules.push(rule));
 
+  config.module.rules.push({
+    test: /index\.js?$/,
+    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    include: path.resolve(__dirname, '../stories'),
+    enforce: 'pre',
+  });
+
   config.plugins.push(
     new CircularDependencyPlugin({
       exclude: /node_modules/,
