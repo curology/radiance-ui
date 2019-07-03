@@ -19,6 +19,8 @@ const isLoadingPropFunction = (props, propName, componentName) => {
   }
 };
 
+// TODO: Move <Loader /> to be sibling of <ButtonContents /> for more consistent
+// loading animation spacing
 class Button extends React.Component {
   static Container = Container;
 
