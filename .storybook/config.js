@@ -12,7 +12,11 @@ import {
 } from '../src/utils/injectGlobalStyles/style';
 
 const InjectGlobalStyles = storyFn => (
-  <div>
+  <div
+    css={css`
+      padding: 1rem;
+    `}
+  >
     <Global styles={resetStyles} />
     <Global styles={brandStyles} />
     <Global
@@ -72,27 +76,6 @@ addDecorator(InjectGlobalStyles);
 addDecorator(centered);
 addDecorator(withA11y);
 addDecorator(addReadme);
-
-configureReadme({
-  DocPreview: ({ children }) => (
-    <div
-      css={css`
-        padding: 1rem;
-      `}
-    >
-      {children}
-    </div>
-  ),
-  StoryPreview: ({ children }) => (
-    <div
-      css={css`
-        padding: 1rem;
-      `}
-    >
-      {children}
-    </div>
-  ),
-});
 
 addParameters({
   readme: {
