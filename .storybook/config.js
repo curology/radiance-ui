@@ -95,6 +95,12 @@ configureReadme({
 });
 
 addParameters({
+  readme: {
+    codeTheme: 'github',
+  },
+});
+
+addParameters({
   options: {
     theme: Theme,
     isFullscreen: false,
