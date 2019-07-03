@@ -18,13 +18,20 @@ const noop = () => {};
 
 class Accordion extends React.Component {
   static propTypes = {
-    title: PropTypes.node.isRequired,
-    isOpen: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
+    /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
-    noBorder: PropTypes.bool,
+    /** when true, the accordion will be greyed out and the onClick prop will be disabled */
     disabled: PropTypes.bool,
+    /** determine if the accordion is collapsed (false) or expanded (true) */
+    isOpen: PropTypes.bool.isRequired,
+    /** when true, border lines between accordions and title/children nodes will disappear */
+    noBorder: PropTypes.bool,
+    /** invoked when title node is clicked */
+    onClick: PropTypes.func.isRequired,
+    /** when true, the arrow is aligned flush with the right side of the component */
     rightAlignArrow: PropTypes.bool,
+    /** node that will render whether collapsed or expanded */
+    title: PropTypes.node.isRequired,
   };
 
   static defaultProps = {
@@ -74,7 +81,6 @@ class Accordion extends React.Component {
     }
   }
 
-
   render() {
     const { contentHeight } = this.state;
     const {
@@ -88,11 +94,7 @@ class Accordion extends React.Component {
     } = this.props;
 
     return (
-      <AccordionBox
-        isOpen={isOpen}
-        noBorder={noBorder}
-        disabled={disabled}
-      >
+      <AccordionBox isOpen={isOpen} noBorder={noBorder} disabled={disabled}>
         <TitleWrapper onClick={disabled ? noop : onClick} disabled={disabled}>
           <Truncate>{title}</Truncate>
           <ArrowWrapper rightAlign={rightAlignArrow}>

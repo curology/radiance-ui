@@ -8,7 +8,7 @@
 import { Accordion } from 'radiance-ui';
 ```
 
-\
+<br>
 The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
 
 #### Standard Accordion
@@ -77,7 +77,7 @@ The disabled accordion should only be used when the user is taking a clearly def
 
 - **_Subcomponent through Dot Notation_**
 
-Prevents line-wrapping and shortens text with an ellipsis. 
+Prevents line-wrapping and shortens text with an ellipsis.
 
 Note: The ellipsis will only be added if the text is a direct child.
 
@@ -87,17 +87,9 @@ Note: The ellipsis will only be added if the text is a direct child.
 
 <!-- STORY -->
 
-### Proptypes
+<!-- PROPS -->
 
-| prop            | propType | required | default | description                                                                        |
-| --------------- | -------- | -------- | ------- | ---------------------------------------------------------------------------------- |
-| title           | node     | yes      | -       | node that will render whether collapsed or expanded                                |
-| isOpen          | boolean  | yes      | -       | determine if the accordion is collapsed (false) or expanded (true)                 |
-| onClick         | function | yes      | -       | invoked when title node is clicked                                                 |
-| children        | node(s)  | yes      | -       | node(s) that will render only when expanded                                        |
-| noBorder        | boolean  | no       | false   | when true, border lines between accordions and title/children nodes will disappear |
-| disabled        | boolean  | no       | false   | when true, the accordion will be greyed out and the onClick prop will be disabled  |
-| rightAlignArrow | boolean  | no       | false   | when true, the arrow is aligned flush with the right side of the component         |
+<br>
 
 ### Subcomponents
 
