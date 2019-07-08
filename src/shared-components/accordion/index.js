@@ -35,8 +35,8 @@ class Accordion extends React.Component {
   };
 
   static defaultProps = {
-    noBorder: false,
     disabled: false,
+    noBorder: false,
     rightAlignArrow: false,
   };
 
