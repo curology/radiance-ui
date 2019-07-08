@@ -19,7 +19,7 @@ The accordion component expands to reveal hidden information. They should be use
 
 ### Standard Accordion
 
-The basic accordion for use on Curology's platform. Should be used whenever possible.
+Basic accordion styling, contains standard border, shadow and padding.
 
 ```jsx
 <Accordion.Container>
