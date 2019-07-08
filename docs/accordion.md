@@ -11,6 +11,12 @@ import { Accordion } from 'radiance-ui';
 <br>
 The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
 
+<!-- STORY -->
+
+<!-- PROPS -->
+
+<br>
+
 ### Standard Accordion
 
 The basic accordion for use on Curology's platform. Should be used whenever possible.
@@ -18,13 +24,17 @@ The basic accordion for use on Curology's platform. Should be used whenever poss
 ```jsx
 <Accordion.Container>
   <Accordion
-    title={<div>Title</div>}
-    isOpen={false}
-    onClick={() => {}}
+    title={
+      <Accordion.Content>
+        This is styled with Accordion.Content
+      </Accordion.Content>
+    }
   >
-    <div>Expansion</div>
+    <Accordion.Content>
+      Accordion.Content adds standard accordion padding.
+    </Accordion.Content>
   </Accordion>
-<Accordion.Container>
+</Accordion.Container>
 ```
 
 ### Accordion - No Border
@@ -34,14 +44,14 @@ This accordion style permits usage without the border typically found on the acc
 ```jsx
 <Accordion.Container>
   <Accordion
-    title={<div>Title</div>}
-    isOpen={false}
-    onClick={() => {}}
+    title={
+      <Accordion.Content>This is Accordion with noBorder</Accordion.Content>
+    }
     noBorder
   >
-    <div>Expansion</div>
+    <Accordion.Content>This is styled with Accordion.Content</Accordion.Content>
   </Accordion>
-<Accordion.Container>
+</Accordion.Container>
 ```
 
 ### Accordion with Thumbnails
@@ -73,41 +83,34 @@ import { Accordion } from 'radiance-ui';
 The disabled accordion should only be used when the user is taking a clearly defined action in a series of tasks. A good example of this component is the photo uploader in the sign up flow. Accordion blocks which represent specific photos the user takes, remain disabled and closed until the respective steps are reached. The user is then auto-advanced through each accordion block.
 
 ```jsx
-<Accordion disabled />
+<Accordion.Container>
+  <Accordion
+    title={<Accordion.Content>This is a disabled accordion</Accordion.Content>}
+    disabled
+  >
+    <Accordion.Content>Expandable</Accordion.Content>
+  </Accordion>
+</Accordion.Container>
 ```
 
-### Truncated Accordion
-
-- **_Subcomponent through Dot Notation_**
-
-Prevents line-wrapping and shortens text with an ellipsis.
-
-Note: The ellipsis will only be added if the text is a direct child.
+### Right-aligned Arrow Accordion
 
 ```jsx
-<Accordion disabled />
+<Accordion.Container>
+  <Accordion
+    title={<Accordion.Content>This is a right aligned arrow</Accordion.Content>}
+    rightAlignArrow
+  >
+    <Accordion.Content>Expandable</Accordion.Content>
+  </Accordion>
+</Accordion.Container>
 ```
-
-<!-- STORY -->
-
-<!-- PROPS -->
 
 <br>
 
 ## Subcomponents
 
 The `<Accordion />` component has subcomponents available through dot notation.
-
-### Truncate
-
-Prevents line-wrapping and shortens text with an ellipsis. Note: The ellipsis will only
-be added if the text is a direct child.
-
-```jsx
-import { Accordion } from 'radiance-ui';
-
-<Accordion.Truncate>Text to truncate</Accordion.Truncate>;
-```
 
 ### Container
 
@@ -117,9 +120,17 @@ Container to hold instances of `<Accordion>`
 import { Accordion } from 'radiance-ui';
 
 <Accordion.Container>
-  <Accordion {...props} />
-  <Accordion {...props} />
-  <Accordion {...props} />
+  <Accordion
+    title={
+      <Accordion.Content>
+        This Accordion styled with an Accordion.Container parent component
+      </Accordion.Content>
+    }
+  >
+    <Accordion.Content>
+      This Accordion styled with an Accordion.Container parent component
+    </Accordion.Content>
+  </Accordion>
 </Accordion.Container>;
 ```
 
@@ -130,21 +141,31 @@ Wraps padding around children nodes
 ```jsx
 import { Accordion } from 'radiance-ui';
 
-<Accordion
-  title={<Accordion.Content>Title</Accordion.Content>}
-  isOpen={true}
-  onClick={() => {}}
->
+<Accordion title={<Accordion.Content>Title</Accordion.Content>}>
   <Accordion.Content>Expansion with content padding</Accordion.Content>
 </Accordion>;
 ```
 
+### Truncate
+
+Prevents line-wrapping and shortens text with an ellipsis. Note: The ellipsis will only
+be added if the text is a direct child.
+
 ```jsx
+import { Accordion } from 'radiance-ui';
+
 <Accordion
-  title={<Accordion.Truncate>Title</Accordion.Truncate>}
-  isOpen={false}
-  onClick={() => {}}
+  title={
+    <Accordion.Content>
+      <Accordion.Truncate>
+        This uses Accordion.Truncate to shorten long text.
+      </Accordion.Truncate>
+    </Accordion.Content>
+  }
 >
-  <div>Expansion</div>
-</Accordion>
+  <Accordion.Content>
+    Accordion.Truncate is a wrapper that will cut off any text (direct children
+    only) with an added ellipsis and prevents line wrapping.
+  </Accordion.Content>
+</Accordion>;
 ```
