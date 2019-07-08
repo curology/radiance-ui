@@ -13,6 +13,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="tertiary">Tertiary Button</Button>
     <Button buttonType="quaternary">Quaternary Button</Button>
     <Button disabled>Disabled Button</Button>
+    <Button isFullWidth>Full Width Button</Button>
 
     <Button isLoading>Primary Loading</Button>
     <Button isLoading buttonType="secondary">
@@ -23,6 +24,9 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     </Button>
     <Button buttonType="quaternary" isLoading>
       Quaternary Loading
+    </Button>
+    <Button isFullWidth isLoading>
+      Full Width Loading
     </Button>
   </Button.Container>
 
@@ -37,10 +41,13 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Button
     </Button>
-
     <Button disabled icon={<CheckmarkIcon />}>
       Disabled Button
     </Button>
+    <Button isFullWidth icon={<CheckmarkIcon />}>
+      Full Width Button
+    </Button>
+
     <Button isLoading icon={<CheckmarkIcon />}>
       Primary Loading
     </Button>
@@ -53,6 +60,9 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Loading
     </Button>
+    <Button isLoading isFullWidth icon={<CheckmarkIcon />}>
+      Full Width Loading
+    </Button>
   </Button.Container>
 </React.Fragment>;
 ```
@@ -61,15 +71,16 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 
 ### Proptypes
 
-| prop       | propType | required | default  | description                                                                                                                  |
-| ---------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| buttonType | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`.                   |
-| children   | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
-| disabled   | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
-| icon       | node     | no       | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                     |
-| isLoading  | bool     | no       | false    | renders loading state and prevents click listener from being called                                                          |
-| onClick    | func     | no       | () => {} | callback function called on click of the button                                                                              |
-| textColor  | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+| prop        | propType | required | default  | description                                                                                                                  |
+| ----------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| buttonType  | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`.                   |
+| children    | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
+| disabled    | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
+| icon        | node     | no       | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                     |
+| isLoading   | bool     | no       | false    | renders loading state and prevents click listener from being called                                                          |
+| onClick     | func     | no       | () => {} | callback function called on click of the button                                                                              |
+| textColor   | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+| isFullWidth | bool     | no       | false    | adjusts the default button styles so that the button takes the full width of the container. Intended for mobile-use only.    |
 
 ### Notes
 

@@ -110,9 +110,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   cursor: pointer;
   display: block;
   margin: 0;
-  max-width: 325px;
   min-height: 52px;
-  min-width: 208px;
   opacity: 1;
   padding: 0 1.5rem;
   position: relative;
@@ -120,14 +118,16 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
   background-color: #ededf0;
   border-color: #ededf0;
   color: #c3c0cd;
   cursor: not-allowed;
   fill: #c3c0cd;
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .emotion-6:hover {
