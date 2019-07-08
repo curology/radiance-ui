@@ -3,13 +3,21 @@ import PropTypes from 'prop-types';
 
 import ButtonLoader from './style';
 
-const Loader = ({ isLoading, disabled, buttonType, className, textColor }) => (
+const Loader = ({
+  buttonType,
+  className,
+  disabled,
+  isFullWidth,
+  isLoading,
+  textColor,
+}) => (
   <ButtonLoader
     isLoading={isLoading}
     disabled={disabled}
     buttonType={buttonType}
     className={className}
     textColor={textColor}
+    isFullWidth={isFullWidth}
   >
     <div>
       <span />
@@ -20,8 +28,6 @@ const Loader = ({ isLoading, disabled, buttonType, className, textColor }) => (
 );
 
 Loader.propTypes = {
-  isLoading: PropTypes.bool,
-  disabled: PropTypes.bool,
   buttonType: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -30,6 +36,9 @@ Loader.propTypes = {
     'action',
   ]),
   className: PropTypes.string,
+  disabled: PropTypes.bool,
+  isFullWidth: PropTypes.bool,
+  isLoading: PropTypes.bool,
   textColor: PropTypes.string,
 };
 

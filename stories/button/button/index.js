@@ -3,8 +3,7 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-
-import ButtonReadme from 'docs/button/button.md';
+import ButtonReadme from 'docs/button/button';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import { Button, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
@@ -30,6 +29,7 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button buttonType="tertiary">Tertiary Button</Button>
       <Button buttonType="quaternary">Quaternary Button</Button>
       <Button disabled>Disabled Button</Button>
+      <Button isFullWidth>Full Width Button</Button>
 
       <Button isLoading>Primary Loading</Button>
       <Button isLoading buttonType="secondary">
@@ -40,6 +40,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       </Button>
       <Button buttonType="quaternary" isLoading>
         Quaternary Loading
+      </Button>
+      <Button isFullWidth isLoading>
+        Full Width Loading
       </Button>
     </Button.Container>
 
@@ -70,6 +73,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button disabled icon={<CheckmarkIcon />}>
         Disabled Button
       </Button>
+      <Button isFullWidth icon={<CheckmarkIcon />}>
+        Full Width Button
+      </Button>
 
       <Button isLoading icon={<CheckmarkIcon />}>
         Primary Loading
@@ -82,6 +88,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       </Button>
       <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
         Quaternary Loading
+      </Button>
+      <Button isLoading isFullWidth icon={<CheckmarkIcon />}>
+        Full Width Loading
       </Button>
     </Button.Container>
     <Typography.Heading

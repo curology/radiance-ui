@@ -20,12 +20,16 @@ function removeDefaultStorybookSvgRule(config) {
   );
 }
 
-module.exports = ({ config }) => {
+module.exports = webpackSettings => {
+  // ESLint fix for `Resolve error: Cannot destructure property" `config` of 'undefined' or 'null'` in /stories/**/index.js files.
+  if (!webpackSettings) return {};
+  const { config } = webpackSettings;
+
   removeDefaultStorybookSvgRule(config);
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.md'],
   };
 
   const customRules = [

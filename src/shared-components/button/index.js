@@ -19,6 +19,8 @@ const isLoadingPropFunction = (props, propName, componentName) => {
   }
 };
 
+// TODO: Move <Loader /> to be sibling of <ButtonContents /> for more consistent
+// loading animation spacing
 class Button extends React.Component {
   static Container = Container;
 
@@ -36,6 +38,7 @@ class Button extends React.Component {
     isLoading: PropTypes.bool,
     icon: PropTypes.node,
     textColor: PropTypes.string,
+    isFullWidth: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -44,6 +47,7 @@ class Button extends React.Component {
     isLoading: false,
     onClick() {},
     textColor: '',
+    isFullWidth: false,
   };
 
   render() {
@@ -56,6 +60,7 @@ class Button extends React.Component {
       isLoading,
       icon,
       textColor,
+      isFullWidth,
       ...rest
     } = this.props;
 
@@ -71,9 +76,14 @@ class Button extends React.Component {
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
+        isFullWidth={isFullWidth}
         {...rest}
       >
-        <ButtonContents isLoading={loadingVal} hasIcon={!!icon}>
+        <ButtonContents
+          isLoading={loadingVal}
+          hasIcon={!!icon}
+          isFullWidth={isFullWidth}
+        >
           {icon}
           <ButtonText
             isLoading={loadingVal}
@@ -90,6 +100,7 @@ class Button extends React.Component {
           disabled={disabled}
           buttonType={buttonType}
           textColor={textColor}
+          isFullWidth={isFullWidth}
         />
       </ButtonBase>
     );
