@@ -11,6 +11,7 @@ import {
 
 class Thumbnails extends React.Component {
   static propTypes = {
+    /** An array of image src strings that Accordion.Thumbails will use to render */
     photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 

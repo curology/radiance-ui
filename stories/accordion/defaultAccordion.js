@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/core';
-
 import { Accordion } from 'src/shared-components';
 
 class DefaultAccordion extends React.Component {
@@ -9,7 +8,6 @@ class DefaultAccordion extends React.Component {
     accordion2: false,
     accordion3: false,
     accordion4: false,
-    accordion5: false,
   };
 
   toggleAccordion = accordion => {
@@ -18,11 +16,15 @@ class DefaultAccordion extends React.Component {
 
   render() {
     const {
-      accordion1, accordion2, accordion3, accordion4, accordion5,
+      accordion1, accordion2, accordion3, accordion4, 
     } = this.state;
 
     return (
-      <div css={css`width: 400px;`}>
+      <div
+        css={css`
+          width: 400px;
+        `}
+      >
         <Accordion.Container>
           <Accordion
             title={
@@ -37,22 +39,6 @@ class DefaultAccordion extends React.Component {
               Accordion.Content adds standard accordion padding.
             </Accordion.Content>
           </Accordion>
-          <Accordion
-            title={
-              <Accordion.Content>
-                <Accordion.Truncate>
-                  This uses Accordion.Truncate to shorten long text.
-                </Accordion.Truncate>
-              </Accordion.Content>
-            }
-            isOpen={accordion2}
-            onClick={() => this.toggleAccordion('accordion2')}
-          >
-            <Accordion.Content>
-              Accordion.Truncate is a wrapper that will cut off any text (direct
-              children only) with an added ellipsis and prevents line wrapping.
-            </Accordion.Content>
-          </Accordion>
         </Accordion.Container>
         <Accordion.Container>
           <Accordion
@@ -61,34 +47,38 @@ class DefaultAccordion extends React.Component {
                 This is Accordion with noBorder
               </Accordion.Content>
             }
-            isOpen={accordion3}
-            onClick={() => this.toggleAccordion('accordion3')}
+            isOpen={accordion2}
+            onClick={() => this.toggleAccordion('accordion2')}
             noBorder
           >
             <Accordion.Content>
               This is styled with Accordion.Content
             </Accordion.Content>
           </Accordion>
+        </Accordion.Container>
+        <Accordion.Container>
           <Accordion
             title={
               <Accordion.Content>
                 This is a disabled accordion
               </Accordion.Content>
             }
-            isOpen={accordion4}
-            onClick={() => this.toggleAccordion('accordion4')}
+            isOpen={accordion3}
+            onClick={() => this.toggleAccordion('accordion3')}
             disabled
           >
             <Accordion.Content>Expandable</Accordion.Content>
           </Accordion>
+        </Accordion.Container>
+        <Accordion.Container>
           <Accordion
             title={
               <Accordion.Content>
                 This is a right aligned arrow
               </Accordion.Content>
             }
-            isOpen={accordion5}
-            onClick={() => this.toggleAccordion('accordion5')}
+            isOpen={accordion4}
+            onClick={() => this.toggleAccordion('accordion4')}
             rightAlignArrow
           >
             <Accordion.Content>Expandable</Accordion.Content>
