@@ -48,6 +48,7 @@ const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
   height: 32px;
   display: flex;
   flex-flow: row nowrap;
+  flex: 0 0 auto;
   justify-content: center;
   align-items: center;
   transition: all ${ANIMATION.defaultTiming};
