@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.0
+
+- [Internal] Downgrade `@emotion` packages to `10.0.10` or nearest lesser version due to unidentified `@emotion/core 10.0.14` regression. ([#136](https://github.com/PocketDerm/radiance-ui/pull/136))
+
 # v4.1.0
 
 - [Security] Update `lodash-es` and `lodash` ([#134](https://github.com/PocketDerm/radiance-ui/pull/134)) ([#135](https://github.com/PocketDerm/radiance-ui/pull/135))
