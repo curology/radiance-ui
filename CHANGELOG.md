@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.1
+
+- Added rest props to Immersive Modal. ([#137](https://github.com/PocketDerm/radiance-ui/pull/137))
+
 # v4.2.0
 
 - [Internal] Downgrade `@emotion` packages to `10.0.10` or nearest lesser version due to unidentified `@emotion/core 10.0.14` regression. ([#136](https://github.com/PocketDerm/radiance-ui/pull/136))
