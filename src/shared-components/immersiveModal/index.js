@@ -74,9 +74,11 @@ class ImmersiveModal extends React.Component {
   };
 
   render() {
-    const { children, canBeClosed, onClose, header } = this.props;
+    const {
+      children, canBeClosed, onClose, header, ...rest 
+    } = this.props;
     return ReactDOM.createPortal(
-      <Overlay>
+      <Overlay {...rest}>
         <ModalContainer>
           <OffClickWrapper onOffClick={this.closeModal}>
             {canBeClosed && (
