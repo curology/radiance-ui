@@ -2,7 +2,13 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
+import {
+  ANIMATION,
+  BOX_SHADOWS,
+  COLORS,
+  MEDIA_QUERIES,
+  SPACER,
+} from '../../constants';
 
 const primaryStyles = css`
   background-color: ${COLORS.purple};
@@ -157,12 +163,16 @@ export const baseButtonStyles = ({
   ${isFullWidth
     ? `
       width: 100%;
+      ${MEDIA_QUERIES.mdUp} {
+        min-width: 208px;
+        max-width: 325px;
+        width: max-content;
+      }
     `
     : `
     min-width: 208px;
     max-width: 325px;
     width: max-content;
-    
     `};
 `;
 
