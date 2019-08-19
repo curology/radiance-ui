@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.2
+
+- [Patch] Update `tertiary` color constant. ([#138](https://github.com/PocketDerm/radiance-ui/pull/138))
+
 # v4.2.1
 
 - Added rest props to Immersive Modal. ([#137](https://github.com/PocketDerm/radiance-ui/pull/137))
