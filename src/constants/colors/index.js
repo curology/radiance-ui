@@ -16,7 +16,7 @@ export const brandColors = {
   purple30: '#c3c0cd',
   purple15: DEFAULT_BORDER,
   purple10: DEFAULT_BACKGROUND,
-  purple4: '#f8f8fa', // Tertiary
+  purple4: '#f8f8fa',
 
   // Primary 2
   lavender100: '#a6a1e2',
@@ -74,7 +74,7 @@ export const colorAliases = {
   primaryTint2: brandColors.purple70,
   primaryTint3: brandColors.purple30,
   secondary: brandColors.lavender100,
-  tertiary: brandColors.purple10,
+  tertiary: brandColors.purple4,
 
   // general colors
   success: brandColors.statusGreen,
