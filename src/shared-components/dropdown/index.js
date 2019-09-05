@@ -28,27 +28,35 @@ const propTypes = {
 class Dropdown extends React.Component {
   state = { isOpen: false };
 
-  onSelectClick = () => this.setState({ isOpen: !this.state.isOpen });
+  onSelectClick = () => {
+    const { isOpen } = this.state;
+
+    this.setState({ isOpen: !isOpen });
+  };
 
   onSelectChange = event => {
+    const { onChange } = this.props;
+
     const { value, selectedOptions } = event.target;
 
     if (selectedOptions && selectedOptions.length) {
       const { label } = selectedOptions[0];
-      this.props.onChange({ value, label });
+      onChange({ value, label });
     }
 
     this.closeDropdown();
   };
 
   onOptionClick = event => {
+    const { onChange } = this.props;
+
     if (event.target.hasAttribute('disabled')) {
       return;
     }
-    
+
     const value = event.target.getAttribute('value');
     const label = event.target.innerText;
-    this.props.onChange({ value, label });
+    onChange({ value, label });
     this.closeDropdown();
   };
 
