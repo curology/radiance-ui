@@ -14,20 +14,16 @@ const MobileDropdown = ({
       onChange={onSelectChange}
     >
       {options.map(option => {
-        let disabledValue = option.disabled;
+        let isDisabled = !!option.disabled;
 
         // Covers the case where default value is disabled
         // In mobile you cannot have a selected value as disabled option
         if (option.value === value) {
-          disabledValue = false;
+          isDisabled = false;
         }
 
         return (
-          <option
-            key={option.value}
-            value={option.value}
-            disabled={disabledValue}
-          >
+          <option key={option.value} value={option.value} disabled={isDisabled}>
             {option.label}
           </option>
         );
