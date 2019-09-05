@@ -13,15 +13,25 @@ const MobileDropdown = ({
       value={value || ''}
       onChange={onSelectChange}
     >
-      {options.map(option => (
-        <option
-          key={option.value}
-          value={option.value}
-          disabled={option.disabled}
-        >
-          {option.label}
-        </option>
-      ))}
+      {options.map(option => {
+        let disabledValue = option.disabled;
+
+        // Covers the case where default value is disabled
+        // In mobile you cannot have a selected value as disabled option
+        if (option.value === value) {
+          disabledValue = false;
+        }
+
+        return (
+          <option
+            key={option.value}
+            value={option.value}
+            disabled={disabledValue}
+          >
+            {option.label}
+          </option>
+        );
+      })}
     </select>
     <IconContainer>
       <ChevronIcon width={10} height={10} />
