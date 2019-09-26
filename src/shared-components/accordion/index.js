@@ -50,11 +50,10 @@ class Accordion extends React.Component {
 
   contentRef = React.createRef();
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      contentHeight: this.getContentHeight(props.isOpen),
-    };
+  state = { contentHeight: '0px' };
+
+  componentDidMount() {
+    this.updateHeight();
   }
 
   componentDidUpdate() {
@@ -68,16 +67,16 @@ class Accordion extends React.Component {
         ? this.contentRef.current.clientHeight
         : '0'
     }px`
-  )
+  );
 
   updateHeight() {
     const { isOpen } = this.props;
     const { contentHeight } = this.state;
 
-    if (contentHeight !== this.getContentHeight(isOpen)) {
-      this.setState({
-        contentHeight: this.getContentHeight(isOpen),
-      });
+    const nextHeight = this.getContentHeight(isOpen);
+
+    if (contentHeight !== nextHeight) {
+      this.setState({ contentHeight: nextHeight });
     }
   }
 
