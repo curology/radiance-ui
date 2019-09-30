@@ -3,6 +3,7 @@
 # v4.2.3
 
 - [Bug] Fix `Accoridon` to mount expanded when `isOpen` prop is initially set to `true`. ([#142](https://github.com/PocketDerm/radiance-ui/pull/142))
+- [Bug] Fix default value handling on mobile dropdown. ([#141](https://github.com/PocketDerm/radiance-ui/pull/141))
 
 # v4.2.2
 
