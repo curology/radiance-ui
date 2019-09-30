@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.3
+
+- [Bug] Fix `Accoridon` to mount expanded when `isOpen` prop is initially set to `true`. ([#142](https://github.com/PocketDerm/radiance-ui/pull/142))
+
 # v4.2.2
 
 - [Patch] Update `tertiary` color constant. ([#138](https://github.com/PocketDerm/radiance-ui/pull/138))
