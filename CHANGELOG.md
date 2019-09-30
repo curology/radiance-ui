@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.4
+
+- Re-release
+
 # v4.2.3
 
 - [Bug] Fix `Accoridon` to mount expanded when `isOpen` prop is initially set to `true`. ([#142](https://github.com/PocketDerm/radiance-ui/pull/142))
