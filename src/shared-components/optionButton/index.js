@@ -48,7 +48,7 @@ const OptionButton = ({
 OptionButton.propTypes = {
   icon: PropTypes.node,
   text: PropTypes.string.isRequired,
-  subtext: PropTypes.string,
+  subtext: PropTypes.node,
   onClick: PropTypes.func.isRequired,
   optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
   selected: PropTypes.bool,
