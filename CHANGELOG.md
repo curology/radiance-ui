@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.6
+
+- Allow node proptype for `subtext` in `OptionButton` ([#143](https://github.com/PocketDerm/radiance-ui/pull/143))
+
 # v4.2.5
 
 - [Chore] Update LinkButton "as" prop typing ([#144](https://github.com/PocketDerm/radiance-ui/pull/144))
@@ -10,7 +14,7 @@
 
 # v4.2.3
 
-- [Bug] Fix `Accoridon` to mount expanded when `isOpen` prop is initially set to `true`. ([#142](https://github.com/PocketDerm/radiance-ui/pull/142))
+- [Bug] Fix `Accordion` to mount expanded when `isOpen` prop is initially set to `true`. ([#142](https://github.com/PocketDerm/radiance-ui/pull/142))
 - [Bug] Fix default value handling on mobile dropdown. ([#141](https://github.com/PocketDerm/radiance-ui/pull/141))
 
 # v4.2.2
