@@ -25,6 +25,7 @@ export { default as FlagIcon } from './flag-icon.svg';
 export { default as GiftIcon } from './gift-icon.svg';
 export { default as GoogleIcon } from './google-icon.svg';
 export { default as HeartIcon } from './heart-icon.svg';
+export { default as InfoCircleIcon } from './info-circle-icon.svg';
 export { default as InfoIcon } from './info-icon.svg';
 export { default as InstagramIcon } from './instagram-icon.svg';
 export { default as LockIcon } from './lock-icon.svg';
@@ -52,4 +53,3 @@ export { default as ThumbsDownIcon } from './thumbs-down-icon.svg';
 export { default as ThumbsUpIcon } from './thumbs-up-icon.svg';
 export { default as TruckIcon } from './truck-icon.svg';
 export { default as TwitterIcon } from './twitter-icon.svg';
-
