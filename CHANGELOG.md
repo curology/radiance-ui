@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.5
+
+- [Chore] Update LinkButton "as" prop typing ([#144](https://github.com/PocketDerm/radiance-ui/pull/144))
+
 # v4.2.4
 
 - Re-release
