@@ -23,11 +23,13 @@ class ImmersiveModal extends React.Component {
     canBeClosed: PropTypes.bool,
     onClose: PropTypes.func,
     header: PropTypes.node,
+    scrollContainerId: PropTypes.string,
   };
 
   static defaultProps = {
     canBeClosed: true,
     onClose: () => {},
+    scrollContainerId: 'modalScrollContainer',
   };
 
   static Title = Title;
@@ -75,11 +77,16 @@ class ImmersiveModal extends React.Component {
 
   render() {
     const {
-      children, canBeClosed, onClose, header, ...rest 
+      children,
+      canBeClosed,
+      onClose,
+      header,
+      scrollContainerId,
+      ...rest
     } = this.props;
     return ReactDOM.createPortal(
       <Overlay {...rest}>
-        <ModalContainer>
+        <ModalContainer id={scrollContainerId}>
           <OffClickWrapper onOffClick={this.closeModal}>
             {canBeClosed && (
               <CloseIconContainer>
