@@ -1,3 +1,4 @@
+// @ts-ignore
 import { throwOnUndefinedProperty } from '../../utils';
 
 export default throwOnUndefinedProperty({

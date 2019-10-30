@@ -6,6 +6,9 @@ import Loader from './shared-components/loader';
 import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
+import LinkButton from './components/linkButton';
+import RoundButton from './components/roundButton';
+import TextButton from './components/textButton';
 
 const deprecatedProperties = {
   loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
@@ -107,7 +110,5 @@ class Button extends React.Component {
   }
 }
 
-export LinkButton from './components/linkButton';
-export RoundButton from './components/roundButton';
-export TextButton from './components/textButton';
+export { LinkButton, RoundButton, TextButton };
 export default withDeprecationWarning(Button, deprecatedProperties);
