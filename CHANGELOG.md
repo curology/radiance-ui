@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.7
+
+- Add id prop on modal to target scrolling context ([#147](https://github.com/PocketDerm/radiance-ui/pull/147))
+
 # v4.2.6
 
 - Allow node proptype for `subtext` in `OptionButton` ([#143](https://github.com/PocketDerm/radiance-ui/pull/143))
