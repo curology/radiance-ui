@@ -31,7 +31,7 @@
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",
     "tsc": "tsc",
-    "tsc-with-tsconfig-args": "tsc --allowJs true --baseUrl src --esModuleInterop true --experimentalDecorators true --jsx preserve --isolatedModules true --module commonjs --moduleResolution node --noEmit true --skipLibCheck true --strict true --suppressImplicitAnyIndexErrors true --target es2018",
+    "tsc-with-tsconfig": "tsc --allowJs true --baseUrl src --declaration false --emitDeclarationOnly false --esModuleInterop true --experimentalDecorators true --forceConsistentCasingInFileNames true --jsx preserve --module commonjs --moduleResolution node --noEmit true --noImplicitReturns true --noUnusedLocals true --noUnusedParameters true --skipLibCheck true --strict true --suppressImplicitAnyIndexErrors true --target es2018",
     "tsc-build-types": "tsc -p tsconfigGenerateTypes.json"
   },
   "repository": {
@@ -146,6 +146,12 @@
       "!(style|styles|test).js": [
         "prettier --write",
         "eslint --fix",
+        "git add"
+      ],
+      "src/**/*.{ts,tsx}": [
+        "prettier --write",
+        "eslint --fix",
+        "yarn run tsc-with-tsconfig",
         "git add"
       ],
       "(style|styles|test).js": [
