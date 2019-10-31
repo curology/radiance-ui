@@ -2,7 +2,6 @@
  * Note: Each config is exported separately to be rendered in storybook:
  * https://github.com/PocketDerm/PocketDerm/blob/master/resources/assets/component-library/stories/colors/index.js#L5
  */
-// @ts-ignore
 import { withDeprecationWarning } from '../../utils';
 
 const DEFAULT = '#706D87';

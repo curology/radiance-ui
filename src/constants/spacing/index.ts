@@ -1,4 +1,3 @@
-// @ts-ignore
 import { withDeprecationWarning } from '../../utils';
 
 const SPACING = {

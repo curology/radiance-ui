@@ -1,4 +1,3 @@
-// @ts-ignore
 import throwOnUndefinedProperty from '../../utils/throwOnUndefinedProperty';
 
 const keycodes = throwOnUndefinedProperty({

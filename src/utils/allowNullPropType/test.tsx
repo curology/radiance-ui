@@ -4,7 +4,8 @@ import { shallow } from 'enzyme';
 
 import allowNullPropType from './index';
 
-const Test = ({ text }) => <p>{text || 'Some text'}</p>;
+type AllowedProps = { text?: string | null };
+const Test = ({ text }: AllowedProps) => <p>{text || 'Some text'}</p>;
 
 Test.propTypes = {
   text: allowNullPropType(PropTypes.string.isRequired),
@@ -19,20 +20,20 @@ describe('allowNullPropType', () => {
 
     expect(console.error).toHaveBeenCalled();
   });
-  
+
   it('does not raise error with null prop', () => {
     console.error = jest.fn();
     shallow(<Test text={null} />);
-    
-    expect(console.error).not.toHaveBeenCalled();
-  });
-  
-  it('does not raise error with normal prop', () => {
-    console.error = jest.fn();
-    shallow(<Test text='Sample text!' />);
 
     expect(console.error).not.toHaveBeenCalled();
-  })
+  });
+
+  it('does not raise error with normal prop', () => {
+    console.error = jest.fn();
+    shallow(<Test text="Sample text!" />);
+
+    expect(console.error).not.toHaveBeenCalled();
+  });
 });
 
 /* eslint-enable no-console */

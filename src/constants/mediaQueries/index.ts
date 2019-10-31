@@ -1,4 +1,3 @@
-// @ts-ignore
 import { throwOnUndefinedProperty } from '../../utils';
 import BREAKPOINTS from '../breakpoints';
 

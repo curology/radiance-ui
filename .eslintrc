@@ -6,7 +6,7 @@
   },
   "overrides": [
     {
-      "files": ["test.js"],
+      "files": ["test.js", "test.ts", "test.tsx"],
       "rules": {
         "no-undef": "off",
         "emotion/jsx-import": "error",
@@ -25,6 +25,7 @@
     "import/extensions": [".js", ".jsx"]
   },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
   }
 }

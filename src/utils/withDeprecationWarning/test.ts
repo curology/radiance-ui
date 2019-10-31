@@ -15,7 +15,7 @@ describe('property that is not in deprecatedProperties', () => {
     const subject = withDeprecationWarning(testObj, deprecatedProperties);
 
     // eslint-disable-next-line no-unused-expressions
-    subject.notDeprecated
+    subject.notDeprecated;
 
     expect(warn).not.toHaveBeenCalled();
     warn.mockRestore();
@@ -35,9 +35,11 @@ describe('property that is in deprecatedProperties', () => {
     const subject = withDeprecationWarning(testObj, deprecatedProperties);
 
     // eslint-disable-next-line no-unused-expressions
-    subject.deprecated
+    subject.deprecated;
 
-    expect(warn).toHaveBeenCalledWith(`[Deprecation Warning]: ${deprecatedMessage}`);
+    expect(warn).toHaveBeenCalledWith(
+      `[Deprecation Warning]: ${deprecatedMessage}`
+    );
     warn.mockRestore();
   });
 

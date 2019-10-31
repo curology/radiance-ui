@@ -1,11 +1,18 @@
 const allowedEnvironments = ['test', 'development', 'dev'];
-const shouldShowForEnvironment = allowedEnvironments.includes(
-  process.env.NODE_ENV
-);
 
-export default function withDeprecationWarning(obj, deprecatedProperties = {}) {
+const environment = process.env.NODE_ENV;
+
+const shouldShowForEnvironment =
+  typeof environment === 'string'
+    ? allowedEnvironments.includes(environment)
+    : false;
+
+export default function withDeprecationWarning<T extends object>(
+  obj: T,
+  deprecatedProperties = {}
+): T {
   const handler = {
-    get(target, property) {
+    get(target: T, property: string) {
       const isDeprecatedProperty = Object.keys(deprecatedProperties).includes(
         property
       );

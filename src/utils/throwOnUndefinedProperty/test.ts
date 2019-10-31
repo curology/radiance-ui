@@ -5,5 +5,6 @@ test('throws an error when trying to access undefined property', () => {
   const protectedObj = throwOnUndefinedProperty(obj);
 
   expect(protectedObj.foo).toBe('bar');
+  // @ts-ignore
   expect(() => protectedObj.baz).toThrow("Property 'baz' is not defined");
 });

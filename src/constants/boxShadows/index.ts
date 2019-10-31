@@ -2,7 +2,6 @@
  * Note: Each Category is exported separately to be rendered in storybook:
  */
 
-// @ts-ignore
 import { transparentize } from '../../utils';
 import COLORS from '../colors';
 

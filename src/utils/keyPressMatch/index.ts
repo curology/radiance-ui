@@ -1,4 +1,12 @@
-export default (event, keycode) => {
+import keycodes from '../../constants/keycodes';
+
+type EventParamType = {
+  keyCode?: any;
+  keyIdentifier?: any;
+  key?: any;
+};
+
+export default (event: EventParamType, keycode: typeof keycodes) => {
   let code;
 
   if (event.keyCode !== undefined) {
