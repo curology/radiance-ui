@@ -3,7 +3,7 @@ import { Transition } from 'react-transition-group';
 
 import { ANIMATION } from '../../constants';
 
-const getStyleForTransitionState = (transitionState: string) => {
+const getStyleForTransitionState = transitionState => {
   switch (transitionState) {
     case 'entering':
       return {
@@ -36,13 +36,13 @@ const getStyleForTransitionState = (transitionState: string) => {
   }
 };
 
-type HelperTransitionProps = { children: React.ReactElement; props: any[] };
+
 const HelperTransition = ({
   children: child,
   ...props
-}: HelperTransitionProps) => (
+}) => (
   <Transition timeout={350} {...props}>
-    {(transitionState: string) =>
+    {transitionState =>
       React.cloneElement(child, {
         style: getStyleForTransitionState(transitionState),
       })
