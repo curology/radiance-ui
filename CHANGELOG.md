@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.8
+
+- [Patch] Sequence onExit callback after setState in Alert component ([#149](https://github.com/PocketDerm/radiance-ui/pull/149))
+
 # v4.2.7
 
 - Add id prop on modal to target scrolling context ([#147](https://github.com/PocketDerm/radiance-ui/pull/147))
