@@ -64,7 +64,7 @@
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addon-storysource": "^5.1.9",
     "@storybook/addon-viewport": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/react": "~5.1.9",
     "@svgr/rollup": "^4.0.2",
     "@svgr/webpack": "^4.0.2",
     "babel-core": "^7.0.0-bridge.0",
