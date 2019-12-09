@@ -37,14 +37,14 @@ const InjectGlobalStyles = storyFn => (
       styles={css`
         @font-face {
           font-family: 'larssiet';
-          src: url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_1_0.eot');
-          src: url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_1_0.eot?#iefix')
+          src: url('https://assets.curology.com/fonts/larssiet/34535B_1_0.eot');
+          src: url('https://assets.curology.com/fonts/larssiet/34535B_1_0.eot?#iefix')
               format('embedded-opentype'),
-            url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_1_0.woff2')
+            url('https://assets.curology.com/fonts/larssiet/34535B_1_0.woff2')
               format('woff2'),
-            url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_1_0.woff')
+            url('https://assets.curology.com/fonts/larssiet/34535B_1_0.woff')
               format('woff'),
-            url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_1_0.ttf')
+            url('https://assets.curology.com/fonts/larssiet/34535B_1_0.ttf')
               format('truetype');
         }
       `}
@@ -54,14 +54,14 @@ const InjectGlobalStyles = storyFn => (
         @font-face {
           font-family: 'larssiet';
           font-weight: bold;
-          src: url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.eot');
-          src: url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.eot?#iefix')
+          src: url('https://assets.curology.com/fonts/larssiet/34535B_0_0.eot');
+          src: url('https://assets.curology.com/fonts/larssiet/34535B_0_0.eot?#iefix')
               format('embedded-opentype'),
-            url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.woff2')
+            url('https://assets.curology.com/fonts/larssiet/34535B_0_0.woff2')
               format('woff2'),
-            url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.woff')
+            url('https://assets.curology.com/fonts/larssiet/34535B_0_0.woff')
               format('woff'),
-            url('https://s3.amazonaws.com/curology-cdn.com/fonts/larssiet/34535B_0_0.ttf')
+            url('https://assets.curology.com/fonts/larssiet/34535B_0_0.ttf')
               format('truetype');
         }
       `}
