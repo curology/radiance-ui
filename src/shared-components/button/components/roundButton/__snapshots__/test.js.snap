@@ -196,8 +196,8 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   right: 0;
   top: 0;
   margin-top: -6px;
-  opacity: 0;
   width: 38px;
+  opacity: 0;
   width: 36px;
   margin: -3px -3px 0 0;
 }

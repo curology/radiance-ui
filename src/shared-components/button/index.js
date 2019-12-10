@@ -71,16 +71,16 @@ class Button extends React.Component {
 
     return (
       <ButtonBase
+        buttonType={buttonType}
         disabled={disabled}
+        isFullWidth={isFullWidth}
+        isLoading={loadingVal}
         onClick={
           !disabled && !loadingVal ? onClick : event => event.preventDefault()
         }
-        buttonType={buttonType}
-        isLoading={loadingVal}
-        type="button"
-        textColor={textColor}
-        isFullWidth={isFullWidth}
         noDesktopFullWidth={noDesktopFullWidth}
+        textColor={textColor}
+        type="button"
         {...rest}
       >
         <ButtonContents

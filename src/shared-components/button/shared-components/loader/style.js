@@ -35,10 +35,11 @@ const ButtonLoader = styled.div`
   right: 0;
   top: 0;
   margin-top: -6px;
-  opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
 
   width: ${({ isFullWidth, noDesktopFullWidth }) =>
     isFullWidth && !noDesktopFullWidth ? `25%` : `38px`};
+
+  opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
 
   & span {
     ${({ disabled, buttonType }) => {
