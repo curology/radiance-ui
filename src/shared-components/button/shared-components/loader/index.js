@@ -45,4 +45,8 @@ Loader.propTypes = {
   textColor: PropTypes.string,
 };
 
+Loader.defaultProps = {
+  noDesktopFullWidth: false,
+};
+
 export default Loader;
