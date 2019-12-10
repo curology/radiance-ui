@@ -69,7 +69,7 @@
     "@svgr/webpack": "^4.0.2",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-svg-import-to-string": "^0.0.1",
     "circular-dependency-plugin": "^5.0.2",
