@@ -2,13 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
-  ANIMATION,
-  COLORS,
-  MEDIA_QUERIES,
-  SPACER,
-  BOX_SHADOWS,
-} from '../../constants';
+import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
 
 const primaryStyles = css`
   background-color: ${COLORS.purple};
@@ -123,8 +117,9 @@ export const baseButtonStyles = ({
   disabled,
   buttonType,
   isLoading,
-  textColor,
   isFullWidth,
+  noDesktopFullWidth,
+  textColor,
 }) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
@@ -160,7 +155,7 @@ export const baseButtonStyles = ({
     fill: ${textColor};
   `};
 
-  ${isFullWidth
+  ${isFullWidth && !noDesktopFullWidth
     ? `
       width: 100%;
     `
@@ -169,12 +164,6 @@ export const baseButtonStyles = ({
     max-width: 325px;
     width: max-content;
     `};
-
-  ${MEDIA_QUERIES.mdUp} {
-    min-width: 208px;
-    max-width: 325px;
-    width: max-content;
-  }
 `;
 
 export const ButtonBase = styled.button(baseButtonStyles);

@@ -25,42 +25,45 @@ class Button extends React.Component {
   static Container = Container;
 
   static propTypes = {
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-    children: PropTypes.node.isRequired,
     buttonType: PropTypes.oneOf([
       'primary',
       'secondary',
       'tertiary',
       'quaternary',
     ]),
-    loading: isLoadingPropFunction,
-    isLoading: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    disabled: PropTypes.bool,
     icon: PropTypes.node,
-    textColor: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    loading: isLoadingPropFunction,
+    onClick: PropTypes.func,
+    noDesktopFullWidth: PropTypes.bool,
+    textColor: PropTypes.string,
   };
 
   static defaultProps = {
-    disabled: false,
     buttonType: 'primary',
+    disabled: false,
+    isFullWidth: false,
     isLoading: false,
+    noDesktopFullWidth: false,
     onClick() {},
     textColor: '',
-    isFullWidth: false,
   };
 
   render() {
     const {
-      onClick,
-      disabled,
-      children,
       buttonType,
-      loading,
-      isLoading,
+      children,
+      disabled,
       icon,
-      textColor,
       isFullWidth,
+      isLoading,
+      loading,
+      onClick,
+      noDesktopFullWidth,
+      textColor,
       ...rest
     } = this.props;
 
@@ -77,6 +80,7 @@ class Button extends React.Component {
         type="button"
         textColor={textColor}
         isFullWidth={isFullWidth}
+        noDesktopFullWidth={noDesktopFullWidth}
         {...rest}
       >
         <ButtonContents

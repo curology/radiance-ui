@@ -9,15 +9,17 @@ const Loader = ({
   disabled,
   isFullWidth,
   isLoading,
+  noDesktopFullWidth,
   textColor,
 }) => (
   <ButtonLoader
-    isLoading={isLoading}
-    disabled={disabled}
     buttonType={buttonType}
     className={className}
-    textColor={textColor}
+    disabled={disabled}
+    isLoading={isLoading}
     isFullWidth={isFullWidth}
+    noDesktopFullWidth={noDesktopFullWidth}
+    textColor={textColor}
   >
     <div>
       <span />
@@ -39,6 +41,7 @@ Loader.propTypes = {
   disabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
+  noDesktopFullWidth: PropTypes.bool,
   textColor: PropTypes.string,
 };
 
