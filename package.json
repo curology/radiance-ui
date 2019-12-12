@@ -102,7 +102,7 @@
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-node-resolve": "^4.2.4",
     "rollup-plugin-size-snapshot": "0.7.0",
     "storybook-readme": "^5.0.5",
     "tinycolor2": "^1.4.1",
