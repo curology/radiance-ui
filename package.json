@@ -24,14 +24,13 @@
     "build:icons:icons": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
     "build:icons:emojis": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/emojis/",
     "build:icons:glyphs": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/glyphs/",
-    "build:icons:index": "create-index src/icons/",
+    "build:icons:index": "create-index src/icons/ --ignoreUnsafe",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx'",
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",
     "tsc": "tsc",
-    "tsc-with-tsconfig": "tsc --allowJs true --baseUrl src --declaration false --emitDeclarationOnly false --esModuleInterop true --experimentalDecorators true --forceConsistentCasingInFileNames true --jsx preserve --module commonjs --moduleResolution node --noEmit true --noImplicitReturns true --noUnusedLocals true --noUnusedParameters true --skipLibCheck true --strict true --suppressImplicitAnyIndexErrors true --target es2018",
     "tsc-build-types": "tsc -p tsconfigGenerateTypes.json"
   },
   "repository": {
@@ -102,7 +101,7 @@
     "jest": "^24.9.0",
     "jest-emotion": "10.0.10",
     "jest-junit": "^10.0.0",
-    "lint-staged": "^7.3.0",
+    "lint-staged": "^9.4.3",
     "lodash.round": "^4.0.4",
     "prettier": "1.14.3",
     "react-docgen-typescript-loader": "^3.3.0",
@@ -120,7 +119,7 @@
     "tinycolor2": "^1.4.1",
     "ts-jest": "^24.1.0",
     "tslib": "^1.10.0",
-    "typescript": "^3.6.4",
+    "typescript": "^3.7.4",
     "webpack": "^4.41.2",
     "yarn-run-all": "^3.1.1"
   },
@@ -139,31 +138,6 @@
     "hooks": {
       "pre-commit": "yarn run build:svgs:index && yarn run lint-staged",
       "pre-push": "yarn run test"
-    }
-  },
-  "lint-staged": {
-    "concurrent": false,
-    "subTaskConcurrency": 1,
-    "linters": {
-      "!(style|styles|test).js": [
-        "prettier --write",
-        "eslint --fix",
-        "git add"
-      ],
-      "src/**/*.{ts,tsx}": [
-        "prettier --write",
-        "eslint --fix",
-        "yarn run tsc-with-tsconfig",
-        "git add"
-      ],
-      "(style|styles|test).js": [
-        "prettier --write",
-        "git add"
-      ],
-      "*.{md,json}": [
-        "prettier --write",
-        "git add"
-      ]
     }
   }
 }

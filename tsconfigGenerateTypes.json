@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
     "baseUrl": "src",
     "declaration": true,
     "emitDeclarationOnly": true,
