@@ -1,5 +1,14 @@
 # CHANGELOG
 
+# v4.2.9
+
+- [Patch] Point Storybook font assets to new bucket ([#151](https://github.com/PocketDerm/radiance-ui/pull/151))
+- [Patch] serialize-javascript Vulnerability Fix ([#150](https://github.com/PocketDerm/radiance-ui/pull/150))
+
+# v4.2.8
+
+- [Patch] Sequence onExit callback after setState in Alert component ([#149](https://github.com/PocketDerm/radiance-ui/pull/149))
+
 # v4.2.7
 
 - Add id prop on modal to target scrolling context ([#147](https://github.com/PocketDerm/radiance-ui/pull/147))

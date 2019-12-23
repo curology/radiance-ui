@@ -66,8 +66,8 @@ class Alert extends React.Component {
 
     // eslint-disable-next-line no-undef
     window.setTimeout(() => {
-      onExit({ ...rest });
       this.setState({ exited: true });
+      onExit({ ...rest });
     }, ANIMATION_DELAY);
   };
 
