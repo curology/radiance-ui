@@ -15,19 +15,12 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": ".tempTypes",
-    "rootDirs": ["src", "stories"],
+    "outDir": "lib",
+    "rootDirs": ["src"],
     "skipLibCheck": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
     "target": "es2018"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": [
-    "node_modules",
-    "src/shared-components",
-    "src/svgs",
-    "src/utils",
-    "src/index.ts"
-  ]
+  "include": ["src/constants/**/*.ts", "src/utils/**/*.ts"]
 }
