@@ -77,11 +77,10 @@ module.exports = webpackSettings => {
     test: /\.(ts|tsx)$/,
     use: [
       {
-        loader: require.resolve('awesome-typescript-loader'),
-      },
-      // Optional
-      {
-        loader: require.resolve('react-docgen-typescript-loader'),
+        loader: require.resolve('babel-loader'),
+        options: {
+          presets: [['react-app', { flow: false, typescript: true }]],
+        },
       },
     ],
   });
