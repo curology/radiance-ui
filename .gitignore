@@ -81,6 +81,3 @@ lib/
 src/icons/
 .out
 .size-snapshot.json
-
-# Typescript declaration types generated 
-.tempTypes
