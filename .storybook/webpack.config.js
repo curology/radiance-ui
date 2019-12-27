@@ -29,7 +29,7 @@ module.exports = webpackSettings => {
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.jsx', '.md'],
+    extensions: ['.js', '.jsx', '.md', '.ts', '.tsx'],
   };
 
   const customRules = [
@@ -78,13 +78,9 @@ module.exports = webpackSettings => {
     use: [
       {
         loader: require.resolve('babel-loader'),
-        options: {
-          presets: [['react-app', { flow: false, typescript: true }]],
-        },
       },
     ],
   });
-  config.resolve.extensions.push('.ts', '.tsx');
 
   return config;
 };
