@@ -7,15 +7,14 @@ import Accordion from './index';
 const testAccordion = {
   title: <div>title</div>,
   isOpen: false,
-  onClick: () => {},
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onClick: (): void => {},
   children: <div>expansion</div>,
 };
 
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
-    const component = renderer.create(
-      <Accordion {...testAccordion} />
-    );
+    const component = renderer.create(<Accordion {...testAccordion} />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -23,10 +22,7 @@ describe('<Accordion />', () => {
 
   test('renders no border accordion', () => {
     const component = renderer.create(
-      <Accordion 
-        noBorder
-        {...testAccordion}
-      />
+      <Accordion noBorder {...testAccordion} />
     );
 
     const tree = component.toJSON();
@@ -35,10 +31,7 @@ describe('<Accordion />', () => {
 
   test('renders disabled accordion', () => {
     const component = renderer.create(
-      <Accordion 
-        disabled
-        {...testAccordion}
-      />
+      <Accordion disabled {...testAccordion} />
     );
 
     const tree = component.toJSON();
@@ -49,12 +42,7 @@ describe('<Accordion />', () => {
     const spy = jest.fn();
     const titleIndex = 0;
 
-    const component = shallow(
-      <Accordion
-        {...testAccordion}
-        onClick={spy}
-      />
-    );
+    const component = shallow(<Accordion {...testAccordion} onClick={spy} />);
     const title = component.childAt(titleIndex);
 
     title.simulate('click');

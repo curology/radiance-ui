@@ -9,13 +9,13 @@ import {
   MultiplesText,
 } from './style';
 
-class Thumbnails extends React.Component {
+class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
   static propTypes = {
     /** An array of image src strings that Accordion.Thumbails will use to render */
     photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
-  renderThumbnails() {
+  renderThumbnails(): JSX.Element | null {
     const { photoSrcs } = this.props;
 
     if (photoSrcs.length === 0) {
@@ -52,7 +52,7 @@ class Thumbnails extends React.Component {
     );
   }
 
-  render() {
+  render(): JSX.Element {
     return <Container>{this.renderThumbnails()}</Container>;
   }
 }

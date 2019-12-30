@@ -65,28 +65,30 @@ const accordionWithKnobs = (
   </React.Fragment>
 );
 
-storiesOf('Accordion', module)
-  .addDecorator(withKnobs)
-  .add(
-    'Usage',
-    withDocs(AccordionReadme, () => (
-      <React.Fragment>
-        <div
+const stories = storiesOf('Accordion', module);
+
+stories.addDecorator(withKnobs);
+
+stories.add(
+  'Usage',
+  withDocs(AccordionReadme, () => (
+    <React.Fragment>
+      <div
+        css={css`
+          text-align: left;
+        `}
+      >
+        <Typography.Heading
           css={css`
-            text-align: left;
+            padding: ${SPACER.small} 0 ${SPACER.small};
           `}
         >
-          <Typography.Heading
-            css={css`
-              padding: ${SPACER.small} 0 ${SPACER.small};
-            `}
-          >
-            Components
-          </Typography.Heading>
-          <DefaultAccordion />
-          {subcomponents}
-          {accordionWithKnobs}
-        </div>
-      </React.Fragment>
-    ))
-  );
+          Components
+        </Typography.Heading>
+        <DefaultAccordion />
+        {subcomponents}
+        {accordionWithKnobs}
+      </div>
+    </React.Fragment>
+  ))
+);

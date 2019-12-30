@@ -1,5 +1,13 @@
 {
-  "extends": "curology",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "curology",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "plugins": ["emotion"],
   "globals": {
     "document": false
@@ -25,6 +33,8 @@
     "import/extensions": [".js", ".jsx"]
   },
   "rules": {
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
   }
