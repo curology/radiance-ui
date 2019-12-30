@@ -56,7 +56,19 @@ module.exports = webpackSettings => {
   customRules.forEach(rule => config.module.rules.push(rule));
 
   config.module.rules.push({
-    test: /index\.js?$/,
+    test: /\.(ts|tsx)$/,
+    use: [
+      {
+        loader: require.resolve('babel-loader'),
+        options: {
+          presets: ['@babel/preset-typescript'],
+        },
+      },
+    ],
+  });
+
+  config.module.rules.push({
+    test: /index\.(ts|tsx|js)?$/,
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
     include: path.resolve(__dirname, '../stories'),
     enforce: 'pre',
@@ -72,15 +84,6 @@ module.exports = webpackSettings => {
       cwd: process.cwd(),
     })
   );
-
-  config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    use: [
-      {
-        loader: require.resolve('babel-loader'),
-      },
-    ],
-  });
 
   return config;
 };

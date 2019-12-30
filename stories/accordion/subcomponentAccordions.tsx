@@ -1,15 +1,17 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import { Accordion } from 'src/shared-components';
 
-class DefaultAccordion extends React.Component {
-  state = {
+import { Accordion } from '../../src/shared-components';
+import { AccordionsStateType } from './defaultAccordion';
+
+class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
+  state: AccordionsStateType = {
     accordion1: false,
     accordion2: false,
     accordion3: false,
   };
 
-  toggleAccordion = accordion => {
+  toggleAccordion = (accordion: string) => {
     this.setState(state => ({ [accordion]: !state[accordion] }));
   };
 

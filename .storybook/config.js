@@ -99,7 +99,7 @@ addParameters({
   },
 });
 
-const req = require.context('../stories', true, /.js$/);
+const req = require.context('../stories', true, /.(ts|tsx|js)$/);
 function loadStories() {
   req.keys().forEach(req);
 }
