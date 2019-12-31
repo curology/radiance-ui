@@ -20,7 +20,7 @@
     "storybook:dev": "start-storybook --port 9001 --config-dir .storybook --static-dir ./public",
     "build-storybook": "build-storybook --config-dir .storybook --output-dir .out --static-dir ./public",
     "clean": "rimraf dist lib src/icons/",
-    "build": "run-s clean && run-s build:icons build:icons:index && run-p build:rollup build:babel && run-s tsc-build-types",
+    "build": "run-s clean && run-s build:icons build:icons:index && run-p build:rollup build:babel && run-s tsc",
     "build:icons": "run-s build:icons:icons build:icons:emojis build:icons:glyphs",
     "build:icons:icons": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
     "build:icons:emojis": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/emojis/",
@@ -31,8 +31,7 @@
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",
-    "tsc": "tsc",
-    "tsc-build-types": "tsc -p tsconfigGenerateTypes.json"
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",

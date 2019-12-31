@@ -11,11 +11,11 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
     accordion3: false,
   };
 
-  toggleAccordion = (accordion: string) => {
+  toggleAccordion = (accordion: string): void => {
     this.setState(state => ({ [accordion]: !state[accordion] }));
   };
 
-  render() {
+  render(): JSX.Element {
     const { accordion1, accordion2, accordion3 } = this.state;
 
     return (
@@ -38,7 +38,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
                 </Accordion.Content>
               }
               isOpen={accordion1}
-              onClick={() => this.toggleAccordion('accordion1')}
+              onClick={(): void => this.toggleAccordion('accordion1')}
             >
               <Accordion.Content>
                 This Accordion styled with an Accordion.Container parent
@@ -55,7 +55,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
           <Accordion
             title={<span>This is an accordion with no Content usage.</span>}
             isOpen={accordion2}
-            onClick={() => this.toggleAccordion('accordion2')}
+            onClick={(): void => this.toggleAccordion('accordion2')}
           >
             The others use it because it is standard.
           </Accordion>
@@ -74,7 +74,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               </Accordion.Content>
             }
             isOpen={accordion3}
-            onClick={() => this.toggleAccordion('accordion3')}
+            onClick={(): void => this.toggleAccordion('accordion3')}
           >
             <Accordion.Content>
               Accordion.Truncate is a wrapper that will cut off any text (direct
