@@ -10,6 +10,7 @@
     "lib/constants",
     "lib/utils"
   ],
+  "types": "./lib/index.d.ts",
   "engines": {
     "node": ">=8.12.0"
   },

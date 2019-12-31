@@ -15,7 +15,6 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": ".tempTypes",
     "rootDirs": ["src", "stories"],
     "skipLibCheck": true,
     "strict": true,

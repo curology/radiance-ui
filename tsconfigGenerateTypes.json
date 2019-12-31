@@ -22,5 +22,5 @@
     "suppressImplicitAnyIndexErrors": true,
     "target": "es2018"
   },
-  "include": ["src/constants/**/*.ts", "src/utils/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
