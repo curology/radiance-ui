@@ -6,10 +6,9 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-// @ts-ignore
-import AccordionReadme from 'docs/accordion';
 import { Accordion, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
+import AccordionReadme from 'docs/accordion';
 
 import DefaultAccordion from './defaultAccordion';
 import SubcomponentAccordions from './subcomponentAccordions';
@@ -65,30 +64,28 @@ const accordionWithKnobs = (
   </React.Fragment>
 );
 
-const stories = storiesOf('Accordion', module);
-
-stories.addDecorator(withKnobs);
-
-stories.add(
-  'Usage',
-  withDocs(AccordionReadme, () => (
-    <React.Fragment>
-      <div
-        css={css`
-          text-align: left;
-        `}
-      >
-        <Typography.Heading
+storiesOf('Accordion', module)
+  .addDecorator(withKnobs)
+  .add(
+    'Usage',
+    withDocs(AccordionReadme, () => (
+      <React.Fragment>
+        <div
           css={css`
-            padding: ${SPACER.small} 0 ${SPACER.small};
+            text-align: left;
           `}
         >
-          Components
-        </Typography.Heading>
-        <DefaultAccordion />
-        {subcomponents}
-        {accordionWithKnobs}
-      </div>
-    </React.Fragment>
-  ))
-);
+          <Typography.Heading
+            css={css`
+              padding: ${SPACER.small} 0 ${SPACER.small};
+            `}
+          >
+            Components
+          </Typography.Heading>
+          <DefaultAccordion />
+          {subcomponents}
+          {accordionWithKnobs}
+        </div>
+      </React.Fragment>
+    ))
+  );
