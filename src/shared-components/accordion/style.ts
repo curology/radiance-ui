@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/core';
-
 import {
   ANIMATION,
   BOX_SHADOWS,
   BREAKPOINTS,
   COLORS,
   SPACER,
-} from '../../constants';
+} from 'src/constants';
 
 const border = `1px solid ${COLORS.border}`;
 
@@ -41,8 +40,8 @@ export const AccordionBox = styled.div<{
   isOpen: boolean;
   disabled: boolean;
 }>`
-  ${({ noBorder, isOpen }): SerializedStyles | false =>
-    !noBorder && getBorderStyle(isOpen)};
+  ${({ noBorder, isOpen }): SerializedStyles | string =>
+    !noBorder ? getBorderStyle(isOpen) : ''};
 
   width: 100%;
 
@@ -50,13 +49,14 @@ export const AccordionBox = styled.div<{
     border-bottom: none;
   }
 
-  ${({ disabled }): string | false =>
-    disabled &&
-    `
+  ${({ disabled }): string =>
+    disabled
+      ? `
     opacity: 0.4;
     background-color: ${COLORS.disabled};
     border-color: ${COLORS.purple30};
-  `};
+  `
+      : ''};
 `;
 
 export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`

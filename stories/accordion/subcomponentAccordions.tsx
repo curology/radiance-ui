@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
+import { Accordion } from 'src/shared-components';
 
-import { Accordion } from '../../src/shared-components';
 import { AccordionsStateType } from './defaultAccordion';
 
 class DefaultAccordion extends React.Component<{}, AccordionsStateType> {

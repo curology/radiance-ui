@@ -6,11 +6,11 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-
 // @ts-ignore
-import AccordionReadme from '../../docs/accordion';
-import { Accordion, Typography } from '../../src/shared-components';
-import { SPACER } from '../../src/constants';
+import AccordionReadme from 'docs/accordion';
+import { Accordion, Typography } from 'src/shared-components';
+import { SPACER } from 'src/constants';
+
 import DefaultAccordion from './defaultAccordion';
 import SubcomponentAccordions from './subcomponentAccordions';
 

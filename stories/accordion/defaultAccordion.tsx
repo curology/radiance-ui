@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
-
-import { Accordion } from '../../src/shared-components';
+import { Accordion } from 'src/shared-components';
 
 export interface AccordionsStateType {
   [x: string]: boolean;

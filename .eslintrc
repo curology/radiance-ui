@@ -36,6 +36,7 @@
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "import/extensions": [{ "svg": "always" }]
   }
 }

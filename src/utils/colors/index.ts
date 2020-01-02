@@ -1,6 +1,6 @@
 import tinycolor from 'tinycolor2';
 
-function percentToInt(str: string) {
+function percentToInt(str: string): number {
   // '20%' -> 20
   return parseInt(str.replace(/%/g, ''), 10);
 }
@@ -20,7 +20,7 @@ export const darken: ColorManipulationFunctionType = (color, modifier) =>
     .darken(percentToInt(modifier))
     .toString();
 
-export const transparentize = (color: string, modifier: number) =>
+export const transparentize = (color: string, modifier: number): string =>
   tinycolor(color)
     .setAlpha(modifier)
     .toString();

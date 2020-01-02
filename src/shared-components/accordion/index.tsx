@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { COLORS } from 'src/constants';
+import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 
-import { COLORS } from '../../constants';
-import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import Thumbnails from './thumbnails';
 import {
   AccordionBox,
@@ -19,7 +19,7 @@ type AccordionProps = {
   disabled?: boolean;
   isOpen: boolean;
   noBorder?: boolean;
-  onClick: Function;
+  onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   rightAlignArrow?: boolean;
   title: React.ReactNode;
 };
@@ -106,7 +106,11 @@ class Accordion extends React.Component<
     return (
       <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
         <TitleWrapper
-          onClick={(event): void => !disabled && onClick(event)}
+          onClick={(event): void => {
+            if (!disabled) {
+              onClick(event);
+            }
+          }}
           disabled={!!disabled}
         >
           <Truncate>{title}</Truncate>

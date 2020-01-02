@@ -7,8 +7,7 @@ import Accordion from './index';
 const testAccordion = {
   title: <div>title</div>,
   isOpen: false,
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onClick: (): void => {},
+  onClick: (): void => undefined,
   children: <div>expansion</div>,
 };
 
