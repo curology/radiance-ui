@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v5.0-beta
+
+- [Internal] Convert Project to Typescript ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
+- [Feature] Publish Generated Types declarations
+
 # v4.2.9
 
 - [Patch] Point Storybook font assets to new bucket ([#151](https://github.com/PocketDerm/radiance-ui/pull/151))
