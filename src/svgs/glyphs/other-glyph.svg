@@ -1,8 +1,9 @@
-<svg viewBox="0 0 68 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Other</title>
-  <g fill="currentColor" fill-rule="evenodd">
-    <circle cx="24" cy="34" r="2"/>
-    <circle cx="34" cy="34" r="2"/>
-    <circle cx="44" cy="34" r="2"/>
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Other Glyph</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="23" y="16" width="3" height="17">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.01 18.04C24.5623 18.04 25.01 17.5923 25.01 17.04C25.01 16.4878 24.5623 16.04 24.01 16.04C23.4577 16.04 23.01 16.4878 23.01 17.04C23.01 17.5923 23.4577 18.04 24.01 18.04ZM24.01 25.04C24.5623 25.04 25.01 24.5923 25.01 24.04C25.01 23.4878 24.5623 23.04 24.01 23.04C23.4577 23.04 23.01 23.4878 23.01 24.04C23.01 24.5923 23.4577 25.04 24.01 25.04ZM25.01 31.04C25.01 31.5923 24.5623 32.04 24.01 32.04C23.4577 32.04 23.01 31.5923 23.01 31.04C23.01 30.4878 23.4577 30.04 24.01 30.04C24.5623 30.04 25.01 30.4878 25.01 31.04Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect width="48" height="48" fill="#332E54"/>
   </g>
 </svg>
