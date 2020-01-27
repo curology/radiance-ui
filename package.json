@@ -24,7 +24,7 @@
     "build:icons:icons": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
     "build:icons:emojis": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/emojis/",
     "build:icons:glyphs": "npx @svgr/cli --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/glyphs/",
-    "build:icons:index": "create-index src/icons/",
+    "build:icons:index": "create-index src/icons/ --update",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib",
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
