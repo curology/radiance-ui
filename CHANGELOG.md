@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.10
+
+- [Internal] Add `@svgr/cli` as devDependency, update scripts. ([#178](https://github.com/PocketDerm/radiance-ui/pull/178))
+
 # v4.2.9
 
 - [Patch] Point Storybook font assets to new bucket ([#151](https://github.com/PocketDerm/radiance-ui/pull/151))
