@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 2">
-    <title>Minus</title>
-    <rect width="16" height="2" fill="currentColor" rx="1" ry="1"/>
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Minus Icon</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="7" width="17" height="2">
+    <path d="M16.01 7.41992H0.0100098V8.66992H16.01V7.41992Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect width="16" height="16" fill="#332E54"/>
+  </g>
 </svg>

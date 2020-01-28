@@ -6,7 +6,7 @@ import { RoundButton } from '../button';
 import KEYCODES from '../../constants/keycodes';
 import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
-import CloseIcon from '../../svgs/icons/close-icon.svg';
+import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
   ModalContainer,
   Overlay,
@@ -92,7 +92,7 @@ class ImmersiveModal extends React.Component {
               <CloseIconContainer>
                 <RoundButton
                   buttonType="action"
-                  icon={<CloseIcon />}
+                  icon={<CrossIcon />}
                   onClick={onClose}
                 />
               </CloseIconContainer>
