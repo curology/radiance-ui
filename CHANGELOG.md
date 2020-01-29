@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.12
+
+- No code changes. Re-tagging of 4.2.11 - failed NPM release
+
 # v4.2.11
 
 - [Internal] Update devDependency `eslint-plugin-curology`. ([#179](https://github.com/PocketDerm/radiance-ui/pull/179))
