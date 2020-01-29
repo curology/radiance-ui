@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v4.2.13
+
+- [Internal] Another re-release. Testing release steps.
+
 # v4.2.12
 
 - No code changes. Re-tagging of 4.2.11 - failed NPM release
