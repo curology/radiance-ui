@@ -2,7 +2,7 @@
 
 # v4.2.11
 
-- [Internal] Update devDependency `eslint-plugin-curology`. ([#178](https://github.com/PocketDerm/radiance-ui/pull/178))
+- [Internal] Update devDependency `eslint-plugin-curology`. ([#179](https://github.com/PocketDerm/radiance-ui/pull/179))
 - [Internal] Update devDependencies `babel-jest`, `enzyme`, `enzyme-adapter-react-16`, `jest`, and `jest-emotion`. ([#173](https://github.com/PocketDerm/radiance-ui/pull/173))
 - [Internal] Update React Storybook to `5.3.9` ([#174](https://github.com/PocketDerm/radiance-ui/pull/174))
   - Replace `@storybook/addon-storysource/loader` with `@storybook/source-loader`
