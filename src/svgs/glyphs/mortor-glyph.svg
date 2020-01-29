@@ -6,7 +6,7 @@
     </g>
   </mask>
   <g mask="url(#mask0)">
-    <rect width="48" height="48" fill="#332E54"/>
+    <rect width="48" height="48" fill="currentColor"/>
   </g>
   <defs>
     <clipPath id="clip0">
