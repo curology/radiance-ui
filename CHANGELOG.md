@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.2.14
+- Design system updates to glyphs ([#175](https://github.com/curology/radiance-ui/pull/175)), ([#176](https://github.com/curology/radiance-ui/pull/176)), and ([#177](https://github.com/curology/radiance-ui/pull/177))
+
 # v4.2.13
 
 - [Internal] Another re-release. Testing release steps.
