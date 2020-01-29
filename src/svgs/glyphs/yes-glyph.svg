@@ -1,0 +1,9 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Yes Glyph</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="10" y="12" width="29" height="25">
+    <path d="M18.5 36.8401L10.11 28.4601L11 27.5701L18.41 34.9901L37.28 12.3301L38.24 13.1201L18.5 36.8401Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect width="48" height="48" fill="currentColor"/>
+  </g>
+</svg>
