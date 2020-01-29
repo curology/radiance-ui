@@ -1,4 +1,16 @@
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Download</title>
-  <path d='M17.7,497.3v-30h464.7v30H17.7zM363,177.6l21.8,21.8L250,334.2L115.2,199.4l21.8-21.8l97.5,97.3V2.7h31v272.3L363,177.6z' />
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Download Icon</title>
+  <g clip-path="url(#clip0)">
+    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-1" y="0" width="18" height="17">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3595 7.10628L8.62497 9.8227V0H7.37497V9.79401L4.74632 7.11219L3.85363 7.98718L7.55363 11.762L7.99406 12.2114L8.44044 11.7679L12.2404 7.99309L11.3595 7.10628ZM-0.0250244 10.3377V15.404V16.029H0.599976H15.4H16.025V15.404V10.5364H14.775V14.779H1.22498V10.3377H-0.0250244Z" fill="white"/>
+    </mask>
+    <g mask="url(#mask0)">
+      <rect width="16" height="16" fill="currentColor"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0">
+      <path d="M0 0H16V16H0V0Z" fill="white"/>
+    </clipPath>
+  </defs>
 </svg>

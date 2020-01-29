@@ -1,7 +1,9 @@
-<svg viewBox="0 0 18 18" stroke="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Postcard</title>
-  <g stroke-width="2" stroke="#332E54" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M1.037 15.111h11.977V.89H1.037z"/>
-    <path d="M4.803 9.171h4.444V4.727H4.803zM5.714 12.122h2.622"/>
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Postcard Icon</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="2" y="0" width="12" height="16">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.64001 0.0100098V16H13.8V0.0100098H2.64001ZM12.55 14.75H3.89001V1.26001H12.55V14.75ZM10.81 3.1001H5.63V8.28009H10.81V3.1001ZM9.56 7.03009H6.88V4.3501H9.56V7.03009ZM6.03003 11.0701H10.41V12.3201H6.03003V11.0701Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect width="16" height="16" fill="currentColor"/>
   </g>
 </svg>
