@@ -1,4 +1,9 @@
-<svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Firmness</title>
-  <path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="translate(7 10)" d="M16.94667 25.994085L21.17167 17.206735M23.45304 23.712715L14.66569 19.488365M19.06931 9.2274L23.29431.44005M25.57568 6.94603L16.78833 2.72168M2.44543 15.55346L6.67043 6.76546M8.9518 13.27209L.16445 9.04709"/>
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Firmness Glyph</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="9" y="11" width="31" height="27">
+    <path d="M39.93 37.47H10.17C9.75 37.47 9.41 37.18 9.33 36.78C9.25 36.38 9.46001 35.98 9.85001 35.82L36.75 24.86H10.18C9.76001 24.86 9.42001 24.57 9.34001 24.17C9.26001 23.77 9.47 23.37 9.86 23.21L36.76 12.25H9V11H38.76C39.18 11 39.52 11.29 39.6 11.69C39.68 12.09 39.47 12.49 39.08 12.65L12.18 23.61H38.75C39.17 23.61 39.51 23.89 39.59 24.3C39.67 24.71 39.46 25.1 39.07 25.26L12.17 36.22H39.93V37.47Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect x="0.98999" y="-0.199951" width="48" height="48" fill="currentColor"/>
+  </g>
 </svg>
