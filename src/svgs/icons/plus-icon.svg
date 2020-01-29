@@ -4,6 +4,6 @@
     <path d="M16.01 7.42004H8.64001V0.0400391H7.39001V7.42004H0.0100098V8.67004H7.39001V16.04H8.64001V8.67004H16.01V7.42004Z" fill="white"/>
   </mask>
   <g mask="url(#mask0)">
-    <rect width="16" height="16" fill="#332E54"/>
+    <rect width="16" height="16" fill="currentColor"/>
   </g>
 </svg>

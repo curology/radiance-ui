@@ -4,6 +4,6 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.27002 0.0400391H6.52002V16.04H5.27002V0.0400391ZM9.52002 0.0400391H10.77V16.04H9.52002V0.0400391Z" fill="white"/>
   </mask>
   <g mask="url(#mask0)">
-    <rect width="16" height="16" fill="#332E54"/>
+    <rect width="16" height="16" fill="currentColor"/>
   </g>
 </svg>
