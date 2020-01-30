@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.2.16
+- Testing mask removal in SVGs to resolve fill-issue ([#186](https://github.com/curology/radiance-ui/pull/186))
+
 # v4.2.15
 - Design system updates to icons ([#180](https://github.com/curology/radiance-ui/pull/180)), ([#181](https://github.com/curology/radiance-ui/pull/181)), and ([#182](https://github.com/curology/radiance-ui/pull/182))
 
