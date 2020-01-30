@@ -1,3 +1,9 @@
-<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <path fill="currentColor" fill-rule="evenodd" d="M0 2C0 .9.9 0 2 0h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V2zm2-.25h12c.14 0 .25.1.25.25v2.75H1.75V2c0-.14.1-.25.25-.25zM1.75 9.5v-3H4.7v3H1.75zm0 1.75V14c0 .14.1.25.25.25h2.7v-3H1.75zm4.7 3H9.5v-3H6.45v3zm4.8 0H14c.14 0 .25-.1.25-.25v-2.75h-3v3zm3-4.75v-3h-3v3h3zm-4.75 0H6.45v-3H9.5v3z" clip-rule="evenodd"/>
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Calendar Icon</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.86957 0V0.907801C4.86957 1.09581 5.02529 1.24823 5.21739 1.24823H9.85507V2.38298H5.21739C4.38496 2.38298 3.71014 1.72252 3.71014 0.907801V0H4.86957ZM12.2899 0V0.907801C12.2899 1.09581 12.4456 1.24823 12.6377 1.24823H16V16H0V1.24823H2.43478V2.38298H1.15942V4.87943H14.8406V2.38298H12.6377C11.8053 2.38298 11.1304 1.72252 11.1304 0.907801V0H12.2899ZM14.8406 6.01418H1.15942V14.8652H14.8406V6.01418Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect width="16" height="16" fill="currentColor"/>
+  </g>
 </svg>
