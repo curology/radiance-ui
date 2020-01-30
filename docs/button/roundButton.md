@@ -4,28 +4,28 @@
 
 ```jsx
 import { RoundButton } from 'radiance-ui';
-import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CloseIcon } from 'radiance-ui/lib/icons';
+import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CrossIcon } from 'radiance-ui/lib/icons';
 
 // Default
 <RoundButton icon={<CheckmarkIcon />}>Primary</RoundButton>
 <RoundButton buttonType="secondary" icon={<ArrowRightIcon />}>Secondary</RoundButton>
 <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />}>Tertiary</RoundButton>
 <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>Quaternary</RoundButton>
-<RoundButton buttonType="action" icon={<CloseIcon />}>Action</RoundButton>
+<RoundButton buttonType="action" icon={<CrossIcon />}>Action</RoundButton>
 
 // Disabled
 <RoundButton icon={<ArrowLeftIcon />} disabled>Primary</RoundButton>
 <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} disabled>Secondary</RoundButton>
 <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>Tertiary</RoundButton>
 <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} disabled>Quaternary</RoundButton>
-<RoundButton buttonType="action" icon={<CloseIcon />} disabled>Action</RoundButton>
+<RoundButton buttonType="action" icon={<CrossIcon />} disabled>Action</RoundButton>
 
 // Loading
 <RoundButton icon={<ArrowLeftIcon />} isLoading>Primary</RoundButton>
 <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} isLoading>Secondary</RoundButton>
 <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} isLoading>Tertiary</RoundButton>
 <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} isLoading>Quaternary</RoundButton>
-<RoundButton buttonType="action" icon={<CloseIcon />} isLoading>Action</RoundButton>
+<RoundButton buttonType="action" icon={<CrossIcon />} isLoading>Action</RoundButton>
 
 // Within RoundButton.Container (with multi prop)
 <RoundButton.Container multi>

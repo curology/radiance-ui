@@ -1,0 +1,9 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Fine Lines Glyph</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="9" y="9" width="31" height="31">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M9 21.0846L21.0982 9L21.9816 9.88438L9.88338 21.9689L9 21.0846ZM10.6594 30.9942L31.2265 10.4505L32.1098 11.3348L11.5428 31.8786L10.6594 30.9942ZM37.4049 15.8433L16.1586 37.0655L17.042 37.9499L38.2882 16.7277L37.4049 15.8433ZM26.2827 38.5269L38.9257 25.8982L39.8091 26.7826L27.1661 39.4113L26.2827 38.5269Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect x="0.676514" y="-0.313965" width="48" height="48" fill="currentColor"/>
+  </g>
+</svg>
