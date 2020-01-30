@@ -1,0 +1,9 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Rich Moisturizer Glyph</title>
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="19" y="8" width="10" height="32">
+    <path d="M28.7 8H19V9.7L20.8 34.7V38.4L20.9 38.5C21.4 39.6 22.8 40 23.9 40C24 40 24.1 40 24.1 40C25.5 39.9 26.5 39.3 26.8 38.4L26.9 34.2L28.7 10V8ZM24 38.9C23.1 38.9 22.3 38.7 22 38.2V36.1C22.6 36.4 23.2 36.5 23.8 36.5C23.9 36.5 24 36.5 24 36.5C24.6 36.5 25.1 36.3 25.5 36.1V38.2C25.4 38.6 24.8 38.8 24 38.9ZM25.6 34.3V34.5C25.4 34.9 24.8 35.1 24 35.2C23.1 35.2 22.3 35 22 34.5L20.2 10V9.2H27.4V9.7L25.6 34.3Z" fill="white"/>
+  </mask>
+  <g mask="url(#mask0)">
+    <rect width="48" height="48" fill="currentColor"/>
+  </g>
+</svg>

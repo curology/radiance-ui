@@ -1,8 +1,19 @@
 # CHANGELOG
 
+# v4.2.14
+- Design system updates to glyphs ([#175](https://github.com/curology/radiance-ui/pull/175)), ([#176](https://github.com/curology/radiance-ui/pull/176)), and ([#177](https://github.com/curology/radiance-ui/pull/177))
+
+# v4.2.13
+
+- [Internal] Another re-release. Testing release steps.
+
+# v4.2.12
+
+- No code changes. Re-tagging of 4.2.11 - failed NPM release
+
 # v4.2.11
 
-- [Internal] Update devDependency `eslint-plugin-curology`. ([#178](https://github.com/PocketDerm/radiance-ui/pull/178))
+- [Internal] Update devDependency `eslint-plugin-curology`. ([#179](https://github.com/PocketDerm/radiance-ui/pull/179))
 - [Internal] Update devDependencies `babel-jest`, `enzyme`, `enzyme-adapter-react-16`, `jest`, and `jest-emotion`. ([#173](https://github.com/PocketDerm/radiance-ui/pull/173))
 - [Internal] Update React Storybook to `5.3.9` ([#174](https://github.com/PocketDerm/radiance-ui/pull/174))
   - Replace `@storybook/addon-storysource/loader` with `@storybook/source-loader`
