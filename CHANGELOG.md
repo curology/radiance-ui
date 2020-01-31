@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.2.18
+- Design system updates to emojis ([#172](https://github.com/curology/radiance-ui/pull/172))
+
 # v4.2.17
 - Removed masks in new icon and glyph svgs: ([#187](https://github.com/curology/radiance-ui/pull/187)), ([#188](https://github.com/curology/radiance-ui/pull/188)), ([#189](https://github.com/curology/radiance-ui/pull/189)), ([#190](https://github.com/curology/radiance-ui/pull/190)), and ([#191](https://github.com/curology/radiance-ui/pull/191))
 
