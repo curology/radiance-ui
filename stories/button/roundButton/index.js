@@ -3,15 +3,17 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import styled from '@emotion/styled';
+// eslint-disable-next-line import/order
 import { css } from '@emotion/core';
 
+// eslint-disable-next-line import/extensions
 import RoundButtonReadme from 'docs/button/roundButton.md';
 import { RoundButton, Typography } from 'src/shared-components';
 import {
   CheckmarkIcon,
   ArrowLeftIcon,
   ArrowRightIcon,
-  CloseIcon,
+  CrossIcon,
 } from 'src/svgs/icons';
 import { SPACER } from 'src/constants';
 
@@ -45,7 +47,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
         Quaternary
       </RoundButton>
 
-      <RoundButton buttonType="action" icon={<CloseIcon />}>
+      <RoundButton buttonType="action" icon={<CrossIcon />}>
         Action
       </RoundButton>
     </ButtonsContainer>
@@ -68,7 +70,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
         Quaternary
       </RoundButton>
 
-      <RoundButton buttonType="action" icon={<CloseIcon />} disabled>
+      <RoundButton buttonType="action" icon={<CrossIcon />} disabled>
         Action
       </RoundButton>
     </ButtonsContainer>
@@ -91,7 +93,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
         Quaternary
       </RoundButton>
 
-      <RoundButton buttonType="action" icon={<CloseIcon />} isLoading>
+      <RoundButton buttonType="action" icon={<CrossIcon />} isLoading>
         Action
       </RoundButton>
     </ButtonsContainer>

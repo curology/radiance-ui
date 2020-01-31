@@ -1,5 +1,34 @@
 # CHANGELOG
 
+# v4.2.17
+- Removed masks in new icon and glyph svgs: ([#187](https://github.com/curology/radiance-ui/pull/187)), ([#188](https://github.com/curology/radiance-ui/pull/188)), ([#189](https://github.com/curology/radiance-ui/pull/189)), ([#190](https://github.com/curology/radiance-ui/pull/190)), and ([#191](https://github.com/curology/radiance-ui/pull/191))
+
+# v4.2.16
+- Testing mask removal in SVGs to resolve fill-issue ([#186](https://github.com/curology/radiance-ui/pull/186))
+
+# v4.2.15
+- Design system updates to icons ([#180](https://github.com/curology/radiance-ui/pull/180)), ([#181](https://github.com/curology/radiance-ui/pull/181)), and ([#182](https://github.com/curology/radiance-ui/pull/182))
+
+# v4.2.14
+- Design system updates to glyphs ([#175](https://github.com/curology/radiance-ui/pull/175)), ([#176](https://github.com/curology/radiance-ui/pull/176)), and ([#177](https://github.com/curology/radiance-ui/pull/177))
+
+# v4.2.13
+
+- [Internal] Another re-release. Testing release steps.
+
+# v4.2.12
+
+- No code changes. Re-tagging of 4.2.11 - failed NPM release
+
+# v4.2.11
+
+- [Internal] Update devDependency `eslint-plugin-curology`. ([#179](https://github.com/PocketDerm/radiance-ui/pull/179))
+- [Internal] Update devDependencies `babel-jest`, `enzyme`, `enzyme-adapter-react-16`, `jest`, and `jest-emotion`. ([#173](https://github.com/PocketDerm/radiance-ui/pull/173))
+- [Internal] Update React Storybook to `5.3.9` ([#174](https://github.com/PocketDerm/radiance-ui/pull/174))
+  - Replace `@storybook/addon-storysource/loader` with `@storybook/source-loader`
+  - Rename `.storybook/addons.js` to `.storybook/manager.js`
+  - Rename `.storybook/config.js` to `.storybook/preview.js`
+
 # v4.2.10
 
 - [Internal] Add `@svgr/cli` as devDependency, update scripts. ([#178](https://github.com/PocketDerm/radiance-ui/pull/178))

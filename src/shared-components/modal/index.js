@@ -4,7 +4,7 @@ import ReactModal from 'react-modal';
 import { Global } from '@emotion/core';
 
 import { RoundButton } from '../button';
-import CloseIcon from '../../svgs/icons/close-icon.svg';
+import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import keyPressMatch from '../../utils/keyPressMatch';
 import KEYCODES from '../../constants/keycodes';
 import {
@@ -122,7 +122,7 @@ class Modal extends React.Component {
                 <ModalCloseIcon>
                   <RoundButton
                     buttonType="action"
-                    icon={<CloseIcon />}
+                    icon={<CrossIcon />}
                     onClick={this.closeModal}
                   />
                 </ModalCloseIcon>

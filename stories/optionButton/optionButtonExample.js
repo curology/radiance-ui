@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 
 import { OptionButton } from 'src/shared-components';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
-import EqualsIcon from 'src/svgs/icons/equals-icon.svg';
 import MinusIcon from 'src/svgs/icons/minus-icon.svg';
 
 class OptionButtonExample extends React.Component {
@@ -36,15 +35,6 @@ class OptionButtonExample extends React.Component {
           optionType="radio"
           type="primary"
           icon={<PlusIcon />}
-        />
-        <OptionButton
-          selected={active === 'nochange'}
-          text="No Change"
-          subtext="continued issues"
-          onClick={() => this.onClick('nochange')}
-          optionType="radio"
-          type="primary"
-          icon={<EqualsIcon />}
         />
         <OptionButton
           selected={active === 'worsening'}

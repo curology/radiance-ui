@@ -57,7 +57,7 @@ module.exports = webpackSettings => {
 
   config.module.rules.push({
     test: /index\.js?$/,
-    loaders: [require.resolve('@storybook/addon-storysource/loader')],
+    loaders: [require.resolve('@storybook/source-loader')],
     include: path.resolve(__dirname, '../stories'),
     enforce: 'pre',
   });
