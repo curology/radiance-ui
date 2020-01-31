@@ -1,5 +1,4 @@
 import React from 'react';
-
 import * as iconComponents from 'src/svgs/icons';
 import * as emojiComponents from 'src/svgs/emojis';
 import * as glyphComponents from 'src/svgs/glyphs';
@@ -7,11 +6,7 @@ import * as logoComponents from 'src/svgs/logos';
 import * as navIconComponents from 'src/svgs/navIcons';
 import { Typography } from 'src/shared-components';
 
-import {
-  Icons,
-  IconContainer,
-  IconLabel,
-} from './style';
+import { Icons, IconContainer, IconLabel } from './style';
 
 const WORDMARK_NAME = 'Wordmark';
 
@@ -37,16 +32,6 @@ const IconList = () => (
       ))}
     </Icons>
 
-    <Typography.Heading>Nav Icons</Typography.Heading>
-    <Icons>
-      {Object.entries(navIconComponents).map(([name, Icon]) => (
-        <IconContainer key={name}>
-          <Icon width={25} height={25} />
-          <IconLabel>{name}</IconLabel>
-        </IconContainer>
-      ))}
-    </Icons>
-
     <Typography.Heading>Emojis</Typography.Heading>
     <Icons>
       {Object.entries(emojiComponents).map(([name, Icon]) => (
@@ -62,6 +47,16 @@ const IconList = () => (
       {Object.entries(glyphComponents).map(([name, Icon]) => (
         <IconContainer key={name}>
           <Icon width={48} height={48} />
+          <IconLabel>{name}</IconLabel>
+        </IconContainer>
+      ))}
+    </Icons>
+
+    <Typography.Heading>Nav Icons</Typography.Heading>
+    <Icons>
+      {Object.entries(navIconComponents).map(([name, Icon]) => (
+        <IconContainer key={name}>
+          <Icon width={25} height={25} />
           <IconLabel>{name}</IconLabel>
         </IconContainer>
       ))}
