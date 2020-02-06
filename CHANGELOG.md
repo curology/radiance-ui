@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.2.19
+- Added Logos and NavIcons ([#192](https://github.com/curology/radiance-ui/pull/192))
+
 # v4.2.18
 - Design system updates to emojis ([#172](https://github.com/curology/radiance-ui/pull/172))
 
