@@ -1,9 +1,0 @@
-<svg viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Skin Texture</title>
-  <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" transform="rotate(45 8.843 29.364)">
-    <path d="M0 14.5L28 14.5M2 22.5L26 22.5M2 6.5L26 6.5"/>
-    <path d="M0,14.5 L28,14.5" transform="rotate(90 14 14.5)"/>
-    <path d="M-6,14.5 L18,14.5" transform="rotate(90 6 14.5)"/>
-    <path d="M10,14.5 L34,14.5" transform="rotate(90 22 14.5)"/>
-  </g>
-</svg>

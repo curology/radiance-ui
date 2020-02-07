@@ -28,8 +28,6 @@ export { default as SmileyEmoji } from './smiley-emoji.svg';
 export { default as SmileySelectedEmoji } from './smiley-selected-emoji.svg';
 export { default as SparkleEmoji } from './sparkle-emoji.svg';
 export { default as SparkleSelectedEmoji } from './sparkle-selected-emoji.svg';
-export { default as SupportedEmoji } from './supported-emoji.svg';
-export { default as SupportedFilledEmoji } from './supported-filled-emoji.svg';
 export { default as UnsatisfiedEmoji } from './unsatisfied-emoji.svg';
 export { default as UnsatisfiedSelectedEmoji } from './unsatisfied-selected-emoji.svg';
 
