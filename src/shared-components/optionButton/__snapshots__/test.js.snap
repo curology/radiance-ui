@@ -40,7 +40,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 }
 
 .emotion-0 {
-  border: 2px solid;
+  border: 1px solid;
   border-color: #332e54;
   background: #ffffff;
   width: 32px;
@@ -172,7 +172,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 }
 
 .emotion-0 {
-  border: 2px solid;
+  border: 1px solid;
   border-color: #332e54;
   background: #ffffff;
   width: 32px;
