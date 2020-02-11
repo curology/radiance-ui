@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.2.22
+- Updated border width on OptionButton ([#197](https://github.com/curology/radiance-ui/pull/197))
+
 # v4.2.21
 - Updated border width on Buttons / Checkboxes / Radios ([#195](https://github.com/curology/radiance-ui/pull/195))
 - Updated size of ChevronIcon within Accordion component ([#196](https://github.com/curology/radiance-ui/pull/196))
