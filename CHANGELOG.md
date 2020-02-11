@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v4.2.20
+- Added deprecation warnings for outdated icons / emojis / glyphs and removed from storybook ([#194](https://github.com/curology/radiance-ui/pull/194))
+
 # v4.2.19
 - Added Logos and NavIcons ([#192](https://github.com/curology/radiance-ui/pull/192))
 
