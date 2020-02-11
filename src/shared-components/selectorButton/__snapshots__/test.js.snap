@@ -73,7 +73,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -203,7 +203,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -329,7 +329,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -454,7 +454,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -579,7 +579,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -692,7 +692,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -823,7 +823,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -952,7 +952,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1070,7 +1070,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1189,7 +1189,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1303,7 +1303,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
