@@ -41,7 +41,7 @@ export const FlexContainer = styled.div`
 `;
 
 const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
-  border: 2px solid;
+  border: 1px solid;
   border-color: ${COLORS.primary};
   background: ${COLORS.white};
   width: 32px;
