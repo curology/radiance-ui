@@ -11,6 +11,7 @@ export {
 export { default as Carousel } from './carousel';
 export { default as Checkbox } from './checkbox';
 export { default as Chip } from './chip';
+export { default as Callout } from './callout';
 export { default as Container } from './container';
 export { default as Dropdown } from './dropdown';
 export { default as Field } from './field';
