@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CalloutContainer, Text, Icon } from './style';
+import {
+  CalloutContainer, Text, Icon, ParentContainer, 
+} from './style';
 import { COLORS } from '../../constants';
 
 const Callout = ({ children, icon, color }) => (
@@ -21,5 +23,7 @@ Callout.defaultProps = {
   color: COLORS.primary,
   icon: null,
 };
+
+Callout.Container = ParentContainer;
 
 export default Callout;
