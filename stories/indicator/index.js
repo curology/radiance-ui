@@ -14,26 +14,24 @@ stories.addDecorator(withKnobs);
 stories.add(
   'Usage',
   withDocs(IndicatorReadme, () => (
-    <React.Fragment>
-      <div
+    <div
+      css={css`
+        text-align: left;
+      `}
+    >
+      <Indicator text="1" />
+      <br />
+      <Indicator text="10" />
+      <br />
+      <Indicator text={999} />
+      <Typography.Heading
         css={css`
-          text-align: left;
+          padding: ${SPACER.large} 0 ${SPACER.medium};
         `}
       >
-        <Indicator text="1" />
-        <br />
-        <Indicator text="10" />
-        <br />
-        <Indicator text={999} />
-        <Typography.Heading
-          css={css`
-            padding: ${SPACER.large} 0 ${SPACER.medium};
-          `}
-        >
-          With Knobs
-        </Typography.Heading>
-        <Indicator text={text('text', '10')} />
-      </div>
-    </React.Fragment>
+        With Knobs
+      </Typography.Heading>
+      <Indicator text={text('text', '10')} />
+    </div>
   )),
 );
