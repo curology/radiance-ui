@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
+// eslint-disable-next-line import/prefer-default-export
 export const IndicatorContainer = styled.div`
   background-color: ${COLORS.error};
   min-height: 16px;
