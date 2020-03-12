@@ -46,3 +46,4 @@ import { NeckGlyph } from "radiance-ui/lib/icons";
 ### Notes
 
 `Callout` will cover the entirety of the container that holds it. You may optionally wrap it with `Callout.Container` which will set the `max-width` to `327px`.
+If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.

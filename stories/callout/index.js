@@ -57,7 +57,7 @@ stories.add(
         <Callout
           icon={
             boolean('With Icon', true) ? (
-              <NeckGlyph width={40} height={40} />
+              <NeckGlyph width={48} height={48} />
             ) : null
           }
         >
