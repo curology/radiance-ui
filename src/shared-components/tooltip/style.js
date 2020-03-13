@@ -90,7 +90,8 @@ export const TooltipBox = styled.div`
   color: ${COLORS.white};
   min-width: ${({ isSmall }) => (isSmall ? '0px' : '100px')};
   opacity: ${({ open }) => (open ? '1' : '0')};
-  padding: ${({ isSmall }) => (isSmall ? `0px 8px` : SPACER.medium)};
+  padding: ${({ isSmall }) =>
+    isSmall ? `${SPACER.x2small} ${SPACER.small}` : SPACER.medium};
   pointer-events: none;
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};
@@ -107,17 +108,17 @@ export const TooltipBox = styled.div`
       switch (position) {
         case 'bottom':
           return css`
-            top: -10px;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-bottom: 12px solid ${COLORS.primary};
+            top: -8px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-bottom: 8px solid ${COLORS.primary};
           `;
         case 'top':
           return css`
-            bottom: -7px;
-            border-left: 12px solid transparent;
-            border-right: 12px solid transparent;
-            border-top: 12px solid ${COLORS.primary};
+            bottom: -8px;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid ${COLORS.primary};
           `;
         default:
           break;
@@ -137,7 +138,7 @@ export const TooltipBox = styled.div`
         case 'middle':
           return css`
             left: 50%;
-            margin-left: -10px;
+            margin-left: -8px;
           `;
         default:
           break;
@@ -148,7 +149,6 @@ export const TooltipBox = styled.div`
     height: 0;
     content: '';
     position: absolute;
-    margin-top: 3px;
     z-index: 4;
   }
 `;
