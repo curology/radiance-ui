@@ -21,6 +21,7 @@ const propTypes = {
   position: PropTypes.oneOf(['top', 'bottom']),
   defaultOpen: PropTypes.bool,
   display: PropTypes.bool,
+  isSmall: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -33,6 +34,7 @@ const defaultProps = {
   position: 'top',
   defaultOpen: false,
   display: true,
+  isSmall: false,
 };
 
 class Tooltip extends React.Component {
@@ -84,6 +86,7 @@ class Tooltip extends React.Component {
       nudgeRight,
       nudgeTop,
       position,
+      isSmall,
     } = this.props;
     const open = defaultOpen || clicked || hovered;
 
@@ -115,6 +118,7 @@ class Tooltip extends React.Component {
             open={open}
             displayTooltip={display}
             position={position}
+            isSmall={isSmall}
           >
             {content}
           </TooltipBox>

@@ -10,8 +10,7 @@ import {
 } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-
-import TooltipReadme from 'docs/tooltip.md';
+import TooltipReadme from 'docs/tooltip';
 import { Tooltip, Typography } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';
 
@@ -41,10 +40,42 @@ stories.add(
   'Usage',
   withDocs(TooltipReadme, () => (
     <MainContainer>
-      <Typography.Heading>Example:</Typography.Heading>
+      <Typography.Heading>Examples:</Typography.Heading>
       <Tooltip content="Tooltip Content goes here">
         Hover or Click here to trigger the Tooltip with default values
       </Tooltip>
+      <br />
+      <Typography.Title>With custom content</Typography.Title>
+      <div
+        css={css`
+          max-width: 328px;
+        `}
+      >
+        <Tooltip
+          arrowAlign="left"
+          content={
+            <span>
+              <strong>Did you know?</strong>
+              <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+              dolore! Esse at, aliquid.
+            </span>
+          }
+        >
+          Hover here to trigger the tooltip.
+        </Tooltip>
+      </div>
+      <br />
+      <Typography.Title>Small tooltip</Typography.Title>
+      <div
+        css={css`
+          max-width: 328px;
+        `}
+      >
+        <Tooltip content={<strong>3 new</strong>} isSmall arrowAlign="middle">
+          Hover here to trigger the small tooltip.
+        </Tooltip>
+      </div>
 
       <Typography.Heading
         css={css`
@@ -67,10 +98,11 @@ stories.add(
           nudgeBottom={number('nudgeBottom', 0)}
           defaultOpen={boolean('defaultOpen', false)}
           display={boolean('display', true)}
+          isSmall={boolean('isSmall', false)}
         >
           <TriggerContainer>Trigger element</TriggerContainer>
         </Tooltip>
       </TooltipContainer>
     </MainContainer>
-  ))
+  )),
 );

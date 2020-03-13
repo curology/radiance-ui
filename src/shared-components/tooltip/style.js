@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import {
-  COLORS,
-  SPACER,
-  BOX_SHADOWS,
-  TYPOGRAPHY_CONSTANTS,
-} from '../../constants';
+import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 export const MainContainer = styled.div`
   position: relative;
@@ -89,13 +84,13 @@ export const TooltipBox = styled.div`
       bottom: auto;
     `};
 
-  background: ${COLORS.white};
-  border: 1px solid ${COLORS.border};
-  box-shadow: ${BOX_SHADOWS.message};
-  color: ${COLORS.purpleTint2};
-  min-width: 100px;
+  background: ${COLORS.primary};
+  box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
+  border-radius: ${SPACER.small};
+  color: ${COLORS.white};
+  min-width: ${({ isSmall }) => (isSmall ? '0px' : '100px')};
   opacity: ${({ open }) => (open ? '1' : '0')};
-  padding: 11px ${SPACER.medium};
+  padding: ${({ isSmall }) => (isSmall ? `0px 8px` : SPACER.medium)};
   pointer-events: none;
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};
@@ -105,7 +100,7 @@ export const TooltipBox = styled.div`
   z-index: 5;
   text-align: left;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-  display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'none')};
+  display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'block')};
 
   &::after {
     ${({ position }) => {
@@ -113,12 +108,16 @@ export const TooltipBox = styled.div`
         case 'bottom':
           return css`
             top: -10px;
-            transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid ${COLORS.primary};
           `;
         case 'top':
           return css`
             bottom: -7px;
-            transform: rotate(-240deg) skewX(-30deg) scale(1, 0.866);
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid ${COLORS.primary};
           `;
         default:
           break;
@@ -137,22 +136,19 @@ export const TooltipBox = styled.div`
           `;
         case 'middle':
           return css`
-            left: 45%;
+            left: 50%;
+            margin-left: -10px;
           `;
         default:
           break;
       }
     }};
 
-    background: ${COLORS.white};
-    border-top-right-radius: 20%;
-    border-color: ${COLORS.border};
-    border-style: solid;
-    border-width: 1px 1px 0 0;
+    width: 0;
+    height: 0;
     content: '';
-    height: 12px;
     position: absolute;
-    width: 12px;
     margin-top: 3px;
+    z-index: 4;
   }
 `;
