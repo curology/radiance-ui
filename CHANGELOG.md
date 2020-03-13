@@ -1,31 +1,44 @@
 # CHANGELOG
 
+# v5.1.0
+
+- Added Callout and Indicator new components ([#202](https://github.com/curology/radiance-ui/pull/202))
+
 # v4.2.22
+
 - Updated border width on OptionButton ([#197](https://github.com/curology/radiance-ui/pull/197))
 
 # v4.2.21
+
 - Updated border width on Buttons / Checkboxes / Radios ([#195](https://github.com/curology/radiance-ui/pull/195))
 - Updated size of ChevronIcon within Accordion component ([#196](https://github.com/curology/radiance-ui/pull/196))
 
 # v4.2.20
+
 - Added deprecation warnings for outdated icons / emojis / glyphs and removed from storybook ([#194](https://github.com/curology/radiance-ui/pull/194))
 
 # v4.2.19
+
 - Added Logos and NavIcons ([#192](https://github.com/curology/radiance-ui/pull/192))
 
 # v4.2.18
+
 - Design system updates to emojis ([#172](https://github.com/curology/radiance-ui/pull/172))
 
 # v4.2.17
+
 - Removed masks in new icon and glyph svgs: ([#187](https://github.com/curology/radiance-ui/pull/187)), ([#188](https://github.com/curology/radiance-ui/pull/188)), ([#189](https://github.com/curology/radiance-ui/pull/189)), ([#190](https://github.com/curology/radiance-ui/pull/190)), and ([#191](https://github.com/curology/radiance-ui/pull/191))
 
 # v4.2.16
+
 - Testing mask removal in SVGs to resolve fill-issue ([#186](https://github.com/curology/radiance-ui/pull/186))
 
 # v4.2.15
+
 - Design system updates to icons ([#180](https://github.com/curology/radiance-ui/pull/180)), ([#181](https://github.com/curology/radiance-ui/pull/181)), and ([#182](https://github.com/curology/radiance-ui/pull/182))
 
 # v4.2.14
+
 - Design system updates to glyphs ([#175](https://github.com/curology/radiance-ui/pull/175)), ([#176](https://github.com/curology/radiance-ui/pull/176)), and ([#177](https://github.com/curology/radiance-ui/pull/177))
 
 # v4.2.13
