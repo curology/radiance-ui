@@ -18,13 +18,13 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
 
 .emotion-2 {
   top: 120%;
-  background: #ffffff;
-  border: 1px solid #ededf0;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  color: #706D87;
+  background: #332e54;
+  box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
+  border-radius: 0.5rem;
+  color: #ffffff;
   min-width: 100px;
   opacity: 0;
-  padding: 11px 1rem;
+  padding: 1rem;
   pointer-events: none;
   position: absolute;
   -webkit-transform: translateY(-8px);
@@ -44,20 +44,17 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
 
 .emotion-2::after {
   top: -10px;
-  -webkit-transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
-  -ms-transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
-  transform: rotate(-60deg) skewX(-30deg) scale(1,0.866);
-  left: 45%;
-  background: #ffffff;
-  border-top-right-radius: 20%;
-  border-color: #ededf0;
-  border-style: solid;
-  border-width: 1px 1px 0 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #332e54;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
   content: '';
-  height: 12px;
   position: absolute;
-  width: 12px;
   margin-top: 3px;
+  z-index: 4;
 }
 
 <div>
