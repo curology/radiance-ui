@@ -11,11 +11,13 @@ export {
 export { default as Carousel } from './carousel';
 export { default as Checkbox } from './checkbox';
 export { default as Chip } from './chip';
+export { default as Callout } from './callout';
 export { default as Container } from './container';
 export { default as Dropdown } from './dropdown';
 export { default as Field } from './field';
 export { default as BulkErrors } from './bulkErrors';
 export { default as ImmersiveModal } from './immersiveModal';
+export { default as Indicator } from './indicator';
 export { default as LoadingSpinner } from './loadingSpinner';
 export { default as Modal } from './modal';
 export { default as OffClickWrapper } from './offClickWrapper';

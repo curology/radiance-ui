@@ -22,7 +22,7 @@
         "config": "./.storybook/webpack.config.js"
       }
     },
-    "import/extensions": [".js", ".jsx"]
+    "import/extensions": [".js", ".jsx", ".md"]
   },
   "rules": {
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
