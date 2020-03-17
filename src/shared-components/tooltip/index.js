@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 
 import OffClickWrapper from '../offClickWrapper';
-import { MainContainer, Trigger, TooltipBox } from './style';
+import {
+  MainContainer,
+  Trigger,
+  TooltipBox,
+  TooltipContent,
+  ArrowImageContainer,
+} from './style';
+import ChevronIcon from './chevron-icon.svg';
+import { COLORS } from '../../constants';
 
 const propTypes = {
   alignRightPercent: PropTypes.number,
@@ -120,7 +128,10 @@ class Tooltip extends React.Component {
             position={position}
             isSmall={isSmall}
           >
-            {content}
+            <TooltipContent>{content}</TooltipContent>
+            <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
+              <ChevronIcon width={16} height={16} fill={COLORS.primary} />
+            </ArrowImageContainer>
           </TooltipBox>
         </MainContainer>
       </OffClickWrapper>

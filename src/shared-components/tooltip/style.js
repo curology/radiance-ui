@@ -102,53 +102,49 @@ export const TooltipBox = styled.div`
   text-align: left;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'block')};
+`;
 
-  &::after {
-    ${({ position }) => {
-      switch (position) {
-        case 'bottom':
-          return css`
-            top: -8px;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-bottom: 8px solid ${COLORS.primary};
-          `;
-        case 'top':
-          return css`
-            bottom: -8px;
-            border-left: 8px solid transparent;
-            border-right: 8px solid transparent;
-            border-top: 8px solid ${COLORS.primary};
-          `;
-        default:
-          break;
-      }
-    }};
+export const TooltipContent = styled.div`
+  z-index: 5;
+  position: relative;
+`;
 
-    ${({ arrowAlign }) => {
-      switch (arrowAlign) {
-        case 'left':
-          return css`
-            left: 10.25%;
-          `;
-        case 'right':
-          return css`
-            right: 10.25%;
-          `;
-        case 'middle':
-          return css`
-            left: 50%;
-            margin-left: -8px;
-          `;
-        default:
-          break;
-      }
-    }};
+export const ArrowImageContainer = styled.div`
+  position: absolute;
+  z-index: 4;
 
-    width: 0;
-    height: 0;
-    content: '';
-    position: absolute;
-    z-index: 4;
-  }
+  ${({ position }) => {
+    switch (position) {
+      case 'bottom':
+        return css`
+          top: -8px;
+        `;
+      case 'top':
+        return css`
+          bottom: -8px;
+        `;
+      default:
+        break;
+    }
+  }};
+
+  ${({ arrowAlign }) => {
+    switch (arrowAlign) {
+      case 'left':
+        return css`
+          left: 10.25%;
+        `;
+      case 'right':
+        return css`
+          right: 10.25%;
+        `;
+      case 'middle':
+        return css`
+          left: 50%;
+          margin-left: -10px;
+        `;
+      default:
+        break;
+    }
+  }};
 `;
