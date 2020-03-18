@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { TransitionGroup } from 'react-transition-group';
 
 import { CenteredErrorList, ErrorList, ErrorItem } from './style';
@@ -24,9 +24,7 @@ const BulkErrors = ({ errors, centered }) => {
 
 BulkErrors.propTypes = {
   centered: PropTypes.bool,
-  errors: PropTypes.objectOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
-  ),
+  errors: PropTypes.objectOf(PropTypes.node),
 };
 
 BulkErrors.defaultProps = {

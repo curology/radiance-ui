@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
-
-import BulkErrorsReadme from 'docs/bulkErrors.md';
+import BulkErrorsReadme from 'docs/bulkErrors';
 import { Typography, BulkErrors, Field } from 'src/shared-components';
 
 const MainContainer = styled.div`
@@ -17,8 +16,16 @@ const FieldContainer = styled.div`
 `;
 
 const errors = {
-  required: 'This field is required',
-  maxLength: 'Must be 3 or less characters',
+  required: (
+    <Fragment>
+      <strong>Uh oh!</strong> This field is required
+    </Fragment>
+  ),
+  maxLength: (
+    <Fragment>
+      <strong>Uh oh!</strong> Must be at least 3 characters
+    </Fragment>
+  ),
   charactersRequired: ['Must contain 1 number', 'Must contain 1 symbol'],
 };
 
@@ -32,8 +39,8 @@ stories.add(
       <Typography.Heading>Example:</Typography.Heading>
       <FieldContainer>
         <Field.Input />
-        <BulkErrors errors={errors} centered={boolean('centered', true)} />
+        <BulkErrors errors={errors} centered={boolean('centered', false)} />
       </FieldContainer>
     </MainContainer>
-  ))
+  )),
 );

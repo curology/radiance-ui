@@ -117,6 +117,7 @@
   "dependencies": {
     "@emotion/core": "10.0.10",
     "@emotion/styled": "10.0.10",
+    "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-modal": "^3.8.1",

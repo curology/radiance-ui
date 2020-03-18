@@ -16,12 +16,7 @@ class Field extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
     disabled: PropTypes.bool,
-    errors: PropTypes.objectOf(
-      PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.arrayOf(PropTypes.string),
-      ])
-    ),
+    errors: PropTypes.objectOf(PropTypes.node),
     hideErrorIcon: PropTypes.bool,
     hintMessage: PropTypes.string,
     label: PropTypes.string,
