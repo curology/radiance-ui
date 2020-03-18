@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
+import {
+  withKnobs, text, select, boolean, 
+} from '@storybook/addon-knobs';
 import AlertReadme from 'docs/alert';
 import { Alert, Typography } from 'src/shared-components';
 
@@ -17,71 +18,66 @@ stories.add(
   withDocs(AlertReadme, () => (
     <React.Fragment>
       <Alert.Container>
+        <Alert content="Default Alert: it will dissapear after 3 seconds" />
         <Alert
           content={
-            <div>
-              <strong>Default Alert:</strong> it will dissapear after 3 seconds
-            </div>
-          }
-        />
-        <Alert
-          content={
-            <div>
+            <Fragment>
               <strong>Did you hear?</strong> we launched a sunscreen
-            </div>
+            </Fragment>
           }
           duration="sticky"
         />
         <Alert
           content={
-            <div>
+            <Fragment>
               <strong>Whoops!</strong> There was an error updating your address,
               pleas try again later
-            </div>
+            </Fragment>
           }
           type="error"
           duration="sticky"
         />
         <Alert
           content={
-            <div>
+            <Fragment>
               <strong>Success!</strong> your photos were accepted
-            </div>
+            </Fragment>
           }
           type="success"
           duration="sticky"
         />
         <Alert
           content={
-            <div>
+            <Fragment>
               <strong>New message from Jasmin:</strong> “Be sure to upload a few
               more photos so that we can continue with your treatment”
-            </div>
+            </Fragment>
           }
           duration="sticky"
           avatarSrc={avatarImageSrc}
         />
         <Alert
           content={
-            <div>
+            <Fragment>
               <strong>Whoops!</strong> There was an error updating your address,
               pleas try again later
-            </div>
+            </Fragment>
           }
           type="error"
           ctaContent="Update Payment Method"
           /* eslint-disable */
-          onCtaClick={() => alert('cta alert clicked')}
+          onExit={() => alert('cta alert clicked')}
           /* eslint-enable */
         />
       </Alert.Container>
 
       <Typography.Heading>With Knobs</Typography.Heading>
       <Alert
-        content={text('text', 'This is an alert')}
+        avatarSrc={boolean('avatarSrc', false) ? avatarImageSrc : ''}
+        content={text('content', 'This is the alert text')}
+        ctaContent={text('ctaContent', '')}
         type={select('type', ['default', 'success', 'error'], 'default')}
         duration="sticky"
-        onExit={action('alert exited')}
       />
     </React.Fragment>
   )),

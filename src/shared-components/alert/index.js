@@ -36,7 +36,6 @@ class Alert extends React.Component {
     ctaContent: PropTypes.node,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     type: PropTypes.oneOf(['success', 'error', 'default']),
-    onCtaClick: PropTypes.func,
     onExit: PropTypes.func,
   };
 
@@ -45,7 +44,6 @@ class Alert extends React.Component {
     ctaContent: null,
     duration: 3,
     type: 'default',
-    onCtaClick: () => {},
     onExit: () => {},
   };
 
@@ -91,9 +89,7 @@ class Alert extends React.Component {
   }
 
   alertExitHandler = () => {
-    const {
-      onExit, ctaContent, onCtaClick, ...rest 
-    } = this.props;
+    const { onExit, ctaContent, ...rest } = this.props;
     this.setState({ exiting: true });
 
     // eslint-disable-next-line no-undef
@@ -102,10 +98,6 @@ class Alert extends React.Component {
     // eslint-disable-next-line no-undef
     window.setTimeout(() => {
       this.setState({ exited: true });
-
-      if (ctaContent) {
-        onCtaClick();
-      }
 
       onExit({ ...rest });
     }, ANIMATION_DELAY);
@@ -118,7 +110,6 @@ class Alert extends React.Component {
       ctaContent,
       type,
       onExit,
-      onCtaClick,
       ...rest
     } = this.props;
     const { exiting, exited } = this.state;

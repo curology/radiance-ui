@@ -97,98 +97,118 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
   }
 }
 
-.emotion-3 {
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 0;
+  width: 327px;
+  border-radius: 0.5rem;
+  opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.875rem;
-  margin: 0 auto 0.5rem;
-  opacity: 1;
-  padding: 11px 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: left;
+  -webkit-transition: 350ms;
+  transition: 350ms;
   -webkit-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: 350ms;
-  transition: 350ms;
-  width: 327px;
-  background-color: #EAF1EB;
-  border-color: #DFE9E0;
-  color: #2B6E33;
-  fill: #2B6E33;
+  background-color: #2B6E33;
+  box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
+@media (min-width:768px) {
+  .emotion-6 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1.5rem 0 1rem;
-  width: 100%;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #ffffff;
+  font-size: 0.875rem;
+  padding: 1rem;
 }
 
-.emotion-0 {
-  margin: 2.5px 1rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  margin: -3px 0 0 1rem;
+  max-height: 48px;
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    <div>
-      Your info is updated!  
-      <a
-        href="http://google.com"
-      >
-         Click here to see changes
-      </a>
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      <div>
+        <strong>
+          Your info is updated!
+        </strong>
+         
+        <a
+          href="http://google.com"
+        >
+           Click here to see changes
+        </a>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Alert UI snapshots renders danger type and text 1`] = `
+exports[`Alert UI snapshots renders default type and text 1`] = `
+@keyframes animation-0 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-24px,0);
+    -ms-transform: translate3d(0,-24px,0);
+    transform: translate3d(0,-24px,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0px,0);
+    -ms-transform: translate3d(0,0px,0);
+    transform: translate3d(0,0px,0);
+  }
+}
+
 @keyframes animation-0 {
   from {
     opacity: 0;
@@ -253,68 +273,78 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
   }
 }
 
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1.5rem 0 1rem;
-  width: 100%;
+@keyframes animation-1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(24px,0,0);
+    -ms-transform: translate3d(24px,0,0);
+    transform: translate3d(24px,0,0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
 }
 
-.emotion-0 {
-  margin: 2.5px 1rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
-.emotion-3 {
-  -webkit-animation: animation-0 350ms 1;
-  animation: animation-0 350ms 1;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.875rem;
-  margin: 0 auto 0.5rem;
-  opacity: 1;
-  padding: 11px 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  text-align: left;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #ffffff;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  margin: -3px 0 0 1rem;
+  max-height: 48px;
+}
+
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 0;
+  width: 327px;
+  border-radius: 0.5rem;
+  opacity: 1;
+  -webkit-animation: animation-0 350ms 1;
+  animation: animation-0 350ms 1;
+  -webkit-transition: 350ms;
+  transition: 350ms;
   -webkit-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: 350ms;
-  transition: 350ms;
-  width: 327px;
-  background-color: #F7EAE8;
-  border-color: #F3DEDC;
-  color: #BD200F;
-  fill: #BD200F;
+  background-color: #332e54;
+  box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
+@media (min-width:768px) {
+  .emotion-6 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -322,38 +352,29 @@ exports[`Alert UI snapshots renders danger type and text 1`] = `
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    Your email address was updated successfully!
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      Your email address was updated successfully!
+    </div>
   </div>
 </div>
 `;
 
-exports[`Alert UI snapshots renders info type and text 1`] = `
-@keyframes animation-0 {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
-  }
-}
-
+exports[`Alert UI snapshots renders error type and text 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
@@ -418,84 +439,62 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
   }
 }
 
-@keyframes animation-1 {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-}
-
-.emotion-1 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1.5rem 0 1rem;
-  width: 100%;
-}
-
-.emotion-0 {
-  margin: 2.5px 1rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
-.emotion-3 {
-  -webkit-animation: animation-0 350ms 1;
-  animation: animation-0 350ms 1;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.875rem;
-  margin: 0 auto 0.5rem;
-  opacity: 1;
-  padding: 11px 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  text-align: left;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #ffffff;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  margin: -3px 0 0 1rem;
+  max-height: 48px;
+}
+
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 0;
+  width: 327px;
+  border-radius: 0.5rem;
+  opacity: 1;
+  -webkit-animation: animation-0 350ms 1;
+  animation: animation-0 350ms 1;
+  -webkit-transition: 350ms;
+  transition: 350ms;
   -webkit-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: 350ms;
-  transition: 350ms;
-  width: 327px;
-  background-color: #ededf0;
-  border-color: #e1e0e6;
-  color: #706D87;
-  fill: #706D87;
+  background-color: #BD200F;
+  box-shadow: 0px 8px 24px rgba(189,32,15,0.05);
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
+@media (min-width:768px) {
+  .emotion-6 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
@@ -503,17 +502,24 @@ exports[`Alert UI snapshots renders info type and text 1`] = `
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    Your email address was updated successfully!
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      Your email address was updated successfully!
+    </div>
   </div>
 </div>
 `;
@@ -551,86 +557,87 @@ exports[`Alert UI snapshots renders success type and text 1`] = `
   }
 }
 
-.emotion-3 {
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 0;
+  width: 327px;
+  border-radius: 0.5rem;
+  opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0.875rem;
-  margin: 0 auto 0.5rem;
-  opacity: 1;
-  padding: 11px 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  text-align: left;
+  -webkit-transition: 350ms;
+  transition: 350ms;
   -webkit-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
-  -webkit-transition: 350ms;
-  transition: 350ms;
-  width: 327px;
-  background-color: #EAF1EB;
-  border-color: #DFE9E0;
-  color: #2B6E33;
-  fill: #2B6E33;
+  background-color: #2B6E33;
+  box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
+@media (min-width:768px) {
+  .emotion-6 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem;
     -webkit-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
 }
 
-.emotion-1 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1.5rem 0 1rem;
-  width: 100%;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #ffffff;
+  font-size: 0.875rem;
+  padding: 1rem;
 }
 
-.emotion-0 {
-  margin: 2.5px 1rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  margin: -3px 0 0 1rem;
+  max-height: 48px;
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    Your email address was updated successfully!
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      Your email address was updated successfully!
+    </div>
   </div>
 </div>
 `;
