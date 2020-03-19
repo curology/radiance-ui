@@ -17,6 +17,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
 }
 
 .emotion-6 {
+  max-width: none;
   top: 120%;
   background: #332e54;
   box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
