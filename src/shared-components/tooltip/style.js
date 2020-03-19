@@ -14,6 +14,9 @@ export const Trigger = styled.div`
 `;
 
 export const TooltipBox = styled.div`
+  max-width: ${({ hasRestrictedWidth }) =>
+    hasRestrictedWidth ? '327px' : 'none'};
+
   ${({ position }) => {
     switch (position) {
       case 'bottom':

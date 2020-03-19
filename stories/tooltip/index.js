@@ -19,7 +19,7 @@ const MainContainer = styled.div`
 `;
 
 const TooltipContainer = styled.div`
-  max-width: 300px;
+  max-width: 400px;
 `;
 
 const TriggerContainer = styled.div`
@@ -45,10 +45,18 @@ stories.add(
         Hover or Click here to trigger the Tooltip with default values
       </Tooltip>
       <br />
+      <Tooltip
+        hasRestrictedWidth
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur enim diam, eget fringilla neque efficitur eu. Praesent et ornare risus. Aenean in orci posuere, convallis nulla a, posuere dolor."
+      >
+        Hover or Click here to trigger the Tooltip. This tooltip have a
+        restricted width.
+      </Tooltip>
+      <br />
       <Typography.Title>With custom content</Typography.Title>
       <div
         css={css`
-          max-width: 328px;
+          max-width: auto;
         `}
       >
         <Tooltip
@@ -87,18 +95,19 @@ stories.add(
 
       <TooltipContainer>
         <Tooltip
-          position={select('Position', positionOptions, 'bottom')}
+          alignRightPercent={number('alignRightPercent', 0)}
+          alignTopPercent={number('alignTopPercent', 0)}
           arrowAlign={select('arrowAlign', arrowAlignOptions, 'right')}
           content={text('Content', 'This is the tooltip text')}
-          alignTopPercent={number('alignTopPercent', 0)}
-          alignRightPercent={number('alignRightPercent', 0)}
+          defaultOpen={boolean('defaultOpen', false)}
+          display={boolean('display', true)}
+          hasRestrictedWidth={boolean('hasRestrictedWidth', false)}
+          isSmall={boolean('isSmall', false)}
           nudgeRight={number('nudgeRight', 0)}
           nudgeLeft={number('nudgeLeft', 0)}
           nudgeTop={number('nudgeTop', 0)}
           nudgeBottom={number('nudgeBottom', 0)}
-          defaultOpen={boolean('defaultOpen', false)}
-          display={boolean('display', true)}
-          isSmall={boolean('isSmall', false)}
+          position={select('Position', positionOptions, 'bottom')}
         >
           <TriggerContainer>Trigger element</TriggerContainer>
         </Tooltip>

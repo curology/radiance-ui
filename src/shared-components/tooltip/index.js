@@ -22,27 +22,29 @@ const propTypes = {
     PropTypes.node,
   ]).isRequired,
   content: PropTypes.node,
+  defaultOpen: PropTypes.bool,
+  display: PropTypes.bool,
+  hasRestrictedWidth: PropTypes.bool,
+  isSmall: PropTypes.bool,
   nudgeLeft: PropTypes.number,
   nudgeRight: PropTypes.number,
   nudgeTop: PropTypes.number,
   nudgeBottom: PropTypes.number,
   position: PropTypes.oneOf(['top', 'bottom']),
-  defaultOpen: PropTypes.bool,
-  display: PropTypes.bool,
-  isSmall: PropTypes.bool,
 };
 
 const defaultProps = {
   arrowAlign: 'middle',
   content: '',
+  defaultOpen: false,
+  display: true,
+  hasRestrictedWidth: false,
+  isSmall: false,
   nudgeLeft: 0,
   nudgeRight: 0,
   nudgeTop: 0,
   nudgeBottom: 0,
   position: 'top',
-  defaultOpen: false,
-  display: true,
-  isSmall: false,
 };
 
 class Tooltip extends React.Component {
@@ -89,12 +91,13 @@ class Tooltip extends React.Component {
       content,
       defaultOpen,
       display,
+      hasRestrictedWidth,
+      isSmall,
       nudgeBottom,
       nudgeLeft,
       nudgeRight,
       nudgeTop,
       position,
-      isSmall,
     } = this.props;
     const open = defaultOpen || clicked || hovered;
 
@@ -119,14 +122,15 @@ class Tooltip extends React.Component {
             alignRightPercent={alignRightPercent}
             alignTopPercent={alignTopPercent}
             arrowAlign={arrowAlign}
+            displayTooltip={display}
+            hasRestrictedWidth={hasRestrictedWidth}
+            isSmall={isSmall}
             nudgeLeft={nudgeLeft}
             nudgeRight={nudgeRight}
             nudgeTop={nudgeTop}
             nudgeBottom={nudgeBottom}
             open={open}
-            displayTooltip={display}
             position={position}
-            isSmall={isSmall}
           >
             <TooltipContent>{content}</TooltipContent>
             <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
