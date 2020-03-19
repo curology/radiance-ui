@@ -1,11 +1,17 @@
 # Field Component
+
+Verification messages help provide context and status within forms. They should be short and explanative. They may contain bolded text.
+
 ## Usage
 
 ```jsx
 import { Field } from 'radiance-ui';
 
 // Definition
-class InputWithValidation extends React.Component {
+import React from 'react';
+import { Field } from 'src/shared-components';
+
+class FieldInputWithValidations extends React.Component {
   state = {
     errors: {},
     value: '',
@@ -24,12 +30,27 @@ class InputWithValidation extends React.Component {
       value.length === 0 ? { required: 'This field is required' } : {};
 
     const maxLengthError =
-      value.length > 3 ? { maxLength: 'Must be 3 or less characters' } : {};
+      value.length > 3
+        ? {
+            maxLength: (
+              <React.Fragment>
+                <strong>Uh oh!</strong> Must be 3 or less characters
+              </React.Fragment>
+            ),
+          }
+        : {};
 
     const numberRegExp = /\d/;
     const numberRequiredError = numberRegExp.test(value)
       ? {}
-      : { numberRequired: 'Must contain at least 1 number' };
+      : {
+          numberRequired: (
+            <React.Fragment>
+              <strong>Uh oh!</strong> Must contain at least 1 number
+            </React.Fragment>
+          ),
+        };
+
     const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
     return val;
   };
@@ -39,10 +60,9 @@ class InputWithValidation extends React.Component {
 
     return (
       <Field
-        label="Input with Hint and Validation"
+        label="Input with validations"
         labelFor="input-validation"
         errors={errors}
-        hintMessage="This hint appears on focus"
       >
         <Field.Input
           id="input-validation"
@@ -55,16 +75,28 @@ class InputWithValidation extends React.Component {
   }
 }
 
+export default FieldInputWithValidations;
+
 ....
 
 // Render Usage
 <div>
-  <InputWithValidation />
-  
-  <Field label="Textarea - no hint - no validation" labelFor="textarea-id">
+  <FieldInputWithValidations />
+
+  <FieldInputWithValidations />
+
+  <Field
+    label="Input with a Hint"
+    labelFor="input-hint"
+    hintMessage="This hint appears on focus"
+  >
+    <Field.Input id="input-hint" type="text" />
+  </Field>
+
+  <Field label="Textarea" labelFor="textarea-id">
     <Field.Textarea id="textarea-id" />
   </Field>
-  
+
 
   <Field.Input placeholder="You can use Field.Input directly" />
 
@@ -77,15 +109,17 @@ class InputWithValidation extends React.Component {
 <!-- STORY -->
 
 ### Proptypes
-| prop                | propType    | required | default    | description                                                                                                                  
-|---------------------|-------------|----------|------------|------------------------------------------------------------------------------------------------------------------------------|
-| children            | element     | yes      | -          | must be either `Field.Input` or `Field.Textarea` |
-| disabled            | bool        | no       | false      | change the child input to `disabled` state |
-| errors              | object      | no       | -          | object of key and string message pair. It also accepts an array of string as pair value |
-| hideErrorIcon       | bool        | no       | false      | hides the error icon at the rightmost part of the input |
-| hintMessage         | string      | no       | -          | the hint to display below the field. It activates on focus |
-| label               | string      | no       | -          | the field label |
-| labelFor            | string      | no       | -          | must match the children id html attribute |
+
+| prop          | propType | required | default | description                                                                             |
+| ------------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------- |
+| children      | element  | yes      | -       | must be either `Field.Input` or `Field.Textarea`                                        |
+| disabled      | bool     | no       | false   | change the child input to `disabled` state                                              |
+| errors        | object   | no       | -       | object of key and string message pair. It also accepts an array of string as pair value |
+| hideErrorIcon | bool     | no       | false   | hides the error icon at the rightmost part of the input                                 |
+| hintMessage   | string   | no       | -       | the hint to display below the field. It activates on focus                              |
+| label         | string   | no       | -       | the field label                                                                         |
+| labelFor      | string   | no       | -       | must match the children id html attribute                                               |
 
 ### Notes
-If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` without the `Field` wrapper.
+
+If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly without the `Field` wrapper.

@@ -11,6 +11,7 @@ import {
 } from './style';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import BulkErrors from '../bulkErrors';
+import { COLORS } from '../../constants';
 
 class Field extends React.Component {
   static propTypes = {
@@ -58,14 +59,21 @@ class Field extends React.Component {
         )}
 
         <InputContainer showErrors={showErrors}>
-          {hideErrorIcon || <ErrorIcon className="error-icon" />}
+          {hideErrorIcon || (
+            <ErrorIcon
+              className="error-icon"
+              fill={COLORS.error}
+              width={16}
+              height={16}
+            />
+          )}
 
           {React.cloneElement(inputChild, {
             disabled,
           })}
 
           {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
-          <BulkErrors errors={errors} />
+          {showErrors && <BulkErrors errors={errors} />}
         </InputContainer>
       </FieldContainer>
     );

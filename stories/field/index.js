@@ -2,12 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
-
-import FieldReadme from 'docs/field.md';
+import {
+  withKnobs, text, select, boolean, 
+} from '@storybook/addon-knobs';
+import FieldReadme from 'docs/field';
 import { Typography, Field } from 'src/shared-components';
 
-import InputWithValidation from './inputExample';
+import FieldInputWithValidations from './fieldInputWithValidations';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -33,7 +34,15 @@ stories.add(
     <MainContainer>
       <Typography.Heading>Examples:</Typography.Heading>
       <FieldContainer>
-        <InputWithValidation />
+        <FieldInputWithValidations />
+        <FieldInputWithValidations />
+        <Field
+          label="Input with a Hint"
+          labelFor="input-hint"
+          hintMessage="This hint appears on focus"
+        >
+          <Field.Input id="input-hint" type="text" />
+        </Field>
       </FieldContainer>
 
       <FieldContainer>
@@ -58,15 +67,16 @@ stories.add(
       <Typography.Heading>With Knobs:</Typography.Heading>
       <FieldContainer>
         <Field
-          labelFor="input-id"
-          label={text('label', 'Input Label')}
+          disabled={boolean('disabled', false)}
+          errors={select('errors', errorOptions, {})}
           hideErrorIcon={boolean('hideErrorIcon', false)}
           hintMessage={text('hintMessage', 'Hint Message')}
-          errors={select('errors', errorOptions, {})}
+          label={text('label', 'Input Label')}
+          labelFor="input-with-knobs"
         >
-          <Field.Input id="input-id" />
+          <Field.Input id="input-with-knobs" />
         </Field>
       </FieldContainer>
     </MainContainer>
-  ))
+  )),
 );
