@@ -10,7 +10,7 @@ import {
   TooltipContent,
   ArrowImageContainer,
 } from './style';
-import ChevronIcon from './chevron-icon.svg';
+import Arrow from './arrow.svg';
 import { COLORS } from '../../constants';
 
 const propTypes = {
@@ -130,7 +130,7 @@ class Tooltip extends React.Component {
           >
             <TooltipContent>{content}</TooltipContent>
             <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
-              <ChevronIcon width={16} height={16} fill={COLORS.primary} />
+              <Arrow width={16} height={16} fill={COLORS.primary} />
             </ArrowImageContainer>
           </TooltipBox>
         </MainContainer>

@@ -118,6 +118,7 @@ export const ArrowImageContainer = styled.div`
       case 'bottom':
         return css`
           top: -8px;
+          transform: rotate(180deg);
         `;
       case 'top':
         return css`
