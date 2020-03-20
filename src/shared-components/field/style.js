@@ -79,17 +79,19 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const errorStyles = css`
-  svg.error-icon {
+const applyMessagesStyles = messagesType => css`
+  svg {
     opacity: 1;
   }
 
   ${Textarea}, ${Input} {
-    border-color: ${COLORS.error};
+    border-color: ${messagesType === 'success' ? COLORS.success : COLORS.error};
 
     &:active,
     &:focus {
-      border-color: ${COLORS.error};
+      border-color: ${messagesType === 'success'
+        ? COLORS.success
+        : COLORS.error};
       box-shadow: none;
     }
   }
@@ -98,7 +100,7 @@ const errorStyles = css`
 export const InputContainer = styled.div`
   position: relative;
 
-  svg.error-icon {
+  svg {
     opacity: 0;
     position: absolute;
     top: 20px;
@@ -106,5 +108,6 @@ export const InputContainer = styled.div`
     transition: opacity ${ANIMATION.defaultTiming};
   }
 
-  ${({ showErrors }) => showErrors && errorStyles};
+  ${({ showMessages, messagesType }) =>
+    showMessages && applyMessagesStyles(messagesType)};
 `;

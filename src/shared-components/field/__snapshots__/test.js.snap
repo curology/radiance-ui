@@ -22,7 +22,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   position: relative;
 }
 
-.emotion-4 svg.error-icon {
+.emotion-4 svg {
   opacity: 0;
   position: absolute;
   top: 20px;
@@ -104,10 +104,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
     className="emotion-4 emotion-5"
   >
     <svg
-      className="error-icon"
       fill="#BD200F"
-      height={16}
-      width={16}
     />
     <input
       className="emotion-2 emotion-3"
@@ -139,7 +136,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   position: relative;
 }
 
-.emotion-4 svg.error-icon {
+.emotion-4 svg {
   opacity: 0;
   position: absolute;
   top: 20px;
@@ -221,10 +218,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
     className="emotion-4 emotion-5"
   >
     <svg
-      className="error-icon"
       fill="#BD200F"
-      height={16}
-      width={16}
     />
     <input
       className="emotion-2 emotion-3"

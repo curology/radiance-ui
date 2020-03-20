@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
-import BulkErrorsReadme from 'docs/bulkErrors';
-import { Typography, BulkErrors, Field } from 'src/shared-components';
+import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import VerificationMessagesReadme from 'docs/verificationMessages';
+import { Typography, VerificationMessages, Field } from 'src/shared-components';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -15,7 +15,7 @@ const FieldContainer = styled.div`
   width: 350px;
 `;
 
-const errors = {
+const messages = {
   required: (
     <Fragment>
       <strong>Uh oh!</strong> This field is required
@@ -29,17 +29,29 @@ const errors = {
   charactersRequired: ['Must contain 1 number', 'Must contain 1 symbol'],
 };
 
-const stories = storiesOf('BulkErrors', module);
+const stories = storiesOf('VerificationMessages', module);
 stories.addDecorator(withKnobs);
+
+const messagesTypeOptions = {
+  error: 'error',
+  success: 'success',
+};
 
 stories.add(
   'Usage',
-  withDocs(BulkErrorsReadme, () => (
+  withDocs(VerificationMessagesReadme, () => (
     <MainContainer>
       <Typography.Heading>Example:</Typography.Heading>
+      The input below is just a static placeholder and demostrates that the
+      VerificationMessage can be used as standalone component. For a complete
+      styling of the input use the Field component.
       <FieldContainer>
         <Field.Input />
-        <BulkErrors errors={errors} centered={boolean('centered', false)} />
+        <VerificationMessages
+          messages={messages}
+          type={select('type', messagesTypeOptions, 'error')}
+          centered={boolean('centered', true)}
+        />
       </FieldContainer>
     </MainContainer>
   )),

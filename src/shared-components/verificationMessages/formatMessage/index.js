@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import uniqueid from 'lodash.uniqueid';
 
-const formatError = errorValue => {
+const formatMessage = errorValue => {
   if (Array.isArray(errorValue)) {
     return (
       <Fragment>
@@ -14,4 +14,4 @@ const formatError = errorValue => {
   return errorValue;
 };
 
-export default formatError;
+export default formatMessage;

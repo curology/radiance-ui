@@ -3,14 +3,14 @@ import { Field } from 'src/shared-components';
 
 class FieldInputWithValidations extends React.Component {
   state = {
-    errors: {},
+    messages: {},
     value: '',
   };
 
   onChange = event => {
     const { value } = event.target;
     this.setState({
-      errors: this.validate(value),
+      messages: this.validate(value),
       value,
     });
   };
@@ -45,13 +45,13 @@ class FieldInputWithValidations extends React.Component {
   };
 
   render() {
-    const { value, errors } = this.state;
+    const { value, messages } = this.state;
 
     return (
       <Field
         label="Input with validations"
         labelFor="input-validation"
-        errors={errors}
+        messages={messages}
       >
         <Field.Input
           id="input-validation"

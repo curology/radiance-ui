@@ -1,6 +1,6 @@
 # Field Component
 
-Verification messages help provide context and status within forms. They should be short and explanative. They may contain bolded text.
+Field component uses VerificationMessages component internally along with extra styling for the input.
 
 ## Usage
 
@@ -83,7 +83,7 @@ export default FieldInputWithValidations;
 <div>
   <FieldInputWithValidations />
 
-  <FieldInputWithValidations />
+  <FieldInputWithSuccessMessage />
 
   <Field
     label="Input with a Hint"
@@ -97,12 +97,22 @@ export default FieldInputWithValidations;
     <Field.Textarea id="textarea-id" />
   </Field>
 
+  <Field
+    label="Textarea with a success message and hidden icon"
+    labelFor="textarea-id"
+    messages={{ successMessage: 'Thanks for your feedback' }}
+    messagesType="success"
+    hideMessagesIcon
+  >
+    <Field.Textarea id="textarea-id" value="some answer" />
+  </Field>
 
-  <Field.Input placeholder="You can use Field.Input directly" />
 
   <Field label="Input - disabled" disabled>
     <Field.Input />
   </Field>
+
+  <Field.Input placeholder="You can use Field.Input directly" />
 </div>
 ```
 
@@ -110,15 +120,16 @@ export default FieldInputWithValidations;
 
 ### Proptypes
 
-| prop          | propType | required | default | description                                                                             |
-| ------------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------- |
-| children      | element  | yes      | -       | must be either `Field.Input` or `Field.Textarea`                                        |
-| disabled      | bool     | no       | false   | change the child input to `disabled` state                                              |
-| errors        | object   | no       | -       | object of key and string message pair. It also accepts an array of string as pair value |
-| hideErrorIcon | bool     | no       | false   | hides the error icon at the rightmost part of the input                                 |
-| hintMessage   | string   | no       | -       | the hint to display below the field. It activates on focus                              |
-| label         | string   | no       | -       | the field label                                                                         |
-| labelFor      | string   | no       | -       | must match the children id html attribute                                               |
+| prop             | propType | required | default | description                                                                                |
+| ---------------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------ |
+| children         | element  | yes      | -       | must be either `Field.Input` or `Field.Textarea`                                           |
+| disabled         | bool     | no       | false   | change the child input to `disabled` state                                                 |
+| messages         | object   | no       | -       | object of key and React Node message pair. It also accepts an array of React Node as value |
+| messagesType     | string   | no       | error   | one of `error` or `success`                                                                |
+| hideMessagesIcon | bool     | no       | false   | hides the message icon at the rightmost part of the input                                  |
+| hintMessage      | string   | no       | -       | the hint to display below the field. It activates on focus                                 |
+| label            | string   | no       | -       | the field label                                                                            |
+| labelFor         | string   | no       | -       | must match the children id html attribute                                                  |
 
 ### Notes
 
