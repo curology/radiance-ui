@@ -21,7 +21,7 @@ import { NeckGlyph } from "radiance-ui/lib/icons";
 </Callout.Container>
 
 <Callout.Container>
-  <Callout icon={<NeckGlyph width={40} height={40} />}>
+  <Callout icon={<NeckGlyph width={48} height={48} />}>
     <strong>We recommend</strong> this bundle because you indicated
     concern about <strong>dry skin</strong> and{' '}
     <strong>body acne</strong>

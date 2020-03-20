@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import {
-  COLORS,
-  SPACER,
-  BOX_SHADOWS,
-  TYPOGRAPHY_CONSTANTS,
-} from '../../constants';
+import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 export const MainContainer = styled.div`
   position: relative;
@@ -19,6 +14,9 @@ export const Trigger = styled.div`
 `;
 
 export const TooltipBox = styled.div`
+  max-width: ${({ hasRestrictedWidth }) =>
+    hasRestrictedWidth ? '327px' : 'none'};
+
   ${({ position }) => {
     switch (position) {
       case 'bottom':
@@ -89,13 +87,14 @@ export const TooltipBox = styled.div`
       bottom: auto;
     `};
 
-  background: ${COLORS.white};
-  border: 1px solid ${COLORS.border};
-  box-shadow: ${BOX_SHADOWS.message};
-  color: ${COLORS.purpleTint2};
-  min-width: 100px;
+  background: ${COLORS.primary};
+  box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
+  border-radius: ${({ isSmall }) => (isSmall ? SPACER.xsmall : SPACER.small)};
+  color: ${COLORS.white};
+  min-width: ${({ isSmall }) => (isSmall ? '0px' : '100px')};
   opacity: ${({ open }) => (open ? '1' : '0')};
-  padding: 11px ${SPACER.medium};
+  padding: ${({ isSmall }) =>
+    isSmall ? `${SPACER.x2small} ${SPACER.small}` : SPACER.medium};
   pointer-events: none;
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};
@@ -105,54 +104,51 @@ export const TooltipBox = styled.div`
   z-index: 5;
   text-align: left;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-  display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'none')};
+  display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'block')};
+`;
 
-  &::after {
-    ${({ position }) => {
-      switch (position) {
-        case 'bottom':
-          return css`
-            top: -10px;
-            transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
-          `;
-        case 'top':
-          return css`
-            bottom: -7px;
-            transform: rotate(-240deg) skewX(-30deg) scale(1, 0.866);
-          `;
-        default:
-          break;
-      }
-    }};
+export const TooltipContent = styled.div`
+  z-index: 5;
+  position: relative;
+`;
 
-    ${({ arrowAlign }) => {
-      switch (arrowAlign) {
-        case 'left':
-          return css`
-            left: 10.25%;
-          `;
-        case 'right':
-          return css`
-            right: 10.25%;
-          `;
-        case 'middle':
-          return css`
-            left: 45%;
-          `;
-        default:
-          break;
-      }
-    }};
+export const ArrowImageContainer = styled.div`
+  position: absolute;
+  z-index: 4;
 
-    background: ${COLORS.white};
-    border-top-right-radius: 20%;
-    border-color: ${COLORS.border};
-    border-style: solid;
-    border-width: 1px 1px 0 0;
-    content: '';
-    height: 12px;
-    position: absolute;
-    width: 12px;
-    margin-top: 3px;
-  }
+  ${({ position }) => {
+    switch (position) {
+      case 'bottom':
+        return css`
+          top: -8px;
+          transform: rotate(180deg);
+        `;
+      case 'top':
+        return css`
+          bottom: -8px;
+        `;
+      default:
+        break;
+    }
+  }};
+
+  ${({ arrowAlign }) => {
+    switch (arrowAlign) {
+      case 'left':
+        return css`
+          left: 10.25%;
+        `;
+      case 'right':
+        return css`
+          right: 10.25%;
+        `;
+      case 'middle':
+        return css`
+          left: 50%;
+          margin-left: -10px;
+        `;
+      default:
+        break;
+    }
+  }};
 `;

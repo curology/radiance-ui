@@ -122,7 +122,7 @@ export const baseButtonStyles = ({
 }) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
-  border-radius: 0;
+  border-radius: ${SPACER.xsmall};
   border-style: solid;
   border-width: 1px;
   cursor: pointer;

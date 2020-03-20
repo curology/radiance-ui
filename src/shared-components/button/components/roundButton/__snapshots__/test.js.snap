@@ -122,7 +122,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0;
+  border-radius: 0.25rem;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
