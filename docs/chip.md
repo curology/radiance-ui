@@ -1,25 +1,25 @@
 # Chip
+
+Chips should be used in small spaces to add value to the elements they're nested in. (i.e. "Recommended" on product cards or showing an error on an element in a list.)
+
+These chips can be either Default, Success, or Error. The Secondary is an inverse of the primary chip and should be used on top of photos or illustrations.
+
 ## Usage
 
 ```jsx
 import { Chip } from 'radiance-ui';
 
-<Chip status="success" text="Success" />
+<Chip status="default" text="Default" />
 <Chip status="error" text="Error" />
-<Chip status="pending" text="Pending" />
-<Chip status="closed" text="Closed" />
+<Chip status="success" text="Success" />
+<Chip status="secondary" text="Secondary" />
 ```
 
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType           | required | default | description                                                                                                                  |
-|----------|--------------------|----------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| text     | string             | yes      | -       | content of chip |
-| status   | string             | yes      | -       | must be one of: 'success', 'error', 'pending', 'closed' |
 
-### Notes
-The `<Chip />` component has variations that alert the user of a
-particular status with a combination of color and text. This component
-does not take any children. Rather, you will need to pass in the content
-of the chip as the `text` prop.
+| prop   | propType | required | default | description                                                |
+| ------ | -------- | -------- | ------- | ---------------------------------------------------------- |
+| text   | string   | yes      | -       | content of chip                                            |
+| status | string   | no       | default | must be one of: 'default', 'success', 'error', 'secondary' |

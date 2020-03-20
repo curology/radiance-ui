@@ -10,8 +10,12 @@ const Chip = ({ status, text }) => (
 );
 
 Chip.propTypes = {
-  status: PropTypes.oneOf(['pending', 'success', 'error', 'closed']).isRequired,
+  status: PropTypes.oneOf(['default', 'success', 'error', 'secondary']),
   text: PropTypes.string.isRequired,
+};
+
+Chip.defaultProps = {
+  status: 'default',
 };
 
 export default Chip;

@@ -12,9 +12,8 @@ export const IndicatorContainer = styled.div`
   text-align: center;
   padding: 0 ${SPACER.xsmall};
   min-width: 16px;
-  width: fit-content;
   box-sizing: border-box;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;

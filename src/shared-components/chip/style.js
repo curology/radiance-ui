@@ -2,73 +2,66 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, SPACER } from '../../constants';
+import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
-/* eslint-disable */
 export const ChipText = styled.span`
-  ${TYPOGRAPHY_STYLE.button};
-  letter-spacing: 0.5px;
-  font-size: 10px;
-  line-height: 1;
-  padding: ${SPACER.small} 12px;
+  ${TYPOGRAPHY_STYLE.label};
+  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   position: relative;
-  top: 0.5px;
-`;
-/* eslint-enable */
-
-const closedStyle = css`
-  background-color: ${COLORS.defaultBackground};
-  border-color: ${COLORS.defaultBorder};
-  ${ChipText} {
-    color: ${COLORS.default};
-  }
+  top: 1px;
 `;
 
-const errorStyle = css`
-  background-color: ${COLORS.errorBackground};
-  border-color: ${COLORS.errorBorder};
+const defaultStyle = css`
+  background-color: ${COLORS.purple10};
   ${ChipText} {
-    color: ${COLORS.error};
-  }
-`;
-
-const pendingStyle = css`
-  background-color: ${COLORS.infoBackground};
-  border-color: ${COLORS.infoBorder};
-  ${ChipText} {
-    color: ${COLORS.info};
+    color: ${COLORS.primary};
   }
 `;
 
 const successStyle = css`
-  background-color: ${COLORS.successBackground};
-  border-color: ${COLORS.successBorder};
+  background-color: ${COLORS.success};
   ${ChipText} {
-    color: ${COLORS.success};
+    color: ${COLORS.white};
+  }
+`;
+
+const errorStyle = css`
+  background-color: ${COLORS.error};
+  ${ChipText} {
+    color: ${COLORS.white};
+  }
+`;
+
+const secondaryStyle = css`
+  background-color: ${COLORS.white};
+  ${ChipText} {
+    color: ${COLORS.primary};
   }
 `;
 
 export const ChipStyles = styled.div`
   align-items: center;
-  border-radius: ${SPACER.medium};
-  border: 1px solid;
+  border-radius: ${SPACER.xsmall};
   display: inline-flex;
   height: ${SPACER.large};
+  flex-flow: row nowrap;
   justify-content: center;
-  min-width: ${SPACER.xlarge};
+  align-items: center;
+  padding: 0 ${SPACER.small};
 
   ${({ status }) => {
     switch (status) {
-      case 'pending':
-        return pendingStyle;
-      case 'error':
-        return errorStyle;
+      case 'default':
+        return defaultStyle;
       case 'success':
         return successStyle;
-      case 'closed':
-        return closedStyle;
+      case 'error':
+        return errorStyle;
+      case 'secondary':
+        return secondaryStyle;
+      // support for old pending and closed status will have default styles
       default:
-        break;
+        return defaultStyle;
     }
   }};
 `;

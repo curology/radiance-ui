@@ -3,8 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
-
-import ChipReadme from 'docs/chip.md';
+import ChipReadme from 'docs/chip';
 import { Chip, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
@@ -21,10 +20,16 @@ stories.add(
           text-align: left;
         `}
       >
-        <Chip status="success" text="Success" />
+        <Chip status="default" text="Default" />
+        <br />
+        <br />
         <Chip status="error" text="Error" />
-        <Chip status="pending" text="Pending" />
-        <Chip status="closed" text="Closed" />
+        <br />
+        <br />
+        <Chip status="success" text="Success" />
+        <br />
+        <br />
+        <Chip status="secondary" text="Secondary" />
         <Typography.Heading
           css={css`
             padding: ${SPACER.large} 0 ${SPACER.medium};
@@ -35,12 +40,12 @@ stories.add(
         <Chip
           status={select(
             'status',
-            ['success', 'error', 'pending', 'closed'],
-            'error'
+            ['default', 'success', 'error', 'secondary'],
+            'default',
           )}
-          text={text('text', 'WHOOPS!')}
+          text={text('text', 'Chip')}
         />
       </div>
     </React.Fragment>
-  ))
+  )),
 );
