@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v6.0.0
+
+- Update Buttons, Chip and Tooltip components ([#204](https://github.com/curology/radiance-ui/pull/204))
+
 # v5.1.0
 
 - Added Callout and Indicator new components ([#202](https://github.com/curology/radiance-ui/pull/202))
