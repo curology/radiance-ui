@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9,7 +9,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .emotion-0 {
@@ -18,18 +18,15 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   line-height: 1.67;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
 }
 
-.emotion-6 svg.error-icon {
+.emotion-4 svg.error-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
   right: 1rem;
-  width: 16px;
-  height: 16px;
-  fill: #BD200F;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
 }
@@ -43,15 +40,13 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   appearance: none;
   background: #ffffff;
   border: 1px solid #ededf0;
-  border-radius: 0;
+  border-radius: 0.25rem;
   color: #524D6E;
-  padding: 13px 1rem;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
   width: 100%;
   outline: none;
-  margin-bottom: 0.5rem;
-  padding-right: 2rem;
+  padding: 13px 2rem 13px 1rem;
 }
 
 .emotion-2:active,
@@ -65,6 +60,10 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
 .emotion-2:focus ~ .ez9grqt0 {
   max-height: 23px;
   opacity: 1;
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  margin: 0.125rem 0 0 0;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -91,14 +90,8 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   box-shadow: none;
 }
 
-.emotion-4 {
-  list-style-type: none;
-  margin: 0;
-  min-height: 23px;
-}
-
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-6 emotion-7"
 >
   <label
     className="emotion-0 emotion-1"
@@ -108,24 +101,24 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
     Test Label
   </label>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <svg
       className="error-icon"
+      fill="#BD200F"
+      height={16}
+      width={16}
     />
     <input
       className="emotion-2 emotion-3"
       disabled={false}
-    />
-    <ul
-      className="emotion-4 emotion-5"
     />
   </div>
 </div>
 `;
 
 exports[`<Field /> UI Snapshot renders with label prop 1`] = `
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -133,7 +126,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .emotion-0 {
@@ -142,18 +135,15 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   line-height: 1.67;
 }
 
-.emotion-6 {
+.emotion-4 {
   position: relative;
 }
 
-.emotion-6 svg.error-icon {
+.emotion-4 svg.error-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
   right: 1rem;
-  width: 16px;
-  height: 16px;
-  fill: #BD200F;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
 }
@@ -167,15 +157,13 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   appearance: none;
   background: #ffffff;
   border: 1px solid #ededf0;
-  border-radius: 0;
+  border-radius: 0.25rem;
   color: #524D6E;
-  padding: 13px 1rem;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
   width: 100%;
   outline: none;
-  margin-bottom: 0.5rem;
-  padding-right: 2rem;
+  padding: 13px 2rem 13px 1rem;
 }
 
 .emotion-2:active,
@@ -189,6 +177,10 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
 .emotion-2:focus ~ .ez9grqt0 {
   max-height: 23px;
   opacity: 1;
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  margin: 0.125rem 0 0 0;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -215,14 +207,8 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   box-shadow: none;
 }
 
-.emotion-4 {
-  list-style-type: none;
-  margin: 0;
-  min-height: 23px;
-}
-
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-6 emotion-7"
 >
   <label
     className="emotion-0 emotion-1"
@@ -232,17 +218,17 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
     Test Label
   </label>
   <div
-    className="emotion-6 emotion-7"
+    className="emotion-4 emotion-5"
   >
     <svg
       className="error-icon"
+      fill="#BD200F"
+      height={16}
+      width={16}
     />
     <input
       className="emotion-2 emotion-3"
       disabled={false}
-    />
-    <ul
-      className="emotion-4 emotion-5"
     />
   </div>
 </div>
