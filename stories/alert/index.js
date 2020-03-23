@@ -1,18 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
-
-import AlertReadme from 'docs/alert.md';
+import {
+  withKnobs, text, select, boolean, 
+} from '@storybook/addon-knobs';
+import AlertReadme from 'docs/alert';
 import { Alert, Typography } from 'src/shared-components';
 
+import avatarImageSrc from './avatarImage.jpg';
+
 const stories = storiesOf('Alert', module);
-const SampleContentComponent = () => (
-  <div>
-    Click <a href="https://google.com">here</a> to go to Google!
-  </div>
-);
 
 stories.addDecorator(withKnobs);
 
@@ -21,44 +18,67 @@ stories.add(
   withDocs(AlertReadme, () => (
     <React.Fragment>
       <Alert.Container>
+        <Alert content="Default Alert: it will dissapear after 3 seconds" />
         <Alert
-          content="Your photos were uploaded successfully!"
+          content={
+            <Fragment>
+              <strong>Did you hear?</strong> we launched a sunscreen
+            </Fragment>
+          }
+          duration="sticky"
+        />
+        <Alert
+          content={
+            <Fragment>
+              <strong>Whoops!</strong> There was an error updating your address,
+              pleas try again later
+            </Fragment>
+          }
+          type="error"
+          duration="sticky"
+        />
+        <Alert
+          content={
+            <Fragment>
+              <strong>Success!</strong> your photos were accepted
+            </Fragment>
+          }
           type="success"
-          duration={4}
-          onExit={() => {}}
+          duration="sticky"
         />
         <Alert
-          content="Your photos were uploaded successfully!"
-          type="success"
+          content={
+            <Fragment>
+              <strong>New message from Jasmin:</strong> “Be sure to upload a few
+              more photos so that we can continue with your treatment”
+            </Fragment>
+          }
           duration="sticky"
-          onExit={() => {}}
+          avatarSrc={avatarImageSrc}
         />
         <Alert
-          content="Support has been notified."
-          type="info"
-          duration="sticky"
-          onExit={() => {}}
-        />
-        <Alert
-          content="Oops! We couldn't update your information!"
-          type="danger"
-          duration="sticky"
-          onExit={() => {}}
-        />
-        <Alert
-          content={<SampleContentComponent />}
-          type="success"
-          duration="sticky"
-          onExit={() => {}}
+          content={
+            <Fragment>
+              <strong>Whoops!</strong> There was an error updating your address,
+              pleas try again later
+            </Fragment>
+          }
+          type="error"
+          ctaContent="Update Payment Method"
+          /* eslint-disable */
+          onExit={() => alert('cta alert clicked')}
+          /* eslint-enable */
         />
       </Alert.Container>
+
       <Typography.Heading>With Knobs</Typography.Heading>
       <Alert
-        text={text('text', 'This is an alert')}
-        type={select('type', ['success', 'info', 'danger'], 'info')}
+        avatarSrc={boolean('avatarSrc', false) ? avatarImageSrc : ''}
+        content={text('content', 'This is the alert text')}
+        ctaContent={text('ctaContent', '')}
+        type={select('type', ['default', 'success', 'error'], 'default')}
         duration="sticky"
-        onExit={action('alert exited')}
       />
     </React.Fragment>
-  ))
+  )),
 );

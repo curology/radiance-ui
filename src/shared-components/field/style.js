@@ -6,8 +6,7 @@ import { COLORS, BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
 
 export const HintItem = styled.div`
   ${TYPOGRAPHY_STYLE.caption};
-  margin: 0;
-  transition: all ${ANIMATION.defaultTiming};
+  transition: all ${ANIMATION.defaultTiming} ease-in-out;
   opacity: 0;
   max-height: 0;
 `;
@@ -15,7 +14,7 @@ export const HintItem = styled.div`
 export const FieldContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${SPACER.medium};
+  margin-bottom: 22px;
 `;
 
 export const Label = styled.label`
@@ -29,13 +28,12 @@ const inputStyles = css`
   appearance: none;
   background: ${COLORS.white};
   border: 1px solid ${COLORS.border};
-  border-radius: 0;
+  border-radius: ${SPACER.xsmall};
   color: ${COLORS.primaryTint1};
-  padding: 13px ${SPACER.medium};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
   outline: none;
-  margin-bottom: ${SPACER.small};
+  margin-bottom: 2px;
 
   &:active,
   &:focus {
@@ -44,8 +42,9 @@ const inputStyles = css`
     box-shadow: ${BOX_SHADOWS.focusSecondary};
 
     ~ ${HintItem} {
-      max-height: 23px;
+      max-height: 24px;
       opacity: 1;
+      margin: ${SPACER.x2small} 0 0 0;
     }
   }
 
@@ -64,7 +63,7 @@ const inputStyles = css`
 
 export const Input = styled.input`
   ${inputStyles};
-  padding-right: ${SPACER.xlarge};
+  padding: 13px ${SPACER.xlarge} 13px ${SPACER.medium};
 `;
 
 export const Textarea = styled.textarea`
@@ -81,17 +80,19 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const errorStyles = css`
-  svg.error-icon {
+const applyMessagesStyles = messagesType => css`
+  svg {
     opacity: 1;
   }
 
   ${Textarea}, ${Input} {
-    border-color: ${COLORS.statusRed};
+    border-color: ${messagesType === 'success' ? COLORS.success : COLORS.error};
 
     &:active,
     &:focus {
-      border-color: ${COLORS.statusRed};
+      border-color: ${messagesType === 'success'
+        ? COLORS.success
+        : COLORS.error};
       box-shadow: none;
     }
   }
@@ -100,16 +101,14 @@ const errorStyles = css`
 export const InputContainer = styled.div`
   position: relative;
 
-  svg.error-icon {
+  svg {
     opacity: 0;
     position: absolute;
     top: 20px;
     right: ${SPACER.medium};
-    width: 16px;
-    height: 16px;
-    fill: ${COLORS.statusRed};
     transition: opacity ${ANIMATION.defaultTiming};
   }
 
-  ${({ showErrors }) => showErrors && errorStyles};
+  ${({ showMessages, messagesType }) =>
+    showMessages && applyMessagesStyles(messagesType)};
 `;

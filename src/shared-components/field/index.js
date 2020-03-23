@@ -9,20 +9,18 @@ import {
   Input,
   HintItem,
 } from './style';
+import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import BulkErrors from '../bulkErrors';
+import VerificationMessages from '../verificationMessages';
+import { COLORS } from '../../constants';
 
 class Field extends React.Component {
   static propTypes = {
     children: PropTypes.element.isRequired,
     disabled: PropTypes.bool,
-    errors: PropTypes.objectOf(
-      PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.arrayOf(PropTypes.string),
-      ])
-    ),
-    hideErrorIcon: PropTypes.bool,
+    messages: PropTypes.objectOf(PropTypes.node),
+    messagesType: PropTypes.oneOf(['error', 'success']),
+    hideMessagesIcon: PropTypes.bool,
     hintMessage: PropTypes.string,
     label: PropTypes.string,
     labelFor: PropTypes.string,
@@ -30,9 +28,12 @@ class Field extends React.Component {
 
   static defaultProps = {
     disabled: false,
-    errors: {},
+    messages: {},
+    messagesType: 'error',
+    hideMessagesIcon: false,
     hintMessage: '',
     label: '',
+    labelFor: '',
   };
 
   static Textarea = Textarea;
@@ -43,16 +44,23 @@ class Field extends React.Component {
     const {
       children: inputChild,
       disabled,
-      errors,
-      hideErrorIcon,
+      messages,
+      messagesType,
+      hideMessagesIcon,
       hintMessage,
       label,
       labelFor,
     } = this.props;
 
     const htmlFor = labelFor || label;
-    const errorKeys = Object.keys(errors);
-    const showErrors = errorKeys.length > 0;
+    const messagesKeys = Object.keys(messages);
+    const showMessages = messagesKeys.length > 0;
+    const MessageIcon =
+      messagesType === 'success' ? (
+        <CheckmarkIcon fill={COLORS.success} />
+      ) : (
+        <ErrorIcon fill={COLORS.error} />
+      );
 
     return (
       <FieldContainer>
@@ -62,15 +70,16 @@ class Field extends React.Component {
           </Label>
         )}
 
-        <InputContainer showErrors={showErrors}>
-          {hideErrorIcon || <ErrorIcon className="error-icon" />}
+        <InputContainer showMessages={showMessages} messagesType={messagesType}>
+          {hideMessagesIcon || MessageIcon}
 
           {React.cloneElement(inputChild, {
             disabled,
           })}
 
           {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
-          <BulkErrors errors={errors} />
+
+          <VerificationMessages messages={messages} type={messagesType} />
         </InputContainer>
       </FieldContainer>
     );

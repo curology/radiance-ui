@@ -1,210 +1,213 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Banner UI snapshots renders danger type and text 1`] = `
-.emotion-1 {
+exports[`Banner UI snapshots renders error type and text 1`] = `
+.emotion-4 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.25rem 1.5rem;
-  width: 100%;
-}
-
-.emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
-.emotion-3 {
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  color: #ffffff;
   font-size: 0.875rem;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  margin: 0 auto 0.5rem;
-  padding: 0.5rem 0px;
-  position: relative;
-  text-align: left;
-  background-color: #F7EAE8;
-  border-color: #F3DEDC;
-  color: #BD200F;
-  fill: #BD200F;
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 0px;
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  margin: -3px 0 0 1rem;
+}
+
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #BD200F;
+  box-shadow: 0px 8px 24px rgba(189,32,15,0.05);
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    margin: 0 auto 1rem;
   }
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    <div>
-      Your email address was updated successfully!
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      Error banner
     </div>
   </div>
 </div>
 `;
 
 exports[`Banner UI snapshots renders info type and text 1`] = `
-.emotion-1 {
+.emotion-4 {
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0.25rem 1.5rem;
-  width: 100%;
-}
-
-.emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
-}
-
-.emotion-3 {
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  color: #ffffff;
   font-size: 0.875rem;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  margin: 0 auto 0.5rem;
-  padding: 0.5rem 0px;
-  position: relative;
-  text-align: left;
-  background-color: #ededf0;
-  border-color: #e1e0e6;
-  color: #706D87;
-  fill: #706D87;
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 0px;
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
+}
+
+.emotion-2 {
+  margin: -3px 0 0 1rem;
+}
+
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #332e54;
+  box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    margin: 0 auto 1rem;
   }
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    <div>
-      Your email address was updated successfully!
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      Default banner
     </div>
   </div>
 </div>
 `;
 
 exports[`Banner UI snapshots renders success type and text 1`] = `
-.emotion-3 {
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 0.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #2B6E33;
+  box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    margin: 0 auto 1rem;
+  }
+}
+
+.emotion-4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  color: #ffffff;
   font-size: 0.875rem;
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
-  justify-content: space-around;
-  margin: 0 auto 0.5rem;
-  padding: 0.5rem 0px;
-  position: relative;
-  text-align: left;
-  background-color: #EAF1EB;
-  border-color: #DFE9E0;
-  color: #2B6E33;
-  fill: #2B6E33;
 }
 
-@media (min-width:992px) {
-  .emotion-3 {
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem 0px;
-  }
+.emotion-0 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #ffffff;
 }
 
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0.25rem 1.5rem;
-  width: 100%;
-}
-
-.emotion-0 {
-  margin: 2.5px 1.5rem 0px 0px;
-  min-height: 1rem;
-  min-width: 1rem;
+.emotion-2 {
+  margin: -3px 0 0 1rem;
 }
 
 <div
-  className="emotion-3 emotion-4"
+  className="emotion-6 emotion-7"
   onClick={[Function]}
 >
   <div
-    className="emotion-1 emotion-2"
+    className="emotion-4 emotion-5"
   >
-    <svg
-      className="emotion-0"
-      fill="currentColor"
-    />
-    <div>
-      Your email address was updated successfully!
+    <div
+      className="emotion-0 emotion-1"
+    >
+      <svg
+        fill="#ffffff"
+      />
+    </div>
+    <div
+      className="emotion-2 emotion-3"
+    >
+      Success Banner
     </div>
   </div>
 </div>

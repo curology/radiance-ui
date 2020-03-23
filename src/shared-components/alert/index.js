@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
 
+import Avatar from '../avatar';
+import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
+import { COLORS } from '../../constants';
 import {
-  AlertContainer,
   AlertsContainer,
-  AlertContentContainer,
-  alertIconStyles,
+  AlertContainer,
+  MainContainer,
+  IconContainer,
+  ContentContainer,
+  CtaContent,
 } from './style';
 
 const ANIMATION_DELAY = 500;
 
 const alertIconMapping = {
   success: CheckmarkIcon,
+  error: ErrorIcon,
   danger: ErrorIcon,
-  info: InfoIcon,
+  default: InfoIcon,
 };
 
 class Alert extends React.Component {
@@ -26,12 +31,26 @@ class Alert extends React.Component {
   );
 
   static propTypes = {
-    content: PropTypes.node,
-    type: PropTypes.oneOf(['success', 'danger', 'info']).isRequired,
-    duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-      .isRequired,
-    onExit: PropTypes.func.isRequired,
+    avatarSrc: PropTypes.string,
+    content: PropTypes.node.isRequired,
+    ctaContent: PropTypes.node,
+    duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    type: PropTypes.oneOf(['success', 'error', 'default']),
+    onExit: PropTypes.func,
   };
+
+  static defaultProps = {
+    avatarSrc: '',
+    ctaContent: null,
+    duration: 3,
+    type: 'default',
+    onExit: () => {},
+  };
+
+  constructor(props) {
+    super(props);
+    this.contentText = React.createRef();
+  }
 
   state = {
     exiting: false,
@@ -39,15 +58,27 @@ class Alert extends React.Component {
   };
 
   componentDidMount() {
-    const { duration } = this.props;
+    const { duration, ctaContent } = this.props;
 
-    if (duration !== 'sticky') {
-      // eslint-disable-next-line no-undef
-      this.timer = window.setTimeout(
-        this.exit,
-        Number(duration) * 1000 - ANIMATION_DELAY
-      );
+    const contentElement = this.contentText.current;
+    const wordsArray = contentElement.innerHTML.split(' ');
+
+    while (contentElement.scrollHeight > contentElement.offsetHeight) {
+      wordsArray.pop();
+
+      // eslint-disable-next-line prefer-template
+      contentElement.innerHTML = wordsArray.join(' ') + ' ...';
     }
+
+    if (duration === 'sticky' || !!ctaContent) {
+      return;
+    }
+
+    // eslint-disable-next-line no-undef
+    this.timer = window.setTimeout(
+      this.alertExitHandler,
+      Number(duration) * 1000 - ANIMATION_DELAY,
+    );
   }
 
   componentWillUnmount() {
@@ -57,8 +88,8 @@ class Alert extends React.Component {
     }
   }
 
-  exit = () => {
-    const { onExit, ...rest } = this.props;
+  alertExitHandler = () => {
+    const { onExit, ctaContent, ...rest } = this.props;
     this.setState({ exiting: true });
 
     // eslint-disable-next-line no-undef
@@ -67,12 +98,20 @@ class Alert extends React.Component {
     // eslint-disable-next-line no-undef
     window.setTimeout(() => {
       this.setState({ exited: true });
+
       onExit({ ...rest });
     }, ANIMATION_DELAY);
   };
 
   render() {
-    const { content, type, onExit, ...rest } = this.props;
+    const {
+      avatarSrc,
+      content,
+      ctaContent,
+      type,
+      onExit,
+      ...rest
+    } = this.props;
     const { exiting, exited } = this.state;
     const Icon = alertIconMapping[type];
 
@@ -84,18 +123,25 @@ class Alert extends React.Component {
       <AlertContainer
         alertType={type}
         exiting={exiting}
-        onClick={this.exit}
+        onClick={this.alertExitHandler}
         {...rest}
       >
-        <AlertContentContainer>
-          <Icon
-            css={css`
-              ${alertIconStyles};
-            `}
-            fill="currentColor"
-          />
-          {content}
-        </AlertContentContainer>
+        <MainContainer>
+          <IconContainer hasAvatar={!!avatarSrc}>
+            {avatarSrc ? (
+              <Avatar size="small" src={avatarSrc} alt="avatar" />
+            ) : (
+              <Icon fill={COLORS.white} />
+            )}
+          </IconContainer>
+          <ContentContainer ref={this.contentText}>{content}</ContentContainer>
+        </MainContainer>
+        {ctaContent && (
+          <CtaContent>
+            <div>{ctaContent}</div>
+            <ChevronIcon fill={COLORS.white} width={14} height={14} />
+          </CtaContent>
+        )}
       </AlertContainer>
     );
   }

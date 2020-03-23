@@ -1,17 +1,16 @@
 import React from 'react';
-
 import { Field } from 'src/shared-components';
 
-class InputWithValidation extends React.Component {
+class FieldInputWithValidations extends React.Component {
   state = {
-    errors: {},
+    messages: {},
     value: '',
   };
 
   onChange = event => {
     const { value } = event.target;
     this.setState({
-      errors: this.validate(value),
+      messages: this.validate(value),
       value,
     });
   };
@@ -21,25 +20,38 @@ class InputWithValidation extends React.Component {
       value.length === 0 ? { required: 'This field is required' } : {};
 
     const maxLengthError =
-      value.length > 3 ? { maxLength: 'Must be 3 or less characters' } : {};
+      value.length > 3
+        ? {
+          maxLength: (
+            <React.Fragment>
+              <strong>Uh oh!</strong> Must be 3 or less characters
+            </React.Fragment>
+          ),
+        }
+        : {};
 
     const numberRegExp = /\d/;
     const numberRequiredError = numberRegExp.test(value)
       ? {}
-      : { numberRequired: 'Must contain at least 1 number' };
+      : {
+        numberRequired: (
+          <React.Fragment>
+            <strong>Uh oh!</strong> Must contain at least 1 number
+          </React.Fragment>
+        ),
+      };
     const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
     return val;
   };
 
   render() {
-    const { value, errors } = this.state;
+    const { value, messages } = this.state;
 
     return (
       <Field
-        label="Input with Hint and Validation"
+        label="Input with validations"
         labelFor="input-validation"
-        errors={errors}
-        hintMessage="This hint appears on focus"
+        messages={messages}
       >
         <Field.Input
           id="input-validation"
@@ -52,4 +64,4 @@ class InputWithValidation extends React.Component {
   }
 }
 
-export default InputWithValidation;
+export default FieldInputWithValidations;

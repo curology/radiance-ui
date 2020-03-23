@@ -4,74 +4,68 @@ import { css } from '@emotion/core';
 import {
   COLORS,
   MEDIA_QUERIES,
-  BOX_SHADOWS,
   SPACER,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
-const bannerStyles = styleObj => css`
-  background-color: ${styleObj.backgroundColor};
-  border-color: ${styleObj.borderColor};
-  color: ${styleObj.color};
-  fill: ${styleObj.color};
+const defaultAlertStyles = css`
+  background-color: ${COLORS.primary};
+  box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 `;
 
-const errorStyle = {
-  backgroundColor: COLORS.errorBackground,
-  borderColor: COLORS.errorBorder,
-  color: COLORS.error,
-};
-const successStyle = {
-  backgroundColor: COLORS.successBackground,
-  borderColor: COLORS.successBorder,
-  color: COLORS.success,
-};
-const defaultStyle = {
-  backgroundColor: COLORS.defaultBackground,
-  borderColor: COLORS.defaultBorder,
-  color: COLORS.default,
-};
+const successAlertStyles = css`
+  background-color: ${COLORS.success};
+  box-shadow: 0px 8px 24px rgba(43, 110, 51, 0.05);
+`;
+
+const errorAlertStyles = css`
+  background-color: ${COLORS.error};
+  box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
+`;
 
 export const BannerContainer = styled.div`
-  align-items: flex-start;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: ${BOX_SHADOWS.message};
   cursor: pointer;
-  display: flex;
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-  justify-content: space-around;
-  margin: 0 auto ${SPACER.small};
-  padding: ${SPACER.small} 0px;
   position: relative;
-  text-align: left;
+  margin: 0 auto ${SPACER.small};
+  padding: ${SPACER.medium};
+  border-radius: ${SPACER.small};
 
-  ${props => {
-    switch (props.bannerType) {
+  ${({ bannerType }) => {
+    switch (bannerType) {
       case 'danger':
-        return bannerStyles(errorStyle);
+        return errorAlertStyles;
+      case 'error':
+        return errorAlertStyles;
       case 'success':
-        return bannerStyles(successStyle);
+        return successAlertStyles;
       default:
-        return bannerStyles(defaultStyle);
+        return defaultAlertStyles;
     }
   }};
 
-  ${MEDIA_QUERIES.lgUp} {
-    font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-    margin-bottom: ${SPACER.medium};
-    padding: ${SPACER.small} 0px;
+  ${MEDIA_QUERIES.mdUp} {
+    margin: 0 auto ${SPACER.medium};
   }
 `;
 
-export const BannerContentContainer = styled.div`
-  display: flex;
-  padding: ${SPACER.xsmall} ${SPACER.large};
+export const MainContainer = styled.div`
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: ${COLORS.white};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
 `;
 
-export const bannerIconStyles = css`
-  margin: 2.5px ${SPACER.large} 0px 0px;
-  min-height: ${SPACER.medium};
-  min-width: ${SPACER.medium};
+export const ContentContainer = styled.div`
+  margin: -3px 0 0 ${SPACER.medium};
+`;
+
+export const IconContainer = styled.div`
+  svg {
+    height: ${SPACER.medium};
+    width: ${SPACER.medium};
+    fill: ${COLORS.white};
+  }
 `;

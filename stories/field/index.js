@@ -2,18 +2,20 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
-
-import FieldReadme from 'docs/field.md';
+import {
+  withKnobs, text, select, boolean, 
+} from '@storybook/addon-knobs';
+import FieldReadme from 'docs/field';
 import { Typography, Field } from 'src/shared-components';
 
-import InputWithValidation from './inputExample';
+import FieldInputWithValidations from './fieldInputWithValidations';
+import FieldInputWithSuccessMessage from './fieldInputWithSuccessMessage';
 
 const MainContainer = styled.div`
   text-align: left;
 `;
 
-const FieldContainer = styled.div`
+const FieldsContainer = styled.div`
   margin: 1rem 0 2rem 0;
   width: 350px;
 `;
@@ -21,10 +23,15 @@ const FieldContainer = styled.div`
 const stories = storiesOf('Field', module);
 stories.addDecorator(withKnobs);
 
-const errorOptions = {
-  'No errors': {},
-  'One error': { e1: 'Error message number 1' },
-  'Two errors': { e1: 'Error message number 1', e2: 'Error message number 2' },
+const messagesOptions = {
+  'No messages': {},
+  'One message': { m1: 'Message number 1' },
+  'Two messages': { m1: 'Message number 1', m2: 'Message number 2' },
+};
+
+const messagesTypeOptions = {
+  error: 'error',
+  success: 'success',
 };
 
 stories.add(
@@ -32,41 +39,58 @@ stories.add(
   withDocs(FieldReadme, () => (
     <MainContainer>
       <Typography.Heading>Examples:</Typography.Heading>
-      <FieldContainer>
-        <InputWithValidation />
-      </FieldContainer>
+      <FieldsContainer>
+        <FieldInputWithValidations />
 
-      <FieldContainer>
+        <FieldInputWithSuccessMessage />
+
+        <Field
+          label="Input with a Hint"
+          labelFor="input-hint"
+          hintMessage="This hint appears on focus"
+        >
+          <Field.Input id="input-hint" type="text" />
+        </Field>
+
         <Field
           label="Textarea - no hint - no validation"
           labelFor="textarea-id"
         >
           <Field.Textarea id="textarea-id" />
         </Field>
-      </FieldContainer>
 
-      <FieldContainer>
-        <Field.Input placeholder="You can use Field.Input directly" />
-      </FieldContainer>
+        <Field
+          label="Textarea with a success message and hidden icon"
+          labelFor="textarea-id"
+          messages={{ successMessage: 'Thanks for your feedback' }}
+          messagesType="success"
+          hideMessagesIcon
+        >
+          <Field.Textarea id="textarea-id" value="some answer" />
+        </Field>
 
-      <FieldContainer>
         <Field label="Input - disabled" disabled>
           <Field.Input />
         </Field>
-      </FieldContainer>
+
+        <Field.Input placeholder="You can use Field.Input directly" />
+      </FieldsContainer>
 
       <Typography.Heading>With Knobs:</Typography.Heading>
-      <FieldContainer>
+
+      <FieldsContainer>
         <Field
-          labelFor="input-id"
-          label={text('label', 'Input Label')}
-          hideErrorIcon={boolean('hideErrorIcon', false)}
+          disabled={boolean('disabled', false)}
+          messages={select('messages', messagesOptions, {})}
+          messagesType={select('messagesType', messagesTypeOptions, 'error')}
+          hideMessagesIcon={boolean('hideMessagesIcon', false)}
           hintMessage={text('hintMessage', 'Hint Message')}
-          errors={select('errors', errorOptions, {})}
+          label={text('label', 'Input Label')}
+          labelFor="input-with-knobs"
         >
-          <Field.Input id="input-id" />
+          <Field.Input id="input-with-knobs" />
         </Field>
-      </FieldContainer>
+      </FieldsContainer>
     </MainContainer>
-  ))
+  )),
 );
