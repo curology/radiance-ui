@@ -5,7 +5,8 @@ import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
 
 export const HintItem = styled.div`
-  transition: all ${ANIMATION.defaultTiming};
+  ${TYPOGRAPHY_STYLE.caption};
+  transition: all ${ANIMATION.defaultTiming} ease-in-out;
   opacity: 0;
   max-height: 0;
 `;
@@ -13,7 +14,7 @@ export const HintItem = styled.div`
 export const FieldContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${SPACER.large};
+  margin-bottom: 22px;
 `;
 
 export const Label = styled.label`
@@ -32,6 +33,7 @@ const inputStyles = css`
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
   outline: none;
+  margin-bottom: 2px;
 
   &:active,
   &:focus {
@@ -40,9 +42,8 @@ const inputStyles = css`
     box-shadow: ${BOX_SHADOWS.focusSecondary};
 
     ~ ${HintItem} {
-      max-height: 23px;
+      max-height: 24px;
       opacity: 1;
-      ${TYPOGRAPHY_STYLE.caption};
       margin: ${SPACER.x2small} 0 0 0;
     }
   }

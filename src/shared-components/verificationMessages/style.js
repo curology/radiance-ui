@@ -5,7 +5,7 @@ import { SPACER } from '../../constants';
 
 export const MessageList = styled.ul`
   list-style-type: none;
-  margin: ${SPACER.x2small} 0 0 0;
+  margin: 0;
 `;
 
 export const CenteredMessageList = styled(MessageList)`
@@ -13,6 +13,9 @@ export const CenteredMessageList = styled(MessageList)`
 `;
 
 export const MessageItem = styled.li`
+  &:last-of-type {
+    margin: 0 0 ${SPACER.x2small} 0;
+  }
   ${({ type }) =>
     type === 'success' ? TYPOGRAPHY_STYLE.success : TYPOGRAPHY_STYLE.error};
   line-height: 24px;

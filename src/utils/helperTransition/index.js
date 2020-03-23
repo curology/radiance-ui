@@ -13,10 +13,10 @@ const getStyleForTransitionState = transitionState => {
     case 'entered':
       return {
         opacity: '1',
-        maxHeight: '50px',
+        maxHeight: '48px',
         transitionDuration: ANIMATION.defaultTiming,
         transitionProperty: 'max-height, opacity',
-        transitionTimingFunction: 'ease-out',
+        transitionTimingFunction: 'ease-in-out',
       };
     case 'exiting':
       return {
@@ -24,7 +24,7 @@ const getStyleForTransitionState = transitionState => {
         maxHeight: '0',
         transitionDuration: ANIMATION.defaultTiming,
         transitionProperty: 'max-height, opacity',
-        transitionTimingFunction: 'ease-in',
+        transitionTimingFunction: 'ease-in-out',
       };
     case 'exited':
       return {

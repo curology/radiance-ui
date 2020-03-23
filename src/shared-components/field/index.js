@@ -78,9 +78,8 @@ class Field extends React.Component {
           })}
 
           {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
-          {showMessages && (
-            <VerificationMessages messages={messages} type={messagesType} />
-          )}
+
+          <VerificationMessages messages={messages} type={messagesType} />
         </InputContainer>
       </FieldContainer>
     );
