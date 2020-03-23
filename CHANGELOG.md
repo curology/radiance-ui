@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# v6.1.0
+
+- Update Alerts and Banners styles
+- Replace BulkErrors component for VerificationMessages (accepts success and error messages)
+- Update Field component to use new VerificationMessages components and update styles
+- ([#208](https://github.com/curology/radiance-ui/pull/208))
+
 # v6.0.0
 
 - Update Buttons, Chip and Tooltip components ([#204](https://github.com/curology/radiance-ui/pull/204))
