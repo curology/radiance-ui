@@ -137,7 +137,7 @@ class Alert extends React.Component {
           <ContentContainer ref={this.contentText}>{content}</ContentContainer>
         </MainContainer>
         {ctaContent && (
-          <CtaContent alertType={type}>
+          <CtaContent>
             <div>{ctaContent}</div>
             <ChevronIcon fill={COLORS.white} width={14} height={14} />
           </CtaContent>

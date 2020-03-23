@@ -108,27 +108,7 @@ export const CtaContent = styled.div`
   align-items: center;
   color: ${COLORS.white};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-
-  ${({ alertType }) => {
-    switch (alertType) {
-      case 'danger':
-        return css`
-          border-top: 1px solid ${COLORS.errorBorder};
-        `;
-      case 'error':
-        return css`
-          border-top: 1px solid ${COLORS.errorBorder};
-        `;
-      case 'success':
-        return css`
-          border-top: 1px solid ${COLORS.successBorder};
-        `;
-      default:
-        return css`
-          border-top: 1px solid ${COLORS.infoBorder};
-        `;
-    }
-  }};
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 export const IconContainer = styled.div`
