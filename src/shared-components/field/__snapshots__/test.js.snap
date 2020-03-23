@@ -22,7 +22,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   position: relative;
 }
 
-.emotion-6 svg {
+.emotion-6 svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
@@ -107,6 +107,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
     className="emotion-6 emotion-7"
   >
     <svg
+      className="radiance-field-input-icon"
       fill="#BD200F"
     />
     <input
@@ -142,7 +143,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   position: relative;
 }
 
-.emotion-6 svg {
+.emotion-6 svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
@@ -227,6 +228,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
     className="emotion-6 emotion-7"
   >
     <svg
+      className="radiance-field-input-icon"
       fill="#BD200F"
     />
     <input
