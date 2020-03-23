@@ -81,7 +81,7 @@ export const Textarea = styled.textarea`
 `;
 
 const applyMessagesStyles = messagesType => css`
-  svg {
+  svg.radiance-field-input-icon {
     opacity: 1;
   }
 
@@ -101,7 +101,7 @@ const applyMessagesStyles = messagesType => css`
 export const InputContainer = styled.div`
   position: relative;
 
-  svg {
+  svg.radiance-field-input-icon {
     opacity: 0;
     position: absolute;
     top: 20px;
