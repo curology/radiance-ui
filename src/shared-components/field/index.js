@@ -57,9 +57,12 @@ class Field extends React.Component {
     const showMessages = messagesKeys.length > 0;
     const MessageIcon =
       messagesType === 'success' ? (
-        <CheckmarkIcon fill={COLORS.success} />
+        <CheckmarkIcon
+          fill={COLORS.success}
+          className="radiance-field-input-icon"
+        />
       ) : (
-        <ErrorIcon fill={COLORS.error} />
+        <ErrorIcon fill={COLORS.error} className="radiance-field-input-icon" />
       );
 
     return (
