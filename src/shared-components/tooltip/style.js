@@ -104,7 +104,7 @@ export const TooltipBox = styled.div`
   z-index: 5;
   text-align: left;
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
-  display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'block')};
+  display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'none')};
 `;
 
 export const TooltipContent = styled.div`
