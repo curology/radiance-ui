@@ -1,6 +1,6 @@
 # CHANGELOG
 
-# v6.1.1
+# v6.1.2
 
 - [Bug] Fix tooltip display prop ([#212](https://github.com/curology/radiance-ui/pull/212))
 
