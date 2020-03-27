@@ -2,6 +2,10 @@
 
 # v6.1.1
 
+- [Bug] Fix tooltip display prop ([#212](https://github.com/curology/radiance-ui/pull/212))
+
+# v6.1.1
+
 - [Bug] Fix SVG class selector to avoid leaking styles to nested SVG ([#208](https://github.com/curology/radiance-ui/pull/208))
 
 # v6.1.0
