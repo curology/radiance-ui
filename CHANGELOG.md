@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v6.1.3
+
+- [Bug] Fix Indicator display mechanis ([#213](https://github.com/curology/radiance-ui/pull/213))
+
 # v6.1.2
 
 - [Bug] Fix tooltip display prop ([#212](https://github.com/curology/radiance-ui/pull/212))
