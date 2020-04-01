@@ -1,8 +1,12 @@
 # CHANGELOG
 
+# v6.2.0
+
+- Added 2 glyphs, updated CheckBadgeGlyph ([#214](https://github.com/curology/radiance-ui/pull/214))
+
 # v6.1.3
 
-- [Bug] Fix Indicator display mechanis ([#213](https://github.com/curology/radiance-ui/pull/213))
+- [Bug] Fix Indicator display mechanism ([#213](https://github.com/curology/radiance-ui/pull/213))
 
 # v6.1.2
 
