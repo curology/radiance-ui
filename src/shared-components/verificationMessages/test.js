@@ -35,7 +35,6 @@ describe('<VerificationMessages />', () => {
         required: [],
       };
       const wrapper = shallow(<VerificationMessages messages={messages} />);
-      console.log(wrapper.debug());
       expect(wrapper.html().indexOf('li') === -1).toBe(true);
     });
   });
