@@ -13,13 +13,17 @@ const VerificationMessages = ({ messages, centered, type }) => {
   return (
     <TransitionGroup component={centered ? CenteredMessageList : MessageList}>
       {showMessages &&
-        messageKeys.map(key => (
-          <HelperTransition key={key}>
-            <MessageItem type={type}>
-              {formatMessage(messages[key])}
-            </MessageItem>
-          </HelperTransition>
-        ))}
+        messageKeys
+          .filter(
+            key => !Array.isArray(messages[key]) || messages[key].length >= 1,
+          )
+          .map(key => (
+            <HelperTransition key={key}>
+              <MessageItem type={type}>
+                {formatMessage(messages[key])}
+              </MessageItem>
+            </HelperTransition>
+          ))}
     </TransitionGroup>
   );
 };
