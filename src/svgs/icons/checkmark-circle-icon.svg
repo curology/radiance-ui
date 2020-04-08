@@ -1,8 +1,0 @@
-<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <title>Checkmark Circle</title>
-  <g fill="none" fill-rule="evenodd">
-    <rect x="2" y="2" width="16" height="16" rx="8" stroke-width="2" stroke="currentColor"/>
-    <path transform="matrix(1 0 0 1 1 1)" d="M7.752 13.104l-3.088-2.828c-.39-.39-.39-1.023 0-1.414.39-.39 1.023-.39 1.414 0l1.674 1.414 3.807-3.562c.39-.39 1.023-.39 1.413 0 .39.39.39 1.024 0 1.415l-5.22 4.974z" fill="currentColor"/>
-  </g>
-</svg>
-

@@ -1,8 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12">
-  <title>Menu</title>
-  <g>
-    <rect width="16" height="2"/>
-    <rect width="16" height="2" y="5"/>
-    <rect width="16" height="2" y="10"/>
-  </g>
+<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Menu Icon</title>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.02 1H0V2.25H16.02V1ZM16.02 7.73999H0V8.98999H16.02V7.73999ZM0 14.48H8.72V15.73H0V14.48Z" fill="currentColor"/>
 </svg>

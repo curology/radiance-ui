@@ -12,6 +12,23 @@
   "globals": {
     "document": false
   },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./.storybook/webpack.config.js"
+      }
+    },
+    "import/extensions": [".js", ".jsx", ".md"]
+  },
+  "rules": {
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "react/state-in-constructor": 0,
+    "react/static-property-placement": 0,
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "import/extensions": [2, { "svg": "always" }]
+  },
   "overrides": [
     {
       "files": ["test.js", "test.ts", "test.tsx"],
@@ -22,21 +39,25 @@
         "emotion/import-from-emotion": "error",
         "emotion/styled-import": "error"
       }
-    }
-  ],
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "./.storybook/webpack.config.js"
+    },
+    {
+      "files": ["**/style.js"],
+      "rules": {
+        "indent": "off"
       }
     },
-    "import/extensions": [".js", ".jsx"]
-  },
-  "rules": {
-    "@typescript-eslint/camelcase": 0,
-    "@typescript-eslint/ban-ts-ignore": 0,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "import/extensions": [{ "svg": "always" }]
-  }
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/explicit-function-return-type": 0
+      }
+    },
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "react/prop-types": 0
+      }
+    }
+  ]
 }

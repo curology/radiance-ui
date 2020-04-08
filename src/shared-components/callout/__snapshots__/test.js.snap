@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
+.emotion-2 {
+  background-color: #EEEDF7;
+  padding: 1rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  color: #332e54;
+  font-size: 0.875rem;
+}
+
+<div
+  className="emotion-2 emotion-3"
+>
+  <div
+    className="emotion-0 emotion-1"
+    color="#332e54"
+  >
+    Simple callout text. 
+    <strong>
+      Bold text supported
+    </strong>
+  </div>
+</div>
+`;
+
+exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`] = `
+.emotion-4 {
+  background-color: #EEEDF7;
+  padding: 1rem;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 {
+  color: #706D87;
+  font-size: 0.875rem;
+}
+
+.emotion-2 {
+  margin-left: 0.5rem;
+}
+
+.emotion-2 svg {
+  fill: #706D87;
+}
+
+.emotion-2 svg path {
+  fill: #706D87;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-0 emotion-1"
+    color="#706D87"
+  >
+    Callout text with 
+    <strong>
+      custom color
+    </strong>
+     and icon.
+  </div>
+  <div
+    className="emotion-2 emotion-3"
+    color="#706D87"
+  >
+    <svg
+      height={40}
+      width={40}
+    />
+  </div>
+</div>
+`;

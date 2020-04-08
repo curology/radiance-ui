@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 
 import OffClickWrapper from '../offClickWrapper';
-import { MainContainer, Trigger, TooltipBox } from './style';
+import {
+  MainContainer,
+  Trigger,
+  TooltipBox,
+  TooltipContent,
+  ArrowImageContainer,
+} from './style';
+import Arrow from './arrow.svg';
+import { COLORS } from '../../constants';
 
 const propTypes = {
   alignRightPercent: PropTypes.number,
@@ -14,25 +22,31 @@ const propTypes = {
     PropTypes.node,
   ]).isRequired,
   content: PropTypes.node,
+  defaultOpen: PropTypes.bool,
+  display: PropTypes.bool,
+  hasRestrictedWidth: PropTypes.bool,
+  isSmall: PropTypes.bool,
   nudgeLeft: PropTypes.number,
   nudgeRight: PropTypes.number,
   nudgeTop: PropTypes.number,
   nudgeBottom: PropTypes.number,
   position: PropTypes.oneOf(['top', 'bottom']),
-  defaultOpen: PropTypes.bool,
-  display: PropTypes.bool,
 };
 
 const defaultProps = {
+  alignRightPercent: 0,
+  alignTopPercent: 0,
   arrowAlign: 'middle',
   content: '',
+  defaultOpen: false,
+  display: true,
+  hasRestrictedWidth: false,
+  isSmall: false,
   nudgeLeft: 0,
   nudgeRight: 0,
   nudgeTop: 0,
   nudgeBottom: 0,
   position: 'top',
-  defaultOpen: false,
-  display: true,
 };
 
 class Tooltip extends React.Component {
@@ -79,6 +93,8 @@ class Tooltip extends React.Component {
       content,
       defaultOpen,
       display,
+      hasRestrictedWidth,
+      isSmall,
       nudgeBottom,
       nudgeLeft,
       nudgeRight,
@@ -108,15 +124,20 @@ class Tooltip extends React.Component {
             alignRightPercent={alignRightPercent}
             alignTopPercent={alignTopPercent}
             arrowAlign={arrowAlign}
+            displayTooltip={display}
+            hasRestrictedWidth={hasRestrictedWidth}
+            isSmall={isSmall}
             nudgeLeft={nudgeLeft}
             nudgeRight={nudgeRight}
             nudgeTop={nudgeTop}
             nudgeBottom={nudgeBottom}
             open={open}
-            displayTooltip={display}
             position={position}
           >
-            {content}
+            <TooltipContent>{content}</TooltipContent>
+            <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
+              <Arrow width={16} height={16} fill={COLORS.primary} />
+            </ArrowImageContainer>
           </TooltipBox>
         </MainContainer>
       </OffClickWrapper>

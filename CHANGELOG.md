@@ -1,9 +1,98 @@
 # CHANGELOG
 
+# v6.2.0
+
+- Added 2 glyphs, updated CheckBadgeGlyph ([#214](https://github.com/curology/radiance-ui/pull/214))
+
+# v6.1.3
+
+- [Bug] Fix Indicator display mechanism ([#213](https://github.com/curology/radiance-ui/pull/213))
+
+# v6.1.2
+
+- [Bug] Fix tooltip display prop ([#212](https://github.com/curology/radiance-ui/pull/212))
+
+# v6.1.1
+
+- [Bug] Fix SVG class selector to avoid leaking styles to nested SVG ([#208](https://github.com/curology/radiance-ui/pull/208))
+
+# v6.1.0
+
+- Update Alerts and Banners styles
+- Replace BulkErrors component for VerificationMessages (accepts success and error messages)
+- Update Field component to use new VerificationMessages components and update styles
+- ([#208](https://github.com/curology/radiance-ui/pull/208))
+
+# v6.0.0
+
+- Update Buttons, Chip and Tooltip components ([#204](https://github.com/curology/radiance-ui/pull/204))
+
+# v5.1.0
+
+- Added Callout and Indicator new components ([#202](https://github.com/curology/radiance-ui/pull/202))
+
 # v5.0-beta
 
 - [Internal] Convert Project to Typescript ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
 - [Feature] Publish Generated Types declarations
+
+# v4.2.22
+
+- Updated border width on OptionButton ([#197](https://github.com/curology/radiance-ui/pull/197))
+
+# v4.2.21
+
+- Updated border width on Buttons / Checkboxes / Radios ([#195](https://github.com/curology/radiance-ui/pull/195))
+- Updated size of ChevronIcon within Accordion component ([#196](https://github.com/curology/radiance-ui/pull/196))
+
+# v4.2.20
+
+- Added deprecation warnings for outdated icons / emojis / glyphs and removed from storybook ([#194](https://github.com/curology/radiance-ui/pull/194))
+
+# v4.2.19
+
+- Added Logos and NavIcons ([#192](https://github.com/curology/radiance-ui/pull/192))
+
+# v4.2.18
+
+- Design system updates to emojis ([#172](https://github.com/curology/radiance-ui/pull/172))
+
+# v4.2.17
+
+- Removed masks in new icon and glyph svgs: ([#187](https://github.com/curology/radiance-ui/pull/187)), ([#188](https://github.com/curology/radiance-ui/pull/188)), ([#189](https://github.com/curology/radiance-ui/pull/189)), ([#190](https://github.com/curology/radiance-ui/pull/190)), and ([#191](https://github.com/curology/radiance-ui/pull/191))
+
+# v4.2.16
+
+- Testing mask removal in SVGs to resolve fill-issue ([#186](https://github.com/curology/radiance-ui/pull/186))
+
+# v4.2.15
+
+- Design system updates to icons ([#180](https://github.com/curology/radiance-ui/pull/180)), ([#181](https://github.com/curology/radiance-ui/pull/181)), and ([#182](https://github.com/curology/radiance-ui/pull/182))
+
+# v4.2.14
+
+- Design system updates to glyphs ([#175](https://github.com/curology/radiance-ui/pull/175)), ([#176](https://github.com/curology/radiance-ui/pull/176)), and ([#177](https://github.com/curology/radiance-ui/pull/177))
+
+# v4.2.13
+
+- [Internal] Another re-release. Testing release steps.
+
+# v4.2.12
+
+- No code changes. Re-tagging of 4.2.11 - failed NPM release
+
+# v4.2.11
+
+- [Internal] Update devDependency `eslint-plugin-curology`. ([#179](https://github.com/PocketDerm/radiance-ui/pull/179))
+- [Internal] Update devDependencies `babel-jest`, `enzyme`, `enzyme-adapter-react-16`, `jest`, and `jest-emotion`. ([#173](https://github.com/PocketDerm/radiance-ui/pull/173))
+- [Internal] Update React Storybook to `5.3.9` ([#174](https://github.com/PocketDerm/radiance-ui/pull/174))
+  - Replace `@storybook/addon-storysource/loader` with `@storybook/source-loader`
+  - Rename `.storybook/addons.js` to `.storybook/manager.js`
+  - Rename `.storybook/config.js` to `.storybook/preview.js`
+
+# v4.2.10
+
+- [Internal] Add `@svgr/cli` as devDependency, update scripts. ([#178](https://github.com/PocketDerm/radiance-ui/pull/178))
 
 # v4.2.9
 

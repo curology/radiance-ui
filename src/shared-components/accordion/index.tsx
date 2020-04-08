@@ -117,8 +117,8 @@ class Accordion extends React.Component<
           <ArrowWrapper rightAlign={!!rightAlignArrow}>
             <ChevronIcon
               rotate={isOpen ? 90 : 0}
-              width={8}
-              height={8}
+              width={16}
+              height={16}
               fill={COLORS.purple}
             />
           </ArrowWrapper>

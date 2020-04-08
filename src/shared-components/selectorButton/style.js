@@ -51,7 +51,7 @@ const secondarySelectorStyle = checked => css`
 export const Selector = styled.div`
   align-items: center;
   appearance: none;
-  border: 2px solid;
+  border: 1px solid;
   cursor: pointer;
   display: flex;
   ${({ size }) => css`

@@ -1,60 +1,91 @@
 # Alert
+
+Alerts should be used to show notifications or messages from (providers, support, or system)
+
+They should show page-level success states.
+
+We should avoid using alerts to show flow-level success states (i.e. Cancellation successful)
+
+Alerts contain some visual marker, an icon `16px` or avatar `32px`
+
+Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The complete text should be short and not extend more than 2 lines. Ellipses (...) will be used to truncate past 2 lines.
+
+Alerts can contain a CTA section. These should be reserved for really important actions. These alerts persists until an action is taken.
+
 ## Usage
 
 ```jsx
+import { Fragment } from 'react';
 import { Alert } from 'radiance-ui';
-const SampleContentComponent = () => (
-  <div>
-    Click <a href="https://google.com">here</a> to go to Google!
-  </div>
-);
 
 <Alert.Container>
+  <Alert content="Default Alert: it will dissapear after 3 seconds" />
   <Alert
-    content="Your photos were uploaded successfully!"
+    content={
+      <Fragment>
+        <strong>Did you hear?</strong> we launched a sunscreen
+      </Fragment>
+    }
+    duration="sticky"
+  />
+  <Alert
+    content={
+      <Fragment>
+        <strong>Whoops!</strong> There was an error updating your address, pleas
+        try again later
+      </Fragment>
+    }
+    type="error"
+    duration="sticky"
+  />
+  <Alert
+    content={
+      <Fragment>
+        <strong>Success!</strong> your photos were accepted
+      </Fragment>
+    }
     type="success"
-    duration={4}
-    onExit={() => {}}
+    duration="sticky"
   />
   <Alert
-    content="Your photos were uploaded successfully!"
-    type="success"
+    content={
+      <Fragment>
+        <strong>New message from Jasmin:</strong> “Be sure to upload a few more
+        photos so that we can continue with your treatment”
+      </Fragment>
+    }
     duration="sticky"
-    onExit={() => {}}
+    avatarSrc={avatarImageSrc}
   />
   <Alert
-    content="Support has been notified."
-    type="info"
-    duration="sticky"
-    onExit={() => {}}
+    content={
+      <Fragment>
+        <strong>Whoops!</strong> There was an error updating your address, pleas
+        try again later
+      </Fragment>
+    }
+    type="error"
+    ctaContent="Update Payment Method"
+    onExit={() => alert('cta alert clicked')}
   />
-  <Alert
-    content="Oops! We couldn't update your information!"
-    type="danger"
-    duration="sticky"
-    onExit={() => {}}
-  />
-  <Alert
-    content={<SampleContentComponent />}
-    type="success"
-    duration="sticky"
-    onExit={() => {}}
-  />  
-</Alert.Container>
+</Alert.Container>;
 ```
 
 <!-- STORY -->
 
 ### Proptypes
-| prop     | propType                                | required                    | default | description                                                                                                                  |
-|----------|-----------------------------------------|-----------------------------|---------|------------------------------------------------------------------------------------------------------------------------------|
-| text     | string         				         | yes if content prop is empty| -       | alert text to be displayed. Will be deprecated in next major version                                                                                                  |
-| content  | numbers, strings, elements or an array  | yes if text prop is empty   | -       | renders anything passed to component as text displayed in alert.                                                          |
-| type     | string             				     | yes                         | -       | must be one of: 'success', 'danger', 'info'                                                                                  |
-| duration | number&#124;string					     | yes                         | -       | can be 'sticky' or number in seconds before the alert is dismissed                                                           |
-| onExit   | func            					     | yes                         | -       | callback function called on dismissal of  the alert. The function will receive all  of the component's props as the argument |
+
+| prop       | propType         | required | default | description                                                                                                             |
+| ---------- | ---------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| avatarSrc  | string           | no       | -       | to display a 32x32 small avatar instead of an icon                                                                      |
+| content    | node             | yes      | -       | content of the alert                                                                                                    |
+| ctaContent | node             | no       | -       | content of the CTA section. The handler can be provided in the `onExit` prop                                            |
+| duration   | number or string | no       | 3       | can be the string `sticky` for the alert to persist or a number in seconds before the alert is automatically dismissed  |
+| type       | string           | no       | default | must be one of: 'success', 'error', 'default'                                                                           |
+| onExit     | func             | no       | ()->{}  | function to be called on dismissal of the alert. The function will receive all of the component's props as the argument |
 
 ### Notes
+
 The `<Alert />` component provides only the styling for and enter/exit
 behavior for alerts. Management of what alerts are showing on the screen
 must be handled from outside of this component.
@@ -62,6 +93,3 @@ must be handled from outside of this component.
 All alerts are dimissable by clicking on them. However, you can use the
 `duration` prop to determine if the alert is sticky or dismissed on a
 timer (in units of seconds).
-
-The `onExit` handler will always receive the `<Alert />` component's
-props as its argument.

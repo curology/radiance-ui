@@ -9,7 +9,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 22px;
 }
 
 .emotion-0 {
@@ -22,14 +22,11 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   position: relative;
 }
 
-.emotion-6 svg.error-icon {
+.emotion-6 svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
   right: 1rem;
-  width: 16px;
-  height: 16px;
-  fill: #BD200F;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
 }
@@ -43,15 +40,14 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   appearance: none;
   background: #ffffff;
   border: 1px solid #ededf0;
-  border-radius: 0;
+  border-radius: 0.25rem;
   color: #524D6E;
-  padding: 13px 1rem;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
   width: 100%;
   outline: none;
-  margin-bottom: 0.5rem;
-  padding-right: 2rem;
+  margin-bottom: 2px;
+  padding: 13px 2rem 13px 1rem;
 }
 
 .emotion-2:active,
@@ -63,8 +59,9 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
 
 .emotion-2:active ~ .ez9grqt0,
 .emotion-2:focus ~ .ez9grqt0 {
-  max-height: 23px;
+  max-height: 24px;
   opacity: 1;
+  margin: 0.125rem 0 0 0;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -94,7 +91,6 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
 .emotion-4 {
   list-style-type: none;
   margin: 0;
-  min-height: 23px;
 }
 
 <div
@@ -111,7 +107,8 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
     className="emotion-6 emotion-7"
   >
     <svg
-      className="error-icon"
+      className="radiance-field-input-icon"
+      fill="#BD200F"
     />
     <input
       className="emotion-2 emotion-3"
@@ -133,7 +130,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 22px;
 }
 
 .emotion-0 {
@@ -146,14 +143,11 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   position: relative;
 }
 
-.emotion-6 svg.error-icon {
+.emotion-6 svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
   right: 1rem;
-  width: 16px;
-  height: 16px;
-  fill: #BD200F;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
 }
@@ -167,15 +161,14 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   appearance: none;
   background: #ffffff;
   border: 1px solid #ededf0;
-  border-radius: 0;
+  border-radius: 0.25rem;
   color: #524D6E;
-  padding: 13px 1rem;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
   width: 100%;
   outline: none;
-  margin-bottom: 0.5rem;
-  padding-right: 2rem;
+  margin-bottom: 2px;
+  padding: 13px 2rem 13px 1rem;
 }
 
 .emotion-2:active,
@@ -187,8 +180,9 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
 
 .emotion-2:active ~ .ez9grqt0,
 .emotion-2:focus ~ .ez9grqt0 {
-  max-height: 23px;
+  max-height: 24px;
   opacity: 1;
+  margin: 0.125rem 0 0 0;
 }
 
 .emotion-2::-webkit-input-placeholder {
@@ -218,7 +212,6 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
 .emotion-4 {
   list-style-type: none;
   margin: 0;
-  min-height: 23px;
 }
 
 <div
@@ -235,7 +228,8 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
     className="emotion-6 emotion-7"
   >
     <svg
-      className="error-icon"
+      className="radiance-field-input-icon"
+      fill="#BD200F"
     />
     <input
       className="emotion-2 emotion-3"
