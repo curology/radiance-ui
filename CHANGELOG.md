@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v6.3.1
+
+- Design system updates to emojis and glyphs ([#217](https://github.com/curology/radiance-ui/pull/217))
+
+# v6.3.0
+
+- Design system updates to emojis and glyphs ([#215](https://github.com/curology/radiance-ui/pull/215))
+
 # v6.2.0
 
 - Added 2 glyphs, updated CheckBadgeGlyph ([#214](https://github.com/curology/radiance-ui/pull/214))

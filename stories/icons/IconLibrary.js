@@ -36,7 +36,7 @@ const IconList = () => (
     <Icons>
       {Object.entries(emojiComponents).map(([name, Icon]) => (
         <IconContainer key={name}>
-          <Icon width={30} height={30} />
+          <Icon width={48} height={48} />
           <IconLabel>{name}</IconLabel>
         </IconContainer>
       ))}
