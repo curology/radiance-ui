@@ -17,9 +17,7 @@ export { default as ElatedFilledEmoji } from './elated-filled-emoji.svg';
 export { default as FacebookSquareIcon } from './facebook-square-icon.svg';
 export { default as FirstAidIcon } from './first-aid-icon.svg';
 export { default as FuriousFilledEmoji } from './furious-filled-emoji.svg';
-export {
-  default as GeneralQuestionsGlyph,
-} from './general-questions-glyph.svg';
+export { default as GeneralQuestionsGlyph } from './general-questions-glyph.svg';
 export { default as HandWritingGlyph } from './hand-writing-glyph.svg';
 export { default as HeartFilledEmoji } from './heart-filled-emoji.svg';
 export { default as HugFilledEmoji } from './hug-filled-emoji.svg';
@@ -28,9 +26,7 @@ export { default as LogoCondensedIcon } from './logo-condensed-icon.svg';
 export { default as LogoIcon } from './logo-icon.svg';
 export { default as MessageIcon } from './message-icon.svg';
 export { default as NotificationsIcon } from './notifications-icon.svg';
-export {
-  default as OverwhelmedFilledEmoji,
-} from './overwhelmed-filled-emoji.svg';
+export { default as OverwhelmedFilledEmoji } from './overwhelmed-filled-emoji.svg';
 export { default as PhotosIcon } from './photos-icon.svg';
 export { default as PreparedFilledEmoji } from './prepared-filled-emoji.svg';
 export { default as QuestionCircleIcon } from './question-circle-icon.svg';
@@ -43,6 +39,5 @@ export { default as SunscreenDropGlyph } from './sunscreen-drop-glyph.svg';
 export { default as SunscreenTubGlyph } from './sunscreen-tub-glyph.svg';
 export { default as SupportedEmoji } from './supported-emoji.svg';
 export { default as SupportedFilledEmoji } from './supported-filled-emoji.svg';
-export {
-  default as UnsatisfiedFilledEmoji,
-} from './unsatisfied-filled-emoji.svg';
+export { default as UnsatisfiedFilledEmoji } from './unsatisfied-filled-emoji.svg';
+
