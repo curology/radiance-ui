@@ -18,7 +18,7 @@ stories.add(
   withDocs(AlertReadme, () => (
     <React.Fragment>
       <Alert.Container>
-        <Alert content="Default Alert: it will dissapear after 3 seconds" />
+        <Alert content="Default Alert: it will disappear after 3 seconds" />
         <Alert
           content={
             <Fragment>
