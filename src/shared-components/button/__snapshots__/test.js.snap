@@ -232,6 +232,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 
 <button
   className="emotion-6 emotion-7"
+  color="purple"
   disabled={true}
   onClick={[Function]}
   type="button"

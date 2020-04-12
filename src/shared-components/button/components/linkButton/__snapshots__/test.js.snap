@@ -28,8 +28,6 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #332e54;
-  border-color: #332e54;
   color: #ffffff;
   fill: #ffffff;
   min-width: 208px;

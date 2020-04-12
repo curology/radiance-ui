@@ -1,6 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { COLORS } from '../../constants';
 
 import CameraIcon from '../../svgs/icons/camera-icon.svg';
 
@@ -13,11 +14,21 @@ describe('<Button />', () => {
         .create(
           <Button disabled onClick={() => {}} icon={<CameraIcon />}>
             Button Text
-          </Button>
+          </Button>,
         )
         .toJSON();
 
       expect(tree).toMatchSnapshot();
+    });
+
+    it('renders with adjustable color', () => {
+      const button = mount(
+        <Button color="statusRed" id="red-button">
+          Button Text
+        </Button>,
+      );
+
+      expect(button.prop('color')).toEqual('statusRed');
     });
   });
 
@@ -35,7 +46,7 @@ describe('<Button />', () => {
       const button = mount(
         <Button disabled onClick={spy}>
           Button Text
-        </Button>
+        </Button>,
       );
 
       button.simulate('click');
@@ -47,7 +58,7 @@ describe('<Button />', () => {
       const button = mount(
         <Button isLoading onClick={spy}>
           Button Text
-        </Button>
+        </Button>,
       );
 
       button.simulate('click');
