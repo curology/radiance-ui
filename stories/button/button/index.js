@@ -6,7 +6,7 @@ import { css } from '@emotion/core';
 import ButtonReadme from 'docs/button/button';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import { Button, Typography } from 'src/shared-components';
-import { SPACER } from 'src/constants';
+import { SPACER, COLORS } from 'src/constants';
 
 const ButtonStory = withDocs(ButtonReadme, () => (
   <React.Fragment>
@@ -105,8 +105,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       buttonType={select(
         'buttonType',
         ['primary', 'secondary', 'tertiary', 'quaternary'],
-        'primary'
+        'primary',
       )}
+      color={select('color', Object.keys(COLORS), Object.keys(COLORS)[0])}
       isLoading={boolean('isLoading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}
