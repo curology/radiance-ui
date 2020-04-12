@@ -3,10 +3,11 @@ import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
+import { lighten } from '../../utils';
 
-const primaryStyles = css`
-  background-color: ${COLORS.purple};
-  border-color: ${COLORS.purple};
+const primaryStyles = color => css`
+  background-color: ${COLORS[color]};
+  border-color: ${COLORS[color]};
   color: ${COLORS.white};
   fill: ${COLORS.white};
   &:visited,
@@ -20,26 +21,26 @@ const primaryStyles = css`
   }
 `;
 
-const secondaryStyles = isLoading => css`
+const secondaryStyles = (isLoading, color) => css`
   background-color: transparent;
-  border-color: ${COLORS.purple};
-  color: ${COLORS.purple};
-  fill: ${COLORS.purple};
+  border-color: ${COLORS[color]};
+  color: ${COLORS[color]};
+  fill: ${COLORS[color]};
 
   &:hover,
   &:focus,
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
-    background-color: ${isLoading ? 'inherit' : COLORS.primary};
-    color: ${isLoading ? COLORS.primary : COLORS.white};
+    background-color: ${isLoading ? 'inherit' : COLORS[color]};
+    color: ${isLoading ? COLORS[color] : COLORS.white};
     fill: ${isLoading ? 'inherit' : COLORS.white};
   }
 `;
 
-const tertiaryStyles = css`
+const tertiaryStyles = color => css`
   border-color: transparent;
   background-color: transparent;
-  color: ${COLORS.primary};
+  color: ${COLORS[color]};
 
   &:hover {
     opacity: 0.8;
@@ -47,11 +48,11 @@ const tertiaryStyles = css`
   }
 `;
 
-const quaternaryStyles = css`
+const quaternaryStyles = color => css`
   border-color: transparent;
   background-color: transparent;
-  color: ${COLORS.purple70};
-  fill: ${COLORS.purple70};
+  color: ${lighten(COLORS[color], '30%')};
+  fill: ${lighten(COLORS[color], '30%')};
 
   &:hover {
     opacity: 0.8;
@@ -59,12 +60,12 @@ const quaternaryStyles = css`
   }
 `;
 
-const actionStyles = isLoading => css`
+const actionStyles = (isLoading, color) => css`
   border-width: 1px;
   border-color: ${COLORS.border};
   background-color: ${COLORS.white};
-  color: ${COLORS.purple100};
-  fill: ${COLORS.purple100};
+  color: ${COLORS[color]};
+  fill: ${COLORS[color]};
   box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickable};
 
   &:hover {
@@ -94,28 +95,29 @@ const disabledStyles = css`
   }
 `;
 
-function parseTheme(disabled, buttonType, isLoading) {
+function parseTheme(disabled, buttonType, isLoading, color) {
   if (disabled) {
     return disabledStyles;
   }
 
   switch (buttonType) {
     case 'secondary':
-      return secondaryStyles(isLoading);
+      return secondaryStyles(isLoading, color);
     case 'tertiary':
-      return tertiaryStyles;
+      return tertiaryStyles(color);
     case 'quaternary':
-      return quaternaryStyles;
+      return quaternaryStyles(color);
     case 'action':
-      return actionStyles(isLoading);
+      return actionStyles(isLoading, color);
     default:
-      return primaryStyles;
+      return primaryStyles(color);
   }
 }
 
 export const baseButtonStyles = ({
   disabled,
   buttonType,
+  color,
   isLoading,
   textColor,
   isFullWidth,
@@ -144,7 +146,7 @@ export const baseButtonStyles = ({
     outline: none;
   }
 
-  ${parseTheme(disabled, buttonType, isLoading)};
+  ${parseTheme(disabled, buttonType, isLoading, color)};
   ${isLoading && loadingStyles};
 
   ${!!textColor &&
@@ -162,7 +164,7 @@ export const baseButtonStyles = ({
     min-width: 208px;
     max-width: 325px;
     width: max-content;
-    
+
     `};
 `;
 

@@ -6,6 +6,7 @@ import Loader from './shared-components/loader';
 import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
+import { COLORS } from '../../constants';
 
 const deprecatedProperties = {
   loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
@@ -14,7 +15,7 @@ const deprecatedProperties = {
 const isLoadingPropFunction = (props, propName, componentName) => {
   if (props[propName] !== undefined) {
     return new Error(
-      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`
+      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`,
     );
   }
 };
@@ -34,6 +35,7 @@ class Button extends React.Component {
       'tertiary',
       'quaternary',
     ]),
+    color: PropTypes.oneOf(Object.keys(COLORS)),
     loading: isLoadingPropFunction,
     isLoading: PropTypes.bool,
     icon: PropTypes.node,
@@ -44,6 +46,7 @@ class Button extends React.Component {
   static defaultProps = {
     disabled: false,
     buttonType: 'primary',
+    color: 'purple',
     isLoading: false,
     onClick() {},
     textColor: '',
@@ -56,6 +59,7 @@ class Button extends React.Component {
       disabled,
       children,
       buttonType,
+      color,
       loading,
       isLoading,
       icon,
@@ -73,6 +77,7 @@ class Button extends React.Component {
           !disabled && !loadingVal ? onClick : event => event.preventDefault()
         }
         buttonType={buttonType}
+        color={color}
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
