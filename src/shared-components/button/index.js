@@ -104,6 +104,7 @@ class Button extends React.Component {
           isLoading={loadingVal}
           disabled={disabled}
           buttonType={buttonType}
+          color={color}
           textColor={textColor}
           isFullWidth={isFullWidth}
         />
