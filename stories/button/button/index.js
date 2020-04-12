@@ -31,6 +31,20 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       <Button disabled>Disabled Button</Button>
       <Button isFullWidth>Full Width Button</Button>
 
+      <Button color="statusRed">Primary Color</Button>
+      <Button color="statusRed" buttonType="secondary">
+        Secondary Button
+      </Button>
+      <Button color="statusRed" buttonType="tertiary">
+        Tertiary Button
+      </Button>
+      <Button color="statusRed" buttonType="quaternary">
+        Quaternary Button
+      </Button>
+      <Button color="statusRed" isFullWidth>
+        Full Width Button
+      </Button>
+
       <Button isLoading>Primary Loading</Button>
       <Button isLoading buttonType="secondary">
         Secondary Loading
@@ -75,6 +89,26 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       </Button>
       <Button isFullWidth icon={<CheckmarkIcon />}>
         Full Width Button
+      </Button>
+
+      <Button color="statusRed" icon={<CheckmarkIcon />}>
+        Primary Color
+      </Button>
+      <Button color="statusRed" buttonType="secondary" icon={<CheckmarkIcon />}>
+        Secondary Color
+      </Button>
+      <Button color="statusRed" buttonType="tertiary" icon={<CheckmarkIcon />}>
+        Tertiary Color
+      </Button>
+      <Button
+        color="statusRed"
+        buttonType="quaternary"
+        icon={<CheckmarkIcon />}
+      >
+        Quaternary Color
+      </Button>
+      <Button color="statusRed" isFullWidth icon={<CheckmarkIcon />}>
+        Full Width Color
       </Button>
 
       <Button isLoading icon={<CheckmarkIcon />}>
