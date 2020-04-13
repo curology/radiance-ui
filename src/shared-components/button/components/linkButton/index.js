@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
+import { COLORS } from 'src/constants';
 
 const propTypes = {
   disabled: PropTypes.bool,
@@ -14,6 +15,7 @@ const propTypes = {
     'tertiary',
     'quaternary',
   ]),
+  color: PropTypes.oneOf(Object.keys(COLORS)),
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   onClick: PropTypes.func,
 };
@@ -21,6 +23,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
+  color: 'purple',
   as: 'a',
   onClick() {},
 };
@@ -29,6 +32,7 @@ const Link = ({
   disabled,
   children,
   buttonType,
+  color,
   as,
   onClick,
   textColor,
@@ -38,7 +42,7 @@ const Link = ({
 
   return (
     <ContainerTag
-      css={linkButtonStyles({ disabled, buttonType, textColor })}
+      css={linkButtonStyles({ disabled, buttonType, color, textColor })}
       disabled={disabled}
       onClick={!disabled ? onClick : () => false}
       {...rest}

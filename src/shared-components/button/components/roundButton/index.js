@@ -10,6 +10,7 @@ import {
   RoundButtonContainer,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
+import { COLORS } from 'src/constants';
 
 const deprecatedProperties = {
   loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
@@ -34,6 +35,7 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
+  color: PropTypes.oneOf(Object.keys(COLORS)),
   loading: isLoadingPropFunction,
   isLoading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
@@ -43,6 +45,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
+  color: 'purple',
   isLoading: false,
   onClick() {},
   children: '',
@@ -54,6 +57,7 @@ const RoundButton = ({
   disabled,
   children,
   buttonType,
+  color,
   loading,
   isLoading,
   icon,
@@ -68,6 +72,7 @@ const RoundButton = ({
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
+        color={color}
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
@@ -78,6 +83,7 @@ const RoundButton = ({
           isLoading={loadingVal}
           disabled={disabled}
           buttonType={buttonType}
+          color={color}
           css={roundButtonLoader(disabled)}
           textColor={textColor}
         />

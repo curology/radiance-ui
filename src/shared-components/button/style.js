@@ -42,9 +42,13 @@ const tertiaryStyles = color => css`
   background-color: transparent;
   color: ${COLORS[color]};
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:not([href]):not([tabindex]):hover,
+  &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
+    color: ${COLORS[color]};
   }
 `;
 
@@ -54,9 +58,13 @@ const quaternaryStyles = color => css`
   color: ${lighten(COLORS[color], '30%')};
   fill: ${lighten(COLORS[color], '30%')};
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:not([href]):not([tabindex]):hover,
+  &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
+    color: ${lighten(COLORS[color], '30%')};
   }
 `;
 
