@@ -1,5 +1,6 @@
 import { throwOnUndefinedProperty } from '../../utils';
 
+// When adding a new breakpoint, make sure to include it in the ../mediaQueries TS type
 export default throwOnUndefinedProperty({
   xs: 330,
   sm: 576,
