@@ -1,21 +1,10 @@
 module.exports = {
-  '!(style|styles|test).js': filenames => [
-    `prettier --write ${filenames.join(' ')}`,
-    `eslint --fix ${filenames.join(' ')}`,
-    `git add ${filenames.join(' ')}`,
-  ],
-  '(style|styles|test).js': filenames => [
-    `prettier --write ${filenames.join(' ')}`,
-    `git add ${filenames.join(' ')}`,
-  ],
-  'src/**/*.{ts,tsx}': filenames => [
-    `prettier --write ${filenames.join(' ')}`,
-    `eslint --fix ${filenames.join(' ')}`,
+  '!(style|styles|test).js': ['prettier --write', 'eslint --fix'],
+  '(style|styles|test).js': 'prettier --write',
+  'src/**/*.{ts,tsx}': [
+    'prettier --write',
+    'eslint --fix',
     'yarn run tsc -p tsconfig.json',
-    `git add ${filenames.join(' ')}`,
   ],
-  '*.{md,json}': filenames => [
-    `prettier --write ${filenames.join(' ')}`,
-    `git add ${filenames.join(' ')}`,
-  ],
+  '*.{md,json}': 'prettier --write',
 };
