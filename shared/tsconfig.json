@@ -8,12 +8,15 @@
     "jsx": "preserve",
     "module": "CommonJS",
     "moduleResolution": "Node",
+    "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "ES2018"
+    "target": "ESNext",
+    "useDefineForClassFields": true
   }
 }
