@@ -4,7 +4,7 @@ module.exports = {
   'src/**/*.{ts,tsx}': [
     'prettier --write',
     'eslint --fix',
-    'yarn run tsc -p tsconfig.json',
+    () => 'tsc -p tsconfig.json --noEmit',
   ],
   '*.{md,json}': 'prettier --write',
 };
