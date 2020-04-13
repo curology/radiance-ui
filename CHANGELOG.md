@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.0.0-beta.0
+
+- [Internal] Convert Project to Typescript Updated ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
+
 # v6.3.2
 
 - Design system updates to glyphs ([#218](https://github.com/curology/radiance-ui/pull/218))
