@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
 import { ANIMATION, COLORS } from '../../../../constants';
-import { lighten, darken, transparentize } from '../../../../utils';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
 
@@ -78,10 +77,12 @@ export const RoundButtonText = (color, textColor) => css`
  */
 const determineAlternateTextColor = color => {
   // create a lighter and darker version of the text
-  const lighterVersion = tinycolor(lighten(COLORS[color], '10%'))
+  const lighterVersion = tinycolor(COLORS[color])
+    .lighten('10%')
     .desaturate(50)
     .toHexString();
-  const darkerVersion = tinycolor(darken(COLORS[color], '10%'))
+  const darkerVersion = tinycolor(COLORS[color])
+    .darken('10%')
     .desaturate(50)
     .toHexString();
 

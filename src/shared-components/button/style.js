@@ -4,7 +4,6 @@ import tinycolor from 'tinycolor2';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
-import { lighten } from '../../utils';
 import { textColorsAssociatedWithColors } from './constants';
 
 const primaryStyles = color => css`
@@ -59,12 +58,14 @@ const quaternaryStyles = color => css`
   background-color: transparent;
   color: ${textColorsAssociatedWithColors[color]
     ? textColorsAssociatedWithColors[color].tint2
-    : tinycolor(lighten(COLORS[color], '10%'))
+    : tinycolor(COLORS[color])
+        .ligthen('10%')
         .desaturate(50)
         .toHexString()};
   fill: ${textColorsAssociatedWithColors[color]
     ? textColorsAssociatedWithColors[color].tint2
-    : tinycolor(lighten(COLORS[color], '10%'))
+    : tinycolor(COLORS[color])
+        .lighten('10%')
         .desaturate(50)
         .toHexString()};
 
@@ -76,7 +77,8 @@ const quaternaryStyles = color => css`
     background-color: transparent;
     color: ${textColorsAssociatedWithColors[color]
       ? textColorsAssociatedWithColors[color].tint2
-      : tinycolor(lighten(COLORS[color], '10%'))
+      : tinycolor(COLORS[color])
+          .lighten('10%')
           .desaturate(50)
           .toHexString()};
   }
