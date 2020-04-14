@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { css, keyframes } from '@emotion/core';
 
-import { COLORS } from 'src/constants';
-import { lighten } from 'src/utils';
+import { COLORS } from '../../../../constants';
+import { lighten } from '../../../../utils';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }

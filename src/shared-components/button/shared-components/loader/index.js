@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { COLORS } from 'src/constants';
 
+import { COLORS } from '../../../../constants';
 import ButtonLoader from './style';
 
 const Loader = ({

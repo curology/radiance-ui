@@ -1,4 +1,4 @@
-import { COLORS } from 'src/constants';
+import { COLORS } from '../../constants';
 
 // TODO: potentially break out these pairings to the color constants file
 export const textColorsAssociatedWithColors = {
