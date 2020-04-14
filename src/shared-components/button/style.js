@@ -59,7 +59,7 @@ const quaternaryStyles = color => css`
   color: ${textColorsAssociatedWithColors[color]
     ? textColorsAssociatedWithColors[color].tint2
     : tinycolor(COLORS[color])
-        .ligthen('10%')
+        .lighten('10%')
         .desaturate(50)
         .toHexString()};
   fill: ${textColorsAssociatedWithColors[color]
