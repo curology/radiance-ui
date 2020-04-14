@@ -78,11 +78,11 @@ export const RoundButtonText = (color, textColor) => css`
 const determineAlternateTextColor = color => {
   // create a lighter and darker version of the text
   const lighterVersion = tinycolor(COLORS[color])
-    .lighten('10%')
+    .lighten(10)
     .desaturate(50)
     .toHexString();
   const darkerVersion = tinycolor(COLORS[color])
-    .darken('10%')
+    .darken(10)
     .desaturate(50)
     .toHexString();
 

@@ -59,13 +59,13 @@ const quaternaryStyles = color => css`
   color: ${textColorsAssociatedWithColors[color]
     ? textColorsAssociatedWithColors[color].tint2
     : tinycolor(COLORS[color])
-        .lighten('10%')
+        .lighten(10)
         .desaturate(50)
         .toHexString()};
   fill: ${textColorsAssociatedWithColors[color]
     ? textColorsAssociatedWithColors[color].tint2
     : tinycolor(COLORS[color])
-        .lighten('10%')
+        .lighten(10)
         .desaturate(50)
         .toHexString()};
 
@@ -78,7 +78,7 @@ const quaternaryStyles = color => css`
     color: ${textColorsAssociatedWithColors[color]
       ? textColorsAssociatedWithColors[color].tint2
       : tinycolor(COLORS[color])
-          .lighten('10%')
+          .lighten(10)
           .desaturate(50)
           .toHexString()};
   }
