@@ -45,15 +45,16 @@ import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CrossIcon } from 'radianc
 
 ### Proptypes
 
-| prop       | propType | required | default  | description                                                                                                                  |
-| ---------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| buttonType | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `action`.         |
-| children   | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
-| disabled   | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
-| icon       | node     | yes      | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                     |
-| isLoading  | bool     | no       | false    | renders loading state and prevents click listener from being called                                                          |
-| onClick    | func     | no       | () => {} | callback function called on click of the button                                                                              |
-| textColor  | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+| prop       | propType | required | default  | description                                                                                                                    |
+| ---------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| buttonType | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `action`.           |
+| color      | string   | no       | purple   | Determines the color of the button . Must be one of the predefined colors (e.g. `purple100`, `statusRed`, `statusGreen`, etc). |
+| children   | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                       |
+| disabled   | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                                 |
+| icon       | node     | yes      | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                       |
+| isLoading  | bool     | no       | false    | renders loading state and prevents click listener from being called                                                            |
+| onClick    | func     | no       | () => {} | callback function called on click of the button                                                                                |
+| textColor  | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true)   |
 
 ### Notes
 
@@ -65,3 +66,5 @@ immediately below the round button.
 `<RoundButton.Container>` can be used to wrap `<RoundButton />` components.
 Since it has some opinions on width and spacing, the max number of
 buttons you want to wrap is **2**.
+
+We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.

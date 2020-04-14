@@ -7,9 +7,7 @@ import { LinkButton } from 'radiance-ui';
 
 <React.Fragment>
   <LinkButton.Container>
-    <LinkButton href="#">
-      Primary
-    </LinkButton>
+    <LinkButton href="#">Primary</LinkButton>
 
     <LinkButton buttonType="secondary" href="#">
       Secondary
@@ -27,7 +25,7 @@ import { LinkButton } from 'radiance-ui';
       I am Disabled
     </LinkButton>
   </LinkButton.Container>
-</React.Fragment>
+</React.Fragment>;
 ```
 
 #### React Router Link
@@ -38,21 +36,22 @@ import { Link } from 'react-router';
 
 <LinkButton to="/somepath" as={Link}>
   Router Link
-</LinkButton>
+</LinkButton>;
 ```
 
 <!-- STORY -->
 
 ### Proptypes
 
-| prop       | propType        | required | default  | description                                                                                                                  |
-| ---------- | --------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| as         | string, element | no       | "a"      | Specifies the tag be rendered.                                                                                               |
-| buttonType | string          | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`.                                 |
-| children   | node            | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
-| disabled   | bool            | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
-| onClick    | func            | no       | () => {} | callback function called on click of the button                                                                              |
-| textColor  | string          | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+| prop       | propType        | required | default  | description                                                                                                                    |
+| ---------- | --------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| as         | string, element | no       | "a"      | Specifies the tag be rendered.                                                                                                 |
+| buttonType | string          | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`.                                   |
+| color      | string          | no       | purple   | Determines the color of the button . Must be one of the predefined colors (e.g. `purple100`, `statusRed`, `statusGreen`, etc). |
+| children   | node            | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                       |
+| disabled   | bool            | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                                 |
+| onClick    | func            | no       | () => {} | callback function called on click of the button                                                                                |
+| textColor  | string          | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true)   |
 
 ### Notes
 
@@ -62,3 +61,5 @@ in the router component as a prop ---> `<LinkButton to='/path' as={Link}> ....`.
 
 `<LinkButton.Container>` can be used to provide spacing between multiple
 buttons and behavior on various screen sizes.
+
+We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
