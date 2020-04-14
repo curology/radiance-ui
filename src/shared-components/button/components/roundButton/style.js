@@ -3,7 +3,6 @@ import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
 import { ANIMATION, COLORS } from '../../../../constants';
-import { colorAlternates } from '../../../../constants/colors';
 import { lighten, darken, transparentize } from '../../../../utils';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
