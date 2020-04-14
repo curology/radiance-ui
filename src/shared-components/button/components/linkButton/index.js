@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { COLORS } from 'src/constants';
 
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
-import { COLORS } from 'src/constants';
 
 const propTypes = {
   disabled: PropTypes.bool,
@@ -42,7 +42,9 @@ const Link = ({
 
   return (
     <ContainerTag
-      css={linkButtonStyles({ disabled, buttonType, color, textColor })}
+      css={linkButtonStyles({
+        disabled, buttonType, color, textColor, 
+      })}
       disabled={disabled}
       onClick={!disabled ? onClick : () => false}
       {...rest}

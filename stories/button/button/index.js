@@ -141,7 +141,11 @@ const ButtonStory = withDocs(ButtonReadme, () => (
         ['primary', 'secondary', 'tertiary', 'quaternary'],
         'primary',
       )}
-      color={select('color', Object.keys(COLORS).sort(), 'purple')}
+      color={select(
+        'color',
+        Object.keys(COLORS).sort(),
+        'purple'
+      )}
       isLoading={boolean('isLoading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}

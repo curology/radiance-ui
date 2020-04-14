@@ -4,6 +4,7 @@ import { css } from '@emotion/core';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
 import { lighten } from '../../utils';
+import { textColorsAssociatedWithColors } from './constants';
 
 const primaryStyles = color => css`
   background-color: ${COLORS[color]};
@@ -55,8 +56,8 @@ const tertiaryStyles = color => css`
 const quaternaryStyles = color => css`
   border-color: transparent;
   background-color: transparent;
-  color: ${lighten(COLORS[color], '30%')};
-  fill: ${lighten(COLORS[color], '30%')};
+  color: ${textColorsAssociatedWithColors[color] ? textColorsAssociatedWithColors[color].tint2 : lighten(COLORS[color], '30%')};
+  fill: ${textColorsAssociatedWithColors[color] ? textColorsAssociatedWithColors[color].tint2 : lighten(COLORS[color], '30%')};
 
   &:hover,
   &:focus,
@@ -64,7 +65,7 @@ const quaternaryStyles = color => css`
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${lighten(COLORS[color], '30%')};
+    color: ${textColorsAssociatedWithColors[color] ? textColorsAssociatedWithColors[color].tint2 : lighten(COLORS[color], '30%')};
   }
 `;
 

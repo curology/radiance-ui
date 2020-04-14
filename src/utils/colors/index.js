@@ -22,4 +22,3 @@ export function transparentize(color, modifier) {
     .setAlpha(modifier)
     .toString();
 }
-

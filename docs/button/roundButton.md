@@ -13,6 +13,13 @@ import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CrossIcon } from 'radianc
 <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>Quaternary</RoundButton>
 <RoundButton buttonType="action" icon={<CrossIcon />}>Action</RoundButton>
 
+// Color
+<RoundButton color="statusRed" icon={<CheckmarkIcon />}>Primary</RoundButton>
+<RoundButton color="statusRed" buttonType="secondary" icon={<ArrowRightIcon />}>Secondary</RoundButton>
+<RoundButton color="statusRed" buttonType="tertiary" icon={<ArrowLeftIcon />}>Tertiary</RoundButton>
+<RoundButton color="statusRed" buttonType="quaternary" icon={<ArrowRightIcon />}>Quaternary</RoundButton>
+<RoundButton color="statusRed" buttonType="action" icon={<CrossIcon />}>Action</RoundButton>
+
 // Disabled
 <RoundButton icon={<ArrowLeftIcon />} disabled>Primary</RoundButton>
 <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} disabled>Secondary</RoundButton>

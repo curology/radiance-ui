@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { COLORS } from 'src/constants';
 
 import Loader from '../../shared-components/loader';
 import {
@@ -10,7 +11,6 @@ import {
   RoundButtonContainer,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { COLORS } from 'src/constants';
 
 const deprecatedProperties = {
   loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
@@ -19,7 +19,7 @@ const deprecatedProperties = {
 const isLoadingPropFunction = (props, propName, componentName) => {
   if (props[propName] !== undefined) {
     return new Error(
-      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`
+      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`,
     );
   }
 };
@@ -88,7 +88,7 @@ const RoundButton = ({
           textColor={textColor}
         />
       </RoundButtonBase>
-      {children && <RoundButtonText>{children}</RoundButtonText>}
+      {children && <p css={RoundButtonText(color, textColor)}>{children}</p>}
     </RoundButtonWrapper>
   );
 };
