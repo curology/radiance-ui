@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import tinycolor from 'tinycolor2';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
@@ -56,8 +57,16 @@ const tertiaryStyles = color => css`
 const quaternaryStyles = color => css`
   border-color: transparent;
   background-color: transparent;
-  color: ${textColorsAssociatedWithColors[color] ? textColorsAssociatedWithColors[color].tint2 : lighten(COLORS[color], '30%')};
-  fill: ${textColorsAssociatedWithColors[color] ? textColorsAssociatedWithColors[color].tint2 : lighten(COLORS[color], '30%')};
+  color: ${textColorsAssociatedWithColors[color]
+    ? textColorsAssociatedWithColors[color].tint2
+    : tinycolor(lighten(COLORS[color], '10%'))
+        .desaturate(50)
+        .toHexString()};
+  fill: ${textColorsAssociatedWithColors[color]
+    ? textColorsAssociatedWithColors[color].tint2
+    : tinycolor(lighten(COLORS[color], '10%'))
+        .desaturate(50)
+        .toHexString()};
 
   &:hover,
   &:focus,
@@ -65,7 +74,11 @@ const quaternaryStyles = color => css`
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${textColorsAssociatedWithColors[color] ? textColorsAssociatedWithColors[color].tint2 : lighten(COLORS[color], '30%')};
+    color: ${textColorsAssociatedWithColors[color]
+      ? textColorsAssociatedWithColors[color].tint2
+      : tinycolor(lighten(COLORS[color], '10%'))
+          .desaturate(50)
+          .toHexString()};
   }
 `;
 
