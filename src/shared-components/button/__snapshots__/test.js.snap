@@ -249,6 +249,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   </div>
   <div
     className="emotion-4 emotion-5"
+    color="purple"
     disabled={true}
   >
     <div>

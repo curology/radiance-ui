@@ -91,7 +91,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -230,14 +230,16 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-4 {
+  color: #524D6E;
   margin: 10px 0;
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-5 emotion-6"
 >
   <button
     className="emotion-2 emotion-3"
+    color="purple"
     disabled={true}
     onClick={[Function]}
     type="button"
@@ -245,6 +247,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
     <svg />
     <div
       className="emotion-0 emotion-1"
+      color="purple"
       disabled={true}
     >
       <div>
@@ -255,7 +258,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
     </div>
   </button>
   <p
-    className="emotion-4 emotion-5"
+    className="emotion-4"
   >
     Button Text
   </p>
