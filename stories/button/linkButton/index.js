@@ -61,11 +61,7 @@ const LinkButtonStory = withDocs(LinkButtonReadme, () => (
           ['primary', 'secondary', 'tertiary', 'quaternary'],
           'primary',
         )}
-        color={select(
-          'color',
-          Object.keys(COLORS).sort(),
-          'purple'
-        )}
+        color={select('color', Object.keys(COLORS).sort(), 'purple')}
         disabled={boolean('disabled', false)}
         onClick={action('You clicked a button')}
         textColor={text('textColor', '')}

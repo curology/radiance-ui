@@ -54,17 +54,31 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
 
     <Typography.Title>Color</Typography.Title>
     <ButtonsContainer>
-      <RoundButton color="statusRed" icon={<CheckmarkIcon />}>Primary</RoundButton>
+      <RoundButton color="statusRed" icon={<CheckmarkIcon />}>
+        Primary
+      </RoundButton>
 
-      <RoundButton color="statusRed" buttonType="secondary" icon={<ArrowRightIcon />}>
+      <RoundButton
+        color="statusRed"
+        buttonType="secondary"
+        icon={<ArrowRightIcon />}
+      >
         Secondary
       </RoundButton>
 
-      <RoundButton color="statusRed" buttonType="tertiary" icon={<ArrowLeftIcon />}>
+      <RoundButton
+        color="statusRed"
+        buttonType="tertiary"
+        icon={<ArrowLeftIcon />}
+      >
         Tertiary
       </RoundButton>
 
-      <RoundButton color="statusRed" buttonType="quaternary" icon={<ArrowRightIcon />}>
+      <RoundButton
+        color="statusRed"
+        buttonType="quaternary"
+        icon={<ArrowRightIcon />}
+      >
         Quaternary
       </RoundButton>
 
@@ -142,13 +156,9 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
         buttonType={select(
           'buttonType',
           ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
-          'primary'
+          'primary',
         )}
-        color={select(
-          'color',
-          Object.keys(COLORS).sort(),
-          'purple'
-        )}
+        color={select('color', Object.keys(COLORS).sort(), 'purple')}
         isLoading={boolean('isLoading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}

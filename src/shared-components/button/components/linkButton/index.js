@@ -43,7 +43,10 @@ const Link = ({
   return (
     <ContainerTag
       css={linkButtonStyles({
-        disabled, buttonType, color, textColor, 
+        disabled,
+        buttonType,
+        color,
+        textColor,
       })}
       disabled={disabled}
       onClick={!disabled ? onClick : () => false}
