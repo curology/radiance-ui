@@ -122,3 +122,5 @@ guide the user towards one option.
 `<Button.Container>` can be used to provide spacing between multiple
 buttons and behavior on various screen sizes. See the dedicated
 Readme/Story for more details.
+
+We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
