@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.0.0-beta.1
+
+- [Internal] Convert Project to Typescript: transpile TS files with Babel for Rollup build
+
 # v7.0.0-beta.0
 
 - [Internal] Convert Project to Typescript Updated ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
