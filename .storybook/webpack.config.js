@@ -28,7 +28,7 @@ module.exports = webpackSettings => {
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.jsx', '.md', '.ts', '.tsx'],
+    extensions: ['.js', '.md', '.ts', '.tsx'],
   };
 
   // SVG Rule

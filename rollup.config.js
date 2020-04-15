@@ -1,17 +1,18 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import typescript from 'rollup-plugin-typescript';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const transformTemplateForUtilLocation = require('./src/utils/svgToIconTemplate/transformTemplateForUtilLocation.js');
 
 const UTIL_LOCATION = '../../utils/icons';
+
+const extensions = ['.js', '.ts', '.tsx'];
 
 export default {
   input: 'src/index.ts',
@@ -43,12 +44,12 @@ export default {
     },
   ],
   plugins: [
-    typescript(),
     svgr({
       template: transformTemplateForUtilLocation(UTIL_LOCATION),
       expandProps: false,
     }),
     resolve({
+      extensions,
       customResolveOptions: {
         moduleDirectory: [path.resolve(__dirname, '.'), 'node_modules'],
       },
@@ -57,8 +58,8 @@ export default {
       include: 'node_modules/**',
     }),
     babel({
+      extensions,
       exclude: 'node_modules/**',
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     }),
     sizeSnapshot(),
   ],
