@@ -60,7 +60,7 @@
     "@babel/plugin-transform-parameters": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/preset-typescript": "^7.6.0",
+    "@babel/preset-typescript": "^7.9.0",
     "@babel/register": "^7.0.0",
     "@emotion/babel-preset-css-prop": "10.0.9",
     "@storybook/addon-a11y": "^5.3.9",
