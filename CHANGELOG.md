@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.0.0-beta.2
+
+- [Internal] Convert Project to Typescript: update TS babel plugin
+
 # v7.0.0-beta.1
 
 - [Internal] Convert Project to Typescript: transpile TS files with Babel for Rollup build
