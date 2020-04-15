@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { COLORS } from '../../../../constants';
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
@@ -14,6 +15,7 @@ const propTypes = {
     'tertiary',
     'quaternary',
   ]),
+  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   onClick: PropTypes.func,
 };
@@ -21,6 +23,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
+  buttonColor: COLORS.primary,
   as: 'a',
   onClick() {},
 };
@@ -29,6 +32,7 @@ const Link = ({
   disabled,
   children,
   buttonType,
+  buttonColor,
   as,
   onClick,
   textColor,
@@ -38,7 +42,12 @@ const Link = ({
 
   return (
     <ContainerTag
-      css={linkButtonStyles({ disabled, buttonType, textColor })}
+      css={linkButtonStyles({
+        disabled,
+        buttonType,
+        buttonColor,
+        textColor,
+      })}
       disabled={disabled}
       onClick={!disabled ? onClick : () => false}
       {...rest}

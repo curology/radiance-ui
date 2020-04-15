@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { COLORS } from '../../../../constants';
 import Loader from '../../shared-components/loader';
 import {
   RoundButtonWrapper,
   RoundButtonBase,
   roundButtonLoader,
-  RoundButtonText,
   RoundButtonContainer,
+  roundButtonTextStyles,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
 
@@ -18,7 +19,7 @@ const deprecatedProperties = {
 const isLoadingPropFunction = (props, propName, componentName) => {
   if (props[propName] !== undefined) {
     return new Error(
-      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`
+      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`,
     );
   }
 };
@@ -34,6 +35,7 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
+  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
   loading: isLoadingPropFunction,
   isLoading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
@@ -43,6 +45,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
+  buttonColor: COLORS.primary,
   isLoading: false,
   onClick() {},
   children: '',
@@ -54,6 +57,7 @@ const RoundButton = ({
   disabled,
   children,
   buttonType,
+  buttonColor,
   loading,
   isLoading,
   icon,
@@ -68,6 +72,7 @@ const RoundButton = ({
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
+        buttonColor={buttonColor}
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
@@ -78,11 +83,14 @@ const RoundButton = ({
           isLoading={loadingVal}
           disabled={disabled}
           buttonType={buttonType}
+          buttonColor={buttonColor}
           css={roundButtonLoader(disabled)}
           textColor={textColor}
         />
       </RoundButtonBase>
-      {children && <RoundButtonText>{children}</RoundButtonText>}
+      {children && (
+        <p css={roundButtonTextStyles(buttonColor, textColor)}>{children}</p>
+      )}
     </RoundButtonWrapper>
   );
 };

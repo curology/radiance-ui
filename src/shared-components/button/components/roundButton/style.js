@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import tinycolor from 'tinycolor2';
 
 import { ANIMATION, COLORS } from '../../../../constants';
 import { ButtonBase } from '../../style';
+import { textColorsAssociatedWithColors } from '../../constants';
 
 const multiStyles = `
   justify-content: space-between;
@@ -62,6 +64,54 @@ export const roundButtonLoader = disabled => css`
   `};
 `;
 
-export const RoundButtonText = styled.p`
+export const roundButtonTextStyles = (buttonColor, textColor) => css`
+  color: ${buttonTextColor(buttonColor, textColor)};
   margin: 10px 0;
 `;
+
+/**
+ * Given a color as an argument,
+ * determine an alternate color for pairing
+ * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
+ * @return string         hex string of the alternate color (e.g. #efefef)
+ */
+const determineAlternateTextColor = buttonColor => {
+  // create a lighter and darker version of the text
+  const lighterVersion = tinycolor(buttonColor)
+    .lighten(10)
+    .desaturate(50)
+    .toHexString();
+  const darkerVersion = tinycolor(buttonColor)
+    .darken(10)
+    .desaturate(50)
+    .toHexString();
+
+  // loose readability contrast level
+  // https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+  const contrastLevel = { level: 'AA', size: 'large' };
+
+  const lighterIsReadable = tinycolor.isReadable(
+    COLORS.defaultBackground,
+    lighterVersion,
+    contrastLevel,
+  );
+
+  // prefer the lighter version unless its unreadable in context of our background
+  return lighterIsReadable ? lighterVersion : darkerVersion;
+};
+
+/**
+ * get the text color of the button
+ * @param  string color       the current color name of the round button (e.g purple, primary, etc.)
+ * @param  string textColor   custom override for the text color
+ * @return string             hex string of the text color
+ */
+const buttonTextColor = (buttonColor, textColor) => {
+  if (textColor !== '') {
+    return textColor;
+  }
+
+  return textColorsAssociatedWithColors[buttonColor]
+    ? textColorsAssociatedWithColors[buttonColor].tint1
+    : determineAlternateTextColor(buttonColor);
+};
