@@ -25,7 +25,7 @@ import { LinkButton } from 'radiance-ui';
       I am Disabled
     </LinkButton>
   </LinkButton.Container>
-</React.Fragment>
+</React.Fragment>;
 ```
 
 #### React Router Link
@@ -36,7 +36,7 @@ import { Link } from 'react-router';
 
 <LinkButton to="/somepath" as={Link}>
   Router Link
-</LinkButton>
+</LinkButton>;
 ```
 
 #### With Color
@@ -47,10 +47,15 @@ import { COLORS } from 'radiance-ui/lib/constants';
 
 <React.Fragment>
   <LinkButton.Container>
-    <LinkButton buttonColor={COLORS.statusRed} href="https://www.latlmes.com/arts/return-of-the-golden-age-of-comics-1">
+    <LinkButton
+      buttonColor={COLORS.statusRed}
+      href="https://www.latlmes.com/arts/return-of-the-golden-age-of-comics-1"
+    >
       Primary
     </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="secondary">Secondary</LinkButton>
+    <LinkButton buttonColor={COLORS.statusRed} buttonType="secondary">
+      Secondary
+    </LinkButton>
     <LinkButton buttonColor={COLORS.statusRed} buttonType="tertiary">
       Tertiary
     </LinkButton>
@@ -61,22 +66,22 @@ import { COLORS } from 'radiance-ui/lib/constants';
       Disabled
     </LinkButton>
   </LinkButton.Container>
-</React.Fragment>
+</React.Fragment>;
 ```
 
 <!-- STORY -->
 
 ### Proptypes
 
-| prop       | propType        | required | default  | description                                                                                                                    |
-| ---------- | --------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| as         | string, element | no       | "a"      | Specifies the tag be rendered.                                                                                                 |
-| buttonType | string          | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`.                                   |
-| buttonColor      | string          | no       | primary   | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
-| children   | node            | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                       |
-| disabled   | bool            | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                                 |
-| onClick    | func            | no       | () => {} | callback function called on click of the button                                                                                |
-| textColor  | string          | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true)   |
+| prop        | propType        | required | default  | description                                                                                                                  |
+| ----------- | --------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| as          | string, element | no       | "a"      | Specifies the tag be rendered.                                                                                               |
+| buttonType  | string          | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`.                                 |
+| buttonColor | string          | no       | primary  | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
+| children    | node            | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
+| disabled    | bool            | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
+| onClick     | func            | no       | () => {} | callback function called on click of the button                                                                              |
+| textColor   | string          | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
 
