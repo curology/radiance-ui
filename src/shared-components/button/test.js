@@ -23,12 +23,12 @@ describe('<Button />', () => {
 
     it('renders with adjustable color', () => {
       const button = mount(
-        <Button color="statusRed" id="red-button">
+        <Button buttonColor={COLORS.statusRed} id="red-button">
           Button Text
         </Button>,
       );
 
-      expect(button.prop('color')).toEqual('statusRed');
+      expect(button.prop('buttonColor')).toEqual(COLORS.statusRed);
     });
   });
 

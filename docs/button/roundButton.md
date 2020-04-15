@@ -5,6 +5,7 @@
 ```jsx
 import { RoundButton } from 'radiance-ui';
 import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CrossIcon } from 'radiance-ui/lib/icons';
+import { COLORS } from 'radiance-ui/lib/constants';
 
 // Default
 <RoundButton icon={<CheckmarkIcon />}>Primary</RoundButton>
@@ -13,26 +14,104 @@ import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CrossIcon } from 'radianc
 <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>Quaternary</RoundButton>
 <RoundButton buttonType="action" icon={<CrossIcon />}>Action</RoundButton>
 
-// Color
-<RoundButton color="statusRed" icon={<CheckmarkIcon />}>Primary</RoundButton>
-<RoundButton color="statusRed" buttonType="secondary" icon={<ArrowRightIcon />}>Secondary</RoundButton>
-<RoundButton color="statusRed" buttonType="tertiary" icon={<ArrowLeftIcon />}>Tertiary</RoundButton>
-<RoundButton color="statusRed" buttonType="quaternary" icon={<ArrowRightIcon />}>Quaternary</RoundButton>
-<RoundButton color="statusRed" buttonType="action" icon={<CrossIcon />}>Action</RoundButton>
-
 // Disabled
 <RoundButton icon={<ArrowLeftIcon />} disabled>Primary</RoundButton>
-<RoundButton buttonType="secondary" icon={<ArrowRightIcon />} disabled>Secondary</RoundButton>
-<RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>Tertiary</RoundButton>
-<RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} disabled>Quaternary</RoundButton>
-<RoundButton buttonType="action" icon={<CrossIcon />} disabled>Action</RoundButton>
+<RoundButton 
+    buttonType="secondary" 
+    icon={<ArrowRightIcon />} 
+    disabled
+>
+    Secondary
+</RoundButton>
+<RoundButton 
+    buttonType="tertiary" 
+    icon={<ArrowLeftIcon />} 
+    disabled
+>
+    Tertiary
+</RoundButton>
+<RoundButton 
+    buttonType="quaternary" 
+    icon={<ArrowRightIcon />} 
+    disabled
+>
+    Quaternary
+</RoundButton>
+<RoundButton 
+    buttonType="action" 
+    icon={<CrossIcon />} 
+    disabled
+>
+    Action
+</RoundButton>
 
 // Loading
 <RoundButton icon={<ArrowLeftIcon />} isLoading>Primary</RoundButton>
-<RoundButton buttonType="secondary" icon={<ArrowRightIcon />} isLoading>Secondary</RoundButton>
-<RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} isLoading>Tertiary</RoundButton>
-<RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} isLoading>Quaternary</RoundButton>
-<RoundButton buttonType="action" icon={<CrossIcon />} isLoading>Action</RoundButton>
+<RoundButton 
+    buttonType="secondary" 
+    icon={<ArrowRightIcon />} 
+    isLoading
+>
+    Secondary
+</RoundButton>
+<RoundButton 
+    buttonType="tertiary" 
+    icon={<ArrowLeftIcon />} 
+    isLoading
+>
+    Tertiary
+</RoundButton>
+<RoundButton 
+    buttonType="quaternary" 
+    icon={<ArrowRightIcon />} 
+    isLoading
+>
+    Quaternary
+</RoundButton>
+<RoundButton 
+    buttonType="action" 
+    icon={<CrossIcon />} 
+    isLoading
+>
+    Action
+</RoundButton>
+
+// Color
+<RoundButton buttonColor={COLORS.statusRed} icon={<CheckmarkIcon />}>
+  Primary
+</RoundButton>
+
+<RoundButton
+  buttonColor={COLORS.statusRed}
+  buttonType="secondary"
+  icon={<ArrowRightIcon />}
+>
+  Secondary
+</RoundButton>
+
+<RoundButton
+  buttonColor={COLORS.statusRed}
+  buttonType="tertiary"
+  icon={<ArrowLeftIcon />}
+>
+  Tertiary
+</RoundButton>
+
+<RoundButton
+  buttonColor={COLORS.statusRed}
+  buttonType="quaternary"
+  icon={<ArrowRightIcon />}
+>
+  Quaternary
+</RoundButton>
+
+<RoundButton 
+    buttonColor={COLORS.statusRed} 
+    buttonType="action" 
+    icon={<CrossIcon />}
+>
+  Action
+</RoundButton>
 
 // Within RoundButton.Container (with multi prop)
 <RoundButton.Container multi>
@@ -48,7 +127,7 @@ import { CheckmarkIcon, ArrowRightIcon, ArrowLeftIcon, CrossIcon } from 'radianc
 | prop       | propType | required | default  | description                                                                                                                    |
 | ---------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | buttonType | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `action`.           |
-| color      | string   | no       | purple   | Determines the color of the button . Must be one of the predefined colors (e.g. `purple100`, `statusRed`, `statusGreen`, etc). |
+| buttonColor      | string   | no       | primary   | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
 | children   | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                       |
 | disabled   | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                                 |
 | icon       | node     | yes      | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                       |

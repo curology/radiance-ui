@@ -15,20 +15,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
     <Button disabled>Disabled Button</Button>
     <Button isFullWidth>Full Width Button</Button>
 
-    <Button color="statusRed">Primary Color</Button>
-    <Button color="statusRed" buttonType="secondary">
-      Secondary Color
-    </Button>
-    <Button color="statusRed" buttonType="tertiary">
-      Tertiary Color
-    </Button>
-    <Button color="statusRed" buttonType="quaternary">
-      Quaternary Color
-    </Button>
-    <Button color="statusRed" isFullWidth>
-      Full Width Color
-    </Button>
-
     <Button isLoading>Primary Loading</Button>
     <Button isLoading buttonType="secondary">
       Secondary Loading
@@ -62,22 +48,6 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
       Full Width Button
     </Button>
 
-    <Button color="statusRed" icon={<CheckmarkIcon />}>
-      Primary Color
-    </Button>
-    <Button color="statusRed" buttonType="secondary" icon={<CheckmarkIcon />}>
-      Secondary Color
-    </Button>
-    <Button color="statusRed" buttonType="tertiary" icon={<CheckmarkIcon />}>
-      Tertiary Color
-    </Button>
-    <Button color="statusRed" buttonType="quaternary" icon={<CheckmarkIcon />}>
-      Quaternary Color
-    </Button>
-    <Button color="statusRed" isFullWidth icon={<CheckmarkIcon />}>
-      Full Width Color
-    </Button>
-
     <Button isLoading icon={<CheckmarkIcon />}>
       Primary Loading
     </Button>
@@ -94,8 +64,41 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
       Full Width Loading
     </Button>
   </Button.Container>
-</React.Fragment>;
+</React.Fragment>
 ```
+
+## With Color
+
+```jsx
+import { Button } from 'radiance-ui';
+import { COLORS } from 'radiance-ui/lib/constants';
+
+<React.Fragment>
+  <Button.Container>
+    <Button buttonColor={COLORS.statusRed}>Primary Button</Button>
+    <Button buttonColor={COLORS.statusRed} buttonType="secondary">Secondary Button</Button>
+    <Button buttonColor={COLORS.statusRed} buttonType="tertiary">Tertiary Button</Button>
+    <Button buttonColor={COLORS.statusRed} buttonType="quaternary">Quaternary Button</Button>
+    <Button buttonColor={COLORS.statusRed} disabled>Disabled Button</Button>
+    <Button buttonColor={COLORS.statusRed} isFullWidth>Full Width Button</Button>
+
+    <Button buttonColor={COLORS.statusRed} isLoading>Primary Loading</Button>
+    <Button buttonColor={COLORS.statusRed} isLoading buttonType="secondary">
+      Secondary Loading
+    </Button>
+    <Button buttonColor={COLORS.statusRed} buttonType="tertiary" isLoading>
+      Tertiary Loading
+    </Button>
+    <Button buttonColor={COLORS.statusRed} buttonType="quaternary" isLoading>
+      Quaternary Loading
+    </Button>
+    <Button buttonColor={COLORS.statusRed} isFullWidth isLoading>
+      Full Width Loading
+    </Button>
+  </Button.Container>
+</React.Fragment>
+```
+
 
 <!-- STORY -->
 
@@ -104,7 +107,7 @@ import { CheckmarkIcon } from 'radiance-ui/lib/icons';
 | prop        | propType | required | default  | description                                                                                                                    |
 | ----------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | buttonType  | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`.                     |
-| color       | string   | no       | purple   | Determines the color of the button . Must be one of the predefined colors (e.g. `purple100`, `statusRed`, `statusGreen`, etc). |
+| buttonColor       | string   | no       | primary   | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
 | children    | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                       |
 | disabled    | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                                 |
 | icon        | node     | no       | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                       |

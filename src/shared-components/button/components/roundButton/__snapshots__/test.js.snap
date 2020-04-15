@@ -239,7 +239,6 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 >
   <button
     className="emotion-2 emotion-3"
-    color="purple"
     disabled={true}
     onClick={[Function]}
     type="button"
@@ -247,7 +246,6 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
     <svg />
     <div
       className="emotion-0 emotion-1"
-      color="purple"
       disabled={true}
     >
       <div>

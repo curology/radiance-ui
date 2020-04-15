@@ -232,7 +232,6 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 
 <button
   className="emotion-6 emotion-7"
-  color="purple"
   disabled={true}
   onClick={[Function]}
   type="button"
@@ -249,7 +248,6 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   </div>
   <div
     className="emotion-4 emotion-5"
-    color="purple"
     disabled={true}
   >
     <div>

@@ -6,7 +6,7 @@ import ButtonLoader from './style';
 
 const Loader = ({
   buttonType,
-  color,
+  buttonColor,
   className,
   disabled,
   isFullWidth,
@@ -17,7 +17,7 @@ const Loader = ({
     isLoading={isLoading}
     disabled={disabled}
     buttonType={buttonType}
-    color={color}
+    buttonColor={buttonColor}
     className={className}
     textColor={textColor}
     isFullWidth={isFullWidth}
@@ -38,7 +38,7 @@ Loader.propTypes = {
     'quaternary',
     'action',
   ]),
-  color: PropTypes.oneOf(Object.keys(COLORS)),
+  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
   className: PropTypes.string,
   disabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,

@@ -6,9 +6,9 @@ import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
-const primaryStyles = color => css`
-  background-color: ${COLORS[color]};
-  border-color: ${COLORS[color]};
+const primaryStyles = buttonColor => css`
+  background-color: ${buttonColor};
+  border-color: ${buttonColor};
   color: ${COLORS.white};
   fill: ${COLORS.white};
   &:visited,
@@ -22,26 +22,26 @@ const primaryStyles = color => css`
   }
 `;
 
-const secondaryStyles = (isLoading, color) => css`
+const secondaryStyles = (isLoading, buttonColor) => css`
   background-color: transparent;
-  border-color: ${COLORS[color]};
-  color: ${COLORS[color]};
-  fill: ${COLORS[color]};
+  border-color: ${buttonColor};
+  color: ${buttonColor};
+  fill: ${buttonColor};
 
   &:hover,
   &:focus,
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
-    background-color: ${isLoading ? 'inherit' : COLORS[color]};
-    color: ${isLoading ? COLORS[color] : COLORS.white};
+    background-color: ${isLoading ? 'inherit' : buttonColor};
+    color: ${isLoading ? buttonColor : COLORS.white};
     fill: ${isLoading ? 'inherit' : COLORS.white};
   }
 `;
 
-const tertiaryStyles = color => css`
+const tertiaryStyles = buttonColor => css`
   border-color: transparent;
   background-color: transparent;
-  color: ${COLORS[color]};
+  color: ${buttonColor};
 
   &:hover,
   &:focus,
@@ -49,22 +49,22 @@ const tertiaryStyles = color => css`
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${COLORS[color]};
+    color: ${buttonColor};
   }
 `;
 
-const quaternaryStyles = color => css`
+const quaternaryStyles = buttonColor => css`
   border-color: transparent;
   background-color: transparent;
-  color: ${textColorsAssociatedWithColors[color]
-    ? textColorsAssociatedWithColors[color].tint2
-    : tinycolor(COLORS[color])
+  color: ${textColorsAssociatedWithColors[buttonColor]
+    ? textColorsAssociatedWithColors[buttonColor].tint2
+    : tinycolor(buttonColor)
         .lighten(10)
         .desaturate(50)
         .toHexString()};
-  fill: ${textColorsAssociatedWithColors[color]
-    ? textColorsAssociatedWithColors[color].tint2
-    : tinycolor(COLORS[color])
+  fill: ${textColorsAssociatedWithColors[buttonColor]
+    ? textColorsAssociatedWithColors[buttonColor].tint2
+    : tinycolor(buttonColor)
         .lighten(10)
         .desaturate(50)
         .toHexString()};
@@ -75,21 +75,21 @@ const quaternaryStyles = color => css`
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${textColorsAssociatedWithColors[color]
-      ? textColorsAssociatedWithColors[color].tint2
-      : tinycolor(COLORS[color])
+    color: ${textColorsAssociatedWithColors[buttonColor]
+      ? textColorsAssociatedWithColors[buttonColor].tint2
+      : tinycolor(buttonColor)
           .lighten(10)
           .desaturate(50)
           .toHexString()};
   }
 `;
 
-const actionStyles = (isLoading, color) => css`
+const actionStyles = (isLoading, buttonColor) => css`
   border-width: 1px;
   border-color: ${COLORS.border};
   background-color: ${COLORS.white};
-  color: ${COLORS[color]};
-  fill: ${COLORS[color]};
+  color: ${buttonColor};
+  fill: ${buttonColor};
   box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickable};
 
   &:hover {
@@ -119,29 +119,29 @@ const disabledStyles = css`
   }
 `;
 
-function parseTheme(disabled, buttonType, isLoading, color) {
+function parseTheme(disabled, buttonType, isLoading, buttonColor) {
   if (disabled) {
     return disabledStyles;
   }
 
   switch (buttonType) {
     case 'secondary':
-      return secondaryStyles(isLoading, color);
+      return secondaryStyles(isLoading, buttonColor);
     case 'tertiary':
-      return tertiaryStyles(color);
+      return tertiaryStyles(buttonColor);
     case 'quaternary':
-      return quaternaryStyles(color);
+      return quaternaryStyles(buttonColor);
     case 'action':
-      return actionStyles(isLoading, color);
+      return actionStyles(isLoading, buttonColor);
     default:
-      return primaryStyles(color);
+      return primaryStyles(buttonColor);
   }
 }
 
 export const baseButtonStyles = ({
   disabled,
   buttonType,
-  color,
+  buttonColor,
   isLoading,
   textColor,
   isFullWidth,
@@ -170,7 +170,7 @@ export const baseButtonStyles = ({
     outline: none;
   }
 
-  ${parseTheme(disabled, buttonType, isLoading, color)};
+  ${parseTheme(disabled, buttonType, isLoading, buttonColor)};
   ${isLoading && loadingStyles};
 
   ${!!textColor &&

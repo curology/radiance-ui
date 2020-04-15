@@ -7,8 +7,8 @@ import {
   RoundButtonWrapper,
   RoundButtonBase,
   roundButtonLoader,
-  RoundButtonText,
   RoundButtonContainer,
+  roundButtonTextStyles,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
 
@@ -35,7 +35,7 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
-  color: PropTypes.oneOf(Object.keys(COLORS)),
+  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
   loading: isLoadingPropFunction,
   isLoading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
@@ -45,7 +45,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
-  color: 'purple',
+  buttonColor: COLORS.primary,
   isLoading: false,
   onClick() {},
   children: '',
@@ -57,7 +57,7 @@ const RoundButton = ({
   disabled,
   children,
   buttonType,
-  color,
+  buttonColor,
   loading,
   isLoading,
   icon,
@@ -72,7 +72,7 @@ const RoundButton = ({
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
-        color={color}
+        buttonColor={buttonColor}
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
@@ -83,12 +83,14 @@ const RoundButton = ({
           isLoading={loadingVal}
           disabled={disabled}
           buttonType={buttonType}
-          color={color}
+          buttonColor={buttonColor}
           css={roundButtonLoader(disabled)}
           textColor={textColor}
         />
       </RoundButtonBase>
-      {children && <p css={RoundButtonText(color, textColor)}>{children}</p>}
+      {children && (
+        <p css={roundButtonTextStyles(buttonColor, textColor)}>{children}</p>
+      )}
     </RoundButtonWrapper>
   );
 };

@@ -64,8 +64,8 @@ export const roundButtonLoader = disabled => css`
   `};
 `;
 
-export const RoundButtonText = (color, textColor) => css`
-  color: ${buttonTextColor(color, textColor)};
+export const roundButtonTextStyles = (buttonColor, textColor) => css`
+  color: ${buttonTextColor(buttonColor, textColor)};
   margin: 10px 0;
 `;
 
@@ -75,13 +75,13 @@ export const RoundButtonText = (color, textColor) => css`
  * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
  * @return string         hex string of the alternate color (e.g. #efefef)
  */
-const determineAlternateTextColor = color => {
+const determineAlternateTextColor = buttonColor => {
   // create a lighter and darker version of the text
-  const lighterVersion = tinycolor(COLORS[color])
+  const lighterVersion = tinycolor(buttonColor)
     .lighten(10)
     .desaturate(50)
     .toHexString();
-  const darkerVersion = tinycolor(COLORS[color])
+  const darkerVersion = tinycolor(buttonColor)
     .darken(10)
     .desaturate(50)
     .toHexString();
@@ -106,12 +106,12 @@ const determineAlternateTextColor = color => {
  * @param  string textColor   custom override for the text color
  * @return string             hex string of the text color
  */
-const buttonTextColor = (color, textColor) => {
+const buttonTextColor = (buttonColor, textColor) => {
   if (textColor !== '') {
     return textColor;
   }
 
-  return textColorsAssociatedWithColors[color]
-    ? textColorsAssociatedWithColors[color].tint1
-    : determineAlternateTextColor(color);
+  return textColorsAssociatedWithColors[buttonColor]
+    ? textColorsAssociatedWithColors[buttonColor].tint1
+    : determineAlternateTextColor(buttonColor);
 };

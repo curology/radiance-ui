@@ -15,7 +15,7 @@ const propTypes = {
     'tertiary',
     'quaternary',
   ]),
-  color: PropTypes.oneOf(Object.keys(COLORS)),
+  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   onClick: PropTypes.func,
 };
@@ -23,7 +23,7 @@ const propTypes = {
 const defaultProps = {
   disabled: false,
   buttonType: 'primary',
-  color: 'purple',
+  buttonColor: COLORS.primary,
   as: 'a',
   onClick() {},
 };
@@ -32,7 +32,7 @@ const Link = ({
   disabled,
   children,
   buttonType,
-  color,
+  buttonColor,
   as,
   onClick,
   textColor,
@@ -45,7 +45,7 @@ const Link = ({
       css={linkButtonStyles({
         disabled,
         buttonType,
-        color,
+        buttonColor,
         textColor,
       })}
       disabled={disabled}

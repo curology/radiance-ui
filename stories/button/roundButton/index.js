@@ -52,41 +52,6 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
       </RoundButton>
     </ButtonsContainer>
 
-    <Typography.Title>Color</Typography.Title>
-    <ButtonsContainer>
-      <RoundButton color="statusRed" icon={<CheckmarkIcon />}>
-        Primary
-      </RoundButton>
-
-      <RoundButton
-        color="statusRed"
-        buttonType="secondary"
-        icon={<ArrowRightIcon />}
-      >
-        Secondary
-      </RoundButton>
-
-      <RoundButton
-        color="statusRed"
-        buttonType="tertiary"
-        icon={<ArrowLeftIcon />}
-      >
-        Tertiary
-      </RoundButton>
-
-      <RoundButton
-        color="statusRed"
-        buttonType="quaternary"
-        icon={<ArrowRightIcon />}
-      >
-        Quaternary
-      </RoundButton>
-
-      <RoundButton color="statusRed" buttonType="action" icon={<CrossIcon />}>
-        Action
-      </RoundButton>
-    </ButtonsContainer>
-
     <Typography.Title>Disabled</Typography.Title>
     <ButtonsContainer>
       <RoundButton icon={<ArrowLeftIcon />} disabled>
@@ -133,6 +98,45 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
       </RoundButton>
     </ButtonsContainer>
 
+    <Typography.Title>Color</Typography.Title>
+    <ButtonsContainer>
+      <RoundButton buttonColor={COLORS.statusRed} icon={<CheckmarkIcon />}>
+        Primary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="secondary"
+        icon={<ArrowRightIcon />}
+      >
+        Secondary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="tertiary"
+        icon={<ArrowLeftIcon />}
+      >
+        Tertiary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="quaternary"
+        icon={<ArrowRightIcon />}
+      >
+        Quaternary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="action"
+        icon={<CrossIcon />}
+      >
+        Action
+      </RoundButton>
+    </ButtonsContainer>
+
     <Typography.Title>
       Within RoundButton.Container (with multi prop)
     </Typography.Title>
@@ -158,7 +162,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
           ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
           'primary',
         )}
-        color={select('color', Object.keys(COLORS).sort(), 'purple')}
+        buttonColor={select('buttonColor', COLORS, COLORS.primary)}
         isLoading={boolean('isLoading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}

@@ -27,30 +27,33 @@ const LinkButtonStory = withDocs(LinkButtonReadme, () => (
       <LinkButton disabled>Disabled</LinkButton>
     </Container>
 
-    <Container title="LinkButton Color">
-      <LinkButton
-        color="statusRed"
-        href="https://www.latlmes.com/arts/return-of-the-golden-age-of-comics-1"
-      >
-        Primary Color
-      </LinkButton>
-      <LinkButton color="statusRed" buttonType="secondary">
-        Secondary Color
-      </LinkButton>
-      <LinkButton color="statusRed" buttonType="tertiary">
-        Tertiary Color
-      </LinkButton>
-      <LinkButton color="statusRed" buttonType="quaternary">
-        Quaternary Color
-      </LinkButton>
-    </Container>
-
     <Container title="Using React Router Link">
       <LinkButton
         to="https://www.google.com/search?q=chem+trails"
         as={MockLink}
       >
         Router Link
+      </LinkButton>
+    </Container>
+
+    <Container title="With Color">
+      <LinkButton
+        buttonColor={COLORS.statusRed}
+        href="https://www.latlmes.com/arts/return-of-the-golden-age-of-comics-1"
+      >
+        Primary
+      </LinkButton>
+      <LinkButton buttonColor={COLORS.statusRed} buttonType="secondary">
+        Secondary
+      </LinkButton>
+      <LinkButton buttonColor={COLORS.statusRed} buttonType="tertiary">
+        Tertiary
+      </LinkButton>
+      <LinkButton buttonColor={COLORS.statusRed} buttonType="quaternary">
+        Quaternary
+      </LinkButton>
+      <LinkButton buttonColor={COLORS.statusRed} disabled>
+        Disabled
       </LinkButton>
     </Container>
 
@@ -61,7 +64,7 @@ const LinkButtonStory = withDocs(LinkButtonReadme, () => (
           ['primary', 'secondary', 'tertiary', 'quaternary'],
           'primary',
         )}
-        color={select('color', Object.keys(COLORS).sort(), 'purple')}
+        buttonColor={select('buttonColor', COLORS, COLORS.primary)}
         disabled={boolean('disabled', false)}
         onClick={action('You clicked a button')}
         textColor={text('textColor', '')}
