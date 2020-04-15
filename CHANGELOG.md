@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v6.4.0
+
+- Update Button components to accept buttonColor as a prop
+- ([#218](https://github.com/curology/radiance-ui/pull/219))
+
 # v6.3.2
 
 - Design system updates to glyphs ([#218](https://github.com/curology/radiance-ui/pull/218))
