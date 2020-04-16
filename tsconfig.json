@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": true,
+    "emitDeclarationOnly": true,
     "outDir": "lib",
     "rootDirs": ["src"]
   },
