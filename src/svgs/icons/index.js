@@ -9,7 +9,9 @@ export { default as CameraIcon } from './camera-icon.svg';
 export { default as ChatBubbleIcon } from './chat-bubble-icon.svg';
 export { default as CheckmarkIcon } from './checkmark-icon.svg';
 export { default as ChevronIcon } from './chevron-icon.svg';
+export { default as CircleAddIcon } from './circle-add-icon.svg';
 export { default as CircleCheckmarkIcon } from './circle-checkmark-icon.svg';
+export { default as CircleRemoveIcon } from './circle-remove-icon.svg';
 export { default as ClipboardIcon } from './clipboard-icon.svg';
 export { default as ClockIcon } from './clock-icon.svg';
 export { default as CloudIcon } from './cloud-icon.svg';
@@ -78,4 +80,3 @@ export { default as UploadIcon } from './upload-icon.svg';
 export { default as UserIcon } from './user-icon.svg';
 export { default as VideoIcon } from './video-icon.svg';
 export { default as YouTubeIcon } from './you-tube-icon.svg';
-
