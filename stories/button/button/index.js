@@ -6,7 +6,7 @@ import { css } from '@emotion/core';
 import ButtonReadme from 'docs/button/button';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import { Button, Typography } from 'src/shared-components';
-import { SPACER } from 'src/constants';
+import { SPACER, COLORS } from 'src/constants';
 
 const ButtonStory = withDocs(ButtonReadme, () => (
   <React.Fragment>
@@ -93,6 +93,55 @@ const ButtonStory = withDocs(ButtonReadme, () => (
         Full Width Loading
       </Button>
     </Button.Container>
+
+    <Button.Container
+      css={css`
+        width: 50%;
+        display: inline-block;
+      `}
+    >
+      <Typography.Heading
+        css={css`
+          text-align: left;
+          padding: ${SPACER.large} 0 ${SPACER.medium};
+        `}
+      >
+        With Color
+      </Typography.Heading>
+      <Button buttonColor={COLORS.statusRed}>Primary Button</Button>
+      <Button buttonColor={COLORS.statusRed} buttonType="secondary">
+        Secondary Button
+      </Button>
+      <Button buttonColor={COLORS.statusRed} buttonType="tertiary">
+        Tertiary Button
+      </Button>
+      <Button buttonColor={COLORS.statusRed} buttonType="quaternary">
+        Quaternary Button
+      </Button>
+      <Button buttonColor={COLORS.statusRed} disabled>
+        Disabled Button
+      </Button>
+      <Button buttonColor={COLORS.statusRed} isFullWidth>
+        Full Width Button
+      </Button>
+
+      <Button buttonColor={COLORS.statusRed} isLoading>
+        Primary Loading
+      </Button>
+      <Button buttonColor={COLORS.statusRed} isLoading buttonType="secondary">
+        Secondary Loading
+      </Button>
+      <Button buttonColor={COLORS.statusRed} buttonType="tertiary" isLoading>
+        Tertiary Loading
+      </Button>
+      <Button buttonColor={COLORS.statusRed} buttonType="quaternary" isLoading>
+        Quaternary Loading
+      </Button>
+      <Button buttonColor={COLORS.statusRed} isFullWidth isLoading>
+        Full Width Loading
+      </Button>
+    </Button.Container>
+
     <Typography.Heading
       css={css`
         text-align: left;
@@ -105,8 +154,9 @@ const ButtonStory = withDocs(ButtonReadme, () => (
       buttonType={select(
         'buttonType',
         ['primary', 'secondary', 'tertiary', 'quaternary'],
-        'primary'
+        'primary',
       )}
+      buttonColor={select('buttonColor', COLORS, COLORS.primary)}
       isLoading={boolean('isLoading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}

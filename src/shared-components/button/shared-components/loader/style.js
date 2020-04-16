@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import tinycolor from 'tinycolor2';
 import { css, keyframes } from '@emotion/core';
 
 import { COLORS } from '../../../../constants';
@@ -14,16 +15,19 @@ const primaryLoadingStyles = css`
   background-color: ${COLORS.white};
 `;
 
-const accentLoadingStyles = css`
-  background-color: ${COLORS.purple};
+const accentLoadingStyles = buttonColor => css`
+  background-color: ${buttonColor};
 `;
 
-const quaternaryLoadingStyles = css`
-  background-color: ${COLORS.purple70};
+const quaternaryLoadingStyles = buttonColor => css`
+  background-color: ${tinycolor(buttonColor)
+    .lighten(10)
+    .desaturate(50)
+    .toHexString()};
 `;
 
-const actionLoadingStyles = css`
-  background-color: ${COLORS.purple100};
+const actionLoadingStyles = buttonColor => css`
+  background-color: ${buttonColor};
 `;
 
 const ButtonLoader = styled.div`
@@ -39,20 +43,20 @@ const ButtonLoader = styled.div`
   opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
 
   & span {
-    ${({ disabled, buttonType }) => {
+    ${({ disabled, buttonType, buttonColor }) => {
       if (disabled) {
         return '';
       }
 
       switch (buttonType) {
         case 'secondary':
-          return accentLoadingStyles;
+          return accentLoadingStyles(buttonColor);
         case 'tertiary':
-          return accentLoadingStyles;
+          return accentLoadingStyles(buttonColor);
         case 'quaternary':
-          return quaternaryLoadingStyles;
+          return quaternaryLoadingStyles(buttonColor);
         case 'action':
-          return actionLoadingStyles;
+          return actionLoadingStyles(buttonColor);
         default:
           return primaryLoadingStyles;
       }

@@ -15,7 +15,7 @@ import {
   ArrowRightIcon,
   CrossIcon,
 } from 'src/svgs/icons';
-import { SPACER } from 'src/constants';
+import { SPACER, COLORS } from 'src/constants';
 
 const MainContainer = styled.div`
   text-align: left;
@@ -98,6 +98,45 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
       </RoundButton>
     </ButtonsContainer>
 
+    <Typography.Title>Color</Typography.Title>
+    <ButtonsContainer>
+      <RoundButton buttonColor={COLORS.statusRed} icon={<CheckmarkIcon />}>
+        Primary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="secondary"
+        icon={<ArrowRightIcon />}
+      >
+        Secondary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="tertiary"
+        icon={<ArrowLeftIcon />}
+      >
+        Tertiary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="quaternary"
+        icon={<ArrowRightIcon />}
+      >
+        Quaternary
+      </RoundButton>
+
+      <RoundButton
+        buttonColor={COLORS.statusRed}
+        buttonType="action"
+        icon={<CrossIcon />}
+      >
+        Action
+      </RoundButton>
+    </ButtonsContainer>
+
     <Typography.Title>
       Within RoundButton.Container (with multi prop)
     </Typography.Title>
@@ -123,6 +162,7 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
           ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
           'primary',
         )}
+        buttonColor={select('buttonColor', COLORS, COLORS.primary)}
         isLoading={boolean('isLoading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
