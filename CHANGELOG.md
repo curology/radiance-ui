@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.0.0-beta.3
+
+- [Internal] Convert Project to Typescript: update TSC declaration build config
+
 # v7.0.0-beta.2
 
 - [Internal] Convert Project to Typescript: update TS babel plugin
