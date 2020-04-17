@@ -16,6 +16,10 @@
 
 - [Internal] Convert Project to Typescript Updated ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
 
+# v6.4.1
+
+- Added CheckPlusIcon and CheckMinusIcon ([#220](https://github.com/curology/radiance-ui/pull/220))
+
 # v6.4.0
 
 - Update Button components to accept buttonColor as a prop
