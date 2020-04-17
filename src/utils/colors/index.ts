@@ -5,22 +5,20 @@ function percentToInt(str: string): number {
   return parseInt(str.replace(/%/g, ''), 10);
 }
 
-type ColorManipulationFunctionType = (
-  color: string,
-  modifier: string
-) => string;
-
-export const lighten: ColorManipulationFunctionType = (color, modifier) =>
-  tinycolor(color)
+export function lighten(color: string, modifier: string): string {
+  return tinycolor(color)
     .lighten(percentToInt(modifier))
     .toString();
+}
 
-export const darken: ColorManipulationFunctionType = (color, modifier) =>
-  tinycolor(color)
+export function darken(color: string, modifier: string): string {
+  return tinycolor(color)
     .darken(percentToInt(modifier))
     .toString();
+}
 
-export const transparentize = (color: string, modifier: number): string =>
-  tinycolor(color)
+export function transparentize(color: string, modifier: number): string {
+  return tinycolor(color)
     .setAlpha(modifier)
     .toString();
+}
