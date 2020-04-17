@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.0.0-beta.4
+
+- [Internal] Convert Project to Typescript: Refactor TS files
+
 # v7.0.0-beta.3
 
 - [Internal] Convert Project to Typescript: update TSC declaration build config
