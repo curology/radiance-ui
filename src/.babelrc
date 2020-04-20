@@ -4,8 +4,8 @@
       "modules": false
     }],
     "@babel/react",
-    "@emotion/babel-preset-css-prop",
-    "@babel/preset-typescript"
+    "@babel/preset-typescript",
+    "@emotion/babel-preset-css-prop"
   ],
   "env": {
     "test": {
