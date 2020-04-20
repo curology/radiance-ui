@@ -46,8 +46,9 @@ const defaultProps = {
   disabled: false,
   buttonType: 'primary',
   buttonColor: COLORS.primary,
+  loading: undefined,
   isLoading: false,
-  onClick() {},
+  onClick: () => undefined,
   children: '',
   textColor: '',
 };
@@ -76,6 +77,7 @@ const RoundButton = ({
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       >
         {icon}

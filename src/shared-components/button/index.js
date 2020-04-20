@@ -6,6 +6,9 @@ import Loader from './shared-components/loader';
 import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
+import LinkButton from './components/linkButton';
+import RoundButton from './components/roundButton';
+import TextButton from './components/textButton';
 import { COLORS } from '../../constants';
 
 const deprecatedProperties = {
@@ -47,8 +50,10 @@ class Button extends React.Component {
     disabled: false,
     buttonType: 'primary',
     buttonColor: COLORS.primary,
+    loading: undefined,
     isLoading: false,
-    onClick() {},
+    icon: null,
+    onClick: () => undefined,
     textColor: '',
     isFullWidth: false,
   };
@@ -82,6 +87,7 @@ class Button extends React.Component {
         type="button"
         textColor={textColor}
         isFullWidth={isFullWidth}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       >
         <ButtonContents
@@ -113,7 +119,5 @@ class Button extends React.Component {
   }
 }
 
-export LinkButton from './components/linkButton';
-export RoundButton from './components/roundButton';
-export TextButton from './components/textButton';
+export { LinkButton, RoundButton, TextButton };
 export default withDeprecationWarning(Button, deprecatedProperties);

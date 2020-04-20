@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/core';
-
 import { OptionButton } from 'src/shared-components';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import MinusIcon from 'src/svgs/icons/minus-icon.svg';

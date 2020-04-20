@@ -42,7 +42,7 @@ Banner.propTypes = {
 
 Banner.defaultProps = {
   type: 'default',
-  onClick: () => {},
+  onClick: () => undefined,
 };
 
 export default Banner;

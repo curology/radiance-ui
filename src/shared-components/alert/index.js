@@ -44,7 +44,7 @@ class Alert extends React.Component {
     ctaContent: null,
     duration: 3,
     type: 'default',
-    onExit: () => {},
+    onExit: () => undefined,
   };
 
   constructor(props) {
@@ -89,7 +89,7 @@ class Alert extends React.Component {
   }
 
   alertExitHandler = () => {
-    const { onExit, ctaContent, ...rest } = this.props;
+    const { onExit, ...rest } = this.props;
     this.setState({ exiting: true });
 
     // eslint-disable-next-line no-undef
@@ -109,6 +109,8 @@ class Alert extends React.Component {
       content,
       ctaContent,
       type,
+      // need to destructure onExit to avoid passing as AlertContainer attribute with ...rest
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       onExit,
       ...rest
     } = this.props;
@@ -124,6 +126,7 @@ class Alert extends React.Component {
         alertType={type}
         exiting={exiting}
         onClick={this.alertExitHandler}
+        // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       >
         <MainContainer>

@@ -23,41 +23,54 @@ function removeDefaultStorybookSvgRule(config) {
 module.exports = webpackSettings => {
   // ESLint fix for `Resolve error: Cannot destructure property" `config` of 'undefined' or 'null'` in /stories/**/index.js files.
   if (!webpackSettings) return {};
-  const { config } = webpackSettings;
 
-  removeDefaultStorybookSvgRule(config);
+  const { config } = webpackSettings;
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.jsx', '.md'],
+    extensions: ['.js', '.md', '.ts', '.tsx'],
   };
 
-  const customRules = [
-    {
-      test: /\.svg$/,
-      use: [
-        { loader: 'babel-loader', options: require('../babel.config.js') },
-        {
-          loader: '@svgr/webpack',
-          options: {
-            template: transformTemplateForUtilLocation(UTIL_LOCATION),
-            expandProps: false,
-            babel: false,
-          },
-        },
-      ],
-    },
-  ];
-
-  customRules.forEach(rule => config.module.rules.push(rule));
+  // SVG Rule
+  removeDefaultStorybookSvgRule(config);
 
   config.module.rules.push({
-    test: /index\.js?$/,
+    test: /\.svg$/,
+    use: [
+      { loader: 'babel-loader', options: require('../babel.config.js') },
+      {
+        loader: '@svgr/webpack',
+        options: {
+          template: transformTemplateForUtilLocation(UTIL_LOCATION),
+          expandProps: false,
+          babel: false,
+        },
+      },
+    ],
+  });
+
+  // Typescript Rule
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    use: [
+      {
+        loader: require.resolve('babel-loader'),
+        options: {
+          presets: ['@babel/preset-typescript'],
+        },
+      },
+    ],
+  });
+
+  // Storybook Index Loader Rule
+  config.module.rules.push({
+    test: /index\.(ts|tsx|js)?$/,
     loaders: [require.resolve('@storybook/source-loader')],
     include: path.resolve(__dirname, '../stories'),
     enforce: 'pre',
   });
 
+  // CircularDependencyPlugin
   config.plugins.push(
     new CircularDependencyPlugin({
       exclude: /node_modules/,

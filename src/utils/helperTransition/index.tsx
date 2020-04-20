@@ -3,7 +3,7 @@ import { Transition } from 'react-transition-group';
 
 import { ANIMATION } from '../../constants';
 
-const getStyleForTransitionState = transitionState => {
+const getStyleForTransitionState = (transitionState: string): object => {
   switch (transitionState) {
     case 'entering':
       return {
@@ -36,9 +36,18 @@ const getStyleForTransitionState = transitionState => {
   }
 };
 
-const HelperTransition = ({ children: child, ...props }) => (
+type HelperTransitionParamsType = {
+  children: JSX.Element;
+  props: Array<any>;
+};
+
+const HelperTransition = ({
+  children: child,
+  ...props
+}: HelperTransitionParamsType): React.ReactNode => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <Transition timeout={350} {...props}>
-    {transitionState =>
+    {(transitionState): React.ReactNode =>
       React.cloneElement(child, {
         style: getStyleForTransitionState(transitionState),
       })

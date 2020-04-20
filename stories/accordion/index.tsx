@@ -1,12 +1,14 @@
 import React from 'react';
+// @ts-ignore TODO-TS: remove this when updating storybook version since newest includes types
 import { storiesOf } from '@storybook/react';
-import { withDocs } from 'storybook-readme';
+// @ts-ignore TODO-TS: remove this when updating storybook version since newest includes types
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-import AccordionReadme from 'docs/accordion';
 import { Accordion, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
+import AccordionReadme from 'docs/accordion';
 
 import DefaultAccordion from './defaultAccordion';
 import SubcomponentAccordions from './subcomponentAccordions';

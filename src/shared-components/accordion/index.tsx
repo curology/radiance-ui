@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { COLORS } from 'src/constants';
+import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 
-import { COLORS } from '../../constants';
-import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import Thumbnails from './thumbnails';
 import {
   AccordionBox,
@@ -14,9 +14,20 @@ import {
   Truncate,
 } from './style';
 
-const noop = () => {};
+type AccordionProps = {
+  children: React.ReactNode;
+  disabled?: boolean;
+  isOpen: boolean;
+  noBorder?: boolean;
+  onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  rightAlignArrow?: boolean;
+  title: React.ReactNode;
+};
 
-class Accordion extends React.Component {
+class Accordion extends React.Component<
+  AccordionProps,
+  { contentHeight: string }
+> {
   static propTypes = {
     /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
@@ -48,20 +59,20 @@ class Accordion extends React.Component {
 
   static Truncate = Truncate;
 
-  contentRef = React.createRef();
+  contentRef = React.createRef<HTMLDivElement>();
 
   state = { contentHeight: '0px' };
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.updateHeight();
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(): void {
     this.updateHeight();
   }
 
   // prettier-ignore
-  getContentHeight = isOpen => (
+  getContentHeight = (isOpen: boolean): string => (
     `${
       isOpen && this.contentRef.current
         ? this.contentRef.current.clientHeight
@@ -69,7 +80,7 @@ class Accordion extends React.Component {
     }px`
   );
 
-  updateHeight() {
+  updateHeight(): void {
     const { isOpen } = this.props;
     const { contentHeight } = this.state;
 
@@ -80,7 +91,7 @@ class Accordion extends React.Component {
     }
   }
 
-  render() {
+  render(): JSX.Element {
     const { contentHeight } = this.state;
     const {
       title,
@@ -93,10 +104,17 @@ class Accordion extends React.Component {
     } = this.props;
 
     return (
-      <AccordionBox isOpen={isOpen} noBorder={noBorder} disabled={disabled}>
-        <TitleWrapper onClick={disabled ? noop : onClick} disabled={disabled}>
+      <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
+        <TitleWrapper
+          onClick={(event): void => {
+            if (!disabled) {
+              onClick(event);
+            }
+          }}
+          disabled={!!disabled}
+        >
           <Truncate>{title}</Truncate>
-          <ArrowWrapper rightAlign={rightAlignArrow}>
+          <ArrowWrapper rightAlign={!!rightAlignArrow}>
             <ChevronIcon
               rotate={isOpen ? 90 : 0}
               width={16}

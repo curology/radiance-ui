@@ -1,7 +1,7 @@
-export default function throwOnUndefinedProperty(obj) {
+export default function throwOnUndefinedProperty<T extends object>(obj: T): T {
   const handler = {
-    get(target, property) {
-      if (property === "__isProxy") {
+    get(target: T, property: string) {
+      if (property === '__isProxy') {
         return true;
       }
 
@@ -15,4 +15,3 @@ export default function throwOnUndefinedProperty(obj) {
 
   return new Proxy(obj, handler);
 }
-

@@ -1,0 +1,11 @@
+{
+  "extends": "./shared/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "lib",
+    "rootDirs": ["src"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.ts"]
+}

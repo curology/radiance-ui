@@ -1,5 +1,25 @@
 # CHANGELOG
 
+# v7.0.0-beta.4
+
+- [Internal] Convert Project to Typescript: Refactor TS files
+
+# v7.0.0-beta.3
+
+- [Internal] Convert Project to Typescript: update TSC declaration build config
+
+# v7.0.0-beta.2
+
+- [Internal] Convert Project to Typescript: update TS babel plugin
+
+# v7.0.0-beta.1
+
+- [Internal] Convert Project to Typescript: transpile TS files with Babel for Rollup build
+
+# v7.0.0-beta.0
+
+- [Internal] Convert Project to Typescript Updated ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
+
 # v6.4.1
 
 - Added CheckPlusIcon and CheckMinusIcon ([#220](https://github.com/curology/radiance-ui/pull/220))
@@ -51,6 +71,11 @@
 # v5.1.0
 
 - Added Callout and Indicator new components ([#202](https://github.com/curology/radiance-ui/pull/202))
+
+# v5.0-beta
+
+- [Internal] Convert Project to Typescript ([#148](https://github.com/PocketDerm/radiance-ui/pull/148))
+- [Feature] Publish Generated Types declarations
 
 # v4.2.22
 

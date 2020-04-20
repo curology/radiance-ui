@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-
-import { style as TYPOGRAPHY_STYLE } from '../../typography';
-import { COLORS, SPACER } from '../../../constants';
+import { style as TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
+import { COLORS, SPACER } from 'src/constants';
 
 export const Container = styled.div`
   display: flex;

@@ -34,6 +34,8 @@ const propTypes = {
 };
 
 const defaultProps = {
+  alignRightPercent: 0,
+  alignTopPercent: 0,
   arrowAlign: 'middle',
   content: '',
   defaultOpen: false,

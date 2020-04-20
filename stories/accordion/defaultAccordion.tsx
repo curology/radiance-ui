@@ -2,22 +2,24 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { Accordion } from 'src/shared-components';
 
-class DefaultAccordion extends React.Component {
-  state = {
+export interface AccordionsStateType {
+  [x: string]: boolean;
+}
+
+class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
+  state: AccordionsStateType = {
     accordion1: false,
     accordion2: false,
     accordion3: false,
     accordion4: false,
   };
 
-  toggleAccordion = accordion => {
+  toggleAccordion = (accordion: string): void => {
     this.setState(state => ({ [accordion]: !state[accordion] }));
   };
 
-  render() {
-    const {
-      accordion1, accordion2, accordion3, accordion4, 
-    } = this.state;
+  render(): JSX.Element {
+    const { accordion1, accordion2, accordion3, accordion4 } = this.state;
 
     return (
       <div
@@ -33,7 +35,7 @@ class DefaultAccordion extends React.Component {
               </Accordion.Content>
             }
             isOpen={accordion1}
-            onClick={() => this.toggleAccordion('accordion1')}
+            onClick={(): void => this.toggleAccordion('accordion1')}
           >
             <Accordion.Content>
               Accordion.Content adds standard accordion padding.
@@ -48,7 +50,7 @@ class DefaultAccordion extends React.Component {
               </Accordion.Content>
             }
             isOpen={accordion2}
-            onClick={() => this.toggleAccordion('accordion2')}
+            onClick={(): void => this.toggleAccordion('accordion2')}
             noBorder
           >
             <Accordion.Content>
@@ -64,7 +66,7 @@ class DefaultAccordion extends React.Component {
               </Accordion.Content>
             }
             isOpen={accordion3}
-            onClick={() => this.toggleAccordion('accordion3')}
+            onClick={(): void => this.toggleAccordion('accordion3')}
             disabled
           >
             <Accordion.Content>Expandable</Accordion.Content>
@@ -78,7 +80,7 @@ class DefaultAccordion extends React.Component {
               </Accordion.Content>
             }
             isOpen={accordion4}
-            onClick={() => this.toggleAccordion('accordion4')}
+            onClick={(): void => this.toggleAccordion('accordion4')}
             rightAlignArrow
           >
             <Accordion.Content>Expandable</Accordion.Content>

@@ -21,7 +21,7 @@ describe('<SelectorButton />', () => {
         .create(
           <SelectorButton checked={false} onClick={() => {}}>
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         )
         .toJSON();
 
@@ -33,7 +33,7 @@ describe('<SelectorButton />', () => {
         .create(
           <SelectorButton checked onClick={() => {}} type="primary">
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         )
         .toJSON();
 
@@ -45,7 +45,7 @@ describe('<SelectorButton />', () => {
         .create(
           <SelectorButton checked onClick={() => {}} type="secondary">
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         )
         .toJSON();
 
@@ -61,7 +61,7 @@ describe('<SelectorButton />', () => {
             selector="checkbox"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         )
         .toJSON();
 
@@ -79,7 +79,7 @@ describe('<SelectorButton />', () => {
             size="small"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         );
 
         expect(tree).toMatchSnapshot();
@@ -95,7 +95,7 @@ describe('<SelectorButton />', () => {
             size="small"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         );
 
         expect(tree).toMatchSnapshot();
@@ -111,7 +111,7 @@ describe('<SelectorButton />', () => {
             size="large"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         );
 
         expect(tree).toMatchSnapshot();
@@ -127,7 +127,7 @@ describe('<SelectorButton />', () => {
             size="large"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         );
 
         expect(tree).toMatchSnapshot();
@@ -143,7 +143,7 @@ describe('<SelectorButton />', () => {
             size="large"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         );
 
         expect(tree).toMatchSnapshot();
@@ -159,7 +159,7 @@ describe('<SelectorButton />', () => {
             size="large"
           >
             SelectorButton Text
-          </SelectorButton>
+          </SelectorButton>,
         );
 
         expect(tree).toMatchSnapshot();

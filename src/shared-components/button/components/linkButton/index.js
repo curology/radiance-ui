@@ -18,6 +18,7 @@ const propTypes = {
   buttonColor: PropTypes.oneOf(Object.values(COLORS)),
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   onClick: PropTypes.func,
+  textColor: PropTypes.string,
 };
 
 const defaultProps = {
@@ -25,7 +26,8 @@ const defaultProps = {
   buttonType: 'primary',
   buttonColor: COLORS.primary,
   as: 'a',
-  onClick() {},
+  onClick: () => undefined,
+  textColor: '',
 };
 
 const Link = ({
@@ -50,6 +52,7 @@ const Link = ({
       })}
       disabled={disabled}
       onClick={!disabled ? onClick : () => false}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
       <ButtonContents hasIcon={false}>

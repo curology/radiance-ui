@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
-import { COLORS } from '../../constants';
 
+import { COLORS } from '../../constants';
 import CameraIcon from '../../svgs/icons/camera-icon.svg';
 
 import Button from './index';
@@ -12,7 +12,7 @@ describe('<Button />', () => {
     it('renders with props', () => {
       const tree = renderer
         .create(
-          <Button disabled onClick={() => {}} icon={<CameraIcon />}>
+          <Button disabled onClick={() => undefined} icon={<CameraIcon />}>
             Button Text
           </Button>,
         )

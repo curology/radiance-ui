@@ -16,30 +16,30 @@ import { COLORS } from 'radiance-ui/lib/constants';
 
 // Disabled
 <RoundButton icon={<ArrowLeftIcon />} disabled>Primary</RoundButton>
-<RoundButton 
-    buttonType="secondary" 
-    icon={<ArrowRightIcon />} 
+<RoundButton
+    buttonType="secondary"
+    icon={<ArrowRightIcon />}
     disabled
 >
     Secondary
 </RoundButton>
-<RoundButton 
-    buttonType="tertiary" 
-    icon={<ArrowLeftIcon />} 
+<RoundButton
+    buttonType="tertiary"
+    icon={<ArrowLeftIcon />}
     disabled
 >
     Tertiary
 </RoundButton>
-<RoundButton 
-    buttonType="quaternary" 
-    icon={<ArrowRightIcon />} 
+<RoundButton
+    buttonType="quaternary"
+    icon={<ArrowRightIcon />}
     disabled
 >
     Quaternary
 </RoundButton>
-<RoundButton 
-    buttonType="action" 
-    icon={<CrossIcon />} 
+<RoundButton
+    buttonType="action"
+    icon={<CrossIcon />}
     disabled
 >
     Action
@@ -47,30 +47,30 @@ import { COLORS } from 'radiance-ui/lib/constants';
 
 // Loading
 <RoundButton icon={<ArrowLeftIcon />} isLoading>Primary</RoundButton>
-<RoundButton 
-    buttonType="secondary" 
-    icon={<ArrowRightIcon />} 
+<RoundButton
+    buttonType="secondary"
+    icon={<ArrowRightIcon />}
     isLoading
 >
     Secondary
 </RoundButton>
-<RoundButton 
-    buttonType="tertiary" 
-    icon={<ArrowLeftIcon />} 
+<RoundButton
+    buttonType="tertiary"
+    icon={<ArrowLeftIcon />}
     isLoading
 >
     Tertiary
 </RoundButton>
-<RoundButton 
-    buttonType="quaternary" 
-    icon={<ArrowRightIcon />} 
+<RoundButton
+    buttonType="quaternary"
+    icon={<ArrowRightIcon />}
     isLoading
 >
     Quaternary
 </RoundButton>
-<RoundButton 
-    buttonType="action" 
-    icon={<CrossIcon />} 
+<RoundButton
+    buttonType="action"
+    icon={<CrossIcon />}
     isLoading
 >
     Action
@@ -105,9 +105,9 @@ import { COLORS } from 'radiance-ui/lib/constants';
   Quaternary
 </RoundButton>
 
-<RoundButton 
-    buttonColor={COLORS.statusRed} 
-    buttonType="action" 
+<RoundButton
+    buttonColor={COLORS.statusRed}
+    buttonType="action"
     icon={<CrossIcon />}
 >
   Action
@@ -124,16 +124,16 @@ import { COLORS } from 'radiance-ui/lib/constants';
 
 ### Proptypes
 
-| prop       | propType | required | default  | description                                                                                                                    |
-| ---------- | -------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| buttonType | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `action`.           |
-| buttonColor      | string   | no       | primary   | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
-| children   | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                       |
-| disabled   | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                                 |
-| icon       | node     | yes      | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                       |
-| isLoading  | bool     | no       | false    | renders loading state and prevents click listener from being called                                                            |
-| onClick    | func     | no       | () => {} | callback function called on click of the button                                                                                |
-| textColor  | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true)   |
+| prop        | propType | required | default  | description                                                                                                                  |
+| ----------- | -------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| buttonType  | string   | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`, `quaternary`, `action`.         |
+| buttonColor | string   | no       | primary  | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
+| children    | node     | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
+| disabled    | bool     | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
+| icon        | node     | yes      | null     | icon to render in the button. Recommended to use one of Radiance's icons                                                     |
+| isLoading   | bool     | no       | false    | renders loading state and prevents click listener from being called                                                          |
+| onClick     | func     | no       | () => {} | callback function called on click of the button                                                                              |
+| textColor   | string   | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
 

@@ -27,7 +27,7 @@ class Modal extends React.Component {
   };
 
   static defaultProps = {
-    onClose: () => {},
+    onClose: () => undefined,
     isOpen: false,
     className: '',
     children: '',
@@ -47,7 +47,7 @@ class Modal extends React.Component {
     parentNode: document.querySelector('#reactPortalSection') || document.body,
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const el = document.querySelector('#reactPortalSection')
       ? '#reactPortalSection'
       : 'body';
@@ -91,7 +91,9 @@ class Modal extends React.Component {
 
   render() {
     const { isVisible } = this.state;
-    const { isOpen, children, className, canBeClosed } = this.props;
+    const {
+      isOpen, children, className, canBeClosed, 
+    } = this.props;
 
     return (
       <React.Fragment>

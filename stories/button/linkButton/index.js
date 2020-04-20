@@ -2,18 +2,20 @@ import React from 'react';
 import { withDocs } from 'storybook-readme';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
-import LinkButtonReadme from 'docs/button/linkButton.md';
+import LinkButtonReadme from 'docs/button/linkButton';
 import { LinkButton } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 
 import Container from '../container';
 
 // Mock React-Router Link
+/* eslint-disable */
 const MockLink = ({ to, children, ...rest }) => (
   <a href={to} {...rest}>
     {children}
   </a>
 );
+/* eslint-enable */
 
 const LinkButtonStory = withDocs(LinkButtonReadme, () => (
   <React.Fragment>

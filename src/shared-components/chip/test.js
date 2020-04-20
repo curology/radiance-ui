@@ -7,7 +7,7 @@ describe('<Chip />', () => {
   describe('UI snapshots', () => {
     it('renders the correct css and text', () => {
       const component = renderer.create(
-        <Chip status="success" text="Success" />
+        <Chip status="success" text="Success" />,
       );
 
       const tree = component.toJSON();

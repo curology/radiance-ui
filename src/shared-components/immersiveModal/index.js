@@ -27,8 +27,9 @@ class ImmersiveModal extends React.Component {
   };
 
   static defaultProps = {
+    header: null,
     canBeClosed: true,
-    onClose: () => {},
+    onClose: () => undefined,
     scrollContainerId: 'modalScrollContainer',
   };
 
@@ -85,6 +86,7 @@ class ImmersiveModal extends React.Component {
       ...rest
     } = this.props;
     return ReactDOM.createPortal(
+      // eslint-disable-next-line react/jsx-props-no-spreading
       <Overlay {...rest}>
         <ModalContainer id={scrollContainerId}>
           <OffClickWrapper onOffClick={this.closeModal}>
@@ -102,7 +104,7 @@ class ImmersiveModal extends React.Component {
           </OffClickWrapper>
         </ModalContainer>
       </Overlay>,
-      this.domNode
+      this.domNode,
     );
   }
 }

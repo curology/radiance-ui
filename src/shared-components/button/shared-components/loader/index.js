@@ -46,4 +46,14 @@ Loader.propTypes = {
   textColor: PropTypes.string,
 };
 
+Loader.defaultProps = {
+  buttonType: 'primary',
+  buttonColor: COLORS.primary,
+  className: '',
+  disabled: false,
+  isFullWidth: false,
+  isLoading: false,
+  textColor: '',
+};
+
 export default Loader;

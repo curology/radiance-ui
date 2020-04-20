@@ -4,7 +4,6 @@ import { css, keyframes } from '@emotion/core';
 
 import { COLORS } from '../../../../constants';
 
-
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }
   20% { opacity: .95; transform: translate3d(12px, 0, 0) scale(1, 1); }
@@ -21,7 +20,10 @@ const accentLoadingStyles = buttonColor => css`
 `;
 
 const quaternaryLoadingStyles = buttonColor => css`
-  background-color: ${tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
+  background-color: ${tinycolor(buttonColor)
+    .lighten(10)
+    .desaturate(50)
+    .toHexString()};
 `;
 
 const actionLoadingStyles = buttonColor => css`

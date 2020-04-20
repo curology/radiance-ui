@@ -66,7 +66,7 @@ The accordion style renders thumbnail images into the right hand side of the acc
 
 - **3+ images:** Renders thumbnail of first image and a counter of additional images
 
-Upon opening of the accordion, the thumbnail images should disapear from the title bar because they'll then be visible in the `content` container.
+Upon opening of the accordion, the thumbnail images should disappear from the title bar because they'll then be visible in the `content` container.
 
 ```jsx
 import { Accordion } from 'radiance-ui';
