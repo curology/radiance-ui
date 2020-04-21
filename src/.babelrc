@@ -4,7 +4,9 @@
       "modules": false
     }],
     "@babel/react",
-    "@babel/preset-typescript",
+    ["@babel/preset-typescript", {
+      "onlyRemoveTypeImports": true
+    }],
     "@emotion/babel-preset-css-prop"
   ],
   "env": {
