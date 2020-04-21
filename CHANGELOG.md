@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.0.1
+
+- [Bug] Fix svgr build ([#221](https://github.com/PocketDerm/radiance-ui/pull/221))
+
 # v7.0.0
 
 - [Internal] Convert Project to Typescript
