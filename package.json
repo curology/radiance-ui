@@ -137,7 +137,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-modal": "^3.8.1",
-    "react-slick": "^0.23.2",
+    "react-slick": "^0.25.2",
     "react-toggle-button": "^2.2.0",
     "react-transition-group": "^2.9.0",
     "tinycolor2": "^1.4.1"
