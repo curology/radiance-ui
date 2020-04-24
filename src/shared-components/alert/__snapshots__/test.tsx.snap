@@ -92,7 +92,7 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
 
 .emotion-2 {
   margin: -3px 0 0 1rem;
-  max-height: none;
+  max-height: 48px;
 }
 
 <div
@@ -274,7 +274,7 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
 
 .emotion-2 {
   margin: -3px 0 0 1rem;
-  max-height: none;
+  max-height: 48px;
 }
 
 <div
@@ -456,7 +456,7 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
 
 .emotion-2 {
   margin: -3px 0 0 1rem;
-  max-height: none;
+  max-height: 48px;
 }
 
 <div
@@ -618,7 +618,7 @@ exports[`Alert UI snapshots renders error alert 1`] = `
 
 .emotion-2 {
   margin: -3px 0 0 1rem;
-  max-height: none;
+  max-height: 48px;
 }
 
 .emotion-6 {
@@ -768,7 +768,7 @@ exports[`Alert UI snapshots renders success alert 1`] = `
 
 .emotion-2 {
   margin: -3px 0 0 1rem;
-  max-height: none;
+  max-height: 48px;
 }
 
 .emotion-6 {

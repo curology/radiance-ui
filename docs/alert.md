@@ -8,7 +8,7 @@ We should avoid using alerts to show flow-level success states (i.e. Cancellatio
 
 Alerts contain some visual marker, an icon `16px` or avatar `32px`
 
-Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The text should be short and preferably not extend more than 2 lines. Ellipses (...) can be used to truncate past 2 lines if setting the prop `truncateText`.
+Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The text should be short and preferably not extend more than 2 lines. Ellipses (...) will be used to truncate past 2 lines by default. Can be turned off via the prop `truncateText`.
 
 Alerts can contain a CTA section. These should be reserved for really important actions. These alerts persists until an action is taken.
 
@@ -56,6 +56,7 @@ import { Alert } from 'radiance-ui';
     }
     duration="sticky"
     avatarSrc={avatarImageSrc}
+    truncateText={false}
   />
   <Alert
     content={
@@ -81,7 +82,7 @@ import { Alert } from 'radiance-ui';
 | content      | node             | yes      | -       | content of the alert                                                                                                    |
 | ctaContent   | node             | no       | -       | content of the CTA section. The handler can be provided in the `onExit` prop                                            |
 | duration     | number or string | no       | 3       | can be the string `sticky` for the alert to persist or a number in seconds before the alert is automatically dismissed  |
-| truncateText | bool             | no       | false   | truncates text after 2 lines                                                                                            |
+| truncateText | bool             | no       | true    | truncates text after 2 lines                                                                                            |
 | type         | string           | no       | default | must be one of: 'success', 'error', 'default'                                                                           |
 | onExit       | func             | no       | ()->{}  | function to be called on dismissal of the alert. The function will receive all of the component's props as the argument |
 

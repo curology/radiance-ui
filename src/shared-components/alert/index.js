@@ -44,7 +44,7 @@ class Alert extends React.Component {
     avatarSrc: '',
     ctaContent: null,
     duration: 3,
-    truncateText: false,
+    truncateText: true,
     type: 'default',
     onExit: () => undefined,
   };
