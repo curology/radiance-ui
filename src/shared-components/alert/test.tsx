@@ -1,40 +1,42 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import TestRenderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
 
 import Alert from './index';
 
-const testAlert = {
-  text: 'Your email address was updated successfully!',
-  type: 'success',
-  duration: 'sticky',
-};
+// Note on truncateText prop test: this cannot be tested because element scrollHeight and offsetHeight are not simulated correctly
 
-const CustomContentComponent = () => (
+const alertText =
+  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis dicta iusto a placeat!';
+
+const CustomContentComponent = (): JSX.Element => (
   <div>
     <strong>Your info is updated!</strong>{' '}
-    <a href="http://google.com"> Click here to see changes</a>
+    <a href="curology.com"> Click here to see changes</a>
   </div>
 );
 
-const createNodeMock = element => {
+const createNodeMock = (element: ReactElement): any => {
   if (element.type === 'div') {
     return {
-      innerHTML: '',
+      innerHTML: alertText,
     };
   }
   return null;
 };
 
 describe('Alert UI snapshots', () => {
-  test('renders success type and text', () => {
+  test('renders a default alert', () => {
+    const component = TestRenderer.create(<Alert content={alertText} />, {
+      createNodeMock,
+    });
+
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('renders success alert', () => {
     const component = TestRenderer.create(
-      <Alert
-        content={testAlert.text}
-        type="success"
-        duration={testAlert.duration}
-        onExit={() => {}}
-      />,
+      <Alert content={alertText} type="success" />,
       { createNodeMock },
     );
 
@@ -42,14 +44,9 @@ describe('Alert UI snapshots', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('renders error type and text', () => {
+  test('renders error alert', () => {
     const component = TestRenderer.create(
-      <Alert
-        content={testAlert.text}
-        type="error"
-        duration={testAlert.duration}
-        onExit={() => {}}
-      />,
+      <Alert content={alertText} type="error" />,
       { createNodeMock },
     );
 
@@ -57,9 +54,9 @@ describe('Alert UI snapshots', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('renders default type and text', () => {
+  test('renders a sticky alert', () => {
     const component = TestRenderer.create(
-      <Alert content={testAlert.text} onExit={() => {}} />,
+      <Alert content={alertText} duration="sticky" />,
       { createNodeMock },
     );
 
@@ -69,12 +66,7 @@ describe('Alert UI snapshots', () => {
 
   test('renders custom component passed in content prop', () => {
     const component = TestRenderer.create(
-      <Alert
-        content={<CustomContentComponent />}
-        type="success"
-        duration={testAlert.duration}
-        onExit={() => {}}
-      />,
+      <Alert content={<CustomContentComponent />} />,
       { createNodeMock },
     );
 
@@ -88,9 +80,8 @@ describe('Alert UI snapshots', () => {
     const component = TestRenderer.create(
       <Alert
         content={<CustomContentComponent />}
-        type="success"
-        duration={testAlert.duration}
         onExit={spy}
+        duration="sticky"
       />,
       { createNodeMock },
     );
@@ -100,17 +91,12 @@ describe('Alert UI snapshots', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('Alert with CTA', () => {
+  test('Alert with custom CTA', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
     const component = TestRenderer.create(
       <Alert
-        content={
-          <div>
-            <strong>Whoops!</strong> There was an error updating your address,
-            pleas try again later
-          </div>
-        }
+        content={<CustomContentComponent />}
         type="error"
         ctaContent="Update Payment Method"
         onExit={spy}

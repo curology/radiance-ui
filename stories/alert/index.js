@@ -31,7 +31,7 @@ stories.add(
           content={
             <Fragment>
               <strong>Whoops!</strong> There was an error updating your address,
-              pleas try again later
+              please try again later
             </Fragment>
           }
           type="error"
@@ -76,8 +76,8 @@ stories.add(
         avatarSrc={boolean('avatarSrc', false) ? avatarImageSrc : ''}
         content={text('content', 'This is the alert text')}
         ctaContent={text('ctaContent', '')}
-        type={select('type', ['default', 'success', 'error'], 'default')}
         duration="sticky"
+        type={select('type', ['default', 'success', 'error'], 'default')}
       />
     </React.Fragment>
   )),

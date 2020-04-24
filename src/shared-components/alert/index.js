@@ -35,6 +35,7 @@ class Alert extends React.Component {
     content: PropTypes.node.isRequired,
     ctaContent: PropTypes.node,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    truncateText: PropTypes.bool,
     type: PropTypes.oneOf(['success', 'error', 'default']),
     onExit: PropTypes.func,
   };
@@ -43,6 +44,7 @@ class Alert extends React.Component {
     avatarSrc: '',
     ctaContent: null,
     duration: 3,
+    truncateText: false,
     type: 'default',
     onExit: () => undefined,
   };
@@ -58,18 +60,20 @@ class Alert extends React.Component {
   };
 
   componentDidMount() {
-    const { duration, ctaContent } = this.props;
+    const { duration, ctaContent, truncateText } = this.props;
 
-    const contentElement = this.contentText.current;
-    const wordsArray = contentElement.innerHTML.split(' ');
-
-    while (contentElement.scrollHeight > contentElement.offsetHeight) {
-      wordsArray.pop();
-
-      // eslint-disable-next-line prefer-template
-      contentElement.innerHTML = wordsArray.join(' ') + ' ...';
+    // Truncate text logic
+    if (truncateText) {
+      const contentElement = this.contentText.current;
+      const wordsArray = contentElement.innerHTML.split(' ');
+      while (contentElement.scrollHeight > contentElement.offsetHeight) {
+        wordsArray.pop();
+        // eslint-disable-next-line prefer-template
+        contentElement.innerHTML = wordsArray.join(' ') + ' ...';
+      }
     }
 
+    // Duration logic
     if (duration === 'sticky' || !!ctaContent) {
       return;
     }
@@ -108,6 +112,7 @@ class Alert extends React.Component {
       avatarSrc,
       content,
       ctaContent,
+      truncateText,
       type,
       // need to destructure onExit to avoid passing as AlertContainer attribute with ...rest
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -137,7 +142,9 @@ class Alert extends React.Component {
               <Icon fill={COLORS.white} />
             )}
           </IconContainer>
-          <ContentContainer ref={this.contentText}>{content}</ContentContainer>
+          <ContentContainer truncateText={truncateText} ref={this.contentText}>
+            {content}
+          </ContentContainer>
         </MainContainer>
         {ctaContent && (
           <CtaContent>
