@@ -8,7 +8,7 @@ We should avoid using alerts to show flow-level success states (i.e. Cancellatio
 
 Alerts contain some visual marker, an icon `16px` or avatar `32px`
 
-Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The text should be short and preferably not extend more than 2 lines. Ellipses (...) will be used to truncate past 2 lines by default. Can be turned off via the prop `truncateText`.
+Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The text should be short and preferably not extend more than 2 lines. Ellipses (...) will be used to truncate past 2 lines by default. Truncate functionality can be turned off via the prop `truncateText`.
 
 Alerts can contain a CTA section. These should be reserved for really important actions. These alerts persists until an action is taken.
 
