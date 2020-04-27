@@ -112,7 +112,7 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
     <div
       className="emotion-2 emotion-3"
     >
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis dicta iusto a placeat!
+      Your email address was updated successfully!
     </div>
   </div>
 </div>
@@ -294,7 +294,7 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
     <div
       className="emotion-2 emotion-3"
     >
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis dicta iusto a placeat!
+      Your email address was updated successfully!
     </div>
   </div>
 </div>
@@ -668,7 +668,7 @@ exports[`Alert UI snapshots renders error alert 1`] = `
     <div
       className="emotion-2 emotion-3"
     >
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis dicta iusto a placeat!
+      Your email address was updated successfully!
     </div>
   </div>
 </div>
@@ -818,7 +818,7 @@ exports[`Alert UI snapshots renders success alert 1`] = `
     <div
       className="emotion-2 emotion-3"
     >
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis dicta iusto a placeat!
+      Your email address was updated successfully!
     </div>
   </div>
 </div>

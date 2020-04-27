@@ -5,8 +5,7 @@ import Alert from './index';
 
 // Note on truncateText prop test: this cannot be tested because element scrollHeight and offsetHeight are not simulated correctly
 
-const alertText =
-  'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quis dicta iusto a placeat!';
+const alertText = 'Your email address was updated successfully!';
 
 const CustomContentComponent = (): JSX.Element => (
   <div>
