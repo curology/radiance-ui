@@ -8,7 +8,7 @@ We should avoid using alerts to show flow-level success states (i.e. Cancellatio
 
 Alerts contain some visual marker, an icon `16px` or avatar `32px`
 
-Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The complete text should be short and not extend more than 2 lines. Ellipses (...) will be used to truncate past 2 lines.
+Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The text should be short and preferably not extend more than 2 lines. Ellipses (...) will be used to truncate past 2 lines by default. Truncate functionality can be turned off via the prop `truncateText`.
 
 Alerts can contain a CTA section. These should be reserved for really important actions. These alerts persists until an action is taken.
 
@@ -31,8 +31,8 @@ import { Alert } from 'radiance-ui';
   <Alert
     content={
       <Fragment>
-        <strong>Whoops!</strong> There was an error updating your address, pleas
-        try again later
+        <strong>Whoops!</strong> There was an error updating your address,
+        please try again later
       </Fragment>
     }
     type="error"
@@ -56,12 +56,13 @@ import { Alert } from 'radiance-ui';
     }
     duration="sticky"
     avatarSrc={avatarImageSrc}
+    truncateText={false}
   />
   <Alert
     content={
       <Fragment>
-        <strong>Whoops!</strong> There was an error updating your address, pleas
-        try again later
+        <strong>Whoops!</strong> There was an error updating your address,
+        please try again later
       </Fragment>
     }
     type="error"
@@ -75,14 +76,15 @@ import { Alert } from 'radiance-ui';
 
 ### Proptypes
 
-| prop       | propType         | required | default | description                                                                                                             |
-| ---------- | ---------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-| avatarSrc  | string           | no       | -       | to display a 32x32 small avatar instead of an icon                                                                      |
-| content    | node             | yes      | -       | content of the alert                                                                                                    |
-| ctaContent | node             | no       | -       | content of the CTA section. The handler can be provided in the `onExit` prop                                            |
-| duration   | number or string | no       | 3       | can be the string `sticky` for the alert to persist or a number in seconds before the alert is automatically dismissed  |
-| type       | string           | no       | default | must be one of: 'success', 'error', 'default'                                                                           |
-| onExit     | func             | no       | ()->{}  | function to be called on dismissal of the alert. The function will receive all of the component's props as the argument |
+| prop         | propType         | required | default | description                                                                                                             |
+| ------------ | ---------------- | -------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
+| avatarSrc    | string           | no       | -       | to display a 32x32 small avatar instead of an icon                                                                      |
+| content      | node             | yes      | -       | content of the alert                                                                                                    |
+| ctaContent   | node             | no       | -       | content of the CTA section. The handler can be provided in the `onExit` prop                                            |
+| duration     | number or string | no       | 3       | can be the string `sticky` for the alert to persist or a number in seconds before the alert is automatically dismissed  |
+| truncateText | bool             | no       | true    | truncates text after 2 lines                                                                                            |
+| type         | string           | no       | default | must be one of: 'success', 'error', 'default'                                                                           |
+| onExit       | func             | no       | ()->{}  | function to be called on dismissal of the alert. The function will receive all of the component's props as the argument |
 
 ### Notes
 

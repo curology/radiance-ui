@@ -96,7 +96,7 @@ export const MainContainer = styled.div`
 
 export const ContentContainer = styled.div`
   margin: -3px 0 0 ${SPACER.medium};
-  max-height: 48px;
+  max-height: ${({ truncateText }) => (truncateText ? '48px' : 'none')};
 `;
 
 export const CtaContent = styled.div`
