@@ -61,7 +61,7 @@ stories.add(
           content={
             <Fragment>
               <strong>Whoops!</strong> There was an error updating your address,
-              pleas try again later
+              please try again later
             </Fragment>
           }
           type="error"

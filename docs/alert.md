@@ -31,8 +31,8 @@ import { Alert } from 'radiance-ui';
   <Alert
     content={
       <Fragment>
-        <strong>Whoops!</strong> There was an error updating your address, pleas
-        try again later
+        <strong>Whoops!</strong> There was an error updating your address,
+        please try again later
       </Fragment>
     }
     type="error"
@@ -61,8 +61,8 @@ import { Alert } from 'radiance-ui';
   <Alert
     content={
       <Fragment>
-        <strong>Whoops!</strong> There was an error updating your address, pleas
-        try again later
+        <strong>Whoops!</strong> There was an error updating your address,
+        please try again later
       </Fragment>
     }
     type="error"
