@@ -14,7 +14,7 @@ const CustomContentComponent = (): JSX.Element => (
   </div>
 );
 
-const createNodeMock = (element: ReactElement): any => {
+const createNodeMock = (element: ReactElement): { innerHTML: string } | null => {
   if (element.type === 'div') {
     return {
       innerHTML: alertText,
