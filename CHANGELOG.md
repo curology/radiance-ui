@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.1.0
+
+- [Feature] `truncateText` prop for Alerts ([#229](https://github.com/PocketDerm/radiance-ui/pull/229))
+
 # v7.0.1
 
 - [Bug] Fix svgr build ([#221](https://github.com/PocketDerm/radiance-ui/pull/221))
