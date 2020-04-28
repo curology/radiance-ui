@@ -3,7 +3,7 @@ import TestRenderer from 'react-test-renderer';
 
 import Alert from './index';
 
-// Note on truncateText prop test: this cannot be tested because element scrollHeight and offsetHeight are not simulated correctly
+// Note on dontTruncateText prop test: this cannot be tested because element scrollHeight and offsetHeight are not simulated correctly
 
 const alertText = 'Your email address was updated successfully!';
 
