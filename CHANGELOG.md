@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v7.1.1
+
+- [Feature] `preventTextTruncating` prop rename ([#231](https://github.com/PocketDerm/radiance-ui/pull/231))
+
 # v7.1.0
 
 - [Feature] `truncateText` prop for Alerts ([#229](https://github.com/PocketDerm/radiance-ui/pull/229))
