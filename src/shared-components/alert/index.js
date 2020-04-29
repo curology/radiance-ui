@@ -35,7 +35,7 @@ class Alert extends React.Component {
     content: PropTypes.node.isRequired,
     ctaContent: PropTypes.node,
     duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    dontTruncateText: PropTypes.bool,
+    preventTextTruncating: PropTypes.bool,
     type: PropTypes.oneOf(['success', 'error', 'default']),
     onExit: PropTypes.func,
   };
@@ -44,7 +44,7 @@ class Alert extends React.Component {
     avatarSrc: '',
     ctaContent: null,
     duration: 3,
-    dontTruncateText: false,
+    preventTextTruncating: false,
     type: 'default',
     onExit: () => undefined,
   };
@@ -60,10 +60,10 @@ class Alert extends React.Component {
   };
 
   componentDidMount() {
-    const { duration, ctaContent, dontTruncateText } = this.props;
+    const { duration, ctaContent, preventTextTruncating } = this.props;
 
     // Truncate text logic
-    if (!dontTruncateText) {
+    if (!preventTextTruncating) {
       const contentElement = this.contentText.current;
       const wordsArray = contentElement.innerHTML.split(' ');
       while (contentElement.scrollHeight > contentElement.offsetHeight) {
@@ -112,7 +112,7 @@ class Alert extends React.Component {
       avatarSrc,
       content,
       ctaContent,
-      dontTruncateText,
+      preventTextTruncating,
       type,
       // need to destructure onExit to avoid passing as AlertContainer attribute with ...rest
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -143,7 +143,7 @@ class Alert extends React.Component {
             )}
           </IconContainer>
           <ContentContainer
-            dontTruncateText={dontTruncateText}
+            preventTextTruncating={preventTextTruncating}
             ref={this.contentText}
           >
             {content}
