@@ -147,5 +147,6 @@
       "pre-commit": "yarn run build:svgs:index && yarn run lint-staged",
       "pre-push": "yarn run test"
     }
-  }
+  },
+  "sideEffects": false
 }
