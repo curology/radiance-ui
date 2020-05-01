@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v8.0.0
+
+- Adds `sideEffects: false` to `package.json` for tree-shaking of `lib` directory.
+
 # v7.1.1
 
 - [Feature] `preventTextTruncating` prop rename ([#231](https://github.com/PocketDerm/radiance-ui/pull/231))
