@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v8.0.1
+
+- [Feature] `truncateText` prop rename ([#233](https://github.com/PocketDerm/radiance-ui/pull/233))
+
 # v8.0.0
 
 - Adds `sideEffects: false` to `package.json` for tree-shaking of `lib` directory.
