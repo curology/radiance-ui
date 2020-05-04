@@ -55,7 +55,7 @@ stories.add(
           }
           duration="sticky"
           avatarSrc={avatarImageSrc}
-          preventTextTruncating
+          truncateText
         />
         <Alert
           content={
