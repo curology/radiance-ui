@@ -19,7 +19,7 @@ import {
 
 type ImmersiveModalProps = {
   children: React.ReactNode;
-  header: React.ReactNode;
+  headerImage: React.ReactNode;
   onClose: () => void;
   scrollContainerId: string;
 };
@@ -29,13 +29,13 @@ export const reactPortalSectionId = '#reactPortalSection';
 class ImmersiveModal extends React.Component<ImmersiveModalProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    header: PropTypes.node,
+    headerImage: PropTypes.node,
     onClose: PropTypes.func,
     scrollContainerId: PropTypes.string,
   };
 
   static defaultProps = {
-    header: null,
+    headerImage: null,
     onClose: (): void => undefined,
     scrollContainerId: 'modalScrollContainer',
   };
@@ -87,7 +87,7 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
     const {
       children,
       onClose,
-      header,
+      headerImage,
       scrollContainerId,
       ...rest
     } = this.props;
@@ -106,7 +106,7 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
                 onClick={onClose}
               />
             </CloseIconContainer>
-            {header}
+            {headerImage}
             <CopyContainer>{children}</CopyContainer>
           </OffClickWrapper>
         </ModalContainer>
