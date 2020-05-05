@@ -10,12 +10,12 @@ import {
 } from '../../constants';
 
 export const Overlay = styled.div`
-  background-color: ${COLORS.overlay};
+  position: fixed;
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
+  background-color: ${COLORS.overlay};
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
 `;

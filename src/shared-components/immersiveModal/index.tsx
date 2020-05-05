@@ -3,13 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { RoundButton } from '../button';
-import KEYCODES from '../../constants/keycodes';
+import keycodes from '../../constants/keycodes';
 import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
-  ModalContainer,
   Overlay,
+  ModalContainer,
   CloseIconContainer,
   CopyContainer,
   Title,
@@ -17,19 +17,26 @@ import {
   Footer,
 } from './style';
 
-class ImmersiveModal extends React.Component {
+type ImmersiveModalProps = {
+  children: React.ReactNode;
+  header: React.ReactNode;
+  onClose: () => void;
+  scrollContainerId: string;
+};
+
+export const reactPortalSectionId = '#reactPortalSection';
+
+class ImmersiveModal extends React.Component<ImmersiveModalProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    canBeClosed: PropTypes.bool,
-    onClose: PropTypes.func,
     header: PropTypes.node,
+    onClose: PropTypes.func,
     scrollContainerId: PropTypes.string,
   };
 
   static defaultProps = {
     header: null,
-    canBeClosed: true,
-    onClose: () => undefined,
+    onClose: (): void => undefined,
     scrollContainerId: 'modalScrollContainer',
   };
 
@@ -39,15 +46,20 @@ class ImmersiveModal extends React.Component {
 
   static Footer = Footer;
 
-  constructor(props) {
+  htmlNode: HTMLElement;
+
+  domNode: HTMLElement;
+
+  constructor(props: ImmersiveModalProps) {
     super(props);
 
-    this.htmlNode = document.querySelector('html');
+    this.htmlNode = document.querySelector('html') || document.body;
+
     this.domNode =
-      document.querySelector('#reactPortalSection') || document.body;
+      document.querySelector(reactPortalSectionId) || document.body;
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     this.htmlNode.classList.add('no-scroll');
 
     document
@@ -55,7 +67,7 @@ class ImmersiveModal extends React.Component {
       .addEventListener('keydown', this.handleEscapeKey);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     this.htmlNode.classList.remove('no-scroll');
 
     document
@@ -63,23 +75,17 @@ class ImmersiveModal extends React.Component {
       .removeEventListener('keydown', this.handleEscapeKey);
   }
 
-  handleEscapeKey = event => {
-    if (keyPressMatch(event, KEYCODES.escape)) {
-      this.closeModal();
-    }
-  };
+  handleEscapeKey = (event: KeyboardEvent): void => {
+    const { onClose } = this.props;
 
-  closeModal = () => {
-    const { canBeClosed, onClose } = this.props;
-    if (canBeClosed) {
+    if (keyPressMatch(event, keycodes.escape)) {
       onClose();
     }
   };
 
-  render() {
+  render(): JSX.Element {
     const {
       children,
-      canBeClosed,
       onClose,
       header,
       scrollContainerId,
@@ -89,16 +95,17 @@ class ImmersiveModal extends React.Component {
       // eslint-disable-next-line react/jsx-props-no-spreading
       <Overlay {...rest}>
         <ModalContainer id={scrollContainerId}>
-          <OffClickWrapper onOffClick={this.closeModal}>
-            {canBeClosed && (
-              <CloseIconContainer>
-                <RoundButton
-                  buttonType="action"
-                  icon={<CrossIcon />}
-                  onClick={onClose}
-                />
-              </CloseIconContainer>
-            )}
+          <OffClickWrapper onOffClick={onClose}>
+            <CloseIconContainer>
+              {/* 
+                // @ts-ignore, TODO-TS: Convert Button to TS */}
+              <RoundButton
+                buttonType="action"
+                icon={<CrossIcon />}
+                data-test-id="modal-close-icon-button"
+                onClick={onClose}
+              />
+            </CloseIconContainer>
             {header}
             <CopyContainer>{children}</CopyContainer>
           </OffClickWrapper>

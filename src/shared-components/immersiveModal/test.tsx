@@ -3,19 +3,19 @@ import { shallow } from 'enzyme';
 
 import ImmersiveModal from './index';
 
-const childComponent = <div />;
-
 describe('<ImmersiveModal />', () => {
   describe('ImmersiveModal closure', () => {
     it('invokes the onClose prop', () => {
       const spy = jest.fn();
       const wrapper = shallow(
         <ImmersiveModal onClose={spy}>
-          {childComponent}
-        </ImmersiveModal>
+          <div>Hello World</div>
+        </ImmersiveModal>,
       );
 
-      wrapper.instance().closeModal();
+      wrapper
+        .find('[data-test-id="modal-close-icon-button"]')
+        .simulate('click');
 
       expect(spy).toHaveBeenCalled();
     });
