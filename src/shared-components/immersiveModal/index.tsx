@@ -14,11 +14,13 @@ import {
   Title,
   Body,
   Footer,
+  ContentWithFooterContainer,
 } from './style';
 
 type ImmersiveModalProps = {
   children: React.ReactNode;
   headerImage: React.ReactNode;
+  footerContent: React.ReactNode;
   onClose: () => void;
   scrollContainerId: string;
 };
@@ -29,12 +31,14 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     headerImage: PropTypes.node,
+    footerContent: PropTypes.node,
     onClose: PropTypes.func,
     scrollContainerId: PropTypes.string,
   };
 
   static defaultProps = {
     headerImage: null,
+    footerContent: null,
     onClose: (): void => undefined,
     scrollContainerId: 'modalScrollContainer',
   };
@@ -42,8 +46,6 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
   static Title = Title;
 
   static Body = Body;
-
-  static Footer = Footer;
 
   htmlNode: HTMLElement;
 
@@ -87,23 +89,27 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
       children,
       onClose,
       headerImage,
+      footerContent,
       scrollContainerId,
       ...rest
     } = this.props;
     return ReactDOM.createPortal(
       // eslint-disable-next-line react/jsx-props-no-spreading
       <Overlay {...rest}>
-        <ModalContainer id={scrollContainerId}>
-          <OffClickWrapper onOffClick={onClose}>
+        <OffClickWrapper onOffClick={onClose}>
+          <ModalContainer id={scrollContainerId}>
             <CloseButtonContainer onClick={onClose}>
               <CrossIcon />
             </CloseButtonContainer>
             {headerImage && (
               <HeaderImageContainer>{headerImage}</HeaderImageContainer>
             )}
-            {children}
-          </OffClickWrapper>
-        </ModalContainer>
+            <ContentWithFooterContainer>
+              <div>{children}</div>
+              {footerContent && <Footer>{footerContent}</Footer>}
+            </ContentWithFooterContainer>
+          </ModalContainer>
+        </OffClickWrapper>
       </Overlay>,
       this.domNode,
     );

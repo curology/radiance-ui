@@ -2,11 +2,7 @@ import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import {
-  BREAKPOINTS,
-  COLORS,
-  MEDIA_QUERIES,
-  SPACER,
-  Z_SCALE,
+  COLORS, MEDIA_QUERIES, SPACER, Z_SCALE, 
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -22,16 +18,15 @@ export const Overlay = styled.div`
 
 export const ModalContainer = styled.div`
   background-color: ${COLORS.white};
-  height: 100vh;
-  margin: 32px auto 0;
-  max-width: ${BREAKPOINTS.sm}px;
+  height: calc(100vh - ${SPACER.xlarge});
+  margin: ${SPACER.xlarge} auto 0;
+  padding: ${SPACER.x4large} ${SPACER.large} 0 ${SPACER.large};
   overflow-y: auto;
   position: relative;
   width: 100%;
   box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  padding: 56px 24px 32px 24px;
 
   ${MEDIA_QUERIES.mdUp} {
     height: auto;
@@ -73,5 +68,12 @@ export const Body = styled.div`
 `;
 
 export const Footer = styled.div`
-  margin-bottom: ${SPACER.small};
+  margin-bottom: 32px;
+`;
+
+export const ContentWithFooterContainer = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
 `;

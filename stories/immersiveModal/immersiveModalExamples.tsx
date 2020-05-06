@@ -10,15 +10,19 @@ const ImmersiveModalExamples = (): JSX.Element => {
         Open ImmersiveModal
       </Button>
       {defaultModalIsOpen && (
-        <ImmersiveModal onClose={(): void => setDefaultModalIsOpen(false)}>
+        <ImmersiveModal
+          onClose={(): void => setDefaultModalIsOpen(false)}
+          footerContent={
+            <Button.Container>
+              <Button isFullWidth>Update Payment Method</Button>
+              <Button isFullWidth buttonType="tertiary">
+                Dismiss
+              </Button>
+            </Button.Container>
+          }
+        >
           <ImmersiveModal.Title>Immersive modal title</ImmersiveModal.Title>
           <ImmersiveModal.Body>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
               maiores atque sapiente hic recusandae, dicta iure odit architecto
