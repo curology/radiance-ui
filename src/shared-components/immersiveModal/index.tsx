@@ -2,16 +2,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { RoundButton } from '../button';
-import keycodes from '../../constants/keycodes';
+import keyboardKeys from '../../constants/keyboardKeys';
 import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
   Overlay,
   ModalContainer,
-  CloseIconContainer,
-  CopyContainer,
+  CloseButtonContainer,
+  HeaderImageContainer,
   Title,
   Body,
   Footer,
@@ -78,7 +77,7 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
   handleEscapeKey = (event: KeyboardEvent): void => {
     const { onClose } = this.props;
 
-    if (keyPressMatch(event, keycodes.escape)) {
+    if (keyPressMatch(event, keyboardKeys.escape)) {
       onClose();
     }
   };
@@ -96,18 +95,13 @@ class ImmersiveModal extends React.Component<ImmersiveModalProps> {
       <Overlay {...rest}>
         <ModalContainer id={scrollContainerId}>
           <OffClickWrapper onOffClick={onClose}>
-            <CloseIconContainer>
-              {/* 
-                // @ts-ignore, TODO-TS: Convert Button to TS */}
-              <RoundButton
-                buttonType="action"
-                icon={<CrossIcon />}
-                data-test-id="modal-close-icon-button"
-                onClick={onClose}
-              />
-            </CloseIconContainer>
-            {headerImage}
-            <CopyContainer>{children}</CopyContainer>
+            <CloseButtonContainer onClick={onClose}>
+              <CrossIcon />
+            </CloseButtonContainer>
+            {headerImage && (
+              <HeaderImageContainer>{headerImage}</HeaderImageContainer>
+            )}
+            {children}
           </OffClickWrapper>
         </ModalContainer>
       </Overlay>,

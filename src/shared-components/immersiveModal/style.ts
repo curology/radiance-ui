@@ -15,7 +15,7 @@ export const Overlay = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: ${COLORS.overlay};
+  background-color: rgba(58, 55, 75, 0.7);
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
 `;
@@ -23,11 +23,15 @@ export const Overlay = styled.div`
 export const ModalContainer = styled.div`
   background-color: ${COLORS.white};
   height: 100vh;
-  margin: 0 auto;
+  margin: 32px auto 0;
   max-width: ${BREAKPOINTS.sm}px;
   overflow-y: auto;
   position: relative;
   width: 100%;
+  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  padding: 56px 24px 32px 24px;
 
   ${MEDIA_QUERIES.mdUp} {
     height: auto;
@@ -37,36 +41,34 @@ export const ModalContainer = styled.div`
   }
 `;
 
-export const CloseIconContainer = styled.div`
+export const CloseButtonContainer = styled.div`
   position: absolute;
-  right: ${SPACER.medium};
-  top: ${SPACER.medium};
+  top: ${SPACER.small};
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: ${COLORS.white};
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   z-index: ${Z_SCALE.e2000};
 `;
 
-export const CopyContainer = styled.div`
-  padding: ${SPACER.xlarge} ${SPACER.large};
+export const HeaderImageContainer = styled.div``;
 
-  ${MEDIA_QUERIES.mdUp} {
-    padding: ${SPACER.x2large} ${SPACER.xlarge};
-  }
-`;
-
-export const Title = styled(Typography.Title)`
-  margin-bottom: ${SPACER.medium};
-  text-align: left;
+export const Title = styled(Typography.Heading)`
+  margin-bottom: ${SPACER.small};
 `;
 
 export const Body = styled.div`
-  color: ${COLORS.purple85};
-  text-align: left;
-
-  &:not(:last-child) {
+  p {
     margin-bottom: ${SPACER.large};
-  }
 
-  p > a {
-    text-transform: none;
+    & > a {
+      text-transform: none;
+    }
   }
 `;
 

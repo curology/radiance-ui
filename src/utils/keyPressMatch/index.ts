@@ -1,4 +1,4 @@
-import { KeyType } from '../../constants/keycodes';
+import { KeyType } from '../../constants/keyboardKeys';
 
 export default (event: KeyboardEvent, pressedKey: KeyType): boolean => {
   let code;
@@ -9,5 +9,5 @@ export default (event: KeyboardEvent, pressedKey: KeyType): boolean => {
     code = event.keyCode;
   }
 
-  return code === pressedKey.stringValue || code === pressedKey.numericValue;
+  return code === pressedKey.key || code === pressedKey.keyCode;
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ImmersiveModal, Button } from 'src/shared-components';
 
 const ImmersiveModalExamples = (): JSX.Element => {
-  const [defaultModalIsOpen, setDefaultModalIsOpen] = useState(false);
+  const [defaultModalIsOpen, setDefaultModalIsOpen] = useState(true);
 
   return (
     <div>
@@ -11,16 +11,51 @@ const ImmersiveModalExamples = (): JSX.Element => {
       </Button>
       {defaultModalIsOpen && (
         <ImmersiveModal onClose={(): void => setDefaultModalIsOpen(false)}>
-          <ImmersiveModal.Title>
-            This is styled with ImmersiveModal.Title
-          </ImmersiveModal.Title>
+          <ImmersiveModal.Title>Immersive modal title</ImmersiveModal.Title>
           <ImmersiveModal.Body>
-            This is styled with ImmersiveModal.Body.
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+              maiores atque sapiente hic recusandae, dicta iure odit architecto
+              aperiam alias molestiae eius cum? Rerum molestias fuga
+              accusantium? Quos, harum.
+            </p>
           </ImmersiveModal.Body>
-          <ImmersiveModal.Footer>
-            This is styled with ImmersiveModal.Footer. It gives us a padding to
-            separate from the body.
-          </ImmersiveModal.Footer>
         </ImmersiveModal>
       )}
       {/* <br />
