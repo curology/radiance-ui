@@ -131,7 +131,7 @@ class ImmersiveModal extends React.Component<
                 {headerImage && (
                   <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                 )}
-                <ContentWithFooterContainer>
+                <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
                   <div>{children}</div>
                   {footerContent && <Footer>{footerContent}</Footer>}
                 </ContentWithFooterContainer>

@@ -37,7 +37,6 @@ export const ModalContainer = styled.div`
   background-color: ${COLORS.white};
   height: calc(100vh - ${SPACER.xlarge});
   margin: ${SPACER.xlarge} auto 0;
-  padding: ${SPACER.x4large} ${SPACER.large} 0 ${SPACER.large};
   overflow-y: auto;
   position: relative;
   width: 100%;
@@ -46,10 +45,10 @@ export const ModalContainer = styled.div`
   border-top-right-radius: 32px;
 
   ${MEDIA_QUERIES.mdUp} {
-    height: auto;
+    /* height: auto;
     max-width: 616px;
     margin-bottom: ${SPACER.large};
-    margin-top: ${SPACER.large};
+    margin-top: ${SPACER.large}; */
   }
 `;
 
@@ -68,7 +67,30 @@ export const CloseButtonContainer = styled.div`
   z-index: ${Z_SCALE.e2000};
 `;
 
-export const HeaderImageContainer = styled.div``;
+export const HeaderImageContainer = styled.div`
+  height: 240px;
+  max-height: 240px;
+  width: 100%;
+
+  img {
+    height: 240px;
+    max-height: 240px;
+    width: 100%;
+  }
+`;
+
+export const ContentWithFooterContainer = styled.div<{
+  hasHeaderImage: boolean;
+}>`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? 'calc(100% - 240px)' : '100%'};
+  padding: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? SPACER.xlarge : SPACER.x4large}
+    ${SPACER.large} 0 ${SPACER.large};
+`;
 
 export const Title = styled(Typography.Heading)`
   margin-bottom: ${SPACER.small};
@@ -78,6 +100,10 @@ export const Body = styled.div`
   p {
     margin-bottom: ${SPACER.large};
 
+    &:last-child {
+      margin-bottom: ${SPACER.xlarge};
+    }
+
     & > a {
       text-transform: none;
     }
@@ -86,11 +112,4 @@ export const Body = styled.div`
 
 export const Footer = styled.div`
   margin-bottom: 32px;
-`;
-
-export const ContentWithFooterContainer = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  height: 100%;
 `;
