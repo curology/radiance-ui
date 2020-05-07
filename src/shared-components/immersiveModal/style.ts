@@ -106,11 +106,11 @@ export const ContentWithFooterContainer = styled.div<{
     ${SPACER.large} 0 ${SPACER.large};
 `;
 
-export const Title = styled(Typography.Heading)`
+export const ModalTitle = styled(Typography.Heading)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const Body = styled.div`
+export const ModalBody = styled.div`
   p {
     margin-bottom: ${SPACER.large};
 
@@ -124,6 +124,6 @@ export const Body = styled.div`
   }
 `;
 
-export const Footer = styled.div`
+export const ModalFooter = styled.div`
   margin-bottom: 32px;
 `;

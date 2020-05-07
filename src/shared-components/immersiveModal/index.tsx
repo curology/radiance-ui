@@ -12,18 +12,18 @@ import {
   ModalContainer,
   CloseButtonContainer,
   HeaderImageContainer,
-  Title,
-  Body,
-  Footer,
   ContentWithFooterContainer,
+  ModalTitle,
+  ModalBody,
+  ModalFooter,
 } from './style';
 
 type ImmersiveModalProps = {
   children: React.ReactNode;
-  headerImage: React.ReactNode;
-  footerContent: React.ReactNode;
+  headerImage?: React.ReactNode;
+  footerContent?: React.ReactNode;
   onClose: () => void;
-  scrollContainerId: string;
+  title?: string;
 };
 
 export const reactPortalSectionId = '#reactPortalSection';
@@ -36,20 +36,15 @@ class ImmersiveModal extends React.Component<
     children: PropTypes.node.isRequired,
     headerImage: PropTypes.node,
     footerContent: PropTypes.node,
-    onClose: PropTypes.func,
-    scrollContainerId: PropTypes.string,
+    onClose: PropTypes.func.isRequired,
+    title: PropTypes.string,
   };
 
   static defaultProps = {
     headerImage: null,
     footerContent: null,
-    onClose: (): void => undefined,
-    scrollContainerId: 'modalScrollContainer',
+    title: '',
   };
-
-  static Title = Title;
-
-  static Body = Body;
 
   state = {
     isClosing: false,
@@ -100,13 +95,14 @@ class ImmersiveModal extends React.Component<
   render(): JSX.Element {
     const {
       children,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onClose,
       headerImage,
       footerContent,
-      scrollContainerId,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      onClose,
+      title,
       ...rest
     } = this.props;
+
     const { isClosing } = this.state;
 
     return ReactDOM.createPortal(
@@ -122,12 +118,10 @@ class ImmersiveModal extends React.Component<
       >
         {(transitionState): JSX.Element => (
           // eslint-disable-next-line react/jsx-props-no-spreading
-          <Overlay {...rest} className={transitionState}>
+          <Overlay className={transitionState} {...rest}>
             <OffClickWrapper onOffClick={this.handleCloseIntent}>
-              <ModalContainer
-                id={scrollContainerId}
-                className={transitionState}
-              >
+              {/* <ModalScrollingHeaderBar>DIEGO</ModalScrollingHeaderBar> */}
+              <ModalContainer className={transitionState}>
                 <CloseButtonContainer onClick={this.handleCloseIntent}>
                   <CrossIcon />
                 </CloseButtonContainer>
@@ -135,8 +129,11 @@ class ImmersiveModal extends React.Component<
                   <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                 )}
                 <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
-                  <div>{children}</div>
-                  {footerContent && <Footer>{footerContent}</Footer>}
+                  <ModalBody>
+                    {!!title && <ModalTitle>{title}</ModalTitle>}
+                    {children}
+                  </ModalBody>
+                  {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
                 </ContentWithFooterContainer>
               </ModalContainer>
             </OffClickWrapper>

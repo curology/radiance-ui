@@ -24,20 +24,18 @@ const ImmersiveModalExamples = (): JSX.Element => {
               </Button>
             </Button.Container>
           }
+          title="Immersive modal title"
         >
-          <ImmersiveModal.Title>Immersive modal title</ImmersiveModal.Title>
-          <ImmersiveModal.Body>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto.
-            </p>
-          </ImmersiveModal.Body>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto
+            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
+            Quos, harum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto.
+          </p>
         </ImmersiveModal>
       )}
       <br />
@@ -50,16 +48,14 @@ const ImmersiveModalExamples = (): JSX.Element => {
         <ImmersiveModal
           onClose={(): void => setheaderImageIsOpen(false)}
           headerImage={<img src={headerImage} alt="header" />}
+          title="With image as header"
         >
-          <ImmersiveModal.Title>With image as header</ImmersiveModal.Title>
-          <ImmersiveModal.Body>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-          </ImmersiveModal.Body>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto
+            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
+            Quos, harum.
+          </p>
         </ImmersiveModal>
       )}
     </React.Fragment>
