@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ImmersiveModal, Button } from 'src/shared-components';
 
 const ImmersiveModalExamples = (): JSX.Element => {
-  const [defaultModalIsOpen, setDefaultModalIsOpen] = useState(true);
+  const [defaultModalIsOpen, setDefaultModalIsOpen] = useState(false);
 
   return (
     <div>

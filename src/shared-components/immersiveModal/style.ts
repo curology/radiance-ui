@@ -14,6 +14,23 @@ export const Overlay = styled.div`
   background-color: rgba(58, 55, 75, 0.7);
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
+  transition: opacity 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.entering {
+    opacity: 0;
+  }
+
+  &.entered {
+    opacity: 1;
+  }
+
+  &.exiting {
+    opacity: 0;
+  }
+
+  &.exited {
+    opacity: 0;
+  }
 `;
 
 export const ModalContainer = styled.div`
