@@ -124,7 +124,10 @@ class ImmersiveModal extends React.Component<
           // eslint-disable-next-line react/jsx-props-no-spreading
           <Overlay {...rest} className={transitionState}>
             <OffClickWrapper onOffClick={this.handleCloseIntent}>
-              <ModalContainer id={scrollContainerId}>
+              <ModalContainer
+                id={scrollContainerId}
+                className={transitionState}
+              >
                 <CloseButtonContainer onClick={this.handleCloseIntent}>
                   <CrossIcon />
                 </CloseButtonContainer>

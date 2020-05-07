@@ -44,11 +44,25 @@ export const ModalContainer = styled.div`
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
 
+  transition: transform 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.entering {
+    transform: translateY(100%);
+  }
+
+  &.entered {
+    transform: translateY(0%);
+  }
+
+  &.exiting {
+    transform: translateY(100%);
+  }
+
+  &.exited {
+    transform: translateY(100%);
+  }
+
   ${MEDIA_QUERIES.mdUp} {
-    /* height: auto;
-    max-width: 616px;
-    margin-bottom: ${SPACER.large};
-    margin-top: ${SPACER.large}; */
   }
 `;
 

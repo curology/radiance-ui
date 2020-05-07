@@ -35,39 +35,7 @@ const ImmersiveModalExamples = (): JSX.Element => {
             </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
+              maiores atque sapiente hic recusandae, dicta iure odit architecto.
             </p>
           </ImmersiveModal.Body>
         </ImmersiveModal>
@@ -85,30 +53,6 @@ const ImmersiveModalExamples = (): JSX.Element => {
         >
           <ImmersiveModal.Title>With image as header</ImmersiveModal.Title>
           <ImmersiveModal.Body>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-              maiores atque sapiente hic recusandae, dicta iure odit architecto
-              aperiam alias molestiae eius cum? Rerum molestias fuga
-              accusantium? Quos, harum.
-            </p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
               maiores atque sapiente hic recusandae, dicta iure odit architecto
