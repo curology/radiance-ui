@@ -36,6 +36,14 @@ const ImmersiveModalExamples = (): JSX.Element => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
             maiores atque sapiente hic recusandae, dicta iure odit architecto.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto.
+          </p>
         </ImmersiveModal>
       )}
       <br />

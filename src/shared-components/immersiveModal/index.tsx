@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
+import throttle from 'lodash.throttle';
 
 import keyboardKeys from '../../constants/keyboardKeys';
 import keyPressMatch from '../../utils/keyPressMatch';
@@ -9,8 +10,9 @@ import OffClickWrapper from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
   Overlay,
+  ScrollingHeaderBar,
   ModalContainer,
-  CloseButtonContainer,
+  CrossIconContainer,
   HeaderImageContainer,
   ContentWithFooterContainer,
   ModalTitle,
@@ -54,6 +56,8 @@ class ImmersiveModal extends React.Component<
 
   domNode: HTMLElement;
 
+  modalScrollingElement: HTMLElement | null = null;
+
   constructor(props: ImmersiveModalProps) {
     super(props);
 
@@ -66,6 +70,12 @@ class ImmersiveModal extends React.Component<
   componentDidMount(): void {
     this.htmlNode.classList.add('no-scroll');
 
+    this.modalScrollingElement = document.querySelector('#modal-scrolling-id');
+
+    if (this.modalScrollingElement) {
+      this.modalScrollingElement.addEventListener('scroll', this.handleScroll);
+    }
+
     document
       .getElementsByTagName('body')[0]
       .addEventListener('keydown', this.handleEscapeKey);
@@ -74,10 +84,24 @@ class ImmersiveModal extends React.Component<
   componentWillUnmount(): void {
     this.htmlNode.classList.remove('no-scroll');
 
+    if (this.modalScrollingElement) {
+      this.modalScrollingElement.removeEventListener(
+        'scroll',
+        this.handleScroll,
+      );
+    }
+
     document
       .getElementsByTagName('body')[0]
       .removeEventListener('keydown', this.handleEscapeKey);
   }
+
+  handleScroll = throttle(() => {
+    // if (this.modalScrollingElement) {
+    //   const scrollDistance = this.modalScrollingElement.scrollTop;
+    //   console.log(scrollDistance);
+    // }
+  }, 150);
 
   handleCloseIntent = (): void => {
     const { onClose } = this.props;
@@ -117,27 +141,39 @@ class ImmersiveModal extends React.Component<
         appear
       >
         {(transitionState): JSX.Element => (
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <Overlay className={transitionState} {...rest}>
-            <OffClickWrapper onOffClick={this.handleCloseIntent}>
-              {/* <ModalScrollingHeaderBar>DIEGO</ModalScrollingHeaderBar> */}
-              <ModalContainer className={transitionState}>
-                <CloseButtonContainer onClick={this.handleCloseIntent}>
-                  <CrossIcon />
-                </CloseButtonContainer>
-                {headerImage && (
-                  <HeaderImageContainer>{headerImage}</HeaderImageContainer>
-                )}
-                <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
-                  <ModalBody>
-                    {!!title && <ModalTitle>{title}</ModalTitle>}
-                    {children}
-                  </ModalBody>
-                  {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
-                </ContentWithFooterContainer>
-              </ModalContainer>
-            </OffClickWrapper>
-          </Overlay>
+          <React.Fragment>
+            <ScrollingHeaderBar>
+              {title}
+              <CrossIconContainer onClick={this.handleCloseIntent}>
+                <CrossIcon />
+              </CrossIconContainer>
+            </ScrollingHeaderBar>
+            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+            <Overlay className={transitionState} {...rest}>
+              <OffClickWrapper onOffClick={this.handleCloseIntent}>
+                <ModalContainer
+                  className={transitionState}
+                  id="modal-scrolling-id"
+                >
+                  <CrossIconContainer onClick={this.handleCloseIntent}>
+                    <CrossIcon />
+                  </CrossIconContainer>
+                  {headerImage && (
+                    <HeaderImageContainer>{headerImage}</HeaderImageContainer>
+                  )}
+                  <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
+                    <ModalBody>
+                      {!!title && <ModalTitle>{title}</ModalTitle>}
+                      {children}
+                    </ModalBody>
+                    {footerContent && (
+                      <ModalFooter>{footerContent}</ModalFooter>
+                    )}
+                  </ContentWithFooterContainer>
+                </ModalContainer>
+              </OffClickWrapper>
+            </Overlay>
+          </React.Fragment>
         )}
       </Transition>,
       this.domNode,

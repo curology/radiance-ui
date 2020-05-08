@@ -2,7 +2,11 @@ import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import {
-  COLORS, MEDIA_QUERIES, SPACER, Z_SCALE, 
+  COLORS,
+  MEDIA_QUERIES,
+  SPACER,
+  Z_SCALE,
+  TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -66,7 +70,7 @@ export const ModalContainer = styled.div`
   }
 `;
 
-export const CloseButtonContainer = styled.div`
+export const CrossIconContainer = styled.div`
   position: absolute;
   top: ${SPACER.small};
   right: 12px;
@@ -126,4 +130,20 @@ export const ModalBody = styled.div`
 
 export const ModalFooter = styled.div`
   margin-bottom: 32px;
+`;
+
+export const ScrollingHeaderBar = styled.div`
+  position: fixed;
+  z-index: ${Z_SCALE.modal + 1};
+  width: 100%;
+  background: ${COLORS.white};
+  color: ${COLORS.primary};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid ${COLORS.border};
+  opacity: 0.4;
 `;
