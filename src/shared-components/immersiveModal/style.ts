@@ -101,7 +101,7 @@ export const ContentWithFooterContainer = styled.div<{
   flex-flow: column nowrap;
   justify-content: space-between;
   min-height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100% - 240px)' : 'calc(100vh - 32px)'};
+    hasHeaderImage ? 'calc(100vh - 304px)' : 'calc(100vh - 88px)'};
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? SPACER.xlarge : SPACER.x4large}
     ${SPACER.large} 0 ${SPACER.large};
@@ -131,6 +131,8 @@ export const ModalFooter = styled.div`
 
 export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: ${Z_SCALE.modal + 1};
   width: 100%;
   background: ${COLORS.white};
