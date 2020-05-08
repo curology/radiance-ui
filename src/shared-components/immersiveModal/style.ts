@@ -37,33 +37,6 @@ export const Overlay = styled.div`
   }
 `;
 
-export const ModalContainer = styled.div`
-  height: 100vh;
-  margin: 0 auto;
-  overflow-y: auto;
-  width: 100%;
-  transition: transform 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &.entering {
-    transform: translateY(100%);
-  }
-
-  &.entered {
-    transform: translateY(0%);
-  }
-
-  &.exiting {
-    transform: translateY(100%);
-  }
-
-  &.exited {
-    transform: translateY(100%);
-  }
-
-  ${MEDIA_QUERIES.mdUp} {
-  }
-`;
-
 export const CrossIconContainer = styled.div`
   position: absolute;
   top: ${SPACER.small};
@@ -92,19 +65,6 @@ export const HeaderImageContainer = styled.div`
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
   }
-`;
-
-export const ContentWithFooterContainer = styled.div<{
-  hasHeaderImage: boolean;
-}>`
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  min-height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100vh - 304px)' : 'calc(100vh - 88px)'};
-  padding: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? SPACER.xlarge : SPACER.x4large}
-    ${SPACER.large} 0 ${SPACER.large};
 `;
 
 export const ModalTitle = styled(Typography.Heading)`
@@ -150,12 +110,48 @@ export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   opacity: ${({ showMobileHeaderBar }): number =>
     showMobileHeaderBar ? 1 : 0};
   pointer-events: none;
+
+  ${MEDIA_QUERIES.mdUp} {
+    display: none;
+  }
 `;
 
 export const MobileTopOverlay = styled.div`
   width: 100%;
   background: transparent;
   height: 32px;
+
+  ${MEDIA_QUERIES.mdUp} {
+    display: none;
+  }
+`;
+
+export const ModalContainer = styled.div`
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  overflow-y: auto;
+  transition: transform 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &.entering {
+    transform: translateY(100%);
+  }
+
+  &.entered {
+    transform: translateY(0%);
+  }
+
+  &.exiting {
+    transform: translateY(100%);
+  }
+
+  &.exited {
+    transform: translateY(100%);
+  }
+
+  ${MEDIA_QUERIES.mdUp} {
+    width: 616px;
+  }
 `;
 
 export const MainModalContentContainer = styled.div`
@@ -164,5 +160,23 @@ export const MainModalContentContainer = styled.div`
   border-top-right-radius: 32px;
   background: white;
   position: relative;
-  min-height: calc(100% - 32px);
+
+  ${MEDIA_QUERIES.mdUp} {
+    border-radius: 8px;
+  }
+`;
+
+// 32px comes from top overlay
+// 272px comes from 32px top overlay + 240px image
+export const ContentWithFooterContainer = styled.div<{
+  hasHeaderImage: boolean;
+}>`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  min-height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? 'calc(100vh - 272px)' : 'calc(100vh - 32px)'};
+  padding: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? SPACER.xlarge : SPACER.x4large}
+    ${SPACER.large} 0 ${SPACER.large};
 `;

@@ -158,11 +158,11 @@ class ImmersiveModal extends React.Component<
             </MobileHeaderBar>
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             <Overlay className={transitionState} {...rest}>
-              <OffClickWrapper onOffClick={this.handleCloseIntent}>
-                <ModalContainer
-                  className={transitionState}
-                  id="modal-scrolling-id"
-                >
+              <ModalContainer
+                className={transitionState}
+                id="modal-scrolling-id"
+              >
+                <OffClickWrapper onOffClick={this.handleCloseIntent}>
                   <MobileTopOverlay onClick={this.handleCloseIntent} />
                   <MainModalContentContainer>
                     <CrossIconContainer onClick={this.handleCloseIntent}>
@@ -181,8 +181,8 @@ class ImmersiveModal extends React.Component<
                       )}
                     </ContentWithFooterContainer>
                   </MainModalContentContainer>
-                </ModalContainer>
-              </OffClickWrapper>
+                </OffClickWrapper>
+              </ModalContainer>
             </Overlay>
           </React.Fragment>
         )}

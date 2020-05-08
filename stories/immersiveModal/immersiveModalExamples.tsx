@@ -32,36 +32,6 @@ const ImmersiveModalExamples = (): JSX.Element => {
             aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
             Quos, harum.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
         </ImmersiveModal>
       )}
       <br />
@@ -75,42 +45,18 @@ const ImmersiveModalExamples = (): JSX.Element => {
           onClose={(): void => setheaderImageIsOpen(false)}
           headerImage={<img src={headerImage} alt="header" />}
           title="With image as header"
+          footerContent={
+            <Button.Container>
+              <Button isFullWidth>Update Payment Method</Button>
+              <Button isFullWidth buttonType="tertiary">
+                Dismiss
+              </Button>
+            </Button.Container>
+          }
         >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
             maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
           </p>
         </ImmersiveModal>
       )}
