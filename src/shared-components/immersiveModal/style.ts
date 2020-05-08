@@ -18,7 +18,7 @@ export const Overlay = styled.div`
   background-color: rgba(58, 55, 75, 0.7);
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
-  transition: opacity 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.entering {
     opacity: 0;
@@ -38,17 +38,11 @@ export const Overlay = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-  background-color: ${COLORS.white};
-  height: calc(100vh - ${SPACER.xlarge});
-  margin: ${SPACER.xlarge} auto 0;
+  height: 100vh;
+  margin: 0 auto;
   overflow-y: auto;
-  position: relative;
   width: 100%;
-  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
-
-  transition: transform 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.entering {
     transform: translateY(100%);
@@ -83,6 +77,7 @@ export const CrossIconContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: ${Z_SCALE.e2000};
+  pointer-events: auto;
 `;
 
 export const HeaderImageContainer = styled.div`
@@ -132,7 +127,7 @@ export const ModalFooter = styled.div`
   margin-bottom: 32px;
 `;
 
-export const ScrollingHeaderBar = styled.div`
+export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   position: fixed;
   z-index: ${Z_SCALE.modal + 1};
   width: 100%;
@@ -145,5 +140,24 @@ export const ScrollingHeaderBar = styled.div`
   align-items: center;
   height: 56px;
   border-bottom: 1px solid ${COLORS.border};
-  opacity: 0.4;
+  transition: opacity 350ms
+    ${({ showMobileHeaderBar }): string =>
+    showMobileHeaderBar ? 'ease-out' : 'ease-in'};
+  opacity: ${({ showMobileHeaderBar }): number =>
+    showMobileHeaderBar ? 1 : 0};
+  pointer-events: none;
+`;
+
+export const MobileTopOverlay = styled.div`
+  width: 100%;
+  background: transparent;
+  height: 32px;
+`;
+
+export const MainModalContentContainer = styled.div`
+  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  background: white;
+  position: relative;
 `;

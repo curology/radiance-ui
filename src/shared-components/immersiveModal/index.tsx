@@ -10,14 +10,16 @@ import OffClickWrapper from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
   Overlay,
-  ScrollingHeaderBar,
+  MobileHeaderBar,
   ModalContainer,
+  MobileTopOverlay,
   CrossIconContainer,
   HeaderImageContainer,
   ContentWithFooterContainer,
   ModalTitle,
   ModalBody,
   ModalFooter,
+  MainModalContentContainer,
 } from './style';
 
 type ImmersiveModalProps = {
@@ -28,11 +30,16 @@ type ImmersiveModalProps = {
   title?: string;
 };
 
+type ImmersiveModalState = {
+  isClosing: boolean;
+  showMobileHeaderBar: boolean;
+};
+
 export const reactPortalSectionId = '#reactPortalSection';
 
 class ImmersiveModal extends React.Component<
   ImmersiveModalProps,
-  { isClosing: boolean }
+  ImmersiveModalState
 > {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -50,6 +57,7 @@ class ImmersiveModal extends React.Component<
 
   state = {
     isClosing: false,
+    showMobileHeaderBar: false,
   };
 
   htmlNode: HTMLElement;
@@ -97,17 +105,17 @@ class ImmersiveModal extends React.Component<
   }
 
   handleScroll = throttle(() => {
-    // if (this.modalScrollingElement) {
-    //   const scrollDistance = this.modalScrollingElement.scrollTop;
-    //   console.log(scrollDistance);
-    // }
-  }, 150);
+    if (this.modalScrollingElement) {
+      const showMobileHeaderBar = this.modalScrollingElement.scrollTop > 32;
+      this.setState({ showMobileHeaderBar });
+    }
+  }, 100);
 
   handleCloseIntent = (): void => {
     const { onClose } = this.props;
-    this.setState({ isClosing: true });
+    this.setState({ isClosing: true, showMobileHeaderBar: false });
 
-    setTimeout(onClose, 4100);
+    setTimeout(onClose, 450);
   };
 
   handleEscapeKey = (event: KeyboardEvent): void => {
@@ -127,14 +135,14 @@ class ImmersiveModal extends React.Component<
       ...rest
     } = this.props;
 
-    const { isClosing } = this.state;
+    const { isClosing, showMobileHeaderBar } = this.state;
 
     return ReactDOM.createPortal(
       <Transition
         timeout={{
           appear: 0,
           enter: 0,
-          exit: 4000,
+          exit: 350,
         }}
         in={!isClosing}
         unmountOnExit
@@ -142,12 +150,12 @@ class ImmersiveModal extends React.Component<
       >
         {(transitionState): JSX.Element => (
           <React.Fragment>
-            <ScrollingHeaderBar>
+            <MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
               {title}
               <CrossIconContainer onClick={this.handleCloseIntent}>
                 <CrossIcon />
               </CrossIconContainer>
-            </ScrollingHeaderBar>
+            </MobileHeaderBar>
             {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             <Overlay className={transitionState} {...rest}>
               <OffClickWrapper onOffClick={this.handleCloseIntent}>
@@ -155,21 +163,24 @@ class ImmersiveModal extends React.Component<
                   className={transitionState}
                   id="modal-scrolling-id"
                 >
-                  <CrossIconContainer onClick={this.handleCloseIntent}>
-                    <CrossIcon />
-                  </CrossIconContainer>
-                  {headerImage && (
-                    <HeaderImageContainer>{headerImage}</HeaderImageContainer>
-                  )}
-                  <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
-                    <ModalBody>
-                      {!!title && <ModalTitle>{title}</ModalTitle>}
-                      {children}
-                    </ModalBody>
-                    {footerContent && (
-                      <ModalFooter>{footerContent}</ModalFooter>
+                  <MobileTopOverlay onClick={this.handleCloseIntent} />
+                  <MainModalContentContainer>
+                    <CrossIconContainer onClick={this.handleCloseIntent}>
+                      <CrossIcon />
+                    </CrossIconContainer>
+                    {headerImage && (
+                      <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                     )}
-                  </ContentWithFooterContainer>
+                    <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
+                      <ModalBody>
+                        {!!title && <ModalTitle>{title}</ModalTitle>}
+                        {children}
+                      </ModalBody>
+                      {footerContent && (
+                        <ModalFooter>{footerContent}</ModalFooter>
+                      )}
+                    </ContentWithFooterContainer>
+                  </MainModalContentContainer>
                 </ModalContainer>
               </OffClickWrapper>
             </Overlay>
