@@ -89,6 +89,8 @@ export const HeaderImageContainer = styled.div`
     height: 240px;
     max-height: 240px;
     width: 100%;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
   }
 `;
 
@@ -98,8 +100,8 @@ export const ContentWithFooterContainer = styled.div<{
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100% - 240px)' : '100%'};
+  min-height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? 'calc(100% - 240px)' : 'calc(100vh - 32px)'};
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? SPACER.xlarge : SPACER.x4large}
     ${SPACER.large} 0 ${SPACER.large};
@@ -160,4 +162,5 @@ export const MainModalContentContainer = styled.div`
   border-top-right-radius: 32px;
   background: white;
   position: relative;
+  min-height: calc(100% - 32px);
 `;
