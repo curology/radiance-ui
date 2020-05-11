@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import Typography from '../typography';
 import {
@@ -110,7 +111,7 @@ export const ModalFooter = styled.div`
   margin-bottom: 32px;
 `;
 
-export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
+const commonHeaderBarStyles = css`
   position: fixed;
   top: 0;
   left: 0;
@@ -125,15 +126,44 @@ export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   align-items: center;
   height: 56px;
   border-bottom: 1px solid ${COLORS.border};
+  pointer-events: none;
+`;
+
+export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
+  ${commonHeaderBarStyles};
+
   transition: opacity 350ms
     ${({ showMobileHeaderBar }): string =>
     showMobileHeaderBar ? 'ease-out' : 'ease-in'};
   opacity: ${({ showMobileHeaderBar }): number =>
     showMobileHeaderBar ? 1 : 0};
-  pointer-events: none;
 
   ${MEDIA_QUERIES.mdUp} {
     display: none;
+  }
+`;
+
+export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
+  ${commonHeaderBarStyles};
+
+  top: 56px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: none;
+
+  transition: opacity 350ms
+    ${({ showDesktopHeaderBar }): string =>
+    showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
+  opacity: ${({ showDesktopHeaderBar }): number =>
+    showDesktopHeaderBar ? 1 : 0};
+
+  ${MEDIA_QUERIES.mdUp} {
+    display: flex;
+
+    ${CrossIconContainer} {
+      top: 8px;
+      right: 12px;
+    }
   }
 `;
 
