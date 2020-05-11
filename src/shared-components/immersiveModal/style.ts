@@ -201,23 +201,23 @@ export const ModalContainer = styled.div`
     width: 616px;
 
     & > div.modal-offclick-wrapper {
-      height: calc(100% - 56px);
+      height: calc(100% - 112px);
     }
   }
 `;
 
-type hasHeaderImage = {
+type HasHeaderImageProps = {
   hasHeaderImage: boolean;
 };
 
 // 32px comes from top overlay
 // 272px comes from 32px top overlay + 240px image
-export const MainModalContentContainer = styled.div<hasHeaderImage>`
-  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
+  position: relative;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  background: white;
-  position: relative;
+  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  background: ${COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
@@ -226,18 +226,18 @@ export const MainModalContentContainer = styled.div<hasHeaderImage>`
     border-radius: 8px;
     margin-top: 56px;
     overflow-y: auto;
-    height: calc(100% - 56px);
+    height: 100%;
   }
 `;
 
-export const ContentWithFooterContainer = styled.div<hasHeaderImage>`
+export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   min-height: 100%;
-  background: white;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
+  background: ${COLORS.white};
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage
       ? `${SPACER.xlarge} ${SPACER.large} 0`
@@ -245,7 +245,9 @@ export const ContentWithFooterContainer = styled.div<hasHeaderImage>`
 
   ${MEDIA_QUERIES.mdUp} {
     padding: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? '40px 56px 0' : '72px 56px 0'};
+    hasHeaderImage
+      ? `${SPACER.x2large} ${SPACER.x4large} 0`
+      : `72px ${SPACER.x2large} 0`};
     min-height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
   }
