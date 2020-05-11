@@ -10,7 +10,7 @@ const ImmersiveModalExamples = (): JSX.Element => {
   return (
     <React.Fragment>
       {/* DEFAULT MODAL */}
-      <Button onClick={(): void => setDefaultIsOpen(true)}>
+      <Button onClick={(): void => setDefaultIsOpen(false)}>
         Open standard modal
       </Button>
       {defaultIsOpen && (
