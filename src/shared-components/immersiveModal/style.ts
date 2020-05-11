@@ -179,7 +179,7 @@ export const MobileTopOverlay = styled.div`
 
 export const ModalContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   overflow-y: auto;
   transition: transform 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -200,48 +200,60 @@ export const ModalContainer = styled.div`
     transform: translateY(100%);
   }
 
+  & > div.modal-offclick-wrapper {
+    height: 100%;
+  }
+
   ${MEDIA_QUERIES.mdUp} {
     width: 616px;
+
+    & > div.modal-offclick-wrapper {
+      height: calc(100% - 56px);
+    }
   }
 `;
 
-// 112px comes from 56px margin top and bottom
-export const MainModalContentContainer = styled.div`
+type hasHeaderImage = {
+  hasHeaderImage: boolean;
+};
+
+// 32px comes from top overlay
+// 272px comes from 32px top overlay + 240px image
+export const MainModalContentContainer = styled.div<hasHeaderImage>`
   box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   background: white;
   position: relative;
+  height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
   ${MEDIA_QUERIES.mdUp} {
     box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
     border-radius: 8px;
-    height: calc(100vh - 112px);
     margin-top: 56px;
     overflow-y: auto;
+    height: calc(100% - 56px);
   }
 `;
 
-// 32px comes from top overlay
-// 272px comes from 32px top overlay + 240px image
-export const ContentWithFooterContainer = styled.div<{
-  hasHeaderImage: boolean;
-}>`
+export const ContentWithFooterContainer = styled.div<hasHeaderImage>`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  min-height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100vh - 272px)' : 'calc(100vh - 32px)'};
+  min-height: 100%;
+  background: white;
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage
-      ? SPACER.xlarge
-      : `${SPACER.x4large}
-    ${SPACER.large} 0 ${SPACER.large}`};
+      ? `${SPACER.xlarge} ${SPACER.large} 0`
+      : `${SPACER.x4large} ${SPACER.large} 0`};
 
   ${MEDIA_QUERIES.mdUp} {
-    min-height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100vh - 376px)' : 'calc(100vh - 112px)'};
     padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? '40px 56px 0' : '72px 56px 0'};
-  
+    min-height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
+  }
 `;

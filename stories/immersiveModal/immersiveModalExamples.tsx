@@ -19,36 +19,39 @@ const ImmersiveModalExamples = (): JSX.Element => {
           footerContent={
             <Button.Container>
               <Button isFullWidth>Update Payment Method</Button>
-              <Button isFullWidth buttonType="tertiary">
-                Dismiss
-              </Button>
             </Button.Container>
           }
           title="Immersive modal title"
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
-            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
-            Quos, harum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
           </p>
         </ImmersiveModal>
       )}
@@ -70,34 +73,52 @@ const ImmersiveModalExamples = (): JSX.Element => {
           }
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
-            reiciendis, possimus consequatur nam eum at asperiores similique
-            deserunt delectus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
-            reiciendis, possimus consequatur nam eum at asperiores similique
-            deserunt delectus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
-            reiciendis, possimus consequatur nam eum at asperiores similique
-            deserunt delectus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
-            reiciendis, possimus consequatur nam eum at asperiores similique
-            deserunt delectus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
-            reiciendis, possimus consequatur nam eum at asperiores similique
-            deserunt delectus.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
+            at velit voluptatem, delectus earum sapiente accusantium asperiores
+            incidunt assumenda voluptatibus laudantium nulla explicabo labore
+            aut distinctio quibusdam deleniti. Tenetur, quas?
           </p>
         </ImmersiveModal>
       )}

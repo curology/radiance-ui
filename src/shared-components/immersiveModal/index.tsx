@@ -189,9 +189,15 @@ class ImmersiveModal extends React.Component<
                 className={transitionState}
                 id="modal-mobile-scrolling-id"
               >
-                <OffClickWrapper onOffClick={this.handleCloseIntent}>
+                <OffClickWrapper
+                  onOffClick={this.handleCloseIntent}
+                  className="modal-offclick-wrapper"
+                >
                   <MobileTopOverlay onClick={this.handleCloseIntent} />
-                  <MainModalContentContainer id="modal-desktop-scrolling-id">
+                  <MainModalContentContainer
+                    id="modal-desktop-scrolling-id"
+                    hasHeaderImage={!!headerImage}
+                  >
                     <DesktopHeaderBar
                       showDesktopHeaderBar={showDesktopHeaderBar}
                     >
