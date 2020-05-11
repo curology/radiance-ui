@@ -7,6 +7,7 @@ import {
   MEDIA_QUERIES,
   SPACER,
   Z_SCALE,
+  ANIMATION,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
@@ -16,25 +17,20 @@ export const Overlay = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(58, 55, 75, 0.7);
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
-  transition: opacity 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: rgba(58, 55, 75, 0.7);
+  transition: opacity ${ANIMATION.defaultTiming}
+    cubic-bezier(0.075, 0.82, 0.165, 1);
 
-  &.entering {
+  &.entering,
+  &.exiting,
+  &.exited {
     opacity: 0;
   }
 
   &.entered {
     opacity: 1;
-  }
-
-  &.exiting {
-    opacity: 0;
-  }
-
-  &.exited {
-    opacity: 0;
   }
 
   ${MEDIA_QUERIES.mdUp} {
@@ -44,8 +40,9 @@ export const Overlay = styled.div`
 
 export const CrossIconContainer = styled.div`
   position: absolute;
-  top: ${SPACER.small};
+  top: 8px;
   right: 12px;
+  z-index: ${Z_SCALE.e2000};
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -54,8 +51,8 @@ export const CrossIconContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  z-index: ${Z_SCALE.e2000};
   pointer-events: auto;
+  cursor: pointer;
 
   ${MEDIA_QUERIES.mdUp} {
     top: 16px;
@@ -64,12 +61,12 @@ export const CrossIconContainer = styled.div`
 `;
 
 export const HeaderImageContainer = styled.div`
-  height: 240px;
+  min-height: 240px;
   max-height: 240px;
   width: 100%;
 
   img {
-    height: 240px;
+    min-height: 240px;
     max-height: 240px;
     width: 100%;
     border-top-left-radius: 32px;
@@ -77,7 +74,7 @@ export const HeaderImageContainer = styled.div`
   }
 
   ${MEDIA_QUERIES.mdUp} {
-    height: 264px;
+    min-height: 264px;
     max-height: 264px;
 
     img {
@@ -108,7 +105,7 @@ export const ModalBody = styled.div`
 `;
 
 export const ModalFooter = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: ${SPACER.xlarge};
 `;
 
 const commonHeaderBarStyles = css`
@@ -132,7 +129,7 @@ const commonHeaderBarStyles = css`
 export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   ${commonHeaderBarStyles};
 
-  transition: opacity 350ms
+  transition: opacity ${ANIMATION.defaultTiming}
     ${({ showMobileHeaderBar }): string =>
     showMobileHeaderBar ? 'ease-out' : 'ease-in'};
   opacity: ${({ showMobileHeaderBar }): number =>
@@ -151,9 +148,10 @@ export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   border-top-right-radius: 8px;
   display: none;
 
-  transition: opacity 350ms
+  transition: opacity ${ANIMATION.defaultTiming}
     ${({ showDesktopHeaderBar }): string =>
     showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
+
   opacity: ${({ showDesktopHeaderBar }): number =>
     showDesktopHeaderBar ? 1 : 0};
 
@@ -182,20 +180,15 @@ export const ModalContainer = styled.div`
   height: 100%;
   margin: 0 auto;
   overflow-y: auto;
-  transition: transform 350ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &.entering {
-    transform: translateY(100%);
-  }
+  transition: transform ${ANIMATION.defaultTiming}
+    cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.entered {
     transform: translateY(0%);
   }
 
-  &.exiting {
-    transform: translateY(100%);
-  }
-
+  &.entering,
+  &.exiting,
   &.exited {
     transform: translateY(100%);
   }
