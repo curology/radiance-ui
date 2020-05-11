@@ -35,10 +35,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   text-align: left;
 }
 
-.emotion-0 {
-  color: #ffffff;
-}
-
 .emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -95,6 +91,10 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
+}
+
+.emotion-0 {
+  color: #ffffff;
 }
 
 <div
@@ -191,10 +191,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   text-align: left;
 }
 
-.emotion-0 {
-  color: #ffffff;
-}
-
 .emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -225,6 +221,10 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
+}
+
+.emotion-0 {
+  color: #ffffff;
 }
 
 <div
@@ -811,10 +811,6 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   text-align: left;
 }
 
-.emotion-0 {
-  color: #ffffff;
-}
-
 .emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -845,6 +841,10 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
+}
+
+.emotion-0 {
+  color: #ffffff;
 }
 
 <div
@@ -940,10 +940,6 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   text-align: left;
 }
 
-.emotion-0 {
-  color: #ffffff;
-}
-
 .emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -974,6 +970,10 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
+}
+
+.emotion-0 {
+  color: #ffffff;
 }
 
 <div

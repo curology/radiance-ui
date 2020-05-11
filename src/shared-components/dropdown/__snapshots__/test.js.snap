@@ -7,6 +7,37 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   text-align: left;
 }
 
+.emotion-1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1.5rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+}
+
+.emotion-1:hover {
+  cursor: pointer;
+}
+
+.emotion-1 svg {
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  -webkit-transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+}
+
 .emotion-0 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -44,37 +75,6 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
 
 .emotion-0::-moz-focus-inner {
   border: 0;
-}
-
-.emotion-1 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1.5rem;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
-  justify-content: start;
-}
-
-.emotion-1:hover {
-  cursor: pointer;
-}
-
-.emotion-1 svg {
-  -webkit-transition: -webkit-transform 350ms ease-in-out;
-  -webkit-transition: transform 350ms ease-in-out;
-  transition: transform 350ms ease-in-out;
 }
 
 <div
