@@ -35,6 +35,10 @@ export const Overlay = styled.div`
   &.exited {
     opacity: 0;
   }
+
+  ${MEDIA_QUERIES.mdUp} {
+    overflow-y: hidden;
+  }
 `;
 
 export const CrossIconContainer = styled.div`
@@ -51,6 +55,11 @@ export const CrossIconContainer = styled.div`
   align-items: center;
   z-index: ${Z_SCALE.e2000};
   pointer-events: auto;
+
+  ${MEDIA_QUERIES.mdUp} {
+    top: 16px;
+    right: 16px;
+  }
 `;
 
 export const HeaderImageContainer = styled.div`
@@ -64,6 +73,18 @@ export const HeaderImageContainer = styled.div`
     width: 100%;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
+  }
+
+  ${MEDIA_QUERIES.mdUp} {
+    height: 264px;
+    max-height: 264px;
+
+    img {
+      height: 264px;
+      max-height: 264px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
   }
 `;
 
@@ -154,6 +175,7 @@ export const ModalContainer = styled.div`
   }
 `;
 
+// 112px comes from 56px margin top and bottom
 export const MainModalContentContainer = styled.div`
   box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
   border-top-left-radius: 32px;
@@ -162,7 +184,11 @@ export const MainModalContentContainer = styled.div`
   position: relative;
 
   ${MEDIA_QUERIES.mdUp} {
+    box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
     border-radius: 8px;
+    height: calc(100vh - 112px);
+    margin-top: 56px;
+    overflow-y: auto;
   }
 `;
 
@@ -177,6 +203,15 @@ export const ContentWithFooterContainer = styled.div<{
   min-height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100vh - 272px)' : 'calc(100vh - 32px)'};
   padding: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? SPACER.xlarge : SPACER.x4large}
-    ${SPACER.large} 0 ${SPACER.large};
+    hasHeaderImage
+      ? SPACER.xlarge
+      : `${SPACER.x4large}
+    ${SPACER.large} 0 ${SPACER.large}`};
+
+  ${MEDIA_QUERIES.mdUp} {
+    min-height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? 'calc(100vh - 376px)' : 'calc(100vh - 112px)'};
+    padding: ${({ hasHeaderImage }): string =>
+    hasHeaderImage ? '40px 56px 0' : '72px 56px 0'};
+  
 `;

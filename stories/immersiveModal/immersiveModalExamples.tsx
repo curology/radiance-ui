@@ -4,7 +4,7 @@ import { ImmersiveModal, Button } from 'src/shared-components';
 import headerImage from './headerImage.jpg';
 
 const ImmersiveModalExamples = (): JSX.Element => {
-  const [defaultIsOpen, setDefaultIsOpen] = useState(false);
+  const [defaultIsOpen, setDefaultIsOpen] = useState(true);
   const [headerImageIsOpen, setheaderImageIsOpen] = useState(false);
 
   return (
@@ -32,6 +32,24 @@ const ImmersiveModalExamples = (): JSX.Element => {
             aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
             Quos, harum.
           </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto
+            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
+            Quos, harum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto
+            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
+            Quos, harum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
+            maiores atque sapiente hic recusandae, dicta iure odit architecto
+            aperiam alias molestiae eius cum? Rerum molestias fuga accusantium?
+            Quos, harum.
+          </p>
         </ImmersiveModal>
       )}
       <br />
@@ -48,15 +66,38 @@ const ImmersiveModalExamples = (): JSX.Element => {
           footerContent={
             <Button.Container>
               <Button isFullWidth>Update Payment Method</Button>
-              <Button isFullWidth buttonType="tertiary">
-                Dismiss
-              </Button>
             </Button.Container>
           }
         >
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed vel,
-            maiores atque sapiente hic recusandae, dicta iure odit architecto
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
+            reiciendis, possimus consequatur nam eum at asperiores similique
+            deserunt delectus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
+            reiciendis, possimus consequatur nam eum at asperiores similique
+            deserunt delectus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
+            reiciendis, possimus consequatur nam eum at asperiores similique
+            deserunt delectus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
+            reiciendis, possimus consequatur nam eum at asperiores similique
+            deserunt delectus.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            veniam ut eaque fugiat maiores neque, est vel doloremque rerum nihil
+            reiciendis, possimus consequatur nam eum at asperiores similique
+            deserunt delectus.
           </p>
         </ImmersiveModal>
       )}
