@@ -1,39 +1,57 @@
 # ImmersiveModal
 
-The immersive modal is used to provide a layer on top of a page when we need to present more content and actions to patients.
+It is used to provide a layer on top of a page when we need to present more content and actions to patients.
 
-Immersive modals should not be used as a step to add friction / confirm an action, use `Modal` instead.
+It should not be used as a step to add friction / confirm an action, use `Dialog Modal` instead.
 
-Immersive modals are closable if clicked outside of container.
+They are closable if clicked outside of container.
 
 Immersive modals always include the close button.
 
-### Images in modals:
-
-- Modals can contain a header image that is 240px tall (264px on desktop).
-- Header text is `32px` below the image and should behave similarly on scroll.
-- Images inside of modals should not contain rounded corners and should fit the content padding.
+Modals can contain a header image that is 240px tall (264px on desktop). Images should not contain rounded corners.
 
 ## Usage
 
 ```jsx
+// Imports
 import React from 'react';
+import { ImmersiveModal, Button } from 'src/shared-components';
+import headerImage from './headerImage.jpg';
+
+// Logic inside the component
+const [openModal, setOpenModal] = useState(false);
+
+{
+  openModal && (
+    <ImmersiveModal
+      onClose={(): void => setOpenModal(false)}
+      headerImage={<img src={headerImage} alt="header" />}
+      footerContent={
+        <Button.Container>
+          <Button isFullWidth>cta content</Button>
+        </Button.Container>
+      }
+      title="Immersive modal title"
+    >
+      <p>Lorem ipsum dolor sit...</p>
+    </ImmersiveModal>
+  );
+}
+
+// To open the modal
+<Button onClick={(): void => setOpenModal(true)}>Open Modal</Button>;
 ```
+
+## Examples
 
 <!-- STORY -->
 
-### Proptypes
+## Proptypes
 
-| prop        | propType | required | default         | description                                     |
-| ----------- | -------- | -------- | --------------- | ----------------------------------------------- |
-| onClose     | func     | no       | () => undefined | Function called when modal is closing           |
-| children    | node     | yes      | -               | Node that will render when the modal is visible |
-| headerImage | node     | no       | -               | Image that will render as header of the modal   |
-
-### Notes
-
-Modal Subcomponents:
-
-`<ImmersiveModal.Title>`
-`<ImmersiveModal.Body>`
-`<ImmersiveModal.Footer>`
+| prop          | propType | required | default | description                                                                |
+| ------------- | -------- | -------- | ------- | -------------------------------------------------------------------------- |
+| children      | node     | yes      | -       | Modal body content                                                         |
+| footerContent | node     | no       | -       | Recommended for buttons. This content is render at the bottom of the modal |
+| headerImage   | node     | no       | -       | Image that will render at the top of the modal                             |
+| onClose       | func     | yes      | -       | Function to close the modal                                                |
+| title         | string   | no       | -       | The title of the modal                                                     |

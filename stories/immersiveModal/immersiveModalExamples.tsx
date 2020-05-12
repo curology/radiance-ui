@@ -4,25 +4,93 @@ import { ImmersiveModal, Button } from 'src/shared-components';
 import headerImage from './headerImage.jpg';
 
 const ImmersiveModalExamples = (): JSX.Element => {
-  const [defaultIsOpen, setDefaultIsOpen] = useState(true);
-  const [headerImageIsOpen, setheaderImageIsOpen] = useState(false);
+  const [withScrolling, setWithScrolling] = useState(false);
+  const [withButtons, setWithButtons] = useState(false);
+  const [withImageHeader, setWithImageHeader] = useState(false);
 
   return (
     <React.Fragment>
-      {/* DEFAULT MODAL */}
-      <Button onClick={(): void => setDefaultIsOpen(false)}>
-        Open standard modal
+      {/* MODAL: scrolling */}
+      <Button onClick={(): void => setWithScrolling(true)}>
+        with scrolling content
       </Button>
-      {defaultIsOpen && (
+      {withScrolling && (
         <ImmersiveModal
-          onClose={(): void => setDefaultIsOpen(false)}
-          footerContent={
-            <Button.Container>
-              <Button isFullWidth>Update Payment Method</Button>
-            </Button.Container>
-          }
+          onClose={(): void => setWithScrolling(false)}
           title="Immersive modal title"
         >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
             explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
@@ -57,20 +125,39 @@ const ImmersiveModalExamples = (): JSX.Element => {
       )}
       <br />
       <br />
-      {/* MODAL WITH HEADER */}
-      <Button onClick={(): void => setheaderImageIsOpen(true)}>
-        Open with image as header
+      {/* MODAL: with buttons */}
+      <Button onClick={(): void => setWithButtons(true)}>
+        with footer buttons
       </Button>
-      {headerImageIsOpen && (
+      {withButtons && (
         <ImmersiveModal
-          onClose={(): void => setheaderImageIsOpen(false)}
-          headerImage={<img src={headerImage} alt="header" />}
-          title="With image as header"
+          onClose={(): void => setWithButtons(false)}
           footerContent={
             <Button.Container>
-              <Button isFullWidth>Update Payment Method</Button>
+              <Button isFullWidth>cta content</Button>
             </Button.Container>
           }
+          title="Immersive modal title"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            explicabo magni, sequi similique nisi ab. Culpa, debitis? Quibusdam
+            porro accusamus asperiores. Et ab nobis saepe optio hic eveniet
+            consectetur error?
+          </p>
+        </ImmersiveModal>
+      )}
+      <br />
+      <br />
+      {/* MODAL WITH HEADER */}
+      <Button onClick={(): void => setWithImageHeader(true)}>
+        with image as header
+      </Button>
+      {withImageHeader && (
+        <ImmersiveModal
+          onClose={(): void => setWithImageHeader(false)}
+          headerImage={<img src={headerImage} alt="header" />}
+          title="With image as header"
         >
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam
