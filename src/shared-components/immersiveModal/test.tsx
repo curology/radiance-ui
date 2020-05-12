@@ -1,21 +1,20 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 import ImmersiveModal from './index';
 
 describe('<ImmersiveModal />', () => {
-  describe('ImmersiveModal closure', () => {
-    it('invokes the onClose prop', () => {
-      const spy = jest.fn();
-      const wrapper = shallow(
-        <ImmersiveModal onClose={spy}>
-          <div>Hello World</div>
-        </ImmersiveModal>,
-      );
+  it('render children content correctly', () => {
+    const wrapper = mount(
+      <ImmersiveModal onClose={(): void => undefined}>
+        <div>Immersive Modal Children Content</div>
+      </ImmersiveModal>,
+    );
 
-      wrapper.find('[data-test-id="modal-close-icon-button"]');
+    const modalWrapper = wrapper
+      .find('[id="modal-desktop-scrolling-id"]')
+      .first();
 
-      // expect(spy).toHaveBeenCalled();
-    });
+    expect(modalWrapper.text()).toBe('Immersive Modal Children Content');
   });
 });
