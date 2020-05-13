@@ -160,7 +160,6 @@ export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
 
     ${CrossIconContainer} {
       top: 8px;
-      right: 12px;
     }
   }
 `;
