@@ -1,20 +1,22 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+import { ModalTitle } from './style';
+
 import ImmersiveModal from './index';
+
+const modalTitle = 'Immersive Modal Title';
+const modalBody = 'Immersive Modal Children Content';
 
 describe('<ImmersiveModal />', () => {
   it('render children content correctly', () => {
     const wrapper = mount(
-      <ImmersiveModal onClose={(): void => undefined}>
-        <div>Immersive Modal Children Content</div>
+      <ImmersiveModal onClose={(): void => undefined} title={modalTitle}>
+        <div>{modalBody}</div>
       </ImmersiveModal>,
     );
 
-    const modalWrapper = wrapper
-      .find('[id="modal-desktop-scrolling-id"]')
-      .first();
-
-    expect(modalWrapper.text()).toBe('Immersive Modal Children Content');
+    expect(wrapper.find(ModalTitle).text()).toBe(modalTitle);
+    expect(wrapper.text().includes(modalBody)).toBeTruthy();
   });
 });
