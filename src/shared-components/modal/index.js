@@ -6,7 +6,7 @@ import { Global } from '@emotion/core';
 import { RoundButton } from '../button';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import keyPressMatch from '../../utils/keyPressMatch';
-import KEYCODES from '../../constants/keycodes';
+import keyboardKeys from '../../constants/keyboardKeys';
 import {
   ModalOverlay,
   ModalBox,
@@ -70,7 +70,7 @@ class Modal extends React.Component {
   getParent = () => this.state.parentNode;
 
   handleEscapeKey = event => {
-    if (keyPressMatch(event, KEYCODES.escape)) {
+    if (keyPressMatch(event, keyboardKeys.escape)) {
       this.closeModal();
     }
   };
