@@ -1,20 +1,22 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
+import { ModalTitle } from './style';
+
 import DialogModal from './index';
+
+const modalTitle = 'Dialog Modal Title';
+const modalBody = 'Dialog Modal Children Content';
 
 describe('<DialogModal />', () => {
   it('render children content correctly', () => {
     const wrapper = mount(
-      <DialogModal title="Dialog Modal Title">
-        <div>Dialog Modal Children Content</div>
+      <DialogModal title={modalTitle}>
+        <div>{modalBody}</div>
       </DialogModal>,
     );
 
-    const modalWrapper = wrapper
-      .find('[id="modal-desktop-scrolling-id"]')
-      .first();
-
-    expect(modalWrapper.text()).toBe('Dialog Modal Children Content');
+    expect(wrapper.find(ModalTitle).text()).toBe(modalTitle);
+    expect(wrapper.text().includes(modalBody)).toBeTruthy();
   });
 });
