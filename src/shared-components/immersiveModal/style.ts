@@ -94,12 +94,8 @@ export const ModalBody = styled.div`
   p {
     margin-bottom: ${SPACER.large};
 
-    &:last-child {
+    &:last-of-type {
       margin-bottom: ${SPACER.xlarge};
-    }
-
-    & > a {
-      text-transform: none;
     }
   }
 `;
