@@ -1,21 +1,13 @@
-import keycodes from '../../constants/keycodes';
+import { KeyType } from '../../constants/keyboardKeys';
 
-type EventParamType = {
-  keyCode?: any;
-  keyIdentifier?: any;
-  key?: any;
-};
-
-export default (event: EventParamType, keycode: typeof keycodes) => {
+export default (event: KeyboardEvent, pressedKey: KeyType): boolean => {
   let code;
 
-  if (event.keyCode !== undefined) {
-    code = event.keyCode;
-  } else if (event.keyIdentifier !== undefined) {
-    code = event.keyIdentifier;
-  } else if (event.key !== undefined) {
+  if (event.key !== undefined) {
     code = event.key;
+  } else if (event.keyCode !== undefined) {
+    code = event.keyCode;
   }
 
-  return code === keycode;
+  return code === pressedKey.key || code === pressedKey.keyCode;
 };

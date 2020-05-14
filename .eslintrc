@@ -10,7 +10,8 @@
   ],
   "plugins": ["emotion"],
   "globals": {
-    "document": false
+    "document": false,
+    "window": false
   },
   "settings": {
     "import/resolver": {
