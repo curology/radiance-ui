@@ -1,14 +1,10 @@
 # DialogModal
 
-Dialog modals behave similarly on mobile as the `Immersive Modal`.
+Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.
 
-Dialog modals should not be used to display large amounts of content, use `Immersive modal` instead.
+Dialog modals doen't contain a Close button, they require a user to make a choice between options and are not closable on click/tap outside.
 
-Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it.
-
-Dialog modals doesn't contain a Close button, they require a user to make a choice between options and are not closable on click/tap outside.
-
-Dialog Modals should always contain at least 1 button but are flexible to either stack multiple buttons or put them in a row.
+Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
 
 ## Usage
 
@@ -22,16 +18,27 @@ const [openModal, setOpenModal] = useState(false);
 
 {
   openModal && (
-    <DialogModal
-      onClose={(): void => setOpenModal(false)}
-      footerContent={
-        <Button.Container>
-          <Button isFullWidth>cta content</Button>
-        </Button.Container>
-      }
-      title="Dialog modal title"
-    >
-      <p>Lorem ipsum dolor sit...</p>
+    <DialogModal title="Heads up!">
+      <p>
+        This will remove the cleanser and moisturizer from your free trial, too.
+        Just the custom bottle will be sent your way!
+      </p>
+      <p>
+        This will remove the cleanser and moisturizer from your free trial, too.
+        Just the custom bottle will be sent your way!
+      </p>
+      <Button.Container>
+        <Button isFullWidth onClick={(): void => setOpenModal(false)}>
+          Yes, remove
+        </Button>
+        <Button
+          isFullWidth
+          onClick={(): void => setOpenModal(false)}
+          buttonType="tertiary"
+        >
+          never mind
+        </Button>
+      </Button.Container>
     </DialogModal>
   );
 }
@@ -46,9 +53,7 @@ const [openModal, setOpenModal] = useState(false);
 
 ## Proptypes
 
-| prop          | propType | required | default | description                                                                |
-| ------------- | -------- | -------- | ------- | -------------------------------------------------------------------------- |
-| children      | node     | yes      | -       | Dialog Modal body content                                                  |
-| footerButtons | node     | no       | -       | Recommended for buttons. This content is render at the bottom of the modal |
-| onClose       | func     | yes      | -       | Function to close the modal                                                |
-| title         | string   | no       | -       | The title of the modal                                                     |
+| prop     | propType | required | default | description                                                                                                   |
+| -------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------- |
+| children | node     | yes      | -       | Dialog Modal body content. Must contain at least 1 button and is responsible to close the modal in the logic. |
+| title    | string   | no       | -       | The title of the modal                                                                                        |
