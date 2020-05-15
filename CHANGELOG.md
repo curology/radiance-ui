@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v8.1.0
+
+- [Feature] ImmersiveModal redesign ([#237](https://github.com/PocketDerm/radiance-ui/pull/237))
+
 # v8.0.1
 
 - [Feature] `truncateText` prop rename ([#233](https://github.com/PocketDerm/radiance-ui/pull/233))
