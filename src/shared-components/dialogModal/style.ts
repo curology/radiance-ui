@@ -2,11 +2,7 @@ import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import {
-  COLORS,
-  MEDIA_QUERIES,
-  SPACER,
-  Z_SCALE,
-  ANIMATION,
+  COLORS, MEDIA_QUERIES, SPACER, Z_SCALE, 
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -17,8 +13,7 @@ export const Overlay = styled.div`
   left: 0;
   z-index: ${Z_SCALE.modal};
   background-color: rgba(58, 55, 75, 0.7);
-  transition: opacity ${ANIMATION.defaultTiming}
-    cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.entering,
   &.exiting,
@@ -53,8 +48,7 @@ export const ModalContainer = styled.div`
   overflow-y: auto;
   max-height: 700px;
 
-  transition: transform ${ANIMATION.defaultTiming}
-    cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.entered {
     transform: translateY(0%);
@@ -91,4 +85,26 @@ export const ModalContainer = styled.div`
 
 export const ModalTitle = styled(Typography.Title)`
   margin-bottom: ${SPACER.small};
+`;
+
+export const CrossIconContainer = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: ${Z_SCALE.e2000};
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: ${COLORS.white};
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+
+  ${MEDIA_QUERIES.mdUp} {
+    top: 16px;
+    right: 16px;
+  }
 `;

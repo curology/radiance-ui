@@ -2,7 +2,7 @@
 
 Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.
 
-Dialog modals doen't contain a Close button, they require a user to make a choice between options and are not closable on click/tap outside.
+Dialog modals require a user to make a choice between options and are not closable on click/tap outside. They may contain a close button if a close function is provided.
 
 Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
 
@@ -53,7 +53,8 @@ const [openModal, setOpenModal] = useState(false);
 
 ## Proptypes
 
-| prop     | propType | required | default | description                                                                                                   |
-| -------- | -------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------- |
-| children | node     | yes      | -       | Dialog Modal body content. Must contain at least 1 button and is responsible to close the modal in the logic. |
-| title    | string   | no       | -       | The title of the modal                                                                                        |
+| prop             | propType | required | default | description                                                                                                     |
+| ---------------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------------------------- |
+| children         | node     | yes      | -       | Dialog Modal body content. Must contain at least 1 button and is responsible to close the modal in the logic.   |
+| onCloseIconClick | node     | no       | -       | If provided it will display a Close Icon at the top right. Must be a function that eventually closes the modal. |
+| title            | string   | no       | -       | The title of the modal                                                                                          |
