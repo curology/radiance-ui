@@ -23,10 +23,6 @@ const [openModal, setOpenModal] = useState(false);
         This will remove the cleanser and moisturizer from your free trial, too.
         Just the custom bottle will be sent your way!
       </p>
-      <p>
-        This will remove the cleanser and moisturizer from your free trial, too.
-        Just the custom bottle will be sent your way!
-      </p>
       <Button.Container>
         <Button isFullWidth onClick={(): void => setOpenModal(false)}>
           Yes, remove
@@ -53,8 +49,8 @@ const [openModal, setOpenModal] = useState(false);
 
 ## Proptypes
 
-| prop             | propType | required | default | description                                                                                                     |
-| ---------------- | -------- | -------- | ------- | --------------------------------------------------------------------------------------------------------------- |
-| children         | node     | yes      | -       | Dialog Modal body content. Must contain at least 1 button and is responsible to close the modal in the logic.   |
-| onCloseIconClick | node     | no       | -       | If provided it will display a Close Icon at the top right. Must be a function that eventually closes the modal. |
-| title            | string   | no       | -       | The title of the modal                                                                                          |
+| prop             | propType | required | default | description                                                                                                    |
+| ---------------- | -------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| children         | node     | yes      | -       | Dialog Modal body content. Must contain at least 1 button and is responsible to close the modal in the logic   |
+| onCloseIconClick | node     | no       | -       | If provided it will display a Close Icon at the top right. Must be a function that eventually closes the modal |
+| title            | string   | no       | -       | The title of the modal                                                                                         |

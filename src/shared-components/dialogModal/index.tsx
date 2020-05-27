@@ -21,7 +21,7 @@ type DialogModalState = {
   isClosing: boolean;
 };
 
-export const reactPortalSectionId = '#reactPortalSection';
+const reactPortalSectionId = '#reactPortalSection';
 
 class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   static propTypes = {
@@ -42,10 +42,6 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   htmlNode: HTMLElement;
 
   domNode: HTMLElement;
-
-  modalMobileScrollingElement: HTMLElement | null = null;
-
-  modalDesktopScrollingElement: HTMLElement | null = null;
 
   constructor(props: DialogModalProps) {
     super(props);

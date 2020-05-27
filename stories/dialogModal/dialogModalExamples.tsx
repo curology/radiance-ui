@@ -17,10 +17,6 @@ const DialogModalExamples = (): JSX.Element => {
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
           </p>
-          <p>
-            This will remove the cleanser and moisturizer from your free trial,
-            too. Just the custom bottle will be sent your way!
-          </p>
           <Button.Container>
             <Button isFullWidth onClick={(): void => setOpenModal(false)}>
               Yes, remove
