@@ -37,7 +37,7 @@ type ImmersiveModalState = {
   showDesktopHeaderBar: boolean;
 };
 
-export const reactPortalSectionId = '#reactPortalSection';
+const reactPortalSectionId = '#reactPortalSection';
 
 class ImmersiveModal extends React.Component<
   ImmersiveModalProps,
