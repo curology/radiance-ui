@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v8.3.0
+
+- [Feature] DialogModal redesign ([#240](https://github.com/PocketDerm/radiance-ui/pull/240))
+
 # v8.2.0
 
 - Deprecate SPACING constant ([#241](https://github.com/curology/radiance-ui/pull/241))
