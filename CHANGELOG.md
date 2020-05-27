@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v8.2.0
+
+- Deprecate SPACING constant ([#241](https://github.com/curology/radiance-ui/pull/241))
+
 # v8.1.0
 
 - [Feature] ImmersiveModal redesign ([#237](https://github.com/PocketDerm/radiance-ui/pull/237))
