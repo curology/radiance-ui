@@ -175,5 +175,20 @@ describe('<SelectorButton />', () => {
       wrapper.simulate('click');
       expect(spy).toHaveBeenCalled();
     });
+
+    it('Does nothing when no onClick is set', () => {
+      const wrapper = shallow(<SelectorButton checked={false} />);
+      // Just check that no exception is thrown
+      wrapper.simulate('click');
+      wrapper.simulate('keypress', { key: 'Enter' });
+    });
+
+    it('is invoked when enter is pressed', () => {
+      const spy = jest.fn();
+      const wrapper = shallow(<SelectorButton checked={false} onClick={spy} />);
+
+      wrapper.simulate('keypress', { key: 'Enter' });
+      expect(spy).toHaveBeenCalled();
+    });
   });
 });

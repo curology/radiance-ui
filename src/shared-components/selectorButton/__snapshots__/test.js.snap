@@ -98,9 +98,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 <div
+  aria-checked={true}
   className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="checkbox"
   tabIndex="0"
 >
   <div
@@ -228,9 +230,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 <div
+  aria-checked={true}
   className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -241,8 +245,8 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
-        height={16}
-        width={16}
+        height={8}
+        width={8}
       />
     </div>
     <div
@@ -354,9 +358,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
 }
 
 <div
+  aria-checked={false}
   className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="checkbox"
   tabIndex="0"
 >
   <div
@@ -479,9 +485,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
 }
 
 <div
+  aria-checked={false}
   className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -604,9 +612,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
 }
 
 <div
+  aria-checked={false}
   className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="checkbox"
   tabIndex="0"
 >
   <div
@@ -724,9 +734,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
 }
 
 <div
+  aria-checked={false}
   className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -848,9 +860,11 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 <div
+  aria-checked={true}
   className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -861,8 +875,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
     >
       <svg
         className="emotion-0"
-        height={16}
-        width={16}
+        height={8}
+        width={8}
       />
     </div>
     <div
@@ -977,9 +991,11 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 <div
+  aria-checked={true}
   className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -990,8 +1006,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
     >
       <svg
         className="emotion-0"
-        height={16}
-        width={16}
+        height={8}
+        width={8}
       />
     </div>
     <div
@@ -1102,9 +1118,11 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 <div
+  aria-checked={false}
   className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -1214,9 +1232,11 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 }
 
 <div
+  aria-checked={false}
   className="emotion-6 emotion-7"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="radio"
   tabIndex="0"
 >
   <div
@@ -1328,9 +1348,11 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 <div
+  aria-checked={false}
   className="emotion-8 emotion-9"
   onClick={[Function]}
   onKeyPress={[Function]}
+  role="checkbox"
   tabIndex="0"
 >
   <div

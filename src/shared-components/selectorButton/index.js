@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {css} from '@emotion/core';
+import { css } from '@emotion/core';
 
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import {COLORS} from '../../constants';
+import CircleSolidIcon from '../../svgs/icons/circle-solid-icon.svg';
+import { COLORS } from '../../constants';
 import {
   OuterContainer,
   Selector,
@@ -26,10 +27,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  onClick: () => {
-  },
+  onClick: undefined,
   type: 'primary',
   selector: 'radio',
+  icon: undefined,
+  children: undefined,
+  size: undefined,
 };
 
 const SelectorButton = ({
@@ -41,38 +44,54 @@ const SelectorButton = ({
   icon,
   size,
   ...rest
-}) => (
-  <OuterContainer
-    onClick={onClick}
-    onKeyPress={onClick}
-    tabIndex="0"
-    selector={selector}
-    {...rest}
-  >
-    <SelectorContainer>
-      <SelectorIcon>
-        {checked ?
-          <CheckmarkIcon
-            css={css`
-              color: ${COLORS.white};
-            `}
-            width={16}
-            height={16}
-          /> :
-          size === 'large' && icon
-        }
-      </SelectorIcon>
-      <Selector type={type} checked={checked} selector={selector} size={size}/>
-    </SelectorContainer>
+}) => {
+  const checkedIcon =
+    selector === 'radio' ? (
+      <CircleSolidIcon
+        css={css`
+          color: ${COLORS.white};
+        `}
+        width={8}
+        height={8}
+      />
+    ) : (
+      <CheckmarkIcon
+        css={css`
+          color: ${COLORS.white};
+        `}
+        width={16}
+        height={16}
+      />
+    );
+  return (
+    <OuterContainer
+      onClick={onClick}
+      onKeyPress={onClick}
+      tabIndex="0"
+      selector={selector}
+      role={selector}
+      aria-checked={checked}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
+    >
+      <SelectorContainer>
+        <SelectorIcon>
+          {checked ? checkedIcon : size === 'large' && icon}
+        </SelectorIcon>
+        <Selector
+          type={type}
+          checked={checked}
+          selector={selector}
+          size={size}
+        />
+      </SelectorContainer>
 
-    {children && (
-      <TextContainer>{children}</TextContainer>
-    )}
-  </OuterContainer>
-);
+      {children && <TextContainer>{children}</TextContainer>}
+    </OuterContainer>
+  );
+};
 
 SelectorButton.propTypes = propTypes;
 SelectorButton.defaultProps = defaultProps;
 
 export default SelectorButton;
-
