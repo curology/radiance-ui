@@ -241,8 +241,8 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
-        height={16}
-        width={16}
+        height={8}
+        width={8}
       />
     </div>
     <div
@@ -861,8 +861,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
     >
       <svg
         className="emotion-0"
-        height={16}
-        width={16}
+        height={8}
+        width={8}
       />
     </div>
     <div
@@ -990,8 +990,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
     >
       <svg
         className="emotion-0"
-        height={16}
-        width={16}
+        height={8}
+        width={8}
       />
     </div>
     <div
