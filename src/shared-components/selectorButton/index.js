@@ -69,6 +69,8 @@ const SelectorButton = ({
       onKeyPress={onClick}
       tabIndex="0"
       selector={selector}
+      role={selector}
+      aria-checked={checked}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
