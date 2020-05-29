@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v8.3.1
+
+- Changed radio button icon to a dot instead of a checkmark ([#244](https://github.com/PocketDerm/radiance-ui/pull/244)
+
 # v8.3.0
 
 - [Feature] DialogModal redesign ([#240](https://github.com/PocketDerm/radiance-ui/pull/240))
