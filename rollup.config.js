@@ -3,7 +3,8 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+
+import pkg from './package';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
@@ -37,17 +38,7 @@ const defaultConfig = {
     }),
     sizeSnapshot(),
   ],
-  external: [
-    '@emotion/core',
-    '@emotion/styled',
-    'prop-types',
-    'react',
-    'react-modal',
-    'react-slick',
-    'react-toggle-button',
-    'react-transition-group',
-    'tinycolor2',
-  ],
+  external: [...Object.keys(pkg.dependencies), '@emotion/styled-base'],
 };
 
 export default [
@@ -66,8 +57,13 @@ export default [
         globals: {
           '@emotion/core': '@emotion/core',
           '@emotion/styled': 'styled',
+          '@emotion/styled-base': '_styled',
+          'lodash.round': 'round',
+          'lodash.throttle': 'throttle',
+          'lodash.uniqueid': 'uniqueid',
           'prop-types': 'PropTypes',
           react: 'React',
+          'react-dom': 'ReactDOM',
           'react-modal': 'react-modal',
           'react-slick': 'react-slick',
           'react-toggle-button': 'react-toggle-button',
@@ -84,12 +80,7 @@ export default [
       {
         dir: 'dist/bundle-es',
         format: 'esm',
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
       },
     ],
-    plugins: [...defaultConfig.plugins, peerDepsExternal()],
   },
 ];
