@@ -3,6 +3,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
@@ -14,35 +15,8 @@ const UTIL_LOCATION = '../../utils/icons';
 
 const extensions = ['.js', '.ts', '.tsx'];
 
-export default {
+const defaultConfig = {
   input: 'src/index.ts',
-  output: [
-    {
-      file: 'dist/bundle.js',
-      format: 'cjs',
-      name: 'radianceUi',
-    },
-    {
-      file: 'dist/bundle.umd.js',
-      format: 'umd',
-      name: 'radianceUi',
-      globals: {
-        '@emotion/core': '@emotion/core',
-        '@emotion/styled': 'styled',
-        'prop-types': 'PropTypes',
-        react: 'React',
-        'react-modal': 'react-modal',
-        'react-slick': 'react-slick',
-        'react-toggle-button': 'react-toggle-button',
-        'react-transition-group': 'react-transition-group',
-        tinycolor2: 'tinycolor',
-      },
-    },
-    {
-      file: 'dist/bundle.es.js',
-      format: 'esm',
-    },
-  ],
   plugins: [
     svgr({
       template: transformTemplateForUtilLocation(UTIL_LOCATION),
@@ -75,3 +49,47 @@ export default {
     'tinycolor2',
   ],
 };
+
+export default [
+  {
+    ...defaultConfig,
+    output: [
+      {
+        file: 'dist/bundle.js',
+        format: 'cjs',
+        name: 'radianceUi',
+      },
+      {
+        file: 'dist/bundle.umd.js',
+        format: 'umd',
+        name: 'radianceUi',
+        globals: {
+          '@emotion/core': '@emotion/core',
+          '@emotion/styled': 'styled',
+          'prop-types': 'PropTypes',
+          react: 'React',
+          'react-modal': 'react-modal',
+          'react-slick': 'react-slick',
+          'react-toggle-button': 'react-toggle-button',
+          'react-transition-group': 'react-transition-group',
+          tinycolor2: 'tinycolor',
+        },
+      },
+    ],
+  },
+  {
+    ...defaultConfig,
+    preserveModules: true,
+    output: [
+      {
+        dir: 'dist/bundle-es',
+        format: 'esm',
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+        },
+      },
+    ],
+    plugins: [...defaultConfig.plugins, peerDepsExternal()],
+  },
+];
