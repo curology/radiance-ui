@@ -4,7 +4,8 @@ import babel from '@rollup/plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
 
-import pkg from './package';
+// eslint-disable-next-line import/extensions
+import pkg from './package.json';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
