@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import PropTypes from 'prop-types';
 
 import { SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES } from '../../constants';
 
@@ -18,7 +19,7 @@ const messageStyle = css`
   box-shadow: ${BOX_SHADOWS.message};
 `;
 
-export const Container = styled.div`
+const Container = styled.div`
   background-color: ${COLORS.white};
   border: 1px solid ${COLORS.border};
 
@@ -58,3 +59,13 @@ export const Image = styled.img`
   overflow: hidden;
   object-fit: cover;
 `;
+
+Container.Section = Section;
+Container.Divider = Divider;
+Container.Image = Image;
+
+Container.propTypes = {
+  type: PropTypes.oneOf(['message', 'clickable']),
+};
+
+export { Container };

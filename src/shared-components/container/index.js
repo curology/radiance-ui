@@ -1,18 +1,3 @@
-import PropTypes from 'prop-types';
-
-import {
-  Container,
-  Section,
-  Divider,
-  Image,
-} from './style';
-
-Container.Section = Section;
-Container.Divider = Divider;
-Container.Image = Image;
-
-Container.propTypes = {
-  type: PropTypes.oneOf(['message', 'clickable']),
-};
+import { Container } from './style';
 
 export default Container;

@@ -1,8 +1,11 @@
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import babel from '@rollup/plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
+
+// eslint-disable-next-line import/extensions
+import pkg from './package.json';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 const path = require('path');
@@ -14,35 +17,8 @@ const UTIL_LOCATION = '../../utils/icons';
 
 const extensions = ['.js', '.ts', '.tsx'];
 
-export default {
+const defaultConfig = {
   input: 'src/index.ts',
-  output: [
-    {
-      file: 'dist/bundle.js',
-      format: 'cjs',
-      name: 'radianceUi',
-    },
-    {
-      file: 'dist/bundle.umd.js',
-      format: 'umd',
-      name: 'radianceUi',
-      globals: {
-        '@emotion/core': '@emotion/core',
-        '@emotion/styled': 'styled',
-        'prop-types': 'PropTypes',
-        react: 'React',
-        'react-modal': 'react-modal',
-        'react-slick': 'react-slick',
-        'react-toggle-button': 'react-toggle-button',
-        'react-transition-group': 'react-transition-group',
-        tinycolor2: 'tinycolor',
-      },
-    },
-    {
-      file: 'dist/bundle.es.js',
-      format: 'esm',
-    },
-  ],
   plugins: [
     svgr({
       template: transformTemplateForUtilLocation(UTIL_LOCATION),
@@ -63,15 +39,49 @@ export default {
     }),
     sizeSnapshot(),
   ],
-  external: [
-    '@emotion/core',
-    '@emotion/styled',
-    'prop-types',
-    'react',
-    'react-modal',
-    'react-slick',
-    'react-toggle-button',
-    'react-transition-group',
-    'tinycolor2',
-  ],
+  external: [...Object.keys(pkg.dependencies), '@emotion/styled-base'],
 };
+
+export default [
+  {
+    ...defaultConfig,
+    output: [
+      {
+        file: 'dist/bundle.js',
+        format: 'cjs',
+        name: 'radianceUi',
+      },
+      {
+        file: 'dist/bundle.umd.js',
+        format: 'umd',
+        name: 'radianceUi',
+        globals: {
+          '@emotion/core': '@emotion/core',
+          '@emotion/styled': 'styled',
+          '@emotion/styled-base': '_styled',
+          'lodash.round': 'round',
+          'lodash.throttle': 'throttle',
+          'lodash.uniqueid': 'uniqueid',
+          'prop-types': 'PropTypes',
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'react-modal': 'react-modal',
+          'react-slick': 'react-slick',
+          'react-toggle-button': 'react-toggle-button',
+          'react-transition-group': 'react-transition-group',
+          tinycolor2: 'tinycolor',
+        },
+      },
+    ],
+  },
+  {
+    ...defaultConfig,
+    preserveModules: true,
+    output: [
+      {
+        dir: 'dist/bundle-es',
+        format: 'esm',
+      },
+    ],
+  },
+];
