@@ -1,8 +1,12 @@
 # CHANGELOG
 
+# v9.0.0
+
+- Support effective tree shaking of the shared-components directory ([#246](https://github.com/curology/radiance-ui/pull/246))
+
 # v8.3.1
 
-- Changed radio button icon to a dot instead of a checkmark ([#244](https://github.com/PocketDerm/radiance-ui/pull/244)
+- Changed radio button icon to a dot instead of a checkmark ([#244](https://github.com/PocketDerm/radiance-ui/pull/244))
 
 # v8.3.0
 
