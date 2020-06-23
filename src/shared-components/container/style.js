@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import PropTypes from 'prop-types';
 
 import { SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES } from '../../constants';
-import PropTypes from 'prop-types';
 
 const clickableStyle = css`
   box-shadow: ${BOX_SHADOWS.clickable};
