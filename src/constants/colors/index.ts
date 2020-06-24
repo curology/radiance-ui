@@ -152,12 +152,16 @@ export const guideColors = {
   recommendedCleansersGuide: '#cad1b5',
 };
 
-const colorsCompilation = {
+const sharedColors = {
   ...brandColors,
-  ...legacyColors,
   ...colorAliases,
   ...postcardColors,
   ...guideColors,
+};
+
+const colorsCompilation = {
+  ...sharedColors,
+  ...legacyColors,
 };
 
 const deprecatedProperties = {
@@ -165,16 +169,13 @@ const deprecatedProperties = {
   purple60: 'purple60 is deprecated. Use purple70 instead',
 };
 
-// Do not include deprecated properties in PropTypes or it will thrown warning
+// Do not include deprecated properties in PropTypes or it will trigger warning
 // eslint-disable-next-line
 const { purple80, purple60, ...allOtherLegacyColors } = legacyColors;
 
 const NON_DEPRECATED_COLORS = {
-  ...brandColors,
+  ...sharedColors,
   ...allOtherLegacyColors,
-  ...colorAliases,
-  ...postcardColors,
-  ...guideColors,
 };
 
 export const COLORS_PROP_TYPES = PropTypes.oneOf(
