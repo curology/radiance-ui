@@ -2,6 +2,9 @@
  * Note: Each config is exported separately to be rendered in storybook:
  * https://github.com/PocketDerm/PocketDerm/blob/master/resources/assets/component-library/stories/colors/index.js#L5
  */
+
+import PropTypes from 'prop-types';
+
 import { withDeprecationWarning } from '../../utils';
 
 const DEFAULT = '#706D87';
@@ -161,5 +164,21 @@ const deprecatedProperties = {
   purple80: 'purple80 is deprecated. Use purple85 instead',
   purple60: 'purple60 is deprecated. Use purple70 instead',
 };
+
+// Do not include deprecated properties in PropTypes or it will thrown warning
+// eslint-disable-next-line
+const { purple80, purple60, ...allOtherLegacyColors } = legacyColors;
+
+const NON_DEPRECATED_COLORS = {
+  ...brandColors,
+  ...allOtherLegacyColors,
+  ...colorAliases,
+  ...postcardColors,
+  ...guideColors,
+};
+
+export const COLORS_PROP_TYPES = PropTypes.oneOf(
+  Object.values(NON_DEPRECATED_COLORS),
+);
 
 export default withDeprecationWarning(colorsCompilation, deprecatedProperties);

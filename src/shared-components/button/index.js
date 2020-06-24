@@ -9,7 +9,7 @@ import withDeprecationWarning from '../../utils/withDeprecationWarning';
 import LinkButton from './components/linkButton';
 import RoundButton from './components/roundButton';
 import TextButton from './components/textButton';
-import { COLORS } from '../../constants';
+import { COLORS, COLORS_PROP_TYPES } from '../../constants';
 
 const deprecatedProperties = {
   loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
@@ -38,7 +38,7 @@ class Button extends React.Component {
       'tertiary',
       'quaternary',
     ]),
-    buttonColor: PropTypes.oneOf(Object.values(COLORS)),
+    buttonColor: COLORS_PROP_TYPES,
     loading: isLoadingPropFunction,
     isLoading: PropTypes.bool,
     icon: PropTypes.node,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { COLORS } from '../../../../constants';
+import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import Loader from '../../shared-components/loader';
 import {
   RoundButtonWrapper,
@@ -35,7 +35,7 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
-  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
+  buttonColor: COLORS_PROP_TYPES,
   loading: isLoadingPropFunction,
   isLoading: PropTypes.bool,
   icon: PropTypes.node.isRequired,
