@@ -19,7 +19,15 @@ const bannerIconMapping = {
   default: InfoIcon,
 };
 
-const Banner = ({ content, type, onClick }) => {
+export type BannerTypes = 'default' | 'success' | 'error' | 'danger';
+
+type BannerProps = {
+  content: React.ReactNode;
+  type: BannerTypes;
+  onClick: () => void;
+};
+
+const Banner = ({ content, type, onClick }: BannerProps): JSX.Element => {
   const Icon = bannerIconMapping[type];
 
   return (
@@ -42,7 +50,7 @@ Banner.propTypes = {
 
 Banner.defaultProps = {
   type: 'default',
-  onClick: () => undefined,
+  onClick: (): void => undefined,
 };
 
 export default Banner;

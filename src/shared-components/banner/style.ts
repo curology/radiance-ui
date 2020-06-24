@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 
 import {
   COLORS,
@@ -7,6 +7,8 @@ import {
   SPACER,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
+
+import { BannerTypes } from '.';
 
 const defaultAlertStyles = css`
   background-color: ${COLORS.primary};
@@ -23,14 +25,14 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const BannerContainer = styled.div`
+export const BannerContainer = styled.div<{ bannerType: BannerTypes }>`
   cursor: pointer;
   position: relative;
   margin: 0 auto ${SPACER.small};
   padding: ${SPACER.medium};
   border-radius: ${SPACER.small};
 
-  ${({ bannerType }) => {
+  ${({ bannerType }): SerializedStyles => {
     switch (bannerType) {
       case 'danger':
         return errorAlertStyles;

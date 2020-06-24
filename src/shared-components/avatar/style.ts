@@ -9,7 +9,11 @@ const SIZES = {
   large: 80,
 };
 
-const determineSize = ({ size = 'small' }) => `
+const determineSize = ({
+  size = 'small',
+}: {
+  size?: 'small' | 'medium' | 'large';
+}): string => `
   height: ${SIZES[size]}px;
   width: ${SIZES[size]}px;
 `;
