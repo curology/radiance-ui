@@ -25,11 +25,24 @@ const alertIconMapping = {
   default: InfoIcon,
 };
 
-class Alert extends React.Component {
-  static Container = ({ children }) => (
-    <AlertsContainer>{children}</AlertsContainer>
-  );
+type AlertProps = {
+  avatarSrc?: string;
+  content: React.ReactNode;
+  ctaContent?: React.ReactNode;
+  duration?: string | number;
+  truncateText: boolean;
+  type: 'success' | 'error' | 'default';
+  onExit?: (rest: Omit<AlertProps, 'onExit'>) => void;
+};
 
+type AlertState = {
+  exiting: boolean;
+  exited: boolean;
+};
+
+type childrenProp = { children: React.ReactNode };
+
+class Alert extends React.Component<AlertProps, AlertState> {
   static propTypes = {
     avatarSrc: PropTypes.string,
     content: PropTypes.node.isRequired,
@@ -46,30 +59,35 @@ class Alert extends React.Component {
     duration: 3,
     truncateText: false,
     type: 'default',
-    onExit: () => undefined,
+    onExit: (): void => undefined,
   };
 
-  constructor(props) {
-    super(props);
-    this.contentText = React.createRef();
-  }
+  static Container = ({ children }: childrenProp): JSX.Element => (
+    <AlertsContainer>{children}</AlertsContainer>
+  );
+
+  contentText = React.createRef<HTMLDivElement>();
+
+  timer: number | undefined;
 
   state = {
     exiting: false,
     exited: false,
   };
 
-  componentDidMount() {
+  componentDidMount(): void {
     const { duration, ctaContent, truncateText } = this.props;
 
     // Truncate text logic
     if (truncateText) {
       const contentElement = this.contentText.current;
-      const wordsArray = contentElement.innerHTML.split(' ');
-      while (contentElement.scrollHeight > contentElement.offsetHeight) {
-        wordsArray.pop();
-        // eslint-disable-next-line prefer-template
-        contentElement.innerHTML = wordsArray.join(' ') + ' ...';
+      if (contentElement) {
+        const wordsArray = contentElement.innerHTML.split(' ');
+        while (contentElement.scrollHeight > contentElement.offsetHeight) {
+          wordsArray.pop();
+          // eslint-disable-next-line prefer-template
+          contentElement.innerHTML = wordsArray.join(' ') + ' ...';
+        }
       }
     }
 
@@ -78,36 +96,34 @@ class Alert extends React.Component {
       return;
     }
 
-    // eslint-disable-next-line no-undef
     this.timer = window.setTimeout(
       this.alertExitHandler,
       Number(duration) * 1000 - ANIMATION_DELAY,
     );
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     if (this.timer) {
-      // eslint-disable-next-line no-undef
       window.clearTimeout(this.timer);
     }
   }
 
-  alertExitHandler = () => {
+  alertExitHandler = (): void => {
     const { onExit, ...rest } = this.props;
     this.setState({ exiting: true });
 
-    // eslint-disable-next-line no-undef
     window.clearTimeout(this.timer);
 
-    // eslint-disable-next-line no-undef
     window.setTimeout(() => {
       this.setState({ exited: true });
 
-      onExit({ ...rest });
+      if (onExit) {
+        onExit({ ...rest });
+      }
     }, ANIMATION_DELAY);
   };
 
-  render() {
+  render(): JSX.Element | null {
     const {
       avatarSrc,
       content,
