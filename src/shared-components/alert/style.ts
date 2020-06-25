@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css, keyframes, SerializedStyles } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
 
 import {
   COLORS,
@@ -62,13 +62,13 @@ export const AlertContainer = styled.div<{
   padding: 0;
   width: 327px;
   border-radius: ${SPACER.small};
-  opacity: ${({ exiting }): string => (exiting ? '0' : '1')};
+  opacity: ${({ exiting }) => (exiting ? '0' : '1')};
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   transition: ${ANIMATION.defaultTiming};
-  transform: ${({ exiting }): string =>
+  transform: ${({ exiting }) =>
     exiting ? 'translate3d(0, -24px, 0)' : 'translate3d(0, 0, 0)'};
 
-  ${({ alertType }): SerializedStyles => {
+  ${({ alertType }) => {
     switch (alertType) {
       case 'danger':
         return errorAlertStyles;
@@ -84,7 +84,7 @@ export const AlertContainer = styled.div<{
   ${MEDIA_QUERIES.mdUp} {
     animation: ${fadeInDesktop} ${ANIMATION.defaultTiming} 1;
     margin: 0 auto ${SPACER.medium};
-    transform: ${({ exiting }): string =>
+    transform: ${({ exiting }) =>
     exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
   }
 `;
@@ -101,7 +101,7 @@ export const MainContainer = styled.div`
 
 export const ContentContainer = styled.div<{ truncateText: boolean }>`
   margin: -3px 0 0 ${SPACER.medium};
-  max-height: ${({ truncateText }): string => (truncateText ? '48px' : 'none')};
+  max-height: ${({ truncateText }) => (truncateText ? '48px' : 'none')};
 `;
 
 export const CtaContent = styled.div`
@@ -117,7 +117,7 @@ export const CtaContent = styled.div`
 `;
 
 export const IconContainer = styled.div<{ hasAvatar: boolean }>`
-  ${({ hasAvatar }): SerializedStyles | false =>
+  ${({ hasAvatar }) =>
     hasAvatar &&
     css`
       min-width: 32px;

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css, SerializedStyles } from '@emotion/core';
+import { css } from '@emotion/core';
 import {
   ANIMATION,
   BOX_SHADOWS,
@@ -22,12 +22,12 @@ export const Content = styled.div`
 `;
 
 export const ExpansionWrapper = styled.div<{ contentHeight: string }>`
-  max-height: ${({ contentHeight }): string => contentHeight};
+  max-height: ${({ contentHeight }) => contentHeight};
   overflow: hidden;
   transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
 `;
 
-const getBorderStyle = (isOpen: boolean): SerializedStyles => css`
+const getBorderStyle = (isOpen: boolean) => css`
   border: ${border};
 
   ${ExpansionWrapper} {
@@ -40,8 +40,7 @@ export const AccordionBox = styled.div<{
   isOpen: boolean;
   disabled: boolean;
 }>`
-  ${({ noBorder, isOpen }): SerializedStyles | string =>
-    !noBorder ? getBorderStyle(isOpen) : ''};
+  ${({ noBorder, isOpen }) => (!noBorder ? getBorderStyle(isOpen) : '')};
 
   width: 100%;
 
@@ -49,7 +48,7 @@ export const AccordionBox = styled.div<{
     border-bottom: none;
   }
 
-  ${({ disabled }): string =>
+  ${({ disabled }) =>
     disabled
       ? `
     opacity: 0.4;
@@ -63,7 +62,7 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
   display: flex;
   align-items: center;
 
-  ${({ rightAlign }): string =>
+  ${({ rightAlign }) =>
     rightAlign
       ? `padding-left: ${SPACER.medium};`
       : `padding: 0 ${SPACER.medium};`};
@@ -72,7 +71,7 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
 export const TitleWrapper = styled.div<{ disabled: boolean }>`
   display: flex;
   justify-content: space-between;
-  cursor: ${({ disabled }): string => (disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 `;
 
 export const Truncate = styled.div`

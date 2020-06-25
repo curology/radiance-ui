@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css, SerializedStyles } from '@emotion/core';
+import { css } from '@emotion/core';
 
 import {
   COLORS,
@@ -32,7 +32,7 @@ export const BannerContainer = styled.div<{ bannerType: BannerType }>`
   padding: ${SPACER.medium};
   border-radius: ${SPACER.small};
 
-  ${({ bannerType }): SerializedStyles => {
+  ${({ bannerType }) => {
     switch (bannerType) {
       case 'danger':
         return errorAlertStyles;

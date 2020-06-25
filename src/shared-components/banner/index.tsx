@@ -27,7 +27,7 @@ type BannerProps = {
   onClick: () => void;
 };
 
-const Banner = ({ content, type, onClick }: BannerProps): JSX.Element => {
+const Banner = ({ content, type, onClick }: BannerProps) => {
   const Icon = bannerIconMapping[type];
 
   return (

@@ -62,11 +62,9 @@ class Alert extends React.Component<AlertProps, AlertState> {
     onExit: undefined,
   };
 
-  static Container = ({
-    children,
-  }: {
-    children: React.ReactNode;
-  }): JSX.Element => <AlertsContainer>{children}</AlertsContainer>;
+  static Container = ({ children }: { children: React.ReactNode }) => (
+    <AlertsContainer>{children}</AlertsContainer>
+  );
 
   contentText = React.createRef<HTMLDivElement>();
 
@@ -77,7 +75,7 @@ class Alert extends React.Component<AlertProps, AlertState> {
     exited: false,
   };
 
-  componentDidMount(): void {
+  componentDidMount() {
     const { duration, ctaContent, truncateText } = this.props;
 
     // Truncate text logic
@@ -103,13 +101,13 @@ class Alert extends React.Component<AlertProps, AlertState> {
     );
   }
 
-  componentWillUnmount(): void {
+  componentWillUnmount() {
     if (this.timer) {
       window.clearTimeout(this.timer);
     }
   }
 
-  alertExitHandler = (): void => {
+  alertExitHandler = () => {
     const { onExit, ...rest } = this.props;
     this.setState({ exiting: true });
 
@@ -124,7 +122,7 @@ class Alert extends React.Component<AlertProps, AlertState> {
     }, ANIMATION_DELAY);
   };
 
-  render(): JSX.Element | null {
+  render() {
     const {
       avatarSrc,
       content,

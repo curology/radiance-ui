@@ -13,7 +13,7 @@ const determineSize = ({
   size = 'small',
 }: {
   size?: 'small' | 'medium' | 'large';
-}): string => `
+}) => `
   height: ${SIZES[size]}px;
   width: ${SIZES[size]}px;
 `;
