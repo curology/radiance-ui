@@ -34,7 +34,7 @@ type AlertProps = {
   duration: string | number;
   truncateText: boolean;
   type: AlertType;
-  onExit: (rest: Omit<AlertProps, 'onExit'>) => void;
+  onExit: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
 };
 
 type AlertState = {
@@ -59,7 +59,7 @@ class Alert extends React.Component<AlertProps, AlertState> {
     duration: 3,
     truncateText: false,
     type: 'default',
-    onExit: undefined,
+    onExit: () => undefined,
   };
 
   static Container = ({ children }: { children: React.ReactNode }) => (
@@ -116,9 +116,7 @@ class Alert extends React.Component<AlertProps, AlertState> {
     window.setTimeout(() => {
       this.setState({ exited: true });
 
-      if (onExit) {
-        onExit({ ...rest });
-      }
+      onExit({ ...rest });
     }, ANIMATION_DELAY);
   };
 
