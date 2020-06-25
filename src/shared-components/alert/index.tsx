@@ -40,8 +40,6 @@ type AlertState = {
   exited: boolean;
 };
 
-type childrenProp = { children: React.ReactNode };
-
 class Alert extends React.Component<AlertProps, AlertState> {
   static propTypes = {
     avatarSrc: PropTypes.string,
@@ -62,9 +60,11 @@ class Alert extends React.Component<AlertProps, AlertState> {
     onExit: (): void => undefined,
   };
 
-  static Container = ({ children }: childrenProp): JSX.Element => (
-    <AlertsContainer>{children}</AlertsContainer>
-  );
+  static Container = ({
+    children,
+  }: {
+    children: React.ReactNode;
+  }): JSX.Element => <AlertsContainer>{children}</AlertsContainer>;
 
   contentText = React.createRef<HTMLDivElement>();
 
