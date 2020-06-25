@@ -9,6 +9,8 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
+import { AlertType } from '.';
+
 export const AlertsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,7 +54,7 @@ const errorAlertStyles = css`
 
 export const AlertContainer = styled.div<{
   exiting: boolean;
-  alertType: string;
+  alertType: AlertType;
 }>`
   cursor: pointer;
   position: relative;

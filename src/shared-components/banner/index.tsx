@@ -19,11 +19,11 @@ const bannerIconMapping = {
   default: InfoIcon,
 };
 
-export type BannerTypes = 'default' | 'success' | 'error' | 'danger';
+export type BannerType = 'default' | 'success' | 'error' | 'danger';
 
 type BannerProps = {
   content: React.ReactNode;
-  type: BannerTypes;
+  type: BannerType;
   onClick: () => void;
 };
 

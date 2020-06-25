@@ -25,13 +25,15 @@ const alertIconMapping = {
   default: InfoIcon,
 };
 
+export type AlertType = 'success' | 'error' | 'default' | 'danger';
+
 type AlertProps = {
   avatarSrc?: string;
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
   truncateText: boolean;
-  type: 'success' | 'error' | 'default';
+  type: AlertType;
   onExit?: (rest: Omit<AlertProps, 'onExit'>) => void;
 };
 
@@ -57,7 +59,7 @@ class Alert extends React.Component<AlertProps, AlertState> {
     duration: 3,
     truncateText: false,
     type: 'default',
-    onExit: (): void => undefined,
+    onExit: undefined,
   };
 
   static Container = ({
@@ -85,8 +87,7 @@ class Alert extends React.Component<AlertProps, AlertState> {
         const wordsArray = contentElement.innerHTML.split(' ');
         while (contentElement.scrollHeight > contentElement.offsetHeight) {
           wordsArray.pop();
-          // eslint-disable-next-line prefer-template
-          contentElement.innerHTML = wordsArray.join(' ') + ' ...';
+          contentElement.innerHTML = `${wordsArray.join(' ')}...`;
         }
       }
     }
