@@ -16,11 +16,11 @@ import {
 
 type AccordionProps = {
   children: React.ReactNode;
-  disabled?: boolean;
+  disabled: boolean;
   isOpen: boolean;
-  noBorder?: boolean;
+  noBorder: boolean;
   onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-  rightAlignArrow?: boolean;
+  rightAlignArrow: boolean;
   title: React.ReactNode;
 };
 

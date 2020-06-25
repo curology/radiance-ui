@@ -15,7 +15,7 @@ class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
     photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
-  renderThumbnails(): JSX.Element | null {
+  renderThumbnails() {
     const { photoSrcs } = this.props;
 
     if (photoSrcs.length === 0) {

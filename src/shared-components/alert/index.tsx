@@ -28,13 +28,13 @@ const alertIconMapping = {
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
 type AlertProps = {
-  avatarSrc?: string;
+  avatarSrc: string;
   content: React.ReactNode;
-  ctaContent?: React.ReactNode;
-  duration?: string | number;
+  ctaContent: React.ReactNode;
+  duration: string | number;
   truncateText: boolean;
   type: AlertType;
-  onExit?: (rest: Omit<AlertProps, 'onExit'>) => void;
+  onExit: (rest: Omit<AlertProps, 'onExit'>) => void;
 };
 
 type AlertState = {
