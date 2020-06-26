@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v9.1.1
+
+- [Internal] TypeScript convertion: Alert, Avatar, Banner ([#248](https://github.com/curology/radiance-ui/pull/248))
+
+# v9.1.0
+
+- Update various glyphs and icons ([#250](https://github.com/curology/radiance-ui/pull/250))
+
 # v9.0.0
 
 - Support effective tree shaking of the shared-components directory ([#246](https://github.com/curology/radiance-ui/pull/246))

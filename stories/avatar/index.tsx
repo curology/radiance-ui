@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-
-import AvatarReadme from 'docs/avatar.md';
+import AvatarReadme from 'docs/avatar';
 import { Avatar, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
@@ -48,5 +47,5 @@ stories.add(
         <Avatar size="large" src={accountImg} alt="avatar" />
       </AvatarContainer>
     </MainContainer>
-  ))
+  )),
 );

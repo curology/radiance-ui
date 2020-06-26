@@ -14,7 +14,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
     accordion4: false,
   };
 
-  toggleAccordion = (accordion: string): void => {
+  toggleAccordion = (accordion: string) => {
     this.setState(state => ({ [accordion]: !state[accordion] }));
   };
 
@@ -35,7 +35,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               </Accordion.Content>
             }
             isOpen={accordion1}
-            onClick={(): void => this.toggleAccordion('accordion1')}
+            onClick={() => this.toggleAccordion('accordion1')}
           >
             <Accordion.Content>
               Accordion.Content adds standard accordion padding.
@@ -50,7 +50,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               </Accordion.Content>
             }
             isOpen={accordion2}
-            onClick={(): void => this.toggleAccordion('accordion2')}
+            onClick={() => this.toggleAccordion('accordion2')}
             noBorder
           >
             <Accordion.Content>
@@ -66,7 +66,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               </Accordion.Content>
             }
             isOpen={accordion3}
-            onClick={(): void => this.toggleAccordion('accordion3')}
+            onClick={() => this.toggleAccordion('accordion3')}
             disabled
           >
             <Accordion.Content>Expandable</Accordion.Content>
@@ -80,7 +80,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               </Accordion.Content>
             }
             isOpen={accordion4}
-            onClick={(): void => this.toggleAccordion('accordion4')}
+            onClick={() => this.toggleAccordion('accordion4')}
             rightAlignArrow
           >
             <Accordion.Content>Expandable</Accordion.Content>

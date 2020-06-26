@@ -10,7 +10,7 @@ describe('<Avatar />', () => {
   describe('UI snapshot', () => {
     it('renders the component with default props', () => {
       const component = renderer.create(
-        <Avatar src={imageExample} alt="avatar" />
+        <Avatar src={imageExample} alt="avatar" />,
       );
 
       const tree = component.toJSON();
@@ -19,7 +19,7 @@ describe('<Avatar />', () => {
 
     it('render with size medium styles', () => {
       const component = renderer.create(
-        <Avatar size="medium" src={imageExample} alt="avatar" />
+        <Avatar size="medium" src={imageExample} alt="avatar" />,
       );
 
       const tree = component.toJSON();
@@ -28,7 +28,7 @@ describe('<Avatar />', () => {
 
     it('render with size large styles', () => {
       const component = renderer.create(
-        <Avatar size="large" src={imageExample} alt="avatar" />
+        <Avatar size="large" src={imageExample} alt="avatar" />,
       );
 
       const tree = component.toJSON();

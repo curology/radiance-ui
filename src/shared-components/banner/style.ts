@@ -8,6 +8,8 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
+import { BannerType } from '.';
+
 const defaultAlertStyles = css`
   background-color: ${COLORS.primary};
   box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
@@ -23,7 +25,7 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const BannerContainer = styled.div`
+export const BannerContainer = styled.div<{ bannerType: BannerType }>`
   cursor: pointer;
   position: relative;
   margin: 0 auto ${SPACER.small};
