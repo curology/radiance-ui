@@ -25,11 +25,24 @@ const alertIconMapping = {
   default: InfoIcon,
 };
 
-class Alert extends React.Component {
-  static Container = ({ children }) => (
-    <AlertsContainer>{children}</AlertsContainer>
-  );
+export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
+type AlertProps = {
+  avatarSrc: string;
+  content: React.ReactNode;
+  ctaContent: React.ReactNode;
+  duration: string | number;
+  truncateText: boolean;
+  type: AlertType;
+  onExit: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
+};
+
+type AlertState = {
+  exiting: boolean;
+  exited: boolean;
+};
+
+class Alert extends React.Component<AlertProps, AlertState> {
   static propTypes = {
     avatarSrc: PropTypes.string,
     content: PropTypes.node.isRequired,
@@ -49,10 +62,13 @@ class Alert extends React.Component {
     onExit: () => undefined,
   };
 
-  constructor(props) {
-    super(props);
-    this.contentText = React.createRef();
-  }
+  static Container = ({ children }: { children: React.ReactNode }) => (
+    <AlertsContainer>{children}</AlertsContainer>
+  );
+
+  contentText = React.createRef<HTMLDivElement>();
+
+  timer: number | undefined;
 
   state = {
     exiting: false,
@@ -65,11 +81,12 @@ class Alert extends React.Component {
     // Truncate text logic
     if (truncateText) {
       const contentElement = this.contentText.current;
-      const wordsArray = contentElement.innerHTML.split(' ');
-      while (contentElement.scrollHeight > contentElement.offsetHeight) {
-        wordsArray.pop();
-        // eslint-disable-next-line prefer-template
-        contentElement.innerHTML = wordsArray.join(' ') + ' ...';
+      if (contentElement) {
+        const wordsArray = contentElement.innerHTML.split(' ');
+        while (contentElement.scrollHeight > contentElement.offsetHeight) {
+          wordsArray.pop();
+          contentElement.innerHTML = `${wordsArray.join(' ')}...`;
+        }
       }
     }
 
@@ -78,7 +95,6 @@ class Alert extends React.Component {
       return;
     }
 
-    // eslint-disable-next-line no-undef
     this.timer = window.setTimeout(
       this.alertExitHandler,
       Number(duration) * 1000 - ANIMATION_DELAY,
@@ -87,7 +103,6 @@ class Alert extends React.Component {
 
   componentWillUnmount() {
     if (this.timer) {
-      // eslint-disable-next-line no-undef
       window.clearTimeout(this.timer);
     }
   }
@@ -96,10 +111,8 @@ class Alert extends React.Component {
     const { onExit, ...rest } = this.props;
     this.setState({ exiting: true });
 
-    // eslint-disable-next-line no-undef
     window.clearTimeout(this.timer);
 
-    // eslint-disable-next-line no-undef
     window.setTimeout(() => {
       this.setState({ exited: true });
 

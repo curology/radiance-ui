@@ -9,6 +9,8 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
+import { AlertType } from '.';
+
 export const AlertsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -50,14 +52,17 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const AlertContainer = styled.div`
+export const AlertContainer = styled.div<{
+  exiting: boolean;
+  alertType: AlertType;
+}>`
   cursor: pointer;
   position: relative;
   margin: 0 auto ${SPACER.small};
   padding: 0;
   width: 327px;
   border-radius: ${SPACER.small};
-  opacity: ${props => (props.exiting ? '0' : '1')};
+  opacity: ${({ exiting }) => (exiting ? '0' : '1')};
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   transition: ${ANIMATION.defaultTiming};
   transform: ${({ exiting }) =>
@@ -80,7 +85,7 @@ export const AlertContainer = styled.div`
     animation: ${fadeInDesktop} ${ANIMATION.defaultTiming} 1;
     margin: 0 auto ${SPACER.medium};
     transform: ${({ exiting }) =>
-      exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
+    exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
   }
 `;
 
@@ -94,7 +99,7 @@ export const MainContainer = styled.div`
   padding: ${SPACER.medium};
 `;
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.div<{ truncateText: boolean }>`
   margin: -3px 0 0 ${SPACER.medium};
   max-height: ${({ truncateText }) => (truncateText ? '48px' : 'none')};
 `;
@@ -111,7 +116,7 @@ export const CtaContent = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.div<{ hasAvatar: boolean }>`
   ${({ hasAvatar }) =>
     hasAvatar &&
     css`

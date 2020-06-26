@@ -16,11 +16,11 @@ import {
 
 type AccordionProps = {
   children: React.ReactNode;
-  disabled?: boolean;
+  disabled: boolean;
   isOpen: boolean;
-  noBorder?: boolean;
+  noBorder: boolean;
   onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-  rightAlignArrow?: boolean;
+  rightAlignArrow: boolean;
   title: React.ReactNode;
 };
 
@@ -63,16 +63,16 @@ class Accordion extends React.Component<
 
   state = { contentHeight: '0px' };
 
-  componentDidMount(): void {
+  componentDidMount() {
     this.updateHeight();
   }
 
-  componentDidUpdate(): void {
+  componentDidUpdate() {
     this.updateHeight();
   }
 
   // prettier-ignore
-  getContentHeight = (isOpen: boolean): string => (
+  getContentHeight = (isOpen: boolean) => (
     `${
       isOpen && this.contentRef.current
         ? this.contentRef.current.clientHeight
@@ -80,7 +80,7 @@ class Accordion extends React.Component<
     }px`
   );
 
-  updateHeight(): void {
+  updateHeight() {
     const { isOpen } = this.props;
     const { contentHeight } = this.state;
 
@@ -91,7 +91,7 @@ class Accordion extends React.Component<
     }
   }
 
-  render(): JSX.Element {
+  render() {
     const { contentHeight } = this.state;
     const {
       title,

@@ -11,6 +11,7 @@ const testAccordion = {
   children: <div>expansion</div>,
 };
 
+/* eslint-disable react/jsx-props-no-spreading */
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
     const component = renderer.create(<Accordion {...testAccordion} />);
@@ -21,7 +22,7 @@ describe('<Accordion />', () => {
 
   test('renders no border accordion', () => {
     const component = renderer.create(
-      <Accordion noBorder {...testAccordion} />
+      <Accordion noBorder {...testAccordion} />,
     );
 
     const tree = component.toJSON();
@@ -30,7 +31,7 @@ describe('<Accordion />', () => {
 
   test('renders disabled accordion', () => {
     const component = renderer.create(
-      <Accordion disabled {...testAccordion} />
+      <Accordion disabled {...testAccordion} />,
     );
 
     const tree = component.toJSON();
@@ -48,3 +49,4 @@ describe('<Accordion />', () => {
     expect(spy).toHaveBeenCalled();
   });
 });
+/* eslint-enable react/jsx-props-no-spreading */

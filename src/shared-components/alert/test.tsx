@@ -7,16 +7,14 @@ import Alert from './index';
 
 const alertText = 'Your email address was updated successfully!';
 
-const CustomContentComponent = (): JSX.Element => (
+const CustomContentComponent = () => (
   <div>
     <strong>Your info is updated!</strong>{' '}
     <a href="curology.com"> Click here to see changes</a>
   </div>
 );
 
-const createNodeMock = (
-  element: ReactElement,
-): { innerHTML: string } | null => {
+const createNodeMock = (element: ReactElement) => {
   if (element.type === 'div') {
     return {
       innerHTML: alertText,
