@@ -11,9 +11,9 @@ describe('<RoundButton />', () => {
     it('renders with props', () => {
       const tree = renderer
         .create(
-          <RoundButton disabled onClick={() => {}} icon={<CameraIcon />}>
+          <RoundButton disabled onClick={() => undefined} icon={<CameraIcon />}>
             Button Text
-          </RoundButton>
+          </RoundButton>,
         )
         .toJSON();
 
@@ -27,7 +27,7 @@ describe('<RoundButton />', () => {
       const wrapper = mount(
         <RoundButton onClick={spy} icon={<CameraIcon />}>
           Button Text
-        </RoundButton>
+        </RoundButton>,
       );
 
       const button = wrapper.find('button');
@@ -41,7 +41,7 @@ describe('<RoundButton />', () => {
       const wrapper = mount(
         <RoundButton disabled onClick={spy} icon={<CameraIcon />}>
           Button Text
-        </RoundButton>
+        </RoundButton>,
       );
 
       const button = wrapper.find('button');
@@ -55,7 +55,7 @@ describe('<RoundButton />', () => {
       const wrapper = mount(
         <RoundButton isLoading onClick={spy} icon={<CameraIcon />}>
           Button Text
-        </RoundButton>
+        </RoundButton>,
       );
 
       const button = wrapper.find('button');

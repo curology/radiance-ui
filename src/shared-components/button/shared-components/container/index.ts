@@ -20,8 +20,7 @@ const flexMdUpStyles = css`
   }
 `;
 
-/* eslint-disable indent */
-const ButtonContainer = styled.div`
+const ButtonContainer = styled.div<{ reverse?: boolean; flex?: boolean }>`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -50,7 +49,6 @@ const ButtonContainer = styled.div`
     ${({ flex }) => flex && flexMdUpStyles};
   }
 `;
-/* eslint-enable */
 
 ButtonContainer.propTypes = {
   flex: PropTypes.bool,

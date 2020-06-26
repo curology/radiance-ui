@@ -11,23 +11,10 @@ import {
   roundButtonTextStyles,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-
-const deprecatedProperties = {
-  loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
-};
-
-const isLoadingPropFunction = (props, propName, componentName) => {
-  if (props[propName] !== undefined) {
-    return new Error(
-      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`,
-    );
-  }
-};
+import { deprecatedProperties, isLoadingPropFunction, ButtonType } from '../..';
 
 const propTypes = {
-  onClick: PropTypes.func,
-  disabled: PropTypes.bool,
-  children: PropTypes.node,
+  buttonColor: COLORS_PROP_TYPES,
   buttonType: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -35,36 +22,51 @@ const propTypes = {
     'quaternary',
     'action',
   ]),
-  buttonColor: COLORS_PROP_TYPES,
-  loading: isLoadingPropFunction,
-  isLoading: PropTypes.bool,
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
   icon: PropTypes.node.isRequired,
+  isLoading: PropTypes.bool,
+  loading: isLoadingPropFunction,
+  onClick: PropTypes.func,
   textColor: PropTypes.string,
 };
 
 const defaultProps = {
-  disabled: false,
-  buttonType: 'primary',
   buttonColor: COLORS.primary,
-  loading: undefined,
-  isLoading: false,
-  onClick: () => undefined,
+  buttonType: 'primary',
   children: '',
+  disabled: false,
+  isLoading: false,
+  loading: undefined,
+  onClick: () => undefined,
   textColor: '',
 };
 
+type RoundButtonProps = {
+  buttonColor?: string;
+  buttonType?: ButtonType;
+  children?: React.ReactNode;
+  disabled?: boolean;
+  icon: React.ReactNode;
+  isLoading?: boolean;
+  loading?: boolean | undefined;
+  onClick?: () => void;
+  textColor?: string;
+  [key: string]: any;
+};
+
 const RoundButton = ({
-  onClick,
-  disabled,
-  children,
-  buttonType,
-  buttonColor,
-  loading,
-  isLoading,
+  buttonColor = COLORS.primary,
+  buttonType = 'primary',
+  children = '',
+  disabled = false,
   icon,
-  textColor,
+  isLoading = false,
+  loading = undefined,
+  onClick = () => undefined,
+  textColor = '',
   ...rest
-}) => {
+}: RoundButtonProps) => {
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
@@ -82,11 +84,11 @@ const RoundButton = ({
       >
         {icon}
         <Loader
-          isLoading={loadingVal}
-          disabled={disabled}
-          buttonType={buttonType}
           buttonColor={buttonColor}
+          buttonType={buttonType}
+          disabled={disabled}
           css={roundButtonLoader(disabled)}
+          isLoading={loadingVal}
           textColor={textColor}
         />
       </RoundButtonBase>

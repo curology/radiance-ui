@@ -9,7 +9,9 @@ describe('<LinkButton/>', () => {
     it('renders with props', () => {
       const tree = renderer
         .create(
-          <LinkButton onClick={() => {}} href="#">Click me!</LinkButton>
+          <LinkButton onClick={() => undefined} href="#">
+            Click me!
+          </LinkButton>,
         )
         .toJSON();
 
@@ -19,11 +21,9 @@ describe('<LinkButton/>', () => {
 
   describe('href handling', () => {
     it('should link to a path', () => {
-      const wrapper = shallow(
-        <LinkButton href="/some/path">text</LinkButton>
-      );
+      const wrapper = shallow(<LinkButton href="/some/path">text</LinkButton>);
 
-      expect(wrapper.prop('href')).toEqual("/some/path");
+      expect(wrapper.prop('href')).toEqual('/some/path');
     });
   });
 
@@ -31,9 +31,7 @@ describe('<LinkButton/>', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
 
-      const button = shallow(
-        <LinkButton onClick={spy}>text</LinkButton>
-      );
+      const button = shallow(<LinkButton onClick={spy}>text</LinkButton>);
 
       button.simulate('click');
       expect(spy).toHaveBeenCalled();
@@ -43,7 +41,9 @@ describe('<LinkButton/>', () => {
       const spy = jest.fn();
 
       const button = shallow(
-        <LinkButton disabled href="#" onClick={spy}>text</LinkButton>
+        <LinkButton disabled href="#" onClick={spy}>
+          text
+        </LinkButton>,
       );
 
       button.simulate('click');

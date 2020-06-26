@@ -3,10 +3,14 @@ import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, COLORS, SPACER, BOX_SHADOWS } from '../../constants';
+import {
+  ANIMATION, COLORS, SPACER, BOX_SHADOWS, 
+} from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
-const primaryStyles = buttonColor => css`
+import { ButtonType } from '.';
+
+const primaryStyles = (buttonColor: string) => css`
   background-color: ${buttonColor};
   border-color: ${buttonColor};
   color: ${COLORS.white};
@@ -22,7 +26,7 @@ const primaryStyles = buttonColor => css`
   }
 `;
 
-const secondaryStyles = (isLoading, buttonColor) => css`
+const secondaryStyles = (isLoading: boolean, buttonColor: string) => css`
   background-color: transparent;
   border-color: ${buttonColor};
   color: ${buttonColor};
@@ -38,7 +42,7 @@ const secondaryStyles = (isLoading, buttonColor) => css`
   }
 `;
 
-const tertiaryStyles = buttonColor => css`
+const tertiaryStyles = (buttonColor: string) => css`
   border-color: transparent;
   background-color: transparent;
   color: ${buttonColor};
@@ -53,21 +57,21 @@ const tertiaryStyles = buttonColor => css`
   }
 `;
 
-const quaternaryStyles = buttonColor => css`
+const quaternaryStyles = (buttonColor: string) => css`
   border-color: transparent;
   background-color: transparent;
   color: ${textColorsAssociatedWithColors[buttonColor]
     ? textColorsAssociatedWithColors[buttonColor].tint2
     : tinycolor(buttonColor)
-        .lighten(10)
-        .desaturate(50)
-        .toHexString()};
+      .lighten(10)
+      .desaturate(50)
+      .toHexString()};
   fill: ${textColorsAssociatedWithColors[buttonColor]
     ? textColorsAssociatedWithColors[buttonColor].tint2
     : tinycolor(buttonColor)
-        .lighten(10)
-        .desaturate(50)
-        .toHexString()};
+      .lighten(10)
+      .desaturate(50)
+      .toHexString()};
 
   &:hover,
   &:focus,
@@ -76,15 +80,15 @@ const quaternaryStyles = buttonColor => css`
     opacity: 0.8;
     background-color: transparent;
     color: ${textColorsAssociatedWithColors[buttonColor]
-      ? textColorsAssociatedWithColors[buttonColor].tint2
-      : tinycolor(buttonColor)
-          .lighten(10)
-          .desaturate(50)
-          .toHexString()};
+    ? textColorsAssociatedWithColors[buttonColor].tint2
+    : tinycolor(buttonColor)
+      .lighten(10)
+      .desaturate(50)
+      .toHexString()};
   }
 `;
 
-const actionStyles = (isLoading, buttonColor) => css`
+const actionStyles = (isLoading: boolean, buttonColor: string) => css`
   border-width: 1px;
   border-color: ${COLORS.border};
   background-color: ${COLORS.white};
@@ -119,7 +123,12 @@ const disabledStyles = css`
   }
 `;
 
-function parseTheme(disabled, buttonType, isLoading, buttonColor) {
+function parseTheme(
+  disabled: boolean,
+  buttonType: ButtonType,
+  isLoading: boolean,
+  buttonColor: string,
+) {
   if (disabled) {
     return disabledStyles;
   }
@@ -138,6 +147,15 @@ function parseTheme(disabled, buttonType, isLoading, buttonColor) {
   }
 }
 
+type BaseButtonStylesTypes = {
+  disabled: boolean;
+  buttonType: ButtonType;
+  buttonColor: string;
+  isLoading?: boolean;
+  textColor: string;
+  isFullWidth?: boolean;
+};
+
 export const baseButtonStyles = ({
   disabled,
   buttonType,
@@ -145,7 +163,7 @@ export const baseButtonStyles = ({
   isLoading,
   textColor,
   isFullWidth,
-}) => css`
+}: BaseButtonStylesTypes) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
   border-radius: ${SPACER.xsmall};
@@ -170,7 +188,7 @@ export const baseButtonStyles = ({
     outline: none;
   }
 
-  ${parseTheme(disabled, buttonType, isLoading, buttonColor)};
+  ${parseTheme(disabled, buttonType, !!isLoading, buttonColor)};
   ${isLoading && loadingStyles};
 
   ${!!textColor &&
@@ -196,7 +214,11 @@ export const ButtonBase = styled.button(baseButtonStyles);
 
 // align-items conditional fixes slight button height misalignment for truthy scenario
 // See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
-export const ButtonContents = styled.div`
+export const ButtonContents = styled.div<{
+  hasIcon?: boolean;
+  isFullWidth?: boolean;
+  isLoading?: boolean;
+}>`
   align-items: ${({ hasIcon, isFullWidth, isLoading }) => {
     if (isFullWidth && isLoading && hasIcon) {
       return 'baseline';
@@ -238,7 +260,10 @@ export const ButtonContents = styled.div`
   }
 `;
 
-export const ButtonText = styled.span`
+export const ButtonText = styled.span<{
+  hasIcon?: boolean;
+  isLoading?: boolean;
+}>`
   line-height: 1.5;
   margin: 0;
   padding-top: 2px;
@@ -249,5 +274,6 @@ export const ButtonText = styled.span`
         padding-left: ${SPACER.medium};
       `;
     }
+    return '';
   }};
 `;

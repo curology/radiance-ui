@@ -12,7 +12,7 @@ const multiStyles = `
   margin: 0 auto;
 `;
 
-export const RoundButtonContainer = styled.div`
+export const RoundButtonContainer = styled.div<{ multi: boolean }>`
   display: flex;
   justify-content: center;
   align-items: start;
@@ -53,7 +53,7 @@ export const RoundButtonBase = styled(ButtonBase)`
   }
 `;
 
-export const roundButtonLoader = disabled => css`
+export const roundButtonLoader = (disabled: boolean) => css`
   width: 36px;
   margin: -3px -3px 0 0;
   ${disabled &&
@@ -64,18 +64,13 @@ export const roundButtonLoader = disabled => css`
   `};
 `;
 
-export const roundButtonTextStyles = (buttonColor, textColor) => css`
-  color: ${buttonTextColor(buttonColor, textColor)};
-  margin: 10px 0;
-`;
-
 /**
  * Given a color as an argument,
  * determine an alternate color for pairing
  * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
  * @return string         hex string of the alternate color (e.g. #efefef)
  */
-const determineAlternateTextColor = buttonColor => {
+const determineAlternateTextColor = (buttonColor: string) => {
   // create a lighter and darker version of the text
   const lighterVersion = tinycolor(buttonColor)
     .lighten(10)
@@ -88,7 +83,7 @@ const determineAlternateTextColor = buttonColor => {
 
   // loose readability contrast level
   // https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
-  const contrastLevel = { level: 'AA', size: 'large' };
+  const contrastLevel: tinycolor.WCAG2Options = { level: 'AA', size: 'large' };
 
   const lighterIsReadable = tinycolor.isReadable(
     COLORS.defaultBackground,
@@ -106,7 +101,7 @@ const determineAlternateTextColor = buttonColor => {
  * @param  string textColor   custom override for the text color
  * @return string             hex string of the text color
  */
-const buttonTextColor = (buttonColor, textColor) => {
+const buttonTextColor = (buttonColor: string, textColor: string) => {
   if (textColor !== '') {
     return textColor;
   }
@@ -115,3 +110,11 @@ const buttonTextColor = (buttonColor, textColor) => {
     ? textColorsAssociatedWithColors[buttonColor].tint1
     : determineAlternateTextColor(buttonColor);
 };
+
+export const roundButtonTextStyles = (
+  buttonColor: string,
+  textColor: string,
+) => css`
+  color: ${buttonTextColor(buttonColor, textColor)};
+  margin: 10px 0;
+`;

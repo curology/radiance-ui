@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextButton /> UI snapshots renders without any props 1`] = `
+.emotion-2 {
+  border-color: transparent;
+  background-color: transparent;
+  color: #332e54;
+  cursor: pointer;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+  background-color: transparent;
+}
+
+.emotion-2:active,
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 0;
+  -webkit-transition: -webkit-transform 350ms;
+  -webkit-transition: transform 350ms;
+  transition: transform 350ms;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.emotion-0 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin-right: 1rem;
+  margin-top: -5px;
+}
+
+<button
+  className="emotion-2 emotion-3"
+  disabled={false}
+  onClick={[Function]}
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Button Text
+  </div>
+</button>
+`;
+
+exports[`<TextButton /> UI snapshots renders witht diabled props 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem 0;
+  -webkit-transition: -webkit-transform 350ms;
+  -webkit-transition: transform 350ms;
+  transition: transform 350ms;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.emotion-0 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin-right: 1rem;
+  margin-top: -5px;
+}
+
+.emotion-2 {
+  border-color: transparent;
+  background-color: transparent;
+  color: #c3c0cd;
+  cursor: not-allowed;
+}
+
+.emotion-2:hover {
+  opacity: 0.8;
+  background-color: transparent;
+}
+
+.emotion-2:active,
+.emotion-2:focus {
+  outline: none;
+}
+
+<button
+  className="emotion-2 emotion-3"
+  disabled={true}
+  onClick={[Function]}
+>
+  <div
+    className="emotion-0 emotion-1"
+  >
+    Disabled Button Text
+  </div>
+</button>
+`;
