@@ -10,22 +10,10 @@ import LinkButton from './components/linkButton';
 import RoundButton from './components/roundButton';
 import TextButton from './components/textButton';
 import { COLORS, COLORS_PROP_TYPES } from '../../constants';
-
-export const deprecatedProperties = {
-  loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
-};
-
-export const isLoadingPropFunction = (
-  props: object,
-  propName: string,
-  componentName: string,
-): Error | void => {
-  if (props[propName] !== undefined) {
-    return new Error(
-      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`,
-    );
-  }
-};
+import {
+  deprecatedProperties,
+  isLoadingPropFunction,
+} from './deprecatedPropsHanlder';
 
 export type ButtonType =
   | 'primary'

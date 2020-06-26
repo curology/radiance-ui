@@ -11,7 +11,11 @@ import {
   roundButtonTextStyles,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { deprecatedProperties, isLoadingPropFunction, ButtonType } from '../..';
+import { ButtonType } from '../..';
+import {
+  deprecatedProperties,
+  isLoadingPropFunction,
+} from '../../deprecatedPropsHanlder';
 
 const propTypes = {
   buttonColor: COLORS_PROP_TYPES,
