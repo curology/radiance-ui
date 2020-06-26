@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { COLORS } from '../../../../constants';
+import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import ButtonLoader from './style';
 
 const Loader = ({
@@ -38,7 +38,7 @@ Loader.propTypes = {
     'quaternary',
     'action',
   ]),
-  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
+  buttonColor: COLORS_PROP_TYPES,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { COLORS } from '../../../../constants';
+import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
@@ -15,7 +15,7 @@ const propTypes = {
     'tertiary',
     'quaternary',
   ]),
-  buttonColor: PropTypes.oneOf(Object.values(COLORS)),
+  buttonColor: COLORS_PROP_TYPES,
   as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
   onClick: PropTypes.func,
   textColor: PropTypes.string,

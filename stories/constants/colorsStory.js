@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
 import { SPACER } from 'src/constants';
 import { Typography } from 'src/shared-components';
 import * as COLORS from 'src/constants/colors';
@@ -22,7 +21,7 @@ const ColorsContainer = styled.div`
 const colorsStory = () => (
   <MainContainer>
     {Object.keys(COLORS).map(category => {
-      if (category === 'default') {
+      if (category === 'default' || category === 'COLORS_PROP_TYPES') {
         return null;
       }
 
