@@ -16,7 +16,9 @@ import {
 } from './deprecatedPropsHanlder';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-// This is needed for RoundButton
+/**
+ * RoundButton can also accept a buttonType prop of 'action'
+ */
 export type ButtonTypeWithAction = ButtonType | 'action';
 
 type ButtonProps = {
