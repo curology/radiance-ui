@@ -8,6 +8,7 @@ import { ButtonType } from '../..';
 type LoaderProps = {
   buttonColor: string;
   buttonType: ButtonType;
+  className: string;
   disabled: boolean;
   isFullWidth?: boolean;
   isLoading: boolean;
@@ -17,6 +18,7 @@ type LoaderProps = {
 const Loader = ({
   buttonColor,
   buttonType,
+  className,
   disabled,
   isFullWidth,
   isLoading,
@@ -25,6 +27,7 @@ const Loader = ({
   <ButtonLoader
     buttonColor={buttonColor}
     buttonType={buttonType}
+    className={className}
     disabled={disabled}
     isFullWidth={!!isFullWidth}
     isLoading={isLoading}
@@ -47,6 +50,7 @@ Loader.propTypes = {
     'action',
   ]),
   buttonColor: COLORS_PROP_TYPES,
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
@@ -56,6 +60,7 @@ Loader.propTypes = {
 Loader.defaultProps = {
   buttonType: 'primary',
   buttonColor: COLORS.primary,
+  className: '',
   disabled: false,
   isFullWidth: false,
   isLoading: false,

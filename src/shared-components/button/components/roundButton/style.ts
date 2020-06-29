@@ -56,6 +56,7 @@ export const RoundButtonBase = styled(ButtonBase)`
 export const roundButtonLoader = (disabled: boolean) => css`
   width: 36px;
   margin: -3px -3px 0 0;
+
   ${disabled &&
     `
     & span {

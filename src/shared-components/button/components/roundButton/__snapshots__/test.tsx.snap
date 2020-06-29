@@ -198,6 +198,8 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   margin-top: -6px;
   width: 38px;
   opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
 }
 
 .emotion-0 span {
@@ -221,6 +223,10 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 .emotion-0 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
+}
+
+.emotion-0 span {
+  background-color: #ffffff;
 }
 
 .emotion-4 {
