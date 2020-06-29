@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v9.1.2
+
+- [Internal] Suppress Deprecation notice triggered by PropTypes ([#249](https://github.com/curology/radiance-ui/pull/249))
+
 # v9.1.1
 
 - [Internal] TypeScript convertion: Alert, Avatar, Banner ([#248](https://github.com/curology/radiance-ui/pull/248))
