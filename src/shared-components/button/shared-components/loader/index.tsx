@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import ButtonLoader from './style';
-import { ButtonType } from '../..';
+import { ButtonTypeWithAction } from '../..';
 
 type LoaderProps = {
   buttonColor: string;
-  buttonType: ButtonType;
+  buttonType: ButtonTypeWithAction;
   className: string;
   disabled: boolean;
   isFullWidth?: boolean;

@@ -11,7 +11,7 @@ import {
   roundButtonTextStyles,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { ButtonType } from '../..';
+import { ButtonTypeWithAction } from '../..';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
@@ -48,7 +48,7 @@ const defaultProps = {
 
 type RoundButtonProps = {
   buttonColor?: string;
-  buttonType?: ButtonType;
+  buttonType?: ButtonTypeWithAction;
   children?: React.ReactNode;
   disabled?: boolean;
   icon: React.ReactNode;

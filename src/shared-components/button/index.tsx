@@ -15,12 +15,9 @@ import {
   isLoadingPropFunction,
 } from './deprecatedPropsHanlder';
 
-export type ButtonType =
-  | 'primary'
-  | 'secondary'
-  | 'tertiary'
-  | 'quaternary'
-  | 'action';
+export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+// This is needed for RoundButton
+export type ButtonTypeWithAction = ButtonType | 'action';
 
 type ButtonProps = {
   buttonColor?: string;

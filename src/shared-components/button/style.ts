@@ -8,7 +8,7 @@ import {
 } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
-import { ButtonType } from '.';
+import { ButtonTypeWithAction } from '.';
 
 const primaryStyles = (buttonColor: string) => css`
   background-color: ${buttonColor};
@@ -125,7 +125,7 @@ const disabledStyles = css`
 
 function parseTheme(
   disabled: boolean,
-  buttonType: ButtonType,
+  buttonType: ButtonTypeWithAction,
   isLoading: boolean,
   buttonColor: string,
 ) {
@@ -149,7 +149,7 @@ function parseTheme(
 
 type BaseButtonStylesTypes = {
   disabled: boolean;
-  buttonType: ButtonType;
+  buttonType: ButtonTypeWithAction;
   buttonColor: string;
   isLoading?: boolean;
   textColor: string;
