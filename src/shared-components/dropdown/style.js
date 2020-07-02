@@ -9,8 +9,6 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
-const optionsContainerMaxHeight = '250px';
-
 export const DropdownContainer = styled.div`
   position: relative;
   width: 100%;
@@ -101,7 +99,7 @@ export const DropdownOptionsContainer = styled.ul`
   list-style: none;
   -webkit-overflow-scrolling: touch;
 
-  ${({ isOpen }) =>
+  ${({ isOpen, optionsContainerMaxHeight }) =>
     isOpen &&
     css`
       max-height: ${optionsContainerMaxHeight};
