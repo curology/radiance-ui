@@ -78,7 +78,7 @@ DesktopDropdown.defaultProps = {
   onOptionClick: () => {},
   onSelectClick: () => {},
   isOpen: false,
-  maxHeight: null,
+  maxHeight: '250px',
 };
 
 DesktopDropdown.propTypes = {

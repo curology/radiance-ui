@@ -9,7 +9,7 @@ const defaultProps = {
   textAlign: 'left',
   /* eslint-disable  @typescript-eslint/no-empty-function */
   onChange() {},
-  maxHeight: null,
+  maxHeight: '250px',
   value: null,
 };
 

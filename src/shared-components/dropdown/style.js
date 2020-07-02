@@ -9,8 +9,6 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
-const optionsContainerMaxHeight = '250px';
-
 export const DropdownContainer = styled.div`
   position: relative;
   width: 100%;
@@ -104,7 +102,7 @@ export const DropdownOptionsContainer = styled.ul`
   ${({ isOpen, maxHeight }) =>
     isOpen &&
     css`
-      max-height: ${maxHeight ? maxHeight : optionsContainerMaxHeight};
+      max-height: ${maxHeight};
       border-bottom-width: 1px;
       transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
     `};
