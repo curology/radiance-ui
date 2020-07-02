@@ -21,7 +21,7 @@ const DesktopDropdown = ({
   onOptionClick,
   onSelectClick,
   isOpen,
-  maxHeight,
+  optionsContainerMaxHeight,
 }) => (
   <OffClickWrapper
     onOffClick={closeDropdown}
@@ -45,9 +45,14 @@ const DesktopDropdown = ({
         </IconContainer>
       </div>
 
-      <DropdownOptionsContainer isOpen={isOpen} maxHeight={maxHeight}>
+      <DropdownOptionsContainer
+        isOpen={isOpen}
+        optionsContainerMaxHeight={optionsContainerMaxHeight}
+      >
         {options.map(option => {
-          const { value: optionValue, disabled, ...rest } = option;
+          const {
+            value: optionValue, disabled, label, ...rest 
+          } = option;
 
           return (
             <DropdownOption
@@ -59,7 +64,7 @@ const DesktopDropdown = ({
               // eslint-disable-next-line react/jsx-props-no-spreading
               {...rest}
             >
-              {option.label}
+              {label}
             </DropdownOption>
           );
         })}
@@ -73,12 +78,10 @@ DesktopDropdown.defaultProps = {
   options: [{ value: null, label: '' }],
   currentOption: { value: null, label: '' },
   textAlign: 'left',
-  /* eslint-disable  @typescript-eslint/no-empty-function */
-  closeDropdown: () => {},
-  onOptionClick: () => {},
-  onSelectClick: () => {},
+  closeDropdown: () => undefined,
+  onOptionClick: () => undefined,
+  onSelectClick: () => undefined,
   isOpen: false,
-  maxHeight: '250px',
 };
 
 DesktopDropdown.propTypes = {
@@ -103,7 +106,7 @@ DesktopDropdown.propTypes = {
   onOptionClick: PropTypes.func,
   onSelectClick: PropTypes.func,
   isOpen: PropTypes.bool,
-  maxHeight: PropTypes.string,
+  optionsContainerMaxHeight: PropTypes.string.isRequired,
 };
 
 export default DesktopDropdown;

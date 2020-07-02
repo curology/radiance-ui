@@ -7,10 +7,9 @@ import allowNullPropType from '../../utils/allowNullPropType';
 
 const defaultProps = {
   textAlign: 'left',
-  /* eslint-disable  @typescript-eslint/no-empty-function */
-  onChange() {},
-  maxHeight: '250px',
-  value: null,
+  onChange: () => undefined,
+  optionsContainerMaxHeight: '250px',
+  value: undefined,
 };
 
 const propTypes = {
@@ -26,7 +25,7 @@ const propTypes = {
   ).isRequired,
   textAlign: PropTypes.oneOf(['left', 'center']),
   onChange: PropTypes.func,
-  maxHeight: PropTypes.string,
+  optionsContainerMaxHeight: PropTypes.string,
 };
 
 class Dropdown extends React.Component {
@@ -67,7 +66,7 @@ class Dropdown extends React.Component {
   closeDropdown = () => this.setState({ isOpen: false });
 
   render() {
-    const { value, options, maxHeight } = this.props;
+    const { value, options, optionsContainerMaxHeight } = this.props;
     const { isOpen } = this.state;
 
     const touchSupported = 'ontouchstart' in document.documentElement;
@@ -88,7 +87,7 @@ class Dropdown extends React.Component {
         closeDropdown={this.closeDropdown}
         onSelectClick={this.onSelectClick}
         currentOption={currentOption}
-        maxHeight={maxHeight}
+        optionsContainerMaxHeight={optionsContainerMaxHeight}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...this.props}
       />

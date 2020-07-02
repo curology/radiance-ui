@@ -99,10 +99,10 @@ export const DropdownOptionsContainer = styled.ul`
   list-style: none;
   -webkit-overflow-scrolling: touch;
 
-  ${({ isOpen, maxHeight }) =>
+  ${({ isOpen, optionsContainerMaxHeight }) =>
     isOpen &&
     css`
-      max-height: ${maxHeight};
+      max-height: ${optionsContainerMaxHeight};
       border-bottom-width: 1px;
       transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
     `};

@@ -36,13 +36,13 @@ class DropdownExample extends React.Component {
 
 ### Proptypes
 
-| prop      | propType         | required | default  | description                                           |
-| --------- | ---------------- | -------- | -------- | ----------------------------------------------------- |
-| value     | any              | yes      | -        | The currently selected option. Can mount as `null`    |
-| options   | array of objects | yes      | -        | The list of options (see proptypes below)             |
-| textAlign | string           | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
-| onChange  | func             | no       | () => {} | The handler to be invoked on option change            |
-| maxHeight | string           | no       | '250px'  | Specifies maximum height of the expanded dropdown     |
+| prop                      | propType         | required | default  | description                                           |
+| ------------------------- | ---------------- | -------- | -------- | ----------------------------------------------------- |
+| value                     | any              | yes      | -        | The currently selected option. Can mount as `null`    |
+| options                   | array of objects | yes      | -        | The list of options (see proptypes below)             |
+| textAlign                 | string           | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
+| onChange                  | func             | no       | () => {} | The handler to be invoked on option change            |
+| optionsContainerMaxHeight | string           | no       | '250px'  | Specifies maximum height of the expanded dropdown     |
 
 #### `options` Proptypes
 
