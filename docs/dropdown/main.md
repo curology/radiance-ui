@@ -1,4 +1,5 @@
 # Dropdown
+
 ## Usage
 
 ```jsx
@@ -9,7 +10,7 @@ class DropdownExample extends React.Component {
     { value: 1, label: 'First option' },
     { value: 2, label: 'Second option (disabled)', disabled: true },
     { value: 3, label: 'Third option' },
-    { value: 4, label: 'Fourth option' }
+    { value: 4, label: 'Fourth option' },
   ];
 
   onChange = ({ value }) => {
@@ -41,6 +42,7 @@ class DropdownExample extends React.Component {
 | options   | array of objects | yes      | -        | The list of options (see proptypes below)             |
 | textAlign | string           | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
 | onChange  | func             | no       | () => {} | The handler to be invoked on option change            |
+| maxHeight | string           | no       | `null`   | Specifies a maximum height of the expanded dropdown   |
 
 #### `options` Proptypes
 
