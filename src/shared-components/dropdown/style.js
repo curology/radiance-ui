@@ -9,7 +9,7 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
-const optionsContainerMaxHeight = '250px';
+const optionsContainerMaxHeight = '206px';
 
 export const DropdownContainer = styled.div`
   position: relative;
