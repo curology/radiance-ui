@@ -32,7 +32,7 @@ const defaultProps = {
 };
 
 type LinkProps = {
-  as?: 'a' | 'span' | React.ElementType;
+  as?: string | React.ElementType;
   buttonColor?: string;
   buttonType?: ButtonType;
   children: React.ReactNode;

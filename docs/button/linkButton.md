@@ -73,15 +73,15 @@ import { COLORS } from 'radiance-ui/lib/constants';
 
 ### Proptypes
 
-| prop        | propType             | required | default  | description                                                                                                                  |
-| ----------- | -------------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| as          | "a", "span", element | no       | "a"      | Specifies the tag or element to be rendered.                                                                                 |
-| buttonType  | string               | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`.                                 |
-| buttonColor | string               | no       | primary  | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
-| children    | node                 | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
-| disabled    | bool                 | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
-| onClick     | func                 | no       | () => {} | callback function called on click of the button                                                                              |
-| textColor   | string               | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
+| prop        | propType        | required | default  | description                                                                                                                  |
+| ----------- | --------------- | -------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| as          | string, element | no       | "a"      | Specifies the tag or element to be rendered.                                                                                 |
+| buttonType  | string          | no       | primary  | Determines the button's main style theme. Must be one of `primary`, `secondary`, `tertiary`.                                 |
+| buttonColor | string          | no       | primary  | Determines the color of the button . Must be one of the predefined colors (e.g. `primary`, `statusRed`, `statusGreen`, etc). |
+| children    | node            | yes      | -        | node to be rendered inside the button. Recommended to be the button text                                                     |
+| disabled    | bool            | no       | false    | when disabled, click listener will not be called and the UI will look disabled                                               |
+| onClick     | func            | no       | () => {} | callback function called on click of the button                                                                              |
+| textColor   | string          | no       | ''       | color (as a string) that will override existing text, icon, and loading colors for the button (except when disabled is true) |
 
 ### Notes
 
