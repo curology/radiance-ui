@@ -3,6 +3,7 @@ import tinycolor from 'tinycolor2';
 import { css, keyframes } from '@emotion/core';
 
 import { COLORS } from '../../../../constants';
+import { ButtonTypeWithAction } from '../..';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }
@@ -15,22 +16,29 @@ const primaryLoadingStyles = css`
   background-color: ${COLORS.white};
 `;
 
-const accentLoadingStyles = buttonColor => css`
+const accentLoadingStyles = (buttonColor: string) => css`
   background-color: ${buttonColor};
 `;
 
-const quaternaryLoadingStyles = buttonColor => css`
+const quaternaryLoadingStyles = (buttonColor: string) => css`
   background-color: ${tinycolor(buttonColor)
     .lighten(10)
     .desaturate(50)
     .toHexString()};
 `;
 
-const actionLoadingStyles = buttonColor => css`
+const actionLoadingStyles = (buttonColor: string) => css`
   background-color: ${buttonColor};
 `;
 
-const ButtonLoader = styled.div`
+const ButtonLoader = styled.div<{
+  buttonColor: string;
+  buttonType: ButtonTypeWithAction;
+  disabled: boolean;
+  isFullWidth: boolean;
+  isLoading: boolean;
+  textColor: string;
+}>`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -44,26 +52,26 @@ const ButtonLoader = styled.div`
 
   & span {
     ${({ disabled, buttonType, buttonColor }) => {
-      if (disabled) {
-        return '';
-      }
+    if (disabled) {
+      return '';
+    }
 
-      switch (buttonType) {
-        case 'secondary':
-          return accentLoadingStyles(buttonColor);
-        case 'tertiary':
-          return accentLoadingStyles(buttonColor);
-        case 'quaternary':
-          return quaternaryLoadingStyles(buttonColor);
-        case 'action':
-          return actionLoadingStyles(buttonColor);
-        default:
-          return primaryLoadingStyles;
-      }
-    }};
+    switch (buttonType) {
+      case 'secondary':
+        return accentLoadingStyles(buttonColor);
+      case 'tertiary':
+        return accentLoadingStyles(buttonColor);
+      case 'quaternary':
+        return quaternaryLoadingStyles(buttonColor);
+      case 'action':
+        return actionLoadingStyles(buttonColor);
+      default:
+        return primaryLoadingStyles;
+    }
+  }};
 
     ${({ textColor, disabled }) =>
-      !!textColor &&
+    !!textColor &&
       !disabled &&
       `
       background-color: ${textColor};

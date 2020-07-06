@@ -3,43 +3,55 @@ import PropTypes from 'prop-types';
 
 import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import Container from '../../shared-components/container';
+import { ButtonType } from '../..';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
 
 const propTypes = {
-  disabled: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
+  buttonColor: COLORS_PROP_TYPES,
   buttonType: PropTypes.oneOf([
     'primary',
     'secondary',
     'tertiary',
     'quaternary',
   ]),
-  buttonColor: COLORS_PROP_TYPES,
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
   textColor: PropTypes.string,
 };
 
 const defaultProps = {
-  disabled: false,
-  buttonType: 'primary',
-  buttonColor: COLORS.primary,
   as: 'a',
+  buttonColor: COLORS.primary,
+  buttonType: 'primary',
+  disabled: false,
   onClick: () => undefined,
   textColor: '',
 };
 
+type LinkProps = {
+  as?: 'a' | React.ElementType;
+  buttonColor?: string;
+  buttonType?: ButtonType;
+  children: React.ReactNode;
+  disabled?: boolean;
+  onClick?: () => void;
+  textColor?: string;
+  [key: string]: any;
+};
+
 const Link = ({
-  disabled,
+  as = 'a',
+  buttonColor = COLORS.primary,
+  buttonType = 'primary',
   children,
-  buttonType,
-  buttonColor,
-  as,
-  onClick,
-  textColor,
+  disabled = false,
+  onClick = () => undefined,
+  textColor = '',
   ...rest
-}) => {
+}: LinkProps) => {
   const ContainerTag = as;
 
   return (

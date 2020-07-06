@@ -3,24 +3,35 @@ import PropTypes from 'prop-types';
 
 import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import ButtonLoader from './style';
+import { ButtonTypeWithAction } from '../..';
+
+type LoaderProps = {
+  buttonColor: string;
+  buttonType: ButtonTypeWithAction;
+  className: string;
+  disabled: boolean;
+  isFullWidth?: boolean;
+  isLoading: boolean;
+  textColor: string;
+};
 
 const Loader = ({
-  buttonType,
   buttonColor,
+  buttonType,
   className,
   disabled,
   isFullWidth,
   isLoading,
   textColor,
-}) => (
+}: LoaderProps) => (
   <ButtonLoader
-    isLoading={isLoading}
-    disabled={disabled}
-    buttonType={buttonType}
     buttonColor={buttonColor}
+    buttonType={buttonType}
     className={className}
+    disabled={disabled}
+    isFullWidth={!!isFullWidth}
+    isLoading={isLoading}
     textColor={textColor}
-    isFullWidth={isFullWidth}
   >
     <div>
       <span />

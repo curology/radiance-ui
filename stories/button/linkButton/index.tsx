@@ -9,13 +9,20 @@ import { COLORS } from 'src/constants';
 import Container from '../container';
 
 // Mock React-Router Link
-/* eslint-disable */
-const MockLink = ({ to, children, ...rest }) => (
+const MockLink = ({
+  to,
+  children,
+  ...rest
+}: {
+  to: string;
+  children: React.ReactNode;
+  rest: { [key: string]: unknown };
+}) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <a href={to} {...rest}>
     {children}
   </a>
 );
-/* eslint-enable */
 
 const LinkButtonStory = withDocs(LinkButtonReadme, () => (
   <React.Fragment>

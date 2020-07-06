@@ -10,66 +10,76 @@ import LinkButton from './components/linkButton';
 import RoundButton from './components/roundButton';
 import TextButton from './components/textButton';
 import { COLORS, COLORS_PROP_TYPES } from '../../constants';
+import {
+  deprecatedProperties,
+  isLoadingPropFunction,
+} from './deprecatedPropsHandler';
 
-const deprecatedProperties = {
-  loading: "The 'loading' prop is deprecated. Use 'isLoading' instead.",
+export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+/**
+ * RoundButton can also accept a buttonType prop of 'action'
+ */
+export type ButtonTypeWithAction = ButtonType | 'action';
+
+type ButtonProps = {
+  buttonColor?: string;
+  buttonType?: ButtonType;
+  children: React.ReactNode;
+  disabled?: boolean;
+  icon?: React.ReactNode;
+  isFullWidth?: boolean;
+  isLoading?: boolean;
+  loading?: boolean | undefined;
+  onClick?: () => void;
+  textColor?: string;
+  [key: string]: any;
 };
 
-const isLoadingPropFunction = (props, propName, componentName) => {
-  if (props[propName] !== undefined) {
-    return new Error(
-      `'loading' prop will be deprecated in a future major release. Please rename 'loading' to 'isLoading' in ${componentName}`,
-    );
-  }
-};
-
-// TODO: Move <Loader /> to be sibling of <ButtonContents /> for more consistent
-// loading animation spacing
-class Button extends React.Component {
+class Button extends React.Component<ButtonProps> {
   static Container = Container;
 
   static propTypes = {
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-    children: PropTypes.node.isRequired,
+    buttonColor: COLORS_PROP_TYPES,
     buttonType: PropTypes.oneOf([
       'primary',
       'secondary',
       'tertiary',
       'quaternary',
     ]),
-    buttonColor: COLORS_PROP_TYPES,
-    loading: isLoadingPropFunction,
-    isLoading: PropTypes.bool,
+    children: PropTypes.node.isRequired,
+    disabled: PropTypes.bool,
     icon: PropTypes.node,
-    textColor: PropTypes.string,
     isFullWidth: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    loading: isLoadingPropFunction,
+    onClick: PropTypes.func,
+    textColor: PropTypes.string,
   };
 
   static defaultProps = {
-    disabled: false,
-    buttonType: 'primary',
     buttonColor: COLORS.primary,
-    loading: undefined,
-    isLoading: false,
+    buttonType: 'primary',
+    disabled: false,
     icon: null,
+    isFullWidth: false,
+    isLoading: false,
+    loading: undefined,
     onClick: () => undefined,
     textColor: '',
-    isFullWidth: false,
   };
 
   render() {
     const {
-      onClick,
-      disabled,
+      buttonColor = COLORS.primary,
+      buttonType = 'primary',
       children,
-      buttonType,
-      buttonColor,
-      loading,
-      isLoading,
-      icon,
-      textColor,
-      isFullWidth,
+      disabled = false,
+      icon = null,
+      isFullWidth = false,
+      isLoading = false,
+      loading = undefined,
+      onClick = () => undefined,
+      textColor = '',
       ...rest
     } = this.props;
 
@@ -107,12 +117,12 @@ class Button extends React.Component {
           </ButtonText>
         </ButtonContents>
         <Loader
-          isLoading={loadingVal}
-          disabled={disabled}
-          buttonType={buttonType}
           buttonColor={buttonColor}
-          textColor={textColor}
+          buttonType={buttonType}
+          disabled={disabled}
           isFullWidth={isFullWidth}
+          isLoading={loadingVal}
+          textColor={textColor}
         />
       </ButtonBase>
     );
