@@ -16,7 +16,7 @@ const MockLink = ({
 }: {
   to: string;
   children: React.ReactNode;
-  rest: any[];
+  rest: { [key: string]: unknown };
 }) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <a href={to} {...rest}>

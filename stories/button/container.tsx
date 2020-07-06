@@ -2,8 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { Button, Typography } from 'src/shared-components';
 
-// eslint-disable-next-line react/prop-types
-export default ({
+const Container = ({
   title,
   children,
 }: {
@@ -26,3 +25,5 @@ export default ({
     {children}
   </Button.Container>
 );
+
+export default Container;
