@@ -1,6 +1,6 @@
 # CHANGELOG
 
-# v9.1.4
+# v9.2.0
 
 - [Internal] TypeScript convertion: Buttons ([#252](https://github.com/curology/radiance-ui/pull/252))
 
