@@ -13,7 +13,7 @@ describe('<TextButton />', () => {
 
       expect(tree).toMatchSnapshot();
     });
-    it('renders witht diabled props', () => {
+    it('renders with disabled prop', () => {
       const tree = renderer
         .create(<TextButton disabled>Disabled Button Text</TextButton>)
         .toJSON();
@@ -23,7 +23,7 @@ describe('<TextButton />', () => {
   });
 
   describe('onClick callback', () => {
-    it('should be invoked onClick', () => {
+    it('should invoke onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(<TextButton onClick={spy}>Button Text</TextButton>);
 
@@ -33,7 +33,7 @@ describe('<TextButton />', () => {
       expect(spy).toHaveBeenCalled();
     });
 
-    it('should not be invoked if disabled', () => {
+    it('should not be clickable if disabled', () => {
       const spy = jest.fn();
       const wrapper = mount(
         <TextButton disabled onClick={spy}>
