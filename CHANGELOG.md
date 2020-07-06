@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v9.1.3
+
+- Add `optionsContainerMaxHeight` prop to the `Dropdown` component ([#256](https://github.com/curology/radiance-ui/pull/256))
+
 # v9.1.2
 
 - [Internal] Suppress Deprecation notice triggered by PropTypes ([#249](https://github.com/curology/radiance-ui/pull/249))

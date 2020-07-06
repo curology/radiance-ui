@@ -1,4 +1,5 @@
 # Dropdown
+
 ## Usage
 
 ```jsx
@@ -9,7 +10,7 @@ class DropdownExample extends React.Component {
     { value: 1, label: 'First option' },
     { value: 2, label: 'Second option (disabled)', disabled: true },
     { value: 3, label: 'Third option' },
-    { value: 4, label: 'Fourth option' }
+    { value: 4, label: 'Fourth option' },
   ];
 
   onChange = ({ value }) => {
@@ -35,12 +36,13 @@ class DropdownExample extends React.Component {
 
 ### Proptypes
 
-| prop      | propType         | required | default  | description                                           |
-| --------- | ---------------- | -------- | -------- | ----------------------------------------------------- |
-| value     | any              | yes      | -        | The currently selected option. Can mount as `null`    |
-| options   | array of objects | yes      | -        | The list of options (see proptypes below)             |
-| textAlign | string           | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
-| onChange  | func             | no       | () => {} | The handler to be invoked on option change            |
+| prop                      | propType         | required | default  | description                                           |
+| ------------------------- | ---------------- | -------- | -------- | ----------------------------------------------------- |
+| value                     | any              | yes      | -        | The currently selected option. Can mount as `null`    |
+| options                   | array of objects | yes      | -        | The list of options (see proptypes below)             |
+| textAlign                 | string           | no       | 'left'   | Specifies text alignment - must be 'left' or 'center' |
+| onChange                  | func             | no       | () => {} | The handler to be invoked on option change            |
+| optionsContainerMaxHeight | string           | no       | '250px'  | Specifies maximum height of the expanded dropdown     |
 
 #### `options` Proptypes
 

@@ -21,10 +21,22 @@ const DesktopDropdown = ({
   onOptionClick,
   onSelectClick,
   isOpen,
+  optionsContainerMaxHeight,
 }) => (
-  <OffClickWrapper onOffClick={closeDropdown} css={css`width: 100%;`}>
+  <OffClickWrapper
+    onOffClick={closeDropdown}
+    css={css`
+      width: 100%;
+    `}
+  >
     <DropdownContainer textAlign={textAlign}>
-      <div id="select-input-box" onClick={onSelectClick}>
+      <div
+        id="select-input-box"
+        role="button"
+        onClick={onSelectClick}
+        onKeyDown={onSelectClick}
+        tabIndex="0"
+      >
         <div css={dropdownInputStyle({ textAlign })}>
           {currentOption && currentOption.label}
         </div>
@@ -33,9 +45,14 @@ const DesktopDropdown = ({
         </IconContainer>
       </div>
 
-      <DropdownOptionsContainer isOpen={isOpen}>
+      <DropdownOptionsContainer
+        isOpen={isOpen}
+        optionsContainerMaxHeight={optionsContainerMaxHeight}
+      >
         {options.map(option => {
-          const { value: optionValue, disabled, label, ...rest } = option;
+          const {
+            value: optionValue, disabled, label, ...rest 
+          } = option;
 
           return (
             <DropdownOption
@@ -44,11 +61,12 @@ const DesktopDropdown = ({
               selected={value === optionValue}
               disabled={disabled}
               onClick={onOptionClick}
+              // eslint-disable-next-line react/jsx-props-no-spreading
               {...rest}
             >
-              {option.label}
+              {label}
             </DropdownOption>
-          )
+          );
         })}
       </DropdownOptionsContainer>
     </DropdownContainer>
@@ -60,9 +78,9 @@ DesktopDropdown.defaultProps = {
   options: [{ value: null, label: '' }],
   currentOption: { value: null, label: '' },
   textAlign: 'left',
-  closeDropdown() {},
-  onOptionClick() {},
-  onSelectClick() {},
+  closeDropdown: () => undefined,
+  onOptionClick: () => undefined,
+  onSelectClick: () => undefined,
   isOpen: false,
 };
 
@@ -75,7 +93,7 @@ DesktopDropdown.propTypes = {
       value: PropTypes.any,
       label: PropTypes.string,
       disabled: PropTypes.bool,
-    })
+    }),
   ),
   textAlign: PropTypes.oneOf(['left', 'center']),
   currentOption: PropTypes.shape({
@@ -88,6 +106,7 @@ DesktopDropdown.propTypes = {
   onOptionClick: PropTypes.func,
   onSelectClick: PropTypes.func,
   isOpen: PropTypes.bool,
+  optionsContainerMaxHeight: PropTypes.string.isRequired,
 };
 
 export default DesktopDropdown;
