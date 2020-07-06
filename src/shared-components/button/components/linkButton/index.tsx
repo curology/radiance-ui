@@ -32,7 +32,7 @@ const defaultProps = {
 };
 
 type LinkProps = {
-  as?: React.ReactNode;
+  as?: 'a' | 'span' | React.ElementType;
   buttonColor?: string;
   buttonType?: ButtonType;
   children: React.ReactNode;
@@ -55,7 +55,6 @@ const Link = ({
   const ContainerTag = as;
 
   return (
-    // @ts-ignore JSX element type 'ContainerTag' does not have any construct or call signatures
     <ContainerTag
       css={linkButtonStyles({
         disabled,
