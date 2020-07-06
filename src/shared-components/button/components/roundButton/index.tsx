@@ -15,7 +15,7 @@ import { ButtonTypeWithAction } from '../..';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
-} from '../../deprecatedPropsHanlder';
+} from '../../deprecatedPropsHandler';
 
 const propTypes = {
   buttonColor: COLORS_PROP_TYPES,

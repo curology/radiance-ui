@@ -13,7 +13,7 @@ import { COLORS, COLORS_PROP_TYPES } from '../../constants';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
-} from './deprecatedPropsHanlder';
+} from './deprecatedPropsHandler';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**
