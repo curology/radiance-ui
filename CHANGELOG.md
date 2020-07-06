@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v9.1.4
+
+- [Internal] TypeScript convertion: Buttons ([#252](https://github.com/curology/radiance-ui/pull/252))
+
 # v9.1.3
 
 - Add `optionsContainerMaxHeight` prop to the `Dropdown` component ([#256](https://github.com/curology/radiance-ui/pull/256))
