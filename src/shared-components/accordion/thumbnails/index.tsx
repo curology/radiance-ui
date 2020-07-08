@@ -16,7 +16,7 @@ class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
   };
 
   /**
-   * Thumbnail images set with empty alt text because they are decorative. Accordion
+   * Thumbnail images set with empty alt text because they are decorative.
    * Accessible Accordion functionality does not depend on these thumbnails.
    */
   renderThumbnails() {
