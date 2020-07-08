@@ -15,6 +15,10 @@ class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
     photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
+  /**
+   * Thumbnail images set with empty alt text because they are decorative.
+   * Accessible Accordion functionality does not depend on these thumbnails.
+   */
   renderThumbnails() {
     const { photoSrcs } = this.props;
 
@@ -24,7 +28,7 @@ class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
 
     const firstThumbnail = (
       <ImageContainer>
-        <ThumbnailImage src={photoSrcs[0]} />
+        <ThumbnailImage alt="" src={photoSrcs[0]} />
       </ImageContainer>
     );
 
@@ -33,7 +37,7 @@ class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
     if (photoSrcs.length === 2) {
       secondThumbnail = (
         <ImageContainer>
-          <ThumbnailImage src={photoSrcs[1]} />
+          <ThumbnailImage alt="" src={photoSrcs[1]} />
         </ImageContainer>
       );
     } else if (photoSrcs.length > 2) {
