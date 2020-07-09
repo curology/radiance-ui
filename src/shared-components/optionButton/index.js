@@ -22,7 +22,14 @@ const OptionButton = ({
   type,
   ...rest
 }) => (
-  <ClickableContainer onClick={onClick} type="clickable" tabIndex="0" {...rest}>
+  <ClickableContainer
+    onClick={onClick}
+    onKeyPress={onClick}
+    type="clickable"
+    tabIndex="0"
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    {...rest}
+  >
     <FlexContainer>
       {icon ? (
         <IconWrapper selected={selected} optionType={optionType} type={type}>
@@ -56,8 +63,10 @@ OptionButton.propTypes = {
 };
 
 OptionButton.defaultProps = {
-  type: 'primary',
+  icon: undefined,
   selected: false,
+  subtext: undefined,
+  type: 'primary',
 };
 
 export default OptionButton;
