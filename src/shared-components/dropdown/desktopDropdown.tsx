@@ -15,7 +15,7 @@ import {
 import { OptionType } from './index';
 
 type DesktopDropdownProps = {
-  value: string | null;
+  value?: string;
   options: OptionType[];
   currentOption: OptionType;
   textAlign: 'left' | 'center';
@@ -46,10 +46,16 @@ const DesktopDropdown = ({
     <DropdownContainer textAlign={textAlign}>
       <div
         id="select-input-box"
-        role="button"
         onClick={onSelectClick}
-        onKeyDown={onSelectClick}
+        onKeyDown={(event: React.KeyboardEvent) => {
+          if (event.key === 'Enter') {
+            onSelectClick();
+          }
+        }}
         tabIndex={0}
+        aria-label="Open dropdown option"
+        aria-haspopup="listbox"
+        role="button"
       >
         <div css={dropdownInputStyle({ textAlign })}>
           {currentOption && currentOption.label}
@@ -62,6 +68,10 @@ const DesktopDropdown = ({
       <DropdownOptionsContainer
         isOpen={isOpen}
         optionsContainerMaxHeight={optionsContainerMaxHeight}
+        role="listbox"
+        aria-activedescendant={value}
+        tabIndex={-1}
+        aria-labelledby="select-input-box"
       >
         {options.map(option => {
           const {
@@ -75,6 +85,14 @@ const DesktopDropdown = ({
               selected={value === optionValue}
               disabled={!!disabled}
               onClick={onOptionClick}
+              onKeyDown={event => {
+                if (event.key === 'Enter') {
+                  onOptionClick(event);
+                }
+              }}
+              role="option"
+              aria-selected={value === optionValue}
+              tabIndex={isOpen && !disabled ? 0 : -1}
               // eslint-disable-next-line react/jsx-props-no-spreading
               {...rest}
             >
@@ -88,7 +106,7 @@ const DesktopDropdown = ({
 );
 
 DesktopDropdown.defaultProps = {
-  value: null,
+  value: undefined,
   options: [{ value: null, label: '' }],
   currentOption: { value: null, label: '' },
   textAlign: 'left',
