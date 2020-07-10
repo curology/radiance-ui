@@ -52,6 +52,8 @@ export const dropdownInputStyle = ({
 
   &:focus {
     outline: none;
+    box-shadow: ${BOX_SHADOWS.clickableHover};
+    transition: 200ms ease-in-out;
   }
 
   &::-moz-focus-inner {
@@ -129,6 +131,9 @@ export const DropdownOption = styled.li<{
   &:hover {
     background-color: ${COLORS.infoBackground};
   }
+  &:focus {
+    background-color: ${COLORS.infoBackground};
+  }
 
   ${({ selected }) =>
     selected &&
@@ -145,6 +150,10 @@ export const DropdownOption = styled.li<{
       cursor: not-allowed;
 
       &:hover {
+        background-color: ${COLORS.white};
+        font-weight: normal;
+      }
+      &:focus {
         background-color: ${COLORS.white};
         font-weight: normal;
       }
