@@ -12,6 +12,20 @@ import {
   DropdownOption,
 } from './style';
 
+import { OptionType } from './index';
+
+type DesktopDropdownProps = {
+  value: string | null;
+  options: OptionType[];
+  currentOption: OptionType;
+  textAlign: 'left' | 'center';
+  closeDropdown: () => void;
+  onOptionClick: (event: any) => void;
+  onSelectClick: () => void;
+  isOpen: boolean;
+  optionsContainerMaxHeight?: string;
+};
+
 const DesktopDropdown = ({
   value,
   options,
@@ -22,7 +36,7 @@ const DesktopDropdown = ({
   onSelectClick,
   isOpen,
   optionsContainerMaxHeight,
-}) => (
+}: DesktopDropdownProps) => (
   <OffClickWrapper
     onOffClick={closeDropdown}
     css={css`
@@ -35,7 +49,7 @@ const DesktopDropdown = ({
         role="button"
         onClick={onSelectClick}
         onKeyDown={onSelectClick}
-        tabIndex="0"
+        tabIndex={0}
       >
         <div css={dropdownInputStyle({ textAlign })}>
           {currentOption && currentOption.label}
@@ -59,7 +73,7 @@ const DesktopDropdown = ({
               key={optionValue}
               value={optionValue}
               selected={value === optionValue}
-              disabled={disabled}
+              disabled={!!disabled}
               onClick={onOptionClick}
               // eslint-disable-next-line react/jsx-props-no-spreading
               {...rest}

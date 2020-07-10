@@ -5,6 +5,20 @@ import MobileDropdown from './mobileDropdown';
 import DesktopDropdown from './desktopDropdown';
 import allowNullPropType from '../../utils/allowNullPropType';
 
+export type OptionType = {
+  value: string;
+  label: string;
+  disabled?: boolean;
+};
+
+type DropdownProps = {
+  value?: string;
+  onChange: (option: OptionType) => void;
+  options: OptionType[];
+  optionsContainerMaxHeight?: string;
+  textAlign: 'left' | 'center';
+};
+
 const defaultProps = {
   textAlign: 'left',
   onChange: () => undefined,
@@ -28,7 +42,11 @@ const propTypes = {
   optionsContainerMaxHeight: PropTypes.string,
 };
 
-class Dropdown extends React.Component {
+class Dropdown extends React.Component<DropdownProps> {
+  static defaultProps = defaultProps;
+
+  static propTypes = propTypes;
+
   state = { isOpen: false };
 
   onSelectClick = () => {
@@ -37,10 +55,10 @@ class Dropdown extends React.Component {
     this.setState({ isOpen: !isOpen });
   };
 
-  onSelectChange = event => {
+  onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { onChange } = this.props;
-
-    const { value, selectedOptions } = event.target;
+    const {target} = event;
+    const { value, selectedOptions } = target;
 
     if (selectedOptions && selectedOptions.length) {
       const { label } = selectedOptions[0];
@@ -50,15 +68,15 @@ class Dropdown extends React.Component {
     this.closeDropdown();
   };
 
-  onOptionClick = event => {
+  onOptionClick = (event: React.MouseEvent<HTMLLIElement>) => {
     const { onChange } = this.props;
-
-    if (event.target.hasAttribute('disabled')) {
+    const target = event.target as HTMLSelectElement;
+    if (target.hasAttribute('disabled')) {
       return;
     }
 
-    const value = event.target.getAttribute('value');
-    const label = event.target.innerText;
+    const value = target.getAttribute('value') as string;
+    const label = target.innerText;
     onChange({ value, label });
     this.closeDropdown();
   };
@@ -94,8 +112,5 @@ class Dropdown extends React.Component {
     );
   }
 }
-
-Dropdown.defaultProps = defaultProps;
-Dropdown.propTypes = propTypes;
 
 export default Dropdown;
