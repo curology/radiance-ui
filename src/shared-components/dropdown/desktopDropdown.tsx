@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
+import useResetFocus from 'src/utils/accessibility/useResetFocus';
 
 import OffClickWrapper from '../offClickWrapper';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
@@ -36,74 +37,80 @@ const DesktopDropdown = ({
   onSelectClick,
   isOpen,
   optionsContainerMaxHeight,
-}: DesktopDropdownProps) => (
-  <OffClickWrapper
-    onOffClick={closeDropdown}
-    css={css`
-      width: 100%;
-    `}
-  >
-    <DropdownContainer textAlign={textAlign}>
-      <div
-        id="select-input-box"
-        onClick={onSelectClick}
-        onKeyDown={(event: React.KeyboardEvent) => {
-          if (event.key === 'Enter') {
-            onSelectClick();
-          }
-        }}
-        tabIndex={0}
-        aria-label="Open dropdown option"
-        aria-haspopup="listbox"
-        role="button"
-      >
-        <div css={dropdownInputStyle({ textAlign })}>
-          {currentOption && currentOption.label}
+}: DesktopDropdownProps) => {
+  const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
+
+  return (
+    <OffClickWrapper
+      onOffClick={closeDropdown}
+      css={css`
+        width: 100%;
+      `}
+    >
+      <DropdownContainer textAlign={textAlign}>
+        <div
+          id="select-input-box"
+          onClick={onSelectClick}
+          onKeyDown={(event: React.KeyboardEvent) => {
+            if (event.key === 'Enter') {
+              onSelectClick();
+            }
+          }}
+          tabIndex={0}
+          aria-label="Open dropdown option"
+          aria-haspopup="listbox"
+          role="button"
+          ref={initialFocus}
+        >
+          <div css={dropdownInputStyle({ textAlign })}>
+            {currentOption && currentOption.label}
+          </div>
+          <IconContainer>
+            <ChevronIcon width={10} height={10} rotate={isOpen ? 90 : 0} />
+          </IconContainer>
         </div>
-        <IconContainer>
-          <ChevronIcon width={10} height={10} rotate={isOpen ? 90 : 0} />
-        </IconContainer>
-      </div>
 
-      <DropdownOptionsContainer
-        isOpen={isOpen}
-        optionsContainerMaxHeight={optionsContainerMaxHeight}
-        role="listbox"
-        aria-activedescendant={value}
-        tabIndex={-1}
-        aria-labelledby="select-input-box"
-      >
-        {options.map(option => {
-          const {
-            value: optionValue, disabled, label, ...rest 
-          } = option;
+        <DropdownOptionsContainer
+          isOpen={isOpen}
+          optionsContainerMaxHeight={optionsContainerMaxHeight}
+          role="listbox"
+          aria-activedescendant={value}
+          tabIndex={isOpen ? 0 : -1}
+          aria-labelledby="select-input-box"
+        >
+          {options.map(option => {
+            const {
+              value: optionValue, disabled, label, ...rest 
+            } = option;
 
-          return (
-            <DropdownOption
-              key={optionValue}
-              value={optionValue}
-              selected={value === optionValue}
-              disabled={!!disabled}
-              onClick={onOptionClick}
-              onKeyDown={event => {
-                if (event.key === 'Enter') {
-                  onOptionClick(event);
-                }
-              }}
-              role="option"
-              aria-selected={value === optionValue}
-              tabIndex={isOpen && !disabled ? 0 : -1}
-              // eslint-disable-next-line react/jsx-props-no-spreading
-              {...rest}
-            >
-              {label}
-            </DropdownOption>
-          );
-        })}
-      </DropdownOptionsContainer>
-    </DropdownContainer>
-  </OffClickWrapper>
-);
+            return (
+              <DropdownOption
+                key={optionValue}
+                value={optionValue}
+                selected={value === optionValue}
+                disabled={!!disabled}
+                onClick={onOptionClick}
+                onKeyDown={event => {
+                  if (event.key === 'Enter') {
+                    onOptionClick(event);
+                    resetFocus();
+                  }
+                }}
+                role="option"
+                aria-selected={value === optionValue}
+                tabIndex={isOpen && !disabled ? 0 : -1}
+                // eslint-disable-next-line react/jsx-props-no-spreading
+                {...rest}
+              >
+                {label}
+              </DropdownOption>
+            );
+          })}
+        </DropdownOptionsContainer>
+      </DropdownContainer>
+    </OffClickWrapper>
+  );
+};
 
 DesktopDropdown.defaultProps = {
   value: undefined,
