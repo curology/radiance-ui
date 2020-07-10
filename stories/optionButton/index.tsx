@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
-import OptionButtonReadme from 'docs/optionButton.md';
+import OptionButtonReadme from 'docs/optionButton';
 import { OptionButton, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
@@ -32,8 +32,10 @@ const OptionsContainer = styled.div`
   }
 `;
 
-const stories = storiesOf('Option Button', module);
+const stories = storiesOf('OptionButton', module);
 stories.addDecorator(withKnobs);
+
+const noop = () => undefined;
 
 stories.add(
   'Usage',
@@ -46,76 +48,76 @@ stories.add(
         <OptionsContainer>
           <OptionButton
             text="Checkbox helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="checkbox"
-            type="primary"
+            buttonType="primary"
           />
           <OptionButton
             text="Checkbox helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="checkbox"
-            type="primary"
+            buttonType="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
           <OptionButton
             text="Main text"
             subtext="subtext"
-            onClick={() => {}}
+            onClick={noop}
             optionType="checkbox"
-            type="primary"
+            buttonType="primary"
             icon={<PlusIcon />}
           />
           <OptionButton
             selected
             text="Checkbox helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="checkbox"
-            type="primary"
+            buttonType="primary"
           />
           <OptionButton
             selected
             text="Checkbox helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="checkbox"
-            type="primary"
+            buttonType="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
         </OptionsContainer>
         <OptionsContainer>
           <OptionButton
             text="Radio helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="radio"
-            type="primary"
+            buttonType="primary"
           />
           <OptionButton
             text="Radio helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="radio"
-            type="primary"
+            buttonType="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
           <OptionButton
             text="Main Text"
             subtext="subtext"
-            onClick={() => {}}
+            onClick={noop}
             optionType="radio"
-            type="primary"
+            buttonType="primary"
             icon={<PlusIcon />}
           />
           <OptionButton
             selected
             text="Radio helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="radio"
-            type="primary"
+            buttonType="primary"
           />
           <OptionButton
             selected
             text="Radio helper text"
-            onClick={() => {}}
+            onClick={noop}
             optionType="radio"
-            type="primary"
+            buttonType="primary"
             icon={<AcneGlyph width={32} height={32} />}
           />
         </OptionsContainer>
@@ -126,22 +128,22 @@ stories.add(
           <OptionButton
             text={text('text', 'Helper text')}
             subtext={text('subtext', 'subtext')}
-            onClick={() => {}}
+            onClick={noop}
             optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
-            type={select('type', ['primary', 'secondary'], 'primary')}
+            buttonType={select('type', ['primary', 'secondary'], 'primary')}
             selected={boolean('selected', false)}
           />
           <OptionButton
             text={text('text', 'Helper text')}
             subtext={text('subtext', 'subtext')}
-            onClick={() => {}}
+            onClick={noop}
             optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
-            type={select('type', ['primary', 'secondary'], 'primary')}
+            buttonType={select('type', ['primary', 'secondary'], 'primary')}
             selected={boolean('selected', false)}
             icon={<AcneGlyph width={32} height={32} />}
           />
         </OptionsContainer>
       </FlexContainer>
     </MainContainer>
-  ))
+  )),
 );

@@ -2,28 +2,43 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, ANIMATION, SPACER, BOX_SHADOWS } from '../../constants';
-import Container from '../container';
+import {
+  COLORS, ANIMATION, SPACER, BOX_SHADOWS, 
+} from '../../constants';
+import { containerStyles, ContainerType } from '../container/style';
 
-const getOptionTypeStyles = optionType => {
+import { OptionButtonProps } from '.';
+
+type BaseIconWrapperStylesProps = Required<
+  Pick<OptionButtonProps, 'buttonType' | 'optionType' | 'selected'>
+>;
+
+const getOptionTypeStyles = (
+  optionType: BaseIconWrapperStylesProps['optionType'],
+) => {
   if (optionType === 'checkbox') {
     return css`
       border-radius: 4px;
     `;
   }
+
   return css`
     border-radius: 50%;
   `;
 };
 
-const getTypeColor = type => {
-  if (type === 'secondary') {
+const getTypeColor = (buttonType: BaseIconWrapperStylesProps['buttonType']) => {
+  if (buttonType === 'secondary') {
     return COLORS.secondary;
   }
+
   return COLORS.primary;
 };
 
-export const ClickableContainer = styled(Container)`
+export const ClickableContainer = styled.button<{
+  containerType: ContainerType;
+}>`
+  ${({ containerType }) => containerStyles(containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
 
@@ -40,7 +55,11 @@ export const FlexContainer = styled.div`
   align-items: center;
 `;
 
-const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
+const getBaseIconWrapperStyles = ({
+  buttonType,
+  optionType,
+  selected,
+}: BaseIconWrapperStylesProps) => css`
   border: 1px solid;
   border-color: ${COLORS.primary};
   background: ${COLORS.white};
@@ -62,8 +81,8 @@ const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
 
   ${selected &&
     css`
-      background: ${getTypeColor(type)};
-      border-color: ${getTypeColor(type)};
+      background: ${getTypeColor(buttonType)};
+      border-color: ${getTypeColor(buttonType)};
 
       svg {
         opacity: 1;
@@ -73,12 +92,14 @@ const getBaseIconWrapperStyles = ({ selected, optionType, type }) => css`
     `};
 `;
 
-export const CheckmarkWrapper = styled.div`
-  ${props => getBaseIconWrapperStyles(props)};
+export const CheckmarkWrapper = styled.div<BaseIconWrapperStylesProps>`
+  ${({ buttonType, optionType, selected }) =>
+    getBaseIconWrapperStyles({ buttonType, optionType, selected })};
 `;
 
-export const IconWrapper = styled.div`
-  ${props => getBaseIconWrapperStyles(props)};
+export const IconWrapper = styled.div<BaseIconWrapperStylesProps>`
+  ${({ buttonType, optionType, selected }) =>
+    getBaseIconWrapperStyles({ buttonType, optionType, selected })};
   width: 48px;
   height: 48px;
 

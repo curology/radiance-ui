@@ -9,7 +9,7 @@ class OptionButtonExample extends React.Component {
     active: '',
   };
 
-  onClick = value => {
+  onClick = (value: string) => {
     this.setState({
       active: value,
     });
@@ -32,7 +32,7 @@ class OptionButtonExample extends React.Component {
           subtext="fewer issues"
           onClick={() => this.onClick('improving')}
           optionType="radio"
-          type="primary"
+          buttonType="primary"
           icon={<PlusIcon />}
         />
         <OptionButton
@@ -41,7 +41,7 @@ class OptionButtonExample extends React.Component {
           subtext="more issues than usual"
           onClick={() => this.onClick('worsening')}
           optionType="radio"
-          type="primary"
+          buttonType="primary"
           icon={<MinusIcon />}
         />
       </div>

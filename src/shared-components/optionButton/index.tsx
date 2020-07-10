@@ -12,34 +12,48 @@ import {
 } from './style';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 
+export type OptionButtonProps = {
+  buttonType?: 'primary' | 'secondary';
+  icon?: React.ReactNode;
+  text: string;
+  subtext?: React.ReactNode;
+  onClick: () => void;
+  optionType: 'radio' | 'checkbox';
+  selected?: boolean;
+  [key: string]: unknown;
+};
+
 const OptionButton = ({
+  buttonType = 'primary',
   icon,
   text,
   onClick,
   optionType,
-  selected,
+  selected = false,
   subtext,
-  type,
   ...rest
-}) => (
+}: OptionButtonProps) => (
   <ClickableContainer
     onClick={onClick}
-    onKeyPress={onClick}
-    type="clickable"
-    tabIndex="0"
+    type="button"
+    containerType="clickable"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
     <FlexContainer>
       {icon ? (
-        <IconWrapper selected={selected} optionType={optionType} type={type}>
+        <IconWrapper
+          selected={selected}
+          optionType={optionType}
+          buttonType={buttonType}
+        >
           {selected ? <CheckmarkIcon width={16} height={16} /> : icon}
         </IconWrapper>
       ) : (
         <CheckmarkWrapper
           selected={selected}
           optionType={optionType}
-          type={type}
+          buttonType={buttonType}
         >
           <CheckmarkIcon width={16} height={16} />
         </CheckmarkWrapper>
@@ -52,21 +66,16 @@ const OptionButton = ({
   </ClickableContainer>
 );
 
+/* eslint-disable react/require-default-props */
 OptionButton.propTypes = {
+  buttonType: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.node,
   text: PropTypes.string.isRequired,
   subtext: PropTypes.node,
   onClick: PropTypes.func.isRequired,
   optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
   selected: PropTypes.bool,
-  type: PropTypes.oneOf(['primary', 'secondary']),
 };
-
-OptionButton.defaultProps = {
-  icon: undefined,
-  selected: false,
-  subtext: undefined,
-  type: 'primary',
-};
+/* eslint-enable react/require-default-props */
 
 export default OptionButton;
