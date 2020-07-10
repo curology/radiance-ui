@@ -59,7 +59,7 @@ describe('<MobileDropdown />', () => {
 
 describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <DesktopDropdown
         options={options}
         currentOption={{ value: 'test1', label: 'Test1' }}
@@ -77,7 +77,7 @@ describe('<DesktopDropdown />', () => {
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = shallow(
+      const wrapper = mount(
         <DesktopDropdown
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
