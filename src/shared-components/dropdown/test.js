@@ -16,7 +16,7 @@ const options = [
 describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
-      global.document.documentElement.ontouchstart = () => {};
+      global.document.documentElement.ontouchstart = () => undefined;
       const wrapper = shallow(<Dropdown value="test1" options={options} />);
 
       delete global.document.documentElement.ontouchstart;
@@ -47,7 +47,7 @@ describe('<MobileDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <MobileDropdown options={options} onSelectChange={spy} value="" />
+        <MobileDropdown options={options} onSelectChange={spy} value="" />,
       );
 
       wrapper.find('select').simulate('change', { target: { value: 'test1' } });
@@ -62,14 +62,14 @@ describe('<DesktopDropdown />', () => {
       <DesktopDropdown
         options={options}
         currentOption={{ value: 'test1', label: 'Test1' }}
-      />
+      />,
     );
 
     expect(
       wrapper
         .find('#select-input-box')
         .text()
-        .includes('Test1')
+        .includes('Test1'),
     ).toEqual(true);
   });
 
@@ -81,7 +81,7 @@ describe('<DesktopDropdown />', () => {
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onSelectClick={spy}
-        />
+        />,
       );
 
       wrapper.find('#select-input-box').simulate('click');
@@ -98,7 +98,7 @@ describe('<DesktopDropdown />', () => {
           currentOption={{ value: 'test1', label: 'Test1' }}
           onOptionClick={spy}
           isOpen
-        />
+        />,
       );
 
       wrapper

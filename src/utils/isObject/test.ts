@@ -5,7 +5,7 @@ test('returns true for objects', () => {
   expect(isObject({})).toBe(true);
   expect(isObject(Object.create(null))).toBe(true);
 
-  const Thing: any = () => {};
+  const Thing: any = () => undefined;
   expect(isObject(new Thing())).toBe(true);
 });
 

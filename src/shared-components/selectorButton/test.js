@@ -10,7 +10,7 @@ describe('<SelectorButton />', () => {
   describe('UI snapshots', () => {
     test('when children is undefined', () => {
       const tree = renderer
-        .create(<SelectorButton checked={false} onClick={() => {}} />)
+        .create(<SelectorButton checked={false} onClick={() => undefined} />)
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -19,7 +19,7 @@ describe('<SelectorButton />', () => {
     test('when children is a node', () => {
       const tree = renderer
         .create(
-          <SelectorButton checked={false} onClick={() => {}}>
+          <SelectorButton checked={false} onClick={() => undefined}>
             SelectorButton Text
           </SelectorButton>,
         )
@@ -31,7 +31,7 @@ describe('<SelectorButton />', () => {
     test('when checked type is primary', () => {
       const tree = renderer
         .create(
-          <SelectorButton checked onClick={() => {}} type="primary">
+          <SelectorButton checked onClick={() => undefined} type="primary">
             SelectorButton Text
           </SelectorButton>,
         )
@@ -43,7 +43,7 @@ describe('<SelectorButton />', () => {
     test('when checked type is secondary', () => {
       const tree = renderer
         .create(
-          <SelectorButton checked onClick={() => {}} type="secondary">
+          <SelectorButton checked onClick={() => undefined} type="secondary">
             SelectorButton Text
           </SelectorButton>,
         )
@@ -57,7 +57,7 @@ describe('<SelectorButton />', () => {
         .create(
           <SelectorButton
             checked={false}
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="checkbox"
           >
             SelectorButton Text
@@ -73,7 +73,7 @@ describe('<SelectorButton />', () => {
         const tree = renderer.create(
           <SelectorButton
             checked={false}
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="checkbox"
             icon={<AcneOneGlyph width={16} height={16} />}
             size="small"
@@ -89,7 +89,7 @@ describe('<SelectorButton />', () => {
         const tree = renderer.create(
           <SelectorButton
             checked={false}
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="radio"
             icon={<AcneOneGlyph width={16} height={16} />}
             size="small"
@@ -105,7 +105,7 @@ describe('<SelectorButton />', () => {
         const tree = renderer.create(
           <SelectorButton
             checked={false}
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="checkbox"
             icon={<AcneOneGlyph width={16} height={16} />}
             size="large"
@@ -121,7 +121,7 @@ describe('<SelectorButton />', () => {
         const tree = renderer.create(
           <SelectorButton
             checked={false}
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="radio"
             icon={<AcneOneGlyph width={16} height={16} />}
             size="large"
@@ -137,7 +137,7 @@ describe('<SelectorButton />', () => {
         const tree = renderer.create(
           <SelectorButton
             checked
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="checkbox"
             icon={<AcneOneGlyph width={16} height={16} />}
             size="large"
@@ -153,7 +153,7 @@ describe('<SelectorButton />', () => {
         const tree = renderer.create(
           <SelectorButton
             checked
-            onClick={() => {}}
+            onClick={() => undefined}
             selector="radio"
             icon={<AcneOneGlyph width={16} height={16} />}
             size="large"

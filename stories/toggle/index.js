@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-
-import ToggleReadme from 'docs/toggle.md';
+import ToggleReadme from 'docs/toggle';
 import { Toggle, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
@@ -30,11 +29,11 @@ stories.add(
         <ToggleExample />
       </ToggleContainer>
       <ToggleContainer>
-        <Toggle checked={false} label="Unchecked" onChange={() => {}} />
+        <Toggle checked={false} label="Unchecked" onChange={() => undefined} />
       </ToggleContainer>
       <ToggleContainer>
-        <Toggle checked label="Checked" onChange={() => {}} />
+        <Toggle checked label="Checked" onChange={() => undefined} />
       </ToggleContainer>
     </MainContainer>
-  ))
+  )),
 );
