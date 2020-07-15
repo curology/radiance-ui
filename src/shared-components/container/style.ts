@@ -24,6 +24,10 @@ const messageStyle = css`
 
 export type ContainerType = 'clickable' | 'message';
 
+/**
+ * TODO: Determine if we should return a style by default
+ * instead of no style at all.
+ */
 const getContainerTypeStyles = (type?: ContainerType) => {
   switch (type) {
     case 'message':
