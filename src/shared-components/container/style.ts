@@ -66,12 +66,17 @@ export const Image = styled.img`
   object-fit: cover;
 `;
 
+/**
+ * This is the type returned by `styled.div`
+ *
+ * @see `node_modules/@emotion/styled-base/types/index.d.ts`
+ */
 type StyledContainer = StyledComponent<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   {
     type?: 'clickable' | 'message' | undefined;
   },
-  any
+  object
 >;
 
 type CompositeContainer = StyledContainer & {
