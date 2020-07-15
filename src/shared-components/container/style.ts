@@ -42,7 +42,6 @@ export const containerStyles = (type?: ContainerType) => css`
   ${getContainerTypeStyles(type)};
 `;
 
-// TODO update desktop padding to 48px
 export const Section = styled.div`
   padding: ${SPACER.large};
 
