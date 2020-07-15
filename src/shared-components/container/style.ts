@@ -76,7 +76,7 @@ type StyledContainer = StyledComponent<
   {
     type?: 'clickable' | 'message' | undefined;
   },
-  object
+  any
 >;
 
 type CompositeContainer = StyledContainer & {
