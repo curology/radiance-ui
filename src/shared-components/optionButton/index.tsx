@@ -12,7 +12,7 @@ import {
 } from './style';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 
-export type OptionButtonProps = {
+type OptionButtonProps = {
   buttonType?: 'primary' | 'secondary';
   icon?: React.ReactNode;
   text: string;

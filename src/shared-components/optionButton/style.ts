@@ -7,11 +7,11 @@ import {
 } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
-import { OptionButtonProps } from '.';
-
-type BaseIconWrapperStylesProps = Required<
-  Pick<OptionButtonProps, 'buttonType' | 'optionType' | 'selected'>
->;
+type BaseIconWrapperStylesProps = {
+  buttonType?: 'primary' | 'secondary';
+  optionType?: 'radio' | 'checkbox';
+  selected?: boolean;
+};
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
