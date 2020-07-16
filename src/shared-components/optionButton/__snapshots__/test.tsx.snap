@@ -96,6 +96,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 <button
   className="emotion-8 emotion-9"
   onClick={[Function]}
+  role="checkbox"
   type="button"
 >
   <div
@@ -219,6 +220,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 <button
   className="emotion-8 emotion-9"
   onClick={[Function]}
+  role="radio"
   type="button"
 >
   <div

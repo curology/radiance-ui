@@ -36,6 +36,7 @@ const OptionButton = ({
   <ClickableContainer
     onClick={onClick}
     type="button"
+    role={optionType}
     containerType="clickable"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
