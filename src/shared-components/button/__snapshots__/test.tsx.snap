@@ -138,6 +138,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 .emotion-6:active,
 .emotion-6:focus {
   outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
 }
 
 .emotion-6:visited,
