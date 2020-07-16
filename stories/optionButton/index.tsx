@@ -30,6 +30,9 @@ const FlexContainer = styled.div`
 `;
 
 const OptionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
   > button {
     width: 350px;
   }
