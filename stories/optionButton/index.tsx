@@ -11,10 +11,13 @@ import { OptionButton, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
 import OptionButtonExample from './optionButtonExample';
+import { ExampleContainer } from './style';
 
 const MainContainer = styled.div`
   text-align: left;
+
   > h2 {
+    margin-top: ${SPACER.large};
     margin-bottom: ${SPACER.large};
   }
 `;
@@ -27,7 +30,7 @@ const FlexContainer = styled.div`
 `;
 
 const OptionsContainer = styled.div`
-  > div {
+  > button {
     width: 350px;
   }
 `;
@@ -125,23 +128,33 @@ stories.add(
       <Typography.Heading>With Knobs:</Typography.Heading>
       <FlexContainer>
         <OptionsContainer>
-          <OptionButton
-            text={text('text', 'Helper text')}
-            subtext={text('subtext', 'subtext')}
-            onClick={noop}
-            optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
-            buttonType={select('type', ['primary', 'secondary'], 'primary')}
-            selected={boolean('selected', false)}
-          />
-          <OptionButton
-            text={text('text', 'Helper text')}
-            subtext={text('subtext', 'subtext')}
-            onClick={noop}
-            optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
-            buttonType={select('type', ['primary', 'secondary'], 'primary')}
-            selected={boolean('selected', false)}
-            icon={<AcneGlyph width={32} height={32} />}
-          />
+          <ExampleContainer>
+            <OptionButton
+              text={text('text', 'Helper text')}
+              subtext={text('subtext', 'subtext')}
+              onClick={noop}
+              optionType={select(
+                'optionType',
+                ['radio', 'checkbox'],
+                'checkbox',
+              )}
+              buttonType={select('type', ['primary', 'secondary'], 'primary')}
+              selected={boolean('selected', false)}
+            />
+            <OptionButton
+              text={text('text', 'Helper text')}
+              subtext={text('subtext', 'subtext')}
+              onClick={noop}
+              optionType={select(
+                'optionType',
+                ['radio', 'checkbox'],
+                'checkbox',
+              )}
+              buttonType={select('type', ['primary', 'secondary'], 'primary')}
+              selected={boolean('selected', false)}
+              icon={<AcneGlyph width={32} height={32} />}
+            />
+          </ExampleContainer>
         </OptionsContainer>
       </FlexContainer>
     </MainContainer>

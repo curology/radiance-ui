@@ -41,6 +41,8 @@ export const ClickableContainer = styled.button<{
   ${({ containerType }) => containerStyles(containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
+  width: 100%;
+  text-align: left;
 
   :focus {
     outline: none;
