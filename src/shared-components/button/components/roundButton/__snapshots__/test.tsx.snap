@@ -163,6 +163,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 .emotion-2:active,
 .emotion-2:focus {
   outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
 }
 
 .emotion-2:visited,
