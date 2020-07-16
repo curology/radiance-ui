@@ -231,6 +231,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 }
 
 <button
+  aria-disabled={true}
   className="emotion-6 emotion-7"
   disabled={true}
   onClick={[Function]}
@@ -247,6 +248,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
     </span>
   </div>
   <div
+    aria-disabled={true}
     className=" emotion-4 emotion-5"
     disabled={true}
   >

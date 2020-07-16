@@ -77,6 +77,7 @@ const RoundButton = ({
     <RoundButtonWrapper>
       <RoundButtonBase
         onClick={!disabled && !isLoading ? onClick : () => false}
+        aria-disabled={disabled}
         disabled={disabled}
         buttonType={buttonType}
         buttonColor={buttonColor}

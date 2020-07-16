@@ -87,6 +87,7 @@ class Button extends React.Component<ButtonProps> {
 
     return (
       <ButtonBase
+        aria-disabled={disabled}
         disabled={disabled}
         onClick={
           !disabled && !loadingVal ? onClick : event => event.preventDefault()

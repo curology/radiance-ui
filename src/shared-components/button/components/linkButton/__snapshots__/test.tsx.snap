@@ -99,6 +99,7 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
 }
 
 <a
+  aria-disabled={false}
   className="emotion-4"
   disabled={false}
   href="#"

@@ -97,6 +97,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor 1`] = `
   className="emotion-8 emotion-9"
 >
   <label
+    aria-disabled={false}
     className="emotion-0 emotion-1"
     disabled={false}
     htmlFor="for-input-id"
@@ -218,6 +219,7 @@ exports[`<Field /> UI Snapshot renders with label prop 1`] = `
   className="emotion-8 emotion-9"
 >
   <label
+    aria-disabled={false}
     className="emotion-0 emotion-1"
     disabled={false}
     htmlFor="Test Label"

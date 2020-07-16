@@ -59,6 +59,7 @@ const DesktopDropdown = ({
               key={optionValue}
               value={optionValue}
               selected={value === optionValue}
+              aria-disabled={disabled}
               disabled={disabled}
               onClick={onOptionClick}
               // eslint-disable-next-line react/jsx-props-no-spreading

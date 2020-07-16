@@ -29,6 +29,7 @@ const TextButton = ({
   ...rest
 }: TextButtonProps) => (
   <BaseTextButton
+    aria-disabled={disabled}
     disabled={disabled}
     onClick={!disabled ? onClick : event => event.preventDefault()}
     // eslint-disable-next-line react/jsx-props-no-spreading

@@ -63,6 +63,7 @@ const Link = ({
         textColor,
       })}
       disabled={disabled}
+      aria-disabled={disabled}
       onClick={!disabled ? onClick : () => false}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}

@@ -23,7 +23,12 @@ const MobileDropdown = ({
         }
 
         return (
-          <option key={option.value} value={option.value} disabled={isDisabled}>
+          <option
+            key={option.value}
+            value={option.value}
+            disabled={isDisabled}
+            aria-disabled={isDisabled}
+          >
             {option.label}
           </option>
         );
@@ -39,7 +44,7 @@ MobileDropdown.defaultProps = {
   value: null,
   options: [{ value: null, label: '' }],
   textAlign: 'left',
-  onSelectChange() {},
+  onSelectChange: () => undefined,
 };
 
 MobileDropdown.propTypes = {
@@ -51,7 +56,7 @@ MobileDropdown.propTypes = {
       value: PropTypes.any,
       label: PropTypes.string,
       disabled: PropTypes.bool,
-    })
+    }),
   ),
   textAlign: PropTypes.oneOf(['left', 'center']),
   onSelectChange: PropTypes.func,

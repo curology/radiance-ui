@@ -104,7 +104,12 @@ class Accordion extends React.Component<
     } = this.props;
 
     return (
-      <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
+      <AccordionBox
+        isOpen={isOpen}
+        noBorder={!!noBorder}
+        disabled={!!disabled}
+        aria-disabled={!!disabled}
+      >
         <TitleWrapper
           onClick={(event): void => {
             if (!disabled) {

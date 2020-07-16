@@ -8,11 +8,11 @@ import ArrowContainer from './style';
 
 class Arrow extends React.Component {
   static propTypes = {
-    prev: PropTypes.bool,
-    next: PropTypes.bool,
-    disabled: PropTypes.bool,
-    onUserInteraction: PropTypes.func,
-    onClick: PropTypes.func,
+    prev: PropTypes.bool.isRequired,
+    next: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired,
+    onUserInteraction: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired,
   };
 
   arrowClickHandler = () => {
@@ -24,7 +24,12 @@ class Arrow extends React.Component {
   render() {
     const { prev, next, disabled } = this.props;
     return (
-      <ArrowContainer prev={prev} next={next} disabled={disabled}>
+      <ArrowContainer
+        prev={prev}
+        next={next}
+        disabled={disabled}
+        aria-disabled={disabled}
+      >
         {prev && (
           <RoundButton
             buttonType="action"

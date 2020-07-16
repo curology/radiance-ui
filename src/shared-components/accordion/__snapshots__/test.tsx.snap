@@ -52,6 +52,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 }
 
 <div
+  aria-disabled={true}
   className="emotion-8 emotion-9"
   disabled={true}
 >
@@ -138,6 +139,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 }
 
 <div
+  aria-disabled={false}
   className="emotion-8 emotion-9"
   disabled={false}
 >
@@ -225,6 +227,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
 }
 
 <div
+  aria-disabled={false}
   className="emotion-8 emotion-9"
   disabled={false}
 >

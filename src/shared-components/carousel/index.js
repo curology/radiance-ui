@@ -155,7 +155,7 @@ class Carousel extends React.Component {
 
     const timeoutId = setTimeout(
       () => this.slider.current.slickGoTo(firstIndex),
-      autoplaySpeed
+      autoplaySpeed,
     );
 
     this.timeoutId = timeoutId;
@@ -171,6 +171,7 @@ class Carousel extends React.Component {
           carouselType={carouselType}
           onClick={this.onUserInteraction}
         >
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Slider ref={this.slider} {...settings}>
             {children}
           </Slider>

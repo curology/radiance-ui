@@ -68,7 +68,7 @@ class Field extends React.Component {
     return (
       <FieldContainer>
         {!!label && (
-          <Label htmlFor={htmlFor} disabled={disabled}>
+          <Label htmlFor={htmlFor} disabled={disabled} aria-disabled={disabled}>
             {label}
           </Label>
         )}

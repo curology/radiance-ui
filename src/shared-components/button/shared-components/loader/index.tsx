@@ -29,6 +29,7 @@ const Loader = ({
     buttonType={buttonType}
     className={className}
     disabled={disabled}
+    aria-disabled={disabled}
     isFullWidth={!!isFullWidth}
     isLoading={isLoading}
     textColor={textColor}
