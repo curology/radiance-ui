@@ -1,15 +1,15 @@
 import React from 'react';
-import { css } from '@emotion/core';
 import { OptionButton } from 'src/shared-components';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import MinusIcon from 'src/svgs/icons/minus-icon.svg';
+import { ExampleContainer } from './style';
 
 class OptionButtonExample extends React.Component {
   state = {
     active: '',
   };
 
-  onClick = value => {
+  onClick = (value: string) => {
     this.setState({
       active: value,
     });
@@ -19,20 +19,14 @@ class OptionButtonExample extends React.Component {
     const { active } = this.state;
 
     return (
-      <div
-        css={css`
-          margin: 0 auto;
-          max-width: 350px;
-          padding-top: 40px;
-        `}
-      >
+      <ExampleContainer>
         <OptionButton
           selected={active === 'improving'}
           text="Improving"
           subtext="fewer issues"
           onClick={() => this.onClick('improving')}
           optionType="radio"
-          type="primary"
+          buttonType="primary"
           icon={<PlusIcon />}
         />
         <OptionButton
@@ -41,10 +35,10 @@ class OptionButtonExample extends React.Component {
           subtext="more issues than usual"
           onClick={() => this.onClick('worsening')}
           optionType="radio"
-          type="primary"
+          buttonType="primary"
           icon={<MinusIcon />}
         />
-      </div>
+      </ExampleContainer>
     );
   }
 }

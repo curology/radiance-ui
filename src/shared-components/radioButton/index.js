@@ -16,7 +16,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  onClick: () => {},
+  children: null,
+  icon: undefined,
+  onClick: () => undefined,
   type: 'primary',
   size: 'small',
 };
@@ -37,6 +39,7 @@ const RadioButton = ({
     type={type}
     icon={icon}
     size={size}
+    // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
     {children}

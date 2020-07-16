@@ -10,6 +10,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   transition: box-shadow 200ms;
   padding: 1.5rem;
   margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
 }
 
 .emotion-8:hover {
@@ -91,11 +93,11 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   line-height: 1.5;
 }
 
-<div
+<button
   className="emotion-8 emotion-9"
   onClick={[Function]}
-  tabIndex="0"
-  type="clickable"
+  role="checkbox"
+  type="button"
 >
   <div
     className="emotion-6 emotion-7"
@@ -103,7 +105,6 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
     <div
       className="emotion-0 emotion-1"
       selected={true}
-      type="primary"
     >
       <svg
         height={16}
@@ -120,7 +121,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
       </div>
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`] = `
@@ -133,6 +134,8 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   transition: box-shadow 200ms;
   padding: 1.5rem;
   margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
 }
 
 .emotion-8:hover {
@@ -214,11 +217,11 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   fill: #332e54;
 }
 
-<div
+<button
   className="emotion-8 emotion-9"
   onClick={[Function]}
-  tabIndex="0"
-  type="clickable"
+  role="radio"
+  type="button"
 >
   <div
     className="emotion-6 emotion-7"
@@ -226,7 +229,6 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
     <div
       className="emotion-0 emotion-1"
       selected={false}
-      type="secondary"
     >
       <svg />
     </div>
@@ -240,5 +242,5 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
       </div>
     </div>
   </div>
-</div>
+</button>
 `;
