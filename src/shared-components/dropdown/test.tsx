@@ -16,11 +16,9 @@ const options = [
 describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
-      // @ts-ignore TODO: Add global interface to TS definitions https://stackoverflow.com/questions/40743131/how-to-prevent-property-does-not-exist-on-type-global-with-jsdom-and-t
-      global.document.documentElement.ontouchstart = () => undefined;
+      window.document.documentElement.ontouchstart = () => undefined;
       const wrapper = shallow(<Dropdown value="test1" options={options} />);
-      // @ts-ignore
-      delete global.document.documentElement.ontouchstart;
+      delete window.document.documentElement.ontouchstart;
       expect(wrapper.text()).toEqual('<MobileDropdown />');
     });
   });
