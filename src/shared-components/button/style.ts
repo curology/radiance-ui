@@ -186,6 +186,7 @@ export const baseButtonStyles = ({
   &:active,
   &:focus {
     outline: none;
+    box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 
   ${parseTheme(disabled, buttonType, !!isLoading, buttonColor)};

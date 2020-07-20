@@ -13,11 +13,11 @@ describe('<OptionButton />', () => {
         .create(
           <OptionButton
             selected
-            onClick={() => {}}
+            onClick={() => undefined}
             text="checkbox text"
             optionType="checkbox"
-            type="primary"
-          />
+            buttonType="primary"
+          />,
         )
         .toJSON();
 
@@ -28,12 +28,12 @@ describe('<OptionButton />', () => {
       const tree = renderer
         .create(
           <OptionButton
-            onClick={() => {}}
+            onClick={() => undefined}
             text="radio text"
             optionType="radio"
             icon={<AcneGlyph />}
-            type="secondary"
-          />
+            buttonType="secondary"
+          />,
         )
         .toJSON();
 
@@ -49,7 +49,7 @@ describe('<OptionButton />', () => {
           onClick={spy}
           text="checkbox text"
           optionType="checkbox"
-        />
+        />,
       );
 
       wrapper.simulate('click');
