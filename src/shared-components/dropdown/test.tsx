@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import DesktopDropdown from './desktopDropdown';
 import MobileDropdown from './mobileDropdown';
@@ -16,18 +16,31 @@ const options = [
 describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
-      global.document.documentElement.ontouchstart = () => undefined;
-      const wrapper = shallow(<Dropdown value="test1" options={options} />);
-
-      delete global.document.documentElement.ontouchstart;
-      expect(wrapper.text()).toEqual('<MobileDropdown />');
+      window.document.documentElement.ontouchstart = () => undefined;
+      const wrapper = mount(
+        <Dropdown value="test1" options={options} onChange={() => null} />,
+      );
+      delete window.document.documentElement.ontouchstart;
+      expect(
+        wrapper
+          .children()
+          .first()
+          .name(),
+      ).toEqual('MobileDropdown');
     });
   });
 
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
-      const wrapper = shallow(<Dropdown value="test1" options={options} />);
-      expect(wrapper.text()).toEqual('<DesktopDropdown />');
+      const wrapper = mount(
+        <Dropdown value="test1" options={options} onChange={() => null} />,
+      );
+      expect(
+        wrapper
+          .children()
+          .first()
+          .name(),
+      ).toEqual('DesktopDropdown');
     });
   });
 });
@@ -58,10 +71,14 @@ describe('<MobileDropdown />', () => {
 
 describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <DesktopDropdown
         options={options}
         currentOption={{ value: 'test1', label: 'Test1' }}
+        optionsContainerMaxHeight="250px"
+        onSelectClick={() => null}
+        closeDropdown={() => null}
+        onOptionClick={() => null}
       />,
     );
 
@@ -76,11 +93,14 @@ describe('<DesktopDropdown />', () => {
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = shallow(
+      const wrapper = mount(
         <DesktopDropdown
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onSelectClick={spy}
+          optionsContainerMaxHeight="250px"
+          closeDropdown={() => null}
+          onOptionClick={() => null}
         />,
       );
 
@@ -98,6 +118,9 @@ describe('<DesktopDropdown />', () => {
           currentOption={{ value: 'test1', label: 'Test1' }}
           onOptionClick={spy}
           isOpen
+          optionsContainerMaxHeight="250px"
+          onSelectClick={() => null}
+          closeDropdown={() => null}
         />,
       );
 

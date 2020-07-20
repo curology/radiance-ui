@@ -9,13 +9,17 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
-export const DropdownContainer = styled.div`
+export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   position: relative;
   width: 100%;
   text-align: ${({ textAlign }) => textAlign};
 `;
 
-export const dropdownInputStyle = ({ textAlign }) => css`
+export const dropdownInputStyle = ({
+  textAlign,
+}: {
+  textAlign: 'left' | 'center';
+}) => css`
   appearance: none;
   box-shadow: ${BOX_SHADOWS.clickable};
   background: ${COLORS.white};
@@ -48,6 +52,8 @@ export const dropdownInputStyle = ({ textAlign }) => css`
 
   &:focus {
     outline: none;
+    box-shadow: ${BOX_SHADOWS.clickableHover};
+    transition: 200ms ease-in-out;
   }
 
   &::-moz-focus-inner {
@@ -76,7 +82,10 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const DropdownOptionsContainer = styled.ul`
+export const DropdownOptionsContainer = styled.ul<{
+  isOpen: boolean;
+  optionsContainerMaxHeight: string;
+}>`
   position: absolute;
   top: 100%;
   left: 0;
@@ -108,7 +117,10 @@ export const DropdownOptionsContainer = styled.ul`
     `};
 `;
 
-export const DropdownOption = styled.li`
+export const DropdownOption = styled.li<{
+  selected: boolean;
+  disabled: boolean;
+}>`
   color: ${COLORS.purple85};
   min-height: ${SPACER.x4large};
 
@@ -117,6 +129,9 @@ export const DropdownOption = styled.li`
   padding: 18px ${SPACER.medium} 14px ${SPACER.medium};
 
   &:hover {
+    background-color: ${COLORS.infoBackground};
+  }
+  &:focus {
     background-color: ${COLORS.infoBackground};
   }
 
@@ -135,6 +150,10 @@ export const DropdownOption = styled.li`
       cursor: not-allowed;
 
       &:hover {
+        background-color: ${COLORS.white};
+        font-weight: normal;
+      }
+      &:focus {
         background-color: ${COLORS.white};
         font-weight: normal;
       }

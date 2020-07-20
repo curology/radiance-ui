@@ -8,6 +8,10 @@ class OffClickWrapper extends React.Component {
     onOffClick: PropTypes.func.isRequired,
   };
 
+  static defaultProps = {
+    className: undefined,
+  };
+
   constructor(props) {
     super(props);
     this.containerRef = React.createRef();
@@ -23,10 +27,19 @@ class OffClickWrapper extends React.Component {
 
   addOffClickListener = () => {
     document.addEventListener('click', this.handleOffClick, false);
+    document.addEventListener('keydown', this.handleKeyPress, false);
   };
 
   removeOffClickListener = () => {
     document.removeEventListener('click', this.handleOffClick, false);
+    document.removeEventListener('keydown', this.handleKeyPress, false);
+  };
+
+  handleKeyPress = event => {
+    if (event.key === 'Escape') {
+      const { onOffClick } = this.props;
+      onOffClick(event);
+    }
   };
 
   handleOffClick = event => {

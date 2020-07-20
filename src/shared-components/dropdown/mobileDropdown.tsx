@@ -4,9 +4,21 @@ import PropTypes from 'prop-types';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
+import { OptionType } from './index';
+
+type MobileDropdownProps = {
+  value: string | number | null;
+  options: OptionType[];
+  textAlign: 'left' | 'center';
+  onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+};
+
 const MobileDropdown = ({
-  textAlign, value, onSelectChange, options, 
-}) => (
+  textAlign,
+  value,
+  onSelectChange,
+  options,
+}: MobileDropdownProps) => (
   <DropdownContainer textAlign={textAlign}>
     <select
       css={dropdownInputStyle({ textAlign })}
@@ -39,19 +51,17 @@ MobileDropdown.defaultProps = {
   value: null,
   options: [{ value: null, label: '' }],
   textAlign: 'left',
-  onSelectChange() {},
+  onSelectChange: () => undefined,
 };
 
 MobileDropdown.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      value: PropTypes.any,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       label: PropTypes.string,
       disabled: PropTypes.bool,
-    })
+    }),
   ),
   textAlign: PropTypes.oneOf(['left', 'center']),
   onSelectChange: PropTypes.func,
