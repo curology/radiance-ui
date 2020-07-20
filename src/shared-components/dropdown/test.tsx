@@ -75,6 +75,7 @@ describe('<DesktopDropdown />', () => {
       <DesktopDropdown
         options={options}
         currentOption={{ value: 'test1', label: 'Test1' }}
+        optionsContainerMaxHeight="250px"
       />,
     );
 
@@ -94,6 +95,7 @@ describe('<DesktopDropdown />', () => {
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onSelectClick={spy}
+          optionsContainerMaxHeight="250px"
         />,
       );
 
@@ -111,6 +113,7 @@ describe('<DesktopDropdown />', () => {
           currentOption={{ value: 'test1', label: 'Test1' }}
           onOptionClick={spy}
           isOpen
+          optionsContainerMaxHeight="250px"
         />,
       );
 

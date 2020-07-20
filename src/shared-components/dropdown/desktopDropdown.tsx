@@ -24,7 +24,7 @@ type DesktopDropdownProps = {
   onOptionClick: (event: any) => void;
   onSelectClick: () => void;
   isOpen: boolean;
-  optionsContainerMaxHeight?: string;
+  optionsContainerMaxHeight: string;
 };
 
 const DesktopDropdown = ({

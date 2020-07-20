@@ -84,7 +84,7 @@ export const IconContainer = styled.div`
 
 export const DropdownOptionsContainer = styled.ul<{
   isOpen: boolean;
-  optionsContainerMaxHeight?: string;
+  optionsContainerMaxHeight: string;
 }>`
   position: absolute;
   top: 100%;
