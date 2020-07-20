@@ -19,14 +19,14 @@ type DropdownProps = {
   textAlign?: 'left' | 'center';
 };
 
-const Dropdown = ({
-  onChange,
-  value,
-  options,
-  optionsContainerMaxHeight = '250px',
-  textAlign,
-  ...props
-}: DropdownProps) => {
+const Dropdown = (props: DropdownProps) => {
+  const {
+    onChange,
+    value,
+    options,
+    optionsContainerMaxHeight = '250px',
+    textAlign,
+  } = props;
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
 
