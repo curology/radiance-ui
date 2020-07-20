@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import round from 'lodash.round';
 
 import { withDeprecationWarning } from '../../utils';
-import { COLORS, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { BOX_SHADOWS, COLORS, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 const displayStyle = css`
   color: ${COLORS.primary};
@@ -77,6 +77,11 @@ const linkStyle = css`
   &:hover {
     opacity: 0.6;
     transition: opacity 350ms;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 `;
 
