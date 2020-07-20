@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v9.3.0
+
+- Fixes accessibility issues with Option Button, Button, and Dropdown Components ([#261](https://github.com/curology/radiance-ui/pull/261))
+
 # v9.2.0
 
 - [Internal] TypeScript convertion: Buttons ([#252](https://github.com/curology/radiance-ui/pull/252))
