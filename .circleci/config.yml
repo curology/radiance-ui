@@ -56,7 +56,7 @@ jobs:
                 paths:
                     - node_modules
 
-    test:
+    test-js:
         <<: *defaults
 
         docker:
@@ -103,7 +103,7 @@ workflows:
     build-and-test:
         jobs:
             - build
-            - test:
+            - test-js:
                 requires:
                     - build
             - test-tsc:
