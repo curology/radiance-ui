@@ -2,7 +2,6 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import { withDeprecationWarning } from '../../utils';
 import { BOX_SHADOWS, COLORS, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 const displayStyle = css`
@@ -118,19 +117,6 @@ const Typography = {
   Link,
   Success,
   Title,
-
-  // Legacy names. Will be removed in v2 (next major)
-  LinkTag: Link,
-  ButtonText: Button,
-  SuccessText: Success,
-  ErrorText: ErrorComponent,
 };
 
-const deprecatedProperties = {
-  LinkTag: 'LinkTag is deprecated. Use Link instead',
-  ButtonText: 'ButtonText is deprecated. Use Button instead',
-  SuccessText: 'SuccessText is deprecated. Use Success instead',
-  ErrorText: 'ErrorText is deprecated. Use Error instead',
-};
-
-export default withDeprecationWarning(Typography, deprecatedProperties);
+export default Typography;
