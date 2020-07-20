@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import MobileDropdown from './mobileDropdown';
@@ -16,101 +16,100 @@ type DropdownProps = {
   onChange: (option: OptionType) => void;
   options: OptionType[];
   optionsContainerMaxHeight?: string;
-  textAlign: 'left' | 'center';
+  textAlign?: 'left' | 'center';
 };
 
 const defaultProps = {
   textAlign: 'left',
-  onChange: () => undefined,
   optionsContainerMaxHeight: '250px',
   value: undefined,
 };
 
 const propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  value: allowNullPropType(PropTypes.any.isRequired),
+  value: allowNullPropType(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ),
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      value: PropTypes.any,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       label: PropTypes.string,
       disabled: PropTypes.bool,
     }),
   ).isRequired,
   textAlign: PropTypes.oneOf(['left', 'center']),
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
   optionsContainerMaxHeight: PropTypes.string,
 };
 
-class Dropdown extends React.Component<DropdownProps> {
-  static defaultProps = defaultProps;
+const Dropdown = (props: DropdownProps) => {
+  const {
+    onChange,
+    value,
+    options,
+    optionsContainerMaxHeight,
+    textAlign,
+  } = props;
+  const [isOpen, setIsOpen] = useState(false);
+  const touchSupported = 'ontouchstart' in document.documentElement;
 
-  static propTypes = propTypes;
-
-  state = { isOpen: false };
-
-  onSelectClick = () => {
-    const { isOpen } = this.state;
-
-    this.setState({ isOpen: !isOpen });
+  const onSelectClick = () => {
+    setIsOpen(prevIsOpen => !prevIsOpen);
   };
 
-  onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const { onChange } = this.props;
-    const {target} = event;
-    const { value, selectedOptions } = target;
+  const closeDropdown = () => setIsOpen(false);
+
+  const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const { target } = event;
+    const { value: nextValue, selectedOptions } = target;
 
     if (selectedOptions && selectedOptions.length) {
       const { label } = selectedOptions[0];
-      onChange({ value, label });
+      onChange({ value: nextValue, label });
     }
 
-    this.closeDropdown();
+    closeDropdown();
   };
 
-  onOptionClick = (event: React.MouseEvent<HTMLLIElement>) => {
-    const { onChange } = this.props;
-    const target = event.target as HTMLSelectElement;
+  const onOptionClick = (event: React.MouseEvent<HTMLLIElement>) => {
+    const target = event.currentTarget;
     if (target.hasAttribute('disabled')) {
       return;
     }
 
-    const value = target.getAttribute('value') as string;
+    const nextValue = target.getAttribute('value') as string;
     const label = target.innerText;
-    onChange({ value, label });
-    this.closeDropdown();
+    onChange({ value: nextValue, label });
+    closeDropdown();
   };
 
-  closeDropdown = () => this.setState({ isOpen: false });
-
-  render() {
-    const { value, options, optionsContainerMaxHeight } = this.props;
-    const { isOpen } = this.state;
-
-    const touchSupported = 'ontouchstart' in document.documentElement;
-
-    if (touchSupported) {
-      return (
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        <MobileDropdown {...this.props} onSelectChange={this.onSelectChange} />
-      );
-    }
-
-    const currentOption = options.find(option => option.value === value);
-
+  if (touchSupported) {
     return (
-      <DesktopDropdown
-        isOpen={isOpen}
-        onOptionClick={this.onOptionClick}
-        closeDropdown={this.closeDropdown}
-        onSelectClick={this.onSelectClick}
-        currentOption={currentOption}
-        optionsContainerMaxHeight={optionsContainerMaxHeight}
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...this.props}
+      <MobileDropdown
+        value={value}
+        options={options}
+        textAlign={textAlign}
+        onSelectChange={onSelectChange}
       />
     );
   }
-}
+
+  const currentOption = options.find(option => option.value === value);
+
+  return (
+    <DesktopDropdown
+      isOpen={isOpen}
+      onOptionClick={onOptionClick}
+      closeDropdown={closeDropdown}
+      onSelectClick={onSelectClick}
+      currentOption={currentOption}
+      optionsContainerMaxHeight={optionsContainerMaxHeight}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
+    />
+  );
+};
+
+Dropdown.propTypes = propTypes;
+Dropdown.defaultProps = defaultProps;
 
 export default Dropdown;

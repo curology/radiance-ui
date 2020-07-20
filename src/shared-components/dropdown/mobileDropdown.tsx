@@ -7,10 +7,10 @@ import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 import { OptionType } from './index';
 
 type MobileDropdownProps = {
-  value: string | null;
+  value: string | number | null;
   options: OptionType[];
   textAlign: 'left' | 'center';
-  onSelectChange: (event: any) => void;
+  onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
 const MobileDropdown = ({
@@ -55,12 +55,10 @@ MobileDropdown.defaultProps = {
 };
 
 MobileDropdown.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      value: PropTypes.any,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       label: PropTypes.string,
       disabled: PropTypes.bool,
     }),

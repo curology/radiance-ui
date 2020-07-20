@@ -17,7 +17,9 @@ describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
-      const wrapper = shallow(<Dropdown value="test1" options={options} />);
+      const wrapper = shallow(
+        <Dropdown value="test1" options={options} onChange={() => null} />,
+      );
       delete window.document.documentElement.ontouchstart;
       expect(wrapper.text()).toEqual('<MobileDropdown />');
     });
@@ -25,7 +27,9 @@ describe('<Dropdown />', () => {
 
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
-      const wrapper = shallow(<Dropdown value="test1" options={options} />);
+      const wrapper = shallow(
+        <Dropdown value="test1" options={options} onChange={() => null} />,
+      );
       expect(wrapper.text()).toEqual('<DesktopDropdown />');
     });
   });
