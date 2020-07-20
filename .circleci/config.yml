@@ -6,6 +6,11 @@ aliases:
     - &defaults
         working_directory: *root
 
+    - &prepare-environment
+        run:
+            name: Prepare Environment
+            command: mkdir test-results
+
     - &cache-yarn-key-base yarn-packages-v1-{{ arch }}-
     - &cache-yarn-key yarn-packages-v1-{{ arch }}-{{ checksum "yarn.lock" }}
 
@@ -62,14 +67,33 @@ jobs:
             - <<: *prospective-merge
             - attach_workspace:
                 at: *root
-            - run:
-                name: Prepare Environment
-                command: mkdir test-results
+            - <<: *prepare-environment
             - run:
                 name: Run Jest Tests
                 command: yarn run jest --ci --runInBand --reporters=default --reporters=jest-junit
                 environment:
                     JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
+            - store_test_results:
+                path: test-results
+
+    test-tsc:
+        <<: *defaults
+
+        docker:
+            - image: circleci/node:10-stretch
+
+        environment:
+            NODE_OPTIONS: --max_old_space_size=4096
+
+        steps:
+            - checkout
+            - <<: *prospective-merge
+            - attach_workspace:
+                at: *root
+            - <<: *prepare-environment
+            - run:
+                name: Run TypeScript type-checking
+                command: yarn run tsc -p tsconfig.json
             - store_test_results:
                 path: test-results
 
@@ -80,5 +104,8 @@ workflows:
         jobs:
             - build
             - test:
+                requires:
+                    - build
+            - test-tsc:
                 requires:
                     - build
