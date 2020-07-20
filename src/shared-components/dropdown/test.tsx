@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import DesktopDropdown from './desktopDropdown';
 import MobileDropdown from './mobileDropdown';
@@ -17,20 +17,30 @@ describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
-      const wrapper = shallow(
+      const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(wrapper.text()).toEqual('<MobileDropdown />');
+      expect(
+        wrapper
+          .children()
+          .first()
+          .name(),
+      ).toEqual('MobileDropdown');
     });
   });
 
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
-      expect(wrapper.text()).toEqual('<DesktopDropdown />');
+      expect(
+        wrapper
+          .children()
+          .first()
+          .name(),
+      ).toEqual('DesktopDropdown');
     });
   });
 });

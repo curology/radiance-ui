@@ -19,28 +19,6 @@ type DropdownProps = {
   textAlign?: 'left' | 'center';
 };
 
-const defaultProps = {
-  textAlign: 'left',
-  optionsContainerMaxHeight: '250px',
-  value: undefined,
-};
-
-const propTypes = {
-  value: allowNullPropType(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ),
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string,
-      disabled: PropTypes.bool,
-    }),
-  ).isRequired,
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  onChange: PropTypes.func.isRequired,
-  optionsContainerMaxHeight: PropTypes.string,
-};
-
 const Dropdown = (props: DropdownProps) => {
   const {
     onChange,
@@ -109,7 +87,26 @@ const Dropdown = (props: DropdownProps) => {
   );
 };
 
-Dropdown.propTypes = propTypes;
-Dropdown.defaultProps = defaultProps;
+Dropdown.propTypes = {
+  value: allowNullPropType(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ),
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      label: PropTypes.string,
+      disabled: PropTypes.bool,
+    }),
+  ).isRequired,
+  textAlign: PropTypes.oneOf(['left', 'center']),
+  onChange: PropTypes.func.isRequired,
+  optionsContainerMaxHeight: PropTypes.string,
+};
+
+Dropdown.defaultProps = {
+  textAlign: 'left',
+  optionsContainerMaxHeight: '250px',
+  value: undefined,
+};
 
 export default Dropdown;
