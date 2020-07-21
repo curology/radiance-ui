@@ -69,7 +69,7 @@ const DesktopDropdown = ({
           onKeyDown={handleKeyDown}
           tabIndex={0}
           aria-label="Open dropdown option"
-          aria-haspopup="listbox"
+          aria-haspopup="menu"
           role="button"
           ref={initialFocus}
         >
@@ -84,10 +84,10 @@ const DesktopDropdown = ({
         <DropdownOptionsContainer
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
-          role="listbox"
+          role="menu"
           aria-activedescendant={value}
-          tabIndex={isOpen ? 0 : -1}
           aria-labelledby="select-input-box"
+          aria-hidden={!isOpen}
         >
           {options.map(option => {
             const {
@@ -98,12 +98,13 @@ const DesktopDropdown = ({
               <DropdownOption
                 key={optionValue}
                 value={optionValue}
+                id={optionValue}
                 selected={value === optionValue}
                 disabled={!!disabled}
                 onClick={onOptionClick}
                 onKeyDown={handleOptionKeydown}
-                role="option"
-                aria-selected={value === optionValue}
+                role="menuitemradio"
+                aria-checked={value === optionValue}
                 tabIndex={isOpen && !disabled ? 0 : -1}
                 // eslint-disable-next-line react/jsx-props-no-spreading
                 {...rest}

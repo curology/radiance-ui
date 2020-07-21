@@ -141,7 +141,7 @@ stories.add(
                 ['radio', 'checkbox'],
                 'checkbox',
               )}
-              buttonType={select('type', ['primary', 'secondary'], 'primary')}
+              buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
               selected={boolean('selected', false)}
             />
             <OptionButton
@@ -153,7 +153,7 @@ stories.add(
                 ['radio', 'checkbox'],
                 'checkbox',
               )}
-              buttonType={select('type', ['primary', 'secondary'], 'primary')}
+              buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
               selected={boolean('selected', false)}
               icon={<AcneGlyph width={32} height={32} />}
             />
