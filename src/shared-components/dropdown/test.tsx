@@ -85,6 +85,7 @@ describe('<DesktopDropdown />', () => {
     expect(
       wrapper
         .find('#select-input-box')
+        .first()
         .text()
         .includes('Test1'),
     ).toEqual(true);
@@ -104,7 +105,10 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('#select-input-box').simulate('click');
+      wrapper
+        .find('#select-input-box')
+        .first()
+        .simulate('click');
       expect(spy).toHaveBeenCalled();
     });
   });
