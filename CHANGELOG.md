@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v9.3.1
+
+- Fixes some invalid accessibility information in the Dropdown component, and updates the Option Button documentation ([#275](https://github.com/curology/radiance-ui/pull/275))
+
 # v9.3.0
 
 - Fixes accessibility issues with Option Button, Button, and Dropdown Components ([#261](https://github.com/curology/radiance-ui/pull/261))
