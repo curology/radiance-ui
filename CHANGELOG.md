@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v9.3.2
+
+- Adds missing `aria-disabled` prop to Dropdown options ([#276](https://github.com/curology/radiance-ui/pull/276))
+
 # v9.3.1
 
 - Fixes some invalid accessibility information in the Dropdown component, and updates the Option Button documentation ([#275](https://github.com/curology/radiance-ui/pull/275))
