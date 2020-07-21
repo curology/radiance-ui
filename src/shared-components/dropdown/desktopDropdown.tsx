@@ -104,6 +104,7 @@ const DesktopDropdown = ({
                 onClick={onOptionClick}
                 onKeyDown={handleOptionKeydown}
                 role="menuitemradio"
+                aria-disabled={!!disabled}
                 aria-checked={value === optionValue}
                 tabIndex={isOpen && !disabled ? 0 : -1}
                 // eslint-disable-next-line react/jsx-props-no-spreading
