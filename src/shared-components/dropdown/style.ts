@@ -15,14 +15,6 @@ export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   text-align: ${({ textAlign }) => textAlign};
 `;
 
-export const applyFocusState = css`
-  &:focus {
-    outline: none;
-    box-shadow: ${BOX_SHADOWS.clickableHover};
-    transition: 200ms ease-in-out;
-  }
-`;
-
 export const dropdownInputStyle = ({
   textAlign,
 }: {

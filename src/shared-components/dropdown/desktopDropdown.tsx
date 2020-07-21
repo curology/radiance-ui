@@ -11,7 +11,6 @@ import {
   IconContainer,
   DropdownOptionsContainer,
   DropdownOption,
-  applyFocusState,
 } from './style';
 
 import { OptionType } from './index';
@@ -73,7 +72,6 @@ const DesktopDropdown = ({
           aria-haspopup="menu"
           role="button"
           ref={initialFocus}
-          css={applyFocusState}
         >
           <div css={dropdownInputStyle({ textAlign })}>
             {currentOption && currentOption.label}
