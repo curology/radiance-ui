@@ -97,7 +97,7 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
         {(transitionState): JSX.Element => (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <Overlay className={transitionState} {...rest}>
-            <FocusScope contain restoreFocus>
+            <FocusScope contain restoreFocus autoFocus>
               <ModalContainer
                 className={transitionState}
                 onKeyDown={this.handleKeyDown}
