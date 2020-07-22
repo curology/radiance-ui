@@ -72,6 +72,10 @@ export const TitleWrapper = styled.div<{ disabled: boolean }>`
   display: flex;
   justify-content: space-between;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focusSecondary};
+  }
 `;
 
 export const Truncate = styled.div`
