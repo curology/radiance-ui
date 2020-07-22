@@ -70,6 +70,12 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
     }
   };
 
+  handleKeyDown = (event: React.KeyboardEvent): void => {
+    if (event.key === 'Escape') {
+      this.handleCloseIntent();
+    }
+  };
+
   render(): JSX.Element {
     const {
       children, title, onCloseIconClick, ...rest 
@@ -91,10 +97,18 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
         {(transitionState): JSX.Element => (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <Overlay className={transitionState} {...rest}>
-            <FocusScope contain autoFocus restoreFocus>
-              <ModalContainer className={transitionState}>
+            <FocusScope contain restoreFocus>
+              <ModalContainer
+                className={transitionState}
+                onKeyDown={this.handleKeyDown}
+              >
                 {onCloseIconClick && (
-                  <CrossIconContainer onClick={this.handleCloseIntent}>
+                  <CrossIconContainer
+                    onClick={this.handleCloseIntent}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Close modal"
+                  >
                     <CrossIcon />
                   </CrossIconContainer>
                 )}
