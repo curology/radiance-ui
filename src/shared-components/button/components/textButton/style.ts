@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 
-import { COLORS } from '../../../../constants';
+import { BOX_SHADOWS, COLORS } from '../../../../constants';
 
-/* eslint-disable-next-line import/prefer-default-export */
 export const BaseTextButton = styled.button<{ disabled: boolean }>`
   border-color: transparent;
   background-color: transparent;
@@ -19,5 +18,6 @@ export const BaseTextButton = styled.button<{ disabled: boolean }>`
   &:active,
   &:focus {
     outline: none;
+    box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 `;
