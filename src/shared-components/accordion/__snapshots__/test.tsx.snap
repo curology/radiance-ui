@@ -51,14 +51,24 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
 <div
   className="emotion-8 emotion-9"
   disabled={true}
 >
   <div
+    aria-disabled={true}
+    aria-expanded={false}
     className="emotion-4 emotion-5"
     disabled={true}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={-1}
   >
     <div
       className="emotion-0 emotion-1"
@@ -79,6 +89,8 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
     </div>
   </div>
   <div
+    aria-disabled={true}
+    aria-hidden={true}
     className="emotion-6 emotion-7"
   >
     <div>
@@ -101,6 +113,11 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
+}
+
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
 }
 
 .emotion-0 {
@@ -142,9 +159,14 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   disabled={false}
 >
   <div
+    aria-disabled={false}
+    aria-expanded={false}
     className="emotion-4 emotion-5"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={0}
   >
     <div
       className="emotion-0 emotion-1"
@@ -165,6 +187,8 @@ exports[`<Accordion /> renders no border accordion 1`] = `
     </div>
   </div>
   <div
+    aria-disabled={false}
+    aria-hidden={true}
     className="emotion-6 emotion-7"
   >
     <div>
@@ -198,6 +222,11 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   cursor: pointer;
 }
 
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
 .emotion-0 {
   overflow: hidden;
   white-space: nowrap;
@@ -229,9 +258,14 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   disabled={false}
 >
   <div
+    aria-disabled={false}
+    aria-expanded={false}
     className="emotion-4 emotion-5"
     disabled={false}
     onClick={[Function]}
+    onKeyDown={[Function]}
+    role="button"
+    tabIndex={0}
   >
     <div
       className="emotion-0 emotion-1"
@@ -252,6 +286,8 @@ exports[`<Accordion /> renders regular accordion 1`] = `
     </div>
   </div>
   <div
+    aria-disabled={false}
+    aria-hidden={true}
     className="emotion-6 emotion-7"
   >
     <div>
