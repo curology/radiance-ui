@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import { COLORS } from '../../constants';
 import { LoadingSpinnerContainer, Overlay, Dot } from './style';
 
-const LoadingSpinner = ({ bgColor, color, translateX, duration, size }) => (
-  <LoadingSpinnerContainer bgColor={bgColor} id="loading-spinner">
+const LoadingSpinner = ({
+  bgColor, color, translateX, duration, size, 
+}) => (
+  <LoadingSpinnerContainer bgColor={bgColor}>
     <Overlay>
       <Dot
         color={color}
