@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
+import { FocusScope } from '@react-aria/focus';
 
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
@@ -69,6 +70,12 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
     }
   };
 
+  handleKeyDown = (event: React.KeyboardEvent): void => {
+    if (event.key === 'Escape') {
+      this.handleCloseIntent();
+    }
+  };
+
   render(): JSX.Element {
     const {
       children, title, onCloseIconClick, ...rest 
@@ -90,15 +97,25 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
         {(transitionState): JSX.Element => (
           // eslint-disable-next-line react/jsx-props-no-spreading
           <Overlay className={transitionState} {...rest}>
-            <ModalContainer className={transitionState}>
-              {onCloseIconClick && (
-                <CrossIconContainer onClick={this.handleCloseIntent}>
-                  <CrossIcon />
-                </CrossIconContainer>
-              )}
-              {!!title && <ModalTitle>{title}</ModalTitle>}
-              {children}
-            </ModalContainer>
+            <FocusScope contain restoreFocus autoFocus>
+              <ModalContainer
+                className={transitionState}
+                onKeyDown={this.handleKeyDown}
+              >
+                {onCloseIconClick && (
+                  <CrossIconContainer
+                    onClick={this.handleCloseIntent}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Close modal"
+                  >
+                    <CrossIcon />
+                  </CrossIconContainer>
+                )}
+                {!!title && <ModalTitle>{title}</ModalTitle>}
+                {children}
+              </ModalContainer>
+            </FocusScope>
           </Overlay>
         )}
       </Transition>,
