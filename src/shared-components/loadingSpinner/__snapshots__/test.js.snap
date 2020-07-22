@@ -95,7 +95,6 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css 1`] = `
 
 <div
   className="emotion-8 emotion-9"
-  id="loading-spinner"
 >
   <div
     className="emotion-6 emotion-7"
