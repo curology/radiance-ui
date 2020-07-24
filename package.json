@@ -1,6 +1,6 @@
 {
   "name": "radiance-ui",
-  "version": "9.3.2",
+  "version": "10.0.0",
   "description": "Curology's React based component library",
   "main": "dist/bundle.js",
   "module": "dist/bundle-es/index.js",
@@ -131,6 +131,7 @@
   "dependencies": {
     "@emotion/core": "10.0.10",
     "@emotion/styled": "10.0.10",
+    "@react-aria/focus": "^3.0.2",
     "lodash.round": "^4.0.4",
     "lodash.throttle": "^4.1.1",
     "lodash.uniqueid": "^4.0.1",

@@ -19,7 +19,9 @@ type AccordionProps = {
   disabled: boolean;
   isOpen: boolean;
   noBorder: boolean;
-  onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  onClick: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
+  ) => void;
   rightAlignArrow: boolean;
   title: React.ReactNode;
 };
@@ -91,6 +93,13 @@ class Accordion extends React.Component<
     }
   }
 
+  handleKeyDown = (event: React.KeyboardEvent): void => {
+    const { onClick, disabled } = this.props;
+    if (!disabled && event.key === 'Enter') {
+      onClick(event);
+    }
+  };
+
   render() {
     const { contentHeight } = this.state;
     const {
@@ -111,7 +120,12 @@ class Accordion extends React.Component<
               onClick(event);
             }
           }}
+          onKeyDown={this.handleKeyDown}
           disabled={!!disabled}
+          role="button"
+          tabIndex={disabled ? -1 : 0}
+          aria-disabled={!!disabled}
+          aria-expanded={isOpen}
         >
           <Truncate>{title}</Truncate>
           <ArrowWrapper rightAlign={!!rightAlignArrow}>
@@ -123,7 +137,11 @@ class Accordion extends React.Component<
             />
           </ArrowWrapper>
         </TitleWrapper>
-        <ExpansionWrapper contentHeight={contentHeight}>
+        <ExpansionWrapper
+          contentHeight={contentHeight}
+          aria-disabled={!!disabled}
+          aria-hidden={!isOpen}
+        >
           <div ref={this.contentRef}>{children}</div>
         </ExpansionWrapper>
       </AccordionBox>

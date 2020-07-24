@@ -2,7 +2,11 @@ import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import {
-  COLORS, MEDIA_QUERIES, SPACER, Z_SCALE, 
+  COLORS,
+  MEDIA_QUERIES,
+  SPACER,
+  Z_SCALE,
+  BOX_SHADOWS,
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -106,5 +110,9 @@ export const CrossIconContainer = styled.div`
   ${MEDIA_QUERIES.mdUp} {
     top: 16px;
     right: 16px;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 `;
