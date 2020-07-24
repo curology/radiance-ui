@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# v10.0.0
+
+- Removes id from the `LoadingSpinner` ([#282](https://github.com/curology/radiance-ui/pull/282))
+- Traps keyboard focus in `DialogModal` when modal is open ([#283](https://github.com/curology/radiance-ui/pull/283))
+- Adds focus box shadow to `TextButton` ([#284](https://github.com/curology/radiance-ui/pull/284))
+- Adds keyboard control to `Accordion` ([#285](https://github.com/curology/radiance-ui/pull/282852))
+
 # v9.3.2
 
 - Adds missing `aria-disabled` prop to Dropdown options ([#276](https://github.com/curology/radiance-ui/pull/276))
