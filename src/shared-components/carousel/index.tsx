@@ -12,7 +12,26 @@ const BASE_SLIDER_CONFIG = {
   variableWidth: true,
 };
 
-class Carousel extends React.Component {
+export type CarouselType = 'primary' | 'secondary';
+
+type CarouselProps = {
+  autoplay?: boolean;
+  autoplaySpeed?: number;
+  carouselType?: CarouselType;
+  centerMode?: boolean;
+  children: Array<React.ReactNode>;
+  hideArrows?: boolean;
+  hideDots?: boolean;
+  infinite?: boolean;
+  numCardsVisible: number;
+};
+
+type CarouselState = {
+  currentIndex: number;
+  lastIndex: number;
+};
+
+class Carousel extends React.Component<CarouselProps, CarouselState> {
   static Card = Card;
 
   static propTypes = {
@@ -37,13 +56,13 @@ class Carousel extends React.Component {
     infinite: false,
   };
 
-  slider = React.createRef();
+  slider: React.RefObject<Slider> = React.createRef();
 
-  timeoutId = null;
+  timeoutId: number | null = null;
 
   userHasInteracted = false;
 
-  constructor(props) {
+  constructor(props: CarouselProps) {
     super(props);
 
     this.state = {
@@ -130,12 +149,12 @@ class Carousel extends React.Component {
       this.setState({ lastIndex: updatedLastIndex });
     }
 
-    if (currentIndex > updatedLastIndex) {
+    if (this.slider.current && currentIndex > updatedLastIndex) {
       this.slider.current.slickGoTo(updatedLastIndex);
     }
   };
 
-  onCardChange = (current, nextIndex) => {
+  onCardChange = (_oldIndex: number, nextIndex: number) => {
     this.timeoutId = null;
 
     this.setState({
@@ -144,25 +163,29 @@ class Carousel extends React.Component {
   };
 
   onUserInteraction = () => {
-    clearTimeout(this.timeoutId);
+    clearTimeout(this.timeoutId as number);
     this.userHasInteracted = true;
-    this.slider.current.slickPause();
+
+    if (this.slider.current) {
+      this.slider.current.slickPause();
+    }
   };
 
   replay() {
     const { autoplaySpeed } = this.props;
     const firstIndex = 0;
 
-    const timeoutId = setTimeout(
-      () => this.slider.current.slickGoTo(firstIndex),
-      autoplaySpeed
-    );
+    const timeoutId = setTimeout(() => {
+      if (this.slider.current) {
+        this.slider.current.slickGoTo(firstIndex);
+      }
+    }, autoplaySpeed);
 
     this.timeoutId = timeoutId;
   }
 
   render() {
-    const { children, carouselType, numCardsVisible } = this.props;
+    const { children, carouselType = 'primary', numCardsVisible } = this.props;
     const settings = this.getCarouselSettings();
 
     return (
@@ -171,6 +194,7 @@ class Carousel extends React.Component {
           carouselType={carouselType}
           onClick={this.onUserInteraction}
         >
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Slider ref={this.slider} {...settings}>
             {children}
           </Slider>

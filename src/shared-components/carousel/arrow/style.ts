@@ -2,7 +2,11 @@ import styled from '@emotion/styled';
 
 import { SPACER, Z_SCALE } from '../../../constants';
 
-const ArrowContainer = styled.div`
+const ArrowContainer = styled.div<{
+  prev: boolean;
+  next: boolean;
+  disabled: boolean;
+}>`
   position: absolute;
   top: 50%;
   z-index: ${Z_SCALE.e2000};
