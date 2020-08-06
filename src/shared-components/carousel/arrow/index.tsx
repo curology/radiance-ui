@@ -10,7 +10,7 @@ type ArrowProps = {
   prev?: boolean;
   next?: boolean;
   disabled?: boolean;
-  onUserInteraction: () => void;
+  onClick: () => void;
 };
 
 class Arrow extends React.Component<ArrowProps> {
@@ -18,7 +18,7 @@ class Arrow extends React.Component<ArrowProps> {
     prev: PropTypes.bool,
     next: PropTypes.bool,
     disabled: PropTypes.bool,
-    onUserInteraction: PropTypes.func.isRequired,
+    onClick: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -28,8 +28,8 @@ class Arrow extends React.Component<ArrowProps> {
   };
 
   arrowClickHandler = () => {
-    const { onUserInteraction } = this.props;
-    onUserInteraction();
+    const { onClick } = this.props;
+    onClick();
   };
 
   render() {

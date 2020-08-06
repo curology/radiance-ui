@@ -126,14 +126,14 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
         <Arrow
           prev
           disabled={currentIndex === firstIndex && !infinite}
-          onUserInteraction={this.onUserInteraction}
+          onClick={this.onUserInteraction}
         />
       ),
       nextArrow: (
         <Arrow
           next
           disabled={currentIndex === lastIndex && !infinite}
-          onUserInteraction={this.onUserInteraction}
+          onClick={this.onUserInteraction}
         />
       ),
     };
