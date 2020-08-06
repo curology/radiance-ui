@@ -16,12 +16,16 @@ export const CalloutContainer = styled.div`
   align-items: center;
 `;
 
-export const Text = styled.div`
+export const Text = styled.div<{
+  color: string;
+}>`
   color: ${({ color }) => color};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.div<{
+  color: string;
+}>`
   margin-left: ${SPACER.small};
 
   svg {
