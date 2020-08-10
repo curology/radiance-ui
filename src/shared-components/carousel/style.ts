@@ -3,6 +3,8 @@ import { css } from '@emotion/core';
 
 import { SPACER, COLORS } from '../../constants';
 
+import { CarouselType } from '.';
+
 export const Card = styled.div`
   width: 311px !important;
   min-height: 48px;
@@ -25,7 +27,7 @@ const secondaryStyles = css`
   }
 `;
 
-const parseStyle = carouselType => {
+const parseStyle = (carouselType: CarouselType) => {
   switch (carouselType) {
     case 'primary':
       return primaryStyles;
@@ -156,7 +158,7 @@ const reactSlickStyles = css`
   }
 `;
 
-const parseOuterStyle = numCardsVisible => {
+const parseOuterStyle = (numCardsVisible: number) => {
   let maxWidth;
   switch (numCardsVisible) {
     case 1:
@@ -177,11 +179,13 @@ const parseOuterStyle = numCardsVisible => {
   `;
 };
 
-export const OuterContainer = styled.div`
+export const OuterContainer = styled.div<{ numCardsVisible: number }>`
   ${({ numCardsVisible }) => parseOuterStyle(numCardsVisible)};
 `;
 
-export const InnerContainer = styled.div`
+export const InnerContainer = styled.div<{
+  carouselType: CarouselType;
+}>`
   overflow: hidden !important;
   padding-bottom: ${SPACER.large};
 

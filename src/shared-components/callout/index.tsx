@@ -6,7 +6,17 @@ import {
 } from './style';
 import { COLORS } from '../../constants';
 
-const Callout = ({ children, icon, color }) => (
+type CalloutProps = {
+  children: React.ReactNode;
+  color?: string;
+  icon?: React.ReactNode;
+};
+
+const Callout = ({
+  children,
+  icon = null,
+  color = COLORS.primary,
+}: CalloutProps) => (
   <CalloutContainer>
     <Text color={color}>{children}</Text>
     {icon && <Icon color={color}>{icon}</Icon>}
