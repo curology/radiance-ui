@@ -1,6 +1,6 @@
 {
   "name": "radiance-ui",
-  "version": "10.0.0",
+  "version": "10.1.1",
   "description": "Curology's React based component library",
   "main": "dist/bundle.js",
   "module": "dist/bundle-es/index.js",
