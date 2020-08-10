@@ -18,7 +18,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-1 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -26,6 +25,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-7 {
@@ -110,6 +110,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   >
     <div
       className="emotion-1 emotion-2"
+      disabled={false}
     >
       <svg
         className="emotion-0"
@@ -120,6 +121,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     <div
       checked={true}
       className="emotion-3 emotion-4"
+      disabled={false}
       size="large"
       type="primary"
     />
@@ -176,7 +178,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-1 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -184,6 +185,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-7 {
@@ -242,6 +244,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   >
     <div
       className="emotion-1 emotion-2"
+      disabled={false}
     >
       <svg
         className="emotion-0"
@@ -252,6 +255,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     <div
       checked={true}
       className="emotion-3 emotion-4"
+      disabled={false}
       size="large"
       type="primary"
     />
@@ -282,7 +286,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -290,6 +293,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-6 {
@@ -370,6 +374,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     >
       <svg
         height={16}
@@ -379,6 +384,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       size="large"
       type="primary"
     />
@@ -435,7 +441,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -443,6 +448,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-6 {
@@ -497,6 +503,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     >
       <svg
         height={16}
@@ -506,6 +513,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       size="large"
       type="primary"
     />
@@ -536,7 +544,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -544,6 +551,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-6 {
@@ -624,10 +632,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     />
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       size="small"
       type="primary"
     />
@@ -684,7 +694,6 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -692,6 +701,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -746,10 +756,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     />
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       size="small"
       type="primary"
     />
@@ -806,7 +818,6 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 .emotion-1 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -814,6 +825,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-7 {
@@ -872,6 +884,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   >
     <div
       className="emotion-1 emotion-2"
+      disabled={false}
     >
       <svg
         className="emotion-0"
@@ -882,6 +895,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
     <div
       checked={true}
       className="emotion-3 emotion-4"
+      disabled={false}
       type="primary"
     />
   </div>
@@ -937,7 +951,6 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 .emotion-1 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -945,6 +958,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-7 {
@@ -1003,6 +1017,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   >
     <div
       className="emotion-1 emotion-2"
+      disabled={false}
     >
       <svg
         className="emotion-0"
@@ -1013,6 +1028,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
     <div
       checked={true}
       className="emotion-3 emotion-4"
+      disabled={false}
       type="secondary"
     />
   </div>
@@ -1068,7 +1084,6 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -1076,6 +1091,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -1130,10 +1146,12 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     />
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       type="primary"
     />
   </div>
@@ -1189,7 +1207,6 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -1197,6 +1214,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-2 {
@@ -1244,10 +1262,12 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     />
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       type="primary"
     />
   </div>
@@ -1272,7 +1292,6 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 .emotion-0 {
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -1280,6 +1299,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   -webkit-transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  cursor: pointer;
 }
 
 .emotion-6 {
@@ -1360,10 +1380,12 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   >
     <div
       className="emotion-0 emotion-1"
+      disabled={false}
     />
     <div
       checked={false}
       className="emotion-2 emotion-3"
+      disabled={false}
       type="primary"
     />
   </div>
