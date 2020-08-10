@@ -11,6 +11,9 @@ import { Checkbox } from 'radiance-ui';
 <Checkbox type='secondary' checked>
  This is a secondary checkbox
 </Checkbox>
+<Checkbox checked disabled>
+ This is a disabled checkbox
+</Checkbox>
 ```
 
  <!-- STORY -->
@@ -20,6 +23,7 @@ import { Checkbox } from 'radiance-ui';
 | prop     | propType | required | default         | description                                                                                             |
 | -------- | -------- | -------- | --------------- | ------------------------------------------------------------------------------------------------------- |
 | checked  | bool     | yes      | -               | control prop for checked state                                                                          |
+| disabled | bool     | no       | false           | when disabled, click listener will not be called and the UI will look disabled                          |
 | type     | string   | no       | primary         | must be one of: 'primary', 'secondary'                                                                  |
 | icon     | node     | no       | -               | icon optionally displayed inside the radio button. Icons are only displayed at the 'large' size         |
 | size     | string   | no       | small           | must be one of: 'large', 'small'                                                                        |  |

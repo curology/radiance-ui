@@ -15,6 +15,7 @@ import {
 
 const propTypes = {
   checked: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -27,6 +28,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  disabled: false,
   onClick: undefined,
   type: 'primary',
   selector: 'radio',
@@ -37,6 +39,7 @@ const defaultProps = {
 
 const SelectorButton = ({
   checked,
+  disabled,
   onClick,
   children,
   type,
@@ -75,12 +78,13 @@ const SelectorButton = ({
       {...rest}
     >
       <SelectorContainer>
-        <SelectorIcon>
+        <SelectorIcon disabled={disabled}>
           {checked ? checkedIcon : size === 'large' && icon}
         </SelectorIcon>
         <Selector
           type={type}
           checked={checked}
+          disabled={disabled}
           selector={selector}
           size={size}
         />

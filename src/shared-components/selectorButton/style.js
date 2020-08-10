@@ -30,12 +30,14 @@ export const OuterContainer = styled.div`
 `;
 
 export const SelectorIcon = styled.div`
-  cursor: pointer;
   fill: currentColor;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  ${({ disabled }) => css`
+    cursor: ${disabled ? 'not-allowed' : 'pointer'};
+  `};
 `;
 
 const primarySelectorStyle = checked => css`
@@ -46,6 +48,12 @@ const primarySelectorStyle = checked => css`
 const secondarySelectorStyle = checked => css`
   background-color: ${checked ? COLORS.secondary : 'transparent'};
   border-color: ${checked ? COLORS.secondary : COLORS.primary};
+`;
+
+const disabledSelectorStyle = css`
+  background-color: ${COLORS.purple30};
+  border-color: ${COLORS.purple30};
+  cursor: not-allowed;
 `;
 
 export const Selector = styled.div`
@@ -62,7 +70,10 @@ export const Selector = styled.div`
 
   ${({ selector }) => css`
     border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
-  `} ${({ type, checked }) => {
+  `} ${({ type, checked, disabled }) => {
+    if (disabled) {
+      return disabledSelectorStyle;
+    }
     switch (type) {
       case 'primary':
         return primarySelectorStyle(checked);
