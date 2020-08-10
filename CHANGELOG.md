@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v10.1.0
+
+- [Internal] TypeScript conversion: Callout and Carousel ([#300](https://github.com/curology/radiance-ui/pull/300))
+
 # v10.0.0
 
 - Removes id from the `LoadingSpinner` ([#282](https://github.com/curology/radiance-ui/pull/282))
@@ -21,7 +25,7 @@
 
 # v9.2.0
 
-- [Internal] TypeScript convertion: Buttons ([#252](https://github.com/curology/radiance-ui/pull/252))
+- [Internal] TypeScript conversion: Buttons ([#252](https://github.com/curology/radiance-ui/pull/252))
 
 # v9.1.3
 
@@ -33,7 +37,7 @@
 
 # v9.1.1
 
-- [Internal] TypeScript convertion: Alert, Avatar, Banner ([#248](https://github.com/curology/radiance-ui/pull/248))
+- [Internal] TypeScript conversion: Alert, Avatar, Banner ([#248](https://github.com/curology/radiance-ui/pull/248))
 
 # v9.1.0
 
