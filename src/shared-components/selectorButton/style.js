@@ -51,8 +51,8 @@ const secondarySelectorStyle = checked => css`
 `;
 
 const disabledSelectorStyle = css`
-  background-color: ${COLORS.purple30};
-  border-color: ${COLORS.purple30};
+  background-color: ${COLORS.disabled};
+  border-color: ${COLORS.disabled};
   cursor: not-allowed;
 `;
 
