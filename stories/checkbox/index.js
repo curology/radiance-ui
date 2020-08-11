@@ -39,6 +39,7 @@ stories.add(
       </Typography.Heading>
       <Checkbox
         checked={boolean('checked', false)}
+        disabled={boolean('disabled', false)}
         type={select('type', ['primary', 'secondary'], 'primary')}
         onClick={action('checkbox clicked')}
         icon={
