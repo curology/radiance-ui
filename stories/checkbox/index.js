@@ -6,7 +6,6 @@ import {
 } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-// eslint-disable-next-line import/extensions
 import CheckboxReadme from 'docs/checkbox.md';
 import { Checkbox, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
