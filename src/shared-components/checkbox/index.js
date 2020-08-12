@@ -5,6 +5,7 @@ import SelectorButton from '../selectorButton';
 
 const propTypes = {
   checked: PropTypes.bool.isRequired,
+  disabled: PropTypes.bool,
   onClick: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -17,6 +18,7 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
+  disabled: false,
   icon: undefined,
   onClick: () => undefined,
   type: 'primary',
@@ -25,6 +27,7 @@ const defaultProps = {
 
 const Checkbox = ({
   checked,
+  disabled,
   onClick,
   children,
   type,
@@ -35,7 +38,8 @@ const Checkbox = ({
   <SelectorButton
     selector="checkbox"
     checked={checked}
-    onClick={onClick}
+    disabled={disabled}
+    onClick={!disabled ? onClick : event => event.preventDefault()}
     type={type}
     icon={icon}
     size={size}

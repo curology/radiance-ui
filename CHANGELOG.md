@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v10.1.1
+
+- Adds a disabled prop to the Checkbox component
+
 # v10.1.0
 
 - [Internal] TypeScript conversion: Callout and Carousel ([#300](https://github.com/curology/radiance-ui/pull/300))
