@@ -1,8 +1,8 @@
 # CHANGELOG
 
-# v10.1.1
+# v10.2.0
 
-- Adds a disabled prop to the Checkbox component
+- Adds a disabled prop to the Checkbox component ([#303](https://github.com/curology/radiance-ui/pull/303))
 
 # v10.1.0
 
