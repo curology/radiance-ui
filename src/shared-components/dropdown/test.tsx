@@ -84,7 +84,7 @@ describe('<DesktopDropdown />', () => {
 
     expect(
       wrapper
-        .find('#select-input-box')
+        .find('[role="button"]')
         .text()
         .includes('Test1'),
     ).toEqual(true);
@@ -104,7 +104,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('#select-input-box').simulate('click');
+      wrapper.find('[role="button"]').simulate('click');
       expect(spy).toHaveBeenCalled();
     });
   });
