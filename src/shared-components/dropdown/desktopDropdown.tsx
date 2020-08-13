@@ -64,11 +64,9 @@ const DesktopDropdown = ({
     >
       <DropdownContainer textAlign={textAlign}>
         <div
-          id="select-input-box"
           onClick={onSelectClick}
           onKeyDown={handleKeyDown}
           tabIndex={0}
-          aria-label="Open dropdown option"
           aria-haspopup="menu"
           role="button"
           ref={initialFocus}
@@ -86,7 +84,6 @@ const DesktopDropdown = ({
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
           aria-activedescendant={value}
-          aria-labelledby="select-input-box"
           aria-hidden={!isOpen}
         >
           {options.map(option => {
