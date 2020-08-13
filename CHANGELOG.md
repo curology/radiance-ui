@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v10.2.1
+
+- Fixes some accessibility information on the Dropdown component ([#307](https://github.com/curology/radiance-ui/pull/307))
+
 # v10.2.0
 
 - Adds a disabled prop to the Checkbox component ([#303](https://github.com/curology/radiance-ui/pull/303))
