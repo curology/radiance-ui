@@ -4,6 +4,8 @@ import { css } from '@emotion/core';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
+import { StatusType } from '.';
+
 export const ChipText = styled.span`
   ${TYPOGRAPHY_STYLE.label};
   font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
@@ -39,7 +41,7 @@ const secondaryStyle = css`
   }
 `;
 
-export const ChipStyles = styled.div`
+export const ChipStyles = styled.div<{ status: StatusType }>`
   align-items: center;
   border-radius: ${SPACER.xsmall};
   display: inline-flex;

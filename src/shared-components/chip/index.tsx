@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 import { ChipStyles, ChipText } from './style';
 
-const Chip = ({ status, text }) => (
+export type StatusType = 'default' | 'success' | 'error' | 'secondary';
+
+type ChipProps = {
+  status?: StatusType;
+  text: string;
+};
+const Chip = ({ status = 'default', text }: ChipProps) => (
   <ChipStyles status={status}>
     <ChipText>{text}</ChipText>
   </ChipStyles>
