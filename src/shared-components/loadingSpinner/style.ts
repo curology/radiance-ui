@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
-const appPreloader = translateX => keyframes`
+const appPreloader = (translateX: string) => keyframes`
   0% { opacity: 0; transform: translate3d(${translateX}, 0, 0) }
   50% { opacity: 1; transform: translate3d(0, 0, 0) }
   100% { opacity: 0; transform: translate3d(-${translateX}, 0, 0) }
 `;
 
-export const LoadingSpinnerContainer = styled.div`
+export const LoadingSpinnerContainer = styled.div<{ bgColor: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,7 +29,12 @@ export const Overlay = styled.div`
   position: relative;
 `;
 
-export const Dot = styled.span`
+export const Dot = styled.span<{
+  color: string;
+  translateX: string;
+  duration: number;
+  size: string;
+}>`
   display: block;
   height: ${props => props.size};
   width: ${props => props.size};
