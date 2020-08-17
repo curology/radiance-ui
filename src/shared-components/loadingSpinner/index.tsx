@@ -4,9 +4,25 @@ import PropTypes from 'prop-types';
 import { COLORS } from '../../constants';
 import { LoadingSpinnerContainer, Overlay, Dot } from './style';
 
+type LoadingSpinnerProps = {
+  bgColor?: string;
+  color?: string;
+  translateX?: string;
+  duration?: number;
+  size?: string;
+};
+
+const DEFAULT_TRANSLATE_X = '100px';
+const DEFAULT_DURATION = 2;
+const DEFAULT_SIZE = '14px';
+
 const LoadingSpinner = ({
-  bgColor, color, translateX, duration, size, 
-}) => (
+  bgColor = COLORS.background,
+  color = COLORS.primary,
+  translateX = DEFAULT_TRANSLATE_X,
+  duration = DEFAULT_DURATION,
+  size = DEFAULT_SIZE,
+}: LoadingSpinnerProps) => (
   <LoadingSpinnerContainer bgColor={bgColor}>
     <Overlay>
       <Dot
@@ -42,9 +58,9 @@ LoadingSpinner.propTypes = {
 LoadingSpinner.defaultProps = {
   bgColor: COLORS.background,
   color: COLORS.primary,
-  translateX: '100px',
-  duration: 2,
-  size: '14px',
+  translateX: DEFAULT_TRANSLATE_X,
+  duration: DEFAULT_DURATION,
+  size: DEFAULT_SIZE,
 };
 
 export default LoadingSpinner;

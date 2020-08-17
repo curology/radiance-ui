@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import { IndicatorContainer } from './style';
 
-const Indicator = ({ text }) => (
+type IndicatorProps = { text: string | number };
+const Indicator = ({ text }: IndicatorProps) => (
   <IndicatorContainer>
     <div>{text}</div>
   </IndicatorContainer>

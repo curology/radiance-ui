@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class OffClickWrapper extends React.Component {
+type OffClickWrapperProps = {
+  children: React.ReactNode;
+  className?: string;
+  onOffClick: (event: KeyboardEvent | MouseEvent) => void;
+};
+
+class OffClickWrapper extends React.Component<OffClickWrapperProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
@@ -12,7 +18,9 @@ class OffClickWrapper extends React.Component {
     className: undefined,
   };
 
-  constructor(props) {
+  containerRef: React.RefObject<HTMLDivElement>;
+
+  constructor(props: OffClickWrapperProps) {
     super(props);
     this.containerRef = React.createRef();
   }
@@ -35,21 +43,22 @@ class OffClickWrapper extends React.Component {
     document.removeEventListener('keydown', this.handleKeyPress, false);
   };
 
-  handleKeyPress = event => {
+  handleKeyPress = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
       const { onOffClick } = this.props;
       onOffClick(event);
     }
   };
 
-  handleOffClick = event => {
+  handleOffClick = (event: MouseEvent) => {
     const node = this.containerRef.current;
     const { onOffClick } = this.props;
 
     if (!node) {
       return;
     }
-    if (node.contains(event.target)) {
+
+    if (node.contains(event.target as Node)) {
       return;
     }
 
