@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v10.3.0
+
+- [Internal] TypeScript conversion: Indicator, Chip, LoadingSpinner, OffClickWrapper ([#313](https://github.com/curology/radiance-ui/pull/313))
+
 # v10.2.1
 
 - Fixes some accessibility information on the Dropdown component ([#307](https://github.com/curology/radiance-ui/pull/307))
