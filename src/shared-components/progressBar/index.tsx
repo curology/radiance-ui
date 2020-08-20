@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { COLORS, PROGRESS_BAR_STATUS } from '../../constants';
 import { OuterContainer, InnerBar } from './style';
 
-export type ProgressBarStatusType = keyof (typeof PROGRESS_BAR_STATUS);
+export type ProgressBarStatusType = typeof PROGRESS_BAR_STATUS[keyof typeof PROGRESS_BAR_STATUS];
 
 type ProgressBarProps = {
   backgroundColor?: string;
