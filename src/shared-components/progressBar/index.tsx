@@ -40,13 +40,6 @@ const ProgressBar = ({
   </OuterContainer>
 );
 
-ProgressBar.defaultProps = {
-  backgroundColor: COLORS.background,
-  barColor: COLORS.primary,
-  height: 4,
-  loadingTime: '20s',
-};
-
 ProgressBar.propTypes = {
   backgroundColor: PropTypes.string,
   barColor: PropTypes.string,

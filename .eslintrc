@@ -25,10 +25,14 @@
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx"] }],
+    "react/require-default-props": [
+      "error",
+      { "ignoreFunctionalComponents": true }
+    ],
     "react/state-in-constructor": 0,
     "react/static-property-placement": 0,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx"] }],
     "import/extensions": [2, { "svg": "always" }]
   },
   "overrides": [
