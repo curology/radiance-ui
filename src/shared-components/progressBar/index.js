@@ -4,26 +4,14 @@ import PropTypes from 'prop-types';
 import { COLORS, PROGRESS_BAR_STATUS } from '../../constants';
 import { OuterContainer, InnerBar } from './style';
 
-export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
-
-type ProgressBarProps = {
-  backgroundColor?: string;
-  barColor?: string;
-  height?: number;
-  loadingTime?: string;
-  status: ProgressBarStatusType;
-  // ...rest type
-  [key: string]: any;
-};
-
 const ProgressBar = ({
-  backgroundColor = COLORS.background,
-  barColor = COLORS.primary,
-  height = 4,
-  loadingTime = '20s',
+  backgroundColor,
+  barColor,
+  height,
+  loadingTime,
   status,
   ...rest
-}: ProgressBarProps) => (
+}) => (
   <OuterContainer
     status={status}
     height={height}
@@ -39,6 +27,13 @@ const ProgressBar = ({
     />
   </OuterContainer>
 );
+
+ProgressBar.defaultProps = {
+  backgroundColor: COLORS.background,
+  barColor: COLORS.primary,
+  height: 4,
+  loadingTime: '20s',
+};
 
 ProgressBar.propTypes = {
   backgroundColor: PropTypes.string,
