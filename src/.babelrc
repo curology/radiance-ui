@@ -3,7 +3,7 @@
     ["@babel/preset-env", {
       "modules": false
     }],
-    "@babel/react",
+    "@babel/preset-react",
     "@babel/preset-typescript",
     "@emotion/babel-preset-css-prop"
   ],
