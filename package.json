@@ -147,6 +147,8 @@
     "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
+    "@emotion/core": "10.0.35",
+    "@emotion/styled": "10.0.27",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
