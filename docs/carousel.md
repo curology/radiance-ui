@@ -42,7 +42,7 @@ const cards = [
 <Carousel numCardsVisible={1} hideArrows>{cards}</Carousel>
 
 // Bottom Right Aligned Arrows
-<Carousel numCardsVisible={1} bottomRightAlignedArrows>{cards}</Carousel>
+<Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>{cards}</Carousel>
 
 // Secondary Style - dots are white
 <Carousel numCardsVisible={1} carouselType="secondary">{cards}</Carousel>

@@ -25,14 +25,12 @@ export const BottomRightAlignedArrowContainer = styled.div<{
   next: boolean;
   disabled: boolean;
 }>`
-  position: absolute;
-  top: 50%;
-  z-index: ${Z_SCALE.e2000};
-  transform: translate(0%, -50%);
   display: block;
+  align-self: flex-end;
+  margin: ${SPACER.small};
 
-  ${({ prev }) => prev && `left: ${SPACER.small};`};
-  ${({ next }) => next && `right: ${SPACER.small};`};
+  ${({ prev }) => prev && `order: 2; margin-left: auto;`};
+  ${({ next }) => next && `order: 3;`};
 
   ${({ disabled }) =>
     disabled &&
@@ -41,6 +39,10 @@ export const BottomRightAlignedArrowContainer = styled.div<{
         background-color: none;
         border-color: ${COLORS.primary};
         color: ${COLORS.primary};
+
+        &:hover {
+          color: ${COLORS.primary};
+        }
       }
     `};
 `;
