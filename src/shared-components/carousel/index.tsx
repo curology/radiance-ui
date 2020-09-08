@@ -22,6 +22,7 @@ type CarouselProps = {
   children: Array<React.ReactNode>;
   hideArrows?: boolean;
   hideDots?: boolean;
+  bottomRightAlignedArrows?: boolean;
   infinite?: boolean;
   numCardsVisible: number;
 };
@@ -42,6 +43,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     children: PropTypes.arrayOf(PropTypes.node).isRequired,
     hideArrows: PropTypes.bool,
     hideDots: PropTypes.bool,
+    bottomRightAlignedArrows: PropTypes.bool,
     infinite: PropTypes.bool,
     numCardsVisible: PropTypes.number.isRequired,
   };
@@ -53,6 +55,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     centerMode: true,
     hideArrows: false,
     hideDots: false,
+    bottomRightAlignedArrows: false,
     infinite: false,
   };
 
@@ -105,6 +108,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
       centerMode,
       hideArrows,
       hideDots,
+      bottomRightAlignedArrows,
       infinite,
       numCardsVisible,
     } = this.props;
@@ -124,6 +128,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
       onSwipe: this.onUserInteraction,
       prevArrow: (
         <Arrow
+          bottomRightAlignedArrows={bottomRightAlignedArrows}
           prev
           disabled={currentIndex === firstIndex && !infinite}
           onClick={this.onUserInteraction}
@@ -131,6 +136,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
       ),
       nextArrow: (
         <Arrow
+          bottomRightAlignedArrows={bottomRightAlignedArrows}
           next
           disabled={currentIndex === lastIndex && !infinite}
           onClick={this.onUserInteraction}

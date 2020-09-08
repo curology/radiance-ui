@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import { RoundButton } from '../../button';
 import ArrowLeftIcon from '../../../svgs/icons/arrow-left-icon.svg';
 import ArrowRightIcon from '../../../svgs/icons/arrow-right-icon.svg';
-import ArrowContainer from './style';
+import { ArrowContainer, BottomRightAlignedArrowContainer } from './style';
 
 type ArrowProps = {
+  bottomRightAlignedArrows?: boolean;
   prev?: boolean;
   next?: boolean;
   disabled?: boolean;
@@ -15,6 +16,7 @@ type ArrowProps = {
 
 class Arrow extends React.Component<ArrowProps> {
   static propTypes = {
+    bottomRightAlignedArrows: PropTypes.bool,
     prev: PropTypes.bool,
     next: PropTypes.bool,
     disabled: PropTypes.bool,
@@ -22,6 +24,7 @@ class Arrow extends React.Component<ArrowProps> {
   };
 
   static defaultProps = {
+    bottomRightAlignedArrows: false,
     prev: false,
     next: false,
     disabled: false,
@@ -33,24 +36,35 @@ class Arrow extends React.Component<ArrowProps> {
   };
 
   render() {
-    const { prev = false, next = false, disabled = false } = this.props;
+    const {
+      bottomRightAlignedArrows = false,
+      prev = false,
+      next = false,
+      disabled = false,
+    } = this.props;
+    const ArrowContainerComponent = bottomRightAlignedArrows
+      ? BottomRightAlignedArrowContainer
+      : ArrowContainer;
+
     return (
-      <ArrowContainer prev={prev} next={next} disabled={disabled}>
+      <ArrowContainerComponent prev={prev} next={next} disabled={disabled}>
         {prev && (
           <RoundButton
-            buttonType="action"
+            buttonType={bottomRightAlignedArrows ? 'primary' : 'action'}
+            disabled={disabled}
             icon={<ArrowLeftIcon />}
             onClick={this.arrowClickHandler}
           />
         )}
         {next && (
           <RoundButton
-            buttonType="action"
+            buttonType={bottomRightAlignedArrows ? 'primary' : 'action'}
+            disabled={disabled}
             icon={<ArrowRightIcon />}
             onClick={this.arrowClickHandler}
           />
         )}
-      </ArrowContainer>
+      </ArrowContainerComponent>
     );
   }
 }
