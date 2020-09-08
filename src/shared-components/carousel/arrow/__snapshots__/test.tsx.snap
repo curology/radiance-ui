@@ -1,0 +1,646 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0.5rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-left: auto;
+}
+
+.emotion-6 button {
+  background-color: none;
+  border-color: #332e54;
+  color: #332e54;
+}
+
+.emotion-6 button:hover {
+  color: #332e54;
+}
+
+.emotion-2 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  min-height: 52px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ededf0;
+  border-color: #ededf0;
+  color: #c3c0cd;
+  cursor: not-allowed;
+  fill: #c3c0cd;
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.emotion-2:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-2:active,
+.emotion-2:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
+.emotion-2:visited,
+.emotion-2:hover {
+  opacity: 1;
+  color: #c3c0cd;
+}
+
+.emotion-2 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin: 0 auto;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  width: 38px;
+  opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
+}
+
+.emotion-0 span {
+  border-radius: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+}
+
+.emotion-0 span:nth-of-type(1) {
+  -webkit-animation: animation-0 1750ms infinite linear;
+  animation: animation-0 1750ms infinite linear;
+}
+
+.emotion-0 span:nth-of-type(2) {
+  -webkit-animation: animation-0 1750ms infinite linear -300ms;
+  animation: animation-0 1750ms infinite linear -300ms;
+}
+
+.emotion-0 span:nth-of-type(3) {
+  -webkit-animation: animation-0 1750ms infinite linear -600ms;
+  animation: animation-0 1750ms infinite linear -600ms;
+}
+
+.emotion-0 span {
+  background-color: #ffffff;
+}
+
+<div
+  className="emotion-6 emotion-7"
+  disabled={true}
+>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <button
+      className="emotion-2 emotion-3"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <svg />
+      <div
+        className="emotion-0 emotion-1"
+        disabled={true}
+      >
+        <div>
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+    </button>
+    
+  </div>
+</div>
+`;
+
+exports[`<Arrow /> UI snapshots renders with props 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+.emotion-6 {
+  position: absolute;
+  top: 50%;
+  z-index: 2000;
+  -webkit-transform: translate(0%,-50%);
+  -ms-transform: translate(0%,-50%);
+  transform: translate(0%,-50%);
+  display: block;
+  left: 0.5rem;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  min-height: 52px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-width: 1px;
+  border-color: #ededf0;
+  background-color: #ffffff;
+  color: #332e54;
+  fill: #332e54;
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.06);
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.emotion-2:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-2:active,
+.emotion-2:focus {
+  outline: none;
+  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+}
+
+.emotion-2:hover {
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.15);
+}
+
+.emotion-2:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  opacity: 1;
+}
+
+.emotion-2 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin: 0 auto;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  width: 38px;
+  opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
+}
+
+.emotion-0 span {
+  background-color: #332e54;
+  border-radius: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+}
+
+.emotion-0 span:nth-of-type(1) {
+  -webkit-animation: animation-0 1750ms infinite linear;
+  animation: animation-0 1750ms infinite linear;
+}
+
+.emotion-0 span:nth-of-type(2) {
+  -webkit-animation: animation-0 1750ms infinite linear -300ms;
+  animation: animation-0 1750ms infinite linear -300ms;
+}
+
+.emotion-0 span:nth-of-type(3) {
+  -webkit-animation: animation-0 1750ms infinite linear -600ms;
+  animation: animation-0 1750ms infinite linear -600ms;
+}
+
+<div
+  className="emotion-6 emotion-7"
+  disabled={false}
+>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <button
+      className="emotion-2 emotion-3"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <svg />
+      <div
+        className="emotion-0 emotion-1"
+        disabled={false}
+      >
+        <div>
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+    </button>
+    
+  </div>
+</div>
+`;
