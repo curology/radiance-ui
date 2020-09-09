@@ -1,5 +1,248 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] = `
+.emotion-2 {
+  overflow: hidden !important;
+  padding-bottom: 1.5rem;
+}
+
+.emotion-2 .slick-slider {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-2 .slick-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.emotion-2 .slick-list:focus {
+  outline: none;
+}
+
+.emotion-2 .slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.emotion-2 .slick-slider .slick-track,
+.emotion-2 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  -o-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+
+.emotion-2 .slick-track {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 .slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.emotion-2 .slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+.emotion-2 .slick-slide.slick-loading img {
+  display: none;
+}
+
+.emotion-2 .slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.emotion-2 .slick-initialized .slick-slide {
+  display: block;
+}
+
+.emotion-2 .slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.emotion-2 .slick-vertical .slick-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.emotion-2 .slick-arrow.slick-hidden {
+  display: none;
+}
+
+.emotion-2 .slick-slider {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 .slick-dots {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  bottom: -32px;
+}
+
+.emotion-2 .slick-dots li {
+  border-radius: 50%;
+  height: 0.25rem;
+  width: 0.25rem;
+  margin-right: 0.25rem;
+  opacity: 0.25;
+}
+
+.emotion-2 .slick-dots li:first-of-type {
+  margin-left: 0.25rem;
+}
+
+.emotion-2 .slick-dots li button {
+  display: none;
+}
+
+.emotion-2 .slick-dots li.slick-active {
+  opacity: 1;
+}
+
+.emotion-2 .slick-dots li {
+  background-color: #332e54;
+}
+
+.emotion-0 {
+  width: 311px !important;
+  min-height: 48px;
+  margin: 0 0.5rem;
+}
+
+.emotion-4 {
+  max-width: 702px;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-2 emotion-3"
+    onClick={[Function]}
+  >
+    <div
+      className="slick-slider slick-initialized"
+    >
+      
+      <div
+        className="slick-list"
+      >
+        <div
+          className="slick-track"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "WebkitTransform": "translate3d(0px, 0px, 0px)",
+              "WebkitTransition": "",
+              "msTransform": "translateX(0px)",
+              "opacity": 1,
+              "transform": "translate3d(0px, 0px, 0px)",
+              "transition": "",
+            }
+          }
+        >
+          <div
+            aria-hidden={false}
+            className="slick-slide slick-active slick-current"
+            data-index={0}
+            onClick={[Function]}
+            style={
+              Object {
+                "outline": "none",
+                "width": null,
+              }
+            }
+            tabIndex="-1"
+          >
+            <div>
+              <div
+                className="emotion-0 emotion-1"
+                style={
+                  Object {
+                    "display": "inline-block",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={-1}
+              >
+                Card 1
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Carousel /> UI snapshots renders with props 1`] = `
 .emotion-4 {
   max-width: 375px;
@@ -125,6 +368,12 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 
 .emotion-2 .slick-arrow.slick-hidden {
   display: none;
+}
+
+.emotion-2 .slick-slider {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .emotion-2 .slick-dots {
