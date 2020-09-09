@@ -16,27 +16,29 @@ import {
 import { OptionType } from './index';
 
 type DesktopDropdownProps = {
-  value?: string;
-  options: OptionType[];
-  currentOption: OptionType;
-  textAlign: 'left' | 'center';
+  borderRadius: string;
   closeDropdown: () => void;
+  currentOption: OptionType;
+  isOpen: boolean;
   onOptionClick: (event: any) => void;
   onSelectClick: () => void;
-  isOpen: boolean;
+  options: OptionType[];
   optionsContainerMaxHeight: string;
+  textAlign: 'left' | 'center';
+  value?: string;
 };
 
 const DesktopDropdown = ({
-  value,
-  options,
-  textAlign,
-  currentOption,
+  borderRadius,
   closeDropdown,
+  currentOption,
+  isOpen,
   onOptionClick,
   onSelectClick,
-  isOpen,
+  options,
   optionsContainerMaxHeight,
+  textAlign,
+  value,
 }: DesktopDropdownProps) => {
   const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
 
@@ -73,8 +75,9 @@ const DesktopDropdown = ({
         >
           <div
             css={dropdownInputStyle({
-              textAlign,
+              borderRadius,
               shouldBeFullyRounded: !isOpen,
+              textAlign,
             })}
           >
             {currentOption && currentOption.label}
@@ -85,6 +88,7 @@ const DesktopDropdown = ({
         </div>
 
         <DropdownOptionsContainer
+          borderRadius={borderRadius}
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
@@ -131,6 +135,7 @@ DesktopDropdown.defaultProps = {
 };
 
 DesktopDropdown.propTypes = {
+  borderRadius: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   value: PropTypes.any,
   options: PropTypes.arrayOf(

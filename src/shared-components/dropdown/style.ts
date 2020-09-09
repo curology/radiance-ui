@@ -10,8 +10,9 @@ import {
 } from '../../constants';
 
 type DropdownInputStyleProps = {
+  borderRadius: string;
+  shouldBeFullyRounded: boolean;
   textAlign: 'left' | 'center';
-  shouldBeFullyRounded?: boolean;
 };
 
 export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
@@ -21,16 +22,17 @@ export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
 `;
 
 export const dropdownInputStyle = ({
-  textAlign,
+  borderRadius,
   shouldBeFullyRounded,
+  textAlign,
 }: DropdownInputStyleProps) => {
   /**
    * When Desktop dropdown is open, we want only the top borders rounded.
    * Otherwise we set bottom rounded borders to last element in Dropdown.
    */
   const dropdownBorderRadius = shouldBeFullyRounded
-    ? `border-radius: ${SPACER.xsmall}`
-    : `border-radius: ${SPACER.xsmall} ${SPACER.xsmall} 0 0`;
+    ? `border-radius: ${borderRadius}`
+    : `border-radius: ${borderRadius} ${borderRadius} 0 0`;
 
   return css`
     appearance: none;
@@ -99,6 +101,7 @@ export const IconContainer = styled.div`
 export const DropdownOptionsContainer = styled.ul<{
   isOpen: boolean;
   optionsContainerMaxHeight: string;
+  borderRadius: string;
 }>`
   position: absolute;
   top: 100%;
@@ -131,7 +134,8 @@ export const DropdownOptionsContainer = styled.ul<{
     `};
 
   &:last-of-type {
-    border-radius: 0 0 ${SPACER.xsmall} ${SPACER.xsmall};
+    border-radius: ${({ borderRadius }) =>
+    borderRadius ? `0 0 ${borderRadius} ${borderRadius}` : `0 0 4px 4px`};
   }
 `;
 

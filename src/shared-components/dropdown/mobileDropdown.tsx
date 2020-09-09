@@ -7,21 +7,27 @@ import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 import { OptionType } from './index';
 
 type MobileDropdownProps = {
-  value: string | number | null;
-  options: OptionType[];
-  textAlign: 'left' | 'center';
+  borderRadius: string;
   onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  options: OptionType[];
+  textAlign?: 'left' | 'center';
+  value?: string | number | undefined;
 };
 
 const MobileDropdown = ({
-  textAlign,
-  value,
+  borderRadius,
   onSelectChange,
-  options,
+  options = [{ value: undefined, label: '' }],
+  textAlign = 'left',
+  value,
 }: MobileDropdownProps) => (
   <DropdownContainer textAlign={textAlign}>
     <select
-      css={dropdownInputStyle({ textAlign, shouldBeFullyRounded: true })}
+      css={dropdownInputStyle({
+        borderRadius,
+        shouldBeFullyRounded: true,
+        textAlign,
+      })}
       value={value || ''}
       onChange={onSelectChange}
     >
@@ -47,14 +53,8 @@ const MobileDropdown = ({
   </DropdownContainer>
 );
 
-MobileDropdown.defaultProps = {
-  value: null,
-  options: [{ value: null, label: '' }],
-  textAlign: 'left',
-  onSelectChange: () => undefined,
-};
-
 MobileDropdown.propTypes = {
+  borderRadius: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   options: PropTypes.arrayOf(
     PropTypes.shape({
