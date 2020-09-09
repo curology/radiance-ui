@@ -1,7 +1,6 @@
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { addReadme } from 'storybook-readme';
-import centered from '@storybook/addon-centered/react';
 import { Global, css } from '@emotion/core';
 import Theme from './theme';
 import {
@@ -71,7 +70,6 @@ const InjectGlobalStyles = storyFn => (
 );
 
 addDecorator(InjectGlobalStyles);
-addDecorator(centered);
 addDecorator(withA11y);
 addDecorator(addReadme);
 
@@ -100,6 +98,7 @@ addParameters({
 });
 
 const req = require.context('../stories', true, /.(ts|tsx|js)$/);
+
 function loadStories() {
   req.keys().forEach(req);
 }

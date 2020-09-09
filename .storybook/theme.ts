@@ -1,6 +1,6 @@
 import { create } from '@storybook/theming';
 
-export default create({
+const Theme = create({
   base: 'light',
 
   colorPrimary: '#FF4785',
@@ -33,4 +33,6 @@ export default create({
 
   brandTitle: 'Radiance UI',
   brandUrl: '#',
-});
+})
+
+export default Theme;
