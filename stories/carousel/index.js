@@ -10,8 +10,7 @@ import {
 } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-
-import CarouselReadme from 'docs/carousel.md';
+import CarouselReadme from 'docs/carousel';
 import { Carousel, Typography } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';
 
@@ -105,6 +104,13 @@ stories.add(
           </Carousel>
         </CarouselContainer>
 
+        <CarouselContainer>
+          <Header>Bottom Right Aligned Arrows</Header>
+          <Carousel numCardsVisible={2} bottomRightAlignedArrows>
+            {cards}
+          </Carousel>
+        </CarouselContainer>
+
         <CarouselContainer bgColor={COLORS.lavender100}>
           <Header>Secondary Style - dots are white</Header>
           <Carousel numCardsVisible={1} carouselType="secondary">
@@ -131,10 +137,14 @@ stories.add(
             carouselType={select(
               'carouselType',
               ['primary', 'secondary'],
-              'primary'
+              'primary',
             )}
             centerMode={boolean('centerMode', true)}
             hideArrows={boolean('hideArrows', false)}
+            bottomRightAlignedArrows={boolean(
+              'bottomRightAlignedArrows',
+              false,
+            )}
             hideDots={boolean('hideDots', false)}
             infinite={boolean('infinite', false)}
             numCardsVisible={number('numCardsVisible', 1)}
@@ -144,5 +154,5 @@ stories.add(
         </CarouselContainer>
       </FlexContainer>
     </MainContainer>
-  ))
+  )),
 );
