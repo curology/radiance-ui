@@ -106,7 +106,7 @@ stories.add(
 
         <CarouselContainer>
           <Header>Bottom Right Aligned Arrows</Header>
-          <Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>
+          <Carousel numCardsVisible={2} bottomRightAlignedArrows>
             {cards}
           </Carousel>
         </CarouselContainer>

@@ -121,7 +121,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
       autoplay,
       autoplaySpeed,
       centerMode: allowCenterMode ? false : centerMode,
-      dots: !hideDots,
+      dots: !hideDots && !bottomRightAlignedArrows,
       infinite,
       slidesToShow: numCardsVisible,
       beforeChange: this.onCardChange,

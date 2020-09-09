@@ -42,7 +42,7 @@ const cards = [
 <Carousel numCardsVisible={1} hideArrows>{cards}</Carousel>
 
 // Bottom Right Aligned Arrows
-<Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>{cards}</Carousel>
+<Carousel numCardsVisible={2} bottomRightAlignedArrows>{cards}</Carousel>
 
 // Secondary Style - dots are white
 <Carousel numCardsVisible={1} carouselType="secondary">{cards}</Carousel>
@@ -61,7 +61,7 @@ const cards = [
 | children                 | node     | yes      | -         | array of `Carousel.Card`                                                     |
 | hideDots                 | bool     | no       | false     | hide the dots                                                                |
 | hideArrows               | bool     | no       | false     | hide the arrows                                                              |
-| bottomRightAlignedArrows | bool     | no       | false     | align the arrows on the bottom right                                         |
+| bottomRightAlignedArrows | bool     | no       | false     | align the arrows on the bottom right (dots are automatically hidden)         |
 | infinite                 | bool     | no       | false     | creates a carousel loop, i.e. if true you can go backwards form the begining |
 | numCardsVisible          | number   | yes      | -         | number of visible cards, must be one of: 1, 2 or 3                           |
 
