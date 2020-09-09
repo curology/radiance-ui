@@ -34,7 +34,7 @@ export const dropdownInputStyle = ({
 
   return css`
     appearance: none;
-    box-shadow: ${BOX_SHADOWS.clickable};
+    box-shadow: ${BOX_SHADOWS.TEMP_UPDATES};
     background: ${COLORS.white};
     background-image: none;
 

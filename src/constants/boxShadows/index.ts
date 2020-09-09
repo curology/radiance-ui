@@ -13,6 +13,7 @@ export const BASE_CONFIG = {
   clickableHover: `0 1px 3px 0 ${transparentize(boxShadowColor, 0.15)}`,
   message: `0 12px 20px 0 ${transparentize(boxShadowColor, 0.05)}`,
   focusSecondary: `0 0 2px 2px ${transparentize(COLORS.secondary, 0.5)}`,
+  TEMP_UPDATES: `0px 8px 24px rgba(52, 51, 82, 0.05)`,
 };
 
 export const OLD_BASE_CONFIG = {
