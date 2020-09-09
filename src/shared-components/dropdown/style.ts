@@ -9,6 +9,11 @@ import {
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
+type DropdownInputStyleProps = {
+  textAlign: 'left' | 'center';
+  shouldBeFullyRounded?: boolean;
+};
+
 export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   position: relative;
   width: 100%;
@@ -17,49 +22,58 @@ export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
 
 export const dropdownInputStyle = ({
   textAlign,
-}: {
-  textAlign: 'left' | 'center';
-}) => css`
-  appearance: none;
-  box-shadow: ${BOX_SHADOWS.clickable};
-  background: ${COLORS.white};
-  background-image: none;
+  shouldBeFullyRounded,
+}: DropdownInputStyleProps) => {
+  /**
+   * When Desktop dropdown is open, we want only the top borders rounded.
+   * Otherwise we set bottom rounded borders to last element in Dropdown.
+   */
+  const dropdownBorderRadius = shouldBeFullyRounded
+    ? `border-radius: ${SPACER.xsmall}`
+    : `border-radius: ${SPACER.xsmall} ${SPACER.xsmall} 0 0`;
 
-  width: 100%;
-  min-height: ${SPACER.x4large};
-  max-height: ${SPACER.x4large};
+  return css`
+    appearance: none;
+    box-shadow: ${BOX_SHADOWS.clickable};
+    background: ${COLORS.white};
+    background-image: none;
 
-  border: 1px solid ${COLORS.border};
-  border-radius: 0;
+    width: 100%;
+    min-height: ${SPACER.x4large};
+    max-height: ${SPACER.x4large};
 
-  color: ${COLORS.purple85};
-  line-height: ${SPACER.x4large};
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    border: 1px solid ${COLORS.border};
+    ${dropdownBorderRadius};
 
-  padding: 0 ${SPACER.xlarge} 0 ${SPACER.medium};
-  text-align: ${textAlign};
-  text-align-last: ${textAlign};
-  transition: 200ms ease-in-out;
+    color: ${COLORS.purple85};
+    line-height: ${SPACER.x4large};
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: ${BOX_SHADOWS.clickableHover};
+    padding: 0 ${SPACER.xlarge} 0 ${SPACER.medium};
+    text-align: ${textAlign};
+    text-align-last: ${textAlign};
     transition: 200ms ease-in-out;
-  }
 
-  &:focus {
-    outline: none;
-    box-shadow: ${BOX_SHADOWS.clickableHover};
-    transition: 200ms ease-in-out;
-  }
+    cursor: pointer;
 
-  &::-moz-focus-inner {
-    border: 0;
-  }
-`;
+    &:hover {
+      box-shadow: ${BOX_SHADOWS.clickableHover};
+      transition: 200ms ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: ${BOX_SHADOWS.clickableHover};
+      transition: 200ms ease-in-out;
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  `;
+};
 
 export const IconContainer = styled.div`
   position: absolute;
@@ -115,6 +129,10 @@ export const DropdownOptionsContainer = styled.ul<{
       border-bottom-width: 1px;
       transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
     `};
+
+  &:last-of-type {
+    border-radius: 0 0 ${SPACER.xsmall} ${SPACER.xsmall};
+  }
 `;
 
 export const DropdownOption = styled.li<{

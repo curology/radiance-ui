@@ -71,7 +71,12 @@ const DesktopDropdown = ({
           role="button"
           ref={initialFocus}
         >
-          <div css={dropdownInputStyle({ textAlign })}>
+          <div
+            css={dropdownInputStyle({
+              textAlign,
+              shouldBeFullyRounded: !isOpen,
+            })}
+          >
             {currentOption && currentOption.label}
           </div>
           <IconContainer>

@@ -21,7 +21,7 @@ const MobileDropdown = ({
 }: MobileDropdownProps) => (
   <DropdownContainer textAlign={textAlign}>
     <select
-      css={dropdownInputStyle({ textAlign })}
+      css={dropdownInputStyle({ textAlign, shouldBeFullyRounded: true })}
       value={value || ''}
       onChange={onSelectChange}
     >
