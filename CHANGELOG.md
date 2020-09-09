@@ -1,5 +1,15 @@
 # CHANGELOG
 
+# v11.1.0
+
+- Adds new positioning of arrows to the Carousel component. It is denoted as a prop with the name 'bottomRightAlignedArrows'.
+
+# v11.0.0
+
+This update is **potentially breaking**. Applications that use different versions of emotion than those used in `radiance-ui` can result in unexpected behavior when adding styling to already-styled components. This update adds explicit `peerDependencies` to account for this.
+
+- [Dependencies] Update [emotion](https://github.com/emotion-js/emotion) packages ([#323](https://github.com/curology/radiance-ui/pull/323))
+
 # v10.3.0
 
 - [Internal] TypeScript conversion: Indicator, Chip, LoadingSpinner, OffClickWrapper ([#313](https://github.com/curology/radiance-ui/pull/313))

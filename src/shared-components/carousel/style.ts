@@ -191,6 +191,10 @@ export const InnerContainer = styled.div<{
 
   ${reactSlickStyles};
 
+  .slick-slider {
+    flex-wrap: wrap;
+  }
+
   .slick-dots {
     ${dotStyles};
   }
