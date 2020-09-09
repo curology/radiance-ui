@@ -34,7 +34,7 @@ export const dropdownInputStyle = ({
 
   return css`
     appearance: none;
-    box-shadow: ${BOX_SHADOWS.nonButton};
+    box-shadow: ${BOX_SHADOWS.clickable};
     background: ${COLORS.white};
     background-image: none;
 
@@ -59,13 +59,13 @@ export const dropdownInputStyle = ({
     cursor: pointer;
 
     &:hover {
-      box-shadow: ${BOX_SHADOWS.nonButtonHover};
+      box-shadow: ${BOX_SHADOWS.clickableHover};
       transition: 200ms ease-in-out;
     }
 
     &:focus {
       outline: none;
-      box-shadow: ${BOX_SHADOWS.nonButtonHover};
+      box-shadow: ${BOX_SHADOWS.clickableHover};
       transition: 200ms ease-in-out;
     }
 
