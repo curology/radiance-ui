@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import { COLORS, PROGRESS_BAR_STATUS } from '../../constants';
 import { OuterContainer, InnerBar } from './style';
 
-// TODO-TS: Pull from PROGRESS_BAR_STATUS
-export type ProgressBarStatusType = 'loading' | 'error' | 'success';
+export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 
 type ProgressBarProps = {
   backgroundColor?: string;
