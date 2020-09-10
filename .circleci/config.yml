@@ -40,7 +40,7 @@ jobs:
         <<: *defaults
 
         docker:
-            - image: circleci/node:10-stretch
+            - image: circleci/node:12-stretch
 
         steps:
             - checkout
@@ -65,7 +65,7 @@ jobs:
         <<: *defaults
 
         docker:
-            - image: circleci/node:10-stretch
+            - image: circleci/node:12-stretch
 
         steps:
             - checkout
@@ -85,7 +85,7 @@ jobs:
         <<: *defaults
 
         docker:
-            - image: circleci/node:10-stretch
+            - image: circleci/node:12-stretch
 
         environment:
             NODE_OPTIONS: --max_old_space_size=4096
