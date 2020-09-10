@@ -52,6 +52,9 @@ jobs:
             - run:
                 name: Build
                 command: yarn run build
+            - run:
+                name: Log Bundle Size
+                command: yarn filesize
             - <<: *yarn-cache-save
             - persist_to_workspace:
                 root: *root
