@@ -23,8 +23,20 @@
   },
   "rules": {
     "@typescript-eslint/camelcase": 0,
-    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "Function": false,
+          "{}": false
+        },
+        "extendDefaults": true
+      }
+    ],
     "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/naming-convention": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx"] }],
     "react/require-default-props": [
       "error",
@@ -56,7 +68,8 @@
       "files": ["*.js"],
       "rules": {
         "@typescript-eslint/no-var-requires": 0,
-        "@typescript-eslint/explicit-function-return-type": 0
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0
       }
     },
     {
