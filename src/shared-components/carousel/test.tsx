@@ -14,5 +14,17 @@ describe('<Carousel />', () => {
 
       expect(tree).toMatchSnapshot();
     });
+
+    it('renders with bottom right aligned arrows', () => {
+      const tree = renderer
+        .create(
+          <Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>
+            {cards}
+          </Carousel>,
+        )
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 });
