@@ -17,6 +17,27 @@ const UTIL_LOCATION = '../../utils/icons';
 
 const extensions = ['.js', '.ts', '.tsx'];
 
+/**
+ * {@link https://github.com/TrySound/rollup-plugin-size-snapshot/blob/e30360b3d815a51b9db1917eb4a40ef3a0a72a3f/README.md#options README Options}
+ */
+const sizeSnapshotDefaults = {
+  snapshotPath: '.size-snapshot.json',
+  matchSnapshot: false,
+  threshold: 0,
+  printInfo: true,
+};
+
+const isCI = process.env.NODE_ENV === 'CI';
+
+/**
+ * Testing size diff in CI
+ */
+const sizeSnapshotOptions = isCI
+  ? { ...sizeSnapshotDefaults, matchSnapshot: true, threshold: 1 }
+  : sizeSnapshotDefaults;
+
+console.log('sizeSnapshotOptions', sizeSnapshotOptions);
+
 const defaultConfig = {
   input: 'src/index.ts',
   plugins: [
@@ -37,7 +58,7 @@ const defaultConfig = {
       extensions,
       exclude: 'node_modules/**',
     }),
-    sizeSnapshot(),
+    sizeSnapshot(sizeSnapshotOptions),
   ],
   external: [...Object.keys(pkg.dependencies), '@emotion/styled-base'],
 };

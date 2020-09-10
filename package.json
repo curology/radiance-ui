@@ -21,6 +21,7 @@
     "build-storybook": "build-storybook --config-dir .storybook --output-dir .out --static-dir ./public",
     "clean": "rimraf dist lib src/icons/",
     "build": "run-s clean && run-s tsc && run-s build:icons build:icons:index && run-p build:rollup build:babel",
+    "build:ci": "NODE_ENV=CI yarn run build",
     "build:icons": "run-s build:icons:icons build:icons:emojis build:icons:glyphs build:icons:logos build:icons:navIcons build:icons:deprecated",
     "build:icons:icons": "svgr --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/icons/",
     "build:icons:emojis": "svgr --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/emojis/",

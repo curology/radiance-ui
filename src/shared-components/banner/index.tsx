@@ -29,6 +29,24 @@ type BannerProps = {
 
 const Banner = ({ content, type, onClick }: BannerProps) => {
   const Icon = bannerIconMapping[type];
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  console.log('hello');
+  
+  const function2 = () => undefined;
+
+  function2();
 
   return (
     <BannerContainer bannerType={type} onClick={onClick}>
