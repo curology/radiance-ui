@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-import { SPACER, Z_SCALE } from '../../../constants';
+import { COLORS, SPACER, Z_SCALE } from '../../../constants';
 
-const ArrowContainer = styled.div<{
+export const ArrowContainer = styled.div<{
   prev: boolean;
   next: boolean;
   disabled: boolean;
@@ -19,4 +20,29 @@ const ArrowContainer = styled.div<{
   ${({ disabled }) => disabled && `display: none;`};
 `;
 
-export default ArrowContainer;
+export const BottomRightAlignedArrowContainer = styled.div<{
+  prev: boolean;
+  next: boolean;
+  disabled: boolean;
+}>`
+  display: block;
+  align-self: flex-end;
+  margin: ${SPACER.small};
+
+  ${({ prev }) => prev && `order: 2; margin-left: auto;`};
+  ${({ next }) => next && `order: 3;`};
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      button {
+        background-color: none;
+        border-color: ${COLORS.primary};
+        color: ${COLORS.primary};
+
+        &:hover {
+          color: ${COLORS.primary};
+        }
+      }
+    `};
+`;
