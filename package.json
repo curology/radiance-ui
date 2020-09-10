@@ -74,7 +74,7 @@
     "@storybook/addon-viewport": "^5.3.9",
     "@storybook/core": "~5.3.9",
     "@storybook/react": "~5.3.9",
-    "@storybook/source-loader": "^5.3.9",
+    "@storybook/source-loader": "^6.0.21",
     "@svgr/cli": "^4.3.3",
     "@svgr/rollup": "^4.0.2",
     "@svgr/webpack": "^4.0.2",
