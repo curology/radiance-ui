@@ -91,7 +91,7 @@
     "@typescript-eslint/eslint-plugin": "^4.1.0",
     "@typescript-eslint/parser": "^4.1.0",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-svg-import-to-string": "^0.0.1",
     "circular-dependency-plugin": "^5.0.2",
