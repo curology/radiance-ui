@@ -4,10 +4,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "extends": [
-    "curology",
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "extends": ["curology", "plugin:@typescript-eslint/recommended"],
   "plugins": ["emotion"],
   "globals": {
     "document": false,
@@ -22,8 +19,8 @@
     "import/extensions": [".js", ".md"]
   },
   "rules": {
-    "@typescript-eslint/camelcase": 0,
-    "@typescript-eslint/ban-ts-comment": 0,
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": [
       "error",
       {
@@ -34,18 +31,22 @@
         "extendDefaults": true
       }
     ],
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/naming-convention": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".tsx"] }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "no-shadow": "off",
+    "no-use-before-define": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".tsx"] }],
     "react/require-default-props": [
       "error",
       { "ignoreFunctionalComponents": true }
     ],
-    "react/state-in-constructor": 0,
-    "react/static-property-placement": 0,
+    "react/state-in-constructor": "off",
+    "react/static-property-placement": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "import/extensions": [2, { "svg": "always" }]
+    "import/extensions": ["error", { "svg": "always" }]
   },
   "overrides": [
     {
@@ -67,15 +68,15 @@
     {
       "files": ["*.js"],
       "rules": {
-        "@typescript-eslint/no-var-requires": 0,
-        "@typescript-eslint/explicit-function-return-type": 0,
-        "@typescript-eslint/explicit-module-boundary-types": 0
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     },
     {
       "files": ["*.tsx"],
       "rules": {
-        "react/prop-types": 0
+        "react/prop-types": "off"
       }
     }
   ]
