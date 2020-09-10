@@ -110,7 +110,6 @@
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "file-loader": "^6.1.0",
     "husky": "^4.3.0",
     "jest": "^26.4.2",
     "jest-emotion": "^10.0.32",
