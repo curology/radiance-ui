@@ -1,4 +1,4 @@
-// import type { StorybookConfig } from '@storybook/core/types';
+import type { StorybookConfig } from '@storybook/core/types';
 // 6.1
 // module.exports = {
 //   stories: ['./src/*.stories.*'],
@@ -39,5 +39,4 @@ module.exports = {
       propFilter: (prop) => ['label', 'disabled'].includes(prop.name),
     },
   },
-}
-// } as StorybookConfig;
+} as StorybookConfig;
