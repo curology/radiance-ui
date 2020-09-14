@@ -1,6 +1,7 @@
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
-import { addReadme } from 'storybook-readme';
+import { addReadme, configureReadme } from 'storybook-readme';
+import centered from '@storybook/addon-centered/react';
 import { Global, css } from '@emotion/core';
 import Theme from './theme';
 import {
@@ -8,7 +9,7 @@ import {
   brandStyles,
 } from '../src/utils/injectGlobalStyles/style';
 
-const InjectGlobalStyles = storyFn => (
+const InjectGlobalStyles = (storyFn) => (
   <div
     css={css`
       padding: 1rem;
@@ -77,6 +78,12 @@ addParameters({
   readme: {
     codeTheme: 'github',
   },
+});
+
+configureReadme({
+  StoryPreview: ({ children }) => (
+    <div style={{ margin: '32px 0' }}>{children}</div>
+  ),
 });
 
 addParameters({

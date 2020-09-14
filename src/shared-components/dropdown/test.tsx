@@ -49,7 +49,13 @@ describe('<MobileDropdown />', () => {
   describe('UI snapshots', () => {
     it('renders correctly', () => {
       const tree = renderer
-        .create(<MobileDropdown options={options} />)
+        .create(
+          <MobileDropdown
+            onSelectChange={() => undefined}
+            borderRadius="4px"
+            options={options}
+          />,
+        )
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -60,7 +66,12 @@ describe('<MobileDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <MobileDropdown options={options} onSelectChange={spy} value="" />,
+        <MobileDropdown
+          borderRadius="4px"
+          options={options}
+          onSelectChange={spy}
+          value=""
+        />,
       );
 
       wrapper.find('select').simulate('change', { target: { value: 'test1' } });
@@ -73,6 +84,7 @@ describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
     const wrapper = mount(
       <DesktopDropdown
+        borderRadius="4px"
         options={options}
         currentOption={{ value: 'test1', label: 'Test1' }}
         optionsContainerMaxHeight="250px"
@@ -95,6 +107,7 @@ describe('<DesktopDropdown />', () => {
       const spy = jest.fn();
       const wrapper = mount(
         <DesktopDropdown
+          borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onSelectClick={spy}
@@ -114,6 +127,7 @@ describe('<DesktopDropdown />', () => {
       const spy = jest.fn();
       const wrapper = mount(
         <DesktopDropdown
+          borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onOptionClick={spy}
