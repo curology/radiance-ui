@@ -21,7 +21,12 @@ describe('<Dropdown />', () => {
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(wrapper.children().first().name()).toEqual('MobileDropdown');
+      expect(
+        wrapper
+          .children()
+          .first()
+          .name(),
+      ).toEqual('MobileDropdown');
     });
   });
 
@@ -30,7 +35,12 @@ describe('<Dropdown />', () => {
       const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
-      expect(wrapper.children().first().name()).toEqual('DesktopDropdown');
+      expect(
+        wrapper
+          .children()
+          .first()
+          .name(),
+      ).toEqual('DesktopDropdown');
     });
   });
 });
@@ -84,9 +94,12 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(wrapper.find('[role="button"]').text().includes('Test1')).toEqual(
-      true,
-    );
+    expect(
+      wrapper
+        .find('[role="button"]')
+        .text()
+        .includes('Test1'),
+    ).toEqual(true);
   });
 
   describe('onSelectClick callback', () => {
@@ -125,7 +138,10 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('li').first().simulate('click');
+      wrapper
+        .find('li')
+        .first()
+        .simulate('click');
 
       expect(spy).toHaveBeenCalled();
     });
