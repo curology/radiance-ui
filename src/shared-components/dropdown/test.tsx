@@ -21,12 +21,7 @@ describe('<Dropdown />', () => {
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(
-        wrapper
-          .children()
-          .first()
-          .name(),
-      ).toEqual('MobileDropdown');
+      expect(wrapper.children().first().name()).toEqual('MobileDropdown');
     });
   });
 
@@ -35,12 +30,7 @@ describe('<Dropdown />', () => {
       const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
-      expect(
-        wrapper
-          .children()
-          .first()
-          .name(),
-      ).toEqual('DesktopDropdown');
+      expect(wrapper.children().first().name()).toEqual('DesktopDropdown');
     });
   });
 });
@@ -49,7 +39,13 @@ describe('<MobileDropdown />', () => {
   describe('UI snapshots', () => {
     it('renders correctly', () => {
       const tree = renderer
-        .create(<MobileDropdown options={options} />)
+        .create(
+          <MobileDropdown
+            onSelectChange={() => undefined}
+            borderRadius="4px"
+            options={options}
+          />,
+        )
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -60,7 +56,12 @@ describe('<MobileDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <MobileDropdown options={options} onSelectChange={spy} value="" />,
+        <MobileDropdown
+          borderRadius="4px"
+          options={options}
+          onSelectChange={spy}
+          value=""
+        />,
       );
 
       wrapper.find('select').simulate('change', { target: { value: 'test1' } });
@@ -73,6 +74,7 @@ describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
     const wrapper = mount(
       <DesktopDropdown
+        borderRadius="4px"
         options={options}
         currentOption={{ value: 'test1', label: 'Test1' }}
         optionsContainerMaxHeight="250px"
@@ -82,12 +84,9 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(
-      wrapper
-        .find('[role="button"]')
-        .text()
-        .includes('Test1'),
-    ).toEqual(true);
+    expect(wrapper.find('[role="button"]').text().includes('Test1')).toEqual(
+      true,
+    );
   });
 
   describe('onSelectClick callback', () => {
@@ -95,6 +94,7 @@ describe('<DesktopDropdown />', () => {
       const spy = jest.fn();
       const wrapper = mount(
         <DesktopDropdown
+          borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onSelectClick={spy}
@@ -114,6 +114,7 @@ describe('<DesktopDropdown />', () => {
       const spy = jest.fn();
       const wrapper = mount(
         <DesktopDropdown
+          borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onOptionClick={spy}
@@ -124,10 +125,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper
-        .find('li')
-        .first()
-        .simulate('click');
+      wrapper.find('li').first().simulate('click');
 
       expect(spy).toHaveBeenCalled();
     });
