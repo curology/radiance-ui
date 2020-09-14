@@ -49,19 +49,6 @@ module.exports = (webpackSettings) => {
     ],
   });
 
-  // Typescript Rule
-  config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    use: [
-      {
-        loader: require.resolve('babel-loader'),
-        options: {
-          presets: ['@babel/preset-typescript'],
-        },
-      },
-    ],
-  });
-
   // Storybook Index Loader Rule
   config.module.rules.push({
     test: /index\.(ts|tsx|js)?$/,
