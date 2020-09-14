@@ -6,27 +6,29 @@ import DesktopDropdown from './desktopDropdown';
 import allowNullPropType from '../../utils/allowNullPropType';
 
 export type OptionType = {
-  value: string;
+  value: string | undefined;
   label: string;
   disabled?: boolean;
 };
 
 type DropdownProps = {
-  value?: string;
+  borderRadius?: string;
   onChange: (option: OptionType) => void;
   options: OptionType[];
   optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
+  value?: string;
 };
 
-const Dropdown = (props: DropdownProps) => {
-  const {
-    onChange,
-    value,
-    options,
-    optionsContainerMaxHeight = '250px',
-    textAlign,
-  } = props;
+const Dropdown = ({
+  borderRadius = '4px',
+  onChange,
+  options,
+  optionsContainerMaxHeight = '250px',
+  textAlign = 'left',
+  value,
+  ...rest
+}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
 
@@ -63,6 +65,7 @@ const Dropdown = (props: DropdownProps) => {
   if (touchSupported) {
     return (
       <MobileDropdown
+        borderRadius={borderRadius}
         value={value}
         options={options}
         textAlign={textAlign}
@@ -75,6 +78,7 @@ const Dropdown = (props: DropdownProps) => {
 
   return (
     <DesktopDropdown
+      borderRadius={borderRadius}
       isOpen={isOpen}
       onOptionClick={onOptionClick}
       closeDropdown={closeDropdown}
@@ -82,12 +86,13 @@ const Dropdown = (props: DropdownProps) => {
       currentOption={currentOption}
       optionsContainerMaxHeight={optionsContainerMaxHeight}
       // eslint-disable-next-line react/jsx-props-no-spreading
-      {...props}
+      {...rest}
     />
   );
 };
 
 Dropdown.propTypes = {
+  borderRadius: PropTypes.string,
   value: allowNullPropType(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   ),
@@ -101,12 +106,6 @@ Dropdown.propTypes = {
   textAlign: PropTypes.oneOf(['left', 'center']),
   onChange: PropTypes.func.isRequired,
   optionsContainerMaxHeight: PropTypes.string,
-};
-
-Dropdown.defaultProps = {
-  textAlign: 'left',
-  optionsContainerMaxHeight: '250px',
-  value: undefined,
 };
 
 export default Dropdown;
