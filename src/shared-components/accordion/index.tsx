@@ -8,9 +8,10 @@ import AccordionContainer from './accordionContainer';
 import {
   AccordionBox,
   ArrowWrapper,
-  TitleWrapper,
-  ExpansionWrapper,
   Content,
+  ExpansionWrapper,
+  Grouping,
+  TitleWrapper,
   Truncate,
 } from './style';
 
@@ -73,6 +74,8 @@ class Accordion extends React.Component<
   };
 
   static Content = Content;
+
+  static Grouping = Grouping;
 
   static Thumbnails = Thumbnails;
 
@@ -143,9 +146,11 @@ class Accordion extends React.Component<
                 onClick(event);
               }
             }}
+            borderRadius={borderRadius}
             onKeyDown={this.handleKeyDown}
             disabled={!!disabled}
             role="button"
+            isOpen={isOpen}
             tabIndex={disabled ? -1 : 0}
             aria-disabled={!!disabled}
             aria-expanded={isOpen}

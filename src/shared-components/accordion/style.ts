@@ -4,7 +4,15 @@ import {
   ANIMATION, BOX_SHADOWS, COLORS, SPACER, 
 } from 'src/constants';
 
+import AccordionContainerStyle from './accordionContainer/style';
+
 const border = `1px solid ${COLORS.border}`;
+
+const setTopBorderRadius = (borderRadius: string) =>
+  `${borderRadius} ${borderRadius} 0 0`;
+
+const setBottomBorderRadius = (borderRadius: string) =>
+  `0 0 ${borderRadius} ${borderRadius}`;
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -31,9 +39,9 @@ export const AccordionBox = styled.div<{
   isOpen: boolean;
   disabled: boolean;
 }>`
-  ${({ borderRadius }) => `border-radius: ${borderRadius}`};
-
   ${({ noBorder, isOpen }) => (!noBorder ? getBorderStyle(isOpen) : '')};
+
+  position: relative;
 
   width: 100%;
 
@@ -61,13 +69,24 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
       : `padding: 0 ${SPACER.medium};`};
 `;
 
-export const TitleWrapper = styled.div<{ disabled: boolean }>`
+export const TitleWrapper = styled.div<{
+  borderRadius: string;
+  disabled: boolean;
+  isOpen: boolean;
+}>`
   display: flex;
   justify-content: space-between;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   &:focus {
     outline: none;
     box-shadow: ${BOX_SHADOWS.focusSecondary};
+  }
+
+  ${AccordionContainerStyle.Container}:last-of-type & {
+    &:focus {
+      border-radius: ${({ borderRadius, isOpen }) =>
+    isOpen ? '0' : setBottomBorderRadius(borderRadius)};
+    }
   }
 `;
 
@@ -76,4 +95,50 @@ export const Truncate = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
+`;
+
+/**
+ * borderRadius must match borderRadius passed to main <Accordion />
+ * component if opting out of default values.
+ *
+ * Also requires that Accordion uses withContainer prop
+ */
+export const Grouping = styled.div<{ borderRadius?: string }>`
+  ${({ borderRadius = '4px' }) => `
+    > div:first-of-type {
+      ${TitleWrapper} {
+        border-radius: 
+          ${setTopBorderRadius(borderRadius)};
+      }
+
+      ${AccordionContainerStyle.Container} {
+        border-radius: 
+          ${setTopBorderRadius(borderRadius)};
+      }
+  
+      ${AccordionBox} {
+        border-radius: 
+          ${setTopBorderRadius(borderRadius)};
+      }
+  
+    }
+  
+    > div:last-of-type {
+      ${TitleWrapper} {
+        &:focus {
+
+        }
+      }
+
+      ${AccordionContainerStyle.Container} {
+        border-radius: 
+          ${setBottomBorderRadius(borderRadius)};
+      }
+  
+      ${AccordionBox} {
+        border-radius: 
+          ${setBottomBorderRadius(borderRadius)};
+      }
+    }
+    `}
 `;

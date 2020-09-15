@@ -27,62 +27,68 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
           width: 400px;
         `}
       >
-        <Accordion
-          title={
+        <Accordion.Grouping>
+          <Accordion
+            title={
+              <Accordion.Content>
+                This is styled with Accordion.Content
+              </Accordion.Content>
+            }
+            isOpen={accordion1}
+            onClick={() => this.toggleAccordion('accordion1')}
+            withContainer
+          >
+            <Accordion.Content>
+              Accordion.Content adds standard accordion padding.
+            </Accordion.Content>
+          </Accordion>
+
+          <Accordion
+            title={
+              <Accordion.Content>
+                This is Accordion with noBorder
+              </Accordion.Content>
+            }
+            isOpen={accordion2}
+            onClick={() => this.toggleAccordion('accordion2')}
+            noBorder
+            withContainer
+          >
             <Accordion.Content>
               This is styled with Accordion.Content
             </Accordion.Content>
-          }
-          isOpen={accordion1}
-          onClick={() => this.toggleAccordion('accordion1')}
-          withContainer
-        >
-          <Accordion.Content>
-            Accordion.Content adds standard accordion padding.
-          </Accordion.Content>
-        </Accordion>
+          </Accordion>
 
-        <Accordion
-          title={
-            <Accordion.Content>
-              This is Accordion with noBorder
-            </Accordion.Content>
-          }
-          isOpen={accordion2}
-          onClick={() => this.toggleAccordion('accordion2')}
-          noBorder
-          withContainer
-        >
-          <Accordion.Content>
-            This is styled with Accordion.Content
-          </Accordion.Content>
-        </Accordion>
+          <Accordion
+            title={
+              <Accordion.Content>
+                This is a disabled accordion
+              </Accordion.Content>
+            }
+            isOpen={accordion3}
+            onClick={() => this.toggleAccordion('accordion3')}
+            disabled
+            withContainer
+          >
+            <Accordion.Content>Expandable</Accordion.Content>
+          </Accordion>
 
-        <Accordion
-          title={
-            <Accordion.Content>This is a disabled accordion</Accordion.Content>
-          }
-          isOpen={accordion3}
-          onClick={() => this.toggleAccordion('accordion3')}
-          disabled
-          withContainer
-        >
-          <Accordion.Content>Expandable</Accordion.Content>
-        </Accordion>
-
-        <Accordion
-          title={
-            <Accordion.Content>This is a right aligned arrow</Accordion.Content>
-          }
-          isOpen={accordion4}
-          onClick={() => this.toggleAccordion('accordion4')}
-          rightAlignArrow
-          withContainer
-        >
-          <Accordion.Content>Expandable</Accordion.Content>
-          <Accordion.Content>Expandable #2</Accordion.Content>
-          <Accordion.Content>Expandable #3</Accordion.Content>
-        </Accordion>
+          <Accordion
+            title={
+              <Accordion.Content>
+                This is a right aligned arrow
+              </Accordion.Content>
+            }
+            isOpen={accordion4}
+            onClick={() => this.toggleAccordion('accordion4')}
+            rightAlignArrow
+            withContainer
+          >
+            <Accordion.Content>Expandable</Accordion.Content>
+            <Accordion.Content>Expandable #2</Accordion.Content>
+            <Accordion.Content>Expandable #3</Accordion.Content>
+          </Accordion>
+        </Accordion.Grouping>
       </div>
     );
   }
