@@ -93,8 +93,8 @@ addParameters({
     showNav: true,
     showPanel: true,
     panelPosition: 'right',
-    hierarchySeparator: /\/|\./, // matches a . or /
-    hierarchyRootSeparator: /\|/, //matches a |
+    // hierarchySeparator: /\/|\./, // matches a . or /
+    // hierarchyRootSeparator: /\|/, //matches a |
     sidebarAnimations: true,
     enableShortcuts: true,
     isToolshown: true,

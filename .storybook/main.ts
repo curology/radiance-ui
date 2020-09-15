@@ -29,7 +29,8 @@ import type { StorybookConfig } from '@storybook/core/types';
 // import type { StorybookConfig } from '@storybook/core/types';
 
 module.exports = {
-  stories: ['../stories/**/index.ts'],
+  // stories: ['../stories/**/index.ts'], // With incorrect blob and no stories linked, storybook builds.
+  stories: ['../stories/**/index.{js,ts,tsx}'],
   logLevel: 'debug',
   // addons: [''],
   typescript: {
