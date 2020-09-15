@@ -12,7 +12,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
   };
 
   toggleAccordion = (accordion: string) => {
-    this.setState((state) => ({ [accordion]: !state[accordion] }));
+    this.setState(state => ({ [accordion]: !state[accordion] }));
   };
 
   render(): JSX.Element {
