@@ -1,10 +1,12 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import {
-  ANIMATION, BOX_SHADOWS, COLORS, SPACER, 
+  ANIMATION,
+  BREAKPOINTS,
+  BOX_SHADOWS,
+  COLORS,
+  SPACER,
 } from 'src/constants';
-
-import AccordionContainerStyle from './accordionContainer/style';
 
 const border = `1px solid ${COLORS.border}`;
 
@@ -13,6 +15,12 @@ const setTopBorderRadius = (borderRadius: string) =>
 
 const setBottomBorderRadius = (borderRadius: string) =>
   `0 0 ${borderRadius} ${borderRadius}`;
+
+export const Container = styled.div`
+  box-shadow: ${BOX_SHADOWS.clickable};
+  background-color: ${COLORS.white};
+  max-width: ${BREAKPOINTS.md}px;
+`;
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -82,7 +90,7 @@ export const TitleWrapper = styled.div<{
     box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 
-  ${AccordionContainerStyle.Container}:last-of-type & {
+  ${Container}:last-of-type & {
     &:focus {
       border-radius: ${({ borderRadius, isOpen }) =>
     isOpen ? '0' : setBottomBorderRadius(borderRadius)};
@@ -100,8 +108,6 @@ export const Truncate = styled.div`
 /**
  * borderRadius must match borderRadius passed to main <Accordion />
  * component if opting out of default values.
- *
- * Also requires that Accordion uses withContainer prop
  */
 export const Grouping = styled.div<{ borderRadius?: string }>`
   ${({ borderRadius = '4px' }) => `
@@ -111,7 +117,7 @@ export const Grouping = styled.div<{ borderRadius?: string }>`
           ${setTopBorderRadius(borderRadius)};
       }
 
-      ${AccordionContainerStyle.Container} {
+      ${Container} {
         border-radius: 
           ${setTopBorderRadius(borderRadius)};
       }
@@ -124,13 +130,7 @@ export const Grouping = styled.div<{ borderRadius?: string }>`
     }
   
     > div:last-of-type {
-      ${TitleWrapper} {
-        &:focus {
-
-        }
-      }
-
-      ${AccordionContainerStyle.Container} {
+      ${Container} {
         border-radius: 
           ${setBottomBorderRadius(borderRadius)};
       }

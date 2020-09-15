@@ -29,20 +29,23 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
             margin: 1rem;
           `}
         >
-          <Accordion
-            title={
+          <Accordion.Container>
+            <Accordion
+              title={
+                <Accordion.Content>
+                  This Accordion styled with an Accordion.Container parent
+                  component
+                </Accordion.Content>
+              }
+              isOpen={accordion1}
+              onClick={() => this.toggleAccordion('accordion1')}
+            >
               <Accordion.Content>
-                This Accordion styled w/ withContainer prop
+                This Accordion styled with an Accordion.Container parent
+                component
               </Accordion.Content>
-            }
-            isOpen={accordion1}
-            onClick={() => this.toggleAccordion('accordion1')}
-            withContainer
-          >
-            <Accordion.Content>
-              This Accordion styled w/ withContainer prop
-            </Accordion.Content>
-          </Accordion>
+            </Accordion>
+          </Accordion.Container>
         </div>
         <div
           css={css`

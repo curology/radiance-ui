@@ -57,7 +57,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
 }
 
-.e15o84vr0:last-of-type .emotion-4:focus {
+.e1oss35m0:last-of-type .emotion-4:focus {
   border-radius: 0 0 4px 4px;
 }
 
@@ -125,7 +125,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
 }
 
-.e15o84vr0:last-of-type .emotion-4:focus {
+.e1oss35m0:last-of-type .emotion-4:focus {
   border-radius: 0 0 4px 4px;
 }
 
@@ -238,7 +238,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
 }
 
-.e15o84vr0:last-of-type .emotion-4:focus {
+.e1oss35m0:last-of-type .emotion-4:focus {
   border-radius: 0 0 4px 4px;
 }
 

@@ -4,10 +4,10 @@ import { COLORS } from 'src/constants';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 
 import Thumbnails from './thumbnails';
-import AccordionContainer from './accordionContainer';
 import {
   AccordionBox,
   ArrowWrapper,
+  Container,
   Content,
   ExpansionWrapper,
   Grouping,
@@ -26,7 +26,6 @@ type AccordionProps = {
   ) => void;
   rightAlignArrow?: boolean;
   title: React.ReactNode;
-  withContainer?: boolean;
 };
 
 /**
@@ -44,6 +43,7 @@ class Accordion extends React.Component<
   { contentHeight: string }
 > {
   static propTypes = {
+    /** Sets the border0radius of the Accordion.Container, AccordionBox, and TitleWrapper */
     borderRadius: PropTypes.string,
     /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
@@ -59,8 +59,6 @@ class Accordion extends React.Component<
     rightAlignArrow: PropTypes.bool,
     /** node that will render whether collapsed or expanded */
     title: PropTypes.node.isRequired,
-    /** when true, wraps instances of Accordion with container styling */
-    withContainer: PropTypes.bool,
   };
 
   state = { contentHeight: '0px' };
@@ -70,8 +68,9 @@ class Accordion extends React.Component<
     disabled: false,
     noBorder: false,
     rightAlignArrow: false,
-    withContainer: false,
   };
+
+  static Container = Container;
 
   static Content = Content;
 
@@ -91,14 +90,12 @@ class Accordion extends React.Component<
     this.updateHeight();
   }
 
-  // prettier-ignore
-  getContentHeight = (isOpen: boolean) => (
+  getContentHeight = (isOpen: boolean) =>
     `${
       isOpen && this.contentRef.current
         ? this.contentRef.current.clientHeight
         : '0'
-    }px`
-  );
+    }px`;
 
   updateHeight() {
     const { isOpen } = this.props;
@@ -129,51 +126,48 @@ class Accordion extends React.Component<
       noBorder,
       disabled,
       rightAlignArrow,
-      withContainer,
     } = this.props;
 
     return (
-      <AccordionContainer withContainer={withContainer}>
-        <AccordionBox
+      <AccordionBox
+        borderRadius={borderRadius}
+        isOpen={isOpen}
+        noBorder={!!noBorder}
+        disabled={!!disabled}
+      >
+        <TitleWrapper
+          onClick={(event): void => {
+            if (!disabled) {
+              onClick(event);
+            }
+          }}
           borderRadius={borderRadius}
-          isOpen={isOpen}
-          noBorder={!!noBorder}
+          onKeyDown={this.handleKeyDown}
           disabled={!!disabled}
+          role="button"
+          isOpen={isOpen}
+          tabIndex={disabled ? -1 : 0}
+          aria-disabled={!!disabled}
+          aria-expanded={isOpen}
         >
-          <TitleWrapper
-            onClick={(event): void => {
-              if (!disabled) {
-                onClick(event);
-              }
-            }}
-            borderRadius={borderRadius}
-            onKeyDown={this.handleKeyDown}
-            disabled={!!disabled}
-            role="button"
-            isOpen={isOpen}
-            tabIndex={disabled ? -1 : 0}
-            aria-disabled={!!disabled}
-            aria-expanded={isOpen}
-          >
-            <Truncate>{title}</Truncate>
-            <ArrowWrapper rightAlign={!!rightAlignArrow}>
-              <ChevronIcon
-                rotate={isOpen ? 90 : 0}
-                width={16}
-                height={16}
-                fill={COLORS.purple}
-              />
-            </ArrowWrapper>
-          </TitleWrapper>
-          <ExpansionWrapper
-            contentHeight={contentHeight}
-            aria-disabled={!!disabled}
-            aria-hidden={!isOpen}
-          >
-            <div ref={this.contentRef}>{children}</div>
-          </ExpansionWrapper>
-        </AccordionBox>
-      </AccordionContainer>
+          <Truncate>{title}</Truncate>
+          <ArrowWrapper rightAlign={!!rightAlignArrow}>
+            <ChevronIcon
+              rotate={isOpen ? 90 : 0}
+              width={16}
+              height={16}
+              fill={COLORS.purple}
+            />
+          </ArrowWrapper>
+        </TitleWrapper>
+        <ExpansionWrapper
+          contentHeight={contentHeight}
+          aria-disabled={!!disabled}
+          aria-hidden={!isOpen}
+        >
+          <div ref={this.contentRef}>{children}</div>
+        </ExpansionWrapper>
+      </AccordionBox>
     );
   }
 }
