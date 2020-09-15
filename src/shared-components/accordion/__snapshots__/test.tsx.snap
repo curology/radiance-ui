@@ -28,6 +28,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 }
 
 .emotion-8 {
+  border-radius: 4px;
   border: 1px solid #ededf0;
   width: 100%;
   opacity: 0.4;
@@ -147,6 +148,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 }
 
 .emotion-8 {
+  border-radius: 4px;
   width: 100%;
 }
 
@@ -202,6 +204,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 
 exports[`<Accordion /> renders regular accordion 1`] = `
 .emotion-8 {
+  border-radius: 4px;
   border: 1px solid #ededf0;
   width: 100%;
 }

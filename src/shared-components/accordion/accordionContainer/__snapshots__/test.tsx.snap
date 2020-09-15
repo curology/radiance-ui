@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionContainer /> Renders with styles by default 1`] = `
+.emotion-0 {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(51,46,84,0.15);
+  background-color: #ffffff;
+  max-width: 768px;
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  I am the container child
+</div>
+`;
+
+exports[`<AccordionContainer /> Renders without styles if explicit falsy withContainer prop 1`] = `"I am the fragment child"`;

@@ -40,12 +40,9 @@ describe('<Accordion />', () => {
 
   test('invokes onClick when title is clicked', () => {
     const spy = jest.fn();
-    const titleIndex = 0;
-
     const component = shallow(<Accordion {...testAccordion} onClick={spy} />);
-    const title = component.childAt(titleIndex);
 
-    title.simulate('click');
+    component.find('[role="button"]').simulate('click');
     expect(spy).toHaveBeenCalled();
   });
 });

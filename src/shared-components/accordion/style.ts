@@ -1,20 +1,10 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import {
-  ANIMATION,
-  BOX_SHADOWS,
-  BREAKPOINTS,
-  COLORS,
-  SPACER,
+  ANIMATION, BOX_SHADOWS, COLORS, SPACER, 
 } from 'src/constants';
 
 const border = `1px solid ${COLORS.border}`;
-
-export const Container = styled.div`
-  box-shadow: ${BOX_SHADOWS.boxShadow4};
-  background-color: ${COLORS.white};
-  max-width: ${BREAKPOINTS.md}px;
-`;
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -36,10 +26,13 @@ const getBorderStyle = (isOpen: boolean) => css`
 `;
 
 export const AccordionBox = styled.div<{
+  borderRadius: string;
   noBorder: boolean;
   isOpen: boolean;
   disabled: boolean;
 }>`
+  ${({ borderRadius }) => `border-radius: ${borderRadius}`};
+
   ${({ noBorder, isOpen }) => (!noBorder ? getBorderStyle(isOpen) : '')};
 
   width: 100%;

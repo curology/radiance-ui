@@ -12,7 +12,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
   };
 
   toggleAccordion = (accordion: string) => {
-    this.setState(state => ({ [accordion]: !state[accordion] }));
+    this.setState((state) => ({ [accordion]: !state[accordion] }));
   };
 
   render(): JSX.Element {
@@ -29,23 +29,20 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
             margin: 1rem;
           `}
         >
-          <Accordion.Container>
-            <Accordion
-              title={
-                <Accordion.Content>
-                  This Accordion styled with an Accordion.Container parent
-                  component
-                </Accordion.Content>
-              }
-              isOpen={accordion1}
-              onClick={() => this.toggleAccordion('accordion1')}
-            >
+          <Accordion
+            title={
               <Accordion.Content>
-                This Accordion styled with an Accordion.Container parent
-                component
+                This Accordion styled w/ withContainer prop
               </Accordion.Content>
-            </Accordion>
-          </Accordion.Container>
+            }
+            isOpen={accordion1}
+            onClick={() => this.toggleAccordion('accordion1')}
+            withContainer
+          >
+            <Accordion.Content>
+              This Accordion styled w/ withContainer prop
+            </Accordion.Content>
+          </Accordion>
         </div>
         <div
           css={css`

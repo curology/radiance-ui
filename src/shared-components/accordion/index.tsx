@@ -4,33 +4,46 @@ import { COLORS } from 'src/constants';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 
 import Thumbnails from './thumbnails';
+import AccordionContainer from './accordionContainer';
 import {
   AccordionBox,
   ArrowWrapper,
   TitleWrapper,
   ExpansionWrapper,
-  Container,
   Content,
   Truncate,
 } from './style';
 
 type AccordionProps = {
+  borderRadius?: string;
   children: React.ReactNode;
-  disabled: boolean;
+  disabled?: boolean;
   isOpen: boolean;
-  noBorder: boolean;
+  noBorder?: boolean;
   onClick: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
   ) => void;
-  rightAlignArrow: boolean;
+  rightAlignArrow?: boolean;
   title: React.ReactNode;
+  withContainer?: boolean;
+};
+
+/**
+ * TODO-TS: Convert to Function component and use ES6 defaults
+ */
+type AccordionDefaultProps = {
+  borderRadius: string;
+  disabled: boolean;
+  noBorder: boolean;
+  rightAlignArrow: boolean;
 };
 
 class Accordion extends React.Component<
-  AccordionProps,
+  AccordionProps & AccordionDefaultProps,
   { contentHeight: string }
 > {
   static propTypes = {
+    borderRadius: PropTypes.string,
     /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
     /** when true, the accordion will be greyed out and the onClick prop will be disabled */
@@ -45,15 +58,19 @@ class Accordion extends React.Component<
     rightAlignArrow: PropTypes.bool,
     /** node that will render whether collapsed or expanded */
     title: PropTypes.node.isRequired,
+    /** when true, wraps instances of Accordion with container styling */
+    withContainer: PropTypes.bool,
   };
 
+  state = { contentHeight: '0px' };
+
   static defaultProps = {
+    borderRadius: '4px',
     disabled: false,
     noBorder: false,
     rightAlignArrow: false,
+    withContainer: false,
   };
-
-  static Container = Container;
 
   static Content = Content;
 
@@ -62,8 +79,6 @@ class Accordion extends React.Component<
   static Truncate = Truncate;
 
   contentRef = React.createRef<HTMLDivElement>();
-
-  state = { contentHeight: '0px' };
 
   componentDidMount() {
     this.updateHeight();
@@ -103,6 +118,7 @@ class Accordion extends React.Component<
   render() {
     const { contentHeight } = this.state;
     const {
+      borderRadius,
       title,
       isOpen,
       onClick,
@@ -110,41 +126,49 @@ class Accordion extends React.Component<
       noBorder,
       disabled,
       rightAlignArrow,
+      withContainer,
     } = this.props;
 
     return (
-      <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
-        <TitleWrapper
-          onClick={(event): void => {
-            if (!disabled) {
-              onClick(event);
-            }
-          }}
-          onKeyDown={this.handleKeyDown}
+      <AccordionContainer withContainer={withContainer}>
+        <AccordionBox
+          borderRadius={borderRadius}
+          isOpen={isOpen}
+          noBorder={!!noBorder}
           disabled={!!disabled}
-          role="button"
-          tabIndex={disabled ? -1 : 0}
-          aria-disabled={!!disabled}
-          aria-expanded={isOpen}
         >
-          <Truncate>{title}</Truncate>
-          <ArrowWrapper rightAlign={!!rightAlignArrow}>
-            <ChevronIcon
-              rotate={isOpen ? 90 : 0}
-              width={16}
-              height={16}
-              fill={COLORS.purple}
-            />
-          </ArrowWrapper>
-        </TitleWrapper>
-        <ExpansionWrapper
-          contentHeight={contentHeight}
-          aria-disabled={!!disabled}
-          aria-hidden={!isOpen}
-        >
-          <div ref={this.contentRef}>{children}</div>
-        </ExpansionWrapper>
-      </AccordionBox>
+          <TitleWrapper
+            onClick={(event): void => {
+              if (!disabled) {
+                onClick(event);
+              }
+            }}
+            onKeyDown={this.handleKeyDown}
+            disabled={!!disabled}
+            role="button"
+            tabIndex={disabled ? -1 : 0}
+            aria-disabled={!!disabled}
+            aria-expanded={isOpen}
+          >
+            <Truncate>{title}</Truncate>
+            <ArrowWrapper rightAlign={!!rightAlignArrow}>
+              <ChevronIcon
+                rotate={isOpen ? 90 : 0}
+                width={16}
+                height={16}
+                fill={COLORS.purple}
+              />
+            </ArrowWrapper>
+          </TitleWrapper>
+          <ExpansionWrapper
+            contentHeight={contentHeight}
+            aria-disabled={!!disabled}
+            aria-hidden={!isOpen}
+          >
+            <div ref={this.contentRef}>{children}</div>
+          </ExpansionWrapper>
+        </AccordionBox>
+      </AccordionContainer>
     );
   }
 }
