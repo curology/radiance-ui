@@ -112,6 +112,28 @@ The disabled accordion should only be used when the user is taking a clearly def
 
 The `<Accordion />` component has subcomponents available through dot notation.
 
+### Container
+
+Container to hold instances of `<Accordion>`
+
+```jsx
+import { Accordion } from 'radiance-ui';
+
+<Accordion.Container>
+  <Accordion
+    title={
+      <Accordion.Content>
+        This Accordion styled with an Accordion.Container parent component
+      </Accordion.Content>
+    }
+  >
+    <Accordion.Content>
+      This Accordion styled with an Accordion.Container parent component
+    </Accordion.Content>
+  </Accordion>
+</Accordion.Container>;
+```
+
 ### Content
 
 Wraps padding around children nodes
