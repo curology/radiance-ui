@@ -43,7 +43,9 @@ class Accordion extends React.Component<
   { contentHeight: string }
 > {
   static propTypes = {
-    /** Sets the border0radius of the Accordion.Container, AccordionBox, and TitleWrapper */
+    /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper
+     *  when used in conjunction with Accordion.Grouping
+     */
     borderRadius: PropTypes.string,
     /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
@@ -60,8 +62,6 @@ class Accordion extends React.Component<
     /** node that will render whether collapsed or expanded */
     title: PropTypes.node.isRequired,
   };
-
-  state = { contentHeight: '0px' };
 
   static defaultProps = {
     borderRadius: '4px',
@@ -80,6 +80,8 @@ class Accordion extends React.Component<
 
   static Truncate = Truncate;
 
+  state = { contentHeight: '0px' };
+
   contentRef = React.createRef<HTMLDivElement>();
 
   componentDidMount() {
@@ -90,12 +92,14 @@ class Accordion extends React.Component<
     this.updateHeight();
   }
 
-  getContentHeight = (isOpen: boolean) =>
+  // prettier-ignore
+  getContentHeight = (isOpen: boolean) => (
     `${
       isOpen && this.contentRef.current
         ? this.contentRef.current.clientHeight
         : '0'
-    }px`;
+    }px`
+  );
 
   updateHeight() {
     const { isOpen } = this.props;
@@ -129,12 +133,7 @@ class Accordion extends React.Component<
     } = this.props;
 
     return (
-      <AccordionBox
-        borderRadius={borderRadius}
-        isOpen={isOpen}
-        noBorder={!!noBorder}
-        disabled={!!disabled}
-      >
+      <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
         <TitleWrapper
           onClick={(event): void => {
             if (!disabled) {

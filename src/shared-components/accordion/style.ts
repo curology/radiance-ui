@@ -10,11 +10,15 @@ import {
 
 const border = `1px solid ${COLORS.border}`;
 
-const setTopBorderRadius = (borderRadius: string) =>
-  `${borderRadius} ${borderRadius} 0 0`;
+const setTopBorderRadius = (borderRadius: string) => ({
+  borderTopLeftRadius: borderRadius,
+  borderTopRightRadius: borderRadius,
+});
 
-const setBottomBorderRadius = (borderRadius: string) =>
-  `0 0 ${borderRadius} ${borderRadius}`;
+const setBottomBorderRadius = (borderRadius: string) => ({
+  borderBottomLeftRadius: borderRadius,
+  borderBottomRightRadius: borderRadius,
+});
 
 export const Container = styled.div`
   box-shadow: ${BOX_SHADOWS.clickable};
@@ -42,7 +46,6 @@ const getBorderStyle = (isOpen: boolean) => css`
 `;
 
 export const AccordionBox = styled.div<{
-  borderRadius: string;
   noBorder: boolean;
   isOpen: boolean;
   disabled: boolean;
@@ -92,8 +95,20 @@ export const TitleWrapper = styled.div<{
 
   ${Container}:last-of-type & {
     &:focus {
-      border-radius: ${({ borderRadius, isOpen }) =>
-    isOpen ? '0' : setBottomBorderRadius(borderRadius)};
+      ${({ borderRadius, isOpen }) => {
+    const {
+      borderBottomLeftRadius,
+      borderBottomRightRadius,
+    } = setBottomBorderRadius(borderRadius);
+
+    return (
+      !isOpen &&
+          `
+        border-bottom-left-radius: ${borderBottomLeftRadius}; 
+        border-bottom-right-radius: ${borderBottomRightRadius};
+        `
+    );
+  }}
     }
   }
 `;
@@ -110,35 +125,44 @@ export const Truncate = styled.div`
  * component if opting out of default values.
  */
 export const Grouping = styled.div<{ borderRadius?: string }>`
-  ${({ borderRadius = '4px' }) => `
+  ${({ borderRadius = '4px' }) => {
+    const { borderTopLeftRadius, borderTopRightRadius } = setTopBorderRadius(
+      borderRadius,
+    );
+    const {
+      borderBottomLeftRadius,
+      borderBottomRightRadius,
+    } = setBottomBorderRadius(borderRadius);
+
+    return `
     > div:first-of-type {
       ${TitleWrapper} {
-        border-radius: 
-          ${setTopBorderRadius(borderRadius)};
+        border-top-left-radius: ${borderTopLeftRadius};
+        border-top-right-radius: ${borderTopRightRadius};
       }
 
       ${Container} {
-        border-radius: 
-          ${setTopBorderRadius(borderRadius)};
+        border-top-left-radius: ${borderTopLeftRadius};
+        border-top-right-radius: ${borderTopRightRadius};
       }
   
       ${AccordionBox} {
-        border-radius: 
-          ${setTopBorderRadius(borderRadius)};
+        border-top-left-radius: ${borderTopLeftRadius};
+        border-top-right-radius: ${borderTopRightRadius};
       }
-  
     }
   
     > div:last-of-type {
       ${Container} {
-        border-radius: 
-          ${setBottomBorderRadius(borderRadius)};
+        border-bottom-left-radius: ${borderBottomLeftRadius};
+        border-bottom-right-radius: ${borderBottomRightRadius};
       }
   
       ${AccordionBox} {
-        border-radius: 
-          ${setBottomBorderRadius(borderRadius)};
+        border-bottom-left-radius: ${borderBottomLeftRadius};
+        border-bottom-right-radius: ${borderBottomRightRadius};
       }
     }
-    `}
+`;
+  }}
 `;

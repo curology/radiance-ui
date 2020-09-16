@@ -54,26 +54,28 @@ stories.add(
             width: 400px;
           `}
         >
-          <Accordion.Container>
-            <Accordion
-              title={
+          <Accordion.Grouping>
+            <Accordion.Container>
+              <Accordion
+                title={
+                  <Accordion.Content>
+                    <Accordion.Truncate>
+                      {text('Title text', 'Title')}
+                    </Accordion.Truncate>
+                  </Accordion.Content>
+                }
+                onClick={action('Accordion clicked')}
+                isOpen={boolean('isOpen', false)}
+                noBorder={boolean('noBorder', false)}
+                disabled={boolean('disabled', false)}
+                rightAlignArrow={boolean('rightAlignArrow', false)}
+              >
                 <Accordion.Content>
-                  <Accordion.Truncate>
-                    {text('Title text', 'Title')}
-                  </Accordion.Truncate>
+                  {text('Expanded text', 'Accordion expanded content')}
                 </Accordion.Content>
-              }
-              onClick={action('Accordion clicked')}
-              isOpen={boolean('isOpen', false)}
-              noBorder={boolean('noBorder', false)}
-              disabled={boolean('disabled', false)}
-              rightAlignArrow={boolean('rightAlignArrow', false)}
-            >
-              <Accordion.Content>
-                {text('Expanded text', 'Accordion expanded content')}
-              </Accordion.Content>
-            </Accordion>
-          </Accordion.Container>
+              </Accordion>
+            </Accordion.Container>
+          </Accordion.Grouping>
         </div>
       </div>
     </React.Fragment>
