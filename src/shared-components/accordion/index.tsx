@@ -80,9 +80,9 @@ class Accordion extends React.Component<
 
   static Truncate = Truncate;
 
-  state = { contentHeight: '0px' };
-
   contentRef = React.createRef<HTMLDivElement>();
+
+  state = { contentHeight: '0px' };
 
   componentDidMount() {
     this.updateHeight();
