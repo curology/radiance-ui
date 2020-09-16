@@ -126,6 +126,28 @@ The disabled accordion should only be used when the user is taking a clearly def
 
 The `<Accordion />` component has subcomponents available through dot notation.
 
+### Grouping
+
+Container to holds multiple instances of `<Accordion>` components to apply
+border-radius and box-shadow styling
+
+```tsx
+import { Accordion } from 'radiance-ui';
+
+<Accordion.Grouping>
+  <Accordion.Container>
+    <Accordion title={<Accordion.Content>First Title</Accordion.Content>}>
+      <Accordion.Content>First Expansion</Accordion.Content>
+    </Accordion>
+  </Accordion.Container>
+  <Accordion.Container>
+    <Accordion title={<Accordion.Content>Second Title</Accordion.Content>}>
+      <Accordion.Content>Second Expansion</Accordion.Content>
+    </Accordion>
+  </Accordion.Container>
+</Accordion.Grouping>;
+```
+
 ### Container
 
 Container to hold instances of `<Accordion>`
