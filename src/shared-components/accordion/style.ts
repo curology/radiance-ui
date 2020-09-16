@@ -10,12 +10,12 @@ import {
 
 const border = `1px solid ${COLORS.border}`;
 
-const setTopBorderRadius = (borderRadius: string) => ({
+const getTopBorderRadius = (borderRadius: string) => ({
   borderTopLeftRadius: borderRadius,
   borderTopRightRadius: borderRadius,
 });
 
-const setBottomBorderRadius = (borderRadius: string) => ({
+const getBottomBorderRadius = (borderRadius: string) => ({
   borderBottomLeftRadius: borderRadius,
   borderBottomRightRadius: borderRadius,
 });
@@ -99,7 +99,7 @@ export const TitleWrapper = styled.div<{
     const {
       borderBottomLeftRadius,
       borderBottomRightRadius,
-    } = setBottomBorderRadius(borderRadius);
+    } = getBottomBorderRadius(borderRadius);
 
     return (
       !isOpen &&
@@ -126,13 +126,13 @@ export const Truncate = styled.div`
  */
 export const Grouping = styled.div<{ borderRadius?: string }>`
   ${({ borderRadius = '4px' }) => {
-    const { borderTopLeftRadius, borderTopRightRadius } = setTopBorderRadius(
+    const { borderTopLeftRadius, borderTopRightRadius } = getTopBorderRadius(
       borderRadius,
     );
     const {
       borderBottomLeftRadius,
       borderBottomRightRadius,
-    } = setBottomBorderRadius(borderRadius);
+    } = getBottomBorderRadius(borderRadius);
 
     return `
     > div:first-of-type {
