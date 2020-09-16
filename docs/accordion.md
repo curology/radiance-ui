@@ -128,8 +128,8 @@ The `<Accordion />` component has subcomponents available through dot notation.
 
 ### Grouping
 
-Container to holds multiple instances of `<Accordion>` components to apply
-border-radius and box-shadow styling
+Container to holds any number of instances of `<Accordion>` components. **Required**
+to apply standard border-radius and box-shadow styling.
 
 ```tsx
 import { Accordion } from 'radiance-ui';
@@ -150,7 +150,7 @@ import { Accordion } from 'radiance-ui';
 
 ### Container
 
-Container to hold instances of `<Accordion>`
+Container to hold an instance of `<Accordion>`
 
 ```jsx
 import { Accordion } from 'radiance-ui';
