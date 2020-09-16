@@ -70,8 +70,8 @@ const OptionButton = ({
   </ClickableContainer>
 );
 
-/* eslint-disable react/require-default-props */
 OptionButton.propTypes = {
+  borderRadius: PropTypes.string,
   buttonType: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.node,
   text: PropTypes.string.isRequired,
@@ -80,6 +80,5 @@ OptionButton.propTypes = {
   optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
   selected: PropTypes.bool,
 };
-/* eslint-enable react/require-default-props */
 
 export default OptionButton;
