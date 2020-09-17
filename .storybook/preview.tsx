@@ -1,4 +1,4 @@
-import { addDecorator, addParameters, configure } from '@storybook/react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { withA11y } from '@storybook/addon-a11y';
 import { addReadme, configureReadme } from 'storybook-readme';
 import centered from '@storybook/addon-centered/react';
@@ -72,6 +72,7 @@ const InjectGlobalStyles = (storyFn) => (
 
 addDecorator(InjectGlobalStyles);
 addDecorator(withA11y);
+addDecorator(centered);
 addDecorator(addReadme);
 
 addParameters({
@@ -103,11 +104,3 @@ addParameters({
     defaultViewport: 'responsive',
   },
 });
-
-const req = require.context('../stories', true, /.(ts|tsx|js)$/);
-
-function loadStories() {
-  req.keys().forEach(req);
-}
-
-configure(loadStories, module);

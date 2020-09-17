@@ -2,9 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import styled from '@emotion/styled';
 import { withDocs } from 'storybook-readme';
-
 import { Typography } from 'src/shared-components';
-import OffClickWrapperReadme from 'docs/offClickWrapper.md';
+import OffClickWrapperReadme from 'docs/offClickWrapper';
 
 import OffClickWrapperExample from './offClickWrapperExample';
 
@@ -20,5 +19,11 @@ stories.add(
       <Typography.Heading>Example:</Typography.Heading>
       <OffClickWrapperExample />
     </MainContainer>
-  ))
+  )),
 );
+
+const OffClickWrapperStory = {
+  title: 'OffClickWrapper',
+};
+
+export default OffClickWrapperStory;

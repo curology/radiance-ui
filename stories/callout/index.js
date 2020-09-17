@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
 import { withDocs } from 'storybook-readme';
 import CalloutReadme from 'docs/callout';
@@ -11,8 +11,6 @@ import { NeckGlyph } from 'src/svgs/glyphs';
 import { COLORS } from '../../src/constants';
 
 const stories = storiesOf('Callout', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -70,3 +68,10 @@ stories.add(
     </div>
   )),
 );
+
+const CalloutStory = {
+  title: 'Callout',
+  component: Callout,
+};
+
+export default CalloutStory;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { storiesOf, Meta } from '@storybook/react';
+import { text, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
@@ -12,8 +12,6 @@ import DefaultAccordion from './defaultAccordion';
 import SubcomponentAccordions from './subcomponentAccordions';
 
 const stories = storiesOf('Accordion', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -79,3 +77,10 @@ stories.add(
     </React.Fragment>
   )),
 );
+
+const AccordionStory = {
+  title: 'Accordion',
+  component: Accordion,
+} as Meta;
+
+export default AccordionStory;

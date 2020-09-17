@@ -3,6 +3,7 @@ import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
 import TextButtonReadme from 'docs/button/textButton';
 import { TextButton } from 'src/shared-components';
+import { Meta } from '@storybook/react';
 
 import Container from '../container';
 
@@ -19,3 +20,10 @@ const TextButtonStory = withDocs(TextButtonReadme, () => (
 ));
 
 export default TextButtonStory;
+
+// const TextButtonStoryExport = {
+//   title: 'Button/TextButton',
+
+// } as Meta;
+
+// export default TextButtonStoryExport;

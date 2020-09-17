@@ -2,11 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import {
-  withKnobs,
-  text,
-  select,
-  number,
-  boolean,
+  text, select, number, boolean, 
 } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -35,7 +31,6 @@ const positionOptions = ['bottom', 'top'];
 const arrowAlignOptions = ['left', 'middle', 'right'];
 
 const stories = storiesOf('Tooltip', module);
-stories.addDecorator(withKnobs);
 stories.add(
   'Usage',
   withDocs(TooltipReadme, () => (
@@ -115,3 +110,10 @@ stories.add(
     </MainContainer>
   )),
 );
+
+const TooltipStory = {
+  title: 'Tooltip',
+  component: Tooltip,
+};
+
+export default TooltipStory;

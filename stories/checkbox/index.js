@@ -1,19 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import {
-  withKnobs, text, boolean, select, 
-} from '@storybook/addon-knobs';
+import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
-import CheckboxReadme from 'docs/checkbox.md';
+import CheckboxReadme from 'docs/checkbox';
 import { Checkbox, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 import { AcneGlyph } from 'src/svgs/glyphs';
 
 const stories = storiesOf('Checkbox', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -53,3 +49,10 @@ stories.add(
     </React.Fragment>
   )),
 );
+
+const CheckboxStory = {
+  title: 'Checkbox',
+  component: Checkbox,
+};
+
+export default CheckboxStory;

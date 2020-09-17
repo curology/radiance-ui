@@ -2,11 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import {
-  withKnobs,
-  text,
-  select,
-  number,
-  boolean,
+  text, select, number, boolean, 
 } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -50,7 +46,6 @@ const cards = [
 ];
 
 const stories = storiesOf('Carousel', module);
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -156,3 +151,10 @@ stories.add(
     </MainContainer>
   )),
 );
+
+const CarouselStory = {
+  title: 'Carousel',
+  component: Carousel,
+};
+
+export default CarouselStory;

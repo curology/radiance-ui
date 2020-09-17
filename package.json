@@ -68,6 +68,7 @@
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@storybook/addon-a11y": "^6.0.21",
     "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-centered": "^5.3.21",
     "@storybook/addon-knobs": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/addon-viewport": "^6.0.21",

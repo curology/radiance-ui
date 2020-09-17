@@ -1,6 +1,7 @@
 import React from 'react';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
+import { Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { css } from '@emotion/core';
 import ButtonReadme from 'docs/button/button';
@@ -168,3 +169,10 @@ const ButtonStory = withDocs(ButtonReadme, () => (
 ));
 
 export default ButtonStory;
+
+// const ButtonStoryExport = {
+//   title: 'Button/Button',
+
+// } as Meta;
+
+// export default ButtonStoryExport;

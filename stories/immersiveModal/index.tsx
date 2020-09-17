@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import { Meta, storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import ImmersiveModalReadme from 'docs/immersiveModal';
 
@@ -15,3 +15,9 @@ stories.add(
     </React.Fragment>
   )),
 );
+
+const ImmersiveModalStory = {
+  title: 'ImmersiveModal',
+} as Meta;
+
+export default ImmersiveModalStory;

@@ -2,10 +2,9 @@ import React from 'react';
 import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
 import { css } from '@emotion/core';
-
 import * as CONSTANTS from 'src/constants';
 import { Typography } from 'src/shared-components';
-import ConstantsReadme from 'docs/constants.md';
+import ConstantsReadme from 'docs/constants';
 
 import renderConstantsMap from './renderConstantsMap';
 import colorsStory from './colorsStory';
@@ -43,9 +42,16 @@ stories.add(
         );
       })}
     </div>
-  ))
+  )),
 );
 
 stories.add('COLORS', colorsStory);
 
 stories.add('BOX_SHADOWS', boxShadowsStory);
+
+const ConstantsStory = {
+  title: 'Constants',
+  // component: Constants,
+};
+
+export default ConstantsStory;

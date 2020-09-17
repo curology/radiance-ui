@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import { withKnobs, boolean, select } from '@storybook/addon-knobs';
+import { boolean, select } from '@storybook/addon-knobs';
 import VerificationMessagesReadme from 'docs/verificationMessages';
 import { Typography, VerificationMessages, Field } from 'src/shared-components';
 
@@ -30,7 +30,6 @@ const messages = {
 };
 
 const stories = storiesOf('VerificationMessages', module);
-stories.addDecorator(withKnobs);
 
 const messagesTypeOptions = {
   error: 'error',
@@ -56,3 +55,10 @@ stories.add(
     </MainContainer>
   )),
 );
+
+const VerificationMessagesStory = {
+  title: 'VerificationMessages',
+  component: VerificationMessages,
+};
+
+export default VerificationMessagesStory;

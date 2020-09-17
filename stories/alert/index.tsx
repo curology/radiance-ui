@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react';
-import { storiesOf } from '@storybook/react';
+import { Meta, storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
 import { Alert, Typography } from 'src/shared-components';
 import AlertReadme from 'docs/alert';
 
 import avatarImageSrc from './avatarImage.jpg';
 
 const stories = storiesOf('Alert', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -81,3 +79,10 @@ stories.add(
     </React.Fragment>
   )),
 );
+
+const AlertStory = {
+  title: 'Alert',
+  component: Alert,
+} as Meta;
+
+export default AlertStory;

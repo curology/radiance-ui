@@ -1,11 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import { text, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-
-import FadeInContainerReadme from 'docs/transitions/fadeInContainer.md';
-import OpacityInReadme from 'docs/transitions/opacityInAnimationStyle.md';
+import FadeInContainerReadme from 'docs/transitions/fadeInContainer';
+import OpacityInReadme from 'docs/transitions/opacityInAnimationStyle';
 import {
   FadeInContainer,
   opacityInAnimationStyle,
@@ -26,7 +25,6 @@ const CustomFadeInContainer = styled.div`
 `;
 
 const stories = storiesOf('Transitions', module);
-stories.addDecorator(withKnobs);
 
 stories.add(
   'FadeInContainer',
@@ -47,7 +45,7 @@ stories.add(
         </FadeInContainer>
       </InnerContainer>
     </MainContainer>
-  ))
+  )),
 );
 
 stories.add(
@@ -61,5 +59,11 @@ stories.add(
         </CustomFadeInContainer>
       </InnerContainer>
     </MainContainer>
-  ))
+  )),
 );
+
+const TransitionsStory = {
+  title: 'Transitions',
+};
+
+export default TransitionsStory;

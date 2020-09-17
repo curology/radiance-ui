@@ -2,9 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
-import {
-  withKnobs, text, select, boolean, 
-} from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
 import FieldReadme from 'docs/field';
 import { Typography, Field } from 'src/shared-components';
 
@@ -21,7 +19,6 @@ const FieldsContainer = styled.div`
 `;
 
 const stories = storiesOf('Field', module);
-stories.addDecorator(withKnobs);
 
 const messagesOptions = {
   'No messages': {},
@@ -94,3 +91,10 @@ stories.add(
     </MainContainer>
   )),
 );
+
+const FieldStory = {
+  title: 'Field',
+  component: Field,
+};
+
+export default FieldStory;

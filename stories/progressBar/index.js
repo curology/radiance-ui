@@ -1,11 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select, number, color } from '@storybook/addon-knobs';
+import {
+  text, select, number, color, 
+} from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-
-import ProgressBarReadme from 'docs/progressBar.md';
+import ProgressBarReadme from 'docs/progressBar';
 import { ProgressBar, Typography } from 'src/shared-components';
 import { COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
 
@@ -30,7 +31,6 @@ const BarContainer = styled.div`
 `;
 
 const stories = storiesOf('Progress Bar', module);
-stories.addDecorator(withKnobs);
 
 const customHeight = 10;
 
@@ -71,10 +71,17 @@ stories.add(
           status={select(
             'status',
             PROGRESS_BAR_STATUS,
-            PROGRESS_BAR_STATUS.loading
+            PROGRESS_BAR_STATUS.loading,
           )}
         />
       </BarContainer>
     </MainContainer>
-  ))
+  )),
 );
+
+const ProgressBarStory = {
+  title: 'ProgressBar',
+  component: ProgressBar,
+};
+
+export default ProgressBarStory;

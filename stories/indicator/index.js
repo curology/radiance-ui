@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
 import { withDocs } from 'storybook-readme';
 import IndicatorReadme from 'docs/indicator';
@@ -8,8 +8,6 @@ import { Indicator, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
 const stories = storiesOf('Indicator', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -35,3 +33,10 @@ stories.add(
     </div>
   )),
 );
+
+const IndicatorStory = {
+  title: 'Indicator',
+  component: Indicator,
+};
+
+export default IndicatorStory;
