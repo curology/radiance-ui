@@ -36,8 +36,6 @@ export const AccordionBox = styled.div<{
 }>`
   ${({ noBorder, isOpen }) => (!noBorder ? getBorderStyle(isOpen) : '')};
 
-  position: relative;
-
   width: 100%;
 
   &:not(:last-child) {
