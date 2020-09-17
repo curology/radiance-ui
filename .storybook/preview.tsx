@@ -71,8 +71,8 @@ const InjectGlobalStyles = (storyFn) => (
 );
 
 addDecorator(InjectGlobalStyles);
-addDecorator(withA11y);
 addDecorator(centered);
+addDecorator(withA11y);
 addDecorator(addReadme);
 
 addParameters({
@@ -94,8 +94,6 @@ addParameters({
     showNav: true,
     showPanel: true,
     panelPosition: 'right',
-    // hierarchySeparator: /\/|\./, // matches a . or /
-    // hierarchyRootSeparator: /\|/, //matches a |
     sidebarAnimations: true,
     enableShortcuts: true,
     isToolshown: true,
