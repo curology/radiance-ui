@@ -7,24 +7,9 @@ module.exports = {
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
-    //     '@storybook/addon-essentials',
-    //     '@storybook/addon-controls',
-    //     '@storybook/addon-storysource',
-    //     {
-    //       name: '@storybook/addon-docs',
-    //       options: {
-    //         sourceLoaderOptions: {
-    //           parser: 'typescript',
-    //           injectStoryParameters: false,
-    //         },
-    //       },
-    //     },
   ],
   typescript: {
     check: true,
     checkOptions: {},
-    reactDocgenTypescriptOptions: {
-      propFilter: (prop) => ['label', 'disabled'].includes(prop.name),
-    },
   },
 } as StorybookConfig;
