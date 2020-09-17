@@ -77,7 +77,7 @@ export const TitleWrapper = styled.div<{
     box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 
-  div:last-of-type & {
+  ${AccordionBox}:last-of-type & {
     &:focus {
       ${({ borderRadius, isOpen }) =>
     !isOpen &&
