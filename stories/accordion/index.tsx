@@ -54,8 +54,7 @@ stories.add(
             width: 400px;
           `}
         >
-          <Accordion.Grouping>
-            <Accordion.Container>
+                      <Accordion.Container>
               <Accordion
                 title={
                   <Accordion.Content>
@@ -75,8 +74,7 @@ stories.add(
                 </Accordion.Content>
               </Accordion>
             </Accordion.Container>
-          </Accordion.Grouping>
-        </div>
+                  </div>
       </div>
     </React.Fragment>
   )),

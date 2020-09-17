@@ -20,12 +20,6 @@ const getBottomBorderRadius = (borderRadius: string) => ({
   borderBottomRightRadius: borderRadius,
 });
 
-export const Container = styled.div`
-  box-shadow: ${BOX_SHADOWS.clickable};
-  background-color: ${COLORS.white};
-  max-width: ${BREAKPOINTS.md}px;
-`;
-
 export const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
@@ -93,7 +87,7 @@ export const TitleWrapper = styled.div<{
     box-shadow: ${BOX_SHADOWS.focusSecondary};
   }
 
-  ${Container}:last-of-type & {
+  div:last-of-type & {
     &:focus {
       ${({ borderRadius, isOpen }) => {
     const {
@@ -124,7 +118,11 @@ export const Truncate = styled.div`
  * borderRadius must match borderRadius passed to main <Accordion />
  * component if opting out of default values.
  */
-export const Grouping = styled.div<{ borderRadius?: string }>`
+export const Container = styled.div<{ borderRadius?: string }>`
+  box-shadow: ${BOX_SHADOWS.clickable};
+  background-color: ${COLORS.white};
+  max-width: ${BREAKPOINTS.md}px;
+
   ${({ borderRadius = '4px' }) => {
     const { borderTopLeftRadius, borderTopRightRadius } = getTopBorderRadius(
       borderRadius,
@@ -136,16 +134,14 @@ export const Grouping = styled.div<{ borderRadius?: string }>`
 
     return `
     > div:first-of-type {
+      border-top-left-radius: ${borderTopLeftRadius};
+      border-top-right-radius: ${borderTopRightRadius};
+
       ${TitleWrapper} {
         border-top-left-radius: ${borderTopLeftRadius};
         border-top-right-radius: ${borderTopRightRadius};
       }
 
-      ${Container} {
-        border-top-left-radius: ${borderTopLeftRadius};
-        border-top-right-radius: ${borderTopRightRadius};
-      }
-  
       ${AccordionBox} {
         border-top-left-radius: ${borderTopLeftRadius};
         border-top-right-radius: ${borderTopRightRadius};
@@ -153,10 +149,8 @@ export const Grouping = styled.div<{ borderRadius?: string }>`
     }
   
     > div:last-of-type {
-      ${Container} {
-        border-bottom-left-radius: ${borderBottomLeftRadius};
-        border-bottom-right-radius: ${borderBottomRightRadius};
-      }
+      border-bottom-left-radius: ${borderBottomLeftRadius};
+      border-bottom-right-radius: ${borderBottomRightRadius};
   
       ${AccordionBox} {
         border-bottom-left-radius: ${borderBottomLeftRadius};

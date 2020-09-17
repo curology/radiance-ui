@@ -29,8 +29,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
             margin: 1rem;
           `}
         >
-          <Accordion.Grouping>
-            <Accordion.Container>
+                      <Accordion.Container>
               <Accordion
                 title={
                   <Accordion.Content>
@@ -47,15 +46,13 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
                 </Accordion.Content>
               </Accordion>
             </Accordion.Container>
-          </Accordion.Grouping>
-        </div>
+                  </div>
         <div
           css={css`
             margin: 1rem;
           `}
         >
-          <Accordion.Grouping>
-            <Accordion.Container>
+                      <Accordion.Container>
               <Accordion
                 title={<span>This is an accordion with no Content usage.</span>}
                 isOpen={accordion2}
@@ -64,15 +61,13 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
                 The others use it because it is standard.
               </Accordion>
             </Accordion.Container>
-          </Accordion.Grouping>
-        </div>
+                  </div>
         <div
           css={css`
             margin: 1rem;
           `}
         >
-          <Accordion.Grouping>
-            <Accordion.Container>
+                      <Accordion.Container>
               <Accordion
                 title={
                   <Accordion.Content>
@@ -91,8 +86,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
                 </Accordion.Content>
               </Accordion>
             </Accordion.Container>
-          </Accordion.Grouping>
-        </div>
+                  </div>
       </div>
     );
   }

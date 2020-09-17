@@ -10,7 +10,6 @@ import {
   Container,
   Content,
   ExpansionWrapper,
-  Grouping,
   TitleWrapper,
   Truncate,
 } from './style';
@@ -43,9 +42,7 @@ class Accordion extends React.Component<
   { contentHeight: string }
 > {
   static propTypes = {
-    /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper
-     *  when used in conjunction with Accordion.Grouping
-     */
+    /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
     borderRadius: PropTypes.string,
     /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
@@ -73,8 +70,6 @@ class Accordion extends React.Component<
   static Container = Container;
 
   static Content = Content;
-
-  static Grouping = Grouping;
 
   static Thumbnails = Thumbnails;
 
