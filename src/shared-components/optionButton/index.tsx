@@ -13,6 +13,7 @@ import {
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 
 type OptionButtonProps = {
+  borderRadius?: string;
   buttonType?: 'primary' | 'secondary';
   icon?: React.ReactNode;
   text: string;
@@ -24,6 +25,7 @@ type OptionButtonProps = {
 };
 
 const OptionButton = ({
+  borderRadius = '4px',
   buttonType = 'primary',
   icon,
   text,
@@ -34,6 +36,7 @@ const OptionButton = ({
   ...rest
 }: OptionButtonProps) => (
   <ClickableContainer
+    borderRadius={borderRadius}
     onClick={onClick}
     type="button"
     role={optionType}
@@ -67,8 +70,8 @@ const OptionButton = ({
   </ClickableContainer>
 );
 
-/* eslint-disable react/require-default-props */
 OptionButton.propTypes = {
+  borderRadius: PropTypes.string,
   buttonType: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.node,
   text: PropTypes.string.isRequired,
@@ -77,6 +80,5 @@ OptionButton.propTypes = {
   optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
   selected: PropTypes.bool,
 };
-/* eslint-enable react/require-default-props */
 
 export default OptionButton;
