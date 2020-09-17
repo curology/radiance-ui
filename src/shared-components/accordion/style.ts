@@ -10,16 +10,6 @@ import {
 
 const border = `1px solid ${COLORS.border}`;
 
-const getTopBorderRadius = (borderRadius: string) => ({
-  borderTopLeftRadius: borderRadius,
-  borderTopRightRadius: borderRadius,
-});
-
-const getBottomBorderRadius = (borderRadius: string) => ({
-  borderBottomLeftRadius: borderRadius,
-  borderBottomRightRadius: borderRadius,
-});
-
 export const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
@@ -89,20 +79,12 @@ export const TitleWrapper = styled.div<{
 
   div:last-of-type & {
     &:focus {
-      ${({ borderRadius, isOpen }) => {
-    const {
-      borderBottomLeftRadius,
-      borderBottomRightRadius,
-    } = getBottomBorderRadius(borderRadius);
-
-    return (
-      !isOpen &&
-          `
-        border-bottom-left-radius: ${borderBottomLeftRadius}; 
-        border-bottom-right-radius: ${borderBottomRightRadius};
+      ${({ borderRadius, isOpen }) =>
+    !isOpen &&
         `
-    );
-  }}
+        border-bottom-left-radius: ${borderRadius}; 
+        border-bottom-right-radius: ${borderRadius};
+        `}}
     }
   }
 `;
@@ -123,40 +105,30 @@ export const Container = styled.div<{ borderRadius?: string }>`
   background-color: ${COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
-  ${({ borderRadius = '4px' }) => {
-    const { borderTopLeftRadius, borderTopRightRadius } = getTopBorderRadius(
-      borderRadius,
-    );
-    const {
-      borderBottomLeftRadius,
-      borderBottomRightRadius,
-    } = getBottomBorderRadius(borderRadius);
-
-    return `
+  ${({ borderRadius = '4px' }) => `
     > div:first-of-type {
-      border-top-left-radius: ${borderTopLeftRadius};
-      border-top-right-radius: ${borderTopRightRadius};
+      border-top-left-radius: ${borderRadius};
+      border-top-right-radius: ${borderRadius};
 
       ${TitleWrapper} {
-        border-top-left-radius: ${borderTopLeftRadius};
-        border-top-right-radius: ${borderTopRightRadius};
+        border-top-left-radius: ${borderRadius};
+        border-top-right-radius: ${borderRadius};
       }
 
       ${AccordionBox} {
-        border-top-left-radius: ${borderTopLeftRadius};
-        border-top-right-radius: ${borderTopRightRadius};
+        border-top-left-radius: ${borderRadius};
+        border-top-right-radius: ${borderRadius};
       }
     }
   
     > div:last-of-type {
-      border-bottom-left-radius: ${borderBottomLeftRadius};
-      border-bottom-right-radius: ${borderBottomRightRadius};
+      border-bottom-left-radius: ${borderRadius};
+      border-bottom-right-radius: ${borderRadius};
   
       ${AccordionBox} {
-        border-bottom-left-radius: ${borderBottomLeftRadius};
-        border-bottom-right-radius: ${borderBottomRightRadius};
+        border-bottom-left-radius: ${borderRadius};
+        border-bottom-right-radius: ${borderRadius};
       }
     }
-`;
-  }}
+`}
 `;
