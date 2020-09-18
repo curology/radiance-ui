@@ -21,6 +21,7 @@ const defaultProps = {
 
 // placeholders for actual theme logic
 const darkTheme = {
+  __type: 'darkTheme',
   COLORS: {
     primaryTint1: '#000000',
     primaryTint5: '#cccccc',
@@ -30,14 +31,30 @@ const darkTheme = {
   },
 };
 
-// mock
-const useTheme = theme => (theme === 'someTheme' ? {} : darkTheme);
+const lightTheme = {
+  __type: 'lightTheme',
+  COLORS: {
+    primaryTint1: COLORS.primaryTint1,
+    primaryTint5: COLORS.primaryTint3,
+    secondary: COLORS.secondary,
+    activeThumb: COLORS.white,
+    inactiveThumb: COLORS.white,
+  },
+};
 
 const Toggle = ({ checked, label, onChange }) => {
-  const theme = useTheme();
+  const [theme, setTheme] = React.useState(lightTheme);
+
+  const toggleTheme = () =>
+    theme.__type === 'lightTheme' ? setTheme(darkTheme) : setTheme(lightTheme);
 
   return (
     <ThemeProvider theme={theme}>
+      <div>
+        <button onClick={toggleTheme} type="button">
+          swap theme
+        </button>
+      </div>
       <Container>
         {label && <Label onClick={onChange}>{label}</Label>}
         <ToggleButton
