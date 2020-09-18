@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const Label = styled.span`
-  color: ${COLORS.primaryTint1};
+  color: ${({ theme }) => theme.COLORS.primaryTint1};
   margin: 0;
   font-size: ${SPACER.medium};
   line-height: ${SPACER.large};

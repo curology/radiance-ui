@@ -105,7 +105,7 @@ addParameters({
   },
 });
 
-const req = require.context('../stories', true, /.(ts|tsx|js)$/);
+const req = require.context('../stories/toggle', true, /.(ts|tsx|js)$/);
 function loadStories() {
   req.keys().forEach(req);
 }
