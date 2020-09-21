@@ -2,6 +2,7 @@
 
 export { default as ArrowLeftIcon } from './arrow-left-icon.svg';
 export { default as ArrowRightIcon } from './arrow-right-icon.svg';
+export { default as Arrow } from './arrow.svg';
 export { default as BagIcon } from './bag-icon.svg';
 export { default as BellIcon } from './bell-icon.svg';
 export { default as CalendarIcon } from './calendar-icon.svg';
