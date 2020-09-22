@@ -13,13 +13,11 @@ const testAccordionProps = {
   children: <div>expansion</div>,
 };
 
-/* eslint-disable react/jsx-props-no-spreading */
 const AccordionWithTheme = (additionalProps?: Record<string, unknown>) => (
   <ThemeProvider theme={primaryTheme}>
     <Accordion {...testAccordionProps} {...additionalProps} />
   </ThemeProvider>
 );
-/* eslint-enable react/jsx-props-no-spreading */
 
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
