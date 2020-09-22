@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ToggleButton from 'react-toggle-button';
 import { ThemeProvider } from 'emotion-theming';
+import { primaryTheme, secondaryTheme } from 'src/constants/themes';
 
 import { COLORS } from '../../constants';
-import {
-  Container, Label, trackStyle, thumbStyle, 
-} from './style';
+import { Container, Label, trackStyle, thumbStyle } from './style';
 
 const propTypes = {
   checked: PropTypes.bool,
@@ -19,34 +18,13 @@ const defaultProps = {
   label: '',
 };
 
-// placeholders for actual theme logic
-const darkTheme = {
-  __type: 'darkTheme',
-  COLORS: {
-    primaryTint1: '#000000',
-    primaryTint5: '#cccccc',
-    secondary: '#414a4c',
-    activeThumb: COLORS.white,
-    inactiveThumb: COLORS.white,
-  },
-};
-
-const lightTheme = {
-  __type: 'lightTheme',
-  COLORS: {
-    primaryTint1: COLORS.primaryTint1,
-    primaryTint5: COLORS.primaryTint3,
-    secondary: COLORS.secondary,
-    activeThumb: COLORS.white,
-    inactiveThumb: COLORS.white,
-  },
-};
-
 const Toggle = ({ checked, label, onChange }) => {
-  const [theme, setTheme] = React.useState(lightTheme);
+  const [theme, setTheme] = React.useState(primaryTheme);
 
   const toggleTheme = () =>
-    theme.__type === 'lightTheme' ? setTheme(darkTheme) : setTheme(lightTheme);
+    theme.__type === 'primary'
+      ? setTheme(secondaryTheme)
+      : setTheme(primaryTheme);
 
   return (
     <ThemeProvider theme={theme}>
@@ -70,13 +48,13 @@ const Toggle = ({ checked, label, onChange }) => {
               base: theme.COLORS.secondary,
             },
             inactive: {
-              base: theme.COLORS.primaryTint5,
+              base: theme.COLORS.primaryTint3,
             },
             activeThumb: {
-              base: theme.COLORS.activeThumb,
+              base: theme.COLORS.white,
             },
             inactiveThumb: {
-              base: theme.COLORS.inactiveThumb,
+              base: theme.COLORS.white,
             },
           }}
         />

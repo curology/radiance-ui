@@ -14,7 +14,7 @@ export const Card = styled.div`
 const primaryStyles = css`
   .slick-dots {
     li {
-      background-color: ${COLORS.purple};
+      background-color: ${COLORS.primary};
     }
   }
 `;

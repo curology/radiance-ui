@@ -65,61 +65,6 @@ export const legacyColors = {
   purple60: '#858298',
 };
 
-export const colorAliases = {
-  // Legacy
-  purple: brandColors.purple100,
-  purpleTint1: brandColors.purple85,
-  purpleTint2: brandColors.purple70,
-
-  // brand colors
-  primary: brandColors.purple100,
-  primaryTint1: brandColors.purple85,
-  primaryTint2: brandColors.purple70,
-  primaryTint3: brandColors.purple30,
-  secondary: brandColors.lavender100,
-  tertiary: brandColors.purple4,
-
-  // general colors
-  success: brandColors.statusGreen,
-  successBackground: brandColors.statusGreenBackground,
-  successBorder: brandColors.statusGreenBorder,
-  info: brandColors.statusPurple,
-  infoBackground: brandColors.statusPurpleBackground,
-  infoBorder: brandColors.statusPurpleBorder,
-  error: brandColors.statusRed,
-  errorBackground: brandColors.statusRedBackground,
-  errorBorder: brandColors.statusRedBorder,
-  default: brandColors.purple70,
-  defaultBackground: brandColors.purple10,
-  defaultBorder: brandColors.purple15,
-  accent: brandColors.red,
-  disabled: brandColors.purple10,
-  failure: brandColors.red,
-  hover: brandColors.purple4,
-  warning: legacyColors.yellowLight,
-
-  // ui colors
-  background: brandColors.purple4,
-  backgroundDark: brandColors.purple4,
-  border: brandColors.purple10,
-  divider: brandColors.purple10,
-
-  // form colors
-  radioBorder: brandColors.purple30,
-  radioBorderSelected: brandColors.lavender100,
-
-  // typography
-  textMuted: brandColors.purple70,
-  textGhost: brandColors.purple30,
-  textDisabled: brandColors.purple30,
-
-  // overlay
-  overlay: 'rgba(45, 45, 48, 0.7)',
-  overlayHidden: 'rgba(45, 45, 48, 0)',
-  overlaySolid: 'rgba(45, 45, 48, 1)',
-  overlayTransition: 'rgba(45, 45, 48, 0.3)',
-};
-
 export const postcardColors = {
   postcardSocialBg: '#f2f2f2',
   postcardWhite: brandColors.purple4,
@@ -154,7 +99,6 @@ export const guideColors = {
 
 const sharedColors = {
   ...brandColors,
-  ...colorAliases,
   ...postcardColors,
   ...guideColors,
 };

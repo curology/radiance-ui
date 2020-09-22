@@ -23,7 +23,7 @@ const TooltipContainer = styled.div`
 `;
 
 const TriggerContainer = styled.div`
-  background: ${COLORS.purple};
+  background: ${COLORS.primary};
   margin: 0 auto;
   padding: ${SPACER.small};
   color: ${COLORS.white};

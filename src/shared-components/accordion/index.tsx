@@ -150,7 +150,7 @@ class Accordion extends React.Component<
               rotate={isOpen ? 90 : 0}
               width={16}
               height={16}
-              fill={COLORS.purple}
+              fill={COLORS.primary}
             />
           </ArrowWrapper>
         </TitleWrapper>
