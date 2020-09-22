@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { COLORS } from 'src/constants';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
+import { withTheme } from 'emotion-theming';
+import { ThemeType } from 'src/constants/themes/types';
 
 import Thumbnails from './thumbnails';
 import {
@@ -25,6 +26,7 @@ type AccordionProps = {
   ) => void;
   rightAlignArrow?: boolean;
   title: React.ReactNode;
+  theme: ThemeType;
 };
 
 /**
@@ -125,6 +127,7 @@ class Accordion extends React.Component<
       noBorder,
       disabled,
       rightAlignArrow,
+      theme,
     } = this.props;
 
     return (
@@ -150,7 +153,7 @@ class Accordion extends React.Component<
               rotate={isOpen ? 90 : 0}
               width={16}
               height={16}
-              fill={COLORS.primary}
+              fill={theme.COLORS.primary}
             />
           </ArrowWrapper>
         </TitleWrapper>
@@ -166,4 +169,4 @@ class Accordion extends React.Component<
   }
 }
 
-export default Accordion;
+export default withTheme(Accordion);

@@ -33,11 +33,11 @@ export const trackStyle = {
   width: 40,
 };
 
-export const thumbStyle = {
+export const getThumbStyle = (theme) => ({
   height: 22,
   width: 22,
-  border: `1px solid ${COLORS.border}`,
+  border: `1px solid ${theme.COLORS.border}`,
   boxShadow: `none`,
   background: COLORS.white,
   backgroundColor: COLORS.white,
-};
+});
