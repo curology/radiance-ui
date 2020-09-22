@@ -15,7 +15,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
   };
 
   toggleAccordion = (accordion: string) => {
-    this.setState(state => ({ [accordion]: !state[accordion] }));
+    this.setState((state) => ({ [accordion]: !state[accordion] }));
   };
 
   render(): JSX.Element {
@@ -41,8 +41,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               Accordion.Content adds standard accordion padding.
             </Accordion.Content>
           </Accordion>
-        </Accordion.Container>
-        <Accordion.Container>
+
           <Accordion
             title={
               <Accordion.Content>
@@ -57,8 +56,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
               This is styled with Accordion.Content
             </Accordion.Content>
           </Accordion>
-        </Accordion.Container>
-        <Accordion.Container>
+
           <Accordion
             title={
               <Accordion.Content>
@@ -71,8 +69,7 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
           >
             <Accordion.Content>Expandable</Accordion.Content>
           </Accordion>
-        </Accordion.Container>
-        <Accordion.Container>
+
           <Accordion
             title={
               <Accordion.Content>
@@ -84,6 +81,8 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
             rightAlignArrow
           >
             <Accordion.Content>Expandable</Accordion.Content>
+            <Accordion.Content>Expandable #2</Accordion.Content>
+            <Accordion.Content>Expandable #3</Accordion.Content>
           </Accordion>
         </Accordion.Container>
       </div>

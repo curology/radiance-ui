@@ -141,9 +141,11 @@ Wraps padding around children nodes
 ```jsx
 import { Accordion } from 'radiance-ui';
 
-<Accordion title={<Accordion.Content>Title</Accordion.Content>}>
-  <Accordion.Content>Expansion with content padding</Accordion.Content>
-</Accordion>;
+<Accordion.Container>
+  <Accordion title={<Accordion.Content>Title</Accordion.Content>}>
+    <Accordion.Content>Expansion with content padding</Accordion.Content>
+  </Accordion>
+</Accordion.Container>;
 ```
 
 ### Truncate
@@ -154,18 +156,20 @@ be added if the text is a direct child.
 ```jsx
 import { Accordion } from 'radiance-ui';
 
-<Accordion
-  title={
+<Accordion.Container>
+  <Accordion
+    title={
+      <Accordion.Content>
+        <Accordion.Truncate>
+          This uses Accordion.Truncate to shorten long text.
+        </Accordion.Truncate>
+      </Accordion.Content>
+    }
+  >
     <Accordion.Content>
-      <Accordion.Truncate>
-        This uses Accordion.Truncate to shorten long text.
-      </Accordion.Truncate>
+      Accordion.Truncate is a wrapper that will cut off any text (direct
+      children only) with an added ellipsis and prevents line wrapping.
     </Accordion.Content>
-  }
->
-  <Accordion.Content>
-    Accordion.Truncate is a wrapper that will cut off any text (direct children
-    only) with an added ellipsis and prevents line wrapping.
-  </Accordion.Content>
-</Accordion>;
+  </Accordion>
+</Accordion.Container>;
 ```
