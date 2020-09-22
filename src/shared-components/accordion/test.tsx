@@ -21,9 +21,7 @@ const AccordionWithTheme = (additionalProps?: Record<string, unknown>) => (
 
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
-    const component = renderer.create(
-      <AccordionWithTheme {...testAccordionProps} />,
-    );
+    const component = renderer.create(<AccordionWithTheme />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
