@@ -47,10 +47,9 @@ const SECONDARY_COLORS = {
 
   // overlay
   overlay: null,
-  overlayHidden: null,
   overlaySolid: null,
-  overlayTransition: null,
 
+  black: COLORS.black,
   white: COLORS.white,
 };
 

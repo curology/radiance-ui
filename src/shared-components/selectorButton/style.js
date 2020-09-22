@@ -40,19 +40,19 @@ export const SelectorIcon = styled.div`
   `};
 `;
 
-const primarySelectorStyle = checked => css`
+const primarySelectorStyle = (checked) => css`
   background-color: ${checked ? COLORS.primary : 'transparent'};
   border-color: ${COLORS.primary};
 `;
 
-const secondarySelectorStyle = checked => css`
+const secondarySelectorStyle = (checked) => css`
   background-color: ${checked ? COLORS.secondary : 'transparent'};
   border-color: ${checked ? COLORS.secondary : COLORS.primary};
 `;
 
 const disabledSelectorStyle = css`
-  background-color: ${COLORS.purple30};
-  border-color: ${COLORS.purple30};
+  background-color: ${COLORS.primaryTint3};
+  border-color: ${COLORS.primaryTint3};
   cursor: not-allowed;
 `;
 

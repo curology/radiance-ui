@@ -20,7 +20,7 @@ export const FieldContainer = styled.div`
 export const Label = styled.label`
   ${TYPOGRAPHY_STYLE.label};
 
-  ${({ disabled }) => disabled && `color:${COLORS.purple30};`};
+  ${({ disabled }) => disabled && `color:${COLORS.primaryTint3};`};
 `;
 
 const inputStyles = css`
@@ -80,7 +80,7 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = messagesType => css`
+const applyMessagesStyles = (messagesType) => css`
   svg.radiance-field-input-icon {
     opacity: 1;
   }

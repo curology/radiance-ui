@@ -47,10 +47,9 @@ const PRIMARY_COLORS = {
 
   // overlay
   overlay: 'rgba(45, 45, 48, 0.7)',
-  overlayHidden: 'rgba(45, 45, 48, 0)',
   overlaySolid: 'rgba(45, 45, 48, 1)',
-  overlayTransition: 'rgba(45, 45, 48, 0.3)',
 
+  black: COLORS.black,
   white: COLORS.white,
 };
 

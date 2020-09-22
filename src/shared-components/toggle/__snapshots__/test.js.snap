@@ -1,16 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Toggle /> UI snapshot renders the component 1`] = `
-Array [
-  <div>
-    <button
-      onClick={[Function]}
-      type="button"
-    >
-      swap theme
-    </button>
-  </div>,
-  .emotion-2 {
+.emotion-2 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -50,35 +41,49 @@ Array [
 }
 
 <div
-    className="emotion-2 emotion-3"
+  className="emotion-2 emotion-3"
+>
+  <span
+    className="emotion-0 emotion-1"
   >
-    <span
-      className="emotion-0 emotion-1"
-    >
-      Label Text
-    </span>
+    Label Text
+  </span>
+  <div
+    onClick={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    style={
+      Object {
+        "KhtmlUserSelect": "none",
+        "MozUserSelect": "none",
+        "WebkitTapHighlightColor": "transparent",
+        "WebkitTouchCallout": "none",
+        "WebkitUserSelect": "none",
+        "alignItems": "center",
+        "backgroundColor": "transparent",
+        "border": 0,
+        "cursor": "pointer",
+        "display": "flex",
+        "justifyContent": "flex-start",
+        "msUserSelect": "none",
+        "padding": 0,
+        "position": "relative",
+        "userSelect": "none",
+        "width": 52,
+      }
+    }
+  >
     <div
-      onClick={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
       style={
         Object {
-          "KhtmlUserSelect": "none",
-          "MozUserSelect": "none",
-          "WebkitTapHighlightColor": "transparent",
-          "WebkitTouchCallout": "none",
-          "WebkitUserSelect": "none",
           "alignItems": "center",
-          "backgroundColor": "transparent",
-          "border": 0,
-          "cursor": "pointer",
+          "backgroundColor": "rgb(195,192,205)",
+          "borderRadius": 100,
           "display": "flex",
-          "justifyContent": "flex-start",
-          "msUserSelect": "none",
+          "height": 24,
+          "justifyContent": "center",
           "padding": 0,
-          "position": "relative",
-          "userSelect": "none",
-          "width": 52,
+          "width": 40,
         }
       }
     >
@@ -86,116 +91,101 @@ Array [
         style={
           Object {
             "alignItems": "center",
-            "backgroundColor": "rgb(195,192,205)",
-            "borderRadius": 100,
+            "color": "#FAFAFA",
             "display": "flex",
-            "height": 24,
+            "fontFamily": "'Helvetica Neue', Helvetica, sans-serif",
+            "fontSize": 11,
+            "height": 20,
             "justifyContent": "center",
-            "padding": 0,
-            "width": 40,
+            "left": 4,
+            "lineHeight": 0,
+            "marginBottom": "auto",
+            "marginTop": "auto",
+            "opacity": 0,
+            "position": "relative",
+            "width": 26,
           }
         }
       >
-        <div
-          style={
-            Object {
-              "alignItems": "center",
-              "color": "#FAFAFA",
-              "display": "flex",
-              "fontFamily": "'Helvetica Neue', Helvetica, sans-serif",
-              "fontSize": 11,
-              "height": 20,
-              "justifyContent": "center",
-              "left": 4,
-              "lineHeight": 0,
-              "marginBottom": "auto",
-              "marginTop": "auto",
-              "opacity": 0,
-              "position": "relative",
-              "width": 26,
-            }
-          }
-        >
-          
-        </div>
-        <div
-          style={
-            Object {
-              "alignItems": "center",
-              "bottom": "0px",
-              "color": "rgba(255,255,255,0.6)",
-              "display": "flex",
-              "fontFamily": "'Helvetica Neue', Helvetica, sans-serif",
-              "fontSize": 11,
-              "height": 20,
-              "justifyContent": "center",
-              "lineHeight": 0,
-              "marginBottom": "auto",
-              "marginTop": "auto",
-              "opacity": 1,
-              "paddingRight": 5,
-              "position": "relative",
-              "width": 26,
-            }
-          }
-        >
-          
-        </div>
+        
       </div>
       <div
         style={
           Object {
             "alignItems": "center",
-            "alignSelf": "stretch",
+            "bottom": "0px",
+            "color": "rgba(255,255,255,0.6)",
             "display": "flex",
-            "flex": 1,
-            "height": "100%",
-            "justifyContent": "flex-start",
-            "left": 0,
-            "position": "absolute",
-            "top": 0,
+            "fontFamily": "'Helvetica Neue', Helvetica, sans-serif",
+            "fontSize": 11,
+            "height": 20,
+            "justifyContent": "center",
+            "lineHeight": 0,
+            "marginBottom": "auto",
+            "marginTop": "auto",
+            "opacity": 1,
+            "paddingRight": 5,
+            "position": "relative",
+            "width": 26,
           }
         }
       >
-        <div
-          style={
-            Object {
-              "MozBoxSizing": "border-box",
-              "WebkitBoxSizing": "border-box",
-              "alignSelf": "center",
-              "background": "#ffffff",
-              "backgroundColor": "rgb(255,255,255)",
-              "border": "1px solid #ededf0",
-              "borderRadius": "50%",
-              "boxShadow": "none",
-              "boxSizing": "border-box",
-              "display": "flex",
-              "height": 22,
-              "left": 1,
-              "position": "relative",
-              "width": 22,
-            }
-          }
-        />
+        
       </div>
-      <input
-        onClick={[Function]}
+    </div>
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "display": "flex",
+          "flex": 1,
+          "height": "100%",
+          "justifyContent": "flex-start",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+    >
+      <div
         style={
           Object {
-            "border": 0,
-            "clip": "rect(0 0 0 0)",
-            "height": 1,
-            "margin": -1,
-            "overflow": "hidden",
-            "padding": 0,
-            "position": "absolute",
-            "width": 1,
+            "MozBoxSizing": "border-box",
+            "WebkitBoxSizing": "border-box",
+            "alignSelf": "center",
+            "background": "#ffffff",
+            "backgroundColor": "rgb(255,255,255)",
+            "border": "1px solid #ededf0",
+            "borderRadius": "50%",
+            "boxShadow": "none",
+            "boxSizing": "border-box",
+            "display": "flex",
+            "height": 22,
+            "left": 1,
+            "position": "relative",
+            "width": 22,
           }
         }
-        type="checkbox"
-        value={false}
       />
     </div>
-  </div>,
-]
+    <input
+      onClick={[Function]}
+      style={
+        Object {
+          "border": 0,
+          "clip": "rect(0 0 0 0)",
+          "height": 1,
+          "margin": -1,
+          "overflow": "hidden",
+          "padding": 0,
+          "position": "absolute",
+          "width": 1,
+        }
+      }
+      type="checkbox"
+      value={false}
+    />
+  </div>
+</div>
 `;
