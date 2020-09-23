@@ -1,5 +1,27 @@
+import 'focus-visible';
 import { COLORS, FONTS, TYPOGRAPHY_CONSTANTS } from '../../constants';
 import { baseBodyStyles } from '../../shared-components/typography';
+
+/**
+ * Enables use of the .focus-visible polyfill.
+ *
+ * This will allow us to differentiate focus styling between mouse focus and keyboard focus.
+ *
+ * This *does not* apply to input tags. For more details, see {@link https://github.com/WICG/focus-visible/blob/fda80f8401807c1cbb702fb1a15b9635828bfc6d/README.md#how-it-works "How It Works" section}
+ *
+ * {@link https://github.com/WICG/focus-visible Github README}
+ *
+ * {@link https://wicg.github.io/focus-visible/demo/ W3C Playground}
+ */
+const focusStyles = `
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: 0;
+  box-shadow: none;
+}
+
+.focus-visible {
+  // TODO: Determine if we want to use this as non-browser fallback
+}`;
 
 export const resetStyles = `
   html {
@@ -181,6 +203,8 @@ export const resetStyles = `
   [hidden] {
     display: none !important;
   }
+
+  ${focusStyles}
 `;
 
 export const brandStyles = `
