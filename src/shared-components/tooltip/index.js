@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
+import Arrow from 'src/svgs/icons/arrow.svg';
 
 import OffClickWrapper from '../offClickWrapper';
 import {
@@ -10,7 +11,6 @@ import {
   TooltipContent,
   ArrowImageContainer,
 } from './style';
-import Arrow from './arrow.svg';
 import { COLORS } from '../../constants';
 
 const propTypes = {

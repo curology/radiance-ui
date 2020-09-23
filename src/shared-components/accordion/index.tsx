@@ -7,30 +7,43 @@ import Thumbnails from './thumbnails';
 import {
   AccordionBox,
   ArrowWrapper,
-  TitleWrapper,
-  ExpansionWrapper,
   Container,
   Content,
+  ExpansionWrapper,
+  TitleWrapper,
   Truncate,
 } from './style';
 
 type AccordionProps = {
+  borderRadius?: string;
   children: React.ReactNode;
-  disabled: boolean;
+  disabled?: boolean;
   isOpen: boolean;
-  noBorder: boolean;
+  noBorder?: boolean;
   onClick: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
   ) => void;
-  rightAlignArrow: boolean;
+  rightAlignArrow?: boolean;
   title: React.ReactNode;
 };
 
+/**
+ * TODO-TS: Convert to Function component and use ES6 defaults
+ */
+type AccordionDefaultProps = {
+  borderRadius: string;
+  disabled: boolean;
+  noBorder: boolean;
+  rightAlignArrow: boolean;
+};
+
 class Accordion extends React.Component<
-  AccordionProps,
+  AccordionProps & AccordionDefaultProps,
   { contentHeight: string }
 > {
   static propTypes = {
+    /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
+    borderRadius: PropTypes.string,
     /** node(s) that will render only when expanded */
     children: PropTypes.node.isRequired,
     /** when true, the accordion will be greyed out and the onClick prop will be disabled */
@@ -48,6 +61,7 @@ class Accordion extends React.Component<
   };
 
   static defaultProps = {
+    borderRadius: '4px',
     disabled: false,
     noBorder: false,
     rightAlignArrow: false,
@@ -103,6 +117,7 @@ class Accordion extends React.Component<
   render() {
     const { contentHeight } = this.state;
     const {
+      borderRadius,
       title,
       isOpen,
       onClick,
@@ -120,9 +135,11 @@ class Accordion extends React.Component<
               onClick(event);
             }
           }}
+          borderRadius={borderRadius}
           onKeyDown={this.handleKeyDown}
           disabled={!!disabled}
           role="button"
+          isOpen={isOpen}
           tabIndex={disabled ? -1 : 0}
           aria-disabled={!!disabled}
           aria-expanded={isOpen}
