@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { COLORS, SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
@@ -18,7 +19,8 @@ export const TabsContainer = styled.div`
   }
 `;
 
-export const TabItem = styled.div`
+export const TabItem = styled.button`
+  ${buttonReset}
   ${TYPOGRAPHY_STYLE.button};
   display: flex;
   align-items: center;
