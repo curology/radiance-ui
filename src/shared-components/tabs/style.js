@@ -2,7 +2,13 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
+import {
+  BOX_SHADOWS,
+  COLORS,
+  SPACER,
+  ANIMATION,
+  MEDIA_QUERIES,
+} from '../../constants';
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -29,11 +35,17 @@ export const TabItem = styled.button`
   margin: 0;
   padding: ${SPACER.medium} ${SPACER.large};
   transition: ${ANIMATION.defaultTiming};
+  border-radius: ${SPACER.xsmall};
 
   color: ${({ active }) => (active ? COLORS.primary : COLORS.primaryTint3)};
 
   &:hover {
     color: ${COLORS.primary};
     transition: ${ANIMATION.defaultTiming};
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;

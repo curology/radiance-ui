@@ -72,7 +72,7 @@ export const TitleWrapper = styled.div<{
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focusSecondary};
+    box-shadow: ${BOX_SHADOWS.focusInner};
   }
 
   ${AccordionBox}:last-of-type & {

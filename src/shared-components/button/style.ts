@@ -62,16 +62,10 @@ const quaternaryStyles = (buttonColor: string) => css`
   background-color: transparent;
   color: ${textColorsAssociatedWithColors[buttonColor]
     ? textColorsAssociatedWithColors[buttonColor].tint2
-    : tinycolor(buttonColor)
-      .lighten(10)
-      .desaturate(50)
-      .toHexString()};
+    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
   fill: ${textColorsAssociatedWithColors[buttonColor]
     ? textColorsAssociatedWithColors[buttonColor].tint2
-    : tinycolor(buttonColor)
-      .lighten(10)
-      .desaturate(50)
-      .toHexString()};
+    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
 
   &:hover,
   &:focus,
@@ -81,10 +75,7 @@ const quaternaryStyles = (buttonColor: string) => css`
     background-color: transparent;
     color: ${textColorsAssociatedWithColors[buttonColor]
     ? textColorsAssociatedWithColors[buttonColor].tint2
-    : tinycolor(buttonColor)
-      .lighten(10)
-      .desaturate(50)
-      .toHexString()};
+    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
   }
 `;
 
@@ -186,15 +177,15 @@ export const baseButtonStyles = ({
   &:active,
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focusSecondary};
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 
   ${parseTheme(disabled, buttonType, !!isLoading, buttonColor)};
   ${isLoading && loadingStyles};
 
   ${!!textColor &&
-    !disabled &&
-    `
+  !disabled &&
+  `
     color: ${textColor};
     fill: ${textColor};
   `};
