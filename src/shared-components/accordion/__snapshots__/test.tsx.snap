@@ -53,7 +53,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 
 .emotion-4:focus {
   outline: none;
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: inset 0px 0px 0px 2px #332e54;
 }
 
 .emotion-9:last-of-type .emotion-4:focus {
@@ -122,7 +122,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 
 .emotion-4:focus {
   outline: none;
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: inset 0px 0px 0px 2px #332e54;
 }
 
 .emotion-9:last-of-type .emotion-4:focus {
@@ -234,7 +234,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
 
 .emotion-4:focus {
   outline: none;
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: inset 0px 0px 0px 2px #332e54;
 }
 
 .emotion-9:last-of-type .emotion-4:focus {
