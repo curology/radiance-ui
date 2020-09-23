@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
 import MobileDropdown from 'src/shared-components/dropdown/mobileDropdown';
 
 const DropdownContainer = styled.div`
@@ -18,20 +17,23 @@ class MobileExample extends React.Component {
     { value: 3, label: 'Third option' },
   ];
 
-  onChange = event => {
+  onChange = (event) => {
     const { value, selectedOptions } = event.target;
 
     if (selectedOptions && selectedOptions.length) {
       this.setState({ value });
     }
-  }
+  };
 
   render() {
+    const { value } = this.state;
+
     return (
       <DropdownContainer>
         Select an option:
         <MobileDropdown
-          value={this.state.value}
+          borderRadius="4px"
+          value={value}
           options={this.options}
           onSelectChange={this.onChange}
         />

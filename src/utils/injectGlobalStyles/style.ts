@@ -17,10 +17,6 @@ const focusStyles = `
 .js-focus-visible :focus:not(.focus-visible) {
   outline: 0;
   box-shadow: none;
-}
-
-.focus-visible {
-  // TODO: Determine if we want to use this as non-browser fallback
 }`;
 
 export const resetStyles = `
