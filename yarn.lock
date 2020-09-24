@@ -2855,9 +2855,9 @@
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
 "@types/enzyme@^3.10.6":
-  version "3.10.6"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.6.tgz#a34a6b09ff732be29c194dc8d786555f4717fd85"
-  integrity sha512-Jxyn2U+UfhmrE7EaeZYfV1sPA5OEDuZmg9Lxj8TxOnfCn71flf0Cn1136LWdCVYj7yapLFmUWqKCcgplWNZCJg==
+  version "3.10.7"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.7.tgz#ebdf3b972d293095e09af479e36c772025285e3a"
+  integrity sha512-J+0wduPGAkzOvW7sr6hshGv1gBI3WXLRTczkRKzVPxLP3xAkYxZmvvagSBPw8Z452fZ8TGUxCmAXcb44yLQksw==
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -3052,15 +3052,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
-  version "16.9.43"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.43.tgz#c287f23f6189666ee3bebc2eb8d0f84bcb6cdb6b"
-  integrity sha512-PxshAFcnJqIWYpJbLPriClH53Z2WlJcVZE+NP2etUtWQs2s7yIMj3/LDKZT/5CHJ/F62iyjVCDu2H3jHEXIxSg==
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
-
-"@types/react@^16.9.49":
+"@types/react@*", "@types/react@^16.9.49":
   version "16.9.49"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.49.tgz#09db021cf8089aba0cdb12a49f8021a69cce4872"
   integrity sha512-DtLFjSj0OYAdVLBbyjhuV9CdGVHCkHn2R+xr3XkBvK2rS1Y1tkc14XSGjYgm5Fjjr90AxH9tiSzc1pCFMGO06g==
@@ -5432,7 +5424,7 @@ cssstyle@^2.2.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@^2.2.0, csstype@^2.5.7, csstype@^2.6.7:
+csstype@^2.5.7, csstype@^2.6.7:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.10.tgz#e63af50e66d7c266edb6b32909cfd0aabe03928b"
   integrity sha512-D34BqZU4cIlMCY93rZHbrq9pjTAQJ3U8S8rfBqjwHxkGPThWFjzZDQpgMJY0QViLxth6ZKYiwFBo14RdN44U/w==
