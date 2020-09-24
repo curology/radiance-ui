@@ -52,10 +52,12 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const AlertContainer = styled.div<{
+export const AlertContainer = styled.button<{
   exiting: boolean;
   alertType: AlertType;
 }>`
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto ${SPACER.small};

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FocusScope } from '@react-aria/focus';
 
 import Avatar from '../avatar';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
@@ -140,32 +141,38 @@ class Alert extends React.Component<AlertProps, AlertState> {
     }
 
     return (
-      <AlertContainer
-        alertType={type}
-        exiting={exiting}
-        onClick={this.alertExitHandler}
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...rest}
-      >
-        <MainContainer>
-          <IconContainer hasAvatar={!!avatarSrc}>
-            {avatarSrc ? (
-              <Avatar size="small" src={avatarSrc} alt="avatar" />
-            ) : (
-              <Icon fill={COLORS.white} />
-            )}
-          </IconContainer>
-          <ContentContainer truncateText={truncateText} ref={this.contentText}>
-            {content}
-          </ContentContainer>
-        </MainContainer>
-        {ctaContent && (
-          <CtaContent>
-            <div>{ctaContent}</div>
-            <ChevronIcon fill={COLORS.white} width={14} height={14} />
-          </CtaContent>
-        )}
-      </AlertContainer>
+      <FocusScope restoreFocus>
+        <AlertContainer
+          alertType={type}
+          exiting={exiting}
+          onClick={this.alertExitHandler}
+          tabIndex={0}
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          {...rest}
+        >
+          <MainContainer>
+            <IconContainer hasAvatar={!!avatarSrc}>
+              {avatarSrc ? (
+                <Avatar size="small" src={avatarSrc} alt="avatar" />
+              ) : (
+                <Icon fill={COLORS.white} />
+              )}
+            </IconContainer>
+            <ContentContainer
+              truncateText={truncateText}
+              ref={this.contentText}
+            >
+              {content}
+            </ContentContainer>
+          </MainContainer>
+          {ctaContent && (
+            <CtaContent>
+              <div>{ctaContent}</div>
+              <ChevronIcon fill={COLORS.white} width={14} height={14} />
+            </CtaContent>
+          )}
+        </AlertContainer>
+      </FocusScope>
     );
   }
 }
