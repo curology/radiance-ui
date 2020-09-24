@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { COLORS, SPACER } from '../../constants';
+import { BOX_SHADOWS, COLORS, SPACER } from '../../constants';
 
 export const Container = styled.div`
   position: relative;
@@ -41,3 +41,13 @@ export const thumbStyle = {
   background: COLORS.white,
   backgroundColor: COLORS.white,
 };
+
+export const ReactToggleButtonContainer = styled.div`
+  > div:first-of-type {
+    > .focus-visible {
+      box-shadow: ${BOX_SHADOWS.focus};
+      outline: none;
+      border-radius: 12px;
+    }
+  }
+`;
