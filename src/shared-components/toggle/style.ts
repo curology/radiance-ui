@@ -44,10 +44,12 @@ export const thumbStyle = {
 
 export const ReactToggleButtonContainer = styled.div`
   > div:first-of-type {
-    > .focus-visible {
-      box-shadow: ${BOX_SHADOWS.focus};
-      outline: none;
-      border-radius: 12px;
+    > input {
+      &:focus {
+        box-shadow: ${BOX_SHADOWS.focus};
+        outline: none;
+        border-radius: 12px;
+      }
     }
   }
 `;

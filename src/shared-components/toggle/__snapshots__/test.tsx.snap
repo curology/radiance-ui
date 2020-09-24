@@ -40,7 +40,7 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-2 > div:first-of-type > .focus-visible {
+.emotion-2 > div:first-of-type > input:focus {
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   outline: none;
   border-radius: 12px;
