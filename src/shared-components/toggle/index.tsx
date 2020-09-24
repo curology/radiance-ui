@@ -47,7 +47,6 @@ const Toggle = ({ checked = false, label = '', onChange }: ToggleProps) => (
         thumbStyle={thumbStyle}
         trackStyle={trackStyle}
         thumbAnimateRange={[1, 17]}
-        icons={false}
         colors={{
           active: {
             base: COLORS.secondary,
