@@ -24,6 +24,7 @@ export { default as OffClickWrapper } from './offClickWrapper';
 export { default as OptionButton } from './optionButton';
 export { default as ProgressBar } from './progressBar';
 export { default as RadioButton } from './radioButton';
+export { default as SegmentedControl } from './segmentedControl';
 export { default as Tabs } from './tabs';
 export { default as Toggle } from './toggle';
 export { default as Tooltip } from './tooltip';
