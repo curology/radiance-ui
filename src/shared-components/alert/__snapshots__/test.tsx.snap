@@ -34,6 +34,8 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
 }
 
 .emotion-6 {
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -95,9 +97,10 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
   max-height: none;
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
   onClick={[Function]}
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -115,7 +118,7 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
       Your email address was updated successfully!
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`Alert UI snapshots renders a sticky alert 1`] = `
@@ -216,6 +219,8 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
 }
 
 .emotion-6 {
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -277,9 +282,10 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
   max-height: none;
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
   onClick={[Function]}
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -297,7 +303,7 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
       Your email address was updated successfully!
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`Alert UI snapshots renders custom component passed in content prop 1`] = `
@@ -398,6 +404,8 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
 }
 
 .emotion-6 {
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -459,9 +467,10 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
   max-height: none;
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
   onClick={[Function]}
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -489,7 +498,7 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
       </div>
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`Alert UI snapshots renders error alert 1`] = `
@@ -622,6 +631,8 @@ exports[`Alert UI snapshots renders error alert 1`] = `
 }
 
 .emotion-6 {
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -651,9 +662,10 @@ exports[`Alert UI snapshots renders error alert 1`] = `
   }
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
   onClick={[Function]}
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -671,7 +683,7 @@ exports[`Alert UI snapshots renders error alert 1`] = `
       Your email address was updated successfully!
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`Alert UI snapshots renders success alert 1`] = `
@@ -772,6 +784,8 @@ exports[`Alert UI snapshots renders success alert 1`] = `
 }
 
 .emotion-6 {
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -801,9 +815,10 @@ exports[`Alert UI snapshots renders success alert 1`] = `
   }
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
   onClick={[Function]}
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -821,5 +836,5 @@ exports[`Alert UI snapshots renders success alert 1`] = `
       Your email address was updated successfully!
     </div>
   </div>
-</div>
+</button>
 `;
