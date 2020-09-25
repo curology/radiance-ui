@@ -100,7 +100,6 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
 <button
   className="emotion-6 emotion-7"
   onClick={[Function]}
-  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -285,7 +284,6 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
 <button
   className="emotion-6 emotion-7"
   onClick={[Function]}
-  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -470,7 +468,6 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
 <button
   className="emotion-6 emotion-7"
   onClick={[Function]}
-  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -665,7 +662,6 @@ exports[`Alert UI snapshots renders error alert 1`] = `
 <button
   className="emotion-6 emotion-7"
   onClick={[Function]}
-  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -818,7 +814,6 @@ exports[`Alert UI snapshots renders success alert 1`] = `
 <button
   className="emotion-6 emotion-7"
   onClick={[Function]}
-  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"

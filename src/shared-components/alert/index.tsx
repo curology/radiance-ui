@@ -144,7 +144,6 @@ class Alert extends React.Component<AlertProps, AlertState> {
         alertType={type}
         exiting={exiting}
         onClick={this.alertExitHandler}
-        tabIndex={0}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
       >
