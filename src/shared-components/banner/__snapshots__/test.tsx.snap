@@ -33,6 +33,9 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
 }
 
 .emotion-6 {
+  background: transparent;
+  border: none;
+  width: 100%;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -42,15 +45,20 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   box-shadow: 0px 8px 24px rgba(189,32,15,0.05);
 }
 
+.emotion-6:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
 @media (min-width:768px) {
   .emotion-6 {
     margin: 0 auto 1rem;
   }
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
-  onClick={[Function]}
+  tabIndex={-1}
 >
   <div
     className="emotion-4 emotion-5"
@@ -68,7 +76,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
       Error banner
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`Banner UI snapshots renders info type and text 1`] = `
@@ -104,6 +112,9 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
 }
 
 .emotion-6 {
+  background: transparent;
+  border: none;
+  width: 100%;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -113,15 +124,20 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
 }
 
+.emotion-6:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
 @media (min-width:768px) {
   .emotion-6 {
     margin: 0 auto 1rem;
   }
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
-  onClick={[Function]}
+  tabIndex={-1}
 >
   <div
     className="emotion-4 emotion-5"
@@ -139,11 +155,14 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
       Default banner
     </div>
   </div>
-</div>
+</button>
 `;
 
 exports[`Banner UI snapshots renders success type and text 1`] = `
 .emotion-6 {
+  background: transparent;
+  border: none;
+  width: 100%;
   cursor: pointer;
   position: relative;
   margin: 0 auto 0.5rem;
@@ -151,6 +170,11 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   border-radius: 0.5rem;
   background-color: #2B6E33;
   box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
+}
+
+.emotion-6:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
 @media (min-width:768px) {
@@ -190,9 +214,9 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   margin: -3px 0 0 1rem;
 }
 
-<div
+<button
   className="emotion-6 emotion-7"
-  onClick={[Function]}
+  tabIndex={-1}
 >
   <div
     className="emotion-4 emotion-5"
@@ -210,5 +234,5 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
       Success Banner
     </div>
   </div>
-</div>
+</button>
 `;
