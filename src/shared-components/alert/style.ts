@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { css, keyframes } from '@emotion/core';
 
 import {
+  BOX_SHADOWS,
   COLORS,
   MEDIA_QUERIES,
   SPACER,
@@ -52,10 +53,12 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const AlertContainer = styled.div<{
+export const AlertContainer = styled.button<{
   exiting: boolean;
   alertType: AlertType;
 }>`
+  border: none;
+  text-align: left;
   cursor: pointer;
   position: relative;
   margin: 0 auto ${SPACER.small};
@@ -67,6 +70,11 @@ export const AlertContainer = styled.div<{
   transition: ${ANIMATION.defaultTiming};
   transform: ${({ exiting }) =>
     exiting ? 'translate3d(0, -24px, 0)' : 'translate3d(0, 0, 0)'};
+
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focus};
+  }
 
   ${({ alertType }) => {
     switch (alertType) {
