@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
+.emotion-8 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 80px;
+  background-color: #ededf0;
+  padding: 0.25rem;
+  border: 5px solid #ededf0;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  border-radius: 80px;
+  width: 33.333333333333336%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  -webkit-transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  background-color: white;
+  color: #332e54;
+  font-weight: bold;
+  -webkit-transform: initial;
+  -ms-transform: initial;
+  transform: initial;
+}
+
+.emotion-2 {
+  background: transparent;
+  border: none;
+  color: #524D6E;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #706D87;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 80px;
+  background-color: #ededf0;
+  width: 33.333333333333336%;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+<div
+  className="emotion-8 emotion-9"
+>
+  <div
+    className="emotion-0 emotion-1"
+    transform="initial"
+    width={33.333333333333336}
+  >
+    Tab 1
+  </div>
+  <button
+    className="emotion-2 emotion-3"
+    onClick={[Function]}
+    width={33.333333333333336}
+  >
+    Tab 1
+  </button>
+  <button
+    className="emotion-2 emotion-3"
+    onClick={[Function]}
+    width={33.333333333333336}
+  >
+    Tab 2
+  </button>
+  <button
+    className="emotion-2 emotion-3"
+    onClick={[Function]}
+    width={33.333333333333336}
+  >
+    Tab 3
+  </button>
+</div>
+`;
