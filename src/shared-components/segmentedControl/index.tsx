@@ -11,23 +11,30 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   const initialActiveItem = segmentItems.find(
     (item: SegmentItemType) => item.id === initialActiveId,
   );
+  const initialActiveIndex = initialActiveItem
+    ? segmentItems.indexOf(initialActiveItem)
+    : 0;
 
   const targetRef = useRef<HTMLDivElement>(null);
-  const [activeSegmentId, setActiveSegmentId] = useState(1);
+  const [activeSegmentId, setActiveSegmentId] = useState(initialActiveId);
   const [activeSegmentText, setActiveSegmentText] = useState(
     initialActiveItem?.text,
   );
+  const [activeSegmentIndex, setActiveSegmentIndex] = useState(
+    initialActiveIndex,
+  );
   const [transform, setTransform] = useState('initial');
-  const [width, setWidth] = useState(0);
+  const [targetWidth, setTargetWidth] = useState(0);
   const segmentWidth = 100 / segmentItems.length;
 
   useEffect(() => {
     if (targetRef.current) {
-      const activeIndex = initialActiveItem
-        ? segmentItems.indexOf(initialActiveItem)
-        : 0;
-      setWidth(targetRef.current.offsetWidth);
-      setTransform(`translate3d(${width * activeIndex}px, 0, 0)`);
+      setTargetWidth(targetRef.current.offsetWidth);
+      setTransform(
+        `translate3d(${
+          targetRef.current.offsetWidth * activeSegmentIndex
+        }px, 0, 0)`,
+      );
     }
   }, [targetRef]);
 
@@ -35,7 +42,8 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     const index = segmentItems.indexOf(segment);
     setActiveSegmentId(segment.id);
     setActiveSegmentText(segment.text);
-    setTransform(`translate3d(${width * index}px, 0, 0)`);
+    setActiveSegmentIndex(index);
+    setTransform(`translate3d(${targetWidth * index}px, 0, 0)`);
     return onClick ? onClick(segment) : null;
   };
 
