@@ -87,7 +87,6 @@ export const Selector = styled.div`
   &:active,
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;
 
