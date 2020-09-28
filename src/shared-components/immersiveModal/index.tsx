@@ -38,7 +38,7 @@ const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
 const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
-const getHtmlRef = () => document.querySelector('html') || document.body;
+const getHtmlNode = () => document.querySelector('html') || document.body;
 const getDomNode = () =>
   (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
   document.body;
@@ -59,7 +59,7 @@ const ImmersiveModal = ({
   const [showMobileHeaderBar, setShowMobileHeaderBar] = useState(false);
   const [showDesktopHeaderBar, setShowDesktopHeaderBar] = useState(false);
 
-  const htmlNode = useRef<HTMLElement>(getHtmlRef());
+  const htmlNode = useRef<HTMLElement>(getHtmlNode());
   const domNode = useRef<HTMLElement>(getDomNode());
   const modalMobileScrollingElement = useRef<HTMLElement | null>(
     getModalMobileScrollingElement(),
@@ -94,7 +94,7 @@ const ImmersiveModal = ({
   };
 
   useEffect(() => {
-    htmlNode.current = getHtmlRef();
+    htmlNode.current = getHtmlNode();
     domNode.current = getDomNode();
     modalMobileScrollingElement.current = getModalMobileScrollingElement();
     modalDesktopScrollingElement.current = getModalDesktopScrollingElement();

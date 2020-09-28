@@ -10,8 +10,8 @@ type CrossIconComponentProps = {
 };
 
 /**
- * We wrap the Desktop-associated CrossIcon functionality as a React component
- * in order to take advantage of @react-aria/focus useFocusManager hook.
+ * We wrap the second of the CrossIcons we render as a React component
+ * in order to use the @react-aria/focus useFocusManager hook.
  *
  * This allows us to automatically toggle focus state between the two separate
  * CrossIcons present in the markup. (We keep both rendered for our transitions.)
@@ -26,9 +26,10 @@ const CrossIconComponent = ({
     if (showDesktopHeaderBar) {
       focusManager.focusNext();
     } else {
-      // This clause is setup to return the focus state from the Desktop-associated CrossIcon
-      // to the Mobile-associated This fires the first time the component renders. { wrap: false } keeps the
-      // focus state on the initial CrossIcon button we show.
+      /**
+       * This clause returns focus to the initial CrossIcon when the second CrossIcon is in focus, and we scroll back up.
+       * However, it also triggers on the initial render, so { wrap: false } prevents the focus state from changing.
+       */
       focusManager.focusPrevious({ wrap: false });
     }
   }, [showDesktopHeaderBar]);
