@@ -41,4 +41,4 @@ class SegmentedControlExample extends React.Component {
 
 ### Notes
 
-The width of the top-level container is set to 100%, so it will expand to fill its parent container. Set a width or max-width on the parent element during implementation to avoid stretched-out layout effects.
+The width of the top-level container is set to 100%, so it will expand to fill its parent container. Set a non-percentage `width` on the parent element during implementation to avoid stretched-out layout or animation effects.
