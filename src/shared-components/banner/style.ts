@@ -30,7 +30,10 @@ const errorAlertStyles = css`
 /**
  * width: 100% to match previous <div> behavior
  */
-export const BannerContainer = styled.button<{ bannerType: BannerType }>`
+export const BannerContainer = styled.button<{
+  bannerType: BannerType;
+  onClick?: () => void;
+}>`
   ${buttonReset}
   width: 100%;
   &:focus {
@@ -38,7 +41,7 @@ export const BannerContainer = styled.button<{ bannerType: BannerType }>`
     box-shadow: ${BOX_SHADOWS.focus};
   }
 
-  cursor: pointer;
+  cursor: ${({ onClick }) => (onClick ? `pointer` : `inherit`)};
   position: relative;
   margin: 0 auto ${SPACER.small};
   padding: ${SPACER.medium};

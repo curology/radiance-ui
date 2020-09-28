@@ -36,7 +36,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   background: transparent;
   border: none;
   width: 100%;
-  cursor: pointer;
+  cursor: inherit;
   position: relative;
   margin: 0 auto 0.5rem;
   padding: 1rem;
@@ -115,7 +115,7 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   background: transparent;
   border: none;
   width: 100%;
-  cursor: pointer;
+  cursor: inherit;
   position: relative;
   margin: 0 auto 0.5rem;
   padding: 1rem;
@@ -163,7 +163,7 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   background: transparent;
   border: none;
   width: 100%;
-  cursor: pointer;
+  cursor: inherit;
   position: relative;
   margin: 0 auto 0.5rem;
   padding: 1rem;
