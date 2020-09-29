@@ -19,7 +19,7 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   border-radius: 80px;
   background-color: #ededf0;
   padding: 0.25rem;
-  border: 5px solid #ededf0;
+  border: 4px solid #ededf0;
 }
 
 .emotion-0 {
@@ -43,10 +43,13 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   top: 0;
   left: 0;
   bottom: 0;
-  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.22,1,0.36,1);
-  -webkit-transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
-  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  -webkit-transition: -webkit-transform 0.22s cubic-bezier(0.22,1,0.36,1);
+  -webkit-transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
+  transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
   background-color: white;
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
   color: #332e54;
   font-weight: bold;
   -webkit-transform: initial;
@@ -57,9 +60,9 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
 .emotion-2 {
   background: transparent;
   border: none;
-  color: #524D6E;
-  font-size: 1rem;
-  line-height: 1.75;
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
   color: #706D87;
   display: -webkit-box;
   display: -webkit-flex;
