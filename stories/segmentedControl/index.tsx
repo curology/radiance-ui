@@ -8,6 +8,7 @@ import SegmentedControlReadme from 'docs/segmentedControl';
 import DefaultControl from './defaultControl';
 import { css } from '@emotion/core';
 import { SPACER } from 'src/constants';
+import { Typography } from 'src/shared-components';
 const stories = storiesOf('SegmentedControl', module);
 
 const threeItems = [
@@ -29,16 +30,30 @@ stories.add(
     <React.Fragment>
       <div
         css={css`
-          margin-bottom: ${SPACER.small};
+          margin-bottom: ${SPACER.medium};
         `}
       >
+        <Typography.Title
+          css={css`
+            margin-bottom: ${SPACER.small};
+          `}
+        >
+          Example with three segmentItems:
+        </Typography.Title>
         <DefaultControl segmentItems={threeItems} />
       </div>
       <div
         css={css`
-          margin-bottom: ${SPACER.small};
+          margin-bottom: ${SPACER.medium};
         `}
       >
+        <Typography.Title
+          css={css`
+            margin-bottom: ${SPACER.small};
+          `}
+        >
+          Example with two segmentItems:
+        </Typography.Title>
         <DefaultControl width="300px" segmentItems={twoItems} />
       </div>
     </React.Fragment>

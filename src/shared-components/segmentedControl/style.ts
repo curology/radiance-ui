@@ -25,12 +25,12 @@ export const SegmentsContainer = styled.div`
   border-radius: 80px;
   background-color: ${COLORS.purple10};
   padding: ${SPACER.xsmall};
-  border: 5px solid ${COLORS.purple10};
+  border: 4px solid ${COLORS.purple10};
 `;
 
 export const SegmentItem = styled.button<SegmentItemProps>`
   ${buttonReset};
-  ${TYPOGRAPHY_STYLE.body};
+  ${TYPOGRAPHY_STYLE.caption};
   color: ${COLORS.purple70};
   display: flex;
   align-items: center;
@@ -57,8 +57,9 @@ export const Indicator = styled.div<IndicatorProps>`
   top: 0;
   left: 0;
   bottom: 0;
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   background-color: white;
+  ${TYPOGRAPHY_STYLE.caption};
   color: ${COLORS.primary};
   font-weight: bold;
   transform: ${({ transform }) => transform};
