@@ -5,8 +5,6 @@ import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
 import { FocusScope } from '@react-aria/focus';
 
-import keyboardKeys from '../../constants/keyboardKeys';
-import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
@@ -87,12 +85,6 @@ const ImmersiveModal = ({
     setTimeout(onClose, 450);
   };
 
-  const handleEscapeKey = (event: KeyboardEvent) => {
-    if (keyPressMatch(event, keyboardKeys.escape)) {
-      handleCloseIntent();
-    }
-  };
-
   useEffect(() => {
     htmlNode.current = getHtmlNode();
     domNode.current = getDomNode();
@@ -115,10 +107,6 @@ const ImmersiveModal = ({
       );
     }
 
-    document
-      .getElementsByTagName('body')[0]
-      .addEventListener('keydown', handleEscapeKey);
-
     return () => {
       htmlNode.current.classList.remove('no-scroll');
 
@@ -135,10 +123,6 @@ const ImmersiveModal = ({
           handleScroll,
         );
       }
-
-      document
-        .getElementsByTagName('body')[0]
-        .removeEventListener('keydown', handleEscapeKey);
     };
   }, []);
 
@@ -189,7 +173,7 @@ const ImmersiveModal = ({
                     >
                       {title}
                       <CrossIconComponent
-                        showDesktopHeaderBar={showDesktopHeaderBar}
+                        isVisible={showDesktopHeaderBar}
                         onClick={handleCloseIntent}
                       />
                     </DesktopHeaderBar>

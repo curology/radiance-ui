@@ -27,9 +27,6 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-/**
- * width: 100% to match previous <div> behavior
- */
 export const BannerContainer = styled.button<{
   bannerType: BannerType;
   onClick?: () => void;

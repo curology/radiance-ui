@@ -5,7 +5,7 @@ import CrossIcon from '../../../svgs/icons/cross-icon.svg';
 import { CrossIconContainer } from '../style';
 
 type CrossIconComponentProps = {
-  showDesktopHeaderBar: boolean;
+  isVisible: boolean;
   onClick: () => void;
 };
 
@@ -17,13 +17,13 @@ type CrossIconComponentProps = {
  * CrossIcons present in the markup. (We keep both rendered for our transitions.)
  */
 const CrossIconComponent = ({
-  showDesktopHeaderBar,
+  isVisible,
   onClick,
 }: CrossIconComponentProps) => {
   const focusManager = useFocusManager();
 
   useEffect(() => {
-    if (showDesktopHeaderBar) {
+    if (isVisible) {
       focusManager.focusNext();
     } else {
       /**
@@ -32,13 +32,10 @@ const CrossIconComponent = ({
        */
       focusManager.focusPrevious({ wrap: false });
     }
-  }, [showDesktopHeaderBar]);
+  }, [isVisible]);
 
   return (
-    <CrossIconContainer
-      onClick={onClick}
-      tabIndex={showDesktopHeaderBar ? 0 : -1}
-    >
+    <CrossIconContainer onClick={onClick} tabIndex={isVisible ? 0 : -1}>
       <CrossIcon />
     </CrossIconContainer>
   );
