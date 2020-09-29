@@ -14,7 +14,6 @@ export const BASE_CONFIG = {
   message: `0 12px 20px 0 ${transparentize(boxShadowColor, 0.05)}`,
   focus: `0px 0px 0px 2px ${COLORS.white}, 0px 0px 0px 4px ${COLORS.primary}`,
   focusInner: `inset 0px 0px 0px 2px ${COLORS.primary}`,
-  focusSecondary: `0 0 2px 2px ${transparentize(COLORS.secondary, 0.5)}`,
 };
 
 export const OLD_BASE_CONFIG = {

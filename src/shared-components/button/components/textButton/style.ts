@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
-import { BOX_SHADOWS, COLORS } from '../../../../constants';
+import { BOX_SHADOWS, COLORS, SPACER } from '../../../../constants';
 
 export const BaseTextButton = styled.button<{ disabled: boolean }>`
   border-color: transparent;
   background-color: transparent;
+  border-radius: ${SPACER.xsmall};
 
   color: ${({ disabled }) =>
     `${disabled ? COLORS.textDisabled : COLORS.primary}`};
@@ -18,6 +19,6 @@ export const BaseTextButton = styled.button<{ disabled: boolean }>`
   &:active,
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focusSecondary};
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;

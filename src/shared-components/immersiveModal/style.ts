@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import Typography from '../typography';
 import {
+  BOX_SHADOWS,
   COLORS,
   MEDIA_QUERIES,
   SPACER,
@@ -38,7 +40,9 @@ export const Overlay = styled.div`
   }
 `;
 
-export const CrossIconContainer = styled.div`
+export const CrossIconContainer = styled.button`
+  ${buttonReset};
+  padding: 0;
   position: absolute;
   top: 8px;
   right: 12px;
@@ -57,6 +61,11 @@ export const CrossIconContainer = styled.div`
   ${MEDIA_QUERIES.mdUp} {
     top: 16px;
     right: 16px;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;
 

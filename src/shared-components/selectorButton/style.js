@@ -20,7 +20,7 @@ export const OuterContainer = styled.div`
   :focus {
     outline: none;
     ${SelectorContainer} {
-      box-shadow: ${BOX_SHADOWS.focusSecondary};
+      box-shadow: ${BOX_SHADOWS.focus};
 
       ${({ selector }) => css`
         border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
@@ -40,12 +40,12 @@ export const SelectorIcon = styled.div`
   `};
 `;
 
-const primarySelectorStyle = checked => css`
+const primarySelectorStyle = (checked) => css`
   background-color: ${checked ? COLORS.primary : 'transparent'};
   border-color: ${COLORS.primary};
 `;
 
-const secondarySelectorStyle = checked => css`
+const secondarySelectorStyle = (checked) => css`
   background-color: ${checked ? COLORS.secondary : 'transparent'};
   border-color: ${checked ? COLORS.secondary : COLORS.primary};
 `;

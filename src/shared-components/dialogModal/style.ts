@@ -113,6 +113,6 @@ export const CrossIconContainer = styled.div`
   }
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focusSecondary};
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;

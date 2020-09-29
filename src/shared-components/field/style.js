@@ -39,7 +39,7 @@ const inputStyles = css`
   &:focus {
     outline: none;
     border-color: ${COLORS.primary};
-    box-shadow: ${BOX_SHADOWS.focusSecondary};
+    box-shadow: ${BOX_SHADOWS.focus};
 
     ~ ${HintItem} {
       max-height: 24px;
@@ -80,7 +80,7 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = messagesType => css`
+const applyMessagesStyles = (messagesType) => css`
   svg.radiance-field-input-icon {
     opacity: 1;
   }
@@ -93,7 +93,7 @@ const applyMessagesStyles = messagesType => css`
       border-color: ${messagesType === 'success'
         ? COLORS.success
         : COLORS.error};
-      box-shadow: none;
+      box-shadow: ${BOX_SHADOWS.focus};
     }
   }
 `;

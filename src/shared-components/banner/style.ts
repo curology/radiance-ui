@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import {
+  BOX_SHADOWS,
   COLORS,
   MEDIA_QUERIES,
   SPACER,
@@ -25,8 +27,18 @@ const errorAlertStyles = css`
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const BannerContainer = styled.div<{ bannerType: BannerType }>`
-  cursor: pointer;
+export const BannerContainer = styled.button<{
+  bannerType: BannerType;
+  onClick?: () => void;
+}>`
+  ${buttonReset}
+  width: 100%;
+  &:focus {
+    outline: none;
+    box-shadow: ${BOX_SHADOWS.focus};
+  }
+
+  cursor: ${({ onClick }) => (onClick ? `pointer` : `inherit`)};
   position: relative;
   margin: 0 auto ${SPACER.small};
   padding: ${SPACER.medium};
