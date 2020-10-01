@@ -10,7 +10,7 @@ describe('<Toggle />', () => {
   describe('UI snapshot', () => {
     it('renders the component', () => {
       const component = renderer.create(
-        <Toggle checked={false} label={labelText} />
+        <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
       const tree = component.toJSON();
@@ -20,14 +20,18 @@ describe('<Toggle />', () => {
 
   describe('when label is undefined', () => {
     test('does not render a label component', () => {
-      const wrapper = shallow(<Toggle checked={false} />);
+      const wrapper = shallow(
+        <Toggle checked={false} onChange={() => undefined} />,
+      );
       expect(wrapper.html().indexOf('label') === -1).toBe(true);
     });
   });
 
   describe('when label is a string', () => {
     test('renders a text component', () => {
-      const wrapper = shallow(<Toggle checked={false} label={labelText} />);
+      const wrapper = shallow(
+        <Toggle checked={false} label={labelText} onChange={() => undefined} />,
+      );
 
       expect(wrapper.html().indexOf(labelText) > 0).toBe(true);
     });

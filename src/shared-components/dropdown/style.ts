@@ -19,6 +19,12 @@ export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   position: relative;
   width: 100%;
   text-align: ${({ textAlign }) => textAlign};
+
+  > div:first-of-type {
+    &:focus {
+      outline: none;
+    }
+  }
 `;
 
 export const dropdownInputStyle = ({
@@ -76,6 +82,15 @@ export const dropdownInputStyle = ({
     }
   `;
 };
+
+export const DropdownFocusContainer = styled.div`
+  &:focus {
+    > div:first-of-type {
+      box-shadow: ${BOX_SHADOWS.focusInner};
+      outline: none;
+    }
+  }
+`;
 
 export const IconContainer = styled.div`
   position: absolute;
@@ -153,8 +168,11 @@ export const DropdownOption = styled.li<{
   &:hover {
     background-color: ${COLORS.infoBackground};
   }
+
   &:focus {
+    outline: none;
     background-color: ${COLORS.infoBackground};
+    box-shadow: ${BOX_SHADOWS.focusInner};
   }
 
   ${({ selected }) =>

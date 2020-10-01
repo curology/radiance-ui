@@ -85,7 +85,7 @@ describe('Alert UI snapshots', () => {
       { createNodeMock },
     );
 
-    component.root.findByType('div').props.onClick();
+    component.root.findByType('button').props.onClick();
     jest.runAllTimers();
     expect(spy).toHaveBeenCalled();
   });
@@ -103,7 +103,7 @@ describe('Alert UI snapshots', () => {
       { createNodeMock },
     );
 
-    component.root.findByType('div').props.onClick();
+    component.root.findByType('button').props.onClick();
     jest.runAllTimers();
     expect(spy).toHaveBeenCalled();
   });

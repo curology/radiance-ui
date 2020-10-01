@@ -36,8 +36,10 @@ const getTypeColor = (buttonType: BaseIconWrapperStylesProps['buttonType']) => {
 };
 
 export const ClickableContainer = styled.button<{
+  borderRadius: string;
   containerType: ContainerType;
 }>`
+  border-radius: ${({ borderRadius }) => borderRadius};
   ${({ containerType }) => containerStyles(containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
@@ -46,7 +48,7 @@ export const ClickableContainer = styled.button<{
 
   :focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focusSecondary};
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;
 
@@ -82,16 +84,16 @@ const getBaseIconWrapperStyles = ({
   }
 
   ${selected &&
-    css`
-      background: ${getTypeColor(buttonType)};
-      border-color: ${getTypeColor(buttonType)};
+  css`
+    background: ${getTypeColor(buttonType)};
+    border-color: ${getTypeColor(buttonType)};
 
-      svg {
-        opacity: 1;
-        color: ${COLORS.white};
-        fill: ${COLORS.white};
-      }
-    `};
+    svg {
+      opacity: 1;
+      color: ${COLORS.white};
+      fill: ${COLORS.white};
+    }
+  `};
 `;
 
 export const CheckmarkWrapper = styled.div<BaseIconWrapperStylesProps>`

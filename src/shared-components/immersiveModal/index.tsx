@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
+import { FocusScope } from '@react-aria/focus';
 
-import keyboardKeys from '../../constants/keyboardKeys';
-import keyPressMatch from '../../utils/keyPressMatch';
 import OffClickWrapper from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
@@ -22,6 +21,7 @@ import {
   ModalFooter,
   MainModalContentContainer,
 } from './style';
+import CrossIconComponent from './crossIconComponent';
 
 type ImmersiveModalProps = {
   children: React.ReactNode;
@@ -29,186 +29,155 @@ type ImmersiveModalProps = {
   footerContent?: React.ReactNode;
   onClose: () => void;
   title?: string;
+  [key: string]: unknown;
 };
 
-type ImmersiveModalState = {
-  isClosing: boolean;
-  showMobileHeaderBar: boolean;
-  showDesktopHeaderBar: boolean;
-};
+const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
+const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
+const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
-const reactPortalSectionId = '#reactPortalSection';
+const getHtmlNode = () => document.querySelector('html') || document.body;
+const getDomNode = () =>
+  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
+  document.body;
+const getModalMobileScrollingElement = () =>
+  document.getElementById(MODAL_MOBILE_SCROLLING_ID) as HTMLElement;
+const getModalDesktopScrollingElement = () =>
+  document.getElementById(MODAL_DESKTOP_SCROLLING_ID) as HTMLElement;
 
-class ImmersiveModal extends React.Component<
-  ImmersiveModalProps,
-  ImmersiveModalState
-> {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    headerImage: PropTypes.node,
-    footerContent: PropTypes.node,
-    onClose: PropTypes.func.isRequired,
-    title: PropTypes.string,
-  };
+const ImmersiveModal = ({
+  children,
+  footerContent = null,
+  headerImage = null,
+  onClose,
+  title = '',
+  ...rest
+}: ImmersiveModalProps) => {
+  const [isClosing, setIsClosing] = useState(false);
+  const [showMobileHeaderBar, setShowMobileHeaderBar] = useState(false);
+  const [showDesktopHeaderBar, setShowDesktopHeaderBar] = useState(false);
 
-  static defaultProps = {
-    headerImage: null,
-    footerContent: null,
-    title: '',
-  };
+  const htmlNode = useRef<HTMLElement>(getHtmlNode());
+  const domNode = useRef<HTMLElement>(getDomNode());
+  const modalMobileScrollingElement = useRef<HTMLElement | null>(
+    getModalMobileScrollingElement(),
+  );
+  const modalDesktopScrollingElement = useRef<HTMLElement | null>(
+    getModalDesktopScrollingElement(),
+  );
 
-  state = {
-    isClosing: false,
-    showMobileHeaderBar: false,
-    showDesktopHeaderBar: false,
-  };
-
-  htmlNode: HTMLElement;
-
-  domNode: HTMLElement;
-
-  modalMobileScrollingElement: HTMLElement | null = null;
-
-  modalDesktopScrollingElement: HTMLElement | null = null;
-
-  constructor(props: ImmersiveModalProps) {
-    super(props);
-
-    this.htmlNode = document.querySelector('html') || document.body;
-
-    this.domNode =
-      document.querySelector(reactPortalSectionId) || document.body;
-  }
-
-  componentDidMount(): void {
-    this.htmlNode.classList.add('no-scroll');
-
-    this.modalMobileScrollingElement = document.querySelector(
-      '#modal-mobile-scrolling-id',
-    );
-    this.modalDesktopScrollingElement = document.querySelector(
-      '#modal-desktop-scrolling-id',
-    );
-
-    if (this.modalMobileScrollingElement && this.modalDesktopScrollingElement) {
-      this.modalMobileScrollingElement.addEventListener(
-        'scroll',
-        this.handleScroll,
-      );
-      this.modalDesktopScrollingElement.addEventListener(
-        'scroll',
-        this.handleScroll,
-      );
+  const handleScroll = throttle(() => {
+    if (modalMobileScrollingElement.current) {
+      const shouldShowMobileHeaderBar =
+        modalMobileScrollingElement.current.scrollTop > 32;
+      setShowMobileHeaderBar(shouldShowMobileHeaderBar);
     }
-
-    document
-      .getElementsByTagName('body')[0]
-      .addEventListener('keydown', this.handleEscapeKey);
-  }
-
-  componentWillUnmount(): void {
-    this.htmlNode.classList.remove('no-scroll');
-
-    if (this.modalMobileScrollingElement && this.modalDesktopScrollingElement) {
-      this.modalMobileScrollingElement.removeEventListener(
-        'scroll',
-        this.handleScroll,
-      );
-      this.modalDesktopScrollingElement.removeEventListener(
-        'scroll',
-        this.handleScroll,
-      );
-    }
-
-    document
-      .getElementsByTagName('body')[0]
-      .removeEventListener('keydown', this.handleEscapeKey);
-  }
-
-  handleScroll = throttle(() => {
-    if (this.modalMobileScrollingElement) {
-      const showMobileHeaderBar =
-        this.modalMobileScrollingElement.scrollTop > 32;
-      this.setState({ showMobileHeaderBar });
-    }
-    if (this.modalDesktopScrollingElement) {
-      const showDesktopHeaderBar =
-        this.modalDesktopScrollingElement.scrollTop > 32;
-      this.setState({ showDesktopHeaderBar });
+    if (modalDesktopScrollingElement.current) {
+      const shouldShowDesktopHeaderBar =
+        modalDesktopScrollingElement.current.scrollTop > 32;
+      setShowDesktopHeaderBar(shouldShowDesktopHeaderBar);
     }
   }, 100);
 
-  handleCloseIntent = (): void => {
-    const { onClose } = this.props;
-    this.setState({ isClosing: true, showMobileHeaderBar: false });
-
+  const handleCloseIntent = () => {
+    setIsClosing(true);
+    setShowMobileHeaderBar(false);
     setTimeout(onClose, 450);
   };
 
-  handleEscapeKey = (event: KeyboardEvent): void => {
-    if (keyPressMatch(event, keyboardKeys.escape)) {
-      this.handleCloseIntent();
+  useEffect(() => {
+    htmlNode.current = getHtmlNode();
+    domNode.current = getDomNode();
+    modalMobileScrollingElement.current = getModalMobileScrollingElement();
+    modalDesktopScrollingElement.current = getModalDesktopScrollingElement();
+
+    htmlNode.current.classList.add('no-scroll');
+
+    if (
+      modalMobileScrollingElement.current &&
+      modalDesktopScrollingElement.current
+    ) {
+      modalMobileScrollingElement.current.addEventListener(
+        'scroll',
+        handleScroll,
+      );
+      modalDesktopScrollingElement.current.addEventListener(
+        'scroll',
+        handleScroll,
+      );
     }
-  };
 
-  render(): JSX.Element {
-    const {
-      children,
-      headerImage,
-      footerContent,
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onClose,
-      title,
-      ...rest
-    } = this.props;
+    return () => {
+      htmlNode.current.classList.remove('no-scroll');
 
-    const { isClosing, showMobileHeaderBar, showDesktopHeaderBar } = this.state;
+      if (
+        modalMobileScrollingElement.current &&
+        modalDesktopScrollingElement.current
+      ) {
+        modalMobileScrollingElement.current.removeEventListener(
+          'scroll',
+          handleScroll,
+        );
+        modalDesktopScrollingElement.current.removeEventListener(
+          'scroll',
+          handleScroll,
+        );
+      }
+    };
+  }, []);
 
-    return ReactDOM.createPortal(
-      <Transition
-        timeout={{
-          appear: 0,
-          enter: 0,
-          exit: 350,
-        }}
-        in={!isClosing}
-        unmountOnExit
-        appear
-      >
-        {(transitionState): JSX.Element => (
-          <React.Fragment>
-            <MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
-              {title}
-              <CrossIconContainer onClick={this.handleCloseIntent}>
-                <CrossIcon />
-              </CrossIconContainer>
-            </MobileHeaderBar>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-            <Overlay className={transitionState} {...rest}>
-              <ModalContainer
-                className={transitionState}
-                id="modal-mobile-scrolling-id"
+  return ReactDOM.createPortal(
+    <Transition
+      timeout={{
+        appear: 0,
+        enter: 0,
+        exit: 350,
+      }}
+      in={!isClosing}
+      unmountOnExit
+      appear
+    >
+      {(transitionState): JSX.Element => (
+        <React.Fragment>
+          <MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
+            {title}
+            <CrossIconContainer onClick={handleCloseIntent}>
+              <CrossIcon />
+            </CrossIconContainer>
+          </MobileHeaderBar>
+          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+          <Overlay className={transitionState} {...rest}>
+            <ModalContainer
+              className={transitionState}
+              id={MODAL_MOBILE_SCROLLING_ID}
+            >
+              <OffClickWrapper
+                onOffClick={handleCloseIntent}
+                className="modal-offclick-wrapper"
               >
-                <OffClickWrapper
-                  onOffClick={this.handleCloseIntent}
-                  className="modal-offclick-wrapper"
-                >
-                  <MobileTopOverlay onClick={this.handleCloseIntent} />
+                <MobileTopOverlay onClick={handleCloseIntent} />
+                <FocusScope contain restoreFocus autoFocus>
                   <MainModalContentContainer
-                    id="modal-desktop-scrolling-id"
+                    id={MODAL_DESKTOP_SCROLLING_ID}
                     hasHeaderImage={!!headerImage}
                   >
+                    <CrossIconContainer
+                      onClick={handleCloseIntent}
+                      tabIndex={showDesktopHeaderBar ? -1 : 0}
+                    >
+                      <CrossIcon />
+                    </CrossIconContainer>
+
                     <DesktopHeaderBar
                       showDesktopHeaderBar={showDesktopHeaderBar}
                     >
                       {title}
-                      <CrossIconContainer onClick={this.handleCloseIntent}>
-                        <CrossIcon />
-                      </CrossIconContainer>
+                      <CrossIconComponent
+                        isVisible={showDesktopHeaderBar}
+                        onClick={handleCloseIntent}
+                      />
                     </DesktopHeaderBar>
-                    <CrossIconContainer onClick={this.handleCloseIntent}>
-                      <CrossIcon />
-                    </CrossIconContainer>
+
                     {headerImage && (
                       <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                     )}
@@ -222,15 +191,23 @@ class ImmersiveModal extends React.Component<
                       )}
                     </ContentWithFooterContainer>
                   </MainModalContentContainer>
-                </OffClickWrapper>
-              </ModalContainer>
-            </Overlay>
-          </React.Fragment>
-        )}
-      </Transition>,
-      this.domNode,
-    );
-  }
-}
+                </FocusScope>
+              </OffClickWrapper>
+            </ModalContainer>
+          </Overlay>
+        </React.Fragment>
+      )}
+    </Transition>,
+    domNode.current,
+  );
+};
+
+ImmersiveModal.propTypes = {
+  children: PropTypes.node.isRequired,
+  headerImage: PropTypes.node,
+  footerContent: PropTypes.node,
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string,
+};
 
 export default ImmersiveModal;

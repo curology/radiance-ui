@@ -61,7 +61,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 4px;
 }
 
@@ -157,7 +157,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -325,7 +325,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 4px;
 }
 
@@ -420,7 +420,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -583,7 +583,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 4px;
 }
 
@@ -673,7 +673,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -797,7 +797,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -930,7 +930,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -1063,7 +1063,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -1186,7 +1186,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 }
 
 .emotion-6:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
@@ -1331,7 +1331,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0 0 2px 2px rgba(166,161,226,0.5);
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 4px;
 }
 
