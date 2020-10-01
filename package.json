@@ -34,7 +34,8 @@
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "chromatic": "npx chromatic --project-token"
   },
   "repository": {
     "type": "git",
@@ -93,6 +94,7 @@
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-svg-import-to-string": "^0.0.1",
+    "chromatic": "^5.2.0",
     "circular-dependency-plugin": "^5.0.2",
     "create-index": "PocketDerm/create-index#master",
     "enzyme": "^3.11.0",
