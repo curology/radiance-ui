@@ -29,9 +29,9 @@ stories.add(
         >
           Components
         </Typography.Heading>
-        <DefaultAccordion />
+        {() => <DefaultAccordion />}
 
-        <Typography.Heading
+        {/* <Typography.Heading
           css={css`
             padding: ${SPACER.large} 0 ${SPACER.small};
           `}
@@ -72,7 +72,7 @@ stories.add(
               </Accordion.Content>
             </Accordion>
           </Accordion.Container>
-        </div>
+        </div> */}
       </div>
     </React.Fragment>
   )),

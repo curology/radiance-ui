@@ -28,7 +28,7 @@ module.exports = (webpackSettings) => {
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.md', '.ts', '.tsx'],
+    extensions: ['.js', '.md', '.mdx', '.ts', '.tsx'],
   };
 
   // SVG Rule
@@ -56,6 +56,14 @@ module.exports = (webpackSettings) => {
     include: path.resolve(__dirname, '../stories'),
     enforce: 'pre',
   });
+
+  // config.module.rules.push({
+  //   test: /\.mdx$/,
+  //   use: [
+  //     { loader: 'babel-loader', options: require('../babel.config.js') },
+  //     '@mdx-js/loader',
+  //   ],
+  // });
 
   // CircularDependencyPlugin
   config.plugins.push(

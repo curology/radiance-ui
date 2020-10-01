@@ -1,4 +1,5 @@
 # Avatar
+
 ## Usage
 
 ```jsx
@@ -12,6 +13,7 @@ import { Avatar } from 'radiance-ui';
 <!-- STORY -->
 
 ### Proptypes
-| prop                  | propType         | required | default   | description                                                                                                                  
-|-----------------------|------------------|----------|-----------|------------------------------------------------------------------------------------------------------------------------------|
-| size     | string           | no      | small         | must be either: small, medium or large |
+
+| prop | propType | required | default | description                            |
+| ---- | -------- | -------- | ------- | -------------------------------------- |
+| size | string   | no       | small   | must be either: small, medium or large |

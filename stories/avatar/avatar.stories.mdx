@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Avatar, Typography } from 'src/shared-components';
+import accountImg from './account.png';
+import personImg from './person.jpg';
+
+<Meta title="Avatar" component={Avatar} />
+
+# Avatar
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+<Canvas>
+  <Story name="Avatars">
+    <Avatar src={personImg} size="small" alt="provider" />
+    <Avatar src={personImg} size="medium" alt="provider" />
+    <Avatar src={personImg} size="large" alt="provider" />
+    <Avatar src={accountImg} size="small" alt="" />
+    <Avatar src={accountImg} size="medium" alt="" />
+    <Avatar src={accountImg} size="large" alt="" />
+  </Story>
+</Canvas>
+
+## Usage
+
+```tsx
+import { Avatar } from 'radiance-ui';
+
+<Avatar src={imgSrc} alt="avatar" />
+<Avatar size="medium" src={imgSrc} alt="avatar" />
+<Avatar size="large" src={imgSrc} alt="avatar" />
+```
+
+### Proptypes
+
+| prop | propType | required | default | description                            |
+| ---- | -------- | -------- | ------- | -------------------------------------- |
+| size | string   | no       | small   | must be either: small, medium or large |
