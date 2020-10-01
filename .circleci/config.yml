@@ -49,14 +49,14 @@ jobs:
             - run:
                 name: Install
                 command: yarn install
-            - run:
-                name: Build
-                command: yarn build
             - <<: *yarn-cache-save
             - persist_to_workspace:
                 root: *root
                 paths:
                     - node_modules
+            - run:
+                name: Build
+                command: yarn build
             - run:
                 name: Publish to Chromatic
                 command: yarn run chromatic -- ${CHROMATIC_PROJECT_TOKEN}
