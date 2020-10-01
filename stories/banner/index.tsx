@@ -29,6 +29,15 @@ stories.add(
         type="success"
       />
       <Banner
+        onClick={() => alert('clicked!')}
+        content={
+          <React.Fragment>
+            <strong>Clickable banner</strong> This is a banner with an onClick
+            prop
+          </React.Fragment>
+        }
+      />
+      <Banner
         content={
           <React.Fragment>
             <strong>Error Banner:</strong> This is the banner content
