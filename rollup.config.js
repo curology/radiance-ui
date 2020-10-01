@@ -65,7 +65,6 @@ export default [
           'prop-types': 'PropTypes',
           react: 'React',
           'react-dom': 'ReactDOM',
-          'react-modal': 'react-modal',
           'react-slick': 'react-slick',
           'react-toggle-button': 'react-toggle-button',
           'react-transition-group': 'react-transition-group',
