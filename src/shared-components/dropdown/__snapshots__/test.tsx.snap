@@ -7,6 +7,10 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   text-align: left;
 }
 
+.emotion-3 > div:first-of-type:focus {
+  outline: none;
+}
+
 .emotion-0 {
   -webkit-appearance: none;
   -moz-appearance: none;

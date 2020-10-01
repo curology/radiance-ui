@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import DesktopDropdown from './desktopDropdown';
 import MobileDropdown from './mobileDropdown';
@@ -21,12 +21,7 @@ describe('<Dropdown />', () => {
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(
-        wrapper
-          .children()
-          .first()
-          .name(),
-      ).toEqual('MobileDropdown');
+      expect(wrapper.children().first().name()).toEqual('MobileDropdown');
     });
   });
 
@@ -35,12 +30,7 @@ describe('<Dropdown />', () => {
       const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
-      expect(
-        wrapper
-          .children()
-          .first()
-          .name(),
-      ).toEqual('DesktopDropdown');
+      expect(wrapper.children().first().name()).toEqual('DesktopDropdown');
     });
   });
 });
@@ -82,7 +72,7 @@ describe('<MobileDropdown />', () => {
 
 describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <DesktopDropdown
         borderRadius="4px"
         options={options}
@@ -94,18 +84,15 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(
-      wrapper
-        .find('[role="button"]')
-        .text()
-        .includes('Test1'),
-    ).toEqual(true);
+    expect(wrapper.find('[role="button"]').text().includes('Test1')).toEqual(
+      true,
+    );
   });
 
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const wrapper = shallow(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -138,10 +125,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper
-        .find('li')
-        .first()
-        .simulate('click');
+      wrapper.find('li').first().simulate('click');
 
       expect(spy).toHaveBeenCalled();
     });

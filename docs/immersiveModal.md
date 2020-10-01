@@ -24,11 +24,13 @@ const [openModal, setOpenModal] = useState(false);
 {
   openModal && (
     <ImmersiveModal
-      onClose={(): void => setOpenModal(false)}
+      onClose={() => setOpenModal(false)}
       headerImage={<img src={headerImage} alt="header" />}
       footerContent={
         <Button.Container>
-          <Button isFullWidth>cta content</Button>
+          <Button isFullWidth onClick={() => setOpenModal(false)}>
+            cta content
+          </Button>
         </Button.Container>
       }
       title="Immersive modal title"

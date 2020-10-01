@@ -7,6 +7,7 @@ import OffClickWrapper from '../offClickWrapper';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import {
   DropdownContainer,
+  DropdownFocusContainer,
   dropdownInputStyle,
   IconContainer,
   DropdownOptionsContainer,
@@ -65,7 +66,7 @@ const DesktopDropdown = ({
       `}
     >
       <DropdownContainer textAlign={textAlign}>
-        <div
+        <DropdownFocusContainer
           onClick={onSelectClick}
           onKeyDown={handleKeyDown}
           tabIndex={0}
@@ -85,7 +86,7 @@ const DesktopDropdown = ({
           <IconContainer>
             <ChevronIcon width={10} height={10} rotate={isOpen ? 90 : 0} />
           </IconContainer>
-        </div>
+        </DropdownFocusContainer>
 
         <DropdownOptionsContainer
           borderRadius={borderRadius}
@@ -95,7 +96,7 @@ const DesktopDropdown = ({
           aria-activedescendant={value}
           aria-hidden={!isOpen}
         >
-          {options.map(option => {
+          {options.map((option) => {
             const {
               value: optionValue, disabled, label, ...rest 
             } = option;

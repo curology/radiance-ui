@@ -27,13 +27,12 @@ const Dropdown = ({
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
-  ...rest
 }: DropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
 
   const onSelectClick = () => {
-    setIsOpen(prevIsOpen => !prevIsOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   const closeDropdown = () => setIsOpen(false);
@@ -74,19 +73,20 @@ const Dropdown = ({
     );
   }
 
-  const currentOption = options.find(option => option.value === value);
+  const currentOption = options.find((option) => option.value === value);
 
   return (
     <DesktopDropdown
       borderRadius={borderRadius}
+      closeDropdown={closeDropdown}
+      currentOption={currentOption}
       isOpen={isOpen}
       onOptionClick={onOptionClick}
-      closeDropdown={closeDropdown}
       onSelectClick={onSelectClick}
-      currentOption={currentOption}
+      options={options}
       optionsContainerMaxHeight={optionsContainerMaxHeight}
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...rest}
+      textAlign={textAlign}
+      value={value}
     />
   );
 };

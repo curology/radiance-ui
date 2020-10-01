@@ -36,7 +36,7 @@ describe('Banner UI snapshots', () => {
       <Banner content="Banner with click handler" onClick={spy} />,
     );
 
-    component.root.findByType('div').props.onClick();
+    component.root.findByType('button').props.onClick();
     jest.runAllTimers();
     expect(spy).toHaveBeenCalled();
   });
