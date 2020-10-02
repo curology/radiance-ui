@@ -1,5 +1,5 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
-import { Avatar, Typography } from 'src/shared-components';
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Avatar } from 'src/shared-components';
 import accountImg from './account.png';
 import personImg from './person.jpg';
 
@@ -31,8 +31,4 @@ import { Avatar } from 'radiance-ui';
 <Avatar size="large" src={imgSrc} alt="avatar" />
 ```
 
-### Proptypes
-
-| prop | propType | required | default | description                            |
-| ---- | -------- | -------- | ------- | -------------------------------------- |
-| size | string   | no       | small   | must be either: small, medium or large |
+<ArgsTable of={Avatar} />

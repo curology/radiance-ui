@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import { COLORS } from '../../constants';
@@ -9,22 +8,18 @@ const SIZES = {
   large: 80,
 };
 
-const determineSize = ({
-  size = 'small',
-}: {
-  size?: 'small' | 'medium' | 'large';
-}) => `
+const determineSize = ({ size }: { size: 'small' | 'medium' | 'large' }) => `
   height: ${SIZES[size]}px;
   width: ${SIZES[size]}px;
 `;
 
-export const Avatar = styled.img`
+const AvatarImage = styled.img`
   ${determineSize}
   background-color: ${COLORS.secondary};
   border-radius: 50%;
   overflow: hidden;
 `;
 
-Avatar.propTypes = {
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+export default {
+  AvatarImage,
 };

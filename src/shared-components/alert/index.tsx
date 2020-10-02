@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Avatar from '../avatar';
+import { Avatar } from '../avatar';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';

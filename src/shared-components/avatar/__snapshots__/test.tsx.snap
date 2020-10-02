@@ -46,6 +46,7 @@ exports[`<Avatar /> UI snapshot renders the component with default props 1`] = `
 <img
   alt="avatar"
   className="emotion-0 emotion-1"
+  size="small"
   src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
 />
 `;
