@@ -43,10 +43,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const TypographyStory = {
-  title: 'Typography',
-  component: Typography,
-};
-
-export default TypographyStory;

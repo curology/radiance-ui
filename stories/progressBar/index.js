@@ -78,10 +78,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const ProgressBarStory = {
-  title: 'ProgressBar',
-  component: ProgressBar,
-};
-
-export default ProgressBarStory;

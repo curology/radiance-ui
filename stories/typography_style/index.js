@@ -30,10 +30,3 @@ stories.add(
     </div>
   )),
 );
-
-const TypographyStyle = {
-  title: 'TYPOGRAPHY_STYLE',
-  component: TYPOGRAPHY_STYLE,
-};
-
-export default TypographyStyle;

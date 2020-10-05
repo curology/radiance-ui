@@ -7,10 +7,5 @@
     "outDir": "lib",
     "rootDirs": ["src"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "types/**/*.ts",
-    "./storybook/*.ts"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.ts"]
 }

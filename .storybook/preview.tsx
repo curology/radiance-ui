@@ -1,5 +1,7 @@
 import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import addons from '@storybook/addons';
 import { Global, css } from '@emotion/core';
 import Theme from './theme';
 import {
@@ -72,15 +74,36 @@ addParameters({
   },
 });
 
+/**
+ * {@link https://storybook.js.org/docs/react/configure/features-and-behavior Options}
+ */
+const ADDONS_CONFIG = {
+  enableShortcuts: true,
+  isFullscreen: false,
+  isToolshown: true,
+  panelPosition: 'right',
+  showNav: true,
+  showPanel: true,
+  sidebarAnimations: true,
+  theme: Theme,
+};
+
+addons.setConfig(ADDONS_CONFIG);
+
 addParameters({
-  options: {
-    theme: Theme,
-    isFullscreen: false,
-    showNav: true,
-    showPanel: true,
-    panelPosition: 'right',
-    sidebarAnimations: true,
-    enableShortcuts: true,
-    isToolshown: true,
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: false,
+  },
+  /**
+   * TODO-@storybook/addon-docs: Our storybook-readme use means we need to
+   * duplicate the setConfig options via addParameters, too. Once we overhaul
+   * story/documentation setup we can properly deprecate this usage.
+   */
+  options: ADDONS_CONFIG,
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
   },
 });

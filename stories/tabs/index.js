@@ -21,9 +21,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const TabsStory = {
-  title: 'Tabs',
-};
-
-export default TabsStory;

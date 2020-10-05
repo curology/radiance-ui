@@ -45,10 +45,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const RadioButtonStory = {
-  title: 'RadioButton',
-  component: RadioButton,
-};
-
-export default RadioButtonStory;

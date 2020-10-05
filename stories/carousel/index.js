@@ -151,10 +151,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const CarouselStory = {
-  title: 'Carousel',
-  component: Carousel,
-};
-
-export default CarouselStory;

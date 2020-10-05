@@ -21,9 +21,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const OffClickWrapperStory = {
-  title: 'OffClickWrapper',
-};
-
-export default OffClickWrapperStory;

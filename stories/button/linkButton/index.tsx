@@ -5,7 +5,6 @@ import { action } from '@storybook/addon-actions';
 import LinkButtonReadme from 'docs/button/linkButton';
 import { LinkButton } from 'src/shared-components';
 import { COLORS } from 'src/constants';
-import { Meta } from '@storybook/react';
 
 import Container from '../container';
 
@@ -86,10 +85,3 @@ const LinkButtonStory = withDocs(LinkButtonReadme, () => (
 ));
 
 export default LinkButtonStory;
-
-// const LinkButtonStoryExport = {
-//   title: 'Button/LinkButton',
-
-// } as Meta;
-
-// export default LinkButtonStoryExport;

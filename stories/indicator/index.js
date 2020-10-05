@@ -33,10 +33,3 @@ stories.add(
     </div>
   )),
 );
-
-const IndicatorStory = {
-  title: 'Indicator',
-  component: Indicator,
-};
-
-export default IndicatorStory;

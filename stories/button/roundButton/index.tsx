@@ -1,5 +1,4 @@
 import React from 'react';
-import { Meta } from '@storybook/react';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
@@ -174,10 +173,3 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
 ));
 
 export default RoundButtonStory;
-
-// const RoundButtonStoryExport = {
-//   title: 'Button/RoundButton',
-
-// } as Meta;
-
-// export default RoundButtonStoryExport;

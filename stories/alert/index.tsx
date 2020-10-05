@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Meta, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { Alert, Typography } from 'src/shared-components';
@@ -79,10 +79,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const AlertStory = {
-  title: 'Alert',
-  component: Alert,
-} as Meta;
-
-export default AlertStory;
