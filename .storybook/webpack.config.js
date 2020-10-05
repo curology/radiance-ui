@@ -6,8 +6,8 @@ const UTIL_LOCATION = '../../utils/icons';
 
 // SVGs will not load properly if we do not remove the default rule before adding our own
 function removeDefaultStorybookSvgRule(config) {
-  const defaultStorybookLoaderRule = config.module.rules.find((rule) =>
-    rule.test.test('.svg'),
+  const defaultStorybookLoaderRule = config.module.rules.find(
+    (rule) => rule && rule.test && rule.test.test && rule.test.test('.svg'),
   );
 
   const ruleWithoutSvg = defaultStorybookLoaderRule.test
@@ -49,13 +49,13 @@ module.exports = (webpackSettings) => {
     ],
   });
 
-  // Storybook Index Loader Rule
-  config.module.rules.push({
-    test: /index\.(ts|tsx|js)?$/,
-    loaders: [require.resolve('@storybook/source-loader')],
-    include: path.resolve(__dirname, '../stories'),
-    enforce: 'pre',
-  });
+  // // Storybook Index Loader Rule
+  // config.module.rules.push({
+  //   test: /index\.(ts|tsx|js)?$/,
+  //   loaders: [require.resolve('@storybook/source-loader')],
+  //   include: path.resolve(__dirname, '../stories'),
+  //   enforce: 'pre',
+  // });
 
   // config.module.rules.push({
   //   test: /\.mdx$/,

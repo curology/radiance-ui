@@ -1,7 +1,5 @@
+import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
-import { addReadme, configureReadme } from 'storybook-readme';
-import centered from '@storybook/addon-centered/react';
 import { Global, css } from '@emotion/core';
 import Theme from './theme';
 import {
@@ -10,11 +8,7 @@ import {
 } from '../src/utils/injectGlobalStyles/style';
 
 const InjectGlobalStyles = (storyFn) => (
-  <div
-    css={css`
-      padding: 1rem;
-    `}
-  >
+  <React.Fragment>
     <Global styles={resetStyles} />
     <Global styles={brandStyles} />
     <Global
@@ -67,24 +61,15 @@ const InjectGlobalStyles = (storyFn) => (
       `}
     />
     {storyFn()}
-  </div>
+  </React.Fragment>
 );
 
 addDecorator(InjectGlobalStyles);
-addDecorator(centered);
-addDecorator(withA11y);
-addDecorator(addReadme);
 
 addParameters({
   readme: {
     codeTheme: 'github',
   },
-});
-
-configureReadme({
-  StoryPreview: ({ children }) => (
-    <div style={{ margin: '32px 0' }}>{children}</div>
-  ),
 });
 
 addParameters({
@@ -97,8 +82,5 @@ addParameters({
     sidebarAnimations: true,
     enableShortcuts: true,
     isToolshown: true,
-  },
-  viewport: {
-    defaultViewport: 'responsive',
   },
 });
