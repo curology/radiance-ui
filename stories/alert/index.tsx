@@ -7,9 +7,7 @@ import AlertReadme from 'docs/alert';
 
 import avatarImageSrc from './avatarImage.jpg';
 
-const stories = storiesOf('Alert', module);
-
-stories.add(
+storiesOf('Alert', module).add(
   'Usage',
   withDocs(AlertReadme, () => (
     <React.Fragment>
@@ -79,10 +77,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const AlertStory = {
-  title: 'Alert',
-  component: Alert,
-} as Meta;
-
-export default AlertStory;

@@ -85,21 +85,6 @@ configureReadme({
   ),
 });
 
-addParameters({
-  a11y: {
-    element: '#root',
-    config: {},
-    options: {},
-    manual: false,
-  },
-  options: {
-    theme: Theme,
-  },
-  viewport: {
-    viewports: INITIAL_VIEWPORTS,
-  },
-});
-
 /**
  * {@link https://storybook.js.org/docs/react/configure/features-and-behavior Options}
  */
@@ -115,3 +100,21 @@ const ADDONS_CONFIG = {
 };
 
 addons.setConfig(ADDONS_CONFIG);
+
+addParameters({
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: false,
+  },
+  /**
+   * TODO-@storybook/addon-docs: Our storybook-readme use means we need to
+   * duplicate the setConfig options via addParameters, too. Once we overhaul
+   * story/documentation setup we can properly deprecate this usage.
+   */
+  options: ADDONS_CONFIG,
+  viewport: {
+    viewports: INITIAL_VIEWPORTS,
+  },
+});

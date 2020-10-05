@@ -11,9 +11,7 @@ import AccordionReadme from 'docs/accordion';
 import DefaultAccordion from './defaultAccordion';
 import SubcomponentAccordions from './subcomponentAccordions';
 
-const stories = storiesOf('Accordion', module);
-
-stories.add(
+storiesOf('Accordion', module).add(
   'Usage',
   withDocs(AccordionReadme, () => (
     <React.Fragment>
@@ -77,10 +75,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const AccordionStory = {
-  title: 'Accordion',
-  component: Accordion,
-} as Meta;
-
-export default AccordionStory;
