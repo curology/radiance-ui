@@ -72,7 +72,7 @@
     "@storybook/addon-knobs": "5.3.21",
     "@storybook/addon-links": "5.3.21",
     "@storybook/addon-viewport": "5.3.21",
-    "@storybook/core": "5.3.21",
+    "@storybook/core": "6.0.26",
     "@storybook/react": "5.3.21",
     "@storybook/source-loader": "5.3.21",
     "@svgr/cli": "^4.3.3",
