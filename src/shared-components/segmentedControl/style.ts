@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { COLORS, SPACER } from '../../constants';
+import { COLORS, SPACER, BOX_SHADOWS } from '../../constants';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 
 type SegmentItemProps = {
@@ -42,6 +42,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   width: ${({ width }) => `${width}%`};
   &:focus {
     outline: none;
+    box-shadow: ${BOX_SHADOWS.focus};
   }
 `;
 
