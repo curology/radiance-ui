@@ -1,0 +1,132 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { text, select, boolean } from '@storybook/addon-knobs';
+import { Alert, Typography } from 'src/shared-components';
+import avatarImageSrc from 'shared/person.jpg';
+
+<Meta title="Alert" component={Alert} />
+
+# Alert
+
+Alerts should be used to show notifications or messages from (providers, support, or system)
+
+They should show page-level success states.
+
+We should avoid using alerts to show flow-level success states (i.e. Cancellation successful)
+
+Alerts contain some visual marker, an icon `16px` or avatar `32px`
+
+Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about. The text should be short and preferably not extend more than 2 lines. Ellipses (...) can be used to truncate past 2 lines via the prop `truncateText`.
+
+Alerts can contain a CTA section. These should be reserved for really important actions. These alerts persists until an action is taken.
+
+## Usage
+
+```tsx
+import { Alert } from 'radiance-ui';
+```
+
+<ArgsTable of={Alert} />
+
+<Canvas>
+  <Story name="Disappearing (Default)">
+    <Alert content="Default Alert: it will disappear after 3 seconds" />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Sticky">
+    <Alert
+      content={
+        <React.Fragment>
+          <strong>Did you hear?</strong> we launched a sunscreen
+        </React.Fragment>
+      }
+      duration="sticky"
+    />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Error">
+    <Alert
+      content={
+        <React.Fragment>
+          <strong>Whoops!</strong> There was an error updating your address,
+          please try again later
+        </React.Fragment>
+      }
+      type="error"
+      duration="sticky"
+    />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Success">
+    <Alert
+      content={
+        <React.Fragment>
+          <strong>Success!</strong> your photos were accepted
+        </React.Fragment>
+      }
+      type="success"
+      duration="sticky"
+    />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="With CTA">
+    <Alert
+      content={
+        <React.Fragment>
+          <strong>Whoops!</strong> There was an error updating your address,
+          please try again later
+        </React.Fragment>
+      }
+      type="error"
+      ctaContent="Update Payment Method"
+      onExit={() => alert('cta alert clicked')}
+    />
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="With Image">
+    <Alert
+      content={
+        <React.Fragment>
+          <strong>New message from Jasmin:</strong> “Be sure to upload a few
+          more photos so that we can continue with your treatment”
+        </React.Fragment>
+      }
+      duration="sticky"
+      avatarSrc={avatarImageSrc}
+      truncateText
+    />
+  </Story>
+</Canvas>
+
+## Subcomponents
+
+### Alert.Container
+
+<Canvas>
+  <Story name="With Alert.Container">
+    <Alert.Container>
+      <Alert content="Alert.Container fixes my position" />
+    </Alert.Container>
+  </Story>
+</Canvas>
+
+Absolutely positions the alerts by default. (As such, it escapes the canvas container.)
+
+### Notes
+
+The `<Alert />` component provides only the styling for and enter/exit
+behavior for alerts. Management of what alerts are showing on the screen
+must be handled from outside of this component.
+
+All alerts are dimissable by clicking on them. However, you can use the
+`duration` prop to determine if the alert is sticky or dismissed on a
+timer (in units of seconds).
