@@ -50,9 +50,3 @@ stories.add(
 );
 
 stories.add('Icon Library', () => <IconList />);
-
-const IconsStory = {
-  title: 'Icons',
-};
-
-export default IconsStory;

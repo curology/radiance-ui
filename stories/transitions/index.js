@@ -61,9 +61,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const TransitionsStory = {
-  title: 'Transitions',
-};
-
-export default TransitionsStory;

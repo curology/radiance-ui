@@ -18,9 +18,3 @@ stories.add(
   'Mobile example',
   withDocs(MobileReadme, () => <MobileExample />),
 );
-
-const DropdownStory = {
-  title: 'Dropdown',
-};
-
-export default DropdownStory;
