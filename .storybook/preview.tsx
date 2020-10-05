@@ -1,7 +1,6 @@
 import { addDecorator, addParameters } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { addReadme, configureReadme } from 'storybook-readme';
-import centered from '@storybook/addon-centered/react';
 import { Global, css } from '@emotion/core';
 import Theme from './theme';
 import {
@@ -71,8 +70,6 @@ const InjectGlobalStyles = (storyFn) => (
 );
 
 addDecorator(InjectGlobalStyles);
-addDecorator(centered);
-addDecorator(withA11y);
 addDecorator(addReadme);
 
 addParameters({
@@ -88,6 +85,12 @@ configureReadme({
 });
 
 addParameters({
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: false,
+  },
   options: {
     theme: Theme,
     isFullscreen: false,
@@ -99,6 +102,6 @@ addParameters({
     isToolshown: true,
   },
   viewport: {
-    defaultViewport: 'responsive',
+    viewports: INITIAL_VIEWPORTS,
   },
 });
