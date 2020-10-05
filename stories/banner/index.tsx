@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { select, text } from '@storybook/addon-knobs';
 import BannerReadme from 'docs/banner';
@@ -51,10 +51,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const BannerStory = {
-  title: 'Banner',
-  component: Banner,
-} as Meta;
-
-export default BannerStory;

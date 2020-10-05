@@ -35,10 +35,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const ContainerStory = {
-  title: 'Container',
-  component: Container,
-};
-
-export default ContainerStory;

@@ -110,10 +110,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const TooltipStory = {
-  title: 'Tooltip',
-  component: Tooltip,
-};
-
-export default TooltipStory;

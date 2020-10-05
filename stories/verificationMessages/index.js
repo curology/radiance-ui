@@ -55,10 +55,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const VerificationMessagesStory = {
-  title: 'VerificationMessages',
-  component: VerificationMessages,
-};
-
-export default VerificationMessagesStory;

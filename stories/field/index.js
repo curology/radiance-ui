@@ -91,10 +91,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const FieldStory = {
-  title: 'Field',
-  component: Field,
-};
-
-export default FieldStory;

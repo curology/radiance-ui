@@ -37,10 +37,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const ToggleStory = {
-  title: 'Toggle',
-  component: Toggle,
-};
-
-export default ToggleStory;

@@ -68,10 +68,3 @@ stories.add(
     </div>
   )),
 );
-
-const CalloutStory = {
-  title: 'Callout',
-  component: Callout,
-};
-
-export default CalloutStory;

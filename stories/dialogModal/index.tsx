@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import DialogModalReadme from 'docs/dialogModal';
 
@@ -15,9 +15,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const DialogModalStory = {
-  title: 'DialogModal',
-} as Meta;
-
-export default DialogModalStory;

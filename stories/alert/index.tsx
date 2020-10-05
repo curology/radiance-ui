@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Meta, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { Alert, Typography } from 'src/shared-components';
@@ -7,7 +7,9 @@ import AlertReadme from 'docs/alert';
 
 import avatarImageSrc from './avatarImage.jpg';
 
-storiesOf('Alert', module).add(
+const stories = storiesOf('Alert', module);
+
+stories.add(
   'Usage',
   withDocs(AlertReadme, () => (
     <React.Fragment>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import styled from '@emotion/styled';
 import AvatarReadme from 'docs/avatar';
@@ -26,6 +26,7 @@ const AvatarContainer = styled.div`
 `;
 
 const stories = storiesOf('Avatar', module);
+
 stories.add(
   'Usage',
   withDocs(AvatarReadme, () => (
@@ -49,10 +50,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const AvatarStory = {
-  title: 'Avatar',
-  component: Avatar,
-} as Meta;
-
-export default AvatarStory;

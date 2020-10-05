@@ -52,10 +52,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const LoadingSpinnerStory = {
-  title: 'LoadingSpinner',
-  component: LoadingSpinner,
-};
-
-export default LoadingSpinnerStory;

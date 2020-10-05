@@ -49,10 +49,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const CheckboxStory = {
-  title: 'Checkbox',
-  component: Checkbox,
-};
-
-export default CheckboxStory;

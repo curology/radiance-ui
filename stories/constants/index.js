@@ -22,7 +22,7 @@ stories.add(
         text-align: left;
       `}
     >
-      {Object.keys(CONSTANTS).map(category => {
+      {Object.keys(CONSTANTS).map((category) => {
         if (CONSTANTS_WITH_OWN_STORY.includes(category)) {
           return null;
         }
@@ -48,10 +48,3 @@ stories.add(
 stories.add('COLORS', colorsStory);
 
 stories.add('BOX_SHADOWS', boxShadowsStory);
-
-const ConstantsStory = {
-  title: 'Constants',
-  // component: Constants,
-};
-
-export default ConstantsStory;

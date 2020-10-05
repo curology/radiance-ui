@@ -47,10 +47,3 @@ stories.add(
     </React.Fragment>
   )),
 );
-
-const ChipStory = {
-  title: 'Chip',
-  component: Chip,
-};
-
-export default ChipStory;

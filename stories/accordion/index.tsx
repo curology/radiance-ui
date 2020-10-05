@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf, Meta } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
@@ -11,7 +11,9 @@ import AccordionReadme from 'docs/accordion';
 import DefaultAccordion from './defaultAccordion';
 import SubcomponentAccordions from './subcomponentAccordions';
 
-storiesOf('Accordion', module).add(
+const stories = storiesOf('Accordion', module);
+
+stories.add(
   'Usage',
   withDocs(AccordionReadme, () => (
     <React.Fragment>

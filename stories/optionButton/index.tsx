@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, storiesOf } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
@@ -170,10 +170,3 @@ stories.add(
     </MainContainer>
   )),
 );
-
-const OptionButtonStory = {
-  title: 'OptionButton',
-  component: OptionButton,
-} as Meta;
-
-export default OptionButtonStory;
