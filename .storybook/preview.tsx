@@ -68,12 +68,6 @@ const InjectGlobalStyles = (storyFn) => (
 
 addDecorator(InjectGlobalStyles);
 
-addParameters({
-  readme: {
-    codeTheme: 'github',
-  },
-});
-
 /**
  * {@link https://storybook.js.org/docs/react/configure/features-and-behavior Options}
  */
@@ -96,6 +90,9 @@ addParameters({
     config: {},
     options: {},
     manual: false,
+  },
+  docs: {
+    theme: Theme,
   },
   /**
    * TODO-@storybook/addon-docs: Our storybook-readme use means we need to
