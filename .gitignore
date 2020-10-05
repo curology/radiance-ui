@@ -80,7 +80,6 @@ dist/
 lib/
 src/icons/
 .out
-.size-snapshot.json
 
 # JetBrains
 .idea/
