@@ -85,6 +85,7 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
 
 .emotion-2:focus {
   outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
 <div
