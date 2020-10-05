@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1126747,
-    "minified": 1065648,
-    "gzipped": 104542
+    "bundled": 1126751,
+    "minified": 1065652,
+    "gzipped": 104549
   },
   "bundle.umd.js": {
-    "bundled": 1136345,
-    "minified": 1039069,
-    "gzipped": 100082
+    "bundled": 1136349,
+    "minified": 1039073,
+    "gzipped": 100090
   },
   "shared-components/chip/index.js": {
     "bundled": 576,
@@ -780,9 +780,9 @@
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 11294,
-    "minified": 9464,
-    "gzipped": 3719,
+    "bundled": 11298,
+    "minified": 9468,
+    "gzipped": 3705,
     "treeshaked": {
       "rollup": {
         "code": 2030,
