@@ -37,7 +37,7 @@ type AccordionDefaultProps = {
   rightAlignArrow: boolean;
 };
 
-class Accordion extends React.Component<
+export class Accordion extends React.Component<
   AccordionProps & AccordionDefaultProps,
   { contentHeight: string }
 > {
@@ -165,5 +165,3 @@ class Accordion extends React.Component<
     );
   }
 }
-
-export default Accordion;

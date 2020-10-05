@@ -1,4 +1,4 @@
-export { default as Accordion } from './accordion';
+export { Accordion } from './accordion';
 export { default as Alert } from './alert';
 export { Avatar } from './avatar';
 export { default as Banner } from './banner';

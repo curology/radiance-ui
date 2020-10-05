@@ -47,7 +47,10 @@
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "import/extensions": ["error", { "svg": "always" }]
+    "import/extensions": [
+      "error",
+      { "svg": "always", "jpg": "ignorePackages", "png": "ignorePackages" }
+    ]
   },
   "overrides": [
     {
