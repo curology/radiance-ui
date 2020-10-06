@@ -18,9 +18,9 @@ const ColorsContainer = styled.div`
   align-items: center;
 `;
 
-const colorsStory = () => (
+const ColorsStory = () => (
   <MainContainer>
-    {Object.keys(COLORS).map(category => {
+    {Object.keys(COLORS).map((category) => {
       if (category === 'default' || category === 'COLORS_PROP_TYPES') {
         return null;
       }
@@ -31,7 +31,7 @@ const colorsStory = () => (
         <React.Fragment key={category}>
           <Typography.Title>{category}:</Typography.Title>
           <ColorsContainer>
-            {Object.keys(categoryColors).map(color => {
+            {Object.keys(categoryColors).map((color) => {
               const colorHex = categoryColors[color];
               return (
                 <Color key={color} colorName={color} colorHex={colorHex} />
@@ -44,4 +44,4 @@ const colorsStory = () => (
   </MainContainer>
 );
 
-export default colorsStory;
+export default ColorsStory;

@@ -38,6 +38,12 @@
     "@typescript-eslint/no-use-before-define": "error",
     "arrow-parens": "off",
     "no-shadow": "off",
+    "no-underscore-dangle": [
+      "warn",
+      {
+        "allow": ["__isProxy"]
+      }
+    ],
     "no-use-before-define": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".tsx"] }],
     "react/require-default-props": [

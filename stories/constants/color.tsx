@@ -14,7 +14,7 @@ const ColorContainer = styled.div`
 const ColorSample = styled.div`
   height: 25px;
   width: 25px;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   border-radius: 99999px;
   border: 1px solid #000;
   overflow: hidden;
@@ -29,7 +29,12 @@ const ColorHex = styled.div`
   font-size: 8px;
 `;
 
-const Color = ({ colorName, colorHex }) => (
+type ColorProps = {
+  colorName: string;
+  colorHex: string;
+};
+
+const Color = ({ colorName, colorHex }: ColorProps) => (
   <ColorContainer>
     <ColorSample color={colorHex} />
     <ColorName>{colorName}</ColorName>

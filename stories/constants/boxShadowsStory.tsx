@@ -23,9 +23,9 @@ const baseBoxStyle = css`
   margin: ${SPACER.large};
 `;
 
-const boxShadowsStory = () => (
+const BoxShadowsStory = () => (
   <MainContainer>
-    {Object.keys(BOX_SHADOWS).map(category => {
+    {Object.keys(BOX_SHADOWS).map((category) => {
       if (category === 'default') {
         return null;
       }
@@ -36,14 +36,14 @@ const boxShadowsStory = () => (
         <React.Fragment key={category}>
           <Typography.Title>{category}:</Typography.Title>
           <BoxesContainer>
-            {Object.keys(categoryBoxShadows).map(shadow => {
+            {Object.keys(categoryBoxShadows).map((shadow) => {
               const styles = css`
                 ${baseBoxStyle};
                 box-shadow: ${categoryBoxShadows[shadow]};
               `;
 
               return (
-                <Container css={styles}>
+                <Container key={shadow} css={styles}>
                   <Container.Section>
                     <strong>Key:</strong> {shadow}
                     <br />
@@ -60,4 +60,4 @@ const boxShadowsStory = () => (
   </MainContainer>
 );
 
-export default boxShadowsStory;
+export default BoxShadowsStory;
