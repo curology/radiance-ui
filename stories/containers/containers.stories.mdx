@@ -1,0 +1,56 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Container } from 'src/shared-components';
+
+<Meta title="Container" component={Container} />
+
+# Container
+
+## Usage
+
+```tsx
+import { Container } from 'radiance-ui';
+```
+
+<ArgsTable of={Container} />
+
+<Canvas>
+  <Story name="Default">
+    <Container>
+      <Container.Image
+        src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg"
+        height="134"
+      />
+      <Container.Section>First section!</Container.Section>
+      <Container.Divider />
+      <Container.Section>Second section</Container.Section>
+    </Container>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Clickable">
+    <Container type="clickable">
+      <Container.Section>Clickable container</Container.Section>
+    </Container>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Message">
+    <Container type="message">
+      <Container.Section>Message container</Container.Section>
+    </Container>
+  </Story>
+</Canvas>
+
+### Notes
+
+The `<Container />` component is mainly useful for base styles.
+
+Within the container there are helper components that have very little opinion
+except for spacing. The idea is that we encourage you to build out the
+content of the `<Container />` component, but we have some helpful
+default components you can use.
+
+`<Container />` can take in a `type` prop that will change its
+styling. Available types are `message` and `clickable`.

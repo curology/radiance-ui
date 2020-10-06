@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Chip from './index';
+import { Chip } from './index';
 
 describe('<Chip />', () => {
   describe('UI snapshots', () => {

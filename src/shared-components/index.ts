@@ -12,7 +12,7 @@ export { Callout } from './callout';
 export { Carousel } from './carousel';
 export { Checkbox } from './checkbox';
 export { Chip } from './chip';
-export { default as Container } from './container';
+export { Container } from './container';
 export { default as DialogModal } from './dialogModal';
 export { default as Dropdown } from './dropdown';
 export { default as Field } from './field';
