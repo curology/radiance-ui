@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Carousel from './index';
+import { Carousel } from './index';
 
 const cards = [<Carousel.Card key="card1">Card 1</Carousel.Card>];
 

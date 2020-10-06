@@ -9,7 +9,7 @@ export {
   TextButton,
 } from './button';
 export { Callout } from './callout';
-export { default as Carousel } from './carousel';
+export { Carousel } from './carousel';
 export { default as Checkbox } from './checkbox';
 export { default as Chip } from './chip';
 export { default as Container } from './container';

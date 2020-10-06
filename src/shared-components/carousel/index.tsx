@@ -15,16 +15,34 @@ const BASE_SLIDER_CONFIG = {
 export type CarouselType = 'primary' | 'secondary';
 
 type CarouselProps = {
+  /**
+   * Auto-advance the carousel cards
+   */
   autoplay?: boolean;
+  /**
+   * Autoplay speed in milliseconds (ignored if autoplay is false)
+   */
   autoplaySpeed?: number;
+  /**
+   * Align the arrows on the bottom right (dots are automatically hidden)
+   */
+  bottomRightAlignedArrows?: boolean;
   carouselType?: CarouselType;
+  /**
+   * Center the current card
+   */
   centerMode?: boolean;
+  /**
+   * Array of `Carousel.Card`
+   */
   children: Array<React.ReactNode>;
   hideArrows?: boolean;
   hideDots?: boolean;
-  bottomRightAlignedArrows?: boolean;
+  /**
+   * Creates a carousel loop, i.e. if true you can go backwards from the beginning
+   */
   infinite?: boolean;
-  numCardsVisible: number;
+  numCardsVisible: 1 | 2 | 3;
 };
 
 type CarouselState = {
@@ -32,7 +50,7 @@ type CarouselState = {
   lastIndex: number;
 };
 
-class Carousel extends React.Component<CarouselProps, CarouselState> {
+export class Carousel extends React.Component<CarouselProps, CarouselState> {
   static Card = Card;
 
   static propTypes = {
@@ -40,6 +58,9 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     autoplaySpeed: PropTypes.number,
     carouselType: PropTypes.oneOf(['primary', 'secondary']),
     centerMode: PropTypes.bool,
+    /**
+     * Array of `Carousel.Card`
+     */
     children: PropTypes.arrayOf(PropTypes.node).isRequired,
     hideArrows: PropTypes.bool,
     hideDots: PropTypes.bool,
@@ -209,5 +230,3 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     );
   }
 }
-
-export default Carousel;
