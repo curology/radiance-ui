@@ -9,7 +9,8 @@ type ChipProps = {
   status?: StatusType;
   text: string;
 };
-const Chip = ({ status = 'default', text }: ChipProps) => (
+
+export const Chip = ({ status = 'default', text }: ChipProps) => (
   <ChipStyles status={status}>
     <ChipText>{text}</ChipText>
   </ChipStyles>
@@ -23,5 +24,3 @@ Chip.propTypes = {
 Chip.defaultProps = {
   status: 'default',
 };
-
-export default Chip;

@@ -31,7 +31,7 @@ const defaultProps = {
   size: 'small',
 };
 
-const Checkbox = ({
+export const Checkbox = ({
   checked,
   disabled,
   onClick,

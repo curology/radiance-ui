@@ -10,8 +10,8 @@ export {
 } from './button';
 export { Callout } from './callout';
 export { Carousel } from './carousel';
-export { default as Checkbox } from './checkbox';
-export { default as Chip } from './chip';
+export { Checkbox } from './checkbox';
+export { Chip } from './chip';
 export { default as Container } from './container';
 export { default as DialogModal } from './dialogModal';
 export { default as Dropdown } from './dropdown';
