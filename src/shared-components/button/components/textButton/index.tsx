@@ -10,19 +10,17 @@ const propTypes = {
   onClick: PropTypes.func,
 };
 
-const defaultProps = {
-  disabled: false,
-  onClick: () => undefined,
-};
-
 type TextButtonProps = {
+  /**
+   * Node/text to be rendered inside the button
+   */
   children: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;
   [key: string]: any;
 };
 
-const TextButton = ({
+export const TextButton = ({
   children,
   disabled = false,
   onClick = () => undefined,
@@ -30,7 +28,7 @@ const TextButton = ({
 }: TextButtonProps) => (
   <BaseTextButton
     disabled={disabled}
-    onClick={!disabled ? onClick : event => event.preventDefault()}
+    onClick={!disabled ? onClick : (event) => event.preventDefault()}
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
@@ -39,6 +37,3 @@ const TextButton = ({
 );
 
 TextButton.propTypes = propTypes;
-TextButton.defaultProps = defaultProps;
-
-export default TextButton;

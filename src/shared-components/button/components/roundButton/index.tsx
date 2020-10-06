@@ -35,31 +35,38 @@ const propTypes = {
   textColor: PropTypes.string,
 };
 
-const defaultProps = {
-  buttonColor: COLORS.primary,
-  buttonType: 'primary',
-  children: '',
-  disabled: false,
-  isLoading: false,
-  loading: undefined,
-  onClick: () => undefined,
-  textColor: '',
-};
-
 type RoundButtonProps = {
+  /**
+   * TODO-TS: Limit type from string to COLORS constants options
+   */
   buttonColor?: string;
+  /**
+   * Determines the button's main style theme
+   */
   buttonType?: ButtonTypeWithAction;
+  /**
+   * Node to be rendered inside the button. Recommended to be the button text
+   */
   children?: React.ReactNode;
   disabled?: boolean;
+  /**
+   * Icon to render in the button. Recommended to be a Radiance icon
+   */
   icon: React.ReactNode;
+  /**
+   * When loading, onClick function execution is disallowed
+   */
   isLoading?: boolean;
   loading?: boolean | undefined;
   onClick?: () => void;
+  /**
+   * Color that will override existing text, icon, and loading colors (except when disabled is true)
+   */
   textColor?: string;
   [key: string]: any;
 };
 
-const RoundButton = ({
+export const RoundButton = ({
   buttonColor = COLORS.primary,
   buttonType = 'primary',
   children = '',
@@ -104,7 +111,10 @@ const RoundButton = ({
 };
 
 RoundButton.propTypes = propTypes;
-RoundButton.defaultProps = defaultProps;
 RoundButton.Container = RoundButtonContainer;
 
+/**
+ * TODO-Storybook: Once loading prop fully deprecated, remove default export
+ * and rely on named export only for Docs compatibility
+ */
 export default withDeprecationWarning(RoundButton, deprecatedProperties);

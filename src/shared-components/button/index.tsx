@@ -6,9 +6,9 @@ import Loader from './shared-components/loader';
 import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
-import LinkButton from './components/linkButton';
+import { LinkButton } from './components/linkButton';
 import RoundButton from './components/roundButton';
-import TextButton from './components/textButton';
+import { TextButton } from './components/textButton';
 import { COLORS, COLORS_PROP_TYPES } from '../../constants';
 import {
   deprecatedProperties,
@@ -22,20 +22,41 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type ButtonTypeWithAction = ButtonType | 'action';
 
 type ButtonProps = {
+  /**
+   * TODO-TS: Limit type from string to COLORS constants options
+   */
   buttonColor?: string;
+  /**
+   * Determines the button's main style theme
+   */
   buttonType?: ButtonType;
+  /**
+   * Node to be rendered inside the button. Recommended to be the button text
+   */
   children: React.ReactNode;
   disabled?: boolean;
+  /**
+   * Icon to render in the button. Recommended to be a Radiance icon
+   */
   icon?: React.ReactNode;
+  /**
+   * Adjusts the default button styles so that the button takes the full width of the container. Intended for mobile-use only.
+   */
   isFullWidth?: boolean;
+  /**
+   * When loading, onClick function execution is disallowed
+   */
   isLoading?: boolean;
   loading?: boolean | undefined;
   onClick?: () => void;
+  /**
+   * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
+   */
   textColor?: string;
   [key: string]: any;
 };
 
-class Button extends React.Component<ButtonProps> {
+export class Button extends React.Component<ButtonProps> {
   static Container = Container;
 
   static propTypes = {
@@ -89,7 +110,7 @@ class Button extends React.Component<ButtonProps> {
       <ButtonBase
         disabled={disabled}
         onClick={
-          !disabled && !loadingVal ? onClick : event => event.preventDefault()
+          !disabled && !loadingVal ? onClick : (event) => event.preventDefault()
         }
         buttonType={buttonType}
         buttonColor={buttonColor}

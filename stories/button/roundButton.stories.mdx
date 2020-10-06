@@ -1,24 +1,31 @@
-import React from 'react';
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { text, select, boolean } from '@storybook/addon-knobs';
-import { withDocs } from 'storybook-readme';
 import { action } from '@storybook/addon-actions';
+import { RoundButton } from 'src/shared-components/button/components/roundButton';
+import { Typography } from 'src/shared-components';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
-import RoundButtonReadme from 'docs/button/roundButton';
-import { RoundButton, Typography } from 'src/shared-components';
+import { COLORS, SPACER } from 'src/constants';
+import { NeckGlyph } from 'src/svgs/glyphs';
 import {
   CheckmarkIcon,
-  ArrowLeftIcon,
   ArrowRightIcon,
+  ArrowLeftIcon,
   CrossIcon,
 } from 'src/svgs/icons';
-import { SPACER, COLORS } from 'src/constants';
 
-const MainContainer = styled.div`
-  text-align: left;
-`;
+<Meta title="Buttons/RoundButton" component={RoundButton} />
 
-const ButtonsContainer = styled.div`
+# RoundButton
+
+## Usage
+
+```tsx
+import { RoundButton } from 'radiance-ui';
+```
+
+<ArgsTable of={RoundButton} />
+
+export const ButtonsContainer = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -26,81 +33,84 @@ const ButtonsContainer = styled.div`
   margin: ${SPACER.large} 0 ${SPACER.x2large};
 `;
 
-const RoundButtonStory = withDocs(RoundButtonReadme, () => (
-  <MainContainer>
-    <Typography.Title>Default</Typography.Title>
+<Typography.Title>Default</Typography.Title>
+
+<Canvas>
+  <Story name="Default">
     <ButtonsContainer>
       <RoundButton icon={<CheckmarkIcon />}>Primary</RoundButton>
-
       <RoundButton buttonType="secondary" icon={<ArrowRightIcon />}>
         Secondary
       </RoundButton>
-
       <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />}>
         Tertiary
       </RoundButton>
-
       <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>
         Quaternary
       </RoundButton>
-
       <RoundButton buttonType="action" icon={<CrossIcon />}>
         Action
       </RoundButton>
     </ButtonsContainer>
+  </Story>
+</Canvas>
 
-    <Typography.Title>Disabled</Typography.Title>
+<Typography.Title>Disabled</Typography.Title>
+
+<Canvas>
+  <Story name="Disabled">
     <ButtonsContainer>
       <RoundButton icon={<ArrowLeftIcon />} disabled>
         Primary
       </RoundButton>
-
       <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} disabled>
         Secondary
       </RoundButton>
-
       <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
         Tertiary
       </RoundButton>
-
       <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} disabled>
         Quaternary
       </RoundButton>
-
       <RoundButton buttonType="action" icon={<CrossIcon />} disabled>
         Action
       </RoundButton>
     </ButtonsContainer>
+  </Story>
+</Canvas>
 
-    <Typography.Title>Loading</Typography.Title>
+<Typography.Title>Loading</Typography.Title>
+
+<Canvas>
+  <Story name="Loading">
     <ButtonsContainer>
       <RoundButton icon={<ArrowLeftIcon />} isLoading>
         Primary
       </RoundButton>
-
       <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} isLoading>
         Secondary
       </RoundButton>
-
       <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} isLoading>
         Tertiary
       </RoundButton>
-
       <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} isLoading>
         Quaternary
       </RoundButton>
-
       <RoundButton buttonType="action" icon={<CrossIcon />} isLoading>
         Action
       </RoundButton>
     </ButtonsContainer>
+  </Story>
+</Canvas>
 
-    <Typography.Title>Color</Typography.Title>
+<Typography.Title>With Color</Typography.Title>
+
+<Canvas>
+  <Story name="With Color">
     <ButtonsContainer>
       <RoundButton buttonColor={COLORS.statusRed} icon={<CheckmarkIcon />}>
         Primary
       </RoundButton>
-
       <RoundButton
         buttonColor={COLORS.statusRed}
         buttonType="secondary"
@@ -108,7 +118,6 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
       >
         Secondary
       </RoundButton>
-
       <RoundButton
         buttonColor={COLORS.statusRed}
         buttonType="tertiary"
@@ -116,7 +125,6 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
       >
         Tertiary
       </RoundButton>
-
       <RoundButton
         buttonColor={COLORS.statusRed}
         buttonType="quaternary"
@@ -124,7 +132,6 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
       >
         Quaternary
       </RoundButton>
-
       <RoundButton
         buttonColor={COLORS.statusRed}
         buttonType="action"
@@ -133,26 +140,27 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
         Action
       </RoundButton>
     </ButtonsContainer>
+  </Story>
+</Canvas>
 
-    <Typography.Title>
-      Within RoundButton.Container (with multi prop)
-    </Typography.Title>
-    <RoundButton.Container
-      multi
-      css={css`
-        margin: ${SPACER.xlarge} 0;
-      `}
-    >
+<Typography.Title>
+  Within RoundButton.Container (with multi prop)
+</Typography.Title>
+
+<Canvas>
+  <Story name="RoundButton.Container">
+    <RoundButton.Container multi>
       <RoundButton icon={<ArrowLeftIcon />} />
       <RoundButton icon={<ArrowRightIcon />} />
     </RoundButton.Container>
+  </Story>
+</Canvas>
 
-    <Typography.Title>With Knobs</Typography.Title>
-    <ButtonsContainer
-      css={css`
-        max-width: 100px;
-      `}
-    >
+<Typography.Title>With Controls</Typography.Title>
+
+<Canvas>
+  <Story name="RoundButton">
+    <ButtonsContainer>
       <RoundButton
         buttonType={select(
           'buttonType',
@@ -169,7 +177,19 @@ const RoundButtonStory = withDocs(RoundButtonReadme, () => (
         {text('children', 'Click me!')}
       </RoundButton>
     </ButtonsContainer>
-  </MainContainer>
-));
+  </Story>
+</Canvas>
 
-export default RoundButtonStory;
+### Notes
+
+`<RoundButton />` behaves mostly the same as `<Button />` except that it
+requires an `icon` prop since that is the main content placed with in
+the round button. Any children of the component will be rendered
+immediately below the round button.
+
+`<RoundButton.Container>` can be used to wrap `<RoundButton />` components.
+Since it has some opinions on width and spacing, the max number of
+buttons you want to wrap is **2**.
+
+We should generally try to use the default button color when possible.
+Only for special cases should we need to use a different button color.
