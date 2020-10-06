@@ -5,7 +5,17 @@ import { Typography } from 'src/shared-components';
 
 import renderConstantsMap from './renderConstantsMap';
 
-const CONSTANTS_WITH_OWN_STORY = ['BOX_SHADOWS', 'COLORS'];
+/**
+ * We don't have a story for this, but export it named and don't want it included
+ * in the CONSTANTS glob
+ */
+const COLORS_PROP_TYPES = 'COLORS_PROP_TYPES';
+
+const CONSTANTS_WITH_OWN_STORY = ['BOX_SHADOWS', 'COLORS', COLORS_PROP_TYPES];
+
+type CategoryConstant =
+  | Record<string, unknown>
+  | (typeof Proxy & { __isProxy: boolean });
 
 const AvailableConstantsStory = () => (
   <div
@@ -18,9 +28,7 @@ const AvailableConstantsStory = () => (
         return null;
       }
 
-      const categoryConstant = CONSTANTS[category] as
-        | Record<string, unknown>
-        | (typeof Proxy & { __isProxy: boolean });
+      const categoryConstant = CONSTANTS[category] as CategoryConstant;
 
       return (
         <div
