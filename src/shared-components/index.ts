@@ -1,7 +1,7 @@
 export { Accordion } from './accordion';
-export { default as Alert } from './alert';
+export { Alert } from './alert';
 export { Avatar } from './avatar';
-export { default as Banner } from './banner';
+export { Banner } from './banner';
 export {
   default as Button,
   RoundButton,

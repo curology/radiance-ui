@@ -1,7 +1,7 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
-import Banner from './index';
+import { Banner } from './index';
 
 describe('Banner UI snapshots', () => {
   test('renders success type and text', () => {

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import TestRenderer from 'react-test-renderer';
 
-import Alert from './index';
+import { Alert } from './index';
 
 // Note on truncateText prop test: this cannot be tested because element scrollHeight and offsetHeight are not simulated correctly
 

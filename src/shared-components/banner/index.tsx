@@ -27,7 +27,7 @@ type BannerProps = {
   onClick?: () => void;
 };
 
-const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
+export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
   const Icon = bannerIconMapping[type];
 
   return (
@@ -51,5 +51,3 @@ Banner.propTypes = {
   type: PropTypes.oneOf(['default', 'success', 'error']),
   onClick: PropTypes.func,
 };
-
-export default Banner;

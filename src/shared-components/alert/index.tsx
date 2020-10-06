@@ -42,7 +42,7 @@ type AlertState = {
   exited: boolean;
 };
 
-class Alert extends React.Component<AlertProps, AlertState> {
+export class Alert extends React.Component<AlertProps, AlertState> {
   static propTypes = {
     avatarSrc: PropTypes.string,
     content: PropTypes.node.isRequired,
@@ -169,5 +169,3 @@ class Alert extends React.Component<AlertProps, AlertState> {
     );
   }
 }
-
-export default Alert;
