@@ -7,12 +7,21 @@ import {
 import { COLORS } from '../../constants';
 
 type CalloutProps = {
+  /**
+   * Content of the Callout element. It may contain `<strong>` tags
+   */
   children: React.ReactNode;
+  /**
+   * Color of the text and icon
+   */
   color?: string;
+  /**
+   * Icon displayed inside the callout right aligned
+   */
   icon?: React.ReactNode;
 };
 
-const Callout = ({
+export const Callout = ({
   children,
   icon = null,
   color = COLORS.primary,
@@ -27,11 +36,6 @@ Callout.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node,
   color: PropTypes.string,
-};
-
-Callout.defaultProps = {
-  color: COLORS.primary,
-  icon: null,
 };
 
 Callout.Container = ParentContainer;
