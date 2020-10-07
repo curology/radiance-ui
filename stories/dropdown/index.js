@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 
 import DropdownReadme from '../../docs/dropdown/main';
@@ -9,7 +8,6 @@ import MobileReadme from '../../docs/dropdown/mobile';
 import MobileExample from './mobileExample';
 
 const stories = storiesOf('Dropdown', module);
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',

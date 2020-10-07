@@ -1,13 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs } from '@storybook/addon-knobs';
 import ContainerReadme from 'docs/container';
 import { Container } from 'src/shared-components';
 
 const stories = storiesOf('Containers', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Container',

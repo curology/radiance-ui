@@ -1,9 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import {
-  withKnobs, text, select, boolean, 
-} from '@storybook/addon-knobs';
+import { text, select, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
@@ -40,7 +38,6 @@ const OptionsContainer = styled.div`
 `;
 
 const stories = storiesOf('OptionButton', module);
-stories.addDecorator(withKnobs);
 
 const noop = () => undefined;
 
@@ -142,7 +139,11 @@ stories.add(
                 ['radio', 'checkbox'],
                 'checkbox',
               )}
-              buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
+              buttonType={select(
+                'buttonType',
+                ['primary', 'secondary'],
+                'primary',
+              )}
               selected={boolean('selected', false)}
             />
             <OptionButton
@@ -154,7 +155,11 @@ stories.add(
                 ['radio', 'checkbox'],
                 'checkbox',
               )}
-              buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
+              buttonType={select(
+                'buttonType',
+                ['primary', 'secondary'],
+                'primary',
+              )}
               selected={boolean('selected', false)}
               icon={<AcneGlyph width={32} height={32} />}
             />

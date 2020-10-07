@@ -26,6 +26,7 @@ const AvatarContainer = styled.div`
 `;
 
 const stories = storiesOf('Avatar', module);
+
 stories.add(
   'Usage',
   withDocs(AvatarReadme, () => (

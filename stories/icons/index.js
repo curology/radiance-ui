@@ -1,9 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import {
-  withKnobs, text, number, boolean, 
-} from '@storybook/addon-knobs';
+import { text, number, boolean } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
 import IconReadme from 'docs/icon';
 import { Typography } from 'src/shared-components';
@@ -13,8 +11,6 @@ import CameraIcon from 'src/svgs/icons/camera-icon.svg';
 import IconList from './IconLibrary';
 
 const stories = storiesOf('Icon', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',

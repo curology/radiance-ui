@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import {
-  withKnobs, text, select, number, color, 
+  text, select, number, color, 
 } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
@@ -31,7 +31,6 @@ const BarContainer = styled.div`
 `;
 
 const stories = storiesOf('Progress Bar', module);
-stories.addDecorator(withKnobs);
 
 const customHeight = 10;
 
