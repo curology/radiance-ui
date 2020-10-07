@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerificationMessages /> UI snapshot renders content and children 1`] = `
-.emotion-6 {
+.emotion-8 {
   list-style-type: none;
   margin: 0;
 }
@@ -19,7 +19,7 @@ exports[`<VerificationMessages /> UI snapshot renders content and children 1`] =
 }
 
 <ul
-  className="emotion-6 emotion-7"
+  className="emotion-8 emotion-9"
 >
   <li
     className="emotion-0 emotion-1"
@@ -73,6 +73,72 @@ exports[`<VerificationMessages /> UI snapshot renders content and children 1`] =
     Must contain 1 number
     , 
     Must contain 1 symbol
+  </li>
+  <li
+    className="emotion-0 emotion-1"
+    style={
+      Object {
+        "maxHeight": "48px",
+        "opacity": "1",
+        "transitionDuration": "350ms",
+        "transitionProperty": "max-height, opacity",
+        "transitionTimingFunction": "ease-in-out",
+      }
+    }
+    type="error"
+  >
+    <strong>
+      1
+    </strong>
+     one
+    , 
+    <strong>
+      2
+    </strong>
+     two
+  </li>
+</ul>
+`;
+
+exports[`<VerificationMessages /> UI snapshot renders with custom props 1`] = `
+.emotion-2 {
+  list-style-type: none;
+  margin: 0;
+  text-align: center;
+}
+
+.emotion-0 {
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #2B6E33;
+  line-height: 24px;
+}
+
+.emotion-0:last-of-type {
+  margin: 0 0 0.125rem 0;
+}
+
+<ul
+  className="emotion-2 emotion-3"
+>
+  <li
+    className="emotion-0 emotion-1"
+    style={
+      Object {
+        "maxHeight": "48px",
+        "opacity": "1",
+        "transitionDuration": "350ms",
+        "transitionProperty": "max-height, opacity",
+        "transitionTimingFunction": "ease-in-out",
+      }
+    }
+    type="success"
+  >
+    <strong>
+      Congrats!
+    </strong>
+     Your app was approved
   </li>
 </ul>
 `;
