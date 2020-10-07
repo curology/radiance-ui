@@ -1,0 +1,8 @@
+{
+  "extends": "./shared/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "noEmit": true
+  },
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"]
+}

@@ -1,6 +1,12 @@
 import React from 'react';
 
 declare global {
+  declare module 'docs/*' {
+    const markdown: string | string[];
+
+    export = markdown;
+  }
+
   // These are to use import images without TS module not found error
   declare module '*.jpg' {
     const filepath: string;

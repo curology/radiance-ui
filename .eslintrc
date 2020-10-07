@@ -3,7 +3,7 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./eslint.tsconfig.json"
   },
   "extends": [
     "curology",
