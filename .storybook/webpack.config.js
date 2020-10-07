@@ -6,7 +6,7 @@ const UTIL_LOCATION = '../../utils/icons';
 
 // SVGs will not load properly if we do not remove the default rule before adding our own
 function removeDefaultStorybookSvgRule(config) {
-  const defaultStorybookLoaderRule = config.module.rules.find(rule =>
+  const defaultStorybookLoaderRule = config.module.rules.find((rule) =>
     rule.test.test('.svg'),
   );
 
@@ -20,7 +20,7 @@ function removeDefaultStorybookSvgRule(config) {
   );
 }
 
-module.exports = webpackSettings => {
+module.exports = (webpackSettings) => {
   // ESLint fix for `Resolve error: Cannot destructure property" `config` of 'undefined' or 'null'` in /stories/**/index.js files.
   if (!webpackSettings) return {};
 
@@ -44,19 +44,6 @@ module.exports = webpackSettings => {
           template: transformTemplateForUtilLocation(UTIL_LOCATION),
           expandProps: false,
           babel: false,
-        },
-      },
-    ],
-  });
-
-  // Typescript Rule
-  config.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    use: [
-      {
-        loader: require.resolve('babel-loader'),
-        options: {
-          presets: ['@babel/preset-typescript'],
         },
       },
     ],

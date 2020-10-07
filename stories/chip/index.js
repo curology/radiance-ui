@@ -1,15 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { text, select } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
 import ChipReadme from 'docs/chip';
 import { Chip, Typography } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 
 const stories = storiesOf('Chip', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',

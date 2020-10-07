@@ -96,7 +96,7 @@ const DesktopDropdown = ({
           aria-activedescendant={value}
           aria-hidden={!isOpen}
         >
-          {options.map(option => {
+          {options.map((option) => {
             const {
               value: optionValue, disabled, label, ...rest 
             } = option;
