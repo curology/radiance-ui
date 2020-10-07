@@ -3,7 +3,7 @@ import { Transition } from 'react-transition-group';
 
 import { ANIMATION } from '../../constants';
 
-const getStyleForTransitionState = (transitionState: string): object => {
+const getStyleForTransitionState = (transitionState: string) => {
   switch (transitionState) {
     case 'entering':
       return {
@@ -38,7 +38,7 @@ const getStyleForTransitionState = (transitionState: string): object => {
 
 type HelperTransitionParamsType = {
   children: JSX.Element;
-  props: Array<any>;
+  props: Array<unknown>;
 };
 
 const HelperTransition = ({

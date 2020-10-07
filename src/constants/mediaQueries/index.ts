@@ -18,4 +18,4 @@ const mediaQueries = Object.entries(BREAKPOINTS).reduce(
   {} as MediaQueriesType,
 );
 
-export default throwOnUndefinedProperty(mediaQueries) as MediaQueriesType;
+export default throwOnUndefinedProperty(mediaQueries);

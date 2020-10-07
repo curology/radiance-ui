@@ -1,4 +1,6 @@
-export default function throwOnUndefinedProperty<T extends object>(obj: T): T {
+export default function throwOnUndefinedProperty<
+  T extends Record<string, unknown>
+>(obj: T): T {
   const handler = {
     get(target: T, property: string) {
       if (property === '__isProxy') {

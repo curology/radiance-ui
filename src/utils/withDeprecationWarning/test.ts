@@ -38,7 +38,7 @@ describe('property that is in deprecatedProperties', () => {
     subject.deprecated;
 
     expect(warn).toHaveBeenCalledWith(
-      `[Deprecation Warning]: ${deprecatedMessage}`
+      `[Deprecation Warning]: ${deprecatedMessage}`,
     );
     warn.mockRestore();
   });

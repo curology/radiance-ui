@@ -2,12 +2,14 @@ const addCssJsxAttribute = require('./addCssJsxAttribute.js');
 const addRestSpreadJsxAttribute = require('./addRestSpreadJsxAttribute.js');
 const deprecatedIcons = require('../icons/deprecatedList.js');
 
-function transformTemplateForUtilLocation (utilLocation) {
-  return function transformTemplate (
+function transformTemplateForUtilLocation(utilLocation) {
+  return function transformTemplate(
     { template },
     opts,
     // eslint-disable-next-line no-unused-vars
-    { imports, componentName, props, jsx, exports },
+    {
+      imports, componentName, props, jsx, exports, 
+    },
   ) {
     addCssJsxAttribute(jsx);
     addRestSpreadJsxAttribute(jsx);
@@ -17,7 +19,7 @@ function transformTemplateForUtilLocation (utilLocation) {
     const normalizedComponentName = componentName.name.replace(/Svg/, '');
     const deprecationMessage = deprecatedIcons[normalizedComponentName];
     const deprecationNotice = deprecationMessage
-      ?  `console.warn('[Deprecation Warning]: ${deprecationMessage}');`
+      ? `console.warn('[Deprecation Warning]: ${deprecationMessage}');`
       : '';
 
     return template.ast`
@@ -38,8 +40,8 @@ function transformTemplateForUtilLocation (utilLocation) {
       ${componentName}.defaultProps = defaultProps;
 
       ${exports}
-    `
-  }
-};
+    `;
+  };
+}
 
 module.exports = transformTemplateForUtilLocation;

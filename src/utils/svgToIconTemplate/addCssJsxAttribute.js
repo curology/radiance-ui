@@ -10,47 +10,46 @@
    `
  */
 
-
 function addCssJsxAttribute(jsx) {
   jsx.openingElement.attributes.push({
-    type: "JSXAttribute",
-    name: { type: "JSXIdentifier", name: "css" },
+    type: 'JSXAttribute',
+    name: { type: 'JSXIdentifier', name: 'css' },
     value: {
-      type: "JSXExpressionContainer",
+      type: 'JSXExpressionContainer',
       expression: {
-        type: "TaggedTemplateExpression",
-        tag: { type: "Identifier", name: "css" },
+        type: 'TaggedTemplateExpression',
+        tag: { type: 'Identifier', name: 'css' },
         quasi: {
-          type: "TemplateLiteral",
+          type: 'TemplateLiteral',
           expressions: [
             {
-              type: "CallExpression",
+              type: 'CallExpression',
               callee: {
-                type: "Identifier",
-                name: "iconStyles",
+                type: 'Identifier',
+                name: 'iconStyles',
               },
               arguments: [
                 {
-                  type: "Identifier",
-                  name: "props",
+                  type: 'Identifier',
+                  name: 'props',
                 },
               ],
             },
           ],
           quasis: [
             {
-              type: "TemplateElement",
-              value: { raw: "" },
+              type: 'TemplateElement',
+              value: { raw: '' },
             },
             {
-              type: "TemplateElement",
-              value: { raw: ";" },
+              type: 'TemplateElement',
+              value: { raw: ';' },
             },
           ],
         },
       },
     },
   });
-};
+}
 
 module.exports = addCssJsxAttribute;

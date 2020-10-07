@@ -11,13 +11,13 @@ class Tabs extends React.Component {
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         text: PropTypes.string.isRequired,
-      })
+      }),
     ).isRequired,
   };
 
   static defaultProps = {
     initialActiveTabId: 1,
-    onClick() {},
+    onClick: () => undefined,
   };
 
   constructor(props) {
@@ -25,7 +25,7 @@ class Tabs extends React.Component {
     this.state = { activeTabId: props.initialActiveTabId };
   }
 
-  onTabClick = tab => {
+  onTabClick = (tab) => {
     const { onClick } = this.props;
     this.setState({ activeTabId: tab.id });
     onClick(tab);
@@ -37,7 +37,7 @@ class Tabs extends React.Component {
 
     return (
       <TabsContainer>
-        {tabItems.map(tab => (
+        {tabItems.map((tab) => (
           <TabItem
             active={tab.id === activeTabId}
             key={tab.id}

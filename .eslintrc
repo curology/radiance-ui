@@ -61,6 +61,7 @@
     {
       "files": ["test.js", "test.ts", "test.tsx"],
       "rules": {
+        "@typescript-eslint/no-unsafe-call": "off",
         "no-undef": "off",
         "emotion/jsx-import": "error",
         "emotion/no-vanilla": "error",
@@ -70,8 +71,9 @@
       }
     },
     {
-      "files": ["**/style.js"],
+      "files": ["**/style.js", "**/style.ts"],
       "rules": {
+        "@typescript-eslint/restrict-template-expressions": "off",
         "indent": "off"
       }
     },

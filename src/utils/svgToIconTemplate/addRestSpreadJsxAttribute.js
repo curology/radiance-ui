@@ -9,12 +9,12 @@
 
 function addRestSpreadJsxAttribute(jsx) {
   jsx.openingElement.attributes.push({
-    type: "JSXSpreadAttribute",
+    type: 'JSXSpreadAttribute',
     argument: {
-      type: "Identifier",
-      name: "props",
+      type: 'Identifier',
+      name: 'props',
     },
   });
-};
+}
 
 module.exports = addRestSpreadJsxAttribute;
