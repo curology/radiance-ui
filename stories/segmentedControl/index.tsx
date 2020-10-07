@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
 import { withDocs } from 'storybook-readme';
 
 import SegmentedControlReadme from 'docs/segmentedControl';
@@ -21,8 +20,6 @@ const twoItems = [
   { id: 1, text: 'Option 1' },
   { id: 2, text: 'Option 2' },
 ];
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
