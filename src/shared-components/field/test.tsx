@@ -32,35 +32,59 @@ describe('<Field />', () => {
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
-  });
 
-  describe('when provided an error object show the message', () => {
-    it('renders the error messages', () => {
-      const messages = { maxLength: 'Maximum 6 characteres' };
-      const wrapper = mount(
-        <Field messages={messages} type="error">
+    it('renders with custom props', () => {
+      const labelText = 'Test Label';
+      const labelFor = 'for-input-id';
+      const errorMessage = (
+        <React.Fragment>
+          <strong>Uh Oh!</strong> Type again
+        </React.Fragment>
+      );
+      const component = renderer.create(
+        <Field
+          label={labelText}
+          labelFor={labelFor}
+          hideMessagesIcon
+          hintMessage="hint message"
+          messages={{ error: errorMessage }}
+        >
           <Field.Input />
         </Field>,
       );
+
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
+  describe('when provided messages', () => {
+    it('renders the error messages', () => {
+      const messages = { maxLength: 'Maximum 6 characteres' };
+      const wrapper = mount(
+        <Field messages={messages} messagesType="error">
+          <Field.Input />
+        </Field>,
+      );
+
       const li = wrapper.find(MessageItem);
 
       expect(li).toHaveLength(1);
       expect(li.text().match(messages.maxLength)).toBeTruthy();
     });
-  });
 
-  describe('when provided an success message object show the message', () => {
     it('renders the success messages', () => {
-      const messages = { success: 'Thanks for competing this' };
+      const messages = { success: 'Thanks for completing' };
       const wrapper = mount(
-        <Field messages={messages} type="success">
+        <Field messages={messages} messagesType="success">
           <Field.Input />
         </Field>,
       );
+
       const li = wrapper.find(MessageItem);
 
       expect(li).toHaveLength(1);
-      expect(li.text().match(messages.maxLength)).toBeTruthy();
+      expect(li.text().match(messages.success)).toBeTruthy();
     });
   });
 });

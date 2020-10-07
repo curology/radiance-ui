@@ -11,10 +11,26 @@ import {
 } from './style';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import VerificationMessages from '../verificationMessages';
+import VerificationMessages, {
+  messagesTypes,
+  messageType,
+} from '../verificationMessages';
 import { COLORS } from '../../constants';
 
-class Field extends React.Component {
+type FieldProps = {
+  children: JSX.Element;
+  disabled?: boolean;
+  messages?: {
+    [key: string]: messageType;
+  };
+  messagesType?: messagesTypes;
+  hideMessagesIcon?: boolean;
+  hintMessage?: string;
+  label?: string;
+  labelFor?: string;
+};
+
+class Field extends React.Component<FieldProps> {
   static propTypes = {
     children: PropTypes.element.isRequired,
     disabled: PropTypes.bool,
@@ -43,13 +59,13 @@ class Field extends React.Component {
   render() {
     const {
       children: inputChild,
-      disabled,
-      messages,
-      messagesType,
-      hideMessagesIcon,
-      hintMessage,
-      label,
-      labelFor,
+      disabled = false,
+      messages = {},
+      messagesType = 'error',
+      hideMessagesIcon = false,
+      hintMessage = '',
+      label = '',
+      labelFor = '',
     } = this.props;
 
     const htmlFor = labelFor || label;

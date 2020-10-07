@@ -2,7 +2,10 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
+import {
+  COLORS, BOX_SHADOWS, SPACER, ANIMATION, 
+} from '../../constants';
+import { messagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
   ${TYPOGRAPHY_STYLE.caption};
@@ -17,7 +20,7 @@ export const FieldContainer = styled.div`
   margin-bottom: 22px;
 `;
 
-export const Label = styled.label`
+export const Label = styled.label<{ disabled?: boolean }>`
   ${TYPOGRAPHY_STYLE.label};
 
   ${({ disabled }) => disabled && `color:${COLORS.purple30};`};
@@ -80,7 +83,7 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = (messagesType) => css`
+const applyMessagesStyles = (messagesType: messagesTypes) => css`
   svg.radiance-field-input-icon {
     opacity: 1;
   }
@@ -91,14 +94,17 @@ const applyMessagesStyles = (messagesType) => css`
     &:active,
     &:focus {
       border-color: ${messagesType === 'success'
-        ? COLORS.success
-        : COLORS.error};
+    ? COLORS.success
+    : COLORS.error};
       box-shadow: ${BOX_SHADOWS.focus};
     }
   }
 `;
 
-export const InputContainer = styled.div`
+export const InputContainer = styled.div<{
+  messagesType: messagesTypes;
+  showMessages: boolean;
+}>`
   position: relative;
 
   svg.radiance-field-input-icon {
