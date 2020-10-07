@@ -1,10 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs';
+import {
+  withKnobs, text, number, boolean, 
+} from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
-
-import IconReadme from 'docs/icon.md';
+import IconReadme from 'docs/icon';
 import { Typography } from 'src/shared-components';
 import { COLORS, SPACER } from 'src/constants';
 import CameraIcon from 'src/svgs/icons/camera-icon.svg';
@@ -49,7 +50,7 @@ stories.add(
         />
       </div>
     </React.Fragment>
-  ))
+  )),
 );
 
 stories.add('Icon Library', () => <IconList />);

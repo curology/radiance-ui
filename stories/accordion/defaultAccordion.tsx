@@ -2,9 +2,7 @@ import React from 'react';
 import { css } from '@emotion/core';
 import { Accordion } from 'src/shared-components';
 
-export interface AccordionsStateType {
-  [x: string]: boolean;
-}
+export type AccordionsStateType = Record<string, boolean>;
 
 class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
   state: AccordionsStateType = {
@@ -19,7 +17,9 @@ class DefaultAccordion extends React.Component<{}, AccordionsStateType> {
   };
 
   render(): JSX.Element {
-    const { accordion1, accordion2, accordion3, accordion4 } = this.state;
+    const {
+      accordion1, accordion2, accordion3, accordion4, 
+    } = this.state;
 
     return (
       <div

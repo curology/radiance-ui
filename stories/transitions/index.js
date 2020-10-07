@@ -3,9 +3,8 @@ import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-
-import FadeInContainerReadme from 'docs/transitions/fadeInContainer.md';
-import OpacityInReadme from 'docs/transitions/opacityInAnimationStyle.md';
+import FadeInContainerReadme from 'docs/transitions/fadeInContainer';
+import OpacityInReadme from 'docs/transitions/opacityInAnimationStyle';
 import {
   FadeInContainer,
   opacityInAnimationStyle,
@@ -47,7 +46,7 @@ stories.add(
         </FadeInContainer>
       </InnerContainer>
     </MainContainer>
-  ))
+  )),
 );
 
 stories.add(
@@ -61,5 +60,5 @@ stories.add(
         </CustomFadeInContainer>
       </InnerContainer>
     </MainContainer>
-  ))
+  )),
 );

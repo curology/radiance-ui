@@ -2,6 +2,7 @@ import React from 'react';
 import { OptionButton } from 'src/shared-components';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import MinusIcon from 'src/svgs/icons/minus-icon.svg';
+
 import { ExampleContainer } from './style';
 
 class OptionButtonExample extends React.Component {

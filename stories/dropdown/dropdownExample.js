@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
 import Dropdown from 'src/shared-components/dropdown';
 
 const DropdownContainer = styled.div`
@@ -24,11 +23,13 @@ class DropdownExample extends React.Component {
   };
 
   render() {
+    const { value } = this.state;
+
     return (
       <DropdownContainer>
         Select an option:
         <Dropdown
-          value={this.state.value}
+          value={value}
           options={this.options}
           onChange={this.onChange}
         />

@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Tabs } from 'src/shared-components';
 
 const TabsExample = () => {
@@ -9,7 +8,8 @@ const TabsExample = () => {
     { id: 3, text: 'Tab 3' },
   ];
 
-  const onClickTab = tab => {
+  const onClickTab = (tab) => {
+    // eslint-disable-next-line no-console
     console.log(tab);
   };
 

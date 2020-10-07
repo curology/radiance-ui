@@ -2,9 +2,21 @@ import React from 'react';
 
 declare global {
   // These are to use import images without TS module not found error
-  declare module '*.jpg';
-  declare module '*.png';
-  declare module '*.gif';
+  declare module '*.jpg' {
+    const filepath: string;
+
+    export = filepath;
+  }
+  declare module '*.png' {
+    const filepath: string;
+
+    export = filepath;
+  }
+  declare module '*.gif' {
+    const filepath: string;
+
+    export = filepath;
+  }
 
   /**
    * Direct svg imports converted to React components via @svgr

@@ -2,8 +2,7 @@ import React from 'react';
 import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
 import { css } from '@emotion/core';
-
-import TypographyStyleReadme from 'docs/typography_style.md';
+import TypographyStyleReadme from 'docs/typography_style';
 import { TYPOGRAPHY_STYLE } from 'src/shared-components';
 
 const stories = storiesOf('TYPOGRAPHY_STYLE', module);
@@ -11,7 +10,11 @@ const stories = storiesOf('TYPOGRAPHY_STYLE', module);
 stories.add(
   'Usage',
   withDocs(TypographyStyleReadme, () => (
-    <div css={css`text-align: left`}>
+    <div
+      css={css`
+        text-align: left;
+      `}
+    >
       <div css={TYPOGRAPHY_STYLE.display}>display</div>
       <div css={TYPOGRAPHY_STYLE.heading}>heading</div>
       <div css={TYPOGRAPHY_STYLE.title}>title</div>
@@ -25,6 +28,5 @@ stories.add(
       </div>
       <div css={TYPOGRAPHY_STYLE.button}>button</div>
     </div>
-  ))
+  )),
 );
-

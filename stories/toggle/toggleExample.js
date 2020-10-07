@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Toggle } from 'src/shared-components';
 
 class ToggleExample extends React.Component {

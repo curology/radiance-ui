@@ -3,8 +3,7 @@ import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
 import { withKnobs, text } from '@storybook/addon-knobs';
 import { css } from '@emotion/core';
-
-import TypographyReadme from 'docs/typography.md';
+import TypographyReadme from 'docs/typography';
 import { SPACER } from 'src/constants';
 import { Typography } from 'src/shared-components';
 
@@ -44,5 +43,5 @@ stories.add(
         <p>{text('children', 'Change me!')}</p>
       </div>
     </React.Fragment>
-  ))
+  )),
 );

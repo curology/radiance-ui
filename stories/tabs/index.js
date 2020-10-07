@@ -2,8 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-
-import TabsReadme from 'docs/tabs.md';
+import TabsReadme from 'docs/tabs';
 import { Typography } from 'src/shared-components';
 
 import TabsExample from './TabsExample';
@@ -20,5 +19,5 @@ stories.add(
       <Typography.Heading>Example:</Typography.Heading>
       <TabsExample />
     </MainContainer>
-  ))
+  )),
 );

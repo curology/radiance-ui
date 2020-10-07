@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { OffClickWrapper, Container } from 'src/shared-components';
 
 class OffClickWrapperExample extends React.Component {

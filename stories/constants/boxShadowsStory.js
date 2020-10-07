@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-
 import { SPACER } from 'src/constants';
 import * as BOX_SHADOWS from 'src/constants/boxShadows';
 import { Container, Typography } from 'src/shared-components';
@@ -25,7 +24,7 @@ const baseBoxStyle = css`
 
 const boxShadowsStory = () => (
   <MainContainer>
-    {Object.keys(BOX_SHADOWS).map(category => {
+    {Object.keys(BOX_SHADOWS).map((category) => {
       if (category === 'default') {
         return null;
       }
@@ -36,14 +35,14 @@ const boxShadowsStory = () => (
         <React.Fragment key={category}>
           <Typography.Title>{category}:</Typography.Title>
           <BoxesContainer>
-            {Object.keys(categoryBoxShadows).map(shadow => {
+            {Object.keys(categoryBoxShadows).map((shadow) => {
               const styles = css`
                 ${baseBoxStyle};
                 box-shadow: ${categoryBoxShadows[shadow]};
               `;
 
               return (
-                <Container css={styles}>
+                <Container key={shadow} css={styles}>
                   <Container.Section>
                     <strong>Key:</strong> {shadow}
                     <br />

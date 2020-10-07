@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import {
+  withKnobs, text, select, boolean, 
+} from '@storybook/addon-knobs';
 import { Alert, Typography } from 'src/shared-components';
 import AlertReadme from 'docs/alert';
 

@@ -1,9 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import {
+  withKnobs, text, select, boolean, 
+} from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-
 import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import OptionButtonReadme from 'docs/optionButton';

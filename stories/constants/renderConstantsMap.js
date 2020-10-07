@@ -1,18 +1,18 @@
 import React from 'react';
 import isObject from 'isobject';
 
-const renderConstantsMap = constantMap => {
+const renderConstantsMap = (constantMap) => {
   let sanitizedMap = constantMap;
 
   if (constantMap.__isProxy) {
-    sanitizedMap = Object.assign({}, constantMap);
+    sanitizedMap = { ...constantMap };
   }
 
   sanitizedMap = Object.entries(sanitizedMap).reduce((memo, [key, value]) => {
-    const newMemo = Object.assign({}, memo);
+    const newMemo = { ...memo };
 
     if (isObject(value)) {
-      const sanitizedValue = value.__isProxy ? Object.assign({}, value) : value;
+      const sanitizedValue = value.__isProxy ? { ...value } : value;
 
       Object.entries(sanitizedValue).forEach(([innerKey, innerValue]) => {
         newMemo[`${key}.${innerKey}`] = innerValue;
@@ -24,7 +24,7 @@ const renderConstantsMap = constantMap => {
     return newMemo;
   }, {});
 
-  return Object.keys(sanitizedMap).map(constant => (
+  return Object.keys(sanitizedMap).map((constant) => (
     <p key={constant}>
       <strong>{constant}</strong>: {sanitizedMap[constant]}
     </p>
