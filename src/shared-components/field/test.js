@@ -45,7 +45,7 @@ describe('<Field />', () => {
       const li = wrapper.find(MessageItem);
 
       expect(li).toHaveLength(1);
-      expect(li.text().match(messages.maxLength)).toBeTruthy();
+      expect(li.text()).toEqual(messages.maxLength);
     });
   });
 
@@ -60,7 +60,7 @@ describe('<Field />', () => {
       const li = wrapper.find(MessageItem);
 
       expect(li).toHaveLength(1);
-      expect(li.text().match(messages.maxLength)).toBeTruthy();
+      expect(li.text()).toEqual(messages.success);
     });
   });
 });

@@ -2,9 +2,14 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  "extends": ["curology", "plugin:@typescript-eslint/recommended"],
+  "extends": [
+    "curology",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
   "plugins": ["emotion"],
   "globals": {
     "document": false,
@@ -37,6 +42,7 @@
     "@typescript-eslint/no-duplicate-imports": "error",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/consistent-indexed-object-style": "error",
     "arrow-parens": "off",
     "no-duplicate-imports": "off",
     "no-shadow": "off",
@@ -74,7 +80,12 @@
       "rules": {
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off"
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/restrict-template-expressions": "off"
       }
     },
     {
