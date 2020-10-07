@@ -1,10 +1,18 @@
-import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks';
 import { select, text } from '@storybook/addon-knobs';
 import { Banner, Typography } from 'src/shared-components';
 
 <Meta title="Banner" component={Banner} />
 
 # Banner
+
+<Description of={Banner} />
 
 ## Usage
 
@@ -76,9 +84,3 @@ import { Banner } from 'radiance-ui';
     />
   </Story>
 </Canvas>
-
-### Notes
-
-The `<Banner />` component provides only the styling for and onClick
-behavior for banners. Management of what banners are showing on the screen
-must be handled from outside of this component. All banners are not dismissable.

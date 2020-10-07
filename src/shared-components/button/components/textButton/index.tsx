@@ -20,6 +20,11 @@ type TextButtonProps = {
   [key: string]: any;
 };
 
+/**
+ * `TextButton` will render a block of text (or node) that will function as a button.
+ * The component renders with padding and should not be used inline within body text, etc.
+ * Useful for rendering a chunk of text that can be clicked but can also be disabled if needed.
+ */
 export const TextButton = ({
   children,
   disabled = false,

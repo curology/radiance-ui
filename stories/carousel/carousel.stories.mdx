@@ -1,4 +1,4 @@
-import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { Carousel, Typography } from 'src/shared-components';
 import { COLORS, SPACER } from 'src/constants';
@@ -9,7 +9,7 @@ import styled from '@emotion/styled';
 
 # Carousel
 
-Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
+<Description of={Carousel} />
 
 ## Usage
 
@@ -154,9 +154,3 @@ export const CarouselContainer = styled.div`
     </CarouselContainer>
   </Story>
 </Canvas>
-
-### Notes
-
-The property `numCardsVisible` will define the width of the Carousel Container.
-
-An array of `Carousel.Card` must be used for the carousel content. It includes the base styles for the Card which may be extended as shown above.

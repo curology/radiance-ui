@@ -1,4 +1,10 @@
-import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Canvas,
+  Description,
+} from '@storybook/addon-docs/blocks';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components/button/components/roundButton';
@@ -16,6 +22,8 @@ import {
 <Meta title="Buttons/RoundButton" component={RoundButton} />
 
 # RoundButton
+
+<Description of={RoundButton} />
 
 ## Usage
 
@@ -179,17 +187,3 @@ export const ButtonsContainer = styled.div`
     </ButtonsContainer>
   </Story>
 </Canvas>
-
-### Notes
-
-`<RoundButton />` behaves mostly the same as `<Button />` except that it
-requires an `icon` prop since that is the main content placed with in
-the round button. Any children of the component will be rendered
-immediately below the round button.
-
-`<RoundButton.Container>` can be used to wrap `<RoundButton />` components.
-Since it has some opinions on width and spacing, the max number of
-buttons you want to wrap is **2**.
-
-We should generally try to use the default button color when possible.
-Only for special cases should we need to use a different button color.

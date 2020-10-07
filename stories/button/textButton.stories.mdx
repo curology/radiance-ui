@@ -1,10 +1,12 @@
-import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { ArgsTable, Meta, Story, Canvas, Description } from '@storybook/addon-docs/blocks';
 import { TextButton } from 'src/shared-components';
 import { action } from '@storybook/addon-actions';
 
 <Meta title="Buttons/TextButton" component={TextButton} />
 
 # TextButton
+
+<Description of={TextButton} />
 
 ## Usage
 
@@ -27,7 +29,3 @@ import { TextButton } from 'radiance-ui';
     <TextButton disabled>This text button is disabled</TextButton>
   </Story>
 </Canvas>
-
-### Notes
-
-`TextButton` will render a block of text (or node) that will function as a button. The component renders with padding and should not be used inline within body text, etc. Useful for rendering a chunk of text that can be clicked but can also be disabled if needed.

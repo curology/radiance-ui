@@ -22,23 +22,19 @@ const propTypes = {
   size: PropTypes.oneOf(['large', 'small']),
 };
 
-const defaultProps = {
-  children: null,
-  disabled: false,
-  icon: undefined,
-  onClick: () => undefined,
-  type: 'primary',
-  size: 'small',
-};
-
+/**
+ * Checkboxs should be used to provide valuable information or additional context on a page. One of the best examples of a Checkbox is for product recommendations.
+ *
+ * `<Checkbox />` is a controlled component that represents a checkbox selection. This means that the `onClick` function should be used to change the checked state of the checkbox. Note that a group of checkbox buttons must be composed by a parent component.
+ */
 export const Checkbox = ({
   checked,
-  disabled,
-  onClick,
-  children,
-  type,
-  icon,
-  size,
+  children = null,
+  disabled = false,
+  icon = undefined,
+  onClick = () => undefined,
+  size = 'small',
+  type = 'primary',
   ...rest
 }) => (
   <SelectorButton
@@ -57,6 +53,5 @@ export const Checkbox = ({
 );
 
 Checkbox.propTypes = propTypes;
-Checkbox.defaultProps = defaultProps;
 
 export default Checkbox;

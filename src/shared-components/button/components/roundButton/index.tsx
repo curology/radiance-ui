@@ -66,6 +66,13 @@ type RoundButtonProps = {
   [key: string]: any;
 };
 
+/**
+ * `<RoundButton />` behaves mostly the same as `<Button />` except that it requires an `icon` prop since that is the main content placed with in the round button. Any children of the component will be rendered immediately below the round button.
+ *
+ * `<RoundButton.Container>` can be used to wrap `<RoundButton />` components. Since it has some opinions on width and spacing, the max number of buttons you want to wrap is **2**.
+ *
+ * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
+ */
 export const RoundButton = ({
   buttonColor = COLORS.primary,
   buttonType = 'primary',

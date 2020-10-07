@@ -21,6 +21,13 @@ type CalloutProps = {
   icon?: React.ReactNode;
 };
 
+/**
+ * Callouts should be used to provide valuable information or additional context on a page. One of the best examples of a callout is for product recommendations.
+ *
+ * `Callout` will cover the entirety of the container that holds it. You may optionally wrap it with `Callout.Container` which will set the `max-width` to `327px`.
+ *
+ * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
+ */
 export const Callout = ({
   children,
   icon = null,

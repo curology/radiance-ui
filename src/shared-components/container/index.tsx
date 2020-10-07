@@ -11,6 +11,13 @@ type ContainerProps = {
   type?: 'clickable' | 'message';
 };
 
+/**
+ * The `<Container />` component is mainly useful for base styles.
+ *
+ * Within the container there are helper components that have very little opinion except for spacing. The idea is that we encourage you to build out the content of the `<Container />` component, but we have some helpful default components you can use.
+ *
+ * `<Container />` can take in a `type` prop that will change its styling. Available types are `message` and `clickable`.
+ */
 export const Container = ({ children, type }: ContainerProps) => (
   <Style.Container type={type}>{children}</Style.Container>
 );

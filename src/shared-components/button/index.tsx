@@ -56,6 +56,13 @@ type ButtonProps = {
   [key: string]: any;
 };
 
+/**
+ * Buttons can be used as a main call-to-action (CTA). Try to avoid using buttons of the same `buttonType` next to each other since we want to guide the user towards one option.
+ *
+ * `<Button.Container>` can be used to provide spacing between multiple buttons and behavior on various screen sizes. See Storybook for more details.
+ *
+ * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
+ */
 export class Button extends React.Component<ButtonProps> {
   static Container = Container;
 
