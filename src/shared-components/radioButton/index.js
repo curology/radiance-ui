@@ -5,31 +5,35 @@ import SelectorButton from '../selectorButton';
 
 const propTypes = {
   checked: PropTypes.bool.isRequired,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
+  /**
+   * Text label displayed next to the radio button
+   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
+  /**
+   * Icon optionally displayed inside the radio button. Icons are only displayed at the 'large' size
+   */
   icon: PropTypes.node,
   size: PropTypes.oneOf(['large', 'small']),
 };
 
-const defaultProps = {
-  children: null,
-  icon: undefined,
-  onClick: () => undefined,
-  type: 'primary',
-  size: 'small',
-};
-
-const RadioButton = ({
+/**
+ *
+ * `<RadioButton />` is a controlled component that represents a radio selection. This means that the `onClick` function should be used to change the checked state of the radio button.
+ *
+ * Note that a group of radio buttons must be composed by a parent component.
+ */
+export const RadioButton = ({
   checked,
   onClick,
-  children,
-  type,
-  icon,
-  size,
+  children = null,
+  type = 'primary',
+  icon = undefined,
+  size = 'small',
   ...rest
 }) => (
   <SelectorButton
@@ -47,6 +51,5 @@ const RadioButton = ({
 );
 
 RadioButton.propTypes = propTypes;
-RadioButton.defaultProps = defaultProps;
 
 export default RadioButton;
