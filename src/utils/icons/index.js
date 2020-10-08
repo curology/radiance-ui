@@ -5,24 +5,27 @@ import { css } from '@emotion/core';
 import { ANIMATION } from '../../constants';
 
 export const propTypes = {
-  inline: PropTypes.bool,
-  rotate: PropTypes.number,
-  fill: PropTypes.string,
   className: PropTypes.string,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  fill: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  inline: PropTypes.bool,
+  /**
+   * Clockwise rotation, in degrees
+   */
+  rotate: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export const defaultProps = {
+  height: 16,
   rotate: 0,
   width: 16,
-  height: 16,
 };
 
-export const iconStyles = props => css`
-  display: ${props.inline ? "inline-block" : "block"};
+export const iconStyles = (props) => css`
+  display: ${props.inline ? 'inline-block' : 'block'};
   transform: rotate(${props.rotate}deg);
   color: ${props.fill};
-  transition: color ${ANIMATION.defaultTiming}, transform ${ANIMATION.defaultTiming};
+  transition: color ${ANIMATION.defaultTiming},
+    transform ${ANIMATION.defaultTiming};
 `;
-

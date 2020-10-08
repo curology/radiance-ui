@@ -10,7 +10,7 @@ import { Icons, IconContainer, IconLabel } from './style';
 
 const WORDMARK_NAME = 'Wordmark';
 
-const IconList = () => (
+export const IconLibrary = () => (
   <React.Fragment>
     <Typography.Heading>Logos</Typography.Heading>
     <Icons>
@@ -63,5 +63,3 @@ const IconList = () => (
     </Icons>
   </React.Fragment>
 );
-
-export default IconList;
