@@ -15,7 +15,13 @@ import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 type OptionButtonProps = {
   borderRadius?: string;
   buttonType?: 'primary' | 'secondary';
+  /**
+   * Show custom icon in the unselected state
+   */
   icon?: React.ReactNode;
+  /**
+   * Label
+   */
   text: string;
   subtext?: React.ReactNode;
   onClick: () => void;
@@ -24,7 +30,7 @@ type OptionButtonProps = {
   [key: string]: unknown;
 };
 
-const OptionButton = ({
+export const OptionButton = ({
   borderRadius = '4px',
   buttonType = 'primary',
   icon,
