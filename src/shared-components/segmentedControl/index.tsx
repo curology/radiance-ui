@@ -15,15 +15,14 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     ? segmentItems.indexOf(initialActiveItem)
     : 0;
 
-  const targetRef = useRef<HTMLDivElement>(null);
-  const [activeSegmentId, setActiveSegmentId] = useState(initialActiveId);
-  const [activeSegmentText, setActiveSegmentText] = useState(
-    initialActiveItem?.text,
+  const [activeSegmentText, setActiveSegmentText] = useState(() =>
+    initialActiveItem ? initialActiveItem.text : segmentItems[0].text,
   );
   const [activeSegmentIndex, setActiveSegmentIndex] = useState(
     initialActiveIndex,
   );
-  const [transform, setTransform] = useState('initial');
+  const targetRef = useRef<HTMLDivElement>(null);
+  const [transform, setTransform] = useState('');
   const [targetWidth, setTargetWidth] = useState(0);
   const segmentWidth = 100 / segmentItems.length;
 
@@ -38,9 +37,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     }
   }, [targetRef]);
 
-  const onSegmentClick = (segment: SegmentItemType) => {
-    const index = segmentItems.indexOf(segment);
-    setActiveSegmentId(segment.id);
+  const onSegmentClick = (segment: SegmentItemType, index: number) => {
     setActiveSegmentText(segment.text);
     setActiveSegmentIndex(index);
     setTransform(`translate3d(${targetWidth * index}px, 0, 0)`);
@@ -52,12 +49,12 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
       <Indicator width={segmentWidth} transform={transform} ref={targetRef}>
         {activeSegmentText}
       </Indicator>
-      {segmentItems.map((segment) => (
+      {segmentItems.map((segment, index) => (
         <SegmentItem
           width={segmentWidth}
-          active={segment.id === activeSegmentId}
+          active={index === activeSegmentIndex}
           key={segment.id}
-          onClick={() => onSegmentClick(segment)}
+          onClick={() => onSegmentClick(segment, index)}
         >
           {segment.text}
         </SegmentItem>
