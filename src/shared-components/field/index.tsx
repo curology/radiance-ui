@@ -30,79 +30,65 @@ type FieldProps = {
   labelFor?: string;
 };
 
-class Field extends React.Component<FieldProps> {
-  static propTypes = {
-    children: PropTypes.element.isRequired,
-    disabled: PropTypes.bool,
-    messages: PropTypes.objectOf(PropTypes.node),
-    messagesType: PropTypes.oneOf(['error', 'success']),
-    hideMessagesIcon: PropTypes.bool,
-    hintMessage: PropTypes.string,
-    label: PropTypes.string,
-    labelFor: PropTypes.string,
-  };
-
-  static defaultProps = {
-    disabled: false,
-    messages: {},
-    messagesType: 'error',
-    hideMessagesIcon: false,
-    hintMessage: '',
-    label: '',
-    labelFor: '',
-  };
-
-  static Textarea = Textarea;
-
-  static Input = Input;
-
-  render() {
-    const {
-      children: inputChild,
-      disabled = false,
-      messages = {},
-      messagesType = 'error',
-      hideMessagesIcon = false,
-      hintMessage = '',
-      label = '',
-      labelFor = '',
-    } = this.props;
-
-    const htmlFor = labelFor || label;
-    const messagesKeys = Object.keys(messages);
-    const showMessages = messagesKeys.length > 0;
-    const MessageIcon =
-      messagesType === 'success' ? (
-        <CheckmarkIcon
-          fill={COLORS.success}
-          className="radiance-field-input-icon"
-        />
-      ) : (
-        <ErrorIcon fill={COLORS.error} className="radiance-field-input-icon" />
-      );
-
-    return (
-      <FieldContainer>
-        {!!label && (
-          <Label htmlFor={htmlFor} disabled={disabled}>
-            {label}
-          </Label>
-        )}
-
-        <InputContainer showMessages={showMessages} messagesType={messagesType}>
-          {hideMessagesIcon || MessageIcon}
-
-          {React.cloneElement(inputChild, {
-            disabled,
-          })}
-
-          {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
-
-          <VerificationMessages messages={messages} type={messagesType} />
-        </InputContainer>
-      </FieldContainer>
+const Field = ({
+  children: inputChild,
+  disabled = false,
+  messages = {},
+  messagesType = 'error',
+  hideMessagesIcon = false,
+  hintMessage = '',
+  label = '',
+  labelFor = '',
+}: FieldProps) => {
+  const htmlFor = labelFor || label;
+  const messagesKeys = Object.keys(messages);
+  const showMessages = messagesKeys.length > 0;
+  const MessageIcon =
+    messagesType === 'success' ? (
+      <CheckmarkIcon
+        fill={COLORS.success}
+        className="radiance-field-input-icon"
+      />
+    ) : (
+      <ErrorIcon fill={COLORS.error} className="radiance-field-input-icon" />
     );
-  }
-}
+
+  return (
+    <FieldContainer>
+      {!!label && (
+        <Label htmlFor={htmlFor} disabled={disabled}>
+          {label}
+        </Label>
+      )}
+
+      <InputContainer showMessages={showMessages} messagesType={messagesType}>
+        {hideMessagesIcon || MessageIcon}
+
+        {React.cloneElement(inputChild, {
+          disabled,
+        })}
+
+        {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
+
+        <VerificationMessages messages={messages} type={messagesType} />
+      </InputContainer>
+    </FieldContainer>
+  );
+};
+
+Field.Textarea = Textarea;
+
+Field.Input = Input;
+
+Field.propTypes = {
+  children: PropTypes.element.isRequired,
+  disabled: PropTypes.bool,
+  messages: PropTypes.objectOf(PropTypes.node),
+  messagesType: PropTypes.oneOf(['error', 'success']),
+  hideMessagesIcon: PropTypes.bool,
+  hintMessage: PropTypes.string,
+  label: PropTypes.string,
+  labelFor: PropTypes.string,
+};
 
 export default Field;

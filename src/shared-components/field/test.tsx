@@ -70,7 +70,7 @@ describe('<Field />', () => {
       const li = wrapper.find(MessageItem);
 
       expect(li).toHaveLength(1);
-      expect(li.text().match(messages.maxLength)).toBeTruthy();
+      expect(li.text()).toEqual(messages.maxLength);
     });
 
     it('renders the success messages', () => {
@@ -84,7 +84,7 @@ describe('<Field />', () => {
       const li = wrapper.find(MessageItem);
 
       expect(li).toHaveLength(1);
-      expect(li.text().match(messages.success)).toBeTruthy();
+      expect(li.text()).toEqual(messages.success);
     });
   });
 });
