@@ -11,7 +11,7 @@ export type MessageType = string | JSX.Element | Array<string | JSX.Element>;
 
 type VerificationMessagesProps = {
   centered?: boolean;
-  messages: {
+  messages?: {
     [key: string]: MessageType;
   };
   type?: MessagesTypes;
