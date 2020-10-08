@@ -99,7 +99,13 @@ addParameters({
    * duplicate the setConfig options via addParameters, too. Once we overhaul
    * story/documentation setup we can properly deprecate this usage.
    */
-  options: ADDONS_CONFIG,
+  options: {
+    ...ADDONS_CONFIG,
+    storySort: {
+      // TODO: Reconfigure once everything is working
+      order: ['Accordion'],
+    },
+  },
   viewport: {
     viewports: INITIAL_VIEWPORTS,
   },

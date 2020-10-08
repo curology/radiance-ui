@@ -14,15 +14,41 @@ import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import VerificationMessages from '../verificationMessages';
 import { COLORS } from '../../constants';
 
+/**
+ * Field component uses VerificationMessages component internally along with extra styling for the input.
+ *
+ * If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly without the `Field` wrapper.
+ */
 class Field extends React.Component {
   static propTypes = {
+    /**
+     * Must be either `Field.Input` or `Field.Textarea`
+     */
     children: PropTypes.element.isRequired,
+    /**
+     * Change the child input to `disabled` state
+     */
     disabled: PropTypes.bool,
+    /**
+     * Object of key and React Node message pair. It also accepts an array of React Node as value
+     */
     messages: PropTypes.objectOf(PropTypes.node),
     messagesType: PropTypes.oneOf(['error', 'success']),
+    /**
+     * Hides the message icon at the rightmost part of the input
+     */
     hideMessagesIcon: PropTypes.bool,
+    /**
+     * The hint to display below the field. It activates on focus
+     */
     hintMessage: PropTypes.string,
+    /**
+     * The field label
+     */
     label: PropTypes.string,
+    /**
+     * Must match the children id html attribute
+     */
     labelFor: PropTypes.string,
   };
 
