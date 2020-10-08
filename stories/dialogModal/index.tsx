@@ -1,17 +1,103 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { withDocs } from 'storybook-readme';
-import DialogModalReadme from 'docs/dialogModal';
+import React, { useState } from 'react';
+import { DialogModal, Button, Typography } from 'src/shared-components';
+import {
+  Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable,
+  Stories,
+  PRIMARY_STORY,
+  Source,
+} from '@storybook/addon-docs/blocks';
 
-import DialogModalExamples from './dialogModalExamples';
+export const Default = () => {
+  const [openModal, setOpenModal] = useState(true);
 
-const stories = storiesOf('DialogModal', module);
-
-stories.add(
-  'Usage',
-  withDocs(DialogModalReadme, () => (
+  return (
     <React.Fragment>
-      <DialogModalExamples />
+      <Button onClick={() => setOpenModal(true)}>open dialog modal</Button>
+
+      {openModal && (
+        <DialogModal title="Heads up!">
+          <p>
+            This will remove the cleanser and moisturizer from your free trial,
+            too. Just the custom bottle will be sent your way!
+          </p>
+          <Button.Container>
+            <Button isFullWidth onClick={() => setOpenModal(false)}>
+              Yes, remove
+            </Button>
+            <Button
+              isFullWidth
+              onClick={() => setOpenModal(false)}
+              buttonType="tertiary"
+            >
+              never mind
+            </Button>
+          </Button.Container>
+        </DialogModal>
+      )}
     </React.Fragment>
-  )),
-);
+  );
+};
+
+export const WithCloseIcon = () => {
+  const [withCloseIcon, setWithCloseIcon] = useState(true);
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setWithCloseIcon(true)}>with close icon</Button>
+      {withCloseIcon && (
+        <DialogModal
+          title="Heads up!"
+          onCloseIconClick={() => setWithCloseIcon(false)}
+        >
+          <p>
+            This will remove the cleanser and moisturizer from your free trial,
+            too. Just the custom bottle will be sent your way!
+          </p>
+          <Button.Container>
+            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+              Yes, remove
+            </Button>
+            <Button
+              isFullWidth
+              onClick={() => setWithCloseIcon(false)}
+              buttonType="tertiary"
+            >
+              never mind
+            </Button>
+          </Button.Container>
+        </DialogModal>
+      )}
+    </React.Fragment>
+  );
+};
+
+export default {
+  title: 'DialogModal',
+  component: DialogModal,
+  parameters: {
+    docs: {
+      page: null,
+      // page: // () => (
+      //   <React.Fragment>
+      //     <Title />
+      //     <Subtitle />
+      //     <Description />
+      //     <Typography.Heading>Usage</Typography.Heading>
+      //     <Source
+      //       language="tsx"
+      //       code="import { DialogModal } from 'radiance-ui';"
+      //     />
+      //     <ArgsTable />
+      //     <Stories
+      //       includePrimary
+      //       title={<Typography.Heading>Stories</Typography.Heading>}
+      //     />
+      //   </React.Fragment>
+      // ),
+    },
+  },
+};

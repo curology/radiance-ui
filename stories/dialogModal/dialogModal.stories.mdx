@@ -1,0 +1,31 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Description,
+  Canvas,
+  Source,
+} from '@storybook/addon-docs/blocks';
+import { Button, DialogModal } from 'src/shared-components';
+
+<Meta title="DialogModal" component={DialogModal} />
+
+# DialogModal
+
+<Description of={DialogModal} />
+
+## Usage
+
+```tsx
+import { DialogModal } from 'radiance-ui';
+```
+
+<ArgsTable of={DialogModal} />
+
+<Canvas>
+  <Story id="dialogmodal--default" />
+</Canvas>
+
+<Canvas>
+  <Story id="dialogmodal--with-close-icon" />
+</Canvas>

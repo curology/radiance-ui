@@ -50,21 +50,13 @@ module.exports = (webpackSettings) => {
     ],
   });
 
-  // // Storybook Index Loader Rule
-  // config.module.rules.push({
-  //   test: /index\.(ts|tsx|js)?$/,
-  //   loaders: [require.resolve('@storybook/source-loader')],
-  //   include: path.resolve(__dirname, '../stories'),
-  //   enforce: 'pre',
-  // });
-
-  // config.module.rules.push({
-  //   test: /\.mdx$/,
-  //   use: [
-  //     { loader: 'babel-loader', options: require('../babel.config.js') },
-  //     '@mdx-js/loader',
-  //   ],
-  // });
+  // Storybook Index Loader Rule
+  config.module.rules.push({
+    test: /index\.(ts|tsx|js)?$/,
+    loaders: [require.resolve('@storybook/source-loader')],
+    include: path.resolve(__dirname, '../stories'),
+    enforce: 'pre',
+  });
 
   // CircularDependencyPlugin
   config.plugins.push(

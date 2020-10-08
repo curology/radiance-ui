@@ -12,12 +12,12 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
     '@storybook/addon-viewport',
+    '@storybook/addon-storysource',
     {
       name: '@storybook/addon-docs',
       options: {
         configureJSX: true,
         babelOptions: {},
-        sourceLoaderOptions: null,
       },
     },
   ],
