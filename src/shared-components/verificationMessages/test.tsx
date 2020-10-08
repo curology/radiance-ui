@@ -6,7 +6,7 @@ import VerificationMessages from './index';
 
 describe('<VerificationMessages />', () => {
   describe('UI snapshot', () => {
-    it('renders content and children', () => {
+    it('renders with default props and some messages', () => {
       const messages = {
         required: (
           <React.Fragment>
@@ -36,7 +36,8 @@ describe('<VerificationMessages />', () => {
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
-    it('renders with custom props', () => {
+
+    it('renders with non-default props', () => {
       const messages = {
         required: (
           <React.Fragment>

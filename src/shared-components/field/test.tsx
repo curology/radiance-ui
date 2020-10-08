@@ -8,10 +8,9 @@ import Field from './index';
 
 describe('<Field />', () => {
   describe('UI Snapshot', () => {
-    it('renders with label prop', () => {
-      const labelText = 'Test Label';
+    it('renders with default props', () => {
       const component = renderer.create(
-        <Field label={labelText}>
+        <Field>
           <Field.Input />
         </Field>,
       );
@@ -20,7 +19,7 @@ describe('<Field />', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    it('renders with label and labelFor', () => {
+    it('renders with label and labelFor props', () => {
       const labelText = 'Test Label';
       const labelFor = 'for-input-id';
       const component = renderer.create(
@@ -33,9 +32,7 @@ describe('<Field />', () => {
       expect(tree).toMatchSnapshot();
     });
 
-    it('renders with custom props', () => {
-      const labelText = 'Test Label';
-      const labelFor = 'for-input-id';
+    it('renders with errorMessage, hintMessage and hideMessagesIcon props', () => {
       const errorMessage = (
         <React.Fragment>
           <strong>Uh Oh!</strong> Type again
@@ -43,8 +40,6 @@ describe('<Field />', () => {
       );
       const component = renderer.create(
         <Field
-          label={labelText}
-          labelFor={labelFor}
           hideMessagesIcon
           hintMessage="hint message"
           messages={{ error: errorMessage }}
@@ -58,8 +53,8 @@ describe('<Field />', () => {
     });
   });
 
-  describe('when provided messages', () => {
-    it('renders the error messages', () => {
+  describe('when provided some messages', () => {
+    it('renders the error message', () => {
       const messages = { maxLength: 'Maximum 6 characteres' };
       const wrapper = mount(
         <Field messages={messages} messagesType="error">
