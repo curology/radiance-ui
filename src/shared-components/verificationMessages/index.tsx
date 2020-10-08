@@ -19,7 +19,7 @@ type VerificationMessagesProps = {
 
 const VerificationMessages = ({
   centered = false,
-  messages,
+  messages = {},
   type = 'error',
 }: VerificationMessagesProps) => {
   const messageKeys = Object.keys(messages);
@@ -53,12 +53,6 @@ VerificationMessages.propTypes = {
   centered: PropTypes.bool,
   messages: PropTypes.objectOf(PropTypes.node),
   type: PropTypes.oneOf(['error', 'success']),
-};
-
-VerificationMessages.defaultProps = {
-  centered: false,
-  messages: {},
-  type: 'error',
 };
 
 export default VerificationMessages;
