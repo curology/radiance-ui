@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1129508,
-    "minified": 1067744,
-    "gzipped": 104557
+    "bundled": 1128786,
+    "minified": 1067488,
+    "gzipped": 104477
   },
   "bundle.umd.js": {
-    "bundled": 1139116,
-    "minified": 1041186,
-    "gzipped": 100140
+    "bundled": 1138366,
+    "minified": 1040966,
+    "gzipped": 100065
   },
   "shared-components/chip/index.js": {
     "bundled": 576,
@@ -472,16 +472,16 @@
     }
   },
   "shared-components/dialogModal/index.js": {
-    "bundled": 4359,
-    "minified": 2516,
-    "gzipped": 1069,
+    "bundled": 3604,
+    "minified": 2220,
+    "gzipped": 984,
     "treeshaked": {
       "rollup": {
-        "code": 2094,
-        "import_statements": 532
+        "code": 1847,
+        "import_statements": 513
       },
       "webpack": {
-        "code": 3461
+        "code": 3179
       }
     }
   },
