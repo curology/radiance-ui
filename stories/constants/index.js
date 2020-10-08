@@ -2,10 +2,9 @@ import React from 'react';
 import { withDocs } from 'storybook-readme';
 import { storiesOf } from '@storybook/react';
 import { css } from '@emotion/core';
-
 import * as CONSTANTS from 'src/constants';
 import { Typography } from 'src/shared-components';
-import ConstantsReadme from 'docs/constants.md';
+import ConstantsReadme from 'docs/constants';
 
 import renderConstantsMap from './renderConstantsMap';
 import colorsStory from './colorsStory';
@@ -23,7 +22,7 @@ stories.add(
         text-align: left;
       `}
     >
-      {Object.keys(CONSTANTS).map(category => {
+      {Object.keys(CONSTANTS).map((category) => {
         if (CONSTANTS_WITH_OWN_STORY.includes(category)) {
           return null;
         }
@@ -43,7 +42,7 @@ stories.add(
         );
       })}
     </div>
-  ))
+  )),
 );
 
 stories.add('COLORS', colorsStory);

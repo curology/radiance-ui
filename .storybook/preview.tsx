@@ -1,7 +1,7 @@
-import { addDecorator, addParameters, configure } from '@storybook/react';
-import { withA11y } from '@storybook/addon-a11y';
+import { addDecorator, addParameters } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+import addons from '@storybook/addons';
 import { addReadme, configureReadme } from 'storybook-readme';
-import centered from '@storybook/addon-centered/react';
 import { Global, css } from '@emotion/core';
 import Theme from './theme';
 import {
@@ -71,8 +71,6 @@ const InjectGlobalStyles = (storyFn) => (
 );
 
 addDecorator(InjectGlobalStyles);
-addDecorator(centered);
-addDecorator(withA11y);
 addDecorator(addReadme);
 
 addParameters({
@@ -87,27 +85,36 @@ configureReadme({
   ),
 });
 
+/**
+ * {@link https://storybook.js.org/docs/react/configure/features-and-behavior Options}
+ */
+const ADDONS_CONFIG = {
+  enableShortcuts: true,
+  isFullscreen: false,
+  isToolshown: true,
+  panelPosition: 'right',
+  showNav: true,
+  showPanel: true,
+  sidebarAnimations: true,
+  theme: Theme,
+};
+
+addons.setConfig(ADDONS_CONFIG);
+
 addParameters({
-  options: {
-    theme: Theme,
-    isFullscreen: false,
-    showNav: true,
-    showPanel: true,
-    panelPosition: 'right',
-    hierarchySeparator: /\/|\./, // matches a . or /
-    hierarchyRootSeparator: /\|/, //matches a |
-    sidebarAnimations: true,
-    enableShortcuts: true,
-    isToolshown: true,
+  a11y: {
+    element: '#root',
+    config: {},
+    options: {},
+    manual: false,
   },
+  /**
+   * TODO-@storybook/addon-docs: Our storybook-readme use means we need to
+   * duplicate the setConfig options via addParameters, too. Once we overhaul
+   * story/documentation setup we can properly deprecate this usage.
+   */
+  options: ADDONS_CONFIG,
   viewport: {
-    defaultViewport: 'responsive',
+    viewports: INITIAL_VIEWPORTS,
   },
 });
-
-const req = require.context('../stories', true, /.(ts|tsx|js)$/);
-function loadStories() {
-  req.keys().forEach(req);
-}
-
-configure(loadStories, module);
