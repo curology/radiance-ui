@@ -6,15 +6,15 @@ import { CenteredMessageList, MessageList, MessageItem } from './style';
 import HelperTransition from '../../utils/helperTransition';
 import formatMessage from './formatMessage';
 
-export type messagesTypes = 'error' | 'success';
-export type messageType = string | JSX.Element | Array<string | JSX.Element>;
+export type MessagesTypes = 'error' | 'success';
+export type MessageType = string | JSX.Element | Array<string | JSX.Element>;
 
 type VerificationMessagesProps = {
   centered?: boolean;
   messages: {
-    [key: string]: messageType;
+    [key: string]: MessageType;
   };
-  type?: messagesTypes;
+  type?: MessagesTypes;
 };
 
 const VerificationMessages = ({

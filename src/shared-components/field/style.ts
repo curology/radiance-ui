@@ -5,7 +5,7 @@ import { style as TYPOGRAPHY_STYLE } from '../typography';
 import {
   COLORS, BOX_SHADOWS, SPACER, ANIMATION, 
 } from '../../constants';
-import { messagesTypes } from '../verificationMessages';
+import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
   ${TYPOGRAPHY_STYLE.caption};
@@ -83,7 +83,7 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = (messagesType: messagesTypes) => css`
+const applyMessagesStyles = (messagesType: MessagesTypes) => css`
   svg.radiance-field-input-icon {
     opacity: 1;
   }
@@ -102,7 +102,7 @@ const applyMessagesStyles = (messagesType: messagesTypes) => css`
 `;
 
 export const InputContainer = styled.div<{
-  messagesType: messagesTypes;
+  messagesType: MessagesTypes;
   showMessages: boolean;
 }>`
   position: relative;

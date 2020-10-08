@@ -3,9 +3,7 @@ import { Transition } from 'react-transition-group';
 
 import { ANIMATION } from '../../constants';
 
-const getStyleForTransitionState = (
-  transitionState: string,
-): Record<string, unknown> => {
+const getStyleForTransitionState = (transitionState: string) => {
   switch (transitionState) {
     case 'entering':
       return {

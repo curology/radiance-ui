@@ -12,8 +12,8 @@ import {
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import VerificationMessages, {
-  messagesTypes,
-  messageType,
+  MessagesTypes,
+  MessageType,
 } from '../verificationMessages';
 import { COLORS } from '../../constants';
 
@@ -21,9 +21,9 @@ type FieldProps = {
   children: JSX.Element;
   disabled?: boolean;
   messages?: {
-    [key: string]: messageType;
+    [key: string]: MessageType;
   };
-  messagesType?: messagesTypes;
+  messagesType?: MessagesTypes;
   hideMessagesIcon?: boolean;
   hintMessage?: string;
   label?: string;

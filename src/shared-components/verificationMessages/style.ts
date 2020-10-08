@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER } from '../../constants';
 
-import { messagesTypes } from '.';
+import { MessagesTypes } from '.';
 
 export const MessageList = styled.ul`
   list-style-type: none;
@@ -14,7 +14,7 @@ export const CenteredMessageList = styled(MessageList)`
   text-align: center;
 `;
 
-export const MessageItem = styled.li<{ type: messagesTypes }>`
+export const MessageItem = styled.li<{ type: MessagesTypes }>`
   &:last-of-type {
     margin: 0 0 ${SPACER.x2small} 0;
   }
