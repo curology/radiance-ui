@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<VerificationMessages /> UI snapshot renders content and children 1`] = `
+exports[`<VerificationMessages /> UI snapshot renders with default props and some messages 1`] = `
 .emotion-8 {
   list-style-type: none;
   margin: 0;
@@ -100,7 +100,7 @@ exports[`<VerificationMessages /> UI snapshot renders content and children 1`] =
 </ul>
 `;
 
-exports[`<VerificationMessages /> UI snapshot renders with custom props 1`] = `
+exports[`<VerificationMessages /> UI snapshot renders with non-default props 1`] = `
 .emotion-2 {
   list-style-type: none;
   margin: 0;
