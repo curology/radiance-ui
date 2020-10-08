@@ -1,0 +1,35 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Description,
+  Canvas,
+  Source,
+} from '@storybook/addon-docs/blocks';
+import { Dropdown } from 'src/shared-components';
+import { MobileDropdown } from 'src/shared-components/dropdown/mobileDropdown';
+
+<Meta title="Dropdown" component={Dropdown} />
+
+# Dropdown
+
+<Description of={Dropdown} />
+
+## Usage
+
+```tsx
+import { Dropdown } from 'radiance-ui';
+```
+
+<ArgsTable of={Dropdown} />
+
+<Canvas>
+  <Story id="dropdown--desktop" />
+</Canvas>
+
+<Description of={MobileDropdown} />
+<ArgsTable of={MobileDropdown} />
+
+<Canvas>
+  <Story id="dropdown--mobile" />
+</Canvas>

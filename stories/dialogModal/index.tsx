@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { DialogModal, Button, Typography } from 'src/shared-components';
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  Stories,
-  PRIMARY_STORY,
-  Source,
-} from '@storybook/addon-docs/blocks';
+import { DialogModal, Button } from 'src/shared-components';
+// import {
+//   Title,
+//   Subtitle,
+//   Description,
+//   Primary,
+//   ArgsTable,
+//   Stories,
+//   PRIMARY_STORY,
+//   Source,
+// } from '@storybook/addon-docs/blocks';
 
 export const Default = () => {
   const [openModal, setOpenModal] = useState(true);
