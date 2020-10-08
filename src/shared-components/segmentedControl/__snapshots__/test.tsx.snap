@@ -11,10 +11,10 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: relative;
   border-radius: 80px;
   background-color: #ededf0;
@@ -23,6 +23,8 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
 }
 
 .emotion-0 {
+  background: transparent;
+  border: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,27 +45,27 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   top: 0;
   left: 0;
   bottom: 0;
+  background-color: white;
   -webkit-transition: -webkit-transform 0.22s cubic-bezier(0.22,1,0.36,1);
   -webkit-transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
   transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
-  background-color: white;
   color: #706D87;
   font-size: 0.875rem;
   line-height: 1.71;
   color: #332e54;
   font-weight: bold;
-  -webkit-transform: initial;
-  -ms-transform: initial;
-  transform: initial;
+  box-shadow: 0px 2px 4px rgba(51,46,84,0.05);
+  border: none;
+}
+
+.emotion-0:focus {
+  box-shadow: inset 0px 0px 0px 2px #332e54;
+  outline: none;
 }
 
 .emotion-2 {
   background: transparent;
   border: none;
-  color: #706D87;
-  font-size: 0.875rem;
-  line-height: 1.71;
-  color: #706D87;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -76,8 +78,15 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  cursor: pointer;
   margin: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border: none;
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #706D87;
   border-radius: 80px;
   background-color: #ededf0;
   width: 33.333333333333336%;
@@ -85,21 +94,22 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
 
 .emotion-2:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #332e54;
 }
 
 <div
   className="emotion-8 emotion-9"
 >
-  <div
+  <button
     className="emotion-0 emotion-1"
-    transform="initial"
+    transform=""
     width={33.333333333333336}
   >
     Tab 1
-  </div>
+  </button>
   <button
     className="emotion-2 emotion-3"
+    disabled={true}
     onClick={[Function]}
     width={33.333333333333336}
   >
@@ -107,6 +117,7 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   </button>
   <button
     className="emotion-2 emotion-3"
+    disabled={false}
     onClick={[Function]}
     width={33.333333333333336}
   >
@@ -114,6 +125,7 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   </button>
   <button
     className="emotion-2 emotion-3"
+    disabled={false}
     onClick={[Function]}
     width={33.333333333333336}
   >
