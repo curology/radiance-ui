@@ -54,22 +54,6 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
       document.querySelector(reactPortalSectionId) || document.body;
   }
 
-  getProps = () => {
-    const {
-      children,
-      onCloseIconClick = null,
-      title = '',
-      ...rest
-    } = this.props;
-
-    return {
-      children,
-      onCloseIconClick,
-      title,
-      ...rest,
-    };
-  };
-
   componentDidMount(): void {
     this.htmlNode.classList.add('no-scroll');
   }
@@ -79,7 +63,7 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   }
 
   handleCloseIntent = (): void => {
-    const { onCloseIconClick } = this.getProps();
+    const { onCloseIconClick } = this.props as Required<DialogModalProps>;
 
     if (onCloseIconClick) {
       this.setState({ isClosing: true });
@@ -96,7 +80,8 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   render(): JSX.Element {
     const {
       children, title, onCloseIconClick, ...rest 
-    } = this.getProps();
+    } = this
+      .props as Required<DialogModalProps>;
     const { isClosing } = this.state;
 
     return ReactDOM.createPortal(
