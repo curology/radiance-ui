@@ -21,7 +21,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   const [activeSegmentIndex, setActiveSegmentIndex] = useState(
     initialActiveIndex,
   );
-  const targetRef = useRef<HTMLDivElement>(null);
+  const targetRef = useRef<HTMLButtonElement>(null);
   const [transform, setTransform] = useState('');
   const [targetWidth, setTargetWidth] = useState(0);
   const segmentWidth = 100 / segmentItems.length;
@@ -55,6 +55,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
           active={index === activeSegmentIndex}
           key={segment.id}
           onClick={() => onSegmentClick(segment, index)}
+          disabled={index === activeSegmentIndex}
         >
           {segment.text}
         </SegmentItem>

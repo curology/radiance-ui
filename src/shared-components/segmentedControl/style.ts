@@ -20,7 +20,7 @@ export const SegmentsContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: relative;
   border-radius: 80px;
   background-color: ${COLORS.purple10};
@@ -30,23 +30,27 @@ export const SegmentsContainer = styled.div`
 
 export const SegmentItem = styled.button<SegmentItemProps>`
   ${buttonReset};
-  ${TYPOGRAPHY_STYLE.caption};
-  color: ${COLORS.purple70};
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   margin: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border: none;
+  ${TYPOGRAPHY_STYLE.caption};
+  color: ${COLORS.purple70};
   border-radius: 80px;
   background-color: ${COLORS.purple10};
   width: ${({ width }) => `${width}%`};
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: 0px 0px 0px 2px ${COLORS.primary};
   }
 `;
 
-export const Indicator = styled.div<IndicatorProps>`
+export const Indicator = styled.button<IndicatorProps>`
+  ${buttonReset};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,10 +62,16 @@ export const Indicator = styled.div<IndicatorProps>`
   top: 0;
   left: 0;
   bottom: 0;
-  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   background-color: white;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
   ${TYPOGRAPHY_STYLE.caption};
   color: ${COLORS.primary};
   font-weight: bold;
   transform: ${({ transform }) => transform};
+  box-shadow: 0px 2px 4px rgba(51, 46, 84, 0.05);
+  border: none;
+  &:focus {
+    box-shadow: ${BOX_SHADOWS.focusInner};
+    outline: none;
+  }
 `;
