@@ -1,0 +1,42 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Description,
+  Canvas,
+  Source,
+} from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+import { LoadingSpinner } from 'src/shared-components';
+
+import * as LoadingSpinnerStories from './loadingSpinner.stories.tsx';
+
+<Meta title="LoadingSpinner" component={LoadingSpinner} />
+
+# LoadingSpinner
+
+<Description of={LoadingSpinner} />
+
+## Usage
+
+```tsx
+import { LoadingSpinner } from 'radiance-ui';
+```
+
+<ArgsTable of={LoadingSpinner} />
+
+<Canvas>
+  <Story story={LoadingSpinnerStories.Default} />
+</Canvas>
+
+<Canvas>
+  <Story story={LoadingSpinnerStories.WithTranslateX} />
+</Canvas>
+
+<Canvas>
+  <Story story={LoadingSpinnerStories.WithDuration} />
+</Canvas>
+
+<Canvas>
+  <Story story={LoadingSpinnerStories.WithControls} />
+</Canvas>
