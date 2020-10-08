@@ -8,6 +8,9 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   initialActiveId = 1,
   onClick,
 }) => {
+  if (segmentItems.length === 0) {
+    return null;
+  }
   const initialActiveItem = segmentItems.find(
     (item: SegmentItemType) => item.id === initialActiveId,
   );
