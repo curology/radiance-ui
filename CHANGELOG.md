@@ -1,5 +1,22 @@
 # CHANGELOG
 
+# v12.1.0
+
+- [Internal] TypeScript conversion: VerificationMessages, Field
+
+# v12.0.0
+
+- [API] **BREAKING**: Removes `BOX_SHADOWS.focusSecondary`. Please replace usage with with `BOX_SHADOWS.focus`. ([#400](https://github.com/curology/radiance-ui/pull/400))
+- [API] New focus states `BOX_SHADOWS.focus` and `BOX_SHADOWS.focusInner`. ([#390](https://github.com/curology/radiance-ui/pull/390))
+- [Styling] Added new focus states to Alert, Banner, DialogModal, Field, ImmersiveModal, OptionButton, SelectorButton, TextButton, and Toggle components. ([#390](https://github.com/curology/radiance-ui/pull/390), [#394](https://github.com/curology/radiance-ui/pull/394), [#397](https://github.com/curology/radiance-ui/pull/397), [#400](https://github.com/curology/radiance-ui/pull/400))
+- [Styling] Add `focus-visible` polyfill to enable keyboard-only focus states. ([#390](https://github.com/curology/radiance-ui/pull/390))
+- [Internal] Updated a number of underlying dependencies and related configuration.
+- [Styling] Update `BOX_SHADOWS.clickable` and `BOX_SHADOWS.clickableHover` values. ([#338](https://github.com/curology/radiance-ui/pull/338))
+- [API] Adds programmable (4px default) border-radius to Accordion, Dropdown, and OptionButton components ([#338](https://github.com/curology/radiance-ui/pull/338), [#371](https://github.com/curology/radiance-ui/pull/371), [#374](https://github.com/curology/radiance-ui/pull/374))
+- [API] Export Tooltip Arrow icon as stand-alone icon. ([#386](https://github.com/curology/radiance-ui/pull/386))
+
+[v11.1.0 to v12.0.0 comparison view](https://github.com/curology/radiance-ui/compare/12479556aa3d3faf4499cef9de1eb0c74c962f17..master)
+
 # v11.1.0
 
 - Adds new positioning of arrows to the Carousel component. It is denoted as a prop with the name 'bottomRightAlignedArrows'.

@@ -131,10 +131,12 @@ const ImmersiveModalExamples = (): JSX.Element => {
       </Button>
       {withButtons && (
         <ImmersiveModal
-          onClose={(): void => setWithButtons(false)}
+          onClose={() => setWithButtons(false)}
           footerContent={
             <Button.Container>
-              <Button isFullWidth>cta content</Button>
+              <Button isFullWidth onClick={() => setWithButtons(false)}>
+                cta content
+              </Button>
             </Button.Container>
           }
           title="Immersive modal title"

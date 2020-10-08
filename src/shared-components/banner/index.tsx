@@ -23,15 +23,19 @@ export type BannerType = 'default' | 'success' | 'error' | 'danger';
 
 type BannerProps = {
   content: React.ReactNode;
-  type: BannerType;
-  onClick: () => void;
+  type?: BannerType;
+  onClick?: () => void;
 };
 
-const Banner = ({ content, type, onClick }: BannerProps) => {
+const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
   const Icon = bannerIconMapping[type];
 
   return (
-    <BannerContainer bannerType={type} onClick={onClick}>
+    <BannerContainer
+      bannerType={type}
+      onClick={onClick}
+      tabIndex={onClick ? 0 : -1}
+    >
       <MainContainer>
         <IconContainer>
           <Icon fill={COLORS.white} />
@@ -46,11 +50,6 @@ Banner.propTypes = {
   content: PropTypes.node.isRequired,
   type: PropTypes.oneOf(['default', 'success', 'error']),
   onClick: PropTypes.func,
-};
-
-Banner.defaultProps = {
-  type: 'default',
-  onClick: (): void => undefined,
 };
 
 export default Banner;
