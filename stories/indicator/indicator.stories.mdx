@@ -1,0 +1,34 @@
+import {
+  ArgsTable,
+  Meta,
+  Story,
+  Description,
+  Canvas,
+  Source,
+} from '@storybook/addon-docs/blocks';
+import { useState } from 'react';
+import { Indicator } from 'src/shared-components';
+
+import * as IndicatorStories from './indicator.stories.tsx';
+
+<Meta title="Indicator" component={Indicator} />
+
+# Indicator
+
+<Description of={Indicator} />
+
+## Usage
+
+```tsx
+import { Indicator } from 'radiance-ui';
+```
+
+<ArgsTable of={Indicator} />
+
+<Canvas>
+  <Story story={IndicatorStories.NumbersAndText} />
+</Canvas>
+
+<Canvas>
+  <Story story={IndicatorStories.WithControls} />
+</Canvas>
