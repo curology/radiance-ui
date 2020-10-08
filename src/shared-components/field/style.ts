@@ -20,7 +20,7 @@ export const FieldContainer = styled.div`
   margin-bottom: 22px;
 `;
 
-export const Label = styled.label<{ disabled?: boolean }>`
+export const Label = styled.label<{ disabled: boolean }>`
   ${TYPOGRAPHY_STYLE.label};
 
   ${({ disabled }) => disabled && `color:${COLORS.purple30};`};
