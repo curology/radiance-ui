@@ -1,9 +1,9 @@
 import React from 'react';
 import uniqueid from 'lodash.uniqueid';
 
-import { messageType } from '..';
+import { MessageType } from '..';
 
-const formatMessage = (message: messageType) => {
+const formatMessage = (message: MessageType) => {
   if (Array.isArray(message)) {
     const mapResult = message.map((value) => (
       <React.Fragment key={uniqueid()}>{value}</React.Fragment>
