@@ -30,7 +30,6 @@ export const FieldInputWithSuccessMessage = () => {
       messages={messages}
       messagesType="success"
     >
-      <input value={1} />
       <Field.Input
         id="input-success"
         type="text"

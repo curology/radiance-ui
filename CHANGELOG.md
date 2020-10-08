@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v12.1.0
+
+- [Internal] TypeScript conversion: VerificationMessages, Field
+
 # v12.0.0
 
 - [API] **BREAKING**: Removes `BOX_SHADOWS.focusSecondary`. Please replace usage with with `BOX_SHADOWS.focus`. ([#400](https://github.com/curology/radiance-ui/pull/400))

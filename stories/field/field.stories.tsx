@@ -80,6 +80,7 @@ export const WithControls = () => (
       disabled={boolean('disabled', false)}
       // @ts-ignore
       messages={select('messages', messagesOptions, {})}
+      // @ts-ignore
       messagesType={select('messagesType', messagesTypeOptions, 'error')}
       hideMessagesIcon={boolean('hideMessagesIcon', false)}
       hintMessage={text('hintMessage', 'Hint Message')}

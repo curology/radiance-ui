@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Field /> UI Snapshot renders with default props 1`] = `
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.emotion-2 {
+  position: relative;
+}
+
+.emotion-2 svg.radiance-field-input-icon {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+
+.emotion-0 {
+  color: #524D6E;
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #ededf0;
+  border-radius: 0.25rem;
+  color: #524D6E;
+  -webkit-transition: border-color 350ms;
+  transition: border-color 350ms;
+  width: 100%;
+  outline: none;
+  margin-bottom: 2px;
+  padding: 13px 2rem 13px 1rem;
+}
+
+.emotion-0:active,
+.emotion-0:focus {
+  outline: none;
+  border-color: #332e54;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-0:active ~ .e1gqjikl0,
+.emotion-0:focus ~ .e1gqjikl0 {
+  max-height: 24px;
+  opacity: 1;
+  margin: 0.125rem 0 0 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0::placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0[disabled] {
+  background-color: #ededf0;
+  color: #c3c0cd;
+  cursor: not-allowed;
+  border: 1px solid #ededf0;
+  box-shadow: none;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <div
+    className="emotion-2 emotion-3"
+  >
+    <svg
+      className="radiance-field-input-icon"
+      fill="#BD200F"
+    />
+    <input
+      className="emotion-0 emotion-1"
+      disabled={false}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMessagesIcon props 1`] = `
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.emotion-0 {
+  color: #524D6E;
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #ededf0;
+  border-radius: 0.25rem;
+  color: #524D6E;
+  -webkit-transition: border-color 350ms;
+  transition: border-color 350ms;
+  width: 100%;
+  outline: none;
+  margin-bottom: 2px;
+  padding: 13px 2rem 13px 1rem;
+}
+
+.emotion-0:active,
+.emotion-0:focus {
+  outline: none;
+  border-color: #332e54;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-0:active ~ .emotion-3,
+.emotion-0:focus ~ .emotion-3 {
+  max-height: 24px;
+  opacity: 1;
+  margin: 0.125rem 0 0 0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0::placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-0[disabled] {
+  background-color: #ededf0;
+  color: #c3c0cd;
+  cursor: not-allowed;
+  border: 1px solid #ededf0;
+  box-shadow: none;
+}
+
+.emotion-8 {
+  position: relative;
+}
+
+.emotion-8 svg.radiance-field-input-icon {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+
+.emotion-8 svg.radiance-field-input-icon {
+  opacity: 1;
+}
+
+.emotion-8 .e1gqjikl4,
+.emotion-8 .emotion-1 {
+  border-color: #BD200F;
+}
+
+.emotion-8 .e1gqjikl4:active,
+.emotion-8 .emotion-1:active,
+.emotion-8 .e1gqjikl4:focus,
+.emotion-8 .emotion-1:focus {
+  border-color: #BD200F;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-2 {
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  opacity: 0;
+  max-height: 0;
+}
+
+.emotion-6 {
+  list-style-type: none;
+  margin: 0;
+}
+
+.emotion-4 {
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #BD200F;
+  line-height: 24px;
+}
+
+.emotion-4:last-of-type {
+  margin: 0 0 0.125rem 0;
+}
+
+<div
+  className="emotion-10 emotion-11"
+>
+  <div
+    className="emotion-8 emotion-9"
+  >
+    <input
+      className="emotion-0 emotion-1"
+      disabled={false}
+    />
+    <div
+      className="emotion-2 emotion-3"
+    >
+      hint message
+    </div>
+    <ul
+      className="emotion-6 emotion-7"
+    >
+      <li
+        className="emotion-4 emotion-5"
+        style={
+          Object {
+            "maxHeight": "48px",
+            "opacity": "1",
+            "transitionDuration": "350ms",
+            "transitionProperty": "max-height, opacity",
+            "transitionTimingFunction": "ease-in-out",
+          }
+        }
+        type="error"
+      >
+        <strong>
+          Uh Oh!
+        </strong>
+         Type again
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-4 svg.radiance-field-input-icon {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 1rem;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+
+.emotion-2 {
+  color: #524D6E;
+  font-size: 1rem;
+  line-height: 1.75;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #ffffff;
+  border: 1px solid #ededf0;
+  border-radius: 0.25rem;
+  color: #524D6E;
+  -webkit-transition: border-color 350ms;
+  transition: border-color 350ms;
+  width: 100%;
+  outline: none;
+  margin-bottom: 2px;
+  padding: 13px 2rem 13px 1rem;
+}
+
+.emotion-2:active,
+.emotion-2:focus {
+  outline: none;
+  border-color: #332e54;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-2:active ~ .e1gqjikl0,
+.emotion-2:focus ~ .e1gqjikl0 {
+  max-height: 24px;
+  opacity: 1;
+  margin: 0.125rem 0 0 0;
+}
+
+.emotion-2::-webkit-input-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-2::placeholder {
+  color: #c3c0cd;
+}
+
+.emotion-2[disabled] {
+  background-color: #ededf0;
+  color: #c3c0cd;
+  cursor: not-allowed;
+  border: 1px solid #ededf0;
+  box-shadow: none;
+}
+
+.emotion-0 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <label
+    className="emotion-0 emotion-1"
+    disabled={false}
+    htmlFor="for-input-id"
+  >
+    Test Label
+  </label>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <svg
+      className="radiance-field-input-icon"
+      fill="#BD200F"
+    />
+    <input
+      className="emotion-2 emotion-3"
+      disabled={false}
+    />
+  </div>
+</div>
+`;
