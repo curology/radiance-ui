@@ -16,6 +16,7 @@ type DialogModalProps = {
   children: React.ReactNode;
   onCloseIconClick?: () => void | null;
   title?: string;
+  [key: string]: any;
 };
 
 type DialogModalState = {
@@ -62,7 +63,7 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   }
 
   handleCloseIntent = (): void => {
-    const { onCloseIconClick } = this.props;
+    const { onCloseIconClick } = this.props as Required<DialogModalProps>;
 
     if (onCloseIconClick) {
       this.setState({ isClosing: true });
@@ -79,8 +80,8 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   render(): JSX.Element {
     const {
       children, title, onCloseIconClick, ...rest 
-    } = this.props;
-
+    } = this
+      .props as Required<DialogModalProps>;
     const { isClosing } = this.state;
 
     return ReactDOM.createPortal(

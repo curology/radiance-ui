@@ -27,18 +27,8 @@ type AccordionProps = {
   title: React.ReactNode;
 };
 
-/**
- * TODO-TS: Convert to Function component and use ES6 defaults
- */
-type AccordionDefaultProps = {
-  borderRadius: string;
-  disabled: boolean;
-  noBorder: boolean;
-  rightAlignArrow: boolean;
-};
-
 class Accordion extends React.Component<
-  AccordionProps & AccordionDefaultProps,
+  AccordionProps & Required<AccordionProps>,
   { contentHeight: string }
 > {
   static propTypes = {

@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1126751,
-    "minified": 1065652,
-    "gzipped": 104549
+    "bundled": 1129508,
+    "minified": 1067744,
+    "gzipped": 104557
   },
   "bundle.umd.js": {
-    "bundled": 1136349,
-    "minified": 1039073,
-    "gzipped": 100090
+    "bundled": 1139116,
+    "minified": 1041186,
+    "gzipped": 100140
   },
   "shared-components/chip/index.js": {
     "bundled": 576,
@@ -52,16 +52,16 @@
     }
   },
   "shared-components/field/style.js": {
-    "bundled": 34140,
-    "minified": 33622,
-    "gzipped": 4451,
+    "bundled": 35818,
+    "minified": 35300,
+    "gzipped": 4680,
     "treeshaked": {
       "rollup": {
-        "code": 2094,
+        "code": 2100,
         "import_statements": 297
       },
       "webpack": {
-        "code": 3399
+        "code": 3405
       }
     }
   },
@@ -192,16 +192,16 @@
     }
   },
   "shared-components/verificationMessages/index.js": {
-    "bundled": 1267,
-    "minified": 926,
-    "gzipped": 435,
+    "bundled": 1429,
+    "minified": 916,
+    "gzipped": 451,
     "treeshaked": {
       "rollup": {
-        "code": 702,
+        "code": 360,
         "import_statements": 305
       },
       "webpack": {
-        "code": 1912
+        "code": 1921
       }
     }
   },
@@ -262,16 +262,16 @@
     }
   },
   "shared-components/field/index.js": {
-    "bundled": 2852,
-    "minified": 1839,
-    "gzipped": 802,
+    "bundled": 2511,
+    "minified": 1482,
+    "gzipped": 670,
     "treeshaked": {
       "rollup": {
-        "code": 1469,
-        "import_statements": 504
+        "code": 1212,
+        "import_statements": 383
       },
       "webpack": {
-        "code": 2838
+        "code": 2533
       }
     }
   },
@@ -290,9 +290,9 @@
     }
   },
   "shared-components/verificationMessages/style.js": {
-    "bundled": 4236,
-    "minified": 4040,
-    "gzipped": 1223,
+    "bundled": 4512,
+    "minified": 4316,
+    "gzipped": 1629,
     "treeshaked": {
       "rollup": {
         "code": 406,
@@ -472,16 +472,16 @@
     }
   },
   "shared-components/dialogModal/index.js": {
-    "bundled": 3611,
-    "minified": 2220,
-    "gzipped": 984,
+    "bundled": 4359,
+    "minified": 2516,
+    "gzipped": 1069,
     "treeshaked": {
       "rollup": {
-        "code": 1847,
-        "import_statements": 513
+        "code": 2094,
+        "import_statements": 532
       },
       "webpack": {
-        "code": 3179
+        "code": 3461
       }
     }
   },
@@ -528,9 +528,9 @@
     }
   },
   "shared-components/verificationMessages/formatMessage/index.js": {
-    "bundled": 478,
-    "minified": 306,
-    "gzipped": 201,
+    "bundled": 527,
+    "minified": 358,
+    "gzipped": 216,
     "treeshaked": {
       "rollup": {
         "code": 60,
