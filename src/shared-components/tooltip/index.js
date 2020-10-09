@@ -14,21 +14,57 @@ import {
 import { COLORS } from '../../constants';
 
 const propTypes = {
+  /**
+   * Adjusts positioning, in percent
+   */
   alignRightPercent: PropTypes.number,
+  /**
+   * Adjusts positioning, in percent
+   */
   alignTopPercent: PropTypes.number,
   arrowAlign: PropTypes.oneOf(['left', 'middle', 'right']),
+  /**
+   * Content of the trigger element displayed on page
+   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
+  /**
+   * Content of the tooltip
+   */
   content: PropTypes.node,
+  /**
+   * Show the tooltip without the need of the trigger                                       |
+   */
   defaultOpen: PropTypes.bool,
+  /**
+   * Programatically control the tooltip to never show (false) or function as normal (true)
+   */
   display: PropTypes.bool,
+  /**
+   * Makes the tooltip have a maximun width of 327px
+   */
   hasRestrictedWidth: PropTypes.bool,
+  /**
+   * Small tooltip with very little padding
+   */
   isSmall: PropTypes.bool,
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeLeft: PropTypes.number,
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeRight: PropTypes.number,
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeTop: PropTypes.number,
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeBottom: PropTypes.number,
   position: PropTypes.oneOf(['top', 'bottom']),
 };
@@ -49,6 +85,11 @@ const defaultProps = {
   position: 'top',
 };
 
+/**
+ * Tooltips provide additional context to elements or give patients hints about new features or updates.
+ *
+ * They can be triggered from an icon or another component (such as a navigation link)
+ */
 class Tooltip extends React.Component {
   state = { clicked: false, hovered: false };
 
