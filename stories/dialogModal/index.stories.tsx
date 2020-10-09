@@ -7,7 +7,6 @@ import {
   Description,
   Heading,
   Source,
-  Stories,
   Canvas,
 } from '@storybook/addon-docs/blocks';
 
