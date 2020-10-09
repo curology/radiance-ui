@@ -103,7 +103,7 @@ const Link = styled.a(linkStyle);
 const Success = styled.p(successStyle);
 const Title = styled.h3(titleStyle);
 
-const Typography = {
+export const Typography = {
   Button,
   Caption,
   Display,
