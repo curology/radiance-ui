@@ -3,6 +3,8 @@ import { css } from '@emotion/core';
 
 import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
+import { ArrowAlignTypes, PositionTypes } from '.';
+
 export const MainContainer = styled.div`
   position: relative;
   align-items: left;
@@ -13,7 +15,20 @@ export const Trigger = styled.div`
   cursor: pointer;
 `;
 
-export const TooltipBox = styled.div`
+export const TooltipBox = styled.div<{
+  alignRightPercent: number;
+  alignTopPercent: number;
+  arrowAlign: ArrowAlignTypes;
+  displayTooltip: boolean;
+  hasRestrictedWidth: boolean;
+  isSmall: boolean;
+  nudgeLeft: number;
+  nudgeRight: number;
+  nudgeTop: number;
+  nudgeBottom: number;
+  position: PositionTypes;
+  open: boolean;
+}>`
   max-width: ${({ hasRestrictedWidth }) =>
     hasRestrictedWidth ? '327px' : 'none'};
 
@@ -28,7 +43,7 @@ export const TooltipBox = styled.div`
           bottom: 120%;
         `;
       default:
-        break;
+        return '';
     }
   }};
 
@@ -43,7 +58,7 @@ export const TooltipBox = styled.div`
           right: 0;
         `;
       default:
-        break;
+        return '';
     }
   }};
 
@@ -112,7 +127,10 @@ export const TooltipContent = styled.div`
   position: relative;
 `;
 
-export const ArrowImageContainer = styled.div`
+export const ArrowImageContainer = styled.div<{
+  arrowAlign: ArrowAlignTypes;
+  position: PositionTypes;
+}>`
   position: absolute;
   z-index: 4;
 
@@ -128,7 +146,7 @@ export const ArrowImageContainer = styled.div`
           bottom: -8px;
         `;
       default:
-        break;
+        return '';
     }
   }};
 
@@ -148,7 +166,7 @@ export const ArrowImageContainer = styled.div`
           margin-left: -10px;
         `;
       default:
-        break;
+        return '';
     }
   }};
 `;
