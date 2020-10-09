@@ -1,16 +1,16 @@
 import React from 'react';
-
 import { Tabs } from 'src/shared-components';
 
-const TabsExample = () => {
+export const Default = () => {
   const tabItems = [
     { id: 1, text: 'Tab 1' },
     { id: 2, text: 'Tab 2' },
     { id: 3, text: 'Tab 3' },
   ];
 
-  const onClickTab = tab => {
-    console.log(tab);
+  const onClickTab = (tab: { id: number; text: string }) => {
+    // Add any additional callbacks here
+    console.log(tab); // eslint-disable-line
   };
 
   return (
@@ -20,4 +20,7 @@ const TabsExample = () => {
   );
 };
 
-export default TabsExample;
+export default {
+  title: 'Tabs',
+  component: Tabs,
+};
