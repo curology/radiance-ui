@@ -29,8 +29,6 @@ const sourceCode = `<Typography.Display css={emotionSerializedStyleValue}>Overri
 
 export default {
   title: 'Typography',
-  // component: MockTypography,
-  excludeStories: ['MockTypography'],
   parameters: {
     docs: {
       page: () => (
