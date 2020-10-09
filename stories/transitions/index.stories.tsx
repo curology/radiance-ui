@@ -56,7 +56,7 @@ export default {
       page: () => (
         <React.Fragment>
           <Title />
-          <Subtitle />
+          
           <Primary />
           <Description>
             Note, these props only apply to FadeInContainer

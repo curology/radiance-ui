@@ -133,7 +133,7 @@ export default {
       page: () => (
         <React.Fragment>
           <Title />
-          <Subtitle />
+          
           <Description />
           <Description>
             Note: the source is not available on the docs page, only the add-on

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography } from 'src/shared-components';
 import {
+  Anchor,
   Title,
   Subtitle,
   Primary,
@@ -34,12 +35,13 @@ export default {
       page: () => (
         <React.Fragment>
           <Title />
-          <Subtitle />
+          
           <Description>
             These are the base typography styles and can be overridden only if
             the designs specify that we do. In order to override the style, use
             the `css` prop or use `TYPOGRAPHY_STYLE` with a css prop:
           </Description>
+          <Anchor storyId="Usage"><h2 id="Usage">Usage:</h2></Anchor>
           <Source language="tsx" code={sourceCode} />
           <Primary />
         </React.Fragment>
