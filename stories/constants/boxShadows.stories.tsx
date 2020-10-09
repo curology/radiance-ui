@@ -1,7 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-
 import { SPACER } from 'src/constants';
 import * as BOX_SHADOWS from 'src/constants/boxShadows';
 import { Container, Typography } from 'src/shared-components';
@@ -23,41 +22,56 @@ const baseBoxStyle = css`
   margin: ${SPACER.large};
 `;
 
-const BoxShadowsStory = () => (
-  <MainContainer>
-    {Object.keys(BOX_SHADOWS).map((category) => {
-      if (category === 'default') {
-        return null;
-      }
+const BaseContainer = styled(Container)`
+  width: 350px;
+  margin: ${SPACER.large};
+`;
 
+// eslint-disable-next-line
+const { default: defaultExport, ...VALID_BOX_SHADOWS} = BOX_SHADOWS;
+
+export const BoxShadows = () => (
+  <MainContainer>
+    {Object.keys(VALID_BOX_SHADOWS).map((category) => {
       const categoryBoxShadows = BOX_SHADOWS[category];
+      console.log('categoryBoxShadows', categoryBoxShadows);
 
       return (
-        <React.Fragment key={category}>
+        <div key={category}>
           <Typography.Title>{category}:</Typography.Title>
           <BoxesContainer>
             {Object.keys(categoryBoxShadows).map((shadow) => {
-              const styles = css`
-                ${baseBoxStyle};
-                box-shadow: ${categoryBoxShadows[shadow]};
-              `;
+              const boxShadowValue = categoryBoxShadows[shadow];
 
+              console.log('before return', {
+                category,
+                categoryBoxShadows,
+                shadow,
+                boxShadowValue,
+              });
               return (
-                <Container key={shadow} css={styles}>
+                <Container
+                  key={shadow}
+                  css={css`
+                    width: 350px;
+                    margin: ${SPACER.large};
+                    box-shadow: ${boxShadowValue};
+                  `}
+                >
                   <Container.Section>
                     <strong>Key:</strong> {shadow}
                     <br />
                     <br />
-                    <strong>Value:</strong> {categoryBoxShadows[shadow]}
+                    <strong>Value:</strong> {boxShadowValue}
                   </Container.Section>
                 </Container>
               );
             })}
           </BoxesContainer>
-        </React.Fragment>
+        </div>
       );
     })}
   </MainContainer>
 );
 
-export default BoxShadowsStory;
+BoxShadows.storyName = 'BOX_SHADOWS';

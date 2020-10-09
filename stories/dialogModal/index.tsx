@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { DialogModal, Button } from 'src/shared-components';
-// import {
-//   Title,
-//   
-//   Description,
-//   Primary,
-//   ArgsTable,
-//   Stories,
-//   PRIMARY_STORY,
-//   Source,
-// } from '@storybook/addon-docs/blocks';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Description,
+  Heading,
+  Source,
+  Stories,
+  Canvas,
+} from '@storybook/addon-docs/blocks';
 
 export const Default = () => {
   const [openModal, setOpenModal] = useState(true);
@@ -42,8 +42,8 @@ export const Default = () => {
   );
 };
 
-export const WithCloseIcon = () => {
-  const [withCloseIcon, setWithCloseIcon] = useState(true);
+export const WithCloseIcon = ({ isOpen = true }) => {
+  const [withCloseIcon, setWithCloseIcon] = useState(isOpen);
 
   return (
     <React.Fragment>
@@ -80,24 +80,27 @@ export default {
   component: DialogModal,
   parameters: {
     docs: {
-      page: null,
-      // page: // () => (
-      //   <React.Fragment>
-      //     <Title />
-      //     
-      //     <Description />
-      //     <Typography.Heading>Usage</Typography.Heading>
-      //     <Source
-      //       language="tsx"
-      //       code="import { DialogModal } from 'radiance-ui';"
-      //     />
-      //     <ArgsTable />
-      //     <Stories
-      //       includePrimary
-      //       title={<Typography.Heading>Stories</Typography.Heading>}
-      //     />
-      //   </React.Fragment>
-      // ),
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { DialogModal } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+          <Heading>Stories</Heading>
+          <Heading>With Close Icon</Heading>
+          <Description>
+            (Source code available within Canvas story Story add-ons tab)
+          </Description>
+          <Canvas>
+            <WithCloseIcon isOpen={false} />
+          </Canvas>
+        </React.Fragment>
+      ),
     },
   },
 };

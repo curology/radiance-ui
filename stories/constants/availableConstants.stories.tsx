@@ -17,7 +17,7 @@ type CategoryConstant =
   | Record<string, unknown>
   | (typeof Proxy & { __isProxy: boolean });
 
-const AvailableConstantsStory = () => (
+export const AvailableConstants = () => (
   <div
     css={css`
       text-align: left;
@@ -44,5 +44,3 @@ const AvailableConstantsStory = () => (
     })}
   </div>
 );
-
-export default AvailableConstantsStory;

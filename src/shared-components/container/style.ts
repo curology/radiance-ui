@@ -1,5 +1,7 @@
-import styled from '@emotion/styled';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import styled, { StyledComponent } from '@emotion/styled';
 import { css } from '@emotion/core';
+import PropTypes from 'prop-types';
 
 import {
   SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
@@ -44,7 +46,7 @@ export const containerStyles = (type?: ContainerType) => css`
   ${getContainerTypeStyles(type)};
 `;
 
-const Section = styled.div`
+export const Section = styled.div`
   padding: ${SPACER.large};
 
   ${MEDIA_QUERIES.lgUp} {
@@ -53,7 +55,7 @@ const Section = styled.div`
   }
 `;
 
-const Divider = styled.div`
+export const Divider = styled.div`
   margin: 0 ${SPACER.large};
   border-bottom: 1px solid ${COLORS.divider};
 
@@ -62,19 +64,44 @@ const Divider = styled.div`
   }
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 `;
+
+/**
+ * This is the type returned by `styled.div`
+ *
+ * @see `node_modules/@emotion/styled-base/types/index.d.ts`
+ */
+type StyledContainer = StyledComponent<
+  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+  {
+    type?: 'clickable' | 'message' | undefined;
+  },
+  any
+>;
+
+export type CompositeContainer = StyledContainer & {
+  Section: typeof Section;
+  Divider: typeof Divider;
+  Image: typeof Image;
+};
 
 // Our reliance on setting dot.notation subcomponents directly on the
 // styled component is not well supported. CompositeContainer defines those
 // subcomponents ahead of time to account for styled.div limitations.
 const Container = styled.div<{ type?: ContainerType }>`
   ${({ type }) => containerStyles(type)};
-`;
+` as CompositeContainer;
 
-export default {
-  Container, Divider, Image, Section, 
+Container.Section = Section;
+Container.Divider = Divider;
+Container.Image = Image;
+
+Container.propTypes = {
+  type: PropTypes.oneOf(['message', 'clickable']),
 };
+
+export { Container };

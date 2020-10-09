@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import { Typography } from 'src/shared-components';
-import * as COLORS from 'src/constants/colors';
+import * as COLORS_CONSTANTS from 'src/constants/colors';
 
 import Color from './color';
 
@@ -18,14 +18,14 @@ const ColorsContainer = styled.div`
   align-items: center;
 `;
 
-const ColorsStory = () => (
+export const COLORS = () => (
   <MainContainer>
-    {Object.keys(COLORS).map((category) => {
+    {Object.keys(COLORS_CONSTANTS).map((category) => {
       if (category === 'default' || category === 'COLORS_PROP_TYPES') {
         return null;
       }
 
-      const categoryColors = COLORS[category];
+      const categoryColors = COLORS_CONSTANTS[category];
 
       return (
         <React.Fragment key={category}>
@@ -43,5 +43,3 @@ const ColorsStory = () => (
     })}
   </MainContainer>
 );
-
-export default ColorsStory;
