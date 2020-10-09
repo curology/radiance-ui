@@ -9,7 +9,7 @@ describe('<FadeInContainer />', () => {
       const component = renderer.create(
         <FadeInContainer slide speed="500ms">
           FadeInContainer Content Here
-        </FadeInContainer>
+        </FadeInContainer>,
       );
 
       const tree = component.toJSON();
