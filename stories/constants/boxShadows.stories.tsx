@@ -28,13 +28,12 @@ const BaseContainer = styled(Container)`
 `;
 
 // eslint-disable-next-line
-const { default: defaultExport, ...VALID_BOX_SHADOWS} = BOX_SHADOWS;
+const { default: defaultExport, ...VALID_BOX_SHADOWS } = BOX_SHADOWS;
 
 export const BoxShadows = () => (
   <MainContainer>
     {Object.keys(VALID_BOX_SHADOWS).map((category) => {
       const categoryBoxShadows = BOX_SHADOWS[category];
-      console.log('categoryBoxShadows', categoryBoxShadows);
 
       return (
         <div key={category}>
@@ -43,12 +42,6 @@ export const BoxShadows = () => (
             {Object.keys(categoryBoxShadows).map((shadow) => {
               const boxShadowValue = categoryBoxShadows[shadow];
 
-              console.log('before return', {
-                category,
-                categoryBoxShadows,
-                shadow,
-                boxShadowValue,
-              });
               return (
                 <Container
                   key={shadow}

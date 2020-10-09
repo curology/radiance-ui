@@ -9,10 +9,7 @@ import {
   Stories,
 } from '@storybook/addon-docs/blocks';
 import { Container } from 'src/shared-components';
-import {
-  CompositeContainer,
-  ContainerType,
-} from 'src/shared-components/container/style';
+import { ContainerType } from 'src/shared-components/container/style';
 
 export const Default = () => (
   <Container>
