@@ -28,7 +28,7 @@ export const Usage = () => (
 const sourceCode = `<Typography.Display css={emotionSerializedStyleValue}>Override!</Typography.Display>`;
 
 export default {
-  title: 'Typography',
+  title: 'Components/Typography',
   parameters: {
     docs: {
       page: () => (

@@ -180,7 +180,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'OptionButton',
+  title: 'Components/OptionButton',
   component: OptionButton,
   parameters: {
     docs: {

@@ -108,7 +108,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Carousel',
+  title: 'Components/Carousel',
   component: Carousel,
   parameters: {
     docs: {

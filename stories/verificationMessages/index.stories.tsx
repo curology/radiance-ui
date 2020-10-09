@@ -62,7 +62,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'VerificationMessages',
+  title: 'Components/VerificationMessages',
   component: VerificationMessages,
   parameters: {
     docs: {

@@ -64,7 +64,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Checkbox',
+  title: 'Components/Checkbox',
   component: Checkbox,
   parameters: {
     docs: {

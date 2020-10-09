@@ -71,7 +71,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Progress Bar',
+  title: 'Components/Progress Bar',
   component: ProgressBar,
   parameters: {
     docs: {

@@ -22,7 +22,7 @@ export const NumbersAndText = () => (
 export const WithControls = () => <Indicator text={text('text', '10')} />;
 
 export default {
-  title: 'Indicator',
+  title: 'Components/Indicator',
   component: Indicator,
   parameters: {
     docs: {

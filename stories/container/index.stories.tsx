@@ -51,7 +51,7 @@ export const MockContainer = ({
 }) => <Container type={type}>{children}</Container>;
 
 export default {
-  title: 'Container',
+  title: 'Components/Container',
   component: MockContainer,
   parameters: {
     docs: {

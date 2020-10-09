@@ -80,7 +80,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'RadioButton',
+  title: 'Components/RadioButton',
   component: RadioButton,
   parameters: {
     docs: {

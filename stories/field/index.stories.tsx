@@ -197,7 +197,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Field',
+  title: 'Components/Field',
   component: Field,
   parameters: {
     docs: {

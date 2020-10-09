@@ -124,7 +124,7 @@ const PRESERVE_STYLES = () => (
  * normal behavior for the docs page.
  */
 export default {
-  title: 'Tooltip',
+  title: 'Components/Tooltip',
   component: Tooltip,
   parameters: {
     docs: {

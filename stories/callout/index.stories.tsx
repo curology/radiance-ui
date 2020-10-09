@@ -58,7 +58,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Callout',
+  title: 'Components/Callout',
   component: Callout,
   parameters: {
     docs: {

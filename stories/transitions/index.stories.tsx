@@ -51,7 +51,7 @@ export const OpacityInAnimation = () => (
 );
 
 export default {
-  title: 'Transitions',
+  title: 'Components/Transitions',
   parameters: {
     docs: {
       page: () => (

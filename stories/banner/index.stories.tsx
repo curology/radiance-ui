@@ -62,7 +62,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Banner',
+  title: 'Components/Banner',
   component: Banner,
   parameters: {
     docs: {

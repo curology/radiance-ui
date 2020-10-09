@@ -26,7 +26,7 @@ export const Usage = () => (
 );
 
 export default {
-  title: 'TYPOGRAPHY_STYLE',
+  title: 'Components/TYPOGRAPHY_STYLE',
   parameters: {
     docs: {
       page: () => (

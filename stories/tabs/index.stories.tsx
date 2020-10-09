@@ -29,7 +29,7 @@ export const Usage = () => {
 };
 
 export default {
-  title: 'Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
   parameters: {
     docs: {

@@ -2,8 +2,8 @@ import type { StorybookConfig } from '@storybook/core/types';
 
 module.exports = {
   stories: [
-    '../stories/*/index.@(ts|tsx|js)',
-    '../stories/*/*.stories.@(tsx|mdx)',
+    '../stories/**/index.@(ts|tsx|js)',
+    '../stories/**/*.stories.@(tsx|mdx)',
   ],
   logLevel: 'debug',
   addons: [

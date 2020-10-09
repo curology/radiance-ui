@@ -8,15 +8,22 @@ import {
   Source,
   Stories,
 } from '@storybook/addon-docs/blocks';
-import { ImmersiveModal } from 'src/shared-components';
+import { TextButton } from 'src/shared-components';
+import { action } from '@storybook/addon-actions';
 
-export * from './withFooterButtons.stories';
-export * from './withHeaderImage.stories';
-export * from './withScrollingContent.stories';
+export const Clickable = () => (
+  <TextButton onClick={action('Button was clicked')}>
+    All of this text is clickable
+  </TextButton>
+);
+
+export const Disabled = () => (
+  <TextButton disabled>This text button is disabled</TextButton>
+);
 
 export default {
-  title: 'Components/ImmersiveModal',
-  component: ImmersiveModal,
+  title: 'Components/Button/TextButton',
+  component: TextButton,
   parameters: {
     docs: {
       page: () => (
@@ -26,7 +33,7 @@ export default {
           <Heading>Usage:</Heading>
           <Source
             language="tsx"
-            code={"import { ImmersiveModal } from 'radiance-ui';"}
+            code={"import { TextButton } from 'radiance-ui';"}
           />
           <Primary />
           <ArgsTable />

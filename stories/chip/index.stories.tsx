@@ -40,7 +40,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'Chip',
+  title: 'Components/Chip',
   component: Chip,
   parameters: {
     docs: {

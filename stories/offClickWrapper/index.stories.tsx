@@ -26,7 +26,7 @@ export const Usage = () => {
 };
 
 export default {
-  title: 'OffClickWrapper',
+  title: 'Components/OffClickWrapper',
   component: OffClickWrapper,
   parameters: {
     docs: {

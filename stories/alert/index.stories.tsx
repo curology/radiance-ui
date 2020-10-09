@@ -91,7 +91,7 @@ export const WithAlertContainer = () => (
 );
 
 export default {
-  title: 'Alert',
+  title: 'Components/Alert',
   component: Alert,
   parameters: {
     docs: {

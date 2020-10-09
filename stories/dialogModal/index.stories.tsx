@@ -75,7 +75,7 @@ export const WithCloseIcon = ({ isOpen = true }) => {
 };
 
 export default {
-  title: 'DialogModal',
+  title: 'Components/DialogModal',
   component: DialogModal,
   parameters: {
     docs: {

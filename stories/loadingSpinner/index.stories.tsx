@@ -49,7 +49,7 @@ export const WithControls = () => (
 );
 
 export default {
-  title: 'LoadingSpinner',
+  title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
     docs: {

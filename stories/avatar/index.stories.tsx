@@ -24,7 +24,7 @@ export const Usage = () => (
 );
 
 export default {
-  title: 'Avatar',
+  title: 'Components/Avatar',
   component: Avatar,
   parameters: {
     docs: {

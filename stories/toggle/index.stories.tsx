@@ -44,7 +44,7 @@ export const Usage = () => {
 };
 
 export default {
-  title: 'Toggle',
+  title: 'Components/Toggle',
   component: Toggle,
   parameters: {
     docs: {

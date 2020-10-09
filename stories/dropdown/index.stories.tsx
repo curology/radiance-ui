@@ -73,7 +73,7 @@ export const Mobile = () => {
 };
 
 export default {
-  title: 'Dropdown',
+  title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
     docs: {
