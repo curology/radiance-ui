@@ -35,7 +35,6 @@ export default {
       page: () => (
         <React.Fragment>
           <Title />
-          
           <Description>
             These are the base typography styles and can be overridden only if
             the designs specify that we do. In order to override the style, use

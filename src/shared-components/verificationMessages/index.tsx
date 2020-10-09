@@ -10,14 +10,29 @@ export type MessagesTypes = 'error' | 'success';
 export type MessageType = string | JSX.Element | Array<string | JSX.Element>;
 
 type VerificationMessagesProps = {
+  /**
+   * Centers the messages
+   */
   centered?: boolean;
+  /**
+   * Object of key and React Node message pair. It also accepts an array of React Node as value
+   */
   messages?: {
     [key: string]: MessageType;
   };
   type?: MessagesTypes;
 };
 
-const VerificationMessages = ({
+/**
+ * Verification messages help provide context and status within forms.
+ *
+ * They should be short and explanative.
+ *
+ * Verification message color should match the alert status, so they can either be `error` or `success`.
+ *
+ * While it can be used as a standalone component, it is intended for use within the Field component.
+ */
+export const VerificationMessages = ({
   centered = false,
   messages = {},
   type = 'error',

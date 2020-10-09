@@ -4,7 +4,6 @@ module.exports = {
   stories: [
     '../stories/*/index.@(ts|tsx|js)',
     '../stories/*/*.stories.@(tsx|mdx)',
-    '../docs/*/*.stories.mdx',
   ],
   logLevel: 'debug',
   addons: [
@@ -18,6 +17,9 @@ module.exports = {
       options: {
         configureJSX: true,
         babelOptions: {},
+        sourceLoaderOptions: {
+          injectStoryParameters: false,
+        },
       },
     },
   ],
