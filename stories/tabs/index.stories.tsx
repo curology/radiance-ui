@@ -1,7 +1,15 @@
 import React from 'react';
 import { Tabs } from 'src/shared-components';
+import {
+  Title,
+  Description,
+  ArgsTable,
+  Heading,
+  Source,
+  Primary,
+} from '@storybook/addon-docs/blocks';
 
-export const Default = () => {
+export const Usage = () => {
   const tabItems = [
     { id: 1, text: 'Tab 1' },
     { id: 2, text: 'Tab 2' },
@@ -23,4 +31,21 @@ export const Default = () => {
 export default {
   title: 'Tabs',
   component: Tabs,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { Tabs } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+        </React.Fragment>
+      ),
+    },
+  },
 };

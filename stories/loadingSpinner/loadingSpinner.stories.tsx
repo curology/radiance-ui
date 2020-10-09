@@ -3,6 +3,15 @@ import styled from '@emotion/styled';
 import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
 import { COLORS } from 'src/constants';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Description,
+  Heading,
+  Source,
+  Stories,
+} from '@storybook/addon-docs/blocks';
 
 const SpinnerContainer = styled.div`
   position: relative;
@@ -38,3 +47,26 @@ export const WithControls = () => (
     />
   </SpinnerContainer>
 );
+
+export default {
+  title: 'LoadingSpinner',
+  component: LoadingSpinner,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { LoadingSpinner } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+          <Stories />
+        </React.Fragment>
+      ),
+    },
+  },
+};

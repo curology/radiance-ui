@@ -4,6 +4,15 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
 import { COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Stories,
+  Description,
+  Heading,
+  Source,
+} from '@storybook/addon-docs/blocks';
 
 const BarContainer = styled.div`
   position: relative;
@@ -21,7 +30,7 @@ const BarContainer = styled.div`
   }
 `;
 
-export const Default = () => (
+export const Usage = () => (
   <BarContainer>
     <ProgressBar status={PROGRESS_BAR_STATUS.loading} />
   </BarContainer>
@@ -64,4 +73,22 @@ export const WithControls = () => (
 export default {
   title: 'Progress Bar',
   component: ProgressBar,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { ProgressBar } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+          <Stories />
+        </React.Fragment>
+      ),
+    },
+  },
 };

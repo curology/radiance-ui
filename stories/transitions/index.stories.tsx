@@ -3,11 +3,12 @@ import { text, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import {
   Title,
-  Subtitle,
   Primary,
   ArgsTable,
   Stories,
   Description,
+  Heading,
+  Source,
 } from '@storybook/addon-docs/blocks';
 import {
   FadeInContainer as FadeInContainerComponent,
@@ -56,7 +57,13 @@ export default {
       page: () => (
         <React.Fragment>
           <Title />
-          
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={
+              "import { FadeInContainer, opacityInAnimationStyle } from 'radiance-ui';"
+            }
+          />
           <Primary />
           <Description>
             Note, these props only apply to FadeInContainer

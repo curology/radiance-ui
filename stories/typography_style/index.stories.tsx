@@ -8,7 +8,7 @@ import {
   Heading,
 } from '@storybook/addon-docs/blocks';
 
-export const Default = () => (
+export const Usage = () => (
   <React.Fragment>
     <div css={TYPOGRAPHY_STYLE.display}>display</div>
     <div css={TYPOGRAPHY_STYLE.heading}>heading</div>
@@ -25,30 +25,29 @@ export const Default = () => (
   </React.Fragment>
 );
 
-Default.parameters = {
-  docs: {
-    page: () => (
-      <React.Fragment>
-        <Title />
-        <Description>
-          This import is meant to be used to pull in css of the base typography
-          styles and used in composing Emotion components.
-        </Description>
-        <Description>
-          These are not React components. They are Emotion css styles that can
-          be used to compose the exact style the design calls for.
-        </Description>
-        <Heading>Usage:</Heading>
-        <Source
-          language="tsx"
-          code={"import { TYPOGRAPHY_STYLE } from 'radiance-ui';"}
-        />
-        <Primary />
-      </React.Fragment>
-    ),
-  },
-};
-
 export default {
   title: 'TYPOGRAPHY_STYLE',
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description>
+            This import is meant to be used to pull in css of the base
+            typography styles and used in composing Emotion components.
+          </Description>
+          <Description>
+            These are not React components. They are Emotion css styles that can
+            be used to compose the exact style the design calls for.
+          </Description>
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { TYPOGRAPHY_STYLE } from 'radiance-ui';"}
+          />
+          <Primary />
+        </React.Fragment>
+      ),
+    },
+  },
 };

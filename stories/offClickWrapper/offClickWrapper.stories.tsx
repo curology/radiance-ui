@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import { OffClickWrapper, Container } from 'src/shared-components';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Description,
+  Heading,
+  Source,
+} from '@storybook/addon-docs/blocks';
 
-export const Default = () => {
+export const Usage = () => {
   const [text, setText] = useState(
     'Click outside this container to call the onOffClick handler...',
   );
@@ -15,4 +23,26 @@ export const Default = () => {
       </Container>
     </OffClickWrapper>
   );
+};
+
+export default {
+  title: 'OffClickWrapper',
+  component: OffClickWrapper,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { OffClickWrapper } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+        </React.Fragment>
+      ),
+    },
+  },
 };

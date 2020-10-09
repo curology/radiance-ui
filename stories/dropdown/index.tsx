@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-
-import Dropdown from 'src/shared-components/dropdown';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Description,
+  Heading,
+  Source,
+  Stories,
+} from '@storybook/addon-docs/blocks';
+import Dropdown, { OptionType } from 'src/shared-components/dropdown';
 import MobileDropdown from 'src/shared-components/dropdown/mobileDropdown';
-
-// import DropdownReadme from '../../docs/dropdown/main';
-// import MobileReadme from '../../docs/dropdown/mobile';
 
 const DropdownContainer = styled.div`
   padding-top: 30px;
@@ -18,17 +23,19 @@ const DesktopContainer = styled(DropdownContainer)`
 `;
 
 const options = [
-  { value: 1, label: 'First option' },
-  { value: 2, label: 'Second option (disabled)', disabled: true },
-  { value: 3, label: 'Third option' },
-  { value: 4, label: 'Fourth option' },
+  { value: '1', label: 'First option' },
+  { value: '2', label: 'Second option (disabled)', disabled: true },
+  { value: '3', label: 'Third option' },
+  { value: '4', label: 'Fourth option' },
 ];
 
 export const Desktop = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<OptionType['value']>(
+    undefined,
+  );
 
-  const onChange = ({ value }) => {
-    setSelectedOption(parseInt(value, 10));
+  const onChange = ({ value }: OptionType) => {
+    setSelectedOption(value);
   };
 
   return (
@@ -40,9 +47,11 @@ export const Desktop = () => {
 };
 
 export const Mobile = () => {
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState<OptionType['value']>(
+    undefined,
+  );
 
-  const onChange = (event) => {
+  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value, selectedOptions } = event.target;
 
     if (selectedOptions && selectedOptions.length) {
@@ -66,4 +75,24 @@ export const Mobile = () => {
 export default {
   title: 'Dropdown',
   component: Dropdown,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description of={Dropdown} />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { Dropdown } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable of={Dropdown} />
+          <Stories />
+          <Description of={MobileDropdown} />
+          <ArgsTable of={MobileDropdown} />
+        </React.Fragment>
+      ),
+    },
+  },
 };

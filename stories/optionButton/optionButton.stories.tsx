@@ -4,10 +4,39 @@ import MinusIcon from 'src/svgs/icons/minus-icon.svg';
 import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
 import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import { OptionButton } from 'src/shared-components';
-
-import Style from './style';
+import styled from '@emotion/styled';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Stories,
+  Description,
+  Heading,
+  Source,
+} from '@storybook/addon-docs/blocks';
 
 const noop = () => undefined;
+
+const ExampleContainer = styled.div`
+  margin: 0 auto;
+  max-width: 350px;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+`;
+
+const OptionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  > button {
+    width: 350px;
+  }
+`;
 
 export const Interactive = () => {
   const [active, setActive] = React.useState('');
@@ -15,7 +44,7 @@ export const Interactive = () => {
   const onClick = (value: string) => () => setActive(value);
 
   return (
-    <Style.ExampleContainer>
+    <ExampleContainer>
       <OptionButton
         selected={active === 'improving'}
         text="Improving"
@@ -34,13 +63,13 @@ export const Interactive = () => {
         buttonType="primary"
         icon={<MinusIcon />}
       />
-    </Style.ExampleContainer>
+    </ExampleContainer>
   );
 };
 
 export const Checkboxes = () => (
-  <Style.FlexContainer>
-    <Style.OptionsContainer>
+  <FlexContainer>
+    <OptionsContainer>
       <OptionButton
         text="Checkbox helper text"
         onClick={noop}
@@ -77,13 +106,13 @@ export const Checkboxes = () => (
         buttonType="primary"
         icon={<AcneGlyph width={32} height={32} />}
       />
-    </Style.OptionsContainer>
-  </Style.FlexContainer>
+    </OptionsContainer>
+  </FlexContainer>
 );
 
 export const RadioButtons = () => (
-  <Style.FlexContainer>
-    <Style.OptionsContainer>
+  <FlexContainer>
+    <OptionsContainer>
       <OptionButton
         text="Radio helper text"
         onClick={noop}
@@ -120,14 +149,14 @@ export const RadioButtons = () => (
         buttonType="primary"
         icon={<AcneGlyph width={32} height={32} />}
       />
-    </Style.OptionsContainer>
-  </Style.FlexContainer>
+    </OptionsContainer>
+  </FlexContainer>
 );
 
 export const WithControls = () => (
-  <Style.FlexContainer>
-    <Style.OptionsContainer>
-      <Style.ExampleContainer>
+  <FlexContainer>
+    <OptionsContainer>
+      <ExampleContainer>
         <OptionButton
           text={text('text', 'Helper text')}
           subtext={text('subtext', 'subtext')}
@@ -145,12 +174,30 @@ export const WithControls = () => (
           selected={boolean('selected', false)}
           icon={<AcneGlyph width={32} height={32} />}
         />
-      </Style.ExampleContainer>
-    </Style.OptionsContainer>
-  </Style.FlexContainer>
+      </ExampleContainer>
+    </OptionsContainer>
+  </FlexContainer>
 );
 
 export default {
   title: 'OptionButton',
   component: OptionButton,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { OptionButton } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+          <Stories />
+        </React.Fragment>
+      ),
+    },
+  },
 };

@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import { text, select, boolean } from '@storybook/addon-knobs';
-import { Field, Typography } from 'src/shared-components';
-
-export * from './fieldInputWithValidations.stories';
-export * from './fieldInputWithSuccessMessage.stories';
-// import FieldDocs from './field.stories.mdx';
+import { Field } from 'src/shared-components';
+import {
+  Title,
+  Primary,
+  ArgsTable,
+  Description,
+  Heading,
+  Source,
+  Stories,
+} from '@storybook/addon-docs/blocks';
 
 const FieldsContainer = styled.div`
   margin: 1rem 0 2rem 0;
@@ -22,6 +26,106 @@ const messagesOptions = {
 const messagesTypeOptions = {
   error: 'error',
   success: 'success',
+};
+
+export const FieldInputWithSuccessMessage = () => {
+  const [state, setState] = React.useState({
+    messages: {},
+    value: '',
+  });
+
+  const validate = (value: string) =>
+    value.length > 0
+      ? { successMessage: 'Thanks for completing this field' }
+      : {};
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+
+    setState({
+      messages: validate(value),
+      value,
+    });
+  };
+
+  const { value, messages } = state;
+
+  return (
+    <Field
+      label="Input with success message"
+      labelFor="input-success"
+      messages={messages}
+      messagesType="success"
+    >
+      <Field.Input
+        id="input-success"
+        type="text"
+        value={value}
+        onChange={onChange}
+      />
+    </Field>
+  );
+};
+
+export const FieldInputWithValidations = () => {
+  const [state, setState] = React.useState({
+    messages: {},
+    value: '',
+  });
+
+  const validate = (value: string) => {
+    const requiredError =
+      value.length === 0 ? { required: 'This field is required' } : {};
+
+    const maxLengthError =
+      value.length > 3
+        ? {
+            maxLength: (
+              <React.Fragment>
+                <strong>Uh oh!</strong> Must be 3 or less characters
+              </React.Fragment>
+            ),
+          }
+        : {};
+
+    const numberRegExp = /\d/;
+    const numberRequiredError = numberRegExp.test(value)
+      ? {}
+      : {
+          numberRequired: (
+            <React.Fragment>
+              <strong>Uh oh!</strong> Must contain at least 1 number
+            </React.Fragment>
+          ),
+        };
+    const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
+    return val;
+  };
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    setState({
+      messages: validate(value),
+      value,
+    });
+  };
+
+  const { value, messages } = state;
+
+  return (
+    <Field
+      label="Input with validations"
+      labelFor="input-validation"
+      messages={messages}
+    >
+      <Field.Input
+        id="input-validation"
+        type="text"
+        value={value}
+        onChange={onChange}
+      />
+    </Field>
+  );
 };
 
 export const InputWithAHint = () => (
@@ -91,3 +195,26 @@ export const WithControls = () => (
     </Field>
   </FieldsContainer>
 );
+
+export default {
+  title: 'Field',
+  component: Field,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { Field } from 'radiance-ui';"}
+          />
+          <Primary />
+          <ArgsTable />
+          <Stories />
+        </React.Fragment>
+      ),
+    },
+  },
+};

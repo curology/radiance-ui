@@ -3,8 +3,17 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RadioButton } from 'src/shared-components';
 import { AcneGlyph } from 'src/svgs/glyphs';
+import {
+  Title,
+  Primary as PrimaryBlock,
+  ArgsTable,
+  Stories,
+  Description,
+  Heading,
+  Source,
+} from '@storybook/addon-docs/blocks';
 
-export const Default = () => {
+export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
 
   const toggleActive = (bool: boolean) => () => setIsActive(bool);
@@ -73,4 +82,22 @@ export const WithControls = () => (
 export default {
   title: 'RadioButton',
   component: RadioButton,
+  parameters: {
+    docs: {
+      page: () => (
+        <React.Fragment>
+          <Title />
+          <Description />
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { RadioButton } from 'radiance-ui';"}
+          />
+          <PrimaryBlock />
+          <ArgsTable />
+          <Stories />
+        </React.Fragment>
+      ),
+    },
+  },
 };

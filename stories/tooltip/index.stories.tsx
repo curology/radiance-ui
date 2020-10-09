@@ -6,10 +6,11 @@ import { SPACER, COLORS } from 'src/constants';
 import {
   Canvas,
   Title,
-  Subtitle,
   Description,
   ArgsTable,
   Stories,
+  Heading,
+  Source,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 
@@ -85,10 +86,7 @@ export const SmallTooltip = ({ defaultOpen = true }) => (
   </TooltipContainer>
 );
 
-/**
- * We purposefully leave thiis out of the canvas since it is just for testing
- */
-const WithControls = () => (
+export const WithControls = () => (
   <TooltipContainer>
     <Tooltip
       alignRightPercent={number('alignRightPercent', 0)}
@@ -112,7 +110,6 @@ const WithControls = () => (
 
 /**
  * Storybook does not apply our global styles when using parameters.docs.page *without* <Stories />.
- *
  * This is potentially a bug in the library, but in the meantime this maintains the desired styling.
  */
 const PRESERVE_STYLES = () => (
@@ -123,7 +120,8 @@ const PRESERVE_STYLES = () => (
 
 /**
  * NOTE: We defaultOpen the tooltips on the separate canvas stories for visual
- * regression testing, but maintain the normal behavior for the docs page.
+ * regression testing (since we want to test the open state), but maintain the
+ * normal behavior for the docs page.
  */
 export default {
   title: 'Tooltip',
@@ -133,12 +131,16 @@ export default {
       page: () => (
         <React.Fragment>
           <Title />
-          
           <Description />
           <Description>
             Note: the source is not available on the docs page, only the add-on
             panel “Story” tab of each Canvas story
           </Description>
+          <Heading>Usage:</Heading>
+          <Source
+            language="tsx"
+            code={"import { Tooltip } from 'radiance-ui';"}
+          />
           <Canvas withToolbar>
             <Default defaultOpen={false} />
           </Canvas>
