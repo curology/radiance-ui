@@ -15,14 +15,15 @@ const propTypes = {
   ]),
   type: PropTypes.oneOf(['primary', 'secondary']),
   /**
-   * Icon optionally displayed inside the radio button. Icons are only displayed at the 'large' size
+   * Icon optionally displayed inside the radio button.
+   *
+   * Icons are only displayed at the 'large' size
    */
   icon: PropTypes.node,
   size: PropTypes.oneOf(['large', 'small']),
 };
 
 /**
- *
  * `<RadioButton />` is a controlled component that represents a radio selection. This means that the `onClick` function should be used to change the checked state of the radio button.
  *
  * Note that a group of radio buttons must be composed by a parent component.

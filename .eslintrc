@@ -55,7 +55,7 @@
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/extensions": [
       "error",
-      { "svg": "always", "jpg": "ignorePackages", "png": "ignorePackages" }
+      { "svg": "always", "jpg": "always", "png": "always" }
     ]
   },
   "overrides": [

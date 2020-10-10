@@ -7,8 +7,7 @@ const UTIL_LOCATION = '../../utils/icons';
 // SVGs will not load properly if we do not remove the default rule before adding our own
 function removeDefaultStorybookSvgRule(config) {
   const defaultStorybookLoaderRule = config.module.rules.find(
-    // TODO: Determine if safety still needed, was a dev issue
-    (rule) => rule && rule.test && rule.test.test && rule.test.test('.svg'),
+    (rule) => rule.test.test && rule.test.test('.svg'),
   );
 
   const ruleWithoutSvg = defaultStorybookLoaderRule.test
@@ -29,7 +28,7 @@ module.exports = (webpackSettings) => {
 
   config.resolve = {
     modules: [path.resolve(__dirname, '..'), 'node_modules'],
-    extensions: ['.js', '.md', '.mdx', '.ts', '.tsx'],
+    extensions: ['.js', '.md', '.ts', '.tsx'],
   };
 
   // SVG Rule

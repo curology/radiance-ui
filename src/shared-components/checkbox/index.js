@@ -32,7 +32,7 @@ export const Checkbox = ({
   children = null,
   disabled = false,
   icon = undefined,
-  onClick = () => undefined,
+  onClick = undefined,
   size = 'small',
   type = 'primary',
   ...rest

@@ -15,7 +15,6 @@ type MobileDropdownProps = {
 };
 
 /**
- *
  * The mobile dropdown is built into the `<Dropdown />` component and cannot be used individually.
  *
  * `<Dropdown /> ` will determine if the user is on a mobile device and render a true `select` tag with `option`(s).

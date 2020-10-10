@@ -27,23 +27,13 @@ const propTypes = {
   size: PropTypes.oneOf(['large', 'small']),
 };
 
-const defaultProps = {
-  disabled: false,
-  onClick: undefined,
-  type: 'primary',
-  selector: 'radio',
-  icon: undefined,
-  children: undefined,
-  size: undefined,
-};
-
 export const SelectorButton = ({
   checked,
-  disabled,
+  disabled = false,
   onClick,
   children,
-  type,
-  selector,
+  type = 'primary',
+  selector = 'radio',
   icon,
   size,
   ...rest
@@ -96,4 +86,3 @@ export const SelectorButton = ({
 };
 
 SelectorButton.propTypes = propTypes;
-SelectorButton.defaultProps = defaultProps;

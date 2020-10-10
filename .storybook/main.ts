@@ -1,6 +1,10 @@
 import type { StorybookConfig } from '@storybook/core/types';
 
 module.exports = {
+  /**
+   * Storybook convention is to include "stories" in the filename, but it is also
+   * a requirement for Storybook default configuration to work correctly
+   */
   stories: ['../stories/**/*.stories.@(tsx|mdx)'],
   logLevel: 'debug',
   addons: [

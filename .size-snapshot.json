@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1141104,
-    "minified": 1069618,
-    "gzipped": 105451
+    "bundled": 1140546,
+    "minified": 1068997,
+    "gzipped": 105342
   },
   "bundle.umd.js": {
-    "bundled": 1151074,
-    "minified": 1043078,
-    "gzipped": 101013
+    "bundled": 1150492,
+    "minified": 1042493,
+    "gzipped": 100923
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -206,7 +206,7 @@
     }
   },
   "shared-components/radioButton/index.js": {
-    "bundled": 1920,
+    "bundled": 1927,
     "minified": 954,
     "gzipped": 471,
     "treeshaked": {
@@ -374,9 +374,9 @@
     }
   },
   "shared-components/checkbox/index.js": {
-    "bundled": 2376,
-    "minified": 1081,
-    "gzipped": 530,
+    "bundled": 2346,
+    "minified": 1075,
+    "gzipped": 526,
     "treeshaked": {
       "rollup": {
         "code": 283,
@@ -626,7 +626,7 @@
     }
   },
   "shared-components/progressBar/index.js": {
-    "bundled": 2017,
+    "bundled": 2014,
     "minified": 1093,
     "gzipped": 505,
     "treeshaked": {
@@ -850,21 +850,21 @@
     }
   },
   "shared-components/selectorButton/index.js": {
-    "bundled": 9103,
-    "minified": 8391,
-    "gzipped": 2363,
+    "bundled": 8584,
+    "minified": 7780,
+    "gzipped": 2245,
     "treeshaked": {
       "rollup": {
         "code": 423,
         "import_statements": 254
       },
       "webpack": {
-        "code": 2709
+        "code": 1684
       }
     }
   },
   "shared-components/dropdown/mobileDropdown.js": {
-    "bundled": 2069,
+    "bundled": 2066,
     "minified": 1127,
     "gzipped": 538,
     "treeshaked": {
@@ -1158,7 +1158,7 @@
     }
   },
   "shared-components/immersiveModal/index.js": {
-    "bundled": 6782,
+    "bundled": 6779,
     "minified": 3713,
     "gzipped": 1376,
     "treeshaked": {
@@ -1172,7 +1172,7 @@
     }
   },
   "shared-components/button/components/linkButton/index.js": {
-    "bundled": 2794,
+    "bundled": 2791,
     "minified": 1405,
     "gzipped": 626,
     "treeshaked": {

@@ -61,7 +61,6 @@ const getModalDesktopScrollingElement = () =>
   document.getElementById(MODAL_DESKTOP_SCROLLING_ID) as HTMLElement;
 
 /**
- *
  * It is used to provide a layer on top of a page when we need to present more content and actions to patients.
  *
  * It should not be used as a step to add friction / confirm an action, use `Dialog Modal` instead.

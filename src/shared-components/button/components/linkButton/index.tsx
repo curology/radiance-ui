@@ -49,7 +49,6 @@ type LinkProps = {
 };
 
 /**
- *
  * `LinkButton` will render a 'button-like' link for directing/linking to the path specified. This component can work with React Router's `Link`/`NavLink` by passing in the router component as a prop ---> `<LinkButton to='/path' as={Link}> ....`.
  *
  * `<LinkButton.Container>` can be used to provide spacing between multiple buttons and behavior on various screen sizes.
