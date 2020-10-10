@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SelectorButton from '../selectorButton';
+import { SelectorButton } from '../selectorButton';
 
 const propTypes = {
   checked: PropTypes.bool.isRequired,

@@ -1,10 +1,7 @@
 import type { StorybookConfig } from '@storybook/core/types';
 
 module.exports = {
-  stories: [
-    '../stories/**/index.@(ts|tsx|js)',
-    '../stories/**/*.stories.@(tsx|mdx)',
-  ],
+  stories: ['../stories/**/*.stories.@(tsx|mdx)'],
   logLevel: 'debug',
   addons: [
     '@storybook/addon-knobs',
@@ -17,9 +14,7 @@ module.exports = {
       options: {
         configureJSX: true,
         babelOptions: {},
-        sourceLoaderOptions: {
-          injectStoryParameters: false,
-        },
+        sourceLoaderOptions: null,
       },
     },
   ],

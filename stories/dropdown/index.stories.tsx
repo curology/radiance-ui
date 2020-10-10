@@ -9,7 +9,7 @@ import {
   Source,
   Stories,
 } from '@storybook/addon-docs/blocks';
-import Dropdown, { OptionType } from 'src/shared-components/dropdown';
+import { Dropdown, OptionType } from 'src/shared-components/dropdown';
 import { MobileDropdown } from 'src/shared-components/dropdown/mobileDropdown';
 
 const DropdownContainer = styled.div`
