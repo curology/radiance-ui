@@ -68,21 +68,23 @@ const InjectGlobalStyles = (storyFn) => (
 
 addDecorator(InjectGlobalStyles);
 
-/**
- * {@link https://storybook.js.org/docs/react/configure/features-and-behavior Options}
- */
-const ADDONS_CONFIG = {
-  enableShortcuts: true,
+const ADDONS_REQUIRED_IN_OPTIONS = {
   isFullscreen: false,
   isToolshown: true,
   panelPosition: 'right',
   showNav: true,
   showPanel: true,
+};
+
+/**
+ * {@link https://storybook.js.org/docs/react/configure/features-and-behavior Options}
+ */
+const ADDONS_CONFIG = {
+  ...ADDONS_REQUIRED_IN_OPTIONS,
+  enableShortcuts: true,
   sidebarAnimations: true,
   theme: Theme,
 };
-
-addons.setConfig(ADDONS_CONFIG);
 
 addParameters({
   a11y: {
@@ -94,19 +96,10 @@ addParameters({
   docs: {
     theme: Theme,
   },
-  /**
-   * TODO-@storybook/addon-docs: Our storybook-readme use means we need to
-   * duplicate the setConfig options via addParameters, too. Once we overhaul
-   * story/documentation setup we can properly deprecate this usage.
-   */
-  options: {
-    ...ADDONS_CONFIG,
-    storySort: {
-      // TODO: Reconfigure once everything is working
-      order: ['Accordion'],
-    },
-  },
+  options: ADDONS_REQUIRED_IN_OPTIONS,
   viewport: {
     viewports: INITIAL_VIEWPORTS,
   },
 });
+
+addons.setConfig(ADDONS_CONFIG);
