@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1139613,
-    "minified": 1068285,
-    "gzipped": 105258
+    "bundled": 1139730,
+    "minified": 1068297,
+    "gzipped": 105340
   },
   "bundle.umd.js": {
-    "bundled": 1149543,
-    "minified": 1041781,
-    "gzipped": 100847
+    "bundled": 1149666,
+    "minified": 1041793,
+    "gzipped": 100923
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -808,9 +808,9 @@
     }
   },
   "shared-components/container/style.js": {
-    "bundled": 31561,
-    "minified": 30784,
-    "gzipped": 4138,
+    "bundled": 31429,
+    "minified": 30652,
+    "gzipped": 4136,
     "treeshaked": {
       "rollup": {
         "code": 1264,
@@ -962,9 +962,9 @@
     }
   },
   "utils/icons/index.js": {
-    "bundled": 2649,
-    "minified": 2394,
-    "gzipped": 1296,
+    "bundled": 2898,
+    "minified": 2538,
+    "gzipped": 1387,
     "treeshaked": {
       "rollup": {
         "code": 187,

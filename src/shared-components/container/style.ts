@@ -79,7 +79,7 @@ type StyledContainer = StyledComponent<
   any
 >;
 
-export type CompositeContainer = StyledContainer & {
+type CompositeContainer = StyledContainer & {
   Section: typeof Section;
   Divider: typeof Divider;
   Image: typeof Image;

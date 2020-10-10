@@ -34,6 +34,9 @@ export type IconsProps = {
   width?: string | number;
 };
 
+/**
+ * TODO: Rename `inline` prop usage so that we do not pass it to the DOM, which raises warnings
+ */
 export const iconStyles = (props: IconsProps) => css`
   display: ${props.inline ? 'inline-block' : 'block'};
   transform: rotate(${props.rotate}deg);

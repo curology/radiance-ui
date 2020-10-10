@@ -26,21 +26,20 @@ export const BoxShadows = () => (
       const categoryBoxShadows = BOX_SHADOWS[category];
 
       return (
-        <div key={category}>
+        <React.Fragment key={category}>
           <Typography.Title>{category}:</Typography.Title>
           <BoxesContainer>
             {Object.keys(categoryBoxShadows).map((shadow) => {
               const boxShadowValue = categoryBoxShadows[shadow];
 
+              const styles = css`
+                width: 350px;
+                margin: ${SPACER.large};
+                box-shadow: ${boxShadowValue};
+              `;
+
               return (
-                <Container
-                  key={shadow}
-                  css={css`
-                    width: 350px;
-                    margin: ${SPACER.large};
-                    box-shadow: ${boxShadowValue};
-                  `}
-                >
+                <Container key={shadow} css={styles}>
                   <Container.Section>
                     <strong>Key:</strong> {shadow}
                     <br />
@@ -51,7 +50,7 @@ export const BoxShadows = () => (
               );
             })}
           </BoxesContainer>
-        </div>
+        </React.Fragment>
       );
     })}
   </MainContainer>

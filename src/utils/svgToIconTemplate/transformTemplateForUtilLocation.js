@@ -3,14 +3,15 @@ const addRestSpreadJsxAttribute = require('./addRestSpreadJsxAttribute.js');
 const deprecatedIcons = require('../icons/deprecatedList.ts');
 
 function transformTemplateForUtilLocation(utilLocation) {
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   return function transformTemplate(
     { template },
     opts,
-    // eslint-disable-next-line no-unused-vars
     {
       imports, componentName, props, jsx, exports, 
     },
   ) {
+    /* eslint-enable @typescript-eslint/no-unused-vars */
     addCssJsxAttribute(jsx);
     addRestSpreadJsxAttribute(jsx);
 
