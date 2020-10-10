@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { DialogModal, Button } from 'src/shared-components';
 import {
-  Title,
-  Primary,
   ArgsTable,
+  Canvas,
   Description,
   Heading,
+  Primary,
   Source,
-  Canvas,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 export const Default = () => {
   const [openModal, setOpenModal] = useState(true);
@@ -102,4 +103,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

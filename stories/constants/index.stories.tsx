@@ -6,6 +6,7 @@ import {
   Source,
   Stories,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 export * from './availableConstants.stories';
 export * from './boxShadows.stories';
@@ -31,4 +32,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

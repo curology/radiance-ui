@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { Dropdown, OptionType } from 'src/shared-components/dropdown';
 import { MobileDropdown } from 'src/shared-components/dropdown/mobileDropdown';
+import type { Meta } from '@storybook/react';
 
 const DropdownContainer = styled.div`
   padding-top: 30px;
@@ -95,4 +96,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

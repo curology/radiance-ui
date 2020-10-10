@@ -1,12 +1,13 @@
 import React from 'react';
-import { Typography } from 'src/shared-components';
 import {
-  Title,
-  Primary,
   Description,
-  Source,
   Heading,
+  Primary,
+  Source,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import { Typography } from 'src/shared-components';
+import type { Meta } from '@storybook/react';
 
 export const Usage = () => (
   <React.Fragment>
@@ -50,4 +51,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

@@ -1,17 +1,18 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
 import { COLORS } from 'src/constants';
+import type { Meta } from '@storybook/react';
 
 export const Default = () => (
   <LinkButton.Container>
@@ -108,4 +109,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

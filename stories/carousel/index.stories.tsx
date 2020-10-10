@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { COLORS, SPACER } from 'src/constants';
+import type { Meta } from '@storybook/react';
 
 const Card = styled(Carousel.Card)`
   background-color: ${COLORS.border};
@@ -128,4 +129,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

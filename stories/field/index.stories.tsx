@@ -3,14 +3,15 @@ import styled from '@emotion/styled';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { Field } from 'src/shared-components';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 const FieldsContainer = styled.div`
   margin: 1rem 0 2rem 0;
@@ -77,27 +78,29 @@ export const FieldInputWithValidations = () => {
     const requiredError =
       value.length === 0 ? { required: 'This field is required' } : {};
 
-    const maxLengthError =
-      value.length > 3
-        ? {
-            maxLength: (
-              <React.Fragment>
-                <strong>Uh oh!</strong> Must be 3 or less characters
-              </React.Fragment>
-            ),
-          }
-        : {};
+    const maxLengthRule = {
+      maxLength: (
+        <React.Fragment>
+          <strong>Uh oh!</strong> Must be 3 or less characters
+        </React.Fragment>
+      ),
+    };
+
+    const maxLengthError = value.length > 3 ? maxLengthRule : {};
+
+    const numberRequiredRule = {
+      numberRequired: (
+        <React.Fragment>
+          <strong>Uh oh!</strong> Must contain at least 1 number
+        </React.Fragment>
+      ),
+    };
 
     const numberRegExp = /\d/;
     const numberRequiredError = numberRegExp.test(value)
       ? {}
-      : {
-          numberRequired: (
-            <React.Fragment>
-              <strong>Uh oh!</strong> Must contain at least 1 number
-            </React.Fragment>
-          ),
-        };
+      : numberRequiredRule;
+
     const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
     return val;
   };
@@ -184,8 +187,11 @@ export const WithControls = () => (
       disabled={boolean('disabled', false)}
       // @ts-ignore
       messages={select('messages', messagesOptions, {})}
-      // @ts-ignore
-      messagesType={select('messagesType', messagesTypeOptions, 'error')}
+      messagesType={
+        select('messagesType', messagesTypeOptions, 'error') as
+          | 'error'
+          | 'success'
+      }
       hideMessagesIcon={boolean('hideMessagesIcon', false)}
       hintMessage={text('hintMessage', 'Hint Message')}
       label={text('label', 'Input Label')}
@@ -217,4 +223,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

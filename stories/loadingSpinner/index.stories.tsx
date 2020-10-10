@@ -4,14 +4,15 @@ import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 const SpinnerContainer = styled.div`
   position: relative;
@@ -69,4 +70,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

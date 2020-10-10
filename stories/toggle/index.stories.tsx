@@ -3,13 +3,14 @@ import styled from '@emotion/styled';
 import { Toggle } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 import {
-  Title,
-  Description,
   ArgsTable,
+  Description,
   Heading,
-  Source,
   Primary,
+  Source,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 const ToggleContainer = styled.div`
   width: 300px;
@@ -63,4 +64,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

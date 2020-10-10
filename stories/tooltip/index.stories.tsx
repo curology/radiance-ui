@@ -1,17 +1,17 @@
 import React from 'react';
+import {
+  ArgsTable,
+  Canvas,
+  Description,
+  Heading,
+  Source,
+  Stories,
+  Title,
+} from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';
-import {
-  Canvas,
-  Title,
-  Description,
-  ArgsTable,
-  Stories,
-  Heading,
-  Source,
-} from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 
 const TooltipContainer = styled.div<{ height?: string }>`

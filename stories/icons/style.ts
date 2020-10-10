@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
-export const Icons = styled.div`
+const Icons = styled.div`
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 `;
 
-export const IconContainer = styled.div`
+const IconContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,13 @@ export const IconContainer = styled.div`
   padding: 20px;
 `;
 
-export const IconLabel = styled.div`
+const IconLabel = styled.div`
   font-size: 12px;
   padding-top: 8px;
 `;
+
+export default {
+  Icons,
+  IconContainer,
+  IconLabel,
+};

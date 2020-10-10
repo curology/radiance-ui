@@ -1,15 +1,16 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { Banner } from 'src/shared-components';
 import { select, text } from '@storybook/addon-knobs';
+import type { Meta } from '@storybook/react';
 
 export const Default = () => (
   <Banner
@@ -82,4 +83,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

@@ -1,15 +1,16 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { Container } from 'src/shared-components';
 import { ContainerType } from 'src/shared-components/container/style';
+import type { Meta } from '@storybook/react';
 
 export const Default = () => (
   <Container>
@@ -35,6 +36,13 @@ export const Message = () => (
   </Container>
 );
 
+/**
+ * Since Container is just a styled component export, we can't infer the type information
+ * of the component the way we can typical React components.
+ *
+ * By importing ContainerType into it's usage we can raise TypeScript errors should the
+ * Container API change in the future.
+ */
 /**
  * The `<Container />` component is mainly useful for base styles.
  *
@@ -72,4 +80,4 @@ export default {
     },
   },
   excludeStories: ['MockContainer'],
-};
+} as Meta;

@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
+import {
+  ArgsTable,
+  Description,
+  Heading,
+  Primary,
+  Source,
+  Stories,
+  Title,
+} from '@storybook/addon-docs/blocks';
 import { boolean, select } from '@storybook/addon-knobs';
 import { VerificationMessages, Field } from 'src/shared-components';
-import {
-  Title,
-  Primary,
-  Description,
-  Source,
-  Heading,
-  ArgsTable,
-  Stories,
-} from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 const FieldContainer = styled.div`
   margin: 1rem 0 2rem 0;
@@ -19,14 +20,14 @@ const FieldContainer = styled.div`
 
 const messages = {
   required: (
-    <Fragment>
+    <React.Fragment>
       <strong>Uh oh!</strong> This field is required
-    </Fragment>
+    </React.Fragment>
   ),
   maxLength: (
-    <Fragment>
+    <React.Fragment>
       <strong>Uh oh!</strong> Must be at least 3 characters
-    </Fragment>
+    </React.Fragment>
   ),
   charactersRequired: ['Must contain 1 number', 'Must contain 1 symbol'],
 };
@@ -82,4 +83,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

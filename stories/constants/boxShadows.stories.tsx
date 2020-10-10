@@ -17,17 +17,7 @@ const BoxesContainer = styled.div`
   align-items: center;
 `;
 
-const baseBoxStyle = css`
-  width: 350px;
-  margin: ${SPACER.large};
-`;
-
-const BaseContainer = styled(Container)`
-  width: 350px;
-  margin: ${SPACER.large};
-`;
-
-// eslint-disable-next-line
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const { default: defaultExport, ...VALID_BOX_SHADOWS } = BOX_SHADOWS;
 
 export const BoxShadows = () => (

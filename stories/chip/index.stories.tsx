@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { Chip } from 'src/shared-components';
 import { text, select } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';
+import type { Meta } from '@storybook/react';
 
 const ChipContainer = styled.div`
   > div {
@@ -57,4 +58,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

@@ -5,13 +5,14 @@ import { Typography } from 'src/shared-components';
 
 import renderConstantsMap from './renderConstantsMap';
 
-/**
- * We don't have a story for this, but export it named and don't want it included
- * in the CONSTANTS glob
- */
-const COLORS_PROP_TYPES = 'COLORS_PROP_TYPES';
-
-const CONSTANTS_WITH_OWN_STORY = ['BOX_SHADOWS', 'COLORS', COLORS_PROP_TYPES];
+/* eslint-disable @typescript-eslint/no-unused-vars */
+const {
+  BOX_SHADOWS,
+  COLORS,
+  COLORS_PROP_TYPES,
+  ...VALID_CONSTANTS
+} = CONSTANTS;
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 type CategoryConstant =
   | Record<string, unknown>
@@ -23,12 +24,8 @@ export const AvailableConstants = () => (
       text-align: left;
     `}
   >
-    {Object.keys(CONSTANTS).map((category) => {
-      if (CONSTANTS_WITH_OWN_STORY.includes(category)) {
-        return null;
-      }
-
-      const categoryConstant = CONSTANTS[category] as CategoryConstant;
+    {Object.keys(VALID_CONSTANTS).map((category) => {
+      const categoryConstant = VALID_CONSTANTS[category] as CategoryConstant;
 
       return (
         <div

@@ -4,14 +4,15 @@ import { action } from '@storybook/addon-actions';
 import { RadioButton } from 'src/shared-components';
 import { AcneGlyph } from 'src/svgs/glyphs';
 import {
-  Title,
-  Primary as PrimaryBlock,
   ArgsTable,
-  Stories,
   Description,
   Heading,
+  Primary as PrimaryBlock,
   Source,
+  Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
@@ -100,4 +101,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

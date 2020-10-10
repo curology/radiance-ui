@@ -1,28 +1,29 @@
 import React from 'react';
+import {
+  ArgsTable,
+  Description,
+  Heading,
+  Primary,
+  Source,
+  Stories,
+  Title,
+} from '@storybook/addon-docs/blocks';
 import { text, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import {
-  Title,
-  Primary,
-  ArgsTable,
-  Stories,
-  Description,
-  Heading,
-  Source,
-} from '@storybook/addon-docs/blocks';
-import {
-  FadeInContainer as FadeInContainerComponent,
+  FadeInContainer,
   opacityInAnimationStyle,
   Container,
 } from 'src/shared-components';
+import type { Meta } from '@storybook/react';
 
 const InnerContainer = styled.div<{ shouldShow: boolean }>`
   display: ${({ shouldShow }) => (shouldShow ? 'block' : 'none')};
 `;
 
-export const FadeInContainer = () => (
+export const FadeInContainerStory = () => (
   <InnerContainer shouldShow={boolean('Toggle to reset the animation', true)}>
-    <FadeInContainerComponent
+    <FadeInContainer
       slide={boolean('slide', true)}
       speed={text('speed', '350ms')}
     >
@@ -34,9 +35,11 @@ export const FadeInContainer = () => (
           You can add the slide property for an extra slide in animation.
         </Container.Section>
       </Container>
-    </FadeInContainerComponent>
+    </FadeInContainer>
   </InnerContainer>
 );
+
+FadeInContainerStory.storyName = 'Fade In Container';
 
 export const OpacityInAnimation = () => (
   <InnerContainer shouldShow={boolean('Toggle to reset the animation', true)}>
@@ -68,10 +71,10 @@ export default {
           <Description>
             Note, these props only apply to FadeInContainer
           </Description>
-          <ArgsTable of={FadeInContainerComponent} />
+          <ArgsTable of={FadeInContainer} />
           <Stories />
         </React.Fragment>
       ),
     },
   },
-};
+} as Meta;

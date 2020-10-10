@@ -6,14 +6,15 @@ import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import { OptionButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import {
-  Title,
-  Primary,
   ArgsTable,
-  Stories,
   Description,
   Heading,
+  Primary,
   Source,
+  Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 const noop = () => undefined;
 
@@ -200,4 +201,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

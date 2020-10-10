@@ -1,18 +1,19 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import { COLORS, SPACER } from 'src/constants';
+import type { Meta } from '@storybook/react';
 import {
   CheckmarkIcon,
   ArrowRightIcon,
@@ -170,4 +171,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

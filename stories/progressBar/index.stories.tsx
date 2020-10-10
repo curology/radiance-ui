@@ -5,14 +5,15 @@ import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
 import { COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
 import {
-  Title,
-  Primary,
   ArgsTable,
-  Stories,
   Description,
   Heading,
+  Primary,
   Source,
+  Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 const BarContainer = styled.div`
   position: relative;
@@ -91,4 +92,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

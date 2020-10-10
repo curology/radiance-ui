@@ -1,13 +1,14 @@
 import React from 'react';
 import { Tabs } from 'src/shared-components';
 import {
-  Title,
-  Description,
   ArgsTable,
+  Description,
   Heading,
-  Source,
   Primary,
+  Source,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 export const Usage = () => {
   const tabItems = [
@@ -38,14 +39,11 @@ export default {
           <Title />
           <Description />
           <Heading>Usage:</Heading>
-          <Source
-            language="tsx"
-            code={"import { Tabs } from 'radiance-ui';"}
-          />
+          <Source language="tsx" code={"import { Tabs } from 'radiance-ui';"} />
           <Primary />
           <ArgsTable />
         </React.Fragment>
       ),
     },
   },
-};
+} as Meta;

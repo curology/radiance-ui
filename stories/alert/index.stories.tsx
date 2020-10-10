@@ -1,21 +1,22 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
+import type { Meta } from '@storybook/react';
 
 export const Default = () => (
   <Alert content="Default Alert: it will disappear after 3 seconds" />
 );
 
-Default.storyName = "Disappearing (Default)"
+Default.storyName = 'Disappearing (Default)';
 
 export const Sticky = () => (
   <Alert
@@ -115,4 +116,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

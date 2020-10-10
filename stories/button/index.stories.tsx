@@ -1,18 +1,19 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Button } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 import { CheckmarkIcon } from 'src/svgs/icons';
+import type { Meta } from '@storybook/react';
 
 export const Default = () => (
   <Button.Container>
@@ -150,4 +151,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

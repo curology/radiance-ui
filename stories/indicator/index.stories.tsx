@@ -2,14 +2,15 @@ import React from 'react';
 import { text } from '@storybook/addon-knobs';
 import { Indicator } from 'src/shared-components';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
+import type { Meta } from '@storybook/react';
 
 export const NumbersAndText = () => (
   <React.Fragment>
@@ -42,4 +43,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;

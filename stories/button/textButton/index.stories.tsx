@@ -1,15 +1,16 @@
 import React from 'react';
 import {
-  Title,
-  Primary,
   ArgsTable,
   Description,
   Heading,
+  Primary,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs/blocks';
 import { TextButton } from 'src/shared-components';
 import { action } from '@storybook/addon-actions';
+import type { Meta } from '@storybook/react';
 
 export const Clickable = () => (
   <TextButton onClick={action('Button was clicked')}>
@@ -42,4 +43,4 @@ export default {
       ),
     },
   },
-};
+} as Meta;
