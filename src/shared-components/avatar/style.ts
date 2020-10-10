@@ -8,9 +8,13 @@ const SIZES = {
   large: 80,
 };
 
-const determineSize = ({ size }: { size: 'small' | 'medium' | 'large' }) => `
-  height: ${SIZES[size]}px;
-  width: ${SIZES[size]}px;
+const determineSize = ({
+  avatarSize,
+}: {
+  avatarSize: 'small' | 'medium' | 'large';
+}) => `
+  height: ${SIZES[avatarSize]}px;
+  width: ${SIZES[avatarSize]}px;
 `;
 
 const AvatarImage = styled.img`

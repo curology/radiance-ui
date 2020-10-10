@@ -10,7 +10,7 @@ type AvatarProps = {
 };
 
 export const Avatar = ({ alt, size = 'small', src }: AvatarProps) => (
-  <Style.AvatarImage alt={alt} size={size} src={src} />
+  <Style.AvatarImage alt={alt} avatarSize={size} src={src} />
 );
 
 Avatar.propTypes = {
