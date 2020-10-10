@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Accordion } from 'src/shared-components';
 
-const StandardAccordion = () => {
+export const RightAlignedArrowAccordion = () => {
   const [showContent, setShowContent] = useState(false);
   const toggleAccordion = () => setShowContent(!showContent);
 
@@ -9,12 +9,11 @@ const StandardAccordion = () => {
     <Accordion.Container>
       <Accordion
         title={
-          <Accordion.Content>
-            This is styled with Accordion.Content
-          </Accordion.Content>
+          <Accordion.Content>This is a right aligned arrow</Accordion.Content>
         }
         isOpen={showContent}
         onClick={toggleAccordion}
+        rightAlignArrow
       >
         <Accordion.Content>
           Accordion.Content adds standard accordion padding.
@@ -23,5 +22,3 @@ const StandardAccordion = () => {
     </Accordion.Container>
   );
 };
-
-export default StandardAccordion;

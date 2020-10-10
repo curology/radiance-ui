@@ -20,7 +20,7 @@ const AccordionSpacer = styled.div`
   margin: 1rem 0;
 `;
 
-const ThumbnailsAccordion = () => {
+export const ThumbnailsAccordion = () => {
   const [showContent, setShowContent] = useState({
     0: false,
     1: false,
@@ -87,5 +87,3 @@ const ThumbnailsAccordion = () => {
     </React.Fragment>
   );
 };
-
-export default ThumbnailsAccordion;

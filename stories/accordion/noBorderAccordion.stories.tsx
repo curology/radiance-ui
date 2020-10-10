@@ -3,23 +3,23 @@ import { Accordion } from 'src/shared-components';
 
 import { useAccordionState } from './utils';
 
-const DisabledAccordion = () => {
+export const NoBorderAccordion = () => {
   const { isOpen, onClick } = useAccordionState();
 
   return (
     <Accordion.Container>
       <Accordion
         title={
-          <Accordion.Content>This is a disabled accordion</Accordion.Content>
+          <Accordion.Content>This is Accordion with noBorder</Accordion.Content>
         }
+        noBorder
         isOpen={isOpen}
         onClick={onClick}
-        disabled
       >
-        <Accordion.Content>Expandable</Accordion.Content>
+        <Accordion.Content>
+          This is styled with Accordion.Content
+        </Accordion.Content>
       </Accordion>
     </Accordion.Container>
   );
 };
-
-export default DisabledAccordion;

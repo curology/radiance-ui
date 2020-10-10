@@ -3,7 +3,7 @@ import { Accordion } from 'src/shared-components';
 
 import { useAccordionState } from './utils';
 
-const TruncatedAccordion = () => {
+export const TruncatedAccordion = () => {
   const { isOpen, onClick } = useAccordionState();
 
   return (
@@ -29,5 +29,3 @@ const TruncatedAccordion = () => {
     </div>
   );
 };
-
-export default TruncatedAccordion;
