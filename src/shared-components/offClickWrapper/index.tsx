@@ -13,7 +13,7 @@ type OffClickWrapperProps = {
   onOffClick: (event: KeyboardEvent | MouseEvent) => void;
 };
 
-class OffClickWrapper extends React.Component<OffClickWrapperProps> {
+export class OffClickWrapper extends React.Component<OffClickWrapperProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
@@ -81,5 +81,3 @@ class OffClickWrapper extends React.Component<OffClickWrapperProps> {
     );
   }
 }
-
-export default OffClickWrapper;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import useResetFocus from 'src/utils/accessibility/useResetFocus';
 
-import OffClickWrapper from '../offClickWrapper';
+import { OffClickWrapper } from '../offClickWrapper';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import {
   DropdownContainer,
@@ -29,7 +29,7 @@ type DesktopDropdownProps = {
   value?: string;
 };
 
-const DesktopDropdown = ({
+export const DesktopDropdown = ({
   borderRadius,
   closeDropdown,
   currentOption,
@@ -160,5 +160,3 @@ DesktopDropdown.propTypes = {
   isOpen: PropTypes.bool,
   optionsContainerMaxHeight: PropTypes.string.isRequired,
 };
-
-export default DesktopDropdown;

@@ -63,5 +63,3 @@ ProgressBar.propTypes = {
     PROGRESS_BAR_STATUS.error,
   ]).isRequired,
 };
-
-export default ProgressBar;

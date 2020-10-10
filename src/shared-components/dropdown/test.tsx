@@ -2,10 +2,10 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
 
-import DesktopDropdown from './desktopDropdown';
-import MobileDropdown from './mobileDropdown';
+import { DesktopDropdown } from './desktopDropdown';
+import { MobileDropdown } from './mobileDropdown';
 
-import Dropdown from './index';
+import { Dropdown } from './index';
 
 const options = [
   { value: 'test1', label: 'Test1' },

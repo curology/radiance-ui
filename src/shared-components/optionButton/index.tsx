@@ -86,5 +86,3 @@ OptionButton.propTypes = {
   optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
   selected: PropTypes.bool,
 };
-
-export default OptionButton;

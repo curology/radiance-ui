@@ -11,7 +11,8 @@ import {
 } from './style';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import VerificationMessages, {
+import {
+  VerificationMessages,
   MessagesTypes,
   MessageType,
 } from '../verificationMessages';
@@ -116,5 +117,3 @@ Field.propTypes = {
   label: PropTypes.string,
   labelFor: PropTypes.string,
 };
-
-export default Field;

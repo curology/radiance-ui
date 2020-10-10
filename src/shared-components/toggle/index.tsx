@@ -75,5 +75,3 @@ export const Toggle = ({
 );
 
 Toggle.propTypes = propTypes;
-
-export default Toggle;

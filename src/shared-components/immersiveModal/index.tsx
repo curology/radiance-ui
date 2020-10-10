@@ -5,7 +5,7 @@ import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
 import { FocusScope } from '@react-aria/focus';
 
-import OffClickWrapper from '../offClickWrapper';
+import { OffClickWrapper } from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
   Overlay,
@@ -236,5 +236,3 @@ ImmersiveModal.propTypes = {
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
 };
-
-export default ImmersiveModal;

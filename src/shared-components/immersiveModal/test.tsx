@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 
 import { ModalTitle } from './style';
 
-import ImmersiveModal from './index';
+import { ImmersiveModal } from './index';
 
 const modalTitle = 'Immersive Modal Title';
 const modalBody = 'Immersive Modal Children Content';

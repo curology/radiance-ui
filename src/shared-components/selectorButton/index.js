@@ -37,7 +37,7 @@ const defaultProps = {
   size: undefined,
 };
 
-const SelectorButton = ({
+export const SelectorButton = ({
   checked,
   disabled,
   onClick,
@@ -97,5 +97,3 @@ const SelectorButton = ({
 
 SelectorButton.propTypes = propTypes;
 SelectorButton.defaultProps = defaultProps;
-
-export default SelectorButton;

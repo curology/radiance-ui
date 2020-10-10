@@ -69,5 +69,3 @@ VerificationMessages.propTypes = {
   messages: PropTypes.objectOf(PropTypes.node),
   type: PropTypes.oneOf(['error', 'success']),
 };
-
-export default VerificationMessages;

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Indicator from './index';
+import { Indicator } from './index';
 
 describe('<Indicator />', () => {
   describe('UI snapshots', () => {

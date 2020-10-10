@@ -51,5 +51,3 @@ export const RadioButton = ({
 );
 
 RadioButton.propTypes = propTypes;
-
-export default RadioButton;

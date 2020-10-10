@@ -72,5 +72,3 @@ MobileDropdown.propTypes = {
   textAlign: PropTypes.oneOf(['left', 'center']),
   onSelectChange: PropTypes.func,
 };
-
-export default MobileDropdown;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import MobileDropdown from './mobileDropdown';
-import DesktopDropdown from './desktopDropdown';
+import { MobileDropdown } from './mobileDropdown';
+import { DesktopDropdown } from './desktopDropdown';
 import allowNullPropType from '../../utils/allowNullPropType';
 
 export type OptionType = {
@@ -126,5 +126,3 @@ Dropdown.propTypes = {
   onChange: PropTypes.func.isRequired,
   optionsContainerMaxHeight: PropTypes.string,
 };
-
-export default Dropdown;

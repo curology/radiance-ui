@@ -53,5 +53,3 @@ export const Checkbox = ({
 );
 
 Checkbox.propTypes = propTypes;
-
-export default Checkbox;

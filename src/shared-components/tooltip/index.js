@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import Arrow from 'src/svgs/icons/arrow.svg';
 
-import OffClickWrapper from '../offClickWrapper';
+import { OffClickWrapper } from '../offClickWrapper';
 import {
   MainContainer,
   Trigger,
@@ -90,7 +90,11 @@ const defaultProps = {
  *
  * They can be triggered from an icon or another component (such as a navigation link)
  */
-class Tooltip extends React.Component {
+export class Tooltip extends React.Component {
+  static propTypes = propTypes;
+
+  static defaultProps = defaultProps;
+
   state = { clicked: false, hovered: false };
 
   onMouseEnter = () => {
@@ -185,8 +189,3 @@ class Tooltip extends React.Component {
     );
   }
 }
-
-Tooltip.propTypes = propTypes;
-Tooltip.defaultProps = defaultProps;
-
-export default Tooltip;

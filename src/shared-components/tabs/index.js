@@ -3,7 +3,7 @@ import React from 'react';
 
 import { TabsContainer, TabItem } from './style';
 
-class Tabs extends React.Component {
+export class Tabs extends React.Component {
   static propTypes = {
     initialActiveTabId: PropTypes.number,
     onClick: PropTypes.func,
@@ -53,5 +53,3 @@ class Tabs extends React.Component {
     );
   }
 }
-
-export default Tabs;

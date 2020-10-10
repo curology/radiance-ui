@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import { MessageItem } from '../verificationMessages/style';
 
-import Field from './index';
+import { Field } from './index';
 
 describe('<Field />', () => {
   describe('UI Snapshot', () => {

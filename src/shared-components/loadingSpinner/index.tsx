@@ -80,5 +80,3 @@ LoadingSpinner.defaultProps = {
   duration: DEFAULT_DURATION,
   size: DEFAULT_SIZE,
 };
-
-export default LoadingSpinner;

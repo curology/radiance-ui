@@ -142,5 +142,3 @@ export class DialogModal extends React.Component<
     );
   }
 }
-
-export default DialogModal;

@@ -46,5 +46,3 @@ Callout.propTypes = {
 };
 
 Callout.Container = ParentContainer;
-
-export default Callout;

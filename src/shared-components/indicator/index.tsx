@@ -19,5 +19,3 @@ export const Indicator = ({ text }: IndicatorProps) => (
 Indicator.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
-
-export default Indicator;

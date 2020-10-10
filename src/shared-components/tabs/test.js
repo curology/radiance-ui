@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 
 import { TabItem } from './style';
 
-import Tabs from './index';
+import { Tabs } from './index';
 
 describe('<Tabs />', () => {
   describe('default props', () => {
@@ -16,7 +16,7 @@ describe('<Tabs />', () => {
             { id: 2, text: 'Tab 2' },
             { id: 3, text: 'Tab 3' },
           ]}
-        />
+        />,
       );
 
       expect(wrapper.html().indexOf('Tab 1') > -1).toBe(true);
@@ -37,13 +37,10 @@ describe('<Tabs />', () => {
             { id: 3, text: 'Tab 3' },
           ]}
           onClick={spy}
-        />
+        />,
       );
 
-      wrapper
-        .find(TabItem)
-        .first()
-        .simulate('click');
+      wrapper.find(TabItem).first().simulate('click');
 
       expect(spy).toHaveBeenCalledWith({ id: 1, text: 'Tab 1' });
     });
