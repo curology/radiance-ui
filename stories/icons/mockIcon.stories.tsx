@@ -1,17 +1,5 @@
 import React from 'react';
-import { defaultProps, propTypes } from 'src/utils/icons';
-
-type IconsProps = {
-  className?: string;
-  fill?: string;
-  height?: string | number;
-  inline?: boolean;
-  /**
-   * Clockwise rotation, in degrees
-   */
-  rotate?: number;
-  width?: string | number;
-};
+import { IconsProps, defaultProps, propTypes } from 'src/utils/icons';
 
 /**
  * We construct a mock Icon components to use Storybook's ArgsTable functionality.

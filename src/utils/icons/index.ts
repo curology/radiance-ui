@@ -22,7 +22,19 @@ export const defaultProps = {
   width: 16,
 };
 
-export const iconStyles = (props) => css`
+export type IconsProps = {
+  className?: string;
+  fill?: string;
+  height?: string | number;
+  inline?: boolean;
+  /**
+   * Clockwise rotation, in degrees
+   */
+  rotate?: number;
+  width?: string | number;
+};
+
+export const iconStyles = (props: IconsProps) => css`
   display: ${props.inline ? 'inline-block' : 'block'};
   transform: rotate(${props.rotate}deg);
   color: ${props.fill};

@@ -120,8 +120,4 @@ export const RoundButton = ({
 RoundButton.propTypes = propTypes;
 RoundButton.Container = RoundButtonContainer;
 
-/**
- * TODO-Storybook: Once loading prop fully deprecated, remove default export
- * and rely on named export only for Docs compatibility
- */
 export default withDeprecationWarning(RoundButton, deprecatedProperties);

@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1140546,
-    "minified": 1068997,
-    "gzipped": 105342
+    "bundled": 1139539,
+    "minified": 1068229,
+    "gzipped": 105274
   },
   "bundle.umd.js": {
-    "bundled": 1150492,
-    "minified": 1042493,
-    "gzipped": 100923
+    "bundled": 1149469,
+    "minified": 1041725,
+    "gzipped": 100864
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -808,9 +808,9 @@
     }
   },
   "shared-components/container/style.js": {
-    "bundled": 32742,
-    "minified": 31868,
-    "gzipped": 4283,
+    "bundled": 31561,
+    "minified": 30784,
+    "gzipped": 4138,
     "treeshaked": {
       "rollup": {
         "code": 1264,
@@ -962,9 +962,9 @@
     }
   },
   "utils/icons/index.js": {
-    "bundled": 2333,
-    "minified": 2078,
-    "gzipped": 1200,
+    "bundled": 2649,
+    "minified": 2394,
+    "gzipped": 1296,
     "treeshaked": {
       "rollup": {
         "code": 187,
@@ -1270,7 +1270,7 @@
     }
   },
   "shared-components/button/components/roundButton/index.js": {
-    "bundled": 3869,
+    "bundled": 3727,
     "minified": 1961,
     "gzipped": 789,
     "treeshaked": {

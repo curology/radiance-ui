@@ -1,6 +1,6 @@
 const addCssJsxAttribute = require('./addCssJsxAttribute.js');
 const addRestSpreadJsxAttribute = require('./addRestSpreadJsxAttribute.js');
-const deprecatedIcons = require('../icons/deprecatedList.js');
+const deprecatedIcons = require('../icons/deprecatedList.ts');
 
 function transformTemplateForUtilLocation(utilLocation) {
   return function transformTemplate(
