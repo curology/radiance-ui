@@ -1,11 +1,11 @@
 {
   "bundle.js": {
-    "bundled": 1139794,
+    "bundled": 1139795,
     "minified": 1068361,
     "gzipped": 105349
   },
   "bundle.umd.js": {
-    "bundled": 1149730,
+    "bundled": 1149731,
     "minified": 1041857,
     "gzipped": 100934
   },
@@ -374,7 +374,7 @@
     }
   },
   "shared-components/checkbox/index.js": {
-    "bundled": 2346,
+    "bundled": 2347,
     "minified": 1075,
     "gzipped": 526,
     "treeshaked": {

@@ -23,7 +23,7 @@ const propTypes = {
 };
 
 /**
- * Checkboxs should be used to provide valuable information or additional context on a page. One of the best examples of a Checkbox is for product recommendations.
+ * Checkboxes should be used to provide valuable information or additional context on a page. One of the best examples of a Checkbox is for product recommendations.
  *
  * `<Checkbox />` is a controlled component that represents a checkbox selection. This means that the `onClick` function should be used to change the checked state of the checkbox. Note that a group of checkbox buttons must be composed by a parent component.
  */
