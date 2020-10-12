@@ -25,7 +25,7 @@ export const TabsContainer = styled.div`
   }
 `;
 
-export const TabItem = styled.button`
+export const TabItem = styled.button<{ active: boolean }>`
   ${buttonReset}
   ${TYPOGRAPHY_STYLE.button};
   display: flex;
