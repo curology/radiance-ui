@@ -21,14 +21,14 @@ const AccordionSpacer = styled.div`
 `;
 
 export const ThumbnailsAccordion = () => {
-  const [showContent, setShowContent] = useState({
+  const [isOpen, setIsOpen] = useState({
     0: false,
     1: false,
     2: false,
   });
 
   const toggleAccordion = (num: number) => () =>
-    setShowContent({ ...showContent, [num]: !showContent[num] });
+    setIsOpen({ ...isOpen, [num]: !isOpen[num] });
 
   const srcs = [personImage, accountImage, personImage];
 
@@ -42,7 +42,7 @@ export const ThumbnailsAccordion = () => {
               <Accordion.Thumbnails photoSrcs={srcs.slice(0, 1)} />
             </TitleWrapper>
           }
-          isOpen={showContent[0]}
+          isOpen={isOpen[0]}
           onClick={toggleAccordion(0)}
         >
           <Accordion.Content>
@@ -59,7 +59,7 @@ export const ThumbnailsAccordion = () => {
               <Accordion.Thumbnails photoSrcs={srcs.slice(0, 2)} />
             </TitleWrapper>
           }
-          isOpen={showContent[1]}
+          isOpen={isOpen[1]}
           onClick={toggleAccordion(1)}
         >
           <Accordion.Content>
@@ -76,7 +76,7 @@ export const ThumbnailsAccordion = () => {
               <Accordion.Thumbnails photoSrcs={srcs} />
             </TitleWrapper>
           }
-          isOpen={showContent[2]}
+          isOpen={isOpen[2]}
           onClick={toggleAccordion(2)}
         >
           <Accordion.Content>

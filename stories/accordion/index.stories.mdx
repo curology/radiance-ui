@@ -6,19 +6,7 @@ import {
   Description,
   Primary,
 } from '@storybook/addon-docs/blocks';
-import { useState } from 'react';
-import { text, boolean } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
-import { Accordion, Typography } from 'src/shared-components';
-import { StandardAccordion } from './standardAccordion.stories';
-import { TruncatedAccordion } from './truncatedAccordion.stories';
-import { DisabledAccordion } from './disabledAccordion.stories';
-import { NoBorderAccordion } from './noBorderAccordion.stories';
-import { RightAlignedArrowAccordion } from './rightAlignedArrowAccordion.stories';
-import { ThumbnailsAccordion } from './thumbnailsAccordion.stories';
-import { useAccordionState } from './utils';
-import accountImage from 'shared/account.png';
-import personImage from 'shared/person.jpg';
+import { Accordion } from 'src/shared-components';
 
 import * as AccordionStories from './index.stories.tsx';
 

@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Accordion } from 'src/shared-components';
 
-import { useAccordionState } from './utils';
-
 export const TruncatedAccordion = () => {
-  const { isOpen, onClick } = useAccordionState();
+  const [isOpen, setIsOpen] = useState(false);
+  const onClick = () => setIsOpen(!isOpen);
 
   return (
     <div style={{ width: '400px' }}>

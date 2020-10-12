@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Accordion } from 'src/shared-components';
 
 export const RightAlignedArrowAccordion = () => {
-  const [showContent, setShowContent] = useState(false);
-  const toggleAccordion = () => setShowContent(!showContent);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
     <Accordion.Container>
@@ -11,7 +11,7 @@ export const RightAlignedArrowAccordion = () => {
         title={
           <Accordion.Content>This is a right aligned arrow</Accordion.Content>
         }
-        isOpen={showContent}
+        isOpen={isOpen}
         onClick={toggleAccordion}
         rightAlignArrow
       >

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Accordion } from 'src/shared-components';
 
 export const StandardAccordion = () => {
-  const [showContent, setShowContent] = useState(false);
-  const toggleAccordion = () => setShowContent(!showContent);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
     <Accordion.Container>
@@ -13,7 +13,7 @@ export const StandardAccordion = () => {
             This is styled with Accordion.Content
           </Accordion.Content>
         }
-        isOpen={showContent}
+        isOpen={isOpen}
         onClick={toggleAccordion}
       >
         <Accordion.Content>
