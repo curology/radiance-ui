@@ -18,18 +18,54 @@ export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 export type PositionTypes = 'top' | 'bottom';
 
 type TooltipProps = {
+  /**
+   * Adjusts positioning, in percent
+   */
   alignRightPercent?: number;
+  /**
+   * Adjusts positioning, in percent
+   */
   alignTopPercent?: number;
   arrowAlign?: ArrowAlignTypes;
+  /**
+   * Content of the trigger element displayed on page
+   */
   children: React.ReactNode;
+  /**
+   * Content of the tooltip
+   */
   content?: React.ReactNode;
+  /**
+   * Show the tooltip without the need of the trigger
+   */
   defaultOpen?: boolean;
+  /**
+   * Programatically control the tooltip to never show (false) or function as normal (true)
+   */
   display?: boolean;
+  /**
+   * Makes the tooltip have a maximun width of 327px
+   */
   hasRestrictedWidth?: boolean;
+  /**
+   * Small tooltip with very little padding
+   */
   isSmall?: boolean;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeLeft?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeRight?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeTop?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeBottom?: number;
   position?: PositionTypes;
 };
@@ -122,57 +158,21 @@ export const Tooltip = ({
 };
 
 Tooltip.propTypes = {
-  /**
-   * Adjusts positioning, in percent
-   */
   alignRightPercent: PropTypes.number,
-  /**
-   * Adjusts positioning, in percent
-   */
   alignTopPercent: PropTypes.number,
   arrowAlign: PropTypes.oneOf(['left', 'middle', 'right']),
-  /**
-   * Content of the trigger element displayed on page
-   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  /**
-   * Content of the tooltip
-   */
   content: PropTypes.node,
-  /**
-   * Show the tooltip without the need of the trigger
-   */
   defaultOpen: PropTypes.bool,
-  /**
-   * Programatically control the tooltip to never show (false) or function as normal (true)
-   */
   display: PropTypes.bool,
-  /**
-   * Makes the tooltip have a maximun width of 327px
-   */
   hasRestrictedWidth: PropTypes.bool,
-  /**
-   * Small tooltip with very little padding
-   */
   isSmall: PropTypes.bool,
-  /**
-   * Adjusts positioning, in px
-   */
   nudgeLeft: PropTypes.number,
-  /**
-   * Adjusts positioning, in px
-   */
   nudgeRight: PropTypes.number,
-  /**
-   * Adjusts positioning, in px
-   */
   nudgeTop: PropTypes.number,
-  /**
-   * Adjusts positioning, in px
-   */
   nudgeBottom: PropTypes.number,
   position: PropTypes.oneOf(['top', 'bottom']),
 };

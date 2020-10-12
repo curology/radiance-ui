@@ -8,7 +8,9 @@ type RadioButtonProps = {
   children?: React.ReactNode;
   disabled?: boolean;
   icon?: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
+  ) => void;
   size?: SizeType;
   type?: StyleType;
   [key: string]: any;

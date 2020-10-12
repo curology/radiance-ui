@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
@@ -22,7 +22,9 @@ type SelectorButtonProps = {
   children?: React.ReactNode;
   disabled?: boolean;
   icon?: React.ReactNode;
-  onClick?: ((event: BaseSyntheticEvent) => void) | (() => void);
+  onClick?: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
+  ) => void;
   selector?: SelectorType;
   size?: SizeType;
   type?: StyleType;
@@ -34,7 +36,7 @@ export const SelectorButton = ({
   children = null,
   disabled = false,
   icon = null,
-  onClick = () => undefined,
+  onClick = undefined,
   selector = 'radio',
   size = 'small',
   type = 'primary',

@@ -1,14 +1,22 @@
-import React, { BaseSyntheticEvent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
 type CheckboxProps = {
   checked: boolean;
+  /**
+   * Text label displayed next to the checkbox
+   */
   children?: React.ReactNode;
   disabled?: boolean;
+  /**
+   * Icons are only displayed at the large size, and inside the radio button
+   */
   icon?: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
+  ) => void;
   size?: SizeType;
   type?: StyleType;
   [key: string]: any;
@@ -24,7 +32,7 @@ export const Checkbox = ({
   children = null,
   disabled = false,
   icon = null,
-  onClick = () => undefined,
+  onClick = undefined,
   size = 'small',
   type = 'primary',
   ...rest
@@ -34,7 +42,13 @@ export const Checkbox = ({
     disabled={disabled}
     icon={icon}
     onClick={
-      disabled ? (event: BaseSyntheticEvent) => event.preventDefault() : onClick
+      disabled
+        ? (
+          event:
+              | React.MouseEvent<HTMLDivElement, MouseEvent>
+              | React.KeyboardEvent,
+        ) => event.preventDefault()
+        : onClick
     }
     selector="checkbox"
     size={size}
@@ -48,17 +62,11 @@ export const Checkbox = ({
 
 Checkbox.propTypes = {
   checked: PropTypes.bool.isRequired,
-  /**
-   * Text label displayed next to the checkbox
-   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   disabled: PropTypes.bool,
-  /**
-   * Icons are only displayed at the large size, and inside the radio button
-   */
   icon: PropTypes.node,
   onClick: PropTypes.func,
   size: PropTypes.oneOf(['large', 'small']),
