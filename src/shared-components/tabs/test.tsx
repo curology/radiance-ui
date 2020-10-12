@@ -1,16 +1,16 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import renderer from 'react-test-renderer';
+import { mount } from 'enzyme';
 
 import { TabItem } from './style';
 
 import { Tabs } from './index';
 
 describe('<Tabs />', () => {
-  describe('default props', () => {
-    test('renders the correct props', () => {
-      const wrapper = shallow(
+  describe('UI snapshot', () => {
+    it('renders with default props', () => {
+      const component = renderer.create(
         <Tabs
-          activeTabId={1}
           tabItems={[
             { id: 1, text: 'Tab 1' },
             { id: 2, text: 'Tab 2' },
@@ -19,9 +19,25 @@ describe('<Tabs />', () => {
         />,
       );
 
-      expect(wrapper.html().indexOf('Tab 1') > -1).toBe(true);
-      expect(wrapper.html().indexOf('Tab 2') > -1).toBe(true);
-      expect(wrapper.html().indexOf('Tab 3') > -1).toBe(true);
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+    });
+
+    it('renders with initialActiveTabId and onClick props', () => {
+      const component = renderer.create(
+        <Tabs
+          initialActiveTabId={2}
+          onClick={() => undefined}
+          tabItems={[
+            { id: 1, text: 'Tab 1' },
+            { id: 2, text: 'Tab 2' },
+            { id: 3, text: 'Tab 3' },
+          ]}
+        />,
+      );
+
+      const tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
     });
   });
 
@@ -30,7 +46,7 @@ describe('<Tabs />', () => {
       const spy = jest.fn();
       const wrapper = mount(
         <Tabs
-          activeTabId={1}
+          initialActiveTabId={1}
           tabItems={[
             { id: 1, text: 'Tab 1' },
             { id: 2, text: 'Tab 2' },

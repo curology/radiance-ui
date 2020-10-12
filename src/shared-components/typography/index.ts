@@ -91,7 +91,7 @@ export const style = {
   label: labelStyle,
   button: buttonStyle,
   link: linkStyle,
-};
+} as const;
 
 const Button = styled.span(buttonStyle);
 const Caption = styled.p(captionStyle);
@@ -114,12 +114,12 @@ export const Typography = {
   Success,
   Title,
 
-  // Legacy names. Will be removed in v2 (next major)
+  // Deprecated legacy names
   LinkTag: Link,
   ButtonText: Button,
   SuccessText: Success,
   ErrorText: ErrorComponent,
-};
+} as const;
 
 const deprecatedProperties = {
   LinkTag: 'LinkTag is deprecated. Use Link instead',

@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tabs /> UI snapshot renders with default props 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 2.5rem 0 0 0;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    margin: 3.5rem 0 0 0;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.emotion-0 {
+  background: transparent;
+  border: none;
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  border-radius: 0.25rem;
+  color: #332e54;
+}
+
+.emotion-0:hover {
+  color: #332e54;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-2 {
+  background: transparent;
+  border: none;
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  border-radius: 0.25rem;
+  color: #c3c0cd;
+}
+
+.emotion-2:hover {
+  color: #332e54;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.emotion-2:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <button
+    className="emotion-0 emotion-1"
+    onClick={[Function]}
+  >
+    Tab 1
+  </button>
+  <button
+    className="emotion-2 emotion-1"
+    onClick={[Function]}
+  >
+    Tab 2
+  </button>
+  <button
+    className="emotion-2 emotion-1"
+    onClick={[Function]}
+  >
+    Tab 3
+  </button>
+</div>
+`;
+
+exports[`<Tabs /> UI snapshot renders with initialActiveTabId and onClick props 1`] = `
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin: 2.5rem 0 0 0;
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width:768px) {
+  .emotion-6 {
+    margin: 3.5rem 0 0 0;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.emotion-2 {
+  background: transparent;
+  border: none;
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  border-radius: 0.25rem;
+  color: #332e54;
+}
+
+.emotion-2:hover {
+  color: #332e54;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.emotion-2:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-0 {
+  background: transparent;
+  border: none;
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+  border-radius: 0.25rem;
+  color: #c3c0cd;
+}
+
+.emotion-0:hover {
+  color: #332e54;
+  -webkit-transition: 350ms;
+  transition: 350ms;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+<div
+  className="emotion-6 emotion-7"
+>
+  <button
+    className="emotion-0 emotion-1"
+    onClick={[Function]}
+  >
+    Tab 1
+  </button>
+  <button
+    className="emotion-2 emotion-1"
+    onClick={[Function]}
+  >
+    Tab 2
+  </button>
+  <button
+    className="emotion-0 emotion-1"
+    onClick={[Function]}
+  >
+    Tab 3
+  </button>
+</div>
+`;

@@ -169,11 +169,11 @@
     "gzipped": 524,
     "treeshaked": {
       "rollup": {
-        "code": 934,
-        "import_statements": 260
+        "code": 320,
+        "import_statements": 223
       },
       "webpack": {
-        "code": 2084
+        "code": 1796
       }
     }
   },
@@ -248,9 +248,9 @@
     }
   },
   "shared-components/tabs/style.js": {
-    "bundled": 5026,
-    "minified": 4887,
-    "gzipped": 2284,
+    "bundled": 5082,
+    "minified": 4943,
+    "gzipped": 2312,
     "treeshaked": {
       "rollup": {
         "code": 1032,
@@ -379,8 +379,8 @@
     "gzipped": 526,
     "treeshaked": {
       "rollup": {
-        "code": 283,
-        "import_statements": 144
+        "code": 351,
+        "import_statements": 212
       },
       "webpack": {
         "code": 1432
@@ -841,11 +841,11 @@
     "gzipped": 6189,
     "treeshaked": {
       "rollup": {
-        "code": 2265,
+        "code": 2274,
         "import_statements": 245
       },
       "webpack": {
-        "code": 3610
+        "code": 3619
       }
     }
   },
@@ -855,8 +855,8 @@
     "gzipped": 2245,
     "treeshaked": {
       "rollup": {
-        "code": 423,
-        "import_statements": 254
+        "code": 613,
+        "import_statements": 444
       },
       "webpack": {
         "code": 1684
@@ -1116,16 +1116,16 @@
     }
   },
   "shared-components/selectorButton/style.js": {
-    "bundled": 46203,
-    "minified": 45413,
-    "gzipped": 4203,
+    "bundled": 50248,
+    "minified": 49458,
+    "gzipped": 5446,
     "treeshaked": {
       "rollup": {
-        "code": 2074,
+        "code": 2079,
         "import_statements": 251
       },
       "webpack": {
-        "code": 3371
+        "code": 3376
       }
     }
   },
@@ -1214,16 +1214,16 @@
     }
   },
   "shared-components/tooltip/style.js": {
-    "bundled": 100443,
-    "minified": 98694,
-    "gzipped": 6649,
+    "bundled": 112563,
+    "minified": 110758,
+    "gzipped": 8245,
     "treeshaked": {
       "rollup": {
-        "code": 3118,
+        "code": 3186,
         "import_statements": 205
       },
       "webpack": {
-        "code": 4352
+        "code": 4420
       }
     }
   },

@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FadeInContainer /> UI snapshot renders component and children 1`] = `
+exports[`<FadeInContainer /> UI snapshot renders with default props 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.emotion-0 {
+  -webkit-animation: animation-0 350ms ease-in-out;
+  animation: animation-0 350ms ease-in-out;
+}
+
+<div
+  className="emotion-0 emotion-1"
+>
+  Default Props example
+</div>
+`;
+
+exports[`<FadeInContainer /> UI snapshot renders with slide and speed props set 1`] = `
 @keyframes animation-0 {
   0% {
     -webkit-transform: translateY(-10%);

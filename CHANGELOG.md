@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v12.2.0
+
+- [Internal] TypeScript conversion: Typography, Tooltip, Tabs, Transition, SelectorButton/Checkbox/RadioButton
+
 # v12.1.0
 
 - [Internal] TypeScript conversion: VerificationMessages, Field
