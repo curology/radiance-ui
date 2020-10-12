@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1139795,
-    "minified": 1068361,
-    "gzipped": 105349
+    "bundled": 1157596,
+    "minified": 1085176,
+    "gzipped": 107660
   },
   "bundle.umd.js": {
-    "bundled": 1149731,
-    "minified": 1041857,
-    "gzipped": 100934
+    "bundled": 1167476,
+    "minified": 1058831,
+    "gzipped": 103295
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -164,16 +164,16 @@
     }
   },
   "shared-components/tabs/index.js": {
-    "bundled": 1765,
-    "minified": 1119,
-    "gzipped": 524,
+    "bundled": 1406,
+    "minified": 775,
+    "gzipped": 414,
     "treeshaked": {
       "rollup": {
         "code": 320,
         "import_statements": 223
       },
       "webpack": {
-        "code": 1796
+        "code": 1366
       }
     }
   },
@@ -206,16 +206,16 @@
     }
   },
   "shared-components/radioButton/index.js": {
-    "bundled": 1927,
-    "minified": 954,
-    "gzipped": 471,
+    "bundled": 2182,
+    "minified": 1051,
+    "gzipped": 515,
     "treeshaked": {
       "rollup": {
-        "code": 287,
-        "import_statements": 144
+        "code": 369,
+        "import_statements": 230
       },
       "webpack": {
-        "code": 1434
+        "code": 1968
       }
     }
   },
@@ -374,16 +374,16 @@
     }
   },
   "shared-components/checkbox/index.js": {
-    "bundled": 2347,
-    "minified": 1075,
-    "gzipped": 526,
+    "bundled": 2368,
+    "minified": 1083,
+    "gzipped": 534,
     "treeshaked": {
       "rollup": {
-        "code": 351,
-        "import_statements": 212
+        "code": 369,
+        "import_statements": 230
       },
       "webpack": {
-        "code": 1432
+        "code": 2012
       }
     }
   },
@@ -724,16 +724,16 @@
     }
   },
   "shared-components/tooltip/index.js": {
-    "bundled": 5870,
-    "minified": 2938,
-    "gzipped": 1148,
+    "bundled": 6054,
+    "minified": 2529,
+    "gzipped": 1028,
     "treeshaked": {
       "rollup": {
-        "code": 2532,
-        "import_statements": 478
+        "code": 642,
+        "import_statements": 441
       },
       "webpack": {
-        "code": 3868
+        "code": 1705
       }
     }
   },
@@ -836,9 +836,9 @@
     }
   },
   "shared-components/typography/index.js": {
-    "bundled": 92416,
-    "minified": 91602,
-    "gzipped": 6189,
+    "bundled": 92224,
+    "minified": 91435,
+    "gzipped": 6105,
     "treeshaked": {
       "rollup": {
         "code": 2274,
@@ -850,9 +850,9 @@
     }
   },
   "shared-components/selectorButton/index.js": {
-    "bundled": 8584,
-    "minified": 7780,
-    "gzipped": 2245,
+    "bundled": 10178,
+    "minified": 9177,
+    "gzipped": 2577,
     "treeshaked": {
       "rollup": {
         "code": 613,
