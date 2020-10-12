@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1157596,
-    "minified": 1085176,
-    "gzipped": 107660
+    "bundled": 1156695,
+    "minified": 1085196,
+    "gzipped": 107668
   },
   "bundle.umd.js": {
-    "bundled": 1167476,
-    "minified": 1058831,
-    "gzipped": 103295
+    "bundled": 1166477,
+    "minified": 1058851,
+    "gzipped": 103302
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -164,7 +164,7 @@
     }
   },
   "shared-components/tabs/index.js": {
-    "bundled": 1406,
+    "bundled": 1365,
     "minified": 775,
     "gzipped": 414,
     "treeshaked": {
@@ -374,16 +374,16 @@
     }
   },
   "shared-components/checkbox/index.js": {
-    "bundled": 2368,
-    "minified": 1083,
-    "gzipped": 534,
+    "bundled": 2188,
+    "minified": 1077,
+    "gzipped": 531,
     "treeshaked": {
       "rollup": {
         "code": 369,
         "import_statements": 230
       },
       "webpack": {
-        "code": 2012
+        "code": 2006
       }
     }
   },
@@ -724,7 +724,7 @@
     }
   },
   "shared-components/tooltip/index.js": {
-    "bundled": 6054,
+    "bundled": 5372,
     "minified": 2529,
     "gzipped": 1028,
     "treeshaked": {
@@ -850,9 +850,9 @@
     }
   },
   "shared-components/selectorButton/index.js": {
-    "bundled": 10178,
-    "minified": 9177,
-    "gzipped": 2577,
+    "bundled": 10180,
+    "minified": 9203,
+    "gzipped": 2580,
     "treeshaked": {
       "rollup": {
         "code": 613,
