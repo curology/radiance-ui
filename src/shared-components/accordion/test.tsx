@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
-import Accordion from './index';
+import { Accordion } from './index';
 
 const testAccordion = {
   title: <div>title</div>,

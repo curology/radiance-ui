@@ -35,31 +35,45 @@ const propTypes = {
   textColor: PropTypes.string,
 };
 
-const defaultProps = {
-  buttonColor: COLORS.primary,
-  buttonType: 'primary',
-  children: '',
-  disabled: false,
-  isLoading: false,
-  loading: undefined,
-  onClick: () => undefined,
-  textColor: '',
-};
-
 type RoundButtonProps = {
+  /**
+   * TODO-TS: Limit type from string to COLORS constants options
+   */
   buttonColor?: string;
+  /**
+   * Determines the button's main style theme
+   */
   buttonType?: ButtonTypeWithAction;
+  /**
+   * Node to be rendered inside the button. Recommended to be the button text
+   */
   children?: React.ReactNode;
   disabled?: boolean;
+  /**
+   * Icon to render in the button. Recommended to be a Radiance icon
+   */
   icon: React.ReactNode;
+  /**
+   * When loading, onClick function execution is disallowed
+   */
   isLoading?: boolean;
   loading?: boolean | undefined;
   onClick?: () => void;
+  /**
+   * Color that will override existing text, icon, and loading colors (except when disabled is true)
+   */
   textColor?: string;
   [key: string]: any;
 };
 
-const RoundButton = ({
+/**
+ * `<RoundButton />` behaves mostly the same as `<Button />` except that it requires an `icon` prop since that is the main content placed with in the round button. Any children of the component will be rendered immediately below the round button.
+ *
+ * `<RoundButton.Container>` can be used to wrap `<RoundButton />` components. Since it has some opinions on width and spacing, the max number of buttons you want to wrap is **2**.
+ *
+ * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
+ */
+export const RoundButton = ({
   buttonColor = COLORS.primary,
   buttonType = 'primary',
   children = '',
@@ -104,7 +118,6 @@ const RoundButton = ({
 };
 
 RoundButton.propTypes = propTypes;
-RoundButton.defaultProps = defaultProps;
 RoundButton.Container = RoundButtonContainer;
 
 export default withDeprecationWarning(RoundButton, deprecatedProperties);

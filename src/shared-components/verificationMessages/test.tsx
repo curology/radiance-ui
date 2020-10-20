@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
-import VerificationMessages from './index';
+import { VerificationMessages } from './index';
 
 describe('<VerificationMessages />', () => {
   describe('UI snapshot', () => {

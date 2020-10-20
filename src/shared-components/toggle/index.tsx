@@ -35,7 +35,14 @@ const toggleInputStyles = {
   position: 'absolute',
 };
 
-const Toggle = ({ checked = false, label = '', onChange }: ToggleProps) => (
+/**
+ * The `<Toggle>` component is usually wrapped in a `container` element (with a fixed `width` style for example). The toggle and label are spread in the container (`space-between`) from edge to edge.
+ */
+export const Toggle = ({
+  checked = false,
+  label = '',
+  onChange,
+}: ToggleProps) => (
   <Container>
     {label && <Label onClick={onChange}>{label}</Label>}
     <ReactToggleButtonContainer>
@@ -68,5 +75,3 @@ const Toggle = ({ checked = false, label = '', onChange }: ToggleProps) => (
 );
 
 Toggle.propTypes = propTypes;
-
-export default Toggle;

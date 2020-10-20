@@ -29,7 +29,7 @@ const opacityInAnimation = keyframes`
   }
 `;
 
-const getAnimationStyle = (slide = false, speed = '350ms') => {
+const getAnimationStyle = (slide: boolean, speed: string) => {
   if (slide) {
     return css`
       animation: ${slideInAnimation} ${speed} ease-in-out;
@@ -41,8 +41,12 @@ const getAnimationStyle = (slide = false, speed = '350ms') => {
   `;
 };
 
-export const FadeInContainer = styled.div<{ slide?: boolean; speed?: string }>`
-  ${({ slide, speed }) => getAnimationStyle(slide, speed)};
+export const FadeInContainer = styled.div<{
+  withSlide: boolean;
+  animationSpeed: string;
+}>`
+  ${({ withSlide, animationSpeed }) =>
+    getAnimationStyle(withSlide, animationSpeed)};
 `;
 
 export const opacityInAnimationStyle = css`

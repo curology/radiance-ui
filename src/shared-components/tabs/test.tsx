@@ -4,7 +4,7 @@ import { mount } from 'enzyme';
 
 import { TabItem } from './style';
 
-import Tabs from './index';
+import { Tabs } from './index';
 
 describe('<Tabs />', () => {
   describe('UI snapshot', () => {

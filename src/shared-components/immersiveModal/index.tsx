@@ -5,7 +5,7 @@ import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
 import { FocusScope } from '@react-aria/focus';
 
-import OffClickWrapper from '../offClickWrapper';
+import { OffClickWrapper } from '../offClickWrapper';
 import CrossIcon from '../../svgs/icons/cross-icon.svg';
 import {
   Overlay,
@@ -24,10 +24,25 @@ import {
 import CrossIconComponent from './crossIconComponent';
 
 type ImmersiveModalProps = {
+  /**
+   * Modal body
+   */
   children: React.ReactNode;
-  headerImage?: React.ReactNode;
+  /**
+   * Recommended for buttons. This content is render at the bottom of the modal
+   */
   footerContent?: React.ReactNode;
+  /**
+   * Image that will render at the top of the modal
+   */
+  headerImage?: React.ReactNode;
+  /**
+   * Function to close the modal
+   */
   onClose: () => void;
+  /**
+   * The title of the modal
+   */
   title?: string;
   [key: string]: unknown;
 };
@@ -45,7 +60,18 @@ const getModalMobileScrollingElement = () =>
 const getModalDesktopScrollingElement = () =>
   document.getElementById(MODAL_DESKTOP_SCROLLING_ID) as HTMLElement;
 
-const ImmersiveModal = ({
+/**
+ * It is used to provide a layer on top of a page when we need to present more content and actions to patients.
+ *
+ * It should not be used as a step to add friction / confirm an action, use `Dialog Modal` instead.
+ *
+ * They are closable if clicked outside of container.
+ *
+ * Immersive modals always include the close button.
+ *
+ * Modals can contain a header image that is 240px tall (264px on desktop). Images should not contain rounded corners.
+ */
+export const ImmersiveModal = ({
   children,
   footerContent = null,
   headerImage = null,
@@ -209,5 +235,3 @@ ImmersiveModal.propTypes = {
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
 };
-
-export default ImmersiveModal;

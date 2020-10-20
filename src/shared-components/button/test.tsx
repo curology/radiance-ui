@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import { COLORS } from '../../constants';
 import CameraIcon from '../../svgs/icons/camera-icon.svg';
 
-import Button from './index';
+import { Button } from './index';
 
 describe('<Button />', () => {
   describe('UI snapshots', () => {
