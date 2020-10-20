@@ -14,7 +14,12 @@ type MobileDropdownProps = {
   value?: string | number | undefined;
 };
 
-const MobileDropdown = ({
+/**
+ * The mobile dropdown is built into the `<Dropdown />` component and cannot be used individually.
+ *
+ * `<Dropdown /> ` will determine if the user is on a mobile device and render a true `select` tag with `option`(s).
+ */
+export const MobileDropdown = ({
   borderRadius,
   onSelectChange,
   options = [{ value: undefined, label: '' }],
@@ -31,7 +36,7 @@ const MobileDropdown = ({
       value={value || ''}
       onChange={onSelectChange}
     >
-      {options.map(option => {
+      {options.map((option) => {
         let isDisabled = option.disabled;
 
         // Covers the case where default value is disabled
@@ -66,5 +71,3 @@ MobileDropdown.propTypes = {
   textAlign: PropTypes.oneOf(['left', 'center']),
   onSelectChange: PropTypes.func,
 };
-
-export default MobileDropdown;

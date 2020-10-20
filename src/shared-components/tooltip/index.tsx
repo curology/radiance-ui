@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import Arrow from 'src/svgs/icons/arrow.svg';
 
-import OffClickWrapper from '../offClickWrapper';
+import { OffClickWrapper } from '../offClickWrapper';
 import {
   MainContainer,
   Trigger,
@@ -18,23 +18,64 @@ export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 export type PositionTypes = 'top' | 'bottom';
 
 type TooltipProps = {
+  /**
+   * Adjusts positioning, in percent
+   */
   alignRightPercent?: number;
+  /**
+   * Adjusts positioning, in percent
+   */
   alignTopPercent?: number;
   arrowAlign?: ArrowAlignTypes;
+  /**
+   * Content of the trigger element displayed on page
+   */
   children: React.ReactNode;
+  /**
+   * Content of the tooltip
+   */
   content?: React.ReactNode;
+  /**
+   * Show the tooltip without the need of the trigger
+   */
   defaultOpen?: boolean;
+  /**
+   * Programatically control the tooltip to never show (false) or function as normal (true)
+   */
   display?: boolean;
+  /**
+   * Makes the tooltip have a maximun width of 327px
+   */
   hasRestrictedWidth?: boolean;
+  /**
+   * Small tooltip with very little padding
+   */
   isSmall?: boolean;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeLeft?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeRight?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeTop?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeBottom?: number;
   position?: PositionTypes;
 };
 
-const Tooltip = ({
+/**
+ * Tooltips provide additional context to elements or give patients hints about new features or updates.
+ *
+ * They can be triggered from an icon or another component (such as a navigation link)
+ */
+export const Tooltip = ({
   alignRightPercent = 0,
   alignTopPercent = 0,
   arrowAlign = 'middle',
@@ -135,5 +176,3 @@ Tooltip.propTypes = {
   nudgeBottom: PropTypes.number,
   position: PropTypes.oneOf(['top', 'bottom']),
 };
-
-export default Tooltip;

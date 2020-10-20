@@ -9,14 +9,25 @@ export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 type ProgressBarProps = {
   backgroundColor?: string;
   barColor?: string;
+  /**
+   * The bar height
+   */
   height?: number;
+  /**
+   * The time that would take to load the bar completely. Must be valid animation value.
+   */
   loadingTime?: string;
   status: ProgressBarStatusType;
   // ...rest type
   [key: string]: any;
 };
 
-const ProgressBar = ({
+/**
+ * The component has `position: absolute` by default. You must provide a container with `position: relative` to contain the progress bar. To further refine the position, you may use custom styles.
+ *
+ * To start the animation use `loading` status. To control the result pass `success` or `error` to the status property.
+ */
+export const ProgressBar = ({
   backgroundColor = COLORS.background,
   barColor = COLORS.primary,
   height = 4,
@@ -51,5 +62,3 @@ ProgressBar.propTypes = {
     PROGRESS_BAR_STATUS.error,
   ]).isRequired,
 };
-
-export default ProgressBar;

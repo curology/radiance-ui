@@ -51,7 +51,6 @@ exports[`<FadeInContainer /> UI snapshot renders with slide and speed props set 
 
 <div
   className="emotion-0 emotion-1"
-  speed="500ms"
 >
   FadeInContainer Content Here
 </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Avatar from '../avatar';
+import { Avatar } from '../avatar';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
@@ -42,7 +42,26 @@ type AlertState = {
   exited: boolean;
 };
 
-class Alert extends React.Component<AlertProps, AlertState> {
+/**
+ * Alerts should be used to show notifications or messages from (providers, support, or system).
+ *
+ * They should show page-level success states.
+ *
+ * We should avoid using alerts to show flow-level success states (i.e. Cancellation successful)
+ *
+ * Alerts contain some visual marker, an icon `16px` or avatar `32px`
+ *
+ * Alerts should have a **bolded** portion of the text that helps inform the user what the alert is about.
+ * The text should be short and preferably not extend more than 2 lines. Ellipses (...) can be used to truncate past 2 lines via the prop `truncateText`.
+ *
+ * Alerts can contain a CTA section. These should be reserved for really important actions. These alerts persists until an action is taken.
+ *
+ * The `<Alert />` component provides only the styling for and enter/exit behavior for alerts.
+ * Management of what alerts are showing on the screen must be handled from outside of this component.
+ *
+ * All alerts are dimissable by clicking on them. However, you can use the `duration` prop to determine if the alert is sticky or dismissed on a timer (in units of seconds).
+ */
+export class Alert extends React.Component<AlertProps, AlertState> {
   static propTypes = {
     avatarSrc: PropTypes.string,
     content: PropTypes.node.isRequired,
@@ -169,5 +188,3 @@ class Alert extends React.Component<AlertProps, AlertState> {
     );
   }
 }
-
-export default Alert;

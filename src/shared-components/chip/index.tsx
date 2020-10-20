@@ -9,7 +9,13 @@ type ChipProps = {
   status?: StatusType;
   text: string;
 };
-const Chip = ({ status = 'default', text }: ChipProps) => (
+
+/**
+ * Chips should be used in small spaces to add value to the elements they're nested in. (i.e. "Recommended" on product cards or showing an error on an element in a list.)
+ *
+ * These chips can be either Default, Success, or Error. The Secondary is an inverse of the primary chip and should be used on top of photos or illustrations.
+ */
+export const Chip = ({ status = 'default', text }: ChipProps) => (
   <ChipStyles status={status}>
     <ChipText>{text}</ChipText>
   </ChipStyles>
@@ -23,5 +29,3 @@ Chip.propTypes = {
 Chip.defaultProps = {
   status: 'default',
 };
-
-export default Chip;

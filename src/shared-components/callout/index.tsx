@@ -7,12 +7,28 @@ import {
 import { COLORS } from '../../constants';
 
 type CalloutProps = {
+  /**
+   * Content of the Callout element. It may contain `<strong>` tags
+   */
   children: React.ReactNode;
+  /**
+   * Color of the text and icon
+   */
   color?: string;
+  /**
+   * Icon displayed inside the callout right aligned
+   */
   icon?: React.ReactNode;
 };
 
-const Callout = ({
+/**
+ * Callouts should be used to provide valuable information or additional context on a page. One of the best examples of a callout is for product recommendations.
+ *
+ * `Callout` will cover the entirety of the container that holds it. You may optionally wrap it with `Callout.Container` which will set the `max-width` to `327px`.
+ *
+ * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
+ */
+export const Callout = ({
   children,
   icon = null,
   color = COLORS.primary,
@@ -29,11 +45,4 @@ Callout.propTypes = {
   color: PropTypes.string,
 };
 
-Callout.defaultProps = {
-  color: COLORS.primary,
-  icon: null,
-};
-
 Callout.Container = ParentContainer;
-
-export default Callout;

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import LoadingSpinner from './index';
+import { LoadingSpinner } from './index';
 
 describe('<LoadingSpinner />', () => {
   describe('UI snapshots', () => {
