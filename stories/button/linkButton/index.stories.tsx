@@ -88,6 +88,7 @@ export const WithControls = () => (
     </LinkButton>
   </LinkButton.Container>
 );
+
 export default {
   title: 'Components/Button/LinkButton',
   component: LinkButton,
