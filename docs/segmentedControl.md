@@ -26,11 +26,11 @@ class SegmentedControlExample extends React.Component {
 
 ### Proptypes
 
-| prop            | propType         | required | default | description                      |
-| --------------- | ---------------- | -------- | ------- | -------------------------------- |
-| initialActiveId | number           | no       | 1       | initial segment id to display    |
-| onClick         | number           | no       | -       | function to call on tab click    |
-| segmentItems    | array of objects | yes      | -       | see segmentItem properties below |
+| prop            | propType         | required | default | description                             |
+| --------------- | ---------------- | -------- | ------- | --------------------------------------- |
+| initialActiveId | number           | no       | 1       | initial segment id to display           |
+| onClick         | number           | no       | -       | function to call on `segmentItem` click |
+| segmentItems    | array of objects | yes      | -       | see `segmentItem` properties below      |
 
 #### `segmentItem` Proptypes
 

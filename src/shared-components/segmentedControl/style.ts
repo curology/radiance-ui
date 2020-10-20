@@ -46,6 +46,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   &:focus {
     outline: none;
     box-shadow: 0px 0px 0px 2px ${COLORS.primary};
+    z-index: 3;
   }
 `;
 
