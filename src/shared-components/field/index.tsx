@@ -11,26 +11,53 @@ import {
 } from './style';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import VerificationMessages, {
+import {
+  VerificationMessages,
   MessagesTypes,
   MessageType,
 } from '../verificationMessages';
 import { COLORS } from '../../constants';
 
 type FieldProps = {
+  /**
+   * Must be either `Field.Input` or `Field.Textarea`
+   */
   children: JSX.Element;
+  /**
+   * Change the child input to `disabled` state
+   */
   disabled?: boolean;
+  /**
+   * Hides the message icon at the rightmost part of the input
+   */
+  hideMessagesIcon?: boolean;
+  /**
+   * The hint to display below the field. It activates on focus
+   */
+  hintMessage?: string;
+  /**
+   * The field label
+   */
+  label?: string;
+  /**
+   * Must match the children id html attribute
+   */
+  labelFor?: string;
+  /**
+   * Object of key and React Node message pair. It also accepts an array of React Node as value
+   */
   messages?: {
     [key: string]: MessageType;
   };
   messagesType?: MessagesTypes;
-  hideMessagesIcon?: boolean;
-  hintMessage?: string;
-  label?: string;
-  labelFor?: string;
 };
 
-const Field = ({
+/**
+ * Field component uses VerificationMessages component internally along with extra styling for the input.
+ *
+ * If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly without the `Field` wrapper.
+ */
+export const Field = ({
   children: inputChild,
   disabled = false,
   messages = {},
@@ -90,5 +117,3 @@ Field.propTypes = {
   label: PropTypes.string,
   labelFor: PropTypes.string,
 };
-
-export default Field;

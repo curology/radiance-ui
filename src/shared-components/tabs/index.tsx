@@ -3,15 +3,22 @@ import React, { useState } from 'react';
 
 import { TabsContainer, TabItem } from './style';
 
-type TabType = { id: number; text: string };
+type TabType = {
+  id: number;
+  text: string;
+};
 
+// Hardcoding TabType below to show the actual type in the docs
 type TabsProps = {
   initialActiveTabId?: number;
   onClick?: (tab: TabType) => unknown;
-  tabItems: Array<TabType>;
+  tabItems: Array<{
+    id: number;
+    text: string;
+  }>;
 };
 
-const Tabs = ({
+export const Tabs = ({
   initialActiveTabId = 1,
   onClick = () => undefined,
   tabItems,
@@ -48,5 +55,3 @@ Tabs.propTypes = {
     }),
   ).isRequired,
 };
-
-export default Tabs;

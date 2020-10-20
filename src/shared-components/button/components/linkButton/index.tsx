@@ -22,27 +22,40 @@ const propTypes = {
   textColor: PropTypes.string,
 };
 
-const defaultProps = {
-  as: 'a',
-  buttonColor: COLORS.primary,
-  buttonType: 'primary',
-  disabled: false,
-  onClick: () => undefined,
-  textColor: '',
-};
-
 type LinkProps = {
+  /**
+   * Specifies the tag or element to be rendered
+   */
   as?: 'a' | React.ElementType;
+  /**
+   * TODO-TS: Limit type from string to COLORS constants options
+   */
   buttonColor?: string;
+  /**
+   * Determines the button's main style theme
+   */
   buttonType?: ButtonType;
+  /**
+   * Node to be rendered inside the button. Recommended to be the button text
+   */
   children: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;
+  /**
+   * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
+   */
   textColor?: string;
   [key: string]: any;
 };
 
-const Link = ({
+/**
+ * `LinkButton` will render a 'button-like' link for directing/linking to the path specified. This component can work with React Router's `Link`/`NavLink` by passing in the router component as a prop ---> `<LinkButton to='/path' as={Link}> ....`.
+ *
+ * `<LinkButton.Container>` can be used to provide spacing between multiple buttons and behavior on various screen sizes.
+ *
+ * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
+ */
+export const LinkButton = ({
   as = 'a',
   buttonColor = COLORS.primary,
   buttonType = 'primary',
@@ -74,8 +87,5 @@ const Link = ({
   );
 };
 
-Link.propTypes = propTypes;
-Link.defaultProps = defaultProps;
-Link.Container = Container;
-
-export default Link;
+LinkButton.propTypes = propTypes;
+LinkButton.Container = Container;

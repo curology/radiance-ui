@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import NeckGlyph from '../../svgs/glyphs/neck-glyph.svg';
 import { COLORS } from '../../constants';
 
-import Callout from './index';
+import { Callout } from './index';
 
 describe('<Callout />', () => {
   describe('UI snapshots', () => {

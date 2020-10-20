@@ -1,25 +1,38 @@
-import React, { BaseSyntheticEvent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import SelectorButton, { SizeType, StyleType } from '../selectorButton';
+import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
 type CheckboxProps = {
   checked: boolean;
+  /**
+   * Text label displayed next to the checkbox
+   */
   children?: React.ReactNode;
   disabled?: boolean;
+  /**
+   * Icons are only displayed at the large size, and inside the radio button
+   */
   icon?: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
+  ) => void;
   size?: SizeType;
   type?: StyleType;
   [key: string]: any;
 };
 
-const Checkbox = ({
+/**
+ * Checkboxes should be used to provide valuable information or additional context on a page. One of the best examples of a Checkbox is for product recommendations.
+ *
+ * `<Checkbox />` is a controlled component that represents a checkbox selection. This means that the `onClick` function should be used to change the checked state of the checkbox. Note that a group of checkbox buttons must be composed by a parent component.
+ */
+export const Checkbox = ({
   checked,
   children = null,
   disabled = false,
   icon = null,
-  onClick = () => undefined,
+  onClick = undefined,
   size = 'small',
   type = 'primary',
   ...rest
@@ -29,7 +42,13 @@ const Checkbox = ({
     disabled={disabled}
     icon={icon}
     onClick={
-      disabled ? (event: BaseSyntheticEvent) => event.preventDefault() : onClick
+      disabled
+        ? (
+          event:
+              | React.MouseEvent<HTMLDivElement, MouseEvent>
+              | React.KeyboardEvent,
+        ) => event.preventDefault()
+        : onClick
     }
     selector="checkbox"
     size={size}

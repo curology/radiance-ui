@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import AcneOneGlyph from '../../svgs/glyphs/acne-one-glyph.svg';
 
-import SelectorButton from './index';
+import { SelectorButton } from './index';
 
 describe('<SelectorButton />', () => {
   describe('UI snapshots', () => {

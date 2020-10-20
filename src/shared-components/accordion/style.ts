@@ -118,15 +118,15 @@ export const Container = styled.div<{ borderRadius?: string }>`
         border-top-right-radius: ${borderRadius};
       }
     }
-  
+
     > div:last-of-type {
       border-bottom-left-radius: ${borderRadius};
       border-bottom-right-radius: ${borderRadius};
-  
+
       ${AccordionBox} {
         border-bottom-left-radius: ${borderRadius};
         border-bottom-right-radius: ${borderRadius};
       }
     }
-`}
+  `}
 `;

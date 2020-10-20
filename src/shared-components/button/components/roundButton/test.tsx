@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import CameraIcon from '../../../../svgs/icons/camera-icon.svg';
 
-import RoundButton from './index';
+import { RoundButton } from './index';
 
 describe('<RoundButton />', () => {
   describe('UI snapshots', () => {

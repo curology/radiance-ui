@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import ProgressBar from './index';
+import { ProgressBar } from './index';
 
 describe('<ProgressBar />', () => {
   describe('UI snapshot', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Tooltip from './index';
+import { Tooltip } from './index';
 
 describe('<Tooltip />', () => {
   describe('UI snapshot', () => {

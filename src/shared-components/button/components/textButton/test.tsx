@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import TextButton from './index';
+import { TextButton } from './index';
 
 describe('<TextButton />', () => {
   describe('UI snapshots', () => {

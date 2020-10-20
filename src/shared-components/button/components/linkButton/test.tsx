@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 
-import LinkButton from './index';
+import { LinkButton } from './index';
 
 describe('<LinkButton/>', () => {
   describe('UI snapshots', () => {
