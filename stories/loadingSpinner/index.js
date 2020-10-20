@@ -2,9 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { storiesOf } from '@storybook/react';
 import { withDocs } from 'storybook-readme';
-import { withKnobs, text, number } from '@storybook/addon-knobs';
-
-import LoadingSpinnerReadme from 'docs/loadingSpinner.md';
+import { text, number } from '@storybook/addon-knobs';
+import LoadingSpinnerReadme from 'docs/loadingSpinner';
 import { LoadingSpinner, Typography } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 
@@ -14,8 +13,6 @@ const SpinnerContainer = styled.div`
 `;
 
 const stories = storiesOf('LoadingSpinner', module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   'Usage',
@@ -53,5 +50,5 @@ stories.add(
         />
       </SpinnerContainer>
     </React.Fragment>
-  ))
+  )),
 );

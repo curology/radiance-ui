@@ -32,7 +32,7 @@ const Dropdown = ({
   const touchSupported = 'ontouchstart' in document.documentElement;
 
   const onSelectClick = () => {
-    setIsOpen(prevIsOpen => !prevIsOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   const closeDropdown = () => setIsOpen(false);
@@ -73,7 +73,7 @@ const Dropdown = ({
     );
   }
 
-  const currentOption = options.find(option => option.value === value);
+  const currentOption = options.find((option) => option.value === value);
 
   return (
     <DesktopDropdown

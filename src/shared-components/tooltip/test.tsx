@@ -9,7 +9,7 @@ describe('<Tooltip />', () => {
       const component = renderer.create(
         <Tooltip position="bottom" content="Tooltip Content">
           Tooltip Trigger
-        </Tooltip>
+        </Tooltip>,
       );
 
       const tree = component.toJSON();

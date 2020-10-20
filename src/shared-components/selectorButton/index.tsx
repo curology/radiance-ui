@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { BaseSyntheticEvent } from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 
@@ -13,41 +13,33 @@ import {
   SelectorIcon,
 } from './style';
 
-const propTypes = {
-  checked: PropTypes.bool.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  type: PropTypes.oneOf(['primary', 'secondary']),
-  selector: PropTypes.oneOf(['radio', 'checkbox']),
-  icon: PropTypes.node,
-  size: PropTypes.oneOf(['large', 'small']),
-};
+export type SelectorType = 'radio' | 'checkbox';
+export type SizeType = 'large' | 'small';
+export type StyleType = 'primary' | 'secondary';
 
-const defaultProps = {
-  disabled: false,
-  onClick: undefined,
-  type: 'primary',
-  selector: 'radio',
-  icon: undefined,
-  children: undefined,
-  size: undefined,
+type SelectorButtonProps = {
+  checked: boolean;
+  children?: React.ReactNode;
+  disabled?: boolean;
+  icon?: React.ReactNode;
+  onClick?: ((event: BaseSyntheticEvent) => void) | (() => void);
+  selector?: SelectorType;
+  size?: SizeType;
+  type?: StyleType;
+  [key: string]: any;
 };
 
 const SelectorButton = ({
   checked,
-  disabled,
-  onClick,
-  children,
-  type,
-  selector,
-  icon,
-  size,
+  children = null,
+  disabled = false,
+  icon = null,
+  onClick = () => undefined,
+  selector = 'radio',
+  size = 'small',
+  type = 'primary',
   ...rest
-}) => {
+}: SelectorButtonProps) => {
   const checkedIcon =
     selector === 'radio' ? (
       <CircleSolidIcon
@@ -70,7 +62,7 @@ const SelectorButton = ({
     <OuterContainer
       onClick={onClick}
       onKeyPress={onClick}
-      tabIndex="0"
+      tabIndex={0}
       selector={selector}
       role={selector}
       aria-checked={checked}
@@ -95,7 +87,18 @@ const SelectorButton = ({
   );
 };
 
-SelectorButton.propTypes = propTypes;
-SelectorButton.defaultProps = defaultProps;
+SelectorButton.propTypes = {
+  checked: PropTypes.bool.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  disabled: PropTypes.bool,
+  icon: PropTypes.node,
+  onClick: PropTypes.func,
+  selector: PropTypes.oneOf(['radio', 'checkbox']),
+  size: PropTypes.oneOf(['large', 'small']),
+  type: PropTypes.oneOf(['primary', 'secondary']),
+};
 
 export default SelectorButton;
