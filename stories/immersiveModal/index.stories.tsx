@@ -30,6 +30,7 @@ export default {
             code={"import { ImmersiveModal } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

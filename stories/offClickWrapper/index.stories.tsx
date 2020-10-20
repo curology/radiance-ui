@@ -41,6 +41,7 @@ export default {
             code={"import { OffClickWrapper } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
         </React.Fragment>
       ),

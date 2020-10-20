@@ -165,6 +165,7 @@ export default {
             code={"import { RoundButton } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

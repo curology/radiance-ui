@@ -73,6 +73,7 @@ export default {
             code={"import { Callout } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

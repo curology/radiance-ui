@@ -95,6 +95,7 @@ export default {
             code={"import { RadioButton } from 'radiance-ui';"}
           />
           <PrimaryBlock />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

@@ -144,6 +144,7 @@ export default {
           <Canvas withToolbar>
             <Default defaultOpen={false} />
           </Canvas>
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Canvas withToolbar>
             <WithRestrictedWidth defaultOpen={false} />

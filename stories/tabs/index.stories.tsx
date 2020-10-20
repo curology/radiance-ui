@@ -41,6 +41,7 @@ export default {
           <Heading>Usage:</Heading>
           <Source language="tsx" code={"import { Tabs } from 'radiance-ui';"} />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
         </React.Fragment>
       ),

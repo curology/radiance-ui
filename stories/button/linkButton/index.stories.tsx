@@ -103,6 +103,7 @@ export default {
             code={"import { LinkButton } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

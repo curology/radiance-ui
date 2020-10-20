@@ -195,6 +195,7 @@ export default {
             code={"import { OptionButton } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

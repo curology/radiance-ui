@@ -59,6 +59,7 @@ export default {
             code={"import { Toggle } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
         </React.Fragment>
       ),

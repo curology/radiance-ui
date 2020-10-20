@@ -217,6 +217,7 @@ export default {
             code={"import { Field } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

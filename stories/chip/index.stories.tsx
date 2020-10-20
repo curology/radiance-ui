@@ -52,6 +52,7 @@ export default {
           <Heading>Usage:</Heading>
           <Source language="tsx" code={"import { Chip } from 'radiance-ui';"} />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

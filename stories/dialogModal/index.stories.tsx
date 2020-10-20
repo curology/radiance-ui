@@ -90,6 +90,7 @@ export default {
             code={"import { DialogModal } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Heading>Stories</Heading>
           <Heading>With Close Icon</Heading>

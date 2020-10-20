@@ -123,6 +123,7 @@ export default {
             code={"import { Carousel } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

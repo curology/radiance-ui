@@ -39,6 +39,7 @@ export default {
             code={"import { Avatar } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

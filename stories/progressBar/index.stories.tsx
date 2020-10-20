@@ -86,6 +86,7 @@ export default {
             code={"import { ProgressBar } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>

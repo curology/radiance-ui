@@ -106,6 +106,7 @@ export default {
             code={"import { Alert } from 'radiance-ui';"}
           />
           <Primary />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
           <Description>

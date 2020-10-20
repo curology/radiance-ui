@@ -79,6 +79,7 @@ export default {
             code={"import { Checkbox } from 'radiance-ui';"}
           />
           <PrimaryBlock />
+          <Heading>Props:</Heading>
           <ArgsTable />
           <Stories />
         </React.Fragment>
