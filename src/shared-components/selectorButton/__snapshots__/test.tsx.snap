@@ -103,7 +103,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   onClick={[Function]}
   onKeyPress={[Function]}
   role="checkbox"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-5 emotion-6"
@@ -237,7 +237,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-5 emotion-6"
@@ -367,7 +367,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   onClick={[Function]}
   onKeyPress={[Function]}
   role="checkbox"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -496,7 +496,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -625,7 +625,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
   onClick={[Function]}
   onKeyPress={[Function]}
   role="checkbox"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -749,7 +749,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -877,7 +877,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-5 emotion-6"
@@ -896,6 +896,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
       checked={true}
       className="emotion-3 emotion-4"
       disabled={false}
+      size="small"
       type="primary"
     />
   </div>
@@ -1010,7 +1011,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-5 emotion-6"
@@ -1029,6 +1030,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
       checked={true}
       className="emotion-3 emotion-4"
       disabled={false}
+      size="small"
       type="secondary"
     />
   </div>
@@ -1139,7 +1141,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -1152,6 +1154,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
       checked={false}
       className="emotion-2 emotion-3"
       disabled={false}
+      size="small"
       type="primary"
     />
   </div>
@@ -1255,7 +1258,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -1268,6 +1271,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
       checked={false}
       className="emotion-2 emotion-3"
       disabled={false}
+      size="small"
       type="primary"
     />
   </div>
@@ -1373,7 +1377,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   onClick={[Function]}
   onKeyPress={[Function]}
   role="checkbox"
-  tabIndex="0"
+  tabIndex={0}
 >
   <div
     className="emotion-4 emotion-5"
@@ -1386,6 +1390,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
       checked={false}
       className="emotion-2 emotion-3"
       disabled={false}
+      size="small"
       type="primary"
     />
   </div>
