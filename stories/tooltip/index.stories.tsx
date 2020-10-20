@@ -1,24 +1,26 @@
 import React from 'react';
 import {
   ArgsTable,
-  Canvas,
   Description,
   Heading,
   Source,
-  Stories,
   Title,
+  Primary,
+  Stories,
 } from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';
 import type { Meta } from '@storybook/react';
+import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
 
 const TooltipContainer = styled.div<{ height?: string }>`
-  max-width: 400px;
-  height: ${({ height = '175px' }) => height};
+  max-width: 800px;
+  height: ${({ height = '225px' }) => height};
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const TriggerContainer = styled.div`
@@ -33,28 +35,37 @@ const TriggerContainer = styled.div`
 const positionOptions = ['bottom', 'top'];
 const arrowAlignOptions = ['left', 'middle', 'right'];
 
-export const Default = ({ defaultOpen = true }) => (
+export const Default = () => (
   <TooltipContainer>
-    <Tooltip defaultOpen={defaultOpen} content="Tooltip Content goes here">
+    <Tooltip defaultOpen content="Tooltip Content goes here">
+      This tooltip is always open
+    </Tooltip>
+    <Tooltip content="Tooltip Content goes here">
       Hover or Click here to trigger the Tooltip with default values
     </Tooltip>
   </TooltipContainer>
 );
 
-export const WithRestrictedWidth = ({ defaultOpen = true }) => (
+export const WithRestrictedWidth = () => (
   <TooltipContainer height="375px">
     <Tooltip
       hasRestrictedWidth
-      defaultOpen={defaultOpen}
+      defaultOpen
       content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur enim diam, eget fringilla neque efficitur eu. Praesent et ornare risus. Aenean in orci posuere, convallis nulla a, posuere dolor."
     >
-      Hover or Click here to trigger the Tooltip. This tooltip have a restricted
+      This tooltip is always open. This tooltip has a restricted width.
+    </Tooltip>
+    <Tooltip
+      hasRestrictedWidth
+      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur enim diam, eget fringilla neque efficitur eu. Praesent et ornare risus. Aenean in orci posuere, convallis nulla a, posuere dolor."
+    >
+      Hover or Click here to trigger the Tooltip. This tooltip has a restricted
       width.
     </Tooltip>
   </TooltipContainer>
 );
 
-export const WithCustomContent = ({ defaultOpen = true }) => (
+export const WithCustomContent = () => (
   <TooltipContainer height="325px">
     <Tooltip
       arrowAlign="left"
@@ -66,21 +77,37 @@ export const WithCustomContent = ({ defaultOpen = true }) => (
           dolore! Esse at, aliquid.
         </span>
       }
-      defaultOpen={defaultOpen}
+      defaultOpen
+    >
+      This tooltip is always open
+    </Tooltip>
+    <Tooltip
+      arrowAlign="left"
+      content={
+        <span>
+          <strong>Did you know?</strong>
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+          dolore! Esse at, aliquid.
+        </span>
+      }
     >
       Hover here to trigger the tooltip.
     </Tooltip>
   </TooltipContainer>
 );
 
-export const SmallTooltip = ({ defaultOpen = true }) => (
+export const SmallTooltip = () => (
   <TooltipContainer>
     <Tooltip
       content={<strong>3 new</strong>}
-      defaultOpen={defaultOpen}
+      defaultOpen
       isSmall
       arrowAlign="middle"
     >
+      This tooltip is always open
+    </Tooltip>
+    <Tooltip content={<strong>3 new</strong>} isSmall arrowAlign="middle">
       Hover here to trigger the small tooltip.
     </Tooltip>
   </TooltipContainer>
@@ -91,9 +118,11 @@ export const WithControls = () => (
     <Tooltip
       alignRightPercent={number('alignRightPercent', 0)}
       alignTopPercent={number('alignTopPercent', 0)}
-      arrowAlign={select('arrowAlign', arrowAlignOptions, 'right')}
+      arrowAlign={
+        select('arrowAlign', arrowAlignOptions, 'right') as ArrowAlignTypes
+      }
       content={text('Content', 'This is the tooltip text')}
-      defaultOpen={boolean('defaultOpen', false)}
+      defaultOpen={boolean('defaultOpen', true)}
       display={boolean('display', true)}
       hasRestrictedWidth={boolean('hasRestrictedWidth', false)}
       isSmall={boolean('isSmall', false)}
@@ -101,28 +130,15 @@ export const WithControls = () => (
       nudgeLeft={number('nudgeLeft', 0)}
       nudgeTop={number('nudgeTop', 0)}
       nudgeBottom={number('nudgeBottom', 0)}
-      position={select('Position', positionOptions, 'bottom')}
+      position={select('Position', positionOptions, 'bottom') as PositionTypes}
     >
-      <TriggerContainer>Trigger element</TriggerContainer>
+      <TriggerContainer>
+        Tooltip open by default (modify defaultOpen prop to test hover)
+      </TriggerContainer>
     </Tooltip>
   </TooltipContainer>
 );
 
-/**
- * Storybook does not apply our global styles when using parameters.docs.page *without* <Stories />.
- * This is potentially a bug in the library, but in the meantime this maintains the desired styling.
- */
-const PRESERVE_STYLES = () => (
-  <div style={{ display: 'none' }}>
-    <Stories includePrimary={false} />
-  </div>
-);
-
-/**
- * NOTE: We defaultOpen the tooltips on the separate canvas stories for visual
- * regression testing (since we want to test the open state), but maintain the
- * normal behavior for the docs page.
- */
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
@@ -132,33 +148,15 @@ export default {
         <React.Fragment>
           <Title />
           <Description />
-          <Description>
-            Note: the source is not available on the docs page, only the add-on
-            panel “Story” tab of each Canvas story
-          </Description>
           <Heading>Usage:</Heading>
           <Source
             language="tsx"
             code={"import { Tooltip } from 'radiance-ui';"}
           />
-          <Canvas withToolbar>
-            <Default defaultOpen={false} />
-          </Canvas>
+          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Canvas withToolbar>
-            <WithRestrictedWidth defaultOpen={false} />
-          </Canvas>
-          <Canvas withToolbar>
-            <WithCustomContent defaultOpen={false} />
-          </Canvas>
-          <Canvas withToolbar>
-            <SmallTooltip defaultOpen={false} />
-          </Canvas>
-          <Canvas withToolbar>
-            <WithControls />
-          </Canvas>
-          <PRESERVE_STYLES />
+          <Stories />
         </React.Fragment>
       ),
     },
