@@ -5,14 +5,16 @@ import {
   Canvas,
   Description,
   Heading,
-  Primary,
+  Anchor,
   Source,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 
-export const Default = () => {
-  const [openModal, setOpenModal] = useState(true);
+const DIALOG_MODAL_STORY_ID_PREFIX = 'components-dialogmodal--';
+
+export const Default = ({ isOpen = true }) => {
+  const [openModal, setOpenModal] = useState(isOpen);
 
   return (
     <React.Fragment>
@@ -41,6 +43,8 @@ export const Default = () => {
     </React.Fragment>
   );
 };
+
+Default.id = `${DIALOG_MODAL_STORY_ID_PREFIX}default`;
 
 export const WithCloseIcon = ({ isOpen = true }) => {
   const [withCloseIcon, setWithCloseIcon] = useState(isOpen);
@@ -75,6 +79,8 @@ export const WithCloseIcon = ({ isOpen = true }) => {
   );
 };
 
+WithCloseIcon.id = `${DIALOG_MODAL_STORY_ID_PREFIX}with-close-icon`;
+
 export default {
   title: 'Components/DialogModal',
   component: DialogModal,
@@ -89,14 +95,22 @@ export default {
             language="tsx"
             code={"import { DialogModal } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
           <Heading>Stories</Heading>
-          <Heading>With Close Icon</Heading>
           <Description>
-            (Source code available within Canvas story Story add-ons tab)
+            Source code for the stories can be found in the individual story
+            canvas tabs. Keeping the modals closed-by-default on the docs page
+            (unlike the open-by-default configuration on the canvas pages)
+            interferes with Storybook source inference.
           </Description>
+          <Heading>Default</Heading>
+          <Canvas>
+            <Default isOpen={false} />
+          </Canvas>
+          <Anchor storyId={Default.id} />
+          <Heading>With Close Icon</Heading>
+          <Anchor storyId={WithCloseIcon.id} />
           <Canvas>
             <WithCloseIcon isOpen={false} />
           </Canvas>
