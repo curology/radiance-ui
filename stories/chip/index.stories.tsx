@@ -4,7 +4,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -51,10 +50,9 @@ export default {
           <Description />
           <Heading>Usage:</Heading>
           <Source language="tsx" code={"import { Chip } from 'radiance-ui';"} />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

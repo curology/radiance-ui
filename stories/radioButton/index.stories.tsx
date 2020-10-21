@@ -7,7 +7,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary as PrimaryBlock,
   Source,
   Stories,
   Title,
@@ -94,10 +93,9 @@ export default {
             language="tsx"
             code={"import { RadioButton } from 'radiance-ui';"}
           />
-          <PrimaryBlock />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

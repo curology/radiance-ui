@@ -5,7 +5,6 @@ import {
   Heading,
   Source,
   Title,
-  Primary,
   Stories,
 } from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
@@ -153,10 +152,9 @@ export default {
             language="tsx"
             code={"import { Tooltip } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

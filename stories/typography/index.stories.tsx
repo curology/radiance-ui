@@ -2,8 +2,8 @@ import React from 'react';
 import {
   Description,
   Heading,
-  Primary,
   Source,
+  Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Typography } from 'src/shared-components';
@@ -46,7 +46,7 @@ export default {
             language="tsx"
             code={"import { Typography } from 'radiance-ui';"}
           />
-          <Primary />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

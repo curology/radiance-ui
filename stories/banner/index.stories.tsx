@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -13,14 +12,23 @@ import { select, text } from '@storybook/addon-knobs';
 import type { Meta } from '@storybook/react';
 
 export const Default = () => (
-  <Banner
-    content={
-      <React.Fragment>
-        <strong>Default banner:</strong> This is the banner content
-      </React.Fragment>
-    }
-  />
+  <React.Fragment>
+    <Banner
+      content={
+        <React.Fragment>
+          <strong>Default banner:</strong> This is the banner content
+        </React.Fragment>
+      }
+    />
+    <br />
+    <Banner
+      type={select('type', ['default', 'success', 'error'], 'default')}
+      content={text('content', 'This is the banner content')}
+    />
+  </React.Fragment>
 );
+
+Default.storyName = 'Default + With Controls';
 
 export const Clickable = () => (
   <Banner
@@ -76,10 +84,9 @@ export default {
             language="tsx"
             code={"import { Banner } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

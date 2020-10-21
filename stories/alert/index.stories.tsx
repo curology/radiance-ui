@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -105,10 +104,9 @@ export default {
             language="tsx"
             code={"import { Alert } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
           <Description>
             Alert.Container Absolutely positions the alerts by default. (As
             such, it escapes the canvas container.)
