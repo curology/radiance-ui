@@ -149,6 +149,10 @@ export const WithControls = () => (
   </ButtonsContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Button/RoundButton',
   component: RoundButton,

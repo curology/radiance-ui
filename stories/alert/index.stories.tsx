@@ -10,6 +10,7 @@ import {
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';
+import { ANIMATION } from 'src/constants';
 
 export const Default = () => (
   <Alert content="Default Alert: it will disappear after 3 seconds" />
@@ -94,6 +95,7 @@ export default {
   title: 'Components/Alert',
   component: Alert,
   parameters: {
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
     docs: {
       page: () => (
         <React.Fragment>

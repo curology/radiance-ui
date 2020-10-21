@@ -129,6 +129,10 @@ export const WithControls = () => (
   </Button.Container>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Button/Button',
   component: Button,

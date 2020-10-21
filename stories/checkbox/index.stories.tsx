@@ -63,6 +63,10 @@ export const WithControls = () => (
   </Checkbox>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,

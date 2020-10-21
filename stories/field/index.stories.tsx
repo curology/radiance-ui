@@ -201,6 +201,10 @@ export const WithControls = () => (
   </FieldsContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Field',
   component: Field,

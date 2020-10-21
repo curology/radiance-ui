@@ -79,6 +79,10 @@ export const WithControls = () => (
   </RadioButton>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/RadioButton',
   component: RadioButton,

@@ -39,6 +39,10 @@ export const WithControls = () => (
   />
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Chip',
   component: Chip,

@@ -10,6 +10,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { ANIMATION } from 'src/constants';
 
 const DIALOG_MODAL_STORY_ID_PREFIX = 'components-dialogmodal--';
 
@@ -85,6 +86,7 @@ export default {
   title: 'Components/DialogModal',
   component: DialogModal,
   parameters: {
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
     docs: {
       page: () => (
         <React.Fragment>

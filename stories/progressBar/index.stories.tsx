@@ -3,7 +3,7 @@ import { text, select, number, color } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
-import { COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
+import { ANIMATION, COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
 import {
   ArgsTable,
   Description,
@@ -70,10 +70,15 @@ export const WithControls = () => (
   </BarContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Progress Bar',
   component: ProgressBar,
   parameters: {
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
     docs: {
       page: () => (
         <React.Fragment>

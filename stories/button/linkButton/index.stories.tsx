@@ -88,6 +88,10 @@ export const WithControls = () => (
   </LinkButton.Container>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Button/LinkButton',
   component: LinkButton,

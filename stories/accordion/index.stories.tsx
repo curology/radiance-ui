@@ -21,51 +21,24 @@ export const Standard = () => {
   const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
-    <React.Fragment>
-      <Accordion.Container>
-        <Accordion
-          title={
-            <Accordion.Content>
-              This is styled with Accordion.Content
-            </Accordion.Content>
-          }
-          isOpen={isOpen}
-          onClick={toggleAccordion}
-        >
+    <Accordion.Container>
+      <Accordion
+        title={
           <Accordion.Content>
-            Accordion.Content adds standard accordion padding.
+            This is styled with Accordion.Content
           </Accordion.Content>
-        </Accordion>
-      </Accordion.Container>
-      <br />
-      <Accordion.Container>
-        <Accordion
-          title={
-            <Accordion.Content>
-              <Accordion.Truncate>
-                {text(
-                  'Title text',
-                  'Title text: Use Knobs To Modify Component',
-                )}
-              </Accordion.Truncate>
-            </Accordion.Content>
-          }
-          onClick={action('Accordion clicked')}
-          isOpen={boolean('isOpen', true)}
-          noBorder={boolean('noBorder', false)}
-          disabled={boolean('disabled', false)}
-          rightAlignArrow={boolean('rightAlignArrow', false)}
-        >
-          <Accordion.Content>
-            {text('Expanded text', 'Accordion expanded content')}
-          </Accordion.Content>
-        </Accordion>
-      </Accordion.Container>
-    </React.Fragment>
+        }
+        isOpen={isOpen}
+        onClick={toggleAccordion}
+      >
+        <Accordion.Content>
+          Accordion.Content adds standard accordion padding.
+        </Accordion.Content>
+      </Accordion>
+    </Accordion.Container>
   );
 };
 
-Standard.storyName = 'Standard + With Controls';
 Standard.id = `${ACCORDION_STORY_ID_PREFIX}standard`;
 
 export const NoBorder = () => {
@@ -138,6 +111,35 @@ export const RightAlignedArrow = () => {
 
 RightAlignedArrow.id = `${ACCORDION_STORY_ID_PREFIX}right-aligned-arrow`;
 
+export const WithControls = () => (
+  <Accordion.Container>
+    <Accordion
+      title={
+        <Accordion.Content>
+          <Accordion.Truncate>
+            {text('Title text', 'Title text: Use Knobs To Modify Component')}
+          </Accordion.Truncate>
+        </Accordion.Content>
+      }
+      onClick={action('Accordion clicked')}
+      isOpen={boolean('isOpen', true)}
+      noBorder={boolean('noBorder', false)}
+      disabled={boolean('disabled', false)}
+      rightAlignArrow={boolean('rightAlignArrow', false)}
+    >
+      <Accordion.Content>
+        {text('Expanded text', 'Accordion expanded content')}
+      </Accordion.Content>
+    </Accordion>
+  </Accordion.Container>
+);
+
+WithControls.id = `${ACCORDION_STORY_ID_PREFIX}with-controls`;
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Accordion',
   component: Accordion,
@@ -186,6 +188,11 @@ export default {
           <Heading>Right-aligned Arrow</Heading>
           <Canvas>
             <Story id={RightAlignedArrow.id} />
+          </Canvas>
+          <Anchor storyId={WithControls.id} />
+          <Heading>With Controls</Heading>
+          <Canvas>
+            <Story id={WithControls.id} />
           </Canvas>
         </React.Fragment>
       ),

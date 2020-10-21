@@ -56,6 +56,7 @@ export default {
   title: 'Components/Transitions',
   parameters: {
     docs: {
+      chromatic: { disable: true },
       page: () => (
         <React.Fragment>
           <Title />

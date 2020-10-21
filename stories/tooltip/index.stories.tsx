@@ -138,6 +138,10 @@ export const WithControls = () => (
   </TooltipContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,

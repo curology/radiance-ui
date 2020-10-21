@@ -24,6 +24,10 @@ export const Default = () => (
   </SpinnerContainer>
 );
 
+Default.parameters = {
+  chromatic: { disable: false },
+};
+
 export const WithTranslateX = () => (
   <SpinnerContainer>
     <LoadingSpinner translateX="50px" />
@@ -52,6 +56,7 @@ export default {
   title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
+    chromatic: { disable: true },
     docs: {
       page: () => (
         <React.Fragment>

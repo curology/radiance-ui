@@ -21,6 +21,10 @@ export const NumbersAndText = () => (
 
 export const WithControls = () => <Indicator text={text('text', '10')} />;
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Indicator',
   component: Indicator,

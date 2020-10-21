@@ -46,7 +46,7 @@ export const Error = () => (
 export const Success = () => (
   <FieldContainer>
     <Field.Input />
-    <VerificationMessages messages={messages} type="success" centered />
+    <VerificationMessages messages={messages} type="success" />
   </FieldContainer>
 );
 
@@ -60,6 +60,10 @@ export const WithControls = () => (
     />
   </FieldContainer>
 );
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
 
 export default {
   title: 'Components/VerificationMessages',

@@ -107,6 +107,10 @@ export const WithControls = () => (
   </CarouselContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Carousel',
   component: Carousel,

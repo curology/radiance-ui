@@ -179,6 +179,10 @@ export const WithControls = () => (
   </FlexContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/OptionButton',
   component: OptionButton,

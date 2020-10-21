@@ -57,6 +57,10 @@ export const WithControls = () => (
   </Callout>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Callout',
   component: Callout,

@@ -10,6 +10,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Button, ImmersiveModal } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
+import { ANIMATION } from 'src/constants';
 
 import headerImage from './headerImage.jpg';
 
@@ -246,6 +247,7 @@ export default {
   title: 'Components/ImmersiveModal',
   component: ImmersiveModal,
   parameters: {
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
     docs: {
       page: () => (
         <React.Fragment>
