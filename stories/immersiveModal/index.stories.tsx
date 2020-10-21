@@ -247,7 +247,7 @@ export default {
   title: 'Components/ImmersiveModal',
   component: ImmersiveModal,
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 5 },
     docs: {
       page: () => (
         <React.Fragment>
