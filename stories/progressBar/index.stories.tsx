@@ -78,7 +78,7 @@ export default {
   title: 'Components/Progress Bar',
   component: ProgressBar,
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 5 },
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
     docs: {
       page: () => (
         <React.Fragment>

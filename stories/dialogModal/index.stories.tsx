@@ -86,7 +86,7 @@ export default {
   title: 'Components/DialogModal',
   component: DialogModal,
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 5 },
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
     docs: {
       page: () => (
         <React.Fragment>

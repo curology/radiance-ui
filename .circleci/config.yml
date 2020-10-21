@@ -72,7 +72,7 @@ jobs:
                 command: yarn build
             - run:
                 name: Publish to Chromatic
-                command: yarn run chromatic -- ${CHROMATIC_PROJECT_TOKEN}
+                command: yarn run chromatic ${CHROMATIC_PROJECT_TOKEN}
 
     test-js:
         <<: *defaults

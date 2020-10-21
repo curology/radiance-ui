@@ -55,8 +55,8 @@ export const OpacityInAnimation = () => (
 export default {
   title: 'Components/Transitions',
   parameters: {
+    chromatic: { disable: true },
     docs: {
-      chromatic: { disable: true },
       page: () => (
         <React.Fragment>
           <Title />
