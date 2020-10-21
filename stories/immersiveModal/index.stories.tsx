@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import {
+  Anchor,
   ArgsTable,
+  Canvas,
   Description,
   Heading,
+  Primary,
   Source,
-  Canvas,
-  Anchor,
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Button, ImmersiveModal } from 'src/shared-components';
@@ -243,6 +244,16 @@ export const WithScrollingContent = ({ isOpen = true }) => {
 
 WithScrollingContent.id = `${IMMERSIVE_MODAL_STORY_ID_PREFIX}with-scrolling-content`;
 
+/**
+ * Defaulting these stories to closed on Docs page interferes with style application.
+ * This workaround preserves our styles.
+ */
+const PRESERVE_STYLES = () => (
+  <div style={{ display: 'none' }}>
+    <Primary />
+  </div>
+);
+
 export default {
   title: 'Components/ImmersiveModal',
   component: ImmersiveModal,
@@ -287,6 +298,7 @@ export default {
           <Canvas>
             <WithScrollingContent isOpen={false} />
           </Canvas>
+          <PRESERVE_STYLES />
         </React.Fragment>
       ),
     },

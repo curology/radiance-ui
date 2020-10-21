@@ -8,6 +8,7 @@ import {
   Anchor,
   Source,
   Title,
+  Primary,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { ANIMATION } from 'src/constants';
@@ -82,14 +83,19 @@ export const WithCloseIcon = ({ isOpen = true }) => {
 
 WithCloseIcon.id = `${DIALOG_MODAL_STORY_ID_PREFIX}with-close-icon`;
 
+/**
+ * Defaulting these stories to closed on Docs page interferes with style application.
+ * This workaround preserves our styles.
+ */
+const PRESERVE_STYLES = () => (
+  <div style={{ display: 'none' }}>
+    <Primary />
+  </div>
+);
+
 export default {
   title: 'Components/DialogModal',
   component: DialogModal,
-  decorators: [
-    (storyFn) => (
-      <div style={{ width: '1200px', height: '800px' }}>{storyFn()}</div>
-    ),
-  ],
   parameters: {
     chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
     docs: {
@@ -121,6 +127,7 @@ export default {
           <Canvas>
             <WithCloseIcon isOpen={false} />
           </Canvas>
+          <PRESERVE_STYLES />
         </React.Fragment>
       ),
     },
