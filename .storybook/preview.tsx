@@ -71,7 +71,7 @@ addDecorator(InjectGlobalStyles);
 const ADDONS_REQUIRED_IN_OPTIONS = {
   isFullscreen: false,
   isToolshown: true,
-  panelPosition: 'right',
+  panelPosition: 'bottom',
   showNav: true,
   showPanel: true,
 };
