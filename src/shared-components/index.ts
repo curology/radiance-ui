@@ -23,7 +23,7 @@ export { OffClickWrapper } from './offClickWrapper';
 export { OptionButton } from './optionButton';
 export { ProgressBar } from './progressBar';
 export { RadioButton } from './radioButton';
-export { default as SegmentedControl } from './segmentedControl';
+export { SegmentedControl } from './segmentedControl';
 export { Tabs } from './tabs';
 export { Toggle } from './toggle';
 export { Tooltip } from './tooltip';

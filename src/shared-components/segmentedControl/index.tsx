@@ -3,7 +3,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import { SegmentsContainer, SegmentItem, Indicator } from './style';
 import { SegmentedControlProps, SegmentItemType } from './types';
 
-const SegmentedControl: React.FC<SegmentedControlProps> = ({
+/**
+ * The width of the top-level container is set to 100%, so it will expand to fill its parent container. Set a non-percentage `width` on the parent element during implementation to avoid stretched-out layout or animation effects.
+ */
+export const SegmentedControl: React.FC<SegmentedControlProps> = ({
   segmentItems,
   initialActiveId = 1,
   onClick,
@@ -66,5 +69,3 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     </SegmentsContainer>
   );
 };
-
-export default SegmentedControl;

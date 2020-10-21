@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 
-import SegmentedControl from './index';
+import { SegmentedControl } from './index';
 
 const testSegmentedControl = {
   segmentItems: [
@@ -11,7 +11,7 @@ const testSegmentedControl = {
     { id: 3, text: 'Tab 3' },
   ],
 };
-/* eslint-disable react/jsx-props-no-spreading */
+
 describe('<SegmentedControl />', () => {
   test('renders a regular segmented control', () => {
     const component = renderer.create(
