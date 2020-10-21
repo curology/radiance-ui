@@ -246,6 +246,11 @@ WithScrollingContent.id = `${IMMERSIVE_MODAL_STORY_ID_PREFIX}with-scrolling-cont
 export default {
   title: 'Components/ImmersiveModal',
   component: ImmersiveModal,
+  decorators: [
+    (storyFn) => (
+      <div style={{ width: '1200px', height: '800px' }}>{storyFn()}</div>
+    ),
+  ],
   parameters: {
     chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
     docs: {

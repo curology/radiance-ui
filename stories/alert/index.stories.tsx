@@ -94,8 +94,13 @@ export const WithAlertContainer = () => (
 export default {
   title: 'Components/Alert',
   component: Alert,
+  decorators: [
+    (storyFn) => (
+      <div style={{ width: '1200px', height: '800px' }}>{storyFn()}</div>
+    ),
+  ],
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 5 },
     docs: {
       page: () => (
         <React.Fragment>
