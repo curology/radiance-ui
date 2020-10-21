@@ -4,7 +4,7 @@ import COLORS from '.';
 
 const SECONDARY_COLORS = {
   // brand colors
-  primary: null,
+  primary: 'red',
   primaryTint1: '#000000',
   primaryTint2: null,
   primaryTint3: '#cccccc',
