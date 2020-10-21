@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import {
   ArgsTable,
   Description,
@@ -134,44 +134,75 @@ export const Truncate = () => {
 
 Truncate.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}truncate`;
 
-export const Container = () => (
-  <Accordion.Container>
-    <Accordion
-      onClick={() => undefined}
-      title={
+export const Container = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const onClick = () => setIsOpen(!isOpen);
+
+  return (
+    <Accordion.Container>
+      <Accordion
+        onClick={onClick}
+        title={
+          <Accordion.Content>
+            This Accordion styled with an Accordion.Container parent component
+          </Accordion.Content>
+        }
+        isOpen={isOpen}
+      >
         <Accordion.Content>
           This Accordion styled with an Accordion.Container parent component
         </Accordion.Content>
-      }
-      isOpen
-    >
-      <Accordion.Content>
-        This Accordion styled with an Accordion.Container parent component
-      </Accordion.Content>
-    </Accordion>
-  </Accordion.Container>
-);
+      </Accordion>
+    </Accordion.Container>
+  );
+};
 
 Container.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}container`;
 
-export const Content = () => (
-  <Accordion.Container>
-    <Accordion
-      onClick={() => undefined}
-      title={<Accordion.Content>Title</Accordion.Content>}
-      isOpen={false}
-    >
-      <Accordion.Content>Expansion with content padding</Accordion.Content>
-    </Accordion>
-    <Accordion
-      onClick={() => undefined}
-      title={<Accordion.Content>Title (open)</Accordion.Content>}
-      isOpen
-    >
-      <Accordion.Content>Expansion with content padding</Accordion.Content>
-    </Accordion>
-  </Accordion.Container>
-);
+export const Content = () => {
+  const initialState = {
+    first: true,
+    second: false,
+  };
+
+  const reducer = (
+    state: typeof initialState,
+    action: keyof typeof initialState,
+  ) => {
+    switch (action) {
+      case 'first':
+        return { ...state, first: !state.first };
+      case 'second':
+        return { ...state, second: !state.second };
+      default:
+        throw new Error();
+    }
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const toggleAccordion = (accordion: keyof typeof initialState) => () =>
+    dispatch(accordion);
+
+  return (
+    <Accordion.Container>
+      <Accordion
+        onClick={toggleAccordion('first')}
+        title={<Accordion.Content>Title (defaulted open)</Accordion.Content>}
+        isOpen={state.first}
+      >
+        <Accordion.Content>Expansion with content padding</Accordion.Content>
+      </Accordion>
+      <Accordion
+        onClick={toggleAccordion('second')}
+        title={<Accordion.Content>Title (defaulted closed)</Accordion.Content>}
+        isOpen={state.second}
+      >
+        <Accordion.Content>Expansion with content padding</Accordion.Content>
+      </Accordion>
+    </Accordion.Container>
+  );
+};
 
 Content.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}content`;
 
