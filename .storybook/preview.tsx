@@ -8,6 +8,7 @@ import {
   resetStyles,
   brandStyles,
 } from '../src/utils/injectGlobalStyles/style';
+import { BREAKPOINTS } from '../src/constants';
 
 const InjectGlobalStyles = (storyFn) => (
   <React.Fragment>
@@ -93,6 +94,7 @@ addParameters({
     options: {},
     manual: false,
   },
+  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md, BREAKPOINTS.lg] },
   docs: {
     theme: Theme,
   },
