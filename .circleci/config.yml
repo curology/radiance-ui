@@ -11,8 +11,8 @@ aliases:
             name: Prepare Environment
             command: mkdir test-results
 
-    - &cache-yarn-key-base yarn-packages-v1-{{ arch }}-
-    - &cache-yarn-key yarn-packages-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    - &cache-yarn-key-base yarn-packages-v2-{{ arch }}-
+    - &cache-yarn-key yarn-packages-v2-{{ arch }}-{{ checksum "yarn.lock" }}
 
     - &yarn-cache-restore
         restore_cache:
@@ -26,6 +26,11 @@ aliases:
             paths:
                 - ~/.cache/yarn
 
+    - &yarn-install
+        run:
+            name: Install Node Dependencies
+            command: yarn install --frozen-lockfile --non-interactive
+
     # Prospective merging against master.
     - &prospective-merge
         run:
@@ -36,9 +41,8 @@ aliases:
                 fi
 
 jobs:
-    install:
+    build-js:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -46,18 +50,15 @@ jobs:
             - checkout
             - <<: *prospective-merge
             - <<: *yarn-cache-restore
-            - run:
-                name: Install
-                command: yarn install
+            - <<: *yarn-install
             - <<: *yarn-cache-save
             - persist_to_workspace:
                 root: *root
                 paths:
                     - node_modules
     
-    build:
+    build-radiance:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -76,7 +77,6 @@ jobs:
 
     test-js:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -96,7 +96,6 @@ jobs:
 
     test-tsc:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -120,14 +119,14 @@ workflows:
 
     build-and-test:
         jobs:
-            - install
+            - build-js
             - test-js:
                 requires:
-                    - install
+                    - build-js
             - test-tsc:
                 requires:
-                    - install
-            - build:
+                    - build-js
+            - build-radiance:
                 requires:
                     - test-js
                     - test-tsc
