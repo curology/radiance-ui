@@ -8,6 +8,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Typography } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
+import { BREAKPOINTS } from 'src/constants';
 
 export const Usage = () => (
   <React.Fragment>
@@ -32,6 +33,7 @@ export default {
   title: 'Components/Typography',
   parameters: {
     docs: {
+      chromatic: { viewports: [BREAKPOINTS.xs] },
       page: () => (
         <React.Fragment>
           <Title />

@@ -10,7 +10,7 @@ import {
 import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { NeckGlyph } from 'src/svgs/glyphs';
-import { COLORS } from 'src/constants';
+import { BREAKPOINTS, COLORS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
 export const Default = () => (
@@ -44,6 +44,10 @@ export const WithoutContainer = () => (
   </Callout>
 );
 
+WithoutContainer.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md] },
+};
+
 export const WithControls = () => (
   <Callout
     icon={
@@ -65,6 +69,7 @@ export default {
   title: 'Components/Callout',
   component: Callout,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>

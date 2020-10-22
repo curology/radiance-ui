@@ -30,6 +30,7 @@ export default {
   title: 'Components/OffClickWrapper',
   component: OffClickWrapper,
   parameters: {
+    chromatic: { disable: true },
     docs: {
       page: () => (
         <React.Fragment>
