@@ -11,6 +11,7 @@ import {
 } from '../src/utils/injectGlobalStyles/style';
 import { primaryTheme, secondaryTheme } from '../src/constants/themes';
 import { ThemeType } from '../src/constants/themes/types';
+import shouldShowForEnvironment from '../src/utils/shouldShowForEnvironment';
 
 const swapThemeButtonStyles = css`
   position: absolute;
@@ -96,12 +97,14 @@ const InjectGlobalStyles = (storyFn) => {
       <ThemeProvider theme={theme}>
         <div
           css={css`
-            padding-top: 24px;
+            padding-top: 16px;
           `}
         >
-          <button css={swapThemeButtonStyles} onClick={toggleTheme}>
-            Swap Theme
-          </button>
+          {shouldShowForEnvironment() && (
+            <button css={swapThemeButtonStyles} onClick={toggleTheme}>
+              Swap Theme
+            </button>
+          )}
           {storyFn()}
         </div>
       </ThemeProvider>
