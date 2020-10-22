@@ -14,8 +14,8 @@ import type { Meta } from '@storybook/react';
 import { FocusScope } from '@react-aria/focus';
 
 const FieldsContainer = styled.div`
-  margin: 1rem 0 2rem 0;
-  max-width: 325px;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+  max-width: 350px;
 `;
 
 const messagesOptions = {
