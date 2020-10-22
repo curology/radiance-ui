@@ -5,9 +5,9 @@
     "gzipped": 107677
   },
   "bundle.umd.js": {
-    "bundled": 1166577,
-    "minified": 1058884,
-    "gzipped": 103311
+    "bundled": 1166592,
+    "minified": 1058899,
+    "gzipped": 103313
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
