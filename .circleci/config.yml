@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 aliases:
     - &root ~/radiance-ui
@@ -115,6 +115,8 @@ jobs:
                 path: test-results
 
 workflows:
+    version: 2
+    
     build-and-test:
         jobs:
             - build-js
