@@ -96,6 +96,11 @@ const PRESERVE_STYLES = () => (
 export default {
   title: 'Components/DialogModal',
   component: DialogModal,
+  decorators: [
+    (storyFn) => (
+      <div style={{ width: '1200px', height: '800px' }}>{storyFn()}</div>
+    ),
+  ],
   parameters: {
     chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 25 },
     docs: {

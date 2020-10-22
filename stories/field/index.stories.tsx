@@ -15,7 +15,7 @@ import { FocusScope } from '@react-aria/focus';
 
 const FieldsContainer = styled.div`
   margin: 1rem 0 2rem 0;
-  max-width: 350px;
+  max-width: 325px;
 `;
 
 const messagesOptions = {
