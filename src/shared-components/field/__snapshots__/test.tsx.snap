@@ -103,12 +103,7 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
     />
     <ul
       className="emotion-2 emotion-3"
-    >
-      <li
-        in={true}
-        onExited={[Function]}
-      />
-    </ul>
+    />
   </div>
 </div>
 `;
@@ -396,12 +391,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
     />
     <ul
       className="emotion-4 emotion-5"
-    >
-      <li
-        in={true}
-        onExited={[Function]}
-      />
-    </ul>
+    />
   </div>
 </div>
 `;

@@ -59,7 +59,7 @@ export const VerificationMessages = ({
             </HelperTransition>
           ))
       ) : (
-        <li />
+        <React.Fragment />
       )}
     </TransitionGroup>
   );
