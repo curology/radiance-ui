@@ -35,7 +35,7 @@
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",
     "tsc": "tsc",
-    "chromatic": "chromatic --skip '@(master)' --project-token"
+    "chromatic": "chromatic --skip '@(master|dependabot/**)' --project-token"
   },
   "repository": {
     "type": "git",
@@ -126,10 +126,8 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.26.11",
     "rollup-plugin-size-snapshot": "0.12.0",
-    "tinycolor2": "^1.4.1",
     "typescript": "^4.0.2",
-    "webpack": "^4.41.2",
-    "yarn-run-all": "^3.1.1"
+    "webpack": "^4.41.2"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
