@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
-import { COLORS } from 'src/constants';
+import { BREAKPOINTS, COLORS } from 'src/constants';
 import {
   ArgsTable,
   Description,
@@ -56,7 +56,7 @@ export default {
   title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
-    chromatic: { disable: true },
+    chromatic: { disable: true, viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>

@@ -87,7 +87,7 @@ export const WithImage = () => (
  */
 export const WithAlertContainer = () => (
   <Alert.Container>
-    <Alert content="Alert.Container fixes my position" />
+    <Alert duration="sticky" content="Alert.Container fixes my position" />
   </Alert.Container>
 );
 

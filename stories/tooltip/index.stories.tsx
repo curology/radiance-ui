@@ -16,7 +16,7 @@ import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
 
 const TooltipContainer = styled.div<{ height?: string }>`
   max-width: 800px;
-  height: ${({ height = '225px' }) => height};
+  height: ${({ height = '275px' }) => height};
   display: flex;
   align-items: center;
   justify-content: space-between;

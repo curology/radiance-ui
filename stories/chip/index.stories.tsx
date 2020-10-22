@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Chip } from 'src/shared-components';
 import { text, select } from '@storybook/addon-knobs';
-import { SPACER } from 'src/constants';
+import { BREAKPOINTS, SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
 const ChipContainer = styled.div`
@@ -47,6 +47,7 @@ export default {
   title: 'Components/Chip',
   component: Chip,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>

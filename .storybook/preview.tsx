@@ -94,7 +94,12 @@ addParameters({
     options: {},
     manual: false,
   },
-  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md, BREAKPOINTS.lg] },
+  /**
+   * Defaults to smallest mobile and smallest desktop breakpoints for visual regression testing.
+   * Override on a per-story basis if component stories only need to test one breakpoint,
+   * typically small components that are the same on all views (e.g. Chip, Indicator)
+   */
+  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md] },
   docs: {
     theme: Theme,
   },

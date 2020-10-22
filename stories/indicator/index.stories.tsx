@@ -10,6 +10,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { BREAKPOINTS } from 'src/constants';
 
 export const NumbersAndText = () => (
   <React.Fragment>
@@ -29,6 +30,7 @@ export default {
   title: 'Components/Indicator',
   component: Indicator,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
