@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v12.2.1
+
+- [Hotfix] Fix VerificationMessages animation and ImmersiveModal exitlogic fix
+
 # v12.2.0
 
 - [Internal] TypeScript conversion: Typography, Tooltip, Tabs, Transition, SelectorButton/Checkbox/RadioButton
