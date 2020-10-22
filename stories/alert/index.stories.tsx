@@ -10,7 +10,6 @@ import {
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';
-import { ANIMATION } from 'src/constants';
 
 export const Default = () => (
   <Alert content="Default Alert: it will disappear after 3 seconds" />
@@ -87,7 +86,7 @@ export const WithImage = () => (
  */
 export const WithAlertContainer = () => (
   <Alert.Container>
-    <Alert duration="sticky" content="Alert.Container fixes my position" />
+    <Alert content="Alert.Container fixes my position" />
   </Alert.Container>
 );
 

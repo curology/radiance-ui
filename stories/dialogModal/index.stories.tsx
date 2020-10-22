@@ -193,7 +193,6 @@ export default {
           <Canvas>
             <Story id={WithCloseIcon.id} />
           </Canvas>
-          {/* <PRESERVE_STYLES /> */}
         </React.Fragment>
       ),
     },
