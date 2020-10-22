@@ -35,7 +35,7 @@
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",
     "tsc": "tsc",
-    "chromatic": "chromatic --skip '@(master|dependabot/**)' --project-token"
+    "chromatic": "chromatic --skip '@(master)' --project-token"
   },
   "repository": {
     "type": "git",
