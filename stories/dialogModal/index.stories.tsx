@@ -49,7 +49,7 @@ export const Default = () => {
 
 Default.id = `${DIALOG_MODAL_STORY_ID_PREFIX}default`;
 Default.parameters = {
-  chromatic: { disabled: true },
+  chromatic: { disable: true },
 };
 
 export const DefaultOpened = () => {
