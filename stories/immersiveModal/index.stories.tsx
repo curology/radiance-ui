@@ -18,12 +18,21 @@ import headerImage from './headerImage.jpg';
 
 const IMMERSIVE_MODAL_STORY_ID_PREFIX = 'components-immersivemodal--';
 
-const LoremIpsumBlock = () => (
+const LoremIpsumMarkup = () => (
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo
     magni, sequi similique nisi ab. Culpa, debitis? Quibusdam porro accusamus
     asperiores. Et ab nobis saepe optio hic eveniet consectetur error?
   </p>
+);
+
+const LoremIpsumBlock = ({ repeat = 1 }) => (
+  <React.Fragment>
+    {new Array(repeat).fill(LoremIpsumMarkup).map((El, idx) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <El key={repeat - idx} />
+    ))}
+  </React.Fragment>
 );
 
 export const WithFooterButtons = () => {
@@ -105,14 +114,7 @@ export const WithHeaderImage = () => {
           headerImage={<img src={headerImage} alt="header" />}
           title="With image as header"
         >
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
+          <LoremIpsumBlock repeat={8} />
         </ImmersiveModal>
       )}
     </React.Fragment>
@@ -139,14 +141,7 @@ export const WithHeaderImageOpened = () => {
           headerImage={<img src={headerImage} alt="header" />}
           title="With image as header"
         >
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
+          <LoremIpsumBlock repeat={8} />
         </ImmersiveModal>
       )}
     </React.Fragment>
@@ -167,23 +162,7 @@ export const WithScrollingContent = () => {
       <Button onClick={onClick}>with scrolling content</Button>
       {withScrolling && (
         <ImmersiveModal onClose={onClose} title="Immersive modal title">
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
+          <LoremIpsumBlock repeat={16} />
         </ImmersiveModal>
       )}
     </React.Fragment>
@@ -206,23 +185,7 @@ export const WithScrollingContentOpened = () => {
       <Button onClick={onClick}>with scrolling content</Button>
       {withScrolling && (
         <ImmersiveModal onClose={onClose} title="Immersive modal title">
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
-          <LoremIpsumBlock />
+          <LoremIpsumBlock repeat={16} />
         </ImmersiveModal>
       )}
     </React.Fragment>
