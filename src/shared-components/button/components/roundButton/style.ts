@@ -58,7 +58,7 @@ export const roundButtonLoader = (disabled: boolean) => css`
   margin: -3px -3px 0 0;
 
   ${disabled &&
-  `
+    `
     & span {
       background-color: ${COLORS.white};
     }
