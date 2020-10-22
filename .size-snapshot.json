@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1156695,
-    "minified": 1085196,
-    "gzipped": 107668
+    "bundled": 1156793,
+    "minified": 1085245,
+    "gzipped": 107677
   },
   "bundle.umd.js": {
-    "bundled": 1166477,
-    "minified": 1058851,
-    "gzipped": 103302
+    "bundled": 1166577,
+    "minified": 1058884,
+    "gzipped": 103311
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -192,13 +192,13 @@
     }
   },
   "shared-components/verificationMessages/index.js": {
-    "bundled": 1760,
-    "minified": 909,
-    "gzipped": 447,
+    "bundled": 1802,
+    "minified": 942,
+    "gzipped": 462,
     "treeshaked": {
       "rollup": {
-        "code": 360,
-        "import_statements": 305
+        "code": 367,
+        "import_statements": 312
       },
       "webpack": {
         "code": 1444
@@ -1158,9 +1158,9 @@
     }
   },
   "shared-components/immersiveModal/index.js": {
-    "bundled": 6779,
-    "minified": 3713,
-    "gzipped": 1376,
+    "bundled": 6821,
+    "minified": 3718,
+    "gzipped": 1381,
     "treeshaked": {
       "rollup": {
         "code": 888,
