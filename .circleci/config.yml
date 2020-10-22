@@ -57,7 +57,7 @@ jobs:
                 paths:
                     - node_modules
     
-    build-radiance:
+    build:
         <<: *defaults
         docker:
             - image: circleci/node:10-stretch
@@ -124,7 +124,7 @@ workflows:
             - test-tsc:
                 requires:
                     - build-js
-            - build-radiance:
+            - build:
                 requires:
                     - test-js
                     - test-tsc
