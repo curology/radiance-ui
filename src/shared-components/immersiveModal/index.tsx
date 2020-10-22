@@ -106,6 +106,10 @@ export const ImmersiveModal = ({
   }, 100);
 
   const handleCloseIntent = () => {
+    if (isClosing) {
+      return;
+    }
+
     setIsClosing(true);
     setShowMobileHeaderBar(false);
     setTimeout(onClose, 450);
