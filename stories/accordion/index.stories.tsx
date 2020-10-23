@@ -158,7 +158,7 @@ export default {
           <ArgsTable />
           <Heading>Stories</Heading>
           <Anchor storyId={Standard.id} />
-          <Heading>{Standard.storyName}</Heading>
+          <Heading>Standard</Heading>
           <Canvas>
             <Story id={Standard.id} />
           </Canvas>

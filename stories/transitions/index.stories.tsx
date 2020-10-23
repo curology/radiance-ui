@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ArgsTable,
-  Description,
   Heading,
   Source,
   Stories,
