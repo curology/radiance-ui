@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1155477,
-    "minified": 1084427,
-    "gzipped": 107375
+    "bundled": 1152684,
+    "minified": 1082458,
+    "gzipped": 106832
   },
   "bundle.umd.js": {
-    "bundled": 1165190,
-    "minified": 1058134,
-    "gzipped": 103059
+    "bundled": 1162243,
+    "minified": 1056411,
+    "gzipped": 102611
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -220,9 +220,9 @@
     }
   },
   "shared-components/banner/index.js": {
-    "bundled": 1438,
-    "minified": 934,
-    "gzipped": 445,
+    "bundled": 1511,
+    "minified": 956,
+    "gzipped": 452,
     "treeshaked": {
       "rollup": {
         "code": 429,
@@ -612,16 +612,16 @@
     }
   },
   "shared-components/accordion/thumbnails/index.js": {
-    "bundled": 1977,
-    "minified": 1098,
-    "gzipped": 516,
+    "bundled": 1283,
+    "minified": 682,
+    "gzipped": 345,
     "treeshaked": {
       "rollup": {
-        "code": 842,
-        "import_statements": 326
+        "code": 236,
+        "import_statements": 205
       },
       "webpack": {
-        "code": 2082
+        "code": 1714
       }
     }
   },
@@ -752,16 +752,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 12191,
-    "minified": 9641,
-    "gzipped": 4081,
+    "bundled": 10387,
+    "minified": 8506,
+    "gzipped": 3759,
     "treeshaked": {
       "rollup": {
-        "code": 2082,
-        "import_statements": 643
+        "code": 1701,
+        "import_statements": 568
       },
       "webpack": {
-        "code": 3446
+        "code": 3047
       }
     }
   },
@@ -822,16 +822,16 @@
     }
   },
   "shared-components/button/shared-components/loader/index.js": {
-    "bundled": 1300,
-    "minified": 929,
-    "gzipped": 423,
+    "bundled": 1667,
+    "minified": 928,
+    "gzipped": 451,
     "treeshaked": {
       "rollup": {
-        "code": 778,
+        "code": 274,
         "import_statements": 169
       },
       "webpack": {
-        "code": 1976
+        "code": 1984
       }
     }
   },
@@ -922,7 +922,7 @@
   "shared-components/accordion/index.js": {
     "bundled": 3889,
     "minified": 1743,
-    "gzipped": 820,
+    "gzipped": 821,
     "treeshaked": {
       "rollup": {
         "code": 1450,
@@ -1032,13 +1032,13 @@
     }
   },
   "shared-components/button/components/textButton/index.js": {
-    "bundled": 1468,
-    "minified": 756,
-    "gzipped": 391,
+    "bundled": 1440,
+    "minified": 736,
+    "gzipped": 387,
     "treeshaked": {
       "rollup": {
-        "code": 161,
-        "import_statements": 129
+        "code": 267,
+        "import_statements": 235
       },
       "webpack": {
         "code": 1357
@@ -1048,7 +1048,7 @@
   "shared-components/carousel/index.js": {
     "bundled": 6827,
     "minified": 3312,
-    "gzipped": 1267,
+    "gzipped": 1268,
     "treeshaked": {
       "rollup": {
         "code": 2939,
@@ -1144,16 +1144,16 @@
     }
   },
   "shared-components/alert/index.js": {
-    "bundled": 6336,
-    "minified": 3140,
-    "gzipped": 1296,
+    "bundled": 5390,
+    "minified": 2479,
+    "gzipped": 1091,
     "treeshaked": {
       "rollup": {
-        "code": 2538,
-        "import_statements": 681
+        "code": 1971,
+        "import_statements": 643
       },
       "webpack": {
-        "code": 4060
+        "code": 3491
       }
     }
   },
@@ -1172,23 +1172,23 @@
     }
   },
   "shared-components/button/components/linkButton/index.js": {
-    "bundled": 2791,
-    "minified": 1405,
-    "gzipped": 627,
+    "bundled": 2763,
+    "minified": 1385,
+    "gzipped": 620,
     "treeshaked": {
       "rollup": {
-        "code": 376,
-        "import_statements": 240
+        "code": 1083,
+        "import_statements": 374
       },
       "webpack": {
-        "code": 2400
+        "code": 2396
       }
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 39734,
-    "minified": 38735,
-    "gzipped": 4816,
+    "bundled": 39686,
+    "minified": 38687,
+    "gzipped": 4851,
     "treeshaked": {
       "rollup": {
         "code": 2636,
@@ -1270,16 +1270,16 @@
     }
   },
   "shared-components/button/components/roundButton/index.js": {
-    "bundled": 3727,
-    "minified": 1961,
-    "gzipped": 791,
+    "bundled": 3699,
+    "minified": 1941,
+    "gzipped": 785,
     "treeshaked": {
       "rollup": {
-        "code": 1510,
+        "code": 1506,
         "import_statements": 583
       },
       "webpack": {
-        "code": 2842
+        "code": 2838
       }
     }
   },
