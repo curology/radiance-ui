@@ -38,16 +38,16 @@ const getStyleForTransitionState = (transitionState: string) => {
 
 type HelperTransitionParamsType = {
   children: JSX.Element;
-  props: Array<unknown>;
+  [key: string]: any;
 };
 
 const HelperTransition = ({
   children: child,
   ...props
-}: HelperTransitionParamsType): React.ReactNode => (
+}: HelperTransitionParamsType) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <Transition timeout={350} {...props}>
-    {(transitionState): React.ReactNode =>
+    {(transitionState) =>
       React.cloneElement(child, {
         style: getStyleForTransitionState(transitionState),
       })

@@ -27,7 +27,14 @@ type BannerProps = {
   onClick?: () => void;
 };
 
-const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
+/**
+ * The `<Banner />` component provides only the styling and onClick behavior of banners.
+ *
+ * Management of what banners are showing on the screen must be handled from outside of this component.
+ *
+ * Banners are not dismissable.
+ */
+export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
   const Icon = bannerIconMapping[type];
 
   return (
@@ -51,5 +58,3 @@ Banner.propTypes = {
   type: PropTypes.oneOf(['default', 'success', 'error']),
   onClick: PropTypes.func,
 };
-
-export default Banner;

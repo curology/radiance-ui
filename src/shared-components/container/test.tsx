@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Container from './index';
+import { Container } from './index';
 
 describe('Container UI snapshots', () => {
   test('renders basic container', () => {

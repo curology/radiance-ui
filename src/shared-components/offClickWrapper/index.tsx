@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 type OffClickWrapperProps = {
+  /**
+   * Content/container that ignores clicks inside it
+   */
   children: React.ReactNode;
   className?: string;
+  /**
+   * Function invoked when clicking outside of the children content
+   */
   onOffClick: (event: KeyboardEvent | MouseEvent) => void;
 };
 
-class OffClickWrapper extends React.Component<OffClickWrapperProps> {
+export class OffClickWrapper extends React.Component<OffClickWrapperProps> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
@@ -75,5 +81,3 @@ class OffClickWrapper extends React.Component<OffClickWrapperProps> {
     );
   }
 }
-
-export default OffClickWrapper;

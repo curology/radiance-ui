@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import AcneGlyph from '../../svgs/glyphs/acne-glyph.svg';
 
-import OptionButton from './index';
+import { OptionButton } from './index';
 
 describe('<OptionButton />', () => {
   describe('UI snapshots', () => {

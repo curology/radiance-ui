@@ -1,5 +1,17 @@
 # CHANGELOG
 
+# v12.2.1
+
+- [Hotfix] Fix VerificationMessages animation and ImmersiveModal exitlogic fix
+
+# v12.2.0
+
+- [Internal] TypeScript conversion: Typography, Tooltip, Tabs, Transition, SelectorButton/Checkbox/RadioButton
+
+# v12.1.0
+
+- [Internal] TypeScript conversion: VerificationMessages, Field
+
 # v12.0.0
 
 - [API] **BREAKING**: Removes `BOX_SHADOWS.focusSecondary`. Please replace usage with with `BOX_SHADOWS.focus`. ([#400](https://github.com/curology/radiance-ui/pull/400))

@@ -78,7 +78,7 @@ export const TitleWrapper = styled.div<{
   ${AccordionBox}:last-of-type & {
     &:focus {
       ${({ borderRadius, isOpen }) =>
-    !isOpen &&
+        !isOpen &&
         `
         border-bottom-left-radius: ${borderRadius}; 
         border-bottom-right-radius: ${borderRadius};
@@ -118,15 +118,15 @@ export const Container = styled.div<{ borderRadius?: string }>`
         border-top-right-radius: ${borderRadius};
       }
     }
-  
+
     > div:last-of-type {
       border-bottom-left-radius: ${borderRadius};
       border-bottom-right-radius: ${borderRadius};
-  
+
       ${AccordionBox} {
         border-bottom-left-radius: ${borderRadius};
         border-bottom-right-radius: ${borderRadius};
       }
     }
-`}
+  `}
 `;

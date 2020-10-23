@@ -1,26 +1,45 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import MobileDropdown from './mobileDropdown';
-import DesktopDropdown from './desktopDropdown';
+import { MobileDropdown } from './mobileDropdown';
+import { DesktopDropdown } from './desktopDropdown';
 import allowNullPropType from '../../utils/allowNullPropType';
 
 export type OptionType = {
+  /**
+   * The option indentifier
+   */
   value: string | undefined;
+  /**
+   * The text to be displayed for the option
+   */
   label: string;
   disabled?: boolean;
 };
 
 type DropdownProps = {
   borderRadius?: string;
+  /**
+   * The handler to be invoked on option change
+   */
   onChange: (option: OptionType) => void;
   options: OptionType[];
+  /**
+   * Specifies maximum height of the expanded dropdown
+   */
   optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
+  /**
+   * The currently selected option. Can mount as `null`
+   */
   value?: string;
 };
 
-const Dropdown = ({
+/**
+ * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
+ * This ships with a mobile implementation that will handle mobile devices automatically.
+ */
+export const Dropdown = ({
   borderRadius = '4px',
   onChange,
   options,
@@ -107,5 +126,3 @@ Dropdown.propTypes = {
   onChange: PropTypes.func.isRequired,
   optionsContainerMaxHeight: PropTypes.string,
 };
-
-export default Dropdown;

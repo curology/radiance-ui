@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import {
-  SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
+ SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
 } from '../../constants';
 
 const clickableStyle = css`
@@ -24,10 +24,6 @@ const messageStyle = css`
 
 export type ContainerType = 'clickable' | 'message';
 
-/**
- * TODO: Determine if we should return a style by default
- * instead of no style at all.
- */
 const getContainerTypeStyles = (type?: ContainerType) => {
   switch (type) {
     case 'message':

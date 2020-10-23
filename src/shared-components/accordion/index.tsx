@@ -28,17 +28,12 @@ type AccordionProps = {
 };
 
 /**
- * TODO-TS: Convert to Function component and use ES6 defaults
+ * A list of items that allows each item's content to be expanded and collapsed by clicking its title bar.
+ *
+ * The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
  */
-type AccordionDefaultProps = {
-  borderRadius: string;
-  disabled: boolean;
-  noBorder: boolean;
-  rightAlignArrow: boolean;
-};
-
-class Accordion extends React.Component<
-  AccordionProps & AccordionDefaultProps,
+export class Accordion extends React.Component<
+  AccordionProps & Required<AccordionProps>,
   { contentHeight: string }
 > {
   static propTypes = {
@@ -165,5 +160,3 @@ class Accordion extends React.Component<
     );
   }
 }
-
-export default Accordion;

@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Avatar from './index';
+import { Avatar } from '.';
 
 describe('<Avatar />', () => {
   const imageExample =

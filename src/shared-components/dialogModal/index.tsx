@@ -13,9 +13,18 @@ import {
 } from './style';
 
 type DialogModalProps = {
+  /**
+   * Dialog Modal content.
+   * Must contain at least 1 button and is responsible for closing the modal.
+   */
   children: React.ReactNode;
+  /**
+   * If provided, DialogModal displays a Close Icon positioned top-right.
+   * This function must contain the logic for closing the modal.
+   */
   onCloseIconClick?: () => void | null;
   title?: string;
+  [key: string]: any;
 };
 
 type DialogModalState = {
@@ -24,7 +33,17 @@ type DialogModalState = {
 
 const reactPortalSectionId = '#reactPortalSection';
 
-class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
+/**
+ * Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.
+ *
+ * Dialog modals require a user to make a choice between options and are not closable on click/tap outside. They may contain a close button if a close function is provided.
+ *
+ * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
+ */
+export class DialogModal extends React.Component<
+  DialogModalProps,
+  DialogModalState
+> {
   static propTypes = {
     children: PropTypes.node.isRequired,
     onCloseIconClick: PropTypes.func,
@@ -62,7 +81,7 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   }
 
   handleCloseIntent = (): void => {
-    const { onCloseIconClick } = this.props;
+    const { onCloseIconClick } = this.props as Required<DialogModalProps>;
 
     if (onCloseIconClick) {
       this.setState({ isClosing: true });
@@ -79,8 +98,8 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
   render(): JSX.Element {
     const {
       children, title, onCloseIconClick, ...rest 
-    } = this.props;
-
+    } = this
+      .props as Required<DialogModalProps>;
     const { isClosing } = this.state;
 
     return ReactDOM.createPortal(
@@ -123,5 +142,3 @@ class DialogModal extends React.Component<DialogModalProps, DialogModalState> {
     );
   }
 }
-
-export default DialogModal;
