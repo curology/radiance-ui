@@ -4,7 +4,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -87,10 +86,11 @@ export default {
             language="tsx"
             code={"import { Dropdown } from 'radiance-ui';"}
           />
-          <Primary />
+          <Heading>Dropdown Props:</Heading>
           <ArgsTable of={Dropdown} />
-          <Stories />
+          <Stories includePrimary />
           <Description of={MobileDropdown} />
+          <Heading>MobileDropdown Props:</Heading>
           <ArgsTable of={MobileDropdown} />
         </React.Fragment>
       ),

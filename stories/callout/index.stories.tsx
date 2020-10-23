@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -11,7 +10,7 @@ import {
 import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { NeckGlyph } from 'src/svgs/glyphs';
-import { COLORS } from 'src/constants';
+import { BREAKPOINTS, COLORS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
 export const Default = () => (
@@ -45,6 +44,10 @@ export const WithoutContainer = () => (
   </Callout>
 );
 
+WithoutContainer.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md] },
+};
+
 export const WithControls = () => (
   <Callout
     icon={
@@ -58,10 +61,15 @@ export const WithControls = () => (
   </Callout>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Callout',
   component: Callout,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -72,10 +80,9 @@ export default {
             language="tsx"
             code={"import { Callout } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

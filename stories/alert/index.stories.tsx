@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -95,6 +94,10 @@ export default {
   title: 'Components/Alert',
   component: Alert,
   parameters: {
+    /**
+     * TODO: Figure out how to get Alerts to show up on Chromatic
+     */
+    chromatic: { disable: true },
     docs: {
       page: () => (
         <React.Fragment>
@@ -105,10 +108,9 @@ export default {
             language="tsx"
             code={"import { Alert } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
           <Description>
             Alert.Container Absolutely positions the alerts by default. (As
             such, it escapes the canvas container.)

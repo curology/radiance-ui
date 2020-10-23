@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary as PrimaryBlock,
   Source,
   Stories,
   Title,
@@ -64,6 +63,10 @@ export const WithControls = () => (
   </Checkbox>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
@@ -78,10 +81,9 @@ export default {
             language="tsx"
             code={"import { Checkbox } from 'radiance-ui';"}
           />
-          <PrimaryBlock />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },
