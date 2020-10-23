@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1156793,
-    "minified": 1085245,
-    "gzipped": 107677
+    "bundled": 1156907,
+    "minified": 1085150,
+    "gzipped": 107614
   },
   "bundle.umd.js": {
-    "bundled": 1166592,
-    "minified": 1058899,
-    "gzipped": 103313
+    "bundled": 1166702,
+    "minified": 1058804,
+    "gzipped": 103244
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -108,7 +108,7 @@
     }
   },
   "utils/withDeprecationWarning/index.js": {
-    "bundled": 823,
+    "bundled": 1033,
     "minified": 445,
     "gzipped": 278,
     "treeshaked": {
@@ -318,9 +318,9 @@
     }
   },
   "utils/allowNullPropType/index.js": {
-    "bundled": 388,
-    "minified": 228,
-    "gzipped": 188,
+    "bundled": 291,
+    "minified": 133,
+    "gzipped": 111,
     "treeshaked": {
       "rollup": {
         "code": 0,
@@ -906,7 +906,7 @@
     }
   },
   "constants/boxShadows/index.js": {
-    "bundled": 1687,
+    "bundled": 1688,
     "minified": 1530,
     "gzipped": 520,
     "treeshaked": {
