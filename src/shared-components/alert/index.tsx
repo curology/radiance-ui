@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Avatar } from '../avatar';
@@ -28,18 +28,14 @@ const alertIconMapping = {
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
 type AlertProps = {
-  avatarSrc: string;
+  avatarSrc?: string;
   content: React.ReactNode;
-  ctaContent: React.ReactNode;
-  duration: string | number;
-  truncateText: boolean;
-  type: AlertType;
-  onExit: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
-};
-
-type AlertState = {
-  exiting: boolean;
-  exited: boolean;
+  ctaContent?: React.ReactNode;
+  duration?: string | number;
+  truncateText?: boolean;
+  type?: AlertType;
+  onExit?: () => void;
+  [key: string]: unknown;
 };
 
 /**
@@ -61,45 +57,37 @@ type AlertState = {
  *
  * All alerts are dimissable by clicking on them. However, you can use the `duration` prop to determine if the alert is sticky or dismissed on a timer (in units of seconds).
  */
-export class Alert extends React.Component<AlertProps, AlertState> {
-  static propTypes = {
-    avatarSrc: PropTypes.string,
-    content: PropTypes.node.isRequired,
-    ctaContent: PropTypes.node,
-    duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    truncateText: PropTypes.bool,
-    type: PropTypes.oneOf(['success', 'error', 'default']),
-    onExit: PropTypes.func,
+export const Alert = ({
+  avatarSrc = '',
+  content,
+  ctaContent = null,
+  duration = 3,
+  truncateText = false,
+  type = 'default',
+  onExit = () => undefined,
+  ...rest
+}: AlertProps) => {
+  const [exiting, setExiting] = useState(false);
+  const [exited, setExited] = useState(false);
+
+  const contentText = React.createRef<HTMLDivElement>();
+
+  let timer: number | undefined;
+
+  const alertExitHandler = () => {
+    setExiting(true);
+    window.clearTimeout(timer);
+
+    window.setTimeout(() => {
+      setExited(true);
+      onExit();
+    }, ANIMATION_DELAY);
   };
 
-  static defaultProps = {
-    avatarSrc: '',
-    ctaContent: null,
-    duration: 3,
-    truncateText: false,
-    type: 'default',
-    onExit: () => undefined,
-  };
-
-  static Container = ({ children }: { children: React.ReactNode }) => (
-    <AlertsContainer>{children}</AlertsContainer>
-  );
-
-  contentText = React.createRef<HTMLDivElement>();
-
-  timer: number | undefined;
-
-  state = {
-    exiting: false,
-    exited: false,
-  };
-
-  componentDidMount() {
-    const { duration, ctaContent, truncateText } = this.props;
-
+  useEffect(() => {
     // Truncate text logic
     if (truncateText) {
-      const contentElement = this.contentText.current;
+      const contentElement = contentText.current;
       if (contentElement) {
         const wordsArray = contentElement.innerHTML.split(' ');
         while (contentElement.scrollHeight > contentElement.offsetHeight) {
@@ -114,77 +102,65 @@ export class Alert extends React.Component<AlertProps, AlertState> {
       return;
     }
 
-    this.timer = window.setTimeout(
-      this.alertExitHandler,
+    timer = window.setTimeout(
+      alertExitHandler,
       Number(duration) * 1000 - ANIMATION_DELAY,
     );
+
+    // ComponentWillUnmount cleanup
+    return () => {
+      if (timer) {
+        window.clearTimeout(timer);
+      }
+    };
+  }, []);
+
+  if (exited) {
+    return null;
   }
 
-  componentWillUnmount() {
-    if (this.timer) {
-      window.clearTimeout(this.timer);
-    }
-  }
+  const Icon = alertIconMapping[type];
 
-  alertExitHandler = () => {
-    const { onExit, ...rest } = this.props;
-    this.setState({ exiting: true });
+  return (
+    <AlertContainer
+      alertType={type}
+      exiting={exiting}
+      onClick={alertExitHandler}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
+    >
+      <MainContainer>
+        <IconContainer hasAvatar={!!avatarSrc}>
+          {avatarSrc ? (
+            <Avatar size="small" src={avatarSrc} alt="avatar" />
+          ) : (
+            <Icon fill={COLORS.white} />
+          )}
+        </IconContainer>
+        <ContentContainer truncateText={truncateText} ref={contentText}>
+          {content}
+        </ContentContainer>
+      </MainContainer>
+      {ctaContent && (
+        <CtaContent>
+          <div>{ctaContent}</div>
+          <ChevronIcon fill={COLORS.white} width={14} height={14} />
+        </CtaContent>
+      )}
+    </AlertContainer>
+  );
+};
 
-    window.clearTimeout(this.timer);
+Alert.Container = ({ children }: { children: React.ReactNode }) => (
+  <AlertsContainer>{children}</AlertsContainer>
+);
 
-    window.setTimeout(() => {
-      this.setState({ exited: true });
-
-      onExit({ ...rest });
-    }, ANIMATION_DELAY);
-  };
-
-  render() {
-    const {
-      avatarSrc,
-      content,
-      ctaContent,
-      truncateText,
-      type,
-      // need to destructure onExit to avoid passing as AlertContainer attribute with ...rest
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      onExit,
-      ...rest
-    } = this.props;
-    const { exiting, exited } = this.state;
-    const Icon = alertIconMapping[type];
-
-    if (exited) {
-      return null;
-    }
-
-    return (
-      <AlertContainer
-        alertType={type}
-        exiting={exiting}
-        onClick={this.alertExitHandler}
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...rest}
-      >
-        <MainContainer>
-          <IconContainer hasAvatar={!!avatarSrc}>
-            {avatarSrc ? (
-              <Avatar size="small" src={avatarSrc} alt="avatar" />
-            ) : (
-              <Icon fill={COLORS.white} />
-            )}
-          </IconContainer>
-          <ContentContainer truncateText={truncateText} ref={this.contentText}>
-            {content}
-          </ContentContainer>
-        </MainContainer>
-        {ctaContent && (
-          <CtaContent>
-            <div>{ctaContent}</div>
-            <ChevronIcon fill={COLORS.white} width={14} height={14} />
-          </CtaContent>
-        )}
-      </AlertContainer>
-    );
-  }
-}
+Alert.propTypes = {
+  avatarSrc: PropTypes.string,
+  content: PropTypes.node.isRequired,
+  ctaContent: PropTypes.node,
+  duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  truncateText: PropTypes.bool,
+  type: PropTypes.oneOf(['success', 'error', 'default']),
+  onExit: PropTypes.func,
+};
