@@ -44,10 +44,10 @@ aliases:
         run:
             name: Publish to Chromatic
             command: |
-                if [ "${CIRCLE_BRANCH}" != "master" ];
-                    yarn chromatic
+                if [ "${CIRCLE_BRANCH}" != "master" ]; then
+                    yarn chromatic ${CHROMATIC_PROJECT_TOKEN}
                 else
-                    yarn chromatic --auto-accept-changes
+                    yarn chromatic --auto-accept-changes ${CHROMATIC_PROJECT_TOKEN}
                 fi
 
 jobs:
