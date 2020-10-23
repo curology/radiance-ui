@@ -2,12 +2,13 @@ import React from 'react';
 import {
   Description,
   Heading,
-  Primary,
   Source,
+  Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Typography } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
+import { BREAKPOINTS } from 'src/constants';
 
 export const Usage = () => (
   <React.Fragment>
@@ -32,6 +33,7 @@ export default {
   title: 'Components/Typography',
   parameters: {
     docs: {
+      chromatic: { viewports: [BREAKPOINTS.xs] },
       page: () => (
         <React.Fragment>
           <Title />
@@ -46,7 +48,7 @@ export default {
             language="tsx"
             code={"import { Typography } from 'radiance-ui';"}
           />
-          <Primary />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

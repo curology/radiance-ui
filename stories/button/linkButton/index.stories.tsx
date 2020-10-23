@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -89,6 +88,10 @@ export const WithControls = () => (
   </LinkButton.Container>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Button/LinkButton',
   component: LinkButton,
@@ -103,10 +106,9 @@ export default {
             language="tsx"
             code={"import { LinkButton } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

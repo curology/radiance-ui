@@ -7,7 +7,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary as PrimaryBlock,
   Source,
   Stories,
   Title,
@@ -80,6 +79,10 @@ export const WithControls = () => (
   </RadioButton>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/RadioButton',
   component: RadioButton,
@@ -94,10 +97,9 @@ export default {
             language="tsx"
             code={"import { RadioButton } from 'radiance-ui';"}
           />
-          <PrimaryBlock />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

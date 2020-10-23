@@ -5,12 +5,12 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { BREAKPOINTS } from 'src/constants';
 
 export const NumbersAndText = () => (
   <React.Fragment>
@@ -22,10 +22,15 @@ export const NumbersAndText = () => (
 
 export const WithControls = () => <Indicator text={text('text', '10')} />;
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Indicator',
   component: Indicator,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -36,10 +41,9 @@ export default {
             language="tsx"
             code={"import { Indicator } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

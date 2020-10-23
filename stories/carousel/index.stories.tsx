@@ -4,7 +4,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -108,6 +107,10 @@ export const WithControls = () => (
   </CarouselContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Carousel',
   component: Carousel,
@@ -122,10 +125,9 @@ export default {
             language="tsx"
             code={"import { Carousel } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

@@ -8,6 +8,7 @@ import {
   resetStyles,
   brandStyles,
 } from '../src/utils/injectGlobalStyles/style';
+import { BREAKPOINTS } from '../src/constants';
 
 const InjectGlobalStyles = (storyFn) => (
   <React.Fragment>
@@ -71,7 +72,7 @@ addDecorator(InjectGlobalStyles);
 const ADDONS_REQUIRED_IN_OPTIONS = {
   isFullscreen: false,
   isToolshown: true,
-  panelPosition: 'right',
+  panelPosition: 'bottom',
   showNav: true,
   showPanel: true,
 };
@@ -93,6 +94,12 @@ addParameters({
     options: {},
     manual: false,
   },
+  /**
+   * Defaults to smallest mobile and smallest desktop breakpoints for visual regression testing.
+   * Override on a per-story basis if component stories only need to test one breakpoint,
+   * typically small components that are the same on all views (e.g. Chip, Indicator)
+   */
+  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md] },
   docs: {
     theme: Theme,
   },

@@ -13,3 +13,7 @@ export const WithControls = () => (
     className={text('additional css class names', '')}
   />
 );
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};

@@ -5,6 +5,7 @@ import {
   Description,
   Canvas,
   Source,
+  Heading,
 } from '@storybook/addon-docs/blocks';
 
 import * as IconStories from './index.stories.tsx';
@@ -25,6 +26,7 @@ import { CameraIcon } from 'radiance-ui/lib/icons';
   <Story story={IconStories.WithControls} />
 </Canvas>
 
+<Heading>Props:</Heading>
 <ArgsTable of={IconStories.MockIcon} />
 
 <Canvas>

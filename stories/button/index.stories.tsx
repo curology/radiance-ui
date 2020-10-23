@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -130,6 +129,10 @@ export const WithControls = () => (
   </Button.Container>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Button/Button',
   component: Button,
@@ -144,10 +147,9 @@ export default {
             language="tsx"
             code={"import { Button } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

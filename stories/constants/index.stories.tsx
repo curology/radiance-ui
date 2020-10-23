@@ -7,6 +7,7 @@ import {
   Stories,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { BREAKPOINTS } from 'src/constants';
 
 export * from './availableConstants.stories';
 export * from './boxShadows.stories';
@@ -15,6 +16,7 @@ export * from './colors.stories';
 export default {
   title: 'Constants/CONSTANTS',
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>

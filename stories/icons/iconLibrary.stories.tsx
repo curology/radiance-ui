@@ -5,6 +5,7 @@ import * as glyphComponents from 'src/svgs/glyphs';
 import * as logoComponents from 'src/svgs/logos';
 import * as navIconComponents from 'src/svgs/navIcons';
 import { Typography } from 'src/shared-components';
+import { BREAKPOINTS } from 'src/constants';
 
 import Style from './style';
 
@@ -63,3 +64,7 @@ export const IconLibrary = () => (
     </Style.Icons>
   </React.Fragment>
 );
+
+IconLibrary.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
