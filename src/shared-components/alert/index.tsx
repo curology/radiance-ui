@@ -62,9 +62,9 @@ export const Alert = ({
   content,
   ctaContent = null,
   duration = 3,
+  onExit = () => undefined,
   truncateText = false,
   type = 'default',
-  onExit = () => undefined,
   ...rest
 }: AlertProps) => {
   const [exiting, setExiting] = useState(false);
@@ -160,7 +160,7 @@ Alert.propTypes = {
   content: PropTypes.node.isRequired,
   ctaContent: PropTypes.node,
   duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onExit: PropTypes.func,
   truncateText: PropTypes.bool,
   type: PropTypes.oneOf(['success', 'error', 'default']),
-  onExit: PropTypes.func,
 };

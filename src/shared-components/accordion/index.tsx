@@ -100,6 +100,14 @@ export const Accordion = ({
   );
 };
 
+Accordion.Container = Container;
+
+Accordion.Content = Content;
+
+Accordion.Thumbnails = Thumbnails;
+
+Accordion.Truncate = Truncate;
+
 Accordion.propTypes = {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
   borderRadius: PropTypes.string,
@@ -118,11 +126,3 @@ Accordion.propTypes = {
   /** node that will render whether collapsed or expanded */
   title: PropTypes.node.isRequired,
 };
-
-Accordion.Container = Container;
-
-Accordion.Content = Content;
-
-Accordion.Thumbnails = Thumbnails;
-
-Accordion.Truncate = Truncate;

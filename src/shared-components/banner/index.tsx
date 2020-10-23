@@ -23,8 +23,8 @@ export type BannerType = 'default' | 'success' | 'error' | 'danger';
 
 type BannerProps = {
   content: React.ReactNode;
-  type?: BannerType;
   onClick?: () => void;
+  type?: BannerType;
 };
 
 /**
@@ -34,7 +34,11 @@ type BannerProps = {
  *
  * Banners are not dismissable.
  */
-export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
+export const Banner = ({
+  content,
+  type = 'default',
+  onClick = undefined,
+}: BannerProps) => {
   const Icon = bannerIconMapping[type];
 
   return (
@@ -55,6 +59,6 @@ export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
 
 Banner.propTypes = {
   content: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['default', 'success', 'error']),
   onClick: PropTypes.func,
+  type: PropTypes.oneOf(['default', 'success', 'error']),
 };
