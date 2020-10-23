@@ -19,7 +19,7 @@ export const Usage = () => {
 
   const onClickTab = (tab: { id: number; text: string }) => {
     // Add any additional callbacks here
-    console.log(tab); // eslint-disable-line
+    console.warn(tab);
   };
 
   return (

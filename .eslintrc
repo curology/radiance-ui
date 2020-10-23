@@ -44,6 +44,7 @@
     "@typescript-eslint/no-use-before-define": "error",
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "arrow-parens": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-duplicate-imports": "off",
     "no-shadow": "off",
     "no-underscore-dangle": [
@@ -76,6 +77,8 @@
     "import/extensions": [
       "error",
       {
+        "jpg": "always",
+        "png": "always",
         "svg": "always"
       }
     ]
@@ -123,6 +126,13 @@
       "files": ["stories/**/*.{js,ts,tsx}"],
       "rules": {
         "no-alert": "off"
+      }
+    },
+    {
+      "files": ["src/icons/**"],
+      "rules": {
+        "import/extensions": "off",
+        "react/jsx-props-no-spreading": "off"
       }
     }
   ]
