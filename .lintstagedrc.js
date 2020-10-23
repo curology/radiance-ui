@@ -9,5 +9,5 @@ module.exports = {
     'eslint --fix',
     () => 'tsc -p stories/tsconfig.json --noEmit',
   ],
-  '*.{md,json}': 'prettier --write',
+  '*.json': 'prettier --write',
 };

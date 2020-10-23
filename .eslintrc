@@ -3,7 +3,7 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./eslint.tsconfig.json"
+    "project": "./.eslint.tsconfig.json"
   },
   "extends": [
     "curology",
@@ -53,17 +53,31 @@
       }
     ],
     "no-use-before-define": "off",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".js", ".tsx"]
+      }
+    ],
     "react/require-default-props": [
       "error",
-      { "ignoreFunctionalComponents": true }
+      {
+        "ignoreFunctionalComponents": true
+      }
     ],
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
     "import/extensions": [
       "error",
-      { "svg": "always", "jpg": "always", "png": "always" }
+      {
+        "svg": "always"
+      }
     ]
   },
   "overrides": [
