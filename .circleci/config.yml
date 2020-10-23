@@ -39,6 +39,16 @@ aliases:
                 if [[ ! -z "${CIRCLE_PULL_REQUEST}" ]]; then
                     git pull --ff-only origin "refs/pull/${CIRCLE_PULL_REQUEST//*pull\//}/merge"
                 fi
+    
+    - &publish-to-chromatic
+        run:
+            name: Publish to Chromatic
+            command: |
+                if [ "${CIRCLE_BRANCH}" != "master" ]; then
+                    yarn chromatic ${CHROMATIC_PROJECT_TOKEN}
+                else
+                    yarn chromatic --auto-accept-changes ${CHROMATIC_PROJECT_TOKEN}
+                fi
 
 jobs:
     build-js:
@@ -71,9 +81,7 @@ jobs:
             - run:
                 name: Build
                 command: yarn build
-            - run:
-                name: Publish to Chromatic
-                command: yarn run chromatic ${CHROMATIC_PROJECT_TOKEN}
+            - <<: *publish-to-chromatic
 
     test-js:
         <<: *defaults
