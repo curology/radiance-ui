@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1156793,
-    "minified": 1085245,
-    "gzipped": 107677
+    "bundled": 1160170,
+    "minified": 1087668,
+    "gzipped": 108295
   },
   "bundle.umd.js": {
-    "bundled": 1166592,
-    "minified": 1058899,
-    "gzipped": 103313
+    "bundled": 1170113,
+    "minified": 1060458,
+    "gzipped": 103740
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -402,16 +402,16 @@
     }
   },
   "svgs/icons/checkmark-icon.svg.js": {
-    "bundled": 947,
-    "minified": 716,
-    "gzipped": 444,
+    "bundled": 1328,
+    "minified": 988,
+    "gzipped": 548,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1662
+        "code": 1834
       }
     }
   },
@@ -430,16 +430,16 @@
     }
   },
   "svgs/icons/arrow.svg.js": {
-    "bundled": 894,
-    "minified": 671,
-    "gzipped": 432,
+    "bundled": 1282,
+    "minified": 950,
+    "gzipped": 535,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1649
+        "code": 1828
       }
     }
   },
@@ -458,16 +458,16 @@
     }
   },
   "svgs/icons/chevron-icon.svg.js": {
-    "bundled": 934,
-    "minified": 705,
-    "gzipped": 428,
+    "bundled": 1317,
+    "minified": 979,
+    "gzipped": 531,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1659
+        "code": 1833
       }
     }
   },
@@ -584,16 +584,16 @@
     }
   },
   "svgs/icons/info-icon.svg.js": {
-    "bundled": 952,
-    "minified": 726,
-    "gzipped": 451,
+    "bundled": 1334,
+    "minified": 999,
+    "gzipped": 558,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1692
+        "code": 1865
       }
     }
   },
@@ -640,16 +640,16 @@
     }
   },
   "svgs/icons/error-icon.svg.js": {
-    "bundled": 1319,
-    "minified": 1084,
-    "gzipped": 620,
+    "bundled": 1691,
+    "minified": 1347,
+    "gzipped": 727,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 2046
+        "code": 2209
       }
     }
   },
@@ -794,16 +794,16 @@
     }
   },
   "svgs/icons/arrow-left-icon.svg.js": {
-    "bundled": 955,
-    "minified": 724,
-    "gzipped": 447,
+    "bundled": 1336,
+    "minified": 996,
+    "gzipped": 547,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1670
+        "code": 1842
       }
     }
   },
@@ -892,16 +892,16 @@
     }
   },
   "svgs/icons/circle-solid-icon.svg.js": {
-    "bundled": 964,
-    "minified": 715,
-    "gzipped": 420,
+    "bundled": 1343,
+    "minified": 985,
+    "gzipped": 519,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1653
+        "code": 1823
       }
     }
   },
@@ -976,30 +976,30 @@
     }
   },
   "svgs/icons/cross-icon.svg.js": {
-    "bundled": 972,
-    "minified": 745,
-    "gzipped": 446,
+    "bundled": 1357,
+    "minified": 1021,
+    "gzipped": 547,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1707
+        "code": 1883
       }
     }
   },
   "svgs/icons/arrow-right-icon.svg.js": {
-    "bundled": 969,
-    "minified": 737,
-    "gzipped": 454,
+    "bundled": 1349,
+    "minified": 1008,
+    "gzipped": 556,
     "treeshaked": {
       "rollup": {
         "code": 67,
         "import_statements": 67
       },
       "webpack": {
-        "code": 1679
+        "code": 1850
       }
     }
   },

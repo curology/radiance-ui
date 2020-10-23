@@ -28,7 +28,7 @@
     "build:icons:logos": "svgr --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/logos/",
     "build:icons:navIcons": "svgr --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/navIcons/",
     "build:icons:deprecated": "svgr --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/deprecated/",
-    "build:icons:index": "create-index src/icons/",
+    "build:icons:index": "rimraf src/icons/index.js && create-index src/icons/",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx'",
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
