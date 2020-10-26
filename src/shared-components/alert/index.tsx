@@ -32,7 +32,7 @@ type AlertProps = {
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
-  onExit?: () => void;
+  onExit?: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
   truncateText?: boolean;
   type?: AlertType;
   [key: string]: unknown;
@@ -57,16 +57,17 @@ type AlertProps = {
  *
  * All alerts are dimissable by clicking on them. However, you can use the `duration` prop to determine if the alert is sticky or dismissed on a timer (in units of seconds).
  */
-export const Alert = ({
-  avatarSrc = '',
-  content,
-  ctaContent = null,
-  duration = 3,
-  onExit = () => undefined,
-  truncateText = false,
-  type = 'default',
-  ...rest
-}: AlertProps) => {
+export const Alert = (alertProps: AlertProps) => {
+  const {
+    avatarSrc = '',
+    content,
+    ctaContent = null,
+    duration = 3,
+    onExit = () => undefined,
+    truncateText = false,
+    type = 'default',
+    ...rest
+  } = alertProps;
   const [exiting, setExiting] = useState(false);
   const [exited, setExited] = useState(false);
 
@@ -78,9 +79,12 @@ export const Alert = ({
     setExiting(true);
     window.clearTimeout(timer);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { onExit: _onExit, ...otherProps } = alertProps;
+
     window.setTimeout(() => {
       setExited(true);
-      onExit();
+      onExit(otherProps);
     }, ANIMATION_DELAY);
   };
 

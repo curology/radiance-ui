@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1152684,
-    "minified": 1082458,
-    "gzipped": 106832
+    "bundled": 1145632,
+    "minified": 1075957,
+    "gzipped": 104587
   },
   "bundle.umd.js": {
-    "bundled": 1162243,
-    "minified": 1056411,
-    "gzipped": 102611
+    "bundled": 1155149,
+    "minified": 1049964,
+    "gzipped": 100328
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -220,16 +220,16 @@
     }
   },
   "shared-components/banner/index.js": {
-    "bundled": 1511,
-    "minified": 956,
-    "gzipped": 452,
+    "bundled": 1448,
+    "minified": 943,
+    "gzipped": 447,
     "treeshaked": {
       "rollup": {
-        "code": 429,
+        "code": 438,
         "import_statements": 365
       },
       "webpack": {
-        "code": 1597
+        "code": 1606
       }
     }
   },
@@ -752,16 +752,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 10387,
-    "minified": 8506,
-    "gzipped": 3759,
+    "bundled": 3674,
+    "minified": 1960,
+    "gzipped": 790,
     "treeshaked": {
       "rollup": {
-        "code": 1701,
+        "code": 1601,
         "import_statements": 568
       },
       "webpack": {
-        "code": 3047
+        "code": 2943
       }
     }
   },
@@ -920,16 +920,16 @@
     }
   },
   "shared-components/accordion/index.js": {
-    "bundled": 3889,
-    "minified": 1743,
-    "gzipped": 821,
+    "bundled": 3296,
+    "minified": 1745,
+    "gzipped": 819,
     "treeshaked": {
       "rollup": {
-        "code": 1450,
+        "code": 1452,
         "import_statements": 455
       },
       "webpack": {
-        "code": 2769
+        "code": 2771
       }
     }
   },
@@ -1144,16 +1144,16 @@
     }
   },
   "shared-components/alert/index.js": {
-    "bundled": 5390,
-    "minified": 2479,
-    "gzipped": 1091,
+    "bundled": 5715,
+    "minified": 2543,
+    "gzipped": 1110,
     "treeshaked": {
       "rollup": {
-        "code": 1971,
+        "code": 2012,
         "import_statements": 643
       },
       "webpack": {
-        "code": 3491
+        "code": 3564
       }
     }
   },
