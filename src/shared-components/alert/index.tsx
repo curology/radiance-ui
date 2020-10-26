@@ -32,9 +32,9 @@ type AlertProps = {
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
+  onExit?: () => void;
   truncateText?: boolean;
   type?: AlertType;
-  onExit?: () => void;
   [key: string]: unknown;
 };
 
@@ -107,7 +107,6 @@ export const Alert = ({
       Number(duration) * 1000 - ANIMATION_DELAY,
     );
 
-    // ComponentWillUnmount cleanup
     return () => {
       if (timer) {
         window.clearTimeout(timer);
@@ -162,5 +161,5 @@ Alert.propTypes = {
   duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onExit: PropTypes.func,
   truncateText: PropTypes.bool,
-  type: PropTypes.oneOf(['success', 'error', 'default']),
+  type: PropTypes.oneOf(['success', 'error', 'default', 'danger']),
 };

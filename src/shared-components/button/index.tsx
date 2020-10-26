@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
 
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
@@ -95,17 +94,11 @@ export const Button = ({
     >
       <ButtonContents
         hasIcon={!!icon}
-        isLoading={loadingVal}
         isFullWidth={isFullWidth}
+        isLoading={loadingVal}
       >
         {icon}
-        <ButtonText
-          hasIcon={!!icon}
-          isLoading={loadingVal}
-          css={css`
-            padding-top: 2px;
-          `}
-        >
+        <ButtonText hasIcon={!!icon} isLoading={loadingVal}>
           {children}
         </ButtonText>
       </ButtonContents>
