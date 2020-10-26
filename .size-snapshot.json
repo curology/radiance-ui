@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1156793,
-    "minified": 1085245,
-    "gzipped": 107677
+    "bundled": 1145632,
+    "minified": 1075957,
+    "gzipped": 104587
   },
   "bundle.umd.js": {
-    "bundled": 1166592,
-    "minified": 1058899,
-    "gzipped": 103313
+    "bundled": 1155149,
+    "minified": 1049964,
+    "gzipped": 100328
   },
   "shared-components/chip/index.js": {
     "bundled": 912,
@@ -26,7 +26,7 @@
   "shared-components/loadingSpinner/index.js": {
     "bundled": 1891,
     "minified": 1053,
-    "gzipped": 455,
+    "gzipped": 456,
     "treeshaked": {
       "rollup": {
         "code": 757,
@@ -82,7 +82,7 @@
   "shared-components/callout/index.js": {
     "bundled": 1200,
     "minified": 538,
-    "gzipped": 307,
+    "gzipped": 309,
     "treeshaked": {
       "rollup": {
         "code": 442,
@@ -96,7 +96,7 @@
   "shared-components/toggle/index.js": {
     "bundled": 1780,
     "minified": 998,
-    "gzipped": 518,
+    "gzipped": 519,
     "treeshaked": {
       "rollup": {
         "code": 179,
@@ -220,16 +220,16 @@
     }
   },
   "shared-components/banner/index.js": {
-    "bundled": 1438,
-    "minified": 934,
-    "gzipped": 444,
+    "bundled": 1448,
+    "minified": 943,
+    "gzipped": 447,
     "treeshaked": {
       "rollup": {
-        "code": 429,
+        "code": 438,
         "import_statements": 365
       },
       "webpack": {
-        "code": 1597
+        "code": 1606
       }
     }
   },
@@ -264,7 +264,7 @@
   "shared-components/field/index.js": {
     "bundled": 2767,
     "minified": 1475,
-    "gzipped": 662,
+    "gzipped": 663,
     "treeshaked": {
       "rollup": {
         "code": 1236,
@@ -306,7 +306,7 @@
   "shared-components/transitions/style.js": {
     "bundled": 8240,
     "minified": 7838,
-    "gzipped": 1876,
+    "gzipped": 1877,
     "treeshaked": {
       "rollup": {
         "code": 761,
@@ -516,7 +516,7 @@
   "shared-components/banner/style.js": {
     "bundled": 22381,
     "minified": 21966,
-    "gzipped": 3403,
+    "gzipped": 3404,
     "treeshaked": {
       "rollup": {
         "code": 1521,
@@ -612,16 +612,16 @@
     }
   },
   "shared-components/accordion/thumbnails/index.js": {
-    "bundled": 1977,
-    "minified": 1098,
-    "gzipped": 516,
+    "bundled": 1283,
+    "minified": 682,
+    "gzipped": 345,
     "treeshaked": {
       "rollup": {
-        "code": 842,
-        "import_statements": 326
+        "code": 236,
+        "import_statements": 205
       },
       "webpack": {
-        "code": 2082
+        "code": 1714
       }
     }
   },
@@ -670,7 +670,7 @@
   "shared-components/chip/style.js": {
     "bundled": 16114,
     "minified": 15713,
-    "gzipped": 2629,
+    "gzipped": 2631,
     "treeshaked": {
       "rollup": {
         "code": 1082,
@@ -684,7 +684,7 @@
   "utils/helperTransition/index.js": {
     "bundled": 1617,
     "minified": 1056,
-    "gzipped": 456,
+    "gzipped": 455,
     "treeshaked": {
       "rollup": {
         "code": 154,
@@ -726,7 +726,7 @@
   "shared-components/tooltip/index.js": {
     "bundled": 5372,
     "minified": 2529,
-    "gzipped": 1028,
+    "gzipped": 1027,
     "treeshaked": {
       "rollup": {
         "code": 642,
@@ -752,16 +752,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 12191,
-    "minified": 9641,
-    "gzipped": 4080,
+    "bundled": 3674,
+    "minified": 1960,
+    "gzipped": 790,
     "treeshaked": {
       "rollup": {
-        "code": 2082,
-        "import_statements": 643
+        "code": 1601,
+        "import_statements": 568
       },
       "webpack": {
-        "code": 3446
+        "code": 2943
       }
     }
   },
@@ -810,7 +810,7 @@
   "shared-components/container/style.js": {
     "bundled": 31493,
     "minified": 30716,
-    "gzipped": 4148,
+    "gzipped": 4150,
     "treeshaked": {
       "rollup": {
         "code": 1264,
@@ -822,23 +822,23 @@
     }
   },
   "shared-components/button/shared-components/loader/index.js": {
-    "bundled": 1300,
-    "minified": 929,
-    "gzipped": 422,
+    "bundled": 1667,
+    "minified": 928,
+    "gzipped": 451,
     "treeshaked": {
       "rollup": {
-        "code": 778,
+        "code": 274,
         "import_statements": 169
       },
       "webpack": {
-        "code": 1976
+        "code": 1984
       }
     }
   },
   "shared-components/typography/index.js": {
     "bundled": 92224,
     "minified": 91435,
-    "gzipped": 6105,
+    "gzipped": 6106,
     "treeshaked": {
       "rollup": {
         "code": 2274,
@@ -852,7 +852,7 @@
   "shared-components/selectorButton/index.js": {
     "bundled": 10180,
     "minified": 9203,
-    "gzipped": 2580,
+    "gzipped": 2579,
     "treeshaked": {
       "rollup": {
         "code": 613,
@@ -880,7 +880,7 @@
   "shared-components/button/shared-components/container/index.js": {
     "bundled": 7040,
     "minified": 6805,
-    "gzipped": 2027,
+    "gzipped": 2030,
     "treeshaked": {
       "rollup": {
         "code": 887,
@@ -920,16 +920,16 @@
     }
   },
   "shared-components/accordion/index.js": {
-    "bundled": 5144,
-    "minified": 2506,
-    "gzipped": 1069,
+    "bundled": 3296,
+    "minified": 1745,
+    "gzipped": 819,
     "treeshaked": {
       "rollup": {
-        "code": 2144,
-        "import_statements": 474
+        "code": 1452,
+        "import_statements": 455
       },
       "webpack": {
-        "code": 3469
+        "code": 2771
       }
     }
   },
@@ -964,7 +964,7 @@
   "utils/icons/index.js": {
     "bundled": 2898,
     "minified": 2538,
-    "gzipped": 1387,
+    "gzipped": 1389,
     "treeshaked": {
       "rollup": {
         "code": 187,
@@ -1006,7 +1006,7 @@
   "shared-components/carousel/style.js": {
     "bundled": 46192,
     "minified": 45530,
-    "gzipped": 5099,
+    "gzipped": 5103,
     "treeshaked": {
       "rollup": {
         "code": 2500,
@@ -1032,13 +1032,13 @@
     }
   },
   "shared-components/button/components/textButton/index.js": {
-    "bundled": 1468,
-    "minified": 756,
-    "gzipped": 391,
+    "bundled": 1440,
+    "minified": 736,
+    "gzipped": 387,
     "treeshaked": {
       "rollup": {
-        "code": 161,
-        "import_statements": 129
+        "code": 267,
+        "import_statements": 235
       },
       "webpack": {
         "code": 1357
@@ -1048,7 +1048,7 @@
   "shared-components/carousel/index.js": {
     "bundled": 6827,
     "minified": 3312,
-    "gzipped": 1267,
+    "gzipped": 1268,
     "treeshaked": {
       "rollup": {
         "code": 2939,
@@ -1076,7 +1076,7 @@
   "shared-components/button/components/linkButton/style.js": {
     "bundled": 1729,
     "minified": 1447,
-    "gzipped": 881,
+    "gzipped": 883,
     "treeshaked": {
       "rollup": {
         "code": 77,
@@ -1132,7 +1132,7 @@
   "shared-components/optionButton/style.js": {
     "bundled": 57450,
     "minified": 56362,
-    "gzipped": 4867,
+    "gzipped": 4869,
     "treeshaked": {
       "rollup": {
         "code": 2201,
@@ -1144,16 +1144,16 @@
     }
   },
   "shared-components/alert/index.js": {
-    "bundled": 6336,
-    "minified": 3140,
-    "gzipped": 1299,
+    "bundled": 5715,
+    "minified": 2543,
+    "gzipped": 1110,
     "treeshaked": {
       "rollup": {
-        "code": 2538,
-        "import_statements": 681
+        "code": 2012,
+        "import_statements": 643
       },
       "webpack": {
-        "code": 4060
+        "code": 3564
       }
     }
   },
@@ -1172,30 +1172,30 @@
     }
   },
   "shared-components/button/components/linkButton/index.js": {
-    "bundled": 2791,
-    "minified": 1405,
-    "gzipped": 626,
+    "bundled": 2763,
+    "minified": 1385,
+    "gzipped": 620,
     "treeshaked": {
       "rollup": {
-        "code": 376,
-        "import_statements": 240
+        "code": 1083,
+        "import_statements": 374
       },
       "webpack": {
-        "code": 2400
+        "code": 2396
       }
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 39845,
-    "minified": 38839,
-    "gzipped": 4861,
+    "bundled": 39686,
+    "minified": 38687,
+    "gzipped": 4851,
     "treeshaked": {
       "rollup": {
         "code": 2636,
         "import_statements": 299
       },
       "webpack": {
-        "code": 3902
+        "code": 3904
       }
     }
   },
@@ -1216,7 +1216,7 @@
   "shared-components/tooltip/style.js": {
     "bundled": 112563,
     "minified": 110758,
-    "gzipped": 8245,
+    "gzipped": 8246,
     "treeshaked": {
       "rollup": {
         "code": 3186,
@@ -1258,7 +1258,7 @@
   "shared-components/button/style.js": {
     "bundled": 141742,
     "minified": 139680,
-    "gzipped": 9903,
+    "gzipped": 9904,
     "treeshaked": {
       "rollup": {
         "code": 4007,
@@ -1270,37 +1270,37 @@
     }
   },
   "shared-components/button/components/roundButton/index.js": {
-    "bundled": 3727,
-    "minified": 1961,
-    "gzipped": 789,
+    "bundled": 3699,
+    "minified": 1941,
+    "gzipped": 785,
     "treeshaked": {
       "rollup": {
-        "code": 1510,
+        "code": 1506,
         "import_statements": 583
       },
       "webpack": {
-        "code": 2842
+        "code": 2838
       }
     }
   },
   "shared-components/accordion/thumbnails/style.js": {
     "bundled": 11200,
     "minified": 10980,
-    "gzipped": 2264,
+    "gzipped": 2266,
     "treeshaked": {
       "rollup": {
         "code": 884,
         "import_statements": 190
       },
       "webpack": {
-        "code": 2042
+        "code": 2040
       }
     }
   },
   "shared-components/carousel/arrow/style.js": {
     "bundled": 6694,
     "minified": 6365,
-    "gzipped": 2047,
+    "gzipped": 2048,
     "treeshaked": {
       "rollup": {
         "code": 956,
@@ -1314,7 +1314,7 @@
   "shared-components/button/components/roundButton/style.js": {
     "bundled": 32181,
     "minified": 30517,
-    "gzipped": 5079,
+    "gzipped": 5080,
     "treeshaked": {
       "rollup": {
         "code": 644,
@@ -1328,7 +1328,7 @@
   "shared-components/button/shared-components/loader/style.js": {
     "bundled": 21279,
     "minified": 20480,
-    "gzipped": 3755,
+    "gzipped": 3756,
     "treeshaked": {
       "rollup": {
         "code": 1710,
