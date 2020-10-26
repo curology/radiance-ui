@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import Arrow from './arrow';
 import { OuterContainer, InnerContainer, Card } from './style';
 
+const FIRST_INDEX = 0;
 const BASE_SLIDER_CONFIG = {
   focusOnSelect: true,
   pauseOnHover: true,
@@ -45,11 +46,6 @@ type CarouselProps = {
   numCardsVisible: 1 | 2 | 3;
 };
 
-type CarouselState = {
-  currentIndex: number;
-  lastIndex: number;
-};
-
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
  *
@@ -57,183 +53,133 @@ type CarouselState = {
  *
  * An array of `Carousel.Card` must be used for the carousel content. It includes the base styles for the Card which may be extended as shown above.
  */
-export class Carousel extends React.Component<CarouselProps, CarouselState> {
-  static Card = Card;
-
-  static propTypes = {
-    autoplay: PropTypes.bool,
-    autoplaySpeed: PropTypes.number,
-    carouselType: PropTypes.oneOf(['primary', 'secondary']),
-    centerMode: PropTypes.bool,
-    /**
-     * Array of `Carousel.Card`
-     */
-    children: PropTypes.arrayOf(PropTypes.node).isRequired,
-    hideArrows: PropTypes.bool,
-    hideDots: PropTypes.bool,
-    bottomRightAlignedArrows: PropTypes.bool,
-    infinite: PropTypes.bool,
-    numCardsVisible: PropTypes.number.isRequired,
+export const Carousel = ({
+  autoplay = false,
+  autoplaySpeed = 5000,
+  bottomRightAlignedArrows = false,
+  carouselType = 'primary',
+  centerMode = true,
+  children,
+  hideArrows = false,
+  hideDots = false,
+  infinite = false,
+  numCardsVisible,
+}: CarouselProps) => {
+  const getLastIndex = () => {
+    const numberSlides = children.length;
+    return numberSlides - numCardsVisible;
   };
 
-  static defaultProps = {
-    autoplay: false,
-    autoplaySpeed: 5000,
-    carouselType: 'primary',
-    centerMode: true,
-    hideArrows: false,
-    hideDots: false,
-    bottomRightAlignedArrows: false,
-    infinite: false,
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [lastIndex, setLastIndex] = useState(getLastIndex());
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
+  const [timeoutId, setTimeoutId] = useState<number | null>(null);
 
-  slider: React.RefObject<Slider> = React.createRef();
+  const slider: React.RefObject<Slider> = React.createRef();
 
-  timeoutId: number | null = null;
-
-  userHasInteracted = false;
-
-  constructor(props: CarouselProps) {
-    super(props);
-
-    this.state = {
-      currentIndex: 0,
-      lastIndex: this.getLastIndex(),
-    };
-  }
-
-  componentDidUpdate() {
-    if (this.shouldReplay) {
-      this.replay();
-    }
-
-    this.updateLastIndex();
-  }
-
-  get shouldReplay() {
-    const { autoplay, infinite } = this.props;
-    const { currentIndex, lastIndex } = this.state;
-
+  const shouldReplay = () => {
     const onLastCard = currentIndex === lastIndex;
 
-    return autoplay && !infinite && onLastCard && !this.userHasInteracted;
-  }
+    return autoplay && !infinite && onLastCard && !hasUserInteracted;
+  };
 
-  getLastIndex() {
-    const { children, numCardsVisible } = this.props;
-    const numberSlides = children.length;
+  const replay = () => {
+    setTimeoutId(
+      window.setTimeout(() => {
+        if (slider.current) {
+          slider.current.slickGoTo(FIRST_INDEX);
+        }
+      }, autoplaySpeed),
+    );
+  };
 
-    return numberSlides - numCardsVisible;
-  }
-
-  getCarouselSettings() {
-    const { currentIndex, lastIndex } = this.state;
-    const firstIndex = 0;
-
-    const {
-      autoplay,
-      autoplaySpeed,
-      centerMode,
-      hideArrows,
-      hideDots,
-      bottomRightAlignedArrows,
-      infinite,
-      numCardsVisible,
-    } = this.props;
-
-    const allowCenterMode = numCardsVisible > 1 || infinite;
-
-    const settings = {
-      ...BASE_SLIDER_CONFIG,
-      arrows: !hideArrows,
-      autoplay,
-      autoplaySpeed,
-      centerMode: allowCenterMode ? false : centerMode,
-      dots: !hideDots && !bottomRightAlignedArrows,
-      infinite,
-      slidesToShow: numCardsVisible,
-      beforeChange: this.onCardChange,
-      onSwipe: this.onUserInteraction,
-      prevArrow: (
-        <Arrow
-          bottomRightAlignedArrows={bottomRightAlignedArrows}
-          prev
-          disabled={currentIndex === firstIndex && !infinite}
-          onClick={this.onUserInteraction}
-        />
-      ),
-      nextArrow: (
-        <Arrow
-          bottomRightAlignedArrows={bottomRightAlignedArrows}
-          next
-          disabled={currentIndex === lastIndex && !infinite}
-          onClick={this.onUserInteraction}
-        />
-      ),
-    };
-
-    return settings;
-  }
-
-  updateLastIndex = () => {
-    const { lastIndex, currentIndex } = this.state;
-    const updatedLastIndex = this.getLastIndex();
+  const updateLastIndex = () => {
+    const updatedLastIndex = getLastIndex();
 
     if (lastIndex !== updatedLastIndex) {
-      this.setState({ lastIndex: updatedLastIndex });
+      setLastIndex(updatedLastIndex);
     }
 
-    if (this.slider.current && currentIndex > updatedLastIndex) {
-      this.slider.current.slickGoTo(updatedLastIndex);
-    }
-  };
-
-  onCardChange = (_oldIndex: number, nextIndex: number) => {
-    this.timeoutId = null;
-
-    this.setState({
-      currentIndex: nextIndex,
-    });
-  };
-
-  onUserInteraction = () => {
-    clearTimeout(this.timeoutId as number);
-    this.userHasInteracted = true;
-
-    if (this.slider.current) {
-      this.slider.current.slickPause();
+    if (slider.current && currentIndex > updatedLastIndex) {
+      slider.current.slickGoTo(updatedLastIndex);
     }
   };
 
-  replay() {
-    const { autoplaySpeed } = this.props;
-    const firstIndex = 0;
+  useEffect(() => {
+    if (shouldReplay()) {
+      replay();
+    }
+    updateLastIndex();
+  });
 
-    const timeoutId = setTimeout(() => {
-      if (this.slider.current) {
-        this.slider.current.slickGoTo(firstIndex);
-      }
-    }, autoplaySpeed);
+  const onCardChange = (_oldIndex: number, nextIndex: number) => {
+    setTimeoutId(null);
+    setCurrentIndex(nextIndex);
+  };
 
-    this.timeoutId = timeoutId;
-  }
+  const onUserInteraction = () => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    setHasUserInteracted(true);
 
-  render() {
-    const { children, carouselType = 'primary', numCardsVisible } = this.props;
-    const settings = this.getCarouselSettings();
+    if (slider.current) {
+      slider.current.slickPause();
+    }
+  };
 
-    return (
-      <OuterContainer numCardsVisible={numCardsVisible}>
-        <InnerContainer
-          carouselType={carouselType}
-          onClick={this.onUserInteraction}
-        >
-          {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Slider ref={this.slider} {...settings}>
-            {children}
-          </Slider>
-        </InnerContainer>
-      </OuterContainer>
-    );
-  }
-}
+  const carouselSettings = {
+    ...BASE_SLIDER_CONFIG,
+    arrows: !hideArrows,
+    autoplay,
+    autoplaySpeed,
+    beforeChange: onCardChange,
+    centerMode: numCardsVisible > 1 || infinite ? false : centerMode,
+    dots: !hideDots && !bottomRightAlignedArrows,
+    infinite,
+    nextArrow: (
+      <Arrow
+        bottomRightAlignedArrows={bottomRightAlignedArrows}
+        disabled={currentIndex === lastIndex && !infinite}
+        next
+        onClick={onUserInteraction}
+      />
+    ),
+    onSwipe: onUserInteraction,
+    prevArrow: (
+      <Arrow
+        bottomRightAlignedArrows={bottomRightAlignedArrows}
+        disabled={currentIndex === FIRST_INDEX && !infinite}
+        onClick={onUserInteraction}
+        prev
+      />
+    ),
+    slidesToShow: numCardsVisible,
+  };
+
+  return (
+    <OuterContainer numCardsVisible={numCardsVisible}>
+      <InnerContainer carouselType={carouselType} onClick={onUserInteraction}>
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <Slider ref={slider} {...carouselSettings}>
+          {children}
+        </Slider>
+      </InnerContainer>
+    </OuterContainer>
+  );
+};
+
+Carousel.Card = Card;
+
+Carousel.propTypes = {
+  autoplay: PropTypes.bool,
+  autoplaySpeed: PropTypes.number,
+  bottomRightAlignedArrows: PropTypes.bool,
+  carouselType: PropTypes.oneOf(['primary', 'secondary']),
+  centerMode: PropTypes.bool,
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  hideArrows: PropTypes.bool,
+  hideDots: PropTypes.bool,
+  infinite: PropTypes.bool,
+  numCardsVisible: PropTypes.number.isRequired,
+};
