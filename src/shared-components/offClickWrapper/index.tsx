@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 type OffClickWrapperProps = {
@@ -13,52 +13,21 @@ type OffClickWrapperProps = {
   onOffClick: (event: KeyboardEvent | MouseEvent) => void;
 };
 
-export class OffClickWrapper extends React.Component<OffClickWrapperProps> {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    onOffClick: PropTypes.func.isRequired,
-  };
+export const OffClickWrapper = ({
+  children,
+  className,
+  onOffClick,
+}: OffClickWrapperProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  static defaultProps = {
-    className: undefined,
-  };
-
-  containerRef: React.RefObject<HTMLDivElement>;
-
-  constructor(props: OffClickWrapperProps) {
-    super(props);
-    this.containerRef = React.createRef();
-  }
-
-  componentDidMount() {
-    this.addOffClickListener();
-  }
-
-  componentWillUnmount() {
-    this.removeOffClickListener();
-  }
-
-  addOffClickListener = () => {
-    document.addEventListener('click', this.handleOffClick, false);
-    document.addEventListener('keydown', this.handleKeyPress, false);
-  };
-
-  removeOffClickListener = () => {
-    document.removeEventListener('click', this.handleOffClick, false);
-    document.removeEventListener('keydown', this.handleKeyPress, false);
-  };
-
-  handleKeyPress = (event: KeyboardEvent) => {
+  const handleKeyPress = (event: KeyboardEvent) => {
     if (event.key === 'Escape') {
-      const { onOffClick } = this.props;
       onOffClick(event);
     }
   };
 
-  handleOffClick = (event: MouseEvent) => {
-    const node = this.containerRef.current;
-    const { onOffClick } = this.props;
+  const handleOffClick = (event: MouseEvent) => {
+    const node = containerRef.current;
 
     if (!node) {
       return;
@@ -71,13 +40,30 @@ export class OffClickWrapper extends React.Component<OffClickWrapperProps> {
     onOffClick(event);
   };
 
-  render() {
-    const { children, className } = this.props;
+  const addOffClickListener = () => {
+    document.addEventListener('click', handleOffClick, false);
+    document.addEventListener('keydown', handleKeyPress, false);
+  };
 
-    return (
-      <div ref={this.containerRef} className={className}>
-        {children}
-      </div>
-    );
-  }
-}
+  const removeOffClickListener = () => {
+    document.removeEventListener('click', handleOffClick, false);
+    document.removeEventListener('keydown', handleKeyPress, false);
+  };
+
+  useEffect(() => {
+    addOffClickListener();
+    return () => removeOffClickListener();
+  });
+
+  return (
+    <div ref={containerRef} className={className}>
+      {children}
+    </div>
+  );
+};
+
+OffClickWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  onOffClick: PropTypes.func.isRequired,
+};
