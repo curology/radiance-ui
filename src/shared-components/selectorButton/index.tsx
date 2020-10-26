@@ -28,7 +28,7 @@ type SelectorButtonProps = {
   selector?: SelectorType;
   size?: SizeType;
   type?: StyleType;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 export const SelectorButton = ({
