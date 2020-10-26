@@ -6,16 +6,16 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { FocusScope } from '@react-aria/focus';
 
 const FieldsContainer = styled.div`
-  margin: 1rem 0 2rem 0;
-  width: 350px;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+  max-width: 350px;
 `;
 
 const messagesOptions = {
@@ -30,15 +30,17 @@ const messagesTypeOptions = {
 };
 
 export const FieldInputWithSuccessMessage = () => {
-  const [state, setState] = React.useState({
-    messages: {},
-    value: '',
-  });
+  const defaultValue = 'Placeholder';
 
   const validate = (value: string) =>
     value.length > 0
       ? { successMessage: 'Thanks for completing this field' }
-      : {};
+      : undefined;
+
+  const [state, setState] = React.useState({
+    messages: validate(defaultValue),
+    value: defaultValue,
+  });
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -69,14 +71,11 @@ export const FieldInputWithSuccessMessage = () => {
 };
 
 export const FieldInputWithValidations = () => {
-  const [state, setState] = React.useState({
-    messages: {},
-    value: '',
-  });
+  const defaultValue = 'Placeholder';
 
   const validate = (value: string) => {
     const requiredError =
-      value.length === 0 ? { required: 'This field is required' } : {};
+      value.length === 0 ? { required: 'This field is required' } : undefined;
 
     const maxLengthRule = {
       maxLength: (
@@ -104,6 +103,11 @@ export const FieldInputWithValidations = () => {
     const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
     return val;
   };
+
+  const [state, setState] = React.useState({
+    messages: validate(defaultValue),
+    value: defaultValue,
+  });
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -133,13 +137,15 @@ export const FieldInputWithValidations = () => {
 
 export const InputWithAHint = () => (
   <FieldsContainer>
-    <Field
-      label="Input with a Hint"
-      labelFor="input-hint"
-      hintMessage="This hint appears on focus"
-    >
-      <Field.Input id="input-hint" type="text" />
-    </Field>
+    <FocusScope autoFocus>
+      <Field
+        label="Input with a Hint"
+        labelFor="input-hint"
+        hintMessage="This hint appears on focus"
+      >
+        <Field.Input id="input-hint" type="text" />
+      </Field>
+    </FocusScope>
   </FieldsContainer>
 );
 
@@ -202,6 +208,10 @@ export const WithControls = () => (
   </FieldsContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Field',
   component: Field,
@@ -216,10 +226,9 @@ export default {
             language="tsx"
             code={"import { Field } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

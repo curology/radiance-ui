@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -12,6 +11,7 @@ import { Avatar } from 'src/shared-components';
 import accountImg from 'shared/account.png';
 import personImg from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';
+import { BREAKPOINTS } from 'src/constants';
 
 export const Usage = () => (
   <React.Fragment>
@@ -28,6 +28,7 @@ export default {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -38,10 +39,9 @@ export default {
             language="tsx"
             code={"import { Avatar } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

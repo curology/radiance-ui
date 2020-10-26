@@ -4,8 +4,8 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
+  Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
@@ -30,6 +30,7 @@ export default {
   title: 'Components/OffClickWrapper',
   component: OffClickWrapper,
   parameters: {
+    chromatic: { disable: true },
     docs: {
       page: () => (
         <React.Fragment>
@@ -40,9 +41,9 @@ export default {
             language="tsx"
             code={"import { OffClickWrapper } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

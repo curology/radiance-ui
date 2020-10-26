@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 aliases:
     - &root ~/radiance-ui
@@ -11,8 +11,8 @@ aliases:
             name: Prepare Environment
             command: mkdir test-results
 
-    - &cache-yarn-key-base yarn-packages-v1-{{ arch }}-
-    - &cache-yarn-key yarn-packages-v1-{{ arch }}-{{ checksum "yarn.lock" }}
+    - &cache-yarn-key-base yarn-packages-v2-{{ arch }}-
+    - &cache-yarn-key yarn-packages-v2-{{ arch }}-{{ checksum "yarn.lock" }}
 
     - &yarn-cache-restore
         restore_cache:
@@ -26,6 +26,11 @@ aliases:
             paths:
                 - ~/.cache/yarn
 
+    - &yarn-install
+        run:
+            name: Install Node Dependencies
+            command: yarn install --frozen-lockfile --non-interactive
+
     # Prospective merging against master.
     - &prospective-merge
         run:
@@ -34,11 +39,20 @@ aliases:
                 if [[ ! -z "${CIRCLE_PULL_REQUEST}" ]]; then
                     git pull --ff-only origin "refs/pull/${CIRCLE_PULL_REQUEST//*pull\//}/merge"
                 fi
+    
+    - &publish-to-chromatic
+        run:
+            name: Publish to Chromatic
+            command: |
+                if [ "${CIRCLE_BRANCH}" != "master" ]; then
+                    yarn chromatic ${CHROMATIC_PROJECT_TOKEN}
+                else
+                    yarn chromatic --auto-accept-changes ${CHROMATIC_PROJECT_TOKEN}
+                fi
 
 jobs:
-    build:
+    build-js:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -46,19 +60,31 @@ jobs:
             - checkout
             - <<: *prospective-merge
             - <<: *yarn-cache-restore
-            - run:
-                name: Install
-                command: |
-                    yarn install
+            - <<: *yarn-install
             - <<: *yarn-cache-save
             - persist_to_workspace:
                 root: *root
                 paths:
                     - node_modules
+    
+    build:
+        <<: *defaults
+        docker:
+            - image: circleci/node:10-stretch
+
+        steps:
+            - checkout
+            - <<: *prospective-merge
+            - attach_workspace:
+                at: *root
+            - <<: *prepare-environment
+            - run:
+                name: Build
+                command: yarn build
+            - <<: *publish-to-chromatic
 
     test-js:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -78,7 +104,6 @@ jobs:
 
     test-tsc:
         <<: *defaults
-
         docker:
             - image: circleci/node:10-stretch
 
@@ -99,13 +124,17 @@ jobs:
 
 workflows:
     version: 2
-
+    
     build-and-test:
         jobs:
-            - build
+            - build-js
             - test-js:
                 requires:
-                    - build
+                    - build-js
             - test-tsc:
                 requires:
-                    - build
+                    - build-js
+            - build:
+                requires:
+                    - test-js
+                    - test-tsc

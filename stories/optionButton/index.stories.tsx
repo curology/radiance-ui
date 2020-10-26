@@ -9,7 +9,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -180,6 +179,10 @@ export const WithControls = () => (
   </FlexContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/OptionButton',
   component: OptionButton,
@@ -194,10 +197,9 @@ export default {
             language="tsx"
             code={"import { OptionButton } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

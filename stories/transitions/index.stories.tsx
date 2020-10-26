@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -56,6 +55,7 @@ export const OpacityInAnimation = () => (
 export default {
   title: 'Components/Transitions',
   parameters: {
+    chromatic: { disable: true },
     docs: {
       page: () => (
         <React.Fragment>
@@ -67,12 +67,9 @@ export default {
               "import { FadeInContainer, opacityInAnimationStyle } from 'radiance-ui';"
             }
           />
-          <Primary />
-          <Description>
-            Note, these props only apply to FadeInContainer
-          </Description>
+          <Heading>FadeInContainer Props:</Heading>
           <ArgsTable of={FadeInContainer} />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

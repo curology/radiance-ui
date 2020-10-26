@@ -23,7 +23,11 @@ describe('<Button />', () => {
 
     it('renders with adjustable color', () => {
       const button = mount(
-        <Button buttonColor={COLORS.statusRed} id="red-button">
+        <Button
+          buttonColor={COLORS.statusRed}
+          onClick={() => undefined}
+          id="red-button"
+        >
           Button Text
         </Button>,
       );

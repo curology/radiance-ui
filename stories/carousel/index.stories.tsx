@@ -4,14 +4,13 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
-import { COLORS, SPACER } from 'src/constants';
+import { ANIMATION, COLORS, SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
 const Card = styled(Carousel.Card)`
@@ -108,10 +107,18 @@ export const WithControls = () => (
   </CarouselContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Carousel',
   component: Carousel,
   parameters: {
+    /**
+     * There is visual jank when this component loads--this reduces brittleness in Chromatic
+     */
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
     docs: {
       page: () => (
         <React.Fragment>
@@ -122,10 +129,9 @@ export default {
             language="tsx"
             code={"import { Carousel } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

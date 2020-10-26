@@ -2,12 +2,11 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
-import { COLORS } from 'src/constants';
+import { BREAKPOINTS, COLORS } from 'src/constants';
 import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -24,6 +23,10 @@ export const Default = () => (
     <LoadingSpinner />
   </SpinnerContainer>
 );
+
+Default.parameters = {
+  chromatic: { disable: false },
+};
 
 export const WithTranslateX = () => (
   <SpinnerContainer>
@@ -53,6 +56,7 @@ export default {
   title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
+    chromatic: { disable: true, viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -63,10 +67,9 @@ export default {
             language="tsx"
             code={"import { LoadingSpinner } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

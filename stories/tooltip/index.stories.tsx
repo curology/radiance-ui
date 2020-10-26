@@ -5,7 +5,6 @@ import {
   Heading,
   Source,
   Title,
-  Primary,
   Stories,
 } from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
@@ -17,7 +16,7 @@ import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
 
 const TooltipContainer = styled.div<{ height?: string }>`
   max-width: 800px;
-  height: ${({ height = '225px' }) => height};
+  height: ${({ height = '275px' }) => height};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -139,6 +138,10 @@ export const WithControls = () => (
   </TooltipContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
@@ -153,10 +156,9 @@ export default {
             language="tsx"
             code={"import { Tooltip } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

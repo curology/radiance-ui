@@ -4,8 +4,8 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
+  Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
@@ -40,9 +40,9 @@ export default {
           <Description />
           <Heading>Usage:</Heading>
           <Source language="tsx" code={"import { Tabs } from 'radiance-ui';"} />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

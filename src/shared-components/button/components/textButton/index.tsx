@@ -4,12 +4,6 @@ import PropTypes from 'prop-types';
 import { ButtonContents } from '../../style';
 import { BaseTextButton } from './style';
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-};
-
 type TextButtonProps = {
   /**
    * Node/text to be rendered inside the button
@@ -17,7 +11,7 @@ type TextButtonProps = {
   children: React.ReactNode;
   disabled?: boolean;
   onClick?: () => void;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 /**
@@ -41,4 +35,8 @@ export const TextButton = ({
   </BaseTextButton>
 );
 
-TextButton.propTypes = propTypes;
+TextButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+};

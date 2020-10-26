@@ -3,12 +3,11 @@ import { text, select, number, color } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
-import { COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
+import { ANIMATION, COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
 import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -71,10 +70,15 @@ export const WithControls = () => (
   </BarContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Progress Bar',
   component: ProgressBar,
   parameters: {
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
     docs: {
       page: () => (
         <React.Fragment>
@@ -85,10 +89,9 @@ export default {
             language="tsx"
             code={"import { ProgressBar } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

@@ -4,7 +4,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -47,7 +46,7 @@ export const Error = () => (
 export const Success = () => (
   <FieldContainer>
     <Field.Input />
-    <VerificationMessages messages={messages} type="success" centered />
+    <VerificationMessages messages={messages} type="success" />
   </FieldContainer>
 );
 
@@ -61,6 +60,10 @@ export const WithControls = () => (
     />
   </FieldContainer>
 );
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
 
 export default {
   title: 'Components/VerificationMessages',
@@ -76,10 +79,9 @@ export default {
             language="tsx"
             code={"import { VerificationMessages } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },
