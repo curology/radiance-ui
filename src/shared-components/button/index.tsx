@@ -47,7 +47,7 @@ type ButtonProps = {
    */
   isLoading?: boolean;
   loading?: boolean | undefined;
-  onClick?: () => void;
+  onClick: () => void;
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
@@ -71,7 +71,7 @@ export const Button = ({
   isFullWidth = false,
   isLoading = false,
   loading = undefined,
-  onClick = () => undefined,
+  onClick,
   textColor = '',
   ...rest
 }: ButtonProps) => {
