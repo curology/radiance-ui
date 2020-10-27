@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import { Avatar } from '../avatar';
@@ -71,7 +71,7 @@ export const Alert = (alertProps: AlertProps) => {
   const [exiting, setExiting] = useState(false);
   const [exited, setExited] = useState(false);
 
-  const contentText = React.createRef<HTMLDivElement>();
+  const contentText = useRef<HTMLDivElement>(null);
 
   let timer: number | undefined;
 

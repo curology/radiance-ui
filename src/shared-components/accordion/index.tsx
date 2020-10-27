@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 import { COLORS } from 'src/constants';
 
@@ -52,7 +52,7 @@ export const Accordion = ({
 }: AccordionProps) => {
   const [contentHeight, setContentHeight] = useState('0px');
 
-  const contentRef = React.createRef<HTMLDivElement>();
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const nextHeight =
