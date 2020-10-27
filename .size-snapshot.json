@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1138873,
-    "minified": 1071802,
-    "gzipped": 103255
+    "bundled": 1134588,
+    "minified": 1068360,
+    "gzipped": 102472
   },
   "bundle.umd.js": {
-    "bundled": 1147960,
-    "minified": 1046065,
-    "gzipped": 99116
+    "bundled": 1143503,
+    "minified": 1043590,
+    "gzipped": 98381
   },
   "shared-components/chip/index.js": {
     "bundled": 867,
@@ -24,16 +24,16 @@
     }
   },
   "shared-components/loadingSpinner/index.js": {
-    "bundled": 1891,
-    "minified": 1053,
-    "gzipped": 456,
+    "bundled": 1593,
+    "minified": 801,
+    "gzipped": 371,
     "treeshaked": {
       "rollup": {
-        "code": 757,
+        "code": 239,
         "import_statements": 194
       },
       "webpack": {
-        "code": 1943
+        "code": 1300
       }
     }
   },
@@ -52,16 +52,16 @@
     }
   },
   "shared-components/field/style.js": {
-    "bundled": 35818,
-    "minified": 35300,
-    "gzipped": 4680,
+    "bundled": 35878,
+    "minified": 35360,
+    "gzipped": 4663,
     "treeshaked": {
       "rollup": {
-        "code": 2100,
+        "code": 2104,
         "import_statements": 297
       },
       "webpack": {
-        "code": 3405
+        "code": 3409
       }
     }
   },
@@ -94,13 +94,13 @@
     }
   },
   "shared-components/toggle/index.js": {
-    "bundled": 1780,
-    "minified": 998,
-    "gzipped": 519,
+    "bundled": 1757,
+    "minified": 983,
+    "gzipped": 517,
     "treeshaked": {
       "rollup": {
-        "code": 179,
-        "import_statements": 145
+        "code": 302,
+        "import_statements": 268
       },
       "webpack": {
         "code": 1346
@@ -136,16 +136,16 @@
     }
   },
   "shared-components/button/constants.js": {
-    "bundled": 543,
-    "minified": 472,
-    "gzipped": 243,
+    "bundled": 551,
+    "minified": 480,
+    "gzipped": 241,
     "treeshaked": {
       "rollup": {
-        "code": 233,
+        "code": 241,
         "import_statements": 116
       },
       "webpack": {
-        "code": 1299
+        "code": 1307
       }
     }
   },
@@ -206,7 +206,7 @@
     }
   },
   "shared-components/radioButton/index.js": {
-    "bundled": 2182,
+    "bundled": 1994,
     "minified": 1051,
     "gzipped": 515,
     "treeshaked": {
@@ -263,15 +263,15 @@
   },
   "shared-components/field/index.js": {
     "bundled": 2767,
-    "minified": 1475,
-    "gzipped": 663,
+    "minified": 1477,
+    "gzipped": 661,
     "treeshaked": {
       "rollup": {
-        "code": 1236,
+        "code": 1238,
         "import_statements": 407
       },
       "webpack": {
-        "code": 2543
+        "code": 2545
       }
     }
   },
@@ -500,9 +500,9 @@
     }
   },
   "shared-components/dropdown/index.js": {
-    "bundled": 3419,
-    "minified": 1710,
-    "gzipped": 746,
+    "bundled": 3526,
+    "minified": 1751,
+    "gzipped": 760,
     "treeshaked": {
       "rollup": {
         "code": 527,
@@ -600,7 +600,7 @@
   "shared-components/optionButton/index.js": {
     "bundled": 2186,
     "minified": 1442,
-    "gzipped": 635,
+    "gzipped": 633,
     "treeshaked": {
       "rollup": {
         "code": 511,
@@ -612,16 +612,16 @@
     }
   },
   "shared-components/accordion/thumbnails/index.js": {
-    "bundled": 1283,
-    "minified": 682,
-    "gzipped": 345,
+    "bundled": 1158,
+    "minified": 568,
+    "gzipped": 295,
     "treeshaked": {
       "rollup": {
-        "code": 236,
-        "import_statements": 205
+        "code": 55,
+        "import_statements": 55
       },
       "webpack": {
-        "code": 1714
+        "code": 1105
       }
     }
   },
@@ -670,7 +670,7 @@
   "shared-components/chip/style.js": {
     "bundled": 16114,
     "minified": 15713,
-    "gzipped": 2631,
+    "gzipped": 2630,
     "treeshaked": {
       "rollup": {
         "code": 1082,
@@ -726,7 +726,7 @@
   "shared-components/tooltip/index.js": {
     "bundled": 5372,
     "minified": 2529,
-    "gzipped": 1027,
+    "gzipped": 1028,
     "treeshaked": {
       "rollup": {
         "code": 642,
@@ -780,16 +780,16 @@
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 11265,
-    "minified": 9429,
-    "gzipped": 3676,
+    "bundled": 8930,
+    "minified": 7409,
+    "gzipped": 3158,
     "treeshaked": {
       "rollup": {
-        "code": 2049,
-        "import_statements": 502
+        "code": 226,
+        "import_statements": 226
       },
       "webpack": {
-        "code": 3387
+        "code": 1421
       }
     }
   },
@@ -808,9 +808,9 @@
     }
   },
   "shared-components/container/style.js": {
-    "bundled": 31493,
-    "minified": 30716,
-    "gzipped": 4150,
+    "bundled": 31365,
+    "minified": 30588,
+    "gzipped": 4133,
     "treeshaked": {
       "rollup": {
         "code": 1264,
@@ -822,30 +822,30 @@
     }
   },
   "shared-components/button/shared-components/loader/index.js": {
-    "bundled": 1667,
-    "minified": 928,
-    "gzipped": 451,
+    "bundled": 1307,
+    "minified": 611,
+    "gzipped": 338,
     "treeshaked": {
       "rollup": {
-        "code": 274,
-        "import_statements": 169
+        "code": 91,
+        "import_statements": 91
       },
       "webpack": {
-        "code": 1984
+        "code": 1184
       }
     }
   },
   "shared-components/typography/index.js": {
-    "bundled": 92224,
-    "minified": 91435,
-    "gzipped": 6106,
+    "bundled": 92303,
+    "minified": 91514,
+    "gzipped": 6077,
     "treeshaked": {
       "rollup": {
-        "code": 2274,
+        "code": 2277,
         "import_statements": 245
       },
       "webpack": {
-        "code": 3619
+        "code": 3622
       }
     }
   },
@@ -864,16 +864,16 @@
     }
   },
   "shared-components/dropdown/mobileDropdown.js": {
-    "bundled": 2066,
-    "minified": 1127,
-    "gzipped": 538,
+    "bundled": 1437,
+    "minified": 668,
+    "gzipped": 379,
     "treeshaked": {
       "rollup": {
-        "code": 393,
-        "import_statements": 214
+        "code": 96,
+        "import_statements": 96
       },
       "webpack": {
-        "code": 1455
+        "code": 1183
       }
     }
   },
@@ -1004,16 +1004,16 @@
     }
   },
   "shared-components/carousel/style.js": {
-    "bundled": 46192,
-    "minified": 45530,
-    "gzipped": 5103,
+    "bundled": 46209,
+    "minified": 45547,
+    "gzipped": 5097,
     "treeshaked": {
       "rollup": {
-        "code": 2500,
+        "code": 2501,
         "import_statements": 158
       },
       "webpack": {
-        "code": 3677
+        "code": 3678
       }
     }
   },
@@ -1102,44 +1102,44 @@
     }
   },
   "shared-components/dropdown/style.js": {
-    "bundled": 60736,
-    "minified": 59748,
-    "gzipped": 5975,
+    "bundled": 60840,
+    "minified": 59852,
+    "gzipped": 5936,
     "treeshaked": {
       "rollup": {
-        "code": 2301,
+        "code": 2305,
         "import_statements": 298
       },
       "webpack": {
-        "code": 3607
+        "code": 3611
       }
     }
   },
   "shared-components/selectorButton/style.js": {
-    "bundled": 50248,
-    "minified": 49458,
-    "gzipped": 5446,
+    "bundled": 50392,
+    "minified": 49602,
+    "gzipped": 5484,
     "treeshaked": {
       "rollup": {
-        "code": 2079,
+        "code": 2087,
         "import_statements": 251
       },
       "webpack": {
-        "code": 3376
+        "code": 3384
       }
     }
   },
   "shared-components/optionButton/style.js": {
-    "bundled": 57450,
-    "minified": 56362,
-    "gzipped": 4869,
+    "bundled": 57502,
+    "minified": 56414,
+    "gzipped": 4881,
     "treeshaked": {
       "rollup": {
-        "code": 2201,
+        "code": 2205,
         "import_statements": 352
       },
       "webpack": {
-        "code": 3522
+        "code": 3526
       }
     }
   },
@@ -1186,16 +1186,16 @@
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 39686,
-    "minified": 38687,
-    "gzipped": 4851,
+    "bundled": 39738,
+    "minified": 38739,
+    "gzipped": 4822,
     "treeshaked": {
       "rollup": {
-        "code": 2636,
+        "code": 2640,
         "import_statements": 299
       },
       "webpack": {
-        "code": 3904
+        "code": 3908
       }
     }
   },
@@ -1242,16 +1242,16 @@
     }
   },
   "shared-components/carousel/arrow/index.js": {
-    "bundled": 1764,
-    "minified": 1030,
-    "gzipped": 440,
+    "bundled": 1558,
+    "minified": 851,
+    "gzipped": 386,
     "treeshaked": {
       "rollup": {
-        "code": 352,
-        "import_statements": 317
+        "code": 193,
+        "import_statements": 193
       },
       "webpack": {
-        "code": 2079
+        "code": 1360
       }
     }
   },
@@ -1284,16 +1284,16 @@
     }
   },
   "shared-components/accordion/thumbnails/style.js": {
-    "bundled": 11200,
-    "minified": 10980,
-    "gzipped": 2266,
+    "bundled": 11245,
+    "minified": 11025,
+    "gzipped": 2283,
     "treeshaked": {
       "rollup": {
-        "code": 884,
+        "code": 889,
         "import_statements": 190
       },
       "webpack": {
-        "code": 2040
+        "code": 2045
       }
     }
   },
