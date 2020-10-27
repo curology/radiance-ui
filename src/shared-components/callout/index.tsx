@@ -30,8 +30,8 @@ type CalloutProps = {
  */
 export const Callout = ({
   children,
-  icon = null,
   color = COLORS.primary,
+  icon = null,
 }: CalloutProps) => (
   <CalloutContainer>
     <Text color={color}>{children}</Text>
@@ -41,8 +41,8 @@ export const Callout = ({
 
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
-  icon: PropTypes.node,
   color: PropTypes.string,
+  icon: PropTypes.node,
 };
 
 Callout.Container = ParentContainer;

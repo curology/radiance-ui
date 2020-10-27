@@ -130,7 +130,7 @@ Button.propTypes = {
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   loading: isLoadingPropFunction,
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
   textColor: PropTypes.string,
 };
 
