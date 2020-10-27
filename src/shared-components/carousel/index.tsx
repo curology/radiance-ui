@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
@@ -70,27 +70,25 @@ export const Carousel = ({
     return numberSlides - numCardsVisible;
   };
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [lastIndex, setLastIndex] = useState(getLastIndex());
-  const [hasUserInteracted, setHasUserInteracted] = useState(false);
-  const [timeoutId, setTimeoutId] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(FIRST_INDEX);
+  const [lastIndex, setLastIndex] = useState(getLastIndex);
 
-  const slider: React.RefObject<Slider> = React.createRef();
+  const hasUserInteractedRef = useRef(false);
+  const timeoutIdRef = useRef<number | null>(null);
+  const slider = useRef<Slider>(null);
 
   const shouldReplay = () => {
     const onLastCard = currentIndex === lastIndex;
 
-    return autoplay && !infinite && onLastCard && !hasUserInteracted;
+    return autoplay && !infinite && onLastCard && !hasUserInteractedRef.current;
   };
 
   const replay = () => {
-    setTimeoutId(
-      window.setTimeout(() => {
-        if (slider.current) {
-          slider.current.slickGoTo(FIRST_INDEX);
-        }
-      }, autoplaySpeed),
-    );
+    timeoutIdRef.current = window.setTimeout(() => {
+      if (slider.current) {
+        slider.current.slickGoTo(FIRST_INDEX);
+      }
+    }, autoplaySpeed);
   };
 
   const updateLastIndex = () => {
@@ -113,15 +111,15 @@ export const Carousel = ({
   });
 
   const onCardChange = (_oldIndex: number, nextIndex: number) => {
-    setTimeoutId(null);
+    timeoutIdRef.current = null;
     setCurrentIndex(nextIndex);
   };
 
   const onUserInteraction = () => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
+    if (timeoutIdRef.current) {
+      clearTimeout(timeoutIdRef.current);
     }
-    setHasUserInteracted(true);
+    hasUserInteractedRef.current = true;
 
     if (slider.current) {
       slider.current.slickPause();

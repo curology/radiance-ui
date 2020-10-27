@@ -40,20 +40,14 @@ export const OffClickWrapper = ({
     onOffClick(event);
   };
 
-  const addOffClickListener = () => {
+  useEffect(() => {
     document.addEventListener('click', handleOffClick, false);
     document.addEventListener('keydown', handleKeyPress, false);
-  };
-
-  const removeOffClickListener = () => {
-    document.removeEventListener('click', handleOffClick, false);
-    document.removeEventListener('keydown', handleKeyPress, false);
-  };
-
-  useEffect(() => {
-    addOffClickListener();
-    return () => removeOffClickListener();
-  });
+    return () => {
+      document.removeEventListener('click', handleOffClick, false);
+      document.removeEventListener('keydown', handleKeyPress, false);
+    };
+  }, []);
 
   return (
     <div ref={containerRef} className={className}>
