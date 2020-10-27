@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
-import { COLORS } from 'src/constants';
+import { useTheme } from 'emotion-theming';
 
+import { ThemeType } from '../../constants/themes/types';
 import Thumbnails from './thumbnails';
 import {
   AccordionBox,
@@ -50,6 +51,7 @@ export const Accordion = ({
   rightAlignArrow = false,
   title,
 }: AccordionProps) => {
+  const theme = useTheme<ThemeType>();
   const [contentHeight, setContentHeight] = useState('0px');
 
   const contentRef = useRef<HTMLDivElement>(null);
@@ -94,7 +96,7 @@ export const Accordion = ({
             rotate={isOpen ? 90 : 0}
             width={16}
             height={16}
-            fill={COLORS.primary}
+            fill={theme.COLORS.primary}
           />
         </ArrowWrapper>
       </TitleWrapper>

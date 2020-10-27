@@ -1,12 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import {
-  ANIMATION,
-  BREAKPOINTS,
-  BOX_SHADOWS,
-  COLORS,
-  SPACER,
+  ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
 } from 'src/constants';
+import { ThemeType } from 'src/constants/themes/types';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -19,11 +16,11 @@ export const ExpansionWrapper = styled.div<{ contentHeight: string }>`
   transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
 `;
 
-const getBorderStyle = (isOpen: boolean) => css`
-  border: 1px solid ${COLORS.border};
+const getBorderStyle = (theme: ThemeType, isOpen: boolean) => css`
+  border: 1px solid ${theme.COLORS.border};
 
   ${ExpansionWrapper} {
-    ${isOpen && `border-top: 1px solid ${COLORS.border};`};
+    ${isOpen && `border-top: 1px solid ${theme.COLORS.border}`};
   }
 `;
 
@@ -31,8 +28,10 @@ export const AccordionBox = styled.div<{
   noBorder: boolean;
   isOpen: boolean;
   disabled: boolean;
+  theme?: ThemeType;
 }>`
-  ${({ noBorder, isOpen }) => (!noBorder ? getBorderStyle(isOpen) : '')};
+  ${({ noBorder, isOpen, theme }) =>
+    !noBorder ? getBorderStyle(theme, isOpen) : ''};
 
   width: 100%;
 
@@ -40,12 +39,12 @@ export const AccordionBox = styled.div<{
     border-bottom: none;
   }
 
-  ${({ disabled }) =>
+  ${({ disabled, theme }) =>
     disabled
       ? `
     opacity: 0.4;
-    background-color: ${COLORS.disabled};
-    border-color: ${COLORS.purple30};
+    background-color: ${theme.COLORS.disabled};
+    border-color: ${theme.COLORS.primaryTint3};
   `
       : ''};
 `;
@@ -96,9 +95,12 @@ export const Truncate = styled.div`
  * borderRadius must match borderRadius passed to main <Accordion />
  * component if opting out of default values.
  */
-export const Container = styled.div<{ borderRadius?: string }>`
+export const Container = styled.div<{
+  borderRadius?: string;
+  theme?: ThemeType;
+}>`
   box-shadow: ${BOX_SHADOWS.clickable};
-  background-color: ${COLORS.white};
+  background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
   ${({ borderRadius = '4px' }) => `
