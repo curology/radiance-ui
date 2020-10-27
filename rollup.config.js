@@ -3,7 +3,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
-import alias from '@rollup/plugin-alias';
 
 // eslint-disable-next-line import/extensions
 import pkg from './package.json';
@@ -21,15 +20,6 @@ const extensions = ['.js', '.ts', '.tsx'];
 const defaultConfig = {
   input: 'src/index.ts',
   plugins: [
-    alias({
-      entries: [
-        { find: '@emotion/styled', replacement: 'src/utils/theming/styled' },
-        {
-          find: 'emotion-theming',
-          replacement: 'src/utils/theming/emotionTheming',
-        },
-      ],
-    }),
     svgr({
       template: transformTemplateForUtilLocation(UTIL_LOCATION),
       expandProps: false,
