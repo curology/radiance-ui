@@ -59,7 +59,7 @@ export const Toggle = ({
             base: COLORS.secondary,
           },
           inactive: {
-            base: COLORS.purple15,
+            base: COLORS.defaultBorder,
           },
           activeThumb: {
             base: COLORS.white,

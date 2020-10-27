@@ -23,7 +23,7 @@ export const FieldContainer = styled.div`
 export const Label = styled.label<{ disabled: boolean }>`
   ${TYPOGRAPHY_STYLE.label};
 
-  ${({ disabled }) => disabled && `color:${COLORS.purple30};`};
+  ${({ disabled }) => disabled && `color:${COLORS.primaryTint3};`};
 `;
 
 const inputStyles = css`

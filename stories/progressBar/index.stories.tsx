@@ -26,7 +26,7 @@ const BarContainer = styled.div`
 
   :before {
     content: 'PAGE CONTENT';
-    color: ${COLORS.purple30};
+    color: ${COLORS.primaryTint3};
   }
 `;
 

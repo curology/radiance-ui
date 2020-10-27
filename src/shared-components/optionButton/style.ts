@@ -128,7 +128,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.div`
-  color: ${COLORS.purple85};
+  color: ${COLORS.primaryTint1};
   line-height: 1.5;
 `;
 

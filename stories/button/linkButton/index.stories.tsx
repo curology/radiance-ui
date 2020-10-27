@@ -52,19 +52,19 @@ export const ReactRouterLink = () => {
 
 export const WithColor = () => (
   <LinkButton.Container>
-    <LinkButton buttonColor={COLORS.statusRed} href="https://www.curology.com">
+    <LinkButton buttonColor={COLORS.error} href="https://www.curology.com">
       Primary
     </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="secondary">
+    <LinkButton buttonColor={COLORS.error} buttonType="secondary">
       Secondary
     </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="tertiary">
+    <LinkButton buttonColor={COLORS.error} buttonType="tertiary">
       Tertiary
     </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="quaternary">
+    <LinkButton buttonColor={COLORS.error} buttonType="quaternary">
       Quaternary
     </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} disabled>
+    <LinkButton buttonColor={COLORS.error} disabled>
       Disabled
     </LinkButton>
   </LinkButton.Container>
