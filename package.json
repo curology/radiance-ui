@@ -53,6 +53,7 @@
   },
   "homepage": "https://github.com/PocketDerm/radiance-ui#readme",
   "devDependencies": {
+    "~": "file:.",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -64,6 +65,7 @@
     "@babel/preset-typescript": "^7.12.1",
     "@babel/register": "^7.12.1",
     "@emotion/babel-preset-css-prop": "10.0.27",
+    "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^15.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",

@@ -1,9 +1,9 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import {
   ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
 } from 'src/constants';
 import { ThemeType } from 'src/constants/themes/types';
+import styled from '@emotion/styled';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -28,7 +28,6 @@ export const AccordionBox = styled.div<{
   noBorder: boolean;
   isOpen: boolean;
   disabled: boolean;
-  theme?: ThemeType;
 }>`
   ${({ noBorder, isOpen, theme }) =>
     !noBorder ? getBorderStyle(theme, isOpen) : ''};
@@ -97,7 +96,6 @@ export const Truncate = styled.div`
  */
 export const Container = styled.div<{
   borderRadius?: string;
-  theme?: ThemeType;
 }>`
   box-shadow: ${BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};

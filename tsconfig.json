@@ -5,7 +5,11 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "outDir": "lib",
-    "rootDirs": ["src"]
+    "rootDirs": ["src"],
+    "paths": {
+      "emotion-theming": ["src/utils/theming/emotionTheming"],
+      "@emotion/styled": ["src/utils/theming/styled"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.ts"]
 }

@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 import { useTheme } from 'emotion-theming';
 
-import { ThemeType } from '../../constants/themes/types';
 import Thumbnails from './thumbnails';
 import {
   AccordionBox,
@@ -51,7 +50,7 @@ export const Accordion = ({
   rightAlignArrow = false,
   title,
 }: AccordionProps) => {
-  const theme = useTheme<ThemeType>();
+  const theme = useTheme();
   const [contentHeight, setContentHeight] = useState('0px');
 
   const contentRef = useRef<HTMLDivElement>(null);
