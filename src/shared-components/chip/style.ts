@@ -14,7 +14,7 @@ export const ChipText = styled.span`
 `;
 
 const defaultStyle = css`
-  background-color: ${COLORS.disabled};
+  background-color: ${COLORS.defaultBackground};
   ${ChipText} {
     color: ${COLORS.primary};
   }
