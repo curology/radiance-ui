@@ -20,14 +20,14 @@ type DesktopDropdownProps = {
   closeDropdown: () => void;
   currentOption?: OptionType;
   isOpen: boolean;
-  onOptionClick: (
+  onDesktopSelectChange: (
     event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
   ) => void;
-  onSelectClick: () => void;
   options: OptionType[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
-  value?: string | number | null;
+  toggleDropdown: () => void;
+  value?: string | number;
 };
 
 export const DesktopDropdown = ({
@@ -35,11 +35,11 @@ export const DesktopDropdown = ({
   closeDropdown,
   currentOption,
   isOpen,
-  onOptionClick,
-  onSelectClick,
+  onDesktopSelectChange,
   options,
   optionsContainerMaxHeight,
   textAlign,
+  toggleDropdown,
   value,
 }: DesktopDropdownProps) => {
   const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
@@ -47,14 +47,14 @@ export const DesktopDropdown = ({
   const handleKeyDown = (event: React.KeyboardEvent) => {
     // This key handler allows users to open the dropdown options via the keyboard
     if (event.key === 'Enter') {
-      onSelectClick();
+      toggleDropdown();
     }
   };
 
   const handleOptionKeydown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     // This allows users to select an option via the enter key
     if (event.key === 'Enter') {
-      onOptionClick(event);
+      onDesktopSelectChange(event);
       resetFocus();
     }
   };
@@ -68,7 +68,7 @@ export const DesktopDropdown = ({
     >
       <DropdownContainer textAlign={textAlign}>
         <DropdownFocusContainer
-          onClick={onSelectClick}
+          onClick={toggleDropdown}
           onKeyDown={handleKeyDown}
           tabIndex={0}
           aria-haspopup="menu"
@@ -94,22 +94,22 @@ export const DesktopDropdown = ({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={value as string}
+          aria-activedescendant={`${value}`}
           aria-hidden={!isOpen}
         >
-          {options.map((option) => {
+          {options.map((option, index) => {
             const {
               value: optionValue, disabled, label, ...rest 
             } = option;
 
             return (
               <DropdownOption
-                key={optionValue}
+                key={optionValue || `undefined-${index}`}
                 value={optionValue}
-                id={optionValue as string}
+                id={`${optionValue}`}
                 selected={value === optionValue}
                 disabled={!!disabled}
-                onClick={onOptionClick}
+                onClick={onDesktopSelectChange}
                 onKeyDown={handleOptionKeydown}
                 role="menuitemradio"
                 aria-disabled={!!disabled}

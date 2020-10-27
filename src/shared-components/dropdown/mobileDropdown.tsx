@@ -7,10 +7,10 @@ import { OptionType } from '.';
 
 type MobileDropdownProps = {
   borderRadius: string;
-  onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: OptionType[];
   textAlign: 'left' | 'center';
-  value?: string | number | null;
+  value?: string | number;
 };
 
 /**
@@ -20,7 +20,7 @@ type MobileDropdownProps = {
  */
 export const MobileDropdown = ({
   borderRadius,
-  onSelectChange,
+  onMobileSelectChange,
   options,
   textAlign,
   value,
@@ -33,9 +33,9 @@ export const MobileDropdown = ({
         textAlign,
       })}
       value={value || ''}
-      onChange={onSelectChange}
+      onChange={onMobileSelectChange}
     >
-      {options.map((option) => {
+      {options.map((option, index) => {
         let isDisabled = option.disabled;
 
         // Covers the case where default value is disabled
@@ -45,7 +45,11 @@ export const MobileDropdown = ({
         }
 
         return (
-          <option key={option.value} value={option.value} disabled={isDisabled}>
+          <option
+            key={option.value || `undefined-${index}`}
+            value={option.value}
+            disabled={isDisabled}
+          >
             {option.label}
           </option>
         );
