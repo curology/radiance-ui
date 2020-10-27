@@ -1,25 +1,25 @@
 {
   "bundle.js": {
-    "bundled": 1145632,
-    "minified": 1075957,
-    "gzipped": 104587
+    "bundled": 1138873,
+    "minified": 1071802,
+    "gzipped": 103255
   },
   "bundle.umd.js": {
-    "bundled": 1155149,
-    "minified": 1049964,
-    "gzipped": 100328
+    "bundled": 1147960,
+    "minified": 1046065,
+    "gzipped": 99116
   },
   "shared-components/chip/index.js": {
-    "bundled": 912,
-    "minified": 415,
-    "gzipped": 262,
+    "bundled": 867,
+    "minified": 378,
+    "gzipped": 249,
     "treeshaked": {
       "rollup": {
-        "code": 364,
+        "code": 201,
         "import_statements": 130
       },
       "webpack": {
-        "code": 1456
+        "code": 1247
       }
     }
   },
@@ -472,16 +472,16 @@
     }
   },
   "shared-components/dialogModal/index.js": {
-    "bundled": 4066,
-    "minified": 2213,
-    "gzipped": 982,
+    "bundled": 3427,
+    "minified": 1841,
+    "gzipped": 894,
     "treeshaked": {
       "rollup": {
-        "code": 1847,
-        "import_statements": 513
+        "code": 537,
+        "import_statements": 503
       },
       "webpack": {
-        "code": 3179
+        "code": 1547
       }
     }
   },
@@ -570,16 +570,16 @@
     }
   },
   "shared-components/offClickWrapper/index.js": {
-    "bundled": 2403,
-    "minified": 1465,
-    "gzipped": 615,
+    "bundled": 1252,
+    "minified": 704,
+    "gzipped": 363,
     "treeshaked": {
       "rollup": {
-        "code": 1266,
-        "import_statements": 204
+        "code": 153,
+        "import_statements": 108
       },
       "webpack": {
-        "code": 2380
+        "code": 1171
       }
     }
   },
@@ -752,16 +752,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 3674,
-    "minified": 1960,
-    "gzipped": 790,
+    "bundled": 3685,
+    "minified": 1971,
+    "gzipped": 793,
     "treeshaked": {
       "rollup": {
-        "code": 1601,
+        "code": 1612,
         "import_statements": 568
       },
       "webpack": {
-        "code": 2943
+        "code": 2954
       }
     }
   },
@@ -850,9 +850,9 @@
     }
   },
   "shared-components/selectorButton/index.js": {
-    "bundled": 10180,
-    "minified": 9203,
-    "gzipped": 2579,
+    "bundled": 10188,
+    "minified": 9211,
+    "gzipped": 2590,
     "treeshaked": {
       "rollup": {
         "code": 613,
@@ -920,16 +920,16 @@
     }
   },
   "shared-components/accordion/index.js": {
-    "bundled": 3296,
-    "minified": 1745,
-    "gzipped": 819,
+    "bundled": 3279,
+    "minified": 1740,
+    "gzipped": 814,
     "treeshaked": {
       "rollup": {
-        "code": 1452,
-        "import_statements": 455
+        "code": 1455,
+        "import_statements": 464
       },
       "webpack": {
-        "code": 2771
+        "code": 2769
       }
     }
   },
@@ -1046,16 +1046,16 @@
     }
   },
   "shared-components/carousel/index.js": {
-    "bundled": 6827,
-    "minified": 3312,
-    "gzipped": 1268,
+    "bundled": 5328,
+    "minified": 2239,
+    "gzipped": 1017,
     "treeshaked": {
       "rollup": {
-        "code": 2939,
-        "import_statements": 369
+        "code": 1868,
+        "import_statements": 359
       },
       "webpack": {
-        "code": 4240
+        "code": 3227
       }
     }
   },
@@ -1088,9 +1088,9 @@
     }
   },
   "_virtual/_rollupPluginBabelHelpers.js": {
-    "bundled": 7962,
-    "minified": 5285,
-    "gzipped": 1769,
+    "bundled": 4853,
+    "minified": 3233,
+    "gzipped": 1177,
     "treeshaked": {
       "rollup": {
         "code": 0,
@@ -1144,16 +1144,16 @@
     }
   },
   "shared-components/alert/index.js": {
-    "bundled": 5715,
-    "minified": 2543,
-    "gzipped": 1110,
+    "bundled": 5698,
+    "minified": 2538,
+    "gzipped": 1105,
     "treeshaked": {
       "rollup": {
-        "code": 2012,
-        "import_statements": 643
+        "code": 2015,
+        "import_statements": 652
       },
       "webpack": {
-        "code": 3564
+        "code": 3562
       }
     }
   },
@@ -1242,16 +1242,16 @@
     }
   },
   "shared-components/carousel/arrow/index.js": {
-    "bundled": 2818,
-    "minified": 1642,
-    "gzipped": 708,
+    "bundled": 1764,
+    "minified": 1030,
+    "gzipped": 440,
     "treeshaked": {
       "rollup": {
-        "code": 1309,
-        "import_statements": 445
+        "code": 352,
+        "import_statements": 317
       },
       "webpack": {
-        "code": 2637
+        "code": 2079
       }
     }
   },

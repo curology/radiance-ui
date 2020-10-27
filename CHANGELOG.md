@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v12.3.1
+
+- [Internal] Convert Carousel, DialogModal, OffClickWrapper to functional components
+
 # v12.3.0
 
 - [Internal] Convert class to functional components
