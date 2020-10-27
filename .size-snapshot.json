@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1138873,
-    "minified": 1071802,
-    "gzipped": 103255
+    "bundled": 1140727,
+    "minified": 1073422,
+    "gzipped": 103436
   },
   "bundle.umd.js": {
-    "bundled": 1147960,
-    "minified": 1046065,
-    "gzipped": 99116
+    "bundled": 1149873,
+    "minified": 1047692,
+    "gzipped": 99322
   },
   "shared-components/chip/index.js": {
     "bundled": 867,
@@ -108,16 +108,16 @@
     }
   },
   "utils/withDeprecationWarning/index.js": {
-    "bundled": 823,
-    "minified": 445,
-    "gzipped": 278,
+    "bundled": 689,
+    "minified": 339,
+    "gzipped": 230,
     "treeshaked": {
       "rollup": {
-        "code": 0,
-        "import_statements": 0
+        "code": 44,
+        "import_statements": 44
       },
       "webpack": {
-        "code": 1003
+        "code": 1029
       }
     }
   },
@@ -920,16 +920,16 @@
     }
   },
   "shared-components/accordion/index.js": {
-    "bundled": 3279,
-    "minified": 1740,
-    "gzipped": 814,
+    "bundled": 3301,
+    "minified": 1741,
+    "gzipped": 822,
     "treeshaked": {
       "rollup": {
-        "code": 1455,
+        "code": 1468,
         "import_statements": 464
       },
       "webpack": {
-        "code": 2769
+        "code": 2772
       }
     }
   },
@@ -1186,16 +1186,16 @@
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 39686,
-    "minified": 38687,
-    "gzipped": 4851,
+    "bundled": 41211,
+    "minified": 40129,
+    "gzipped": 4979,
     "treeshaked": {
       "rollup": {
-        "code": 2636,
-        "import_statements": 299
+        "code": 2688,
+        "import_statements": 256
       },
       "webpack": {
-        "code": 3904
+        "code": 3905
       }
     }
   },
@@ -1364,6 +1364,20 @@
       },
       "webpack": {
         "code": 1212
+      }
+    }
+  },
+  "utils/shouldShowForEnvironment/index.js": {
+    "bundled": 431,
+    "minified": 275,
+    "gzipped": 185,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
       }
     }
   }
