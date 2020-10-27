@@ -38,7 +38,7 @@ const getStyleForTransitionState = (transitionState: string) => {
 
 type HelperTransitionParamsType = {
   children: JSX.Element;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 const HelperTransition = ({

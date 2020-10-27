@@ -19,7 +19,7 @@ type CheckboxProps = {
   ) => void;
   size?: SizeType;
   type?: StyleType;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 /**

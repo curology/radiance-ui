@@ -6,23 +6,23 @@ import ButtonLoader from './style';
 import { ButtonTypeWithAction } from '../..';
 
 type LoaderProps = {
-  buttonColor: string;
-  buttonType: ButtonTypeWithAction;
-  className: string;
-  disabled: boolean;
+  buttonColor?: string;
+  buttonType?: ButtonTypeWithAction;
+  className?: string;
+  disabled?: boolean;
   isFullWidth?: boolean;
-  isLoading: boolean;
-  textColor: string;
+  isLoading?: boolean;
+  textColor?: string;
 };
 
 const Loader = ({
-  buttonColor,
-  buttonType,
-  className,
-  disabled,
-  isFullWidth,
-  isLoading,
-  textColor,
+  buttonColor = COLORS.primary,
+  buttonType = 'primary',
+  className = '',
+  disabled = false,
+  isFullWidth = false,
+  isLoading = false,
+  textColor = '',
 }: LoaderProps) => (
   <ButtonLoader
     buttonColor={buttonColor}
@@ -42,6 +42,7 @@ const Loader = ({
 );
 
 Loader.propTypes = {
+  buttonColor: COLORS_PROP_TYPES,
   buttonType: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -49,22 +50,11 @@ Loader.propTypes = {
     'quaternary',
     'action',
   ]),
-  buttonColor: COLORS_PROP_TYPES,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   textColor: PropTypes.string,
-};
-
-Loader.defaultProps = {
-  buttonType: 'primary',
-  buttonColor: COLORS.primary,
-  className: '',
-  disabled: false,
-  isFullWidth: false,
-  isLoading: false,
-  textColor: '',
 };
 
 export default Loader;

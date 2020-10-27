@@ -183,7 +183,6 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   line-height: 1.5;
   margin: 0;
   padding-top: 2px;
-  padding-top: 2px;
 }
 
 .emotion-4 {

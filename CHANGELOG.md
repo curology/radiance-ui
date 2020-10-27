@@ -1,5 +1,14 @@
 # CHANGELOG
 
+# v12.3.1
+
+- [Internal] Convert Carousel, DialogModal, OffClickWrapper to functional components
+
+# v12.3.0
+
+- [Internal] Convert class to functional components
+- [Typescript] Make Button onClick prop required
+
 # v12.2.1
 
 - [Hotfix] Fix VerificationMessages animation and ImmersiveModal exitlogic fix

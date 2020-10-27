@@ -25,7 +25,3 @@ Chip.propTypes = {
   status: PropTypes.oneOf(['default', 'success', 'error', 'secondary']),
   text: PropTypes.string.isRequired,
 };
-
-Chip.defaultProps = {
-  status: 'default',
-};
