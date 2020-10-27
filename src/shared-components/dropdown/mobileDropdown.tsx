@@ -10,7 +10,7 @@ type MobileDropdownProps = {
   onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: OptionType[];
   textAlign: 'left' | 'center';
-  value?: string | number;
+  value?: string | number | null;
 };
 
 /**

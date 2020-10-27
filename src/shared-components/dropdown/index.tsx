@@ -14,7 +14,7 @@ export type OptionType = {
   /**
    * The option indentifier
    */
-  value?: string;
+  value?: string | number;
 };
 
 type DropdownProps = {
@@ -30,9 +30,9 @@ type DropdownProps = {
   optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
   /**
-   * The currently selected option. Can mount as `undefined`
+   * The currently selected option. Can mount as `null`
    */
-  value?: string;
+  value?: string | number | null;
 };
 
 /**
@@ -42,7 +42,7 @@ type DropdownProps = {
 export const Dropdown = ({
   borderRadius = '4px',
   onChange,
-  options = [{ value: undefined, label: '' }],
+  options = [{ label: '' }],
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,

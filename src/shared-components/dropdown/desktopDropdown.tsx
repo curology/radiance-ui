@@ -27,7 +27,7 @@ type DesktopDropdownProps = {
   options: OptionType[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
-  value?: string;
+  value?: string | number | null;
 };
 
 export const DesktopDropdown = ({
@@ -94,7 +94,7 @@ export const DesktopDropdown = ({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={value}
+          aria-activedescendant={value as string}
           aria-hidden={!isOpen}
         >
           {options.map((option) => {
@@ -106,7 +106,7 @@ export const DesktopDropdown = ({
               <DropdownOption
                 key={optionValue}
                 value={optionValue}
-                id={optionValue}
+                id={optionValue as string}
                 selected={value === optionValue}
                 disabled={!!disabled}
                 onClick={onOptionClick}
