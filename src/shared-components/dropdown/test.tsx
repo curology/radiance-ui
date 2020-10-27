@@ -44,6 +44,7 @@ describe('<MobileDropdown />', () => {
             onSelectChange={() => undefined}
             borderRadius="4px"
             options={options}
+            textAlign="left"
           />,
         )
         .toJSON();
@@ -61,6 +62,7 @@ describe('<MobileDropdown />', () => {
           options={options}
           onSelectChange={spy}
           value=""
+          textAlign="left"
         />,
       );
 
@@ -81,6 +83,8 @@ describe('<DesktopDropdown />', () => {
         onSelectClick={() => null}
         closeDropdown={() => null}
         onOptionClick={() => null}
+        textAlign="left"
+        isOpen={false}
       />,
     );
 
@@ -101,6 +105,8 @@ describe('<DesktopDropdown />', () => {
           optionsContainerMaxHeight="250px"
           closeDropdown={() => null}
           onOptionClick={() => null}
+          textAlign="left"
+          isOpen={false}
         />,
       );
 
@@ -122,6 +128,7 @@ describe('<DesktopDropdown />', () => {
           optionsContainerMaxHeight="250px"
           onSelectClick={() => null}
           closeDropdown={() => null}
+          textAlign="left"
         />,
       );
 

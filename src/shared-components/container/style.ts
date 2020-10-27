@@ -74,7 +74,7 @@ export const Image = styled.img`
 type StyledContainer = StyledComponent<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   {
-    type?: 'clickable' | 'message' | undefined;
+    type?: 'clickable' | 'message';
   },
   any
 >;

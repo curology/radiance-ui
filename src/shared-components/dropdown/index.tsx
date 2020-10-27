@@ -6,15 +6,15 @@ import { DesktopDropdown } from './desktopDropdown';
 import allowNullPropType from '../../utils/allowNullPropType';
 
 export type OptionType = {
-  /**
-   * The option indentifier
-   */
-  value: string | undefined;
+  disabled?: boolean;
   /**
    * The text to be displayed for the option
    */
   label: string;
-  disabled?: boolean;
+  /**
+   * The option indentifier
+   */
+  value?: string;
 };
 
 type DropdownProps = {
@@ -30,7 +30,7 @@ type DropdownProps = {
   optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
   /**
-   * The currently selected option. Can mount as `null`
+   * The currently selected option. Can mount as `undefined`
    */
   value?: string;
 };
@@ -42,7 +42,7 @@ type DropdownProps = {
 export const Dropdown = ({
   borderRadius = '4px',
   onChange,
-  options,
+  options = [{ value: undefined, label: '' }],
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
@@ -68,7 +68,9 @@ export const Dropdown = ({
     closeDropdown();
   };
 
-  const onOptionClick = (event: React.MouseEvent<HTMLLIElement>) => {
+  const onOptionClick = (
+    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
+  ) => {
     const target = event.currentTarget;
     if (target.hasAttribute('disabled')) {
       return;
@@ -84,10 +86,10 @@ export const Dropdown = ({
     return (
       <MobileDropdown
         borderRadius={borderRadius}
-        value={value}
+        onSelectChange={onSelectChange}
         options={options}
         textAlign={textAlign}
-        onSelectChange={onSelectChange}
+        value={value}
       />
     );
   }
@@ -112,9 +114,7 @@ export const Dropdown = ({
 
 Dropdown.propTypes = {
   borderRadius: PropTypes.string,
-  value: allowNullPropType(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ),
+  onChange: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -122,7 +122,9 @@ Dropdown.propTypes = {
       disabled: PropTypes.bool,
     }),
   ).isRequired,
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  onChange: PropTypes.func.isRequired,
   optionsContainerMaxHeight: PropTypes.string,
+  textAlign: PropTypes.oneOf(['left', 'center']),
+  value: allowNullPropType(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ),
 };

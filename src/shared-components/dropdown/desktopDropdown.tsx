@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import useResetFocus from 'src/utils/accessibility/useResetFocus';
 
@@ -19,9 +18,11 @@ import { OptionType } from './index';
 type DesktopDropdownProps = {
   borderRadius: string;
   closeDropdown: () => void;
-  currentOption: OptionType;
+  currentOption?: OptionType;
   isOpen: boolean;
-  onOptionClick: (event: any) => void;
+  onOptionClick: (
+    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
+  ) => void;
   onSelectClick: () => void;
   options: OptionType[];
   optionsContainerMaxHeight: string;
@@ -50,7 +51,7 @@ export const DesktopDropdown = ({
     }
   };
 
-  const handleOptionKeydown = (event: React.KeyboardEvent) => {
+  const handleOptionKeydown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     // This allows users to select an option via the enter key
     if (event.key === 'Enter') {
       onOptionClick(event);
@@ -125,38 +126,4 @@ export const DesktopDropdown = ({
       </DropdownContainer>
     </OffClickWrapper>
   );
-};
-
-DesktopDropdown.defaultProps = {
-  value: undefined,
-  options: [{ value: null, label: '' }],
-  currentOption: { value: null, label: '' },
-  textAlign: 'left',
-  isOpen: false,
-};
-
-DesktopDropdown.propTypes = {
-  borderRadius: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      value: PropTypes.any,
-      label: PropTypes.string,
-      disabled: PropTypes.bool,
-    }),
-  ),
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  currentOption: PropTypes.shape({
-    // eslint-disable-next-line react/forbid-prop-types
-    value: PropTypes.any,
-    label: PropTypes.string,
-    disabled: PropTypes.bool,
-  }),
-  closeDropdown: PropTypes.func.isRequired,
-  onOptionClick: PropTypes.func.isRequired,
-  onSelectClick: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool,
-  optionsContainerMaxHeight: PropTypes.string.isRequired,
 };

@@ -12,12 +12,6 @@ import {
   thumbStyle,
 } from './style';
 
-const propTypes = {
-  checked: PropTypes.bool,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-};
-
 type ToggleProps = {
   checked?: boolean;
   label?: string;
@@ -74,4 +68,8 @@ export const Toggle = ({
   </Container>
 );
 
-Toggle.propTypes = propTypes;
+Toggle.propTypes = {
+  checked: PropTypes.bool,
+  label: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+};

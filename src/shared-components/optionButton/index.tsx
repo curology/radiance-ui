@@ -22,11 +22,11 @@ type OptionButtonProps = {
   /**
    * Label
    */
-  text: string;
-  subtext?: React.ReactNode;
   onClick: () => void;
   optionType: 'radio' | 'checkbox';
   selected?: boolean;
+  subtext?: React.ReactNode;
+  text: string;
   [key: string]: unknown;
 };
 
@@ -34,11 +34,11 @@ export const OptionButton = ({
   borderRadius = '4px',
   buttonType = 'primary',
   icon,
-  text,
   onClick,
   optionType,
   selected = false,
   subtext,
+  text,
   ...rest
 }: OptionButtonProps) => (
   <ClickableContainer
@@ -80,9 +80,9 @@ OptionButton.propTypes = {
   borderRadius: PropTypes.string,
   buttonType: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.node,
-  text: PropTypes.string.isRequired,
-  subtext: PropTypes.node,
   onClick: PropTypes.func.isRequired,
   optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
   selected: PropTypes.bool,
+  subtext: PropTypes.node,
+  text: PropTypes.string.isRequired,
 };

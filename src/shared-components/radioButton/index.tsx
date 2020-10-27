@@ -5,8 +5,16 @@ import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
 type RadioButtonProps = {
   checked: boolean;
+  /**
+   * Text label displayed next to the radio button
+   */
   children?: React.ReactNode;
   disabled?: boolean;
+  /**
+   * Icon optionally displayed inside the radio button.
+   *
+   * Icons are only displayed at the 'large' size
+   */
   icon?: React.ReactNode;
   onClick?: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
@@ -48,19 +56,11 @@ export const RadioButton = ({
 
 RadioButton.propTypes = {
   checked: PropTypes.bool.isRequired,
-  /**
-   * Text label displayed next to the radio button
-   */
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   disabled: PropTypes.bool,
-  /**
-   * Icon optionally displayed inside the radio button.
-   *
-   * Icons are only displayed at the 'large' size
-   */
   icon: PropTypes.node,
   onClick: PropTypes.func,
   size: PropTypes.oneOf(['large', 'small']),
