@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { Field } from 'src/shared-components';
 import {

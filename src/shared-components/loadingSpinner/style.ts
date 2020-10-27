@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import { keyframes } from '@emotion/core';
 
 const appPreloader = (translateX: string) => keyframes`
@@ -18,7 +18,7 @@ export const LoadingSpinnerContainer = styled.div<{ bgColor: string }>`
   bottom: 0;
   right: 0;
 
-  background-color: ${props => props.bgColor};
+  background-color: ${(props) => props.bgColor};
 `;
 
 export const Overlay = styled.div`
@@ -36,27 +36,27 @@ export const Dot = styled.span<{
   size: string;
 }>`
   display: block;
-  height: ${props => props.size};
-  width: ${props => props.size};
+  height: ${(props) => props.size};
+  width: ${(props) => props.size};
 
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
   border-radius: 50%;
   opacity: 0;
 
-  animation-name: ${props => appPreloader(props.translateX)};
-  animation-duration: ${props => props.duration}s;
+  animation-name: ${(props) => appPreloader(props.translateX)};
+  animation-duration: ${(props) => props.duration}s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 
   &:nth-of-type(1) {
-    animation-delay: ${props => (-props.duration * 3) / 4}s;
+    animation-delay: ${(props) => (-props.duration * 3) / 4}s;
   }
 
   &:nth-of-type(2) {
-    animation-delay: ${props => -props.duration / 2}s;
+    animation-delay: ${(props) => -props.duration / 2}s;
   }
 
   &:nth-of-type(3) {
-    animation-delay: ${props => -props.duration / 4}s;
+    animation-delay: ${(props) => -props.duration / 4}s;
   }
 `;

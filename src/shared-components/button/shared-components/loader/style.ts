@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import tinycolor from 'tinycolor2';
 import { css, keyframes } from '@emotion/core';
 

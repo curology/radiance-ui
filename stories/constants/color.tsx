@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 
 const ColorContainer = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import { css } from '@emotion/core';
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import round from 'lodash.round';
 
 import { withDeprecationWarning } from '../../utils';

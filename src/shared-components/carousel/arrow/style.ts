@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import { css } from '@emotion/core';
 
 import { COLORS, SPACER, Z_SCALE } from '../../../constants';

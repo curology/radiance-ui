@@ -1,6 +1,6 @@
 import React from 'react';
 import { text, select, number, color } from '@storybook/addon-knobs';
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
 import { ANIMATION, COLORS, PROGRESS_BAR_STATUS } from 'src/constants';

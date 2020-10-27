@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import { SPACER } from 'src/constants';
 import { Typography } from 'src/shared-components';
 import * as ALL_COLORS from 'src/constants/colors';

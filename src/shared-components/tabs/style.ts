@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'src/utils/theming/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
