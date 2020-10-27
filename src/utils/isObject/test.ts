@@ -4,9 +4,6 @@ test('returns true for objects', () => {
   expect(isObject({ foo: 'bar' })).toBe(true);
   expect(isObject({})).toBe(true);
   expect(isObject(Object.create(null))).toBe(true);
-
-  const Thing: any = () => undefined;
-  expect(isObject(new Thing())).toBe(true);
 });
 
 test('returns false for non-objects', () => {
