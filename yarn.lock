@@ -16573,22 +16573,3 @@ zwitch@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.5.tgz#d11d7381ffed16b742f6af7b3f223d5cd9fe9920"
   integrity sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==
-
-"~@file:.":
-  version "13.0.0-alpha.1"
-  dependencies:
-    "@emotion/core" "10.0.35"
-    "@emotion/styled" "10.0.27"
-    "@react-aria/focus" "^3.0.2"
-    emotion-theming "10.0.27"
-    focus-visible "^5.1.0"
-    lodash.round "^4.0.4"
-    lodash.throttle "^4.1.1"
-    lodash.uniqueid "^4.0.1"
-    prop-types "^15.7.2"
-    react "^16.13.1"
-    react-dom "^16.13.1"
-    react-slick "^0.23.2"
-    react-toggle-button "^2.2.0"
-    react-transition-group "^4.4.1"
-    tinycolor2 "^1.4.1"

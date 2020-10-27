@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import addons, { StoryContext, StoryGetter } from '@storybook/addons';
