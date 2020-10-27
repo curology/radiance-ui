@@ -7,8 +7,8 @@
     "outDir": "lib",
     "rootDirs": ["src"],
     "paths": {
-      "emotion-theming": ["src/utils/theming/emotionTheming"],
-      "@emotion/styled": ["src/utils/theming/styled"]
+      "emotion-theming": ["types/emotion-theming"],
+      "@emotion/styled": ["types/@emotion/styled"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "types/**/*.ts"]
