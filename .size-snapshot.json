@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1134588,
-    "minified": 1068360,
-    "gzipped": 102472
+    "bundled": 1134614,
+    "minified": 1068395,
+    "gzipped": 102461
   },
   "bundle.umd.js": {
-    "bundled": 1143503,
-    "minified": 1043590,
-    "gzipped": 98381
+    "bundled": 1143527,
+    "minified": 1043625,
+    "gzipped": 98369
   },
   "shared-components/chip/index.js": {
     "bundled": 867,
@@ -500,9 +500,9 @@
     }
   },
   "shared-components/dropdown/index.js": {
-    "bundled": 3526,
-    "minified": 1751,
-    "gzipped": 760,
+    "bundled": 3504,
+    "minified": 1738,
+    "gzipped": 757,
     "treeshaked": {
       "rollup": {
         "code": 527,
@@ -780,8 +780,8 @@
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 8930,
-    "minified": 7409,
+    "bundled": 8978,
+    "minified": 7457,
     "gzipped": 3158,
     "treeshaked": {
       "rollup": {
