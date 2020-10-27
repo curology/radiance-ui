@@ -39,10 +39,10 @@ export const Callout = ({
   </CalloutContainer>
 );
 
+Callout.Container = ParentContainer;
+
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
   color: PropTypes.string,
   icon: PropTypes.node,
 };
-
-Callout.Container = ParentContainer;
