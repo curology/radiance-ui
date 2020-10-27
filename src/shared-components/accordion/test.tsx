@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import { ThemeProvider } from 'src/utils/theming/emotionTheming';
+import { ThemeProvider } from 'emotion-theming';
 import { primaryTheme } from 'src/constants/themes';
 
 import { Accordion } from './index';

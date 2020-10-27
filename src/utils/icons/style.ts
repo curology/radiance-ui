@@ -1,4 +1,4 @@
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 
 export const Icons = styled.div`
   display: flex;

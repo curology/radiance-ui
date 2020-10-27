@@ -3,7 +3,7 @@ import {
   ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
 } from 'src/constants';
 import { ThemeType } from 'src/constants/themes/types';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};

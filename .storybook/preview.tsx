@@ -3,7 +3,7 @@ import { addDecorator, addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import addons from '@storybook/addons';
 import { Global, css } from '@emotion/core';
-import { ThemeProvider } from 'src/utils/theming/emotionTheming';
+import { ThemeProvider } from 'emotion-theming';
 import Theme from './theme';
 import {
   resetStyles,

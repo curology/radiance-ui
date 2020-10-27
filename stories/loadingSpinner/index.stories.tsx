@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
 import { BREAKPOINTS, COLORS } from 'src/constants';

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { MEDIA_QUERIES, SPACER } from '../../../../constants';

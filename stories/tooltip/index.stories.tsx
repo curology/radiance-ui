@@ -8,7 +8,7 @@ import {
   Stories,
 } from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';
 import type { Meta } from '@storybook/react';

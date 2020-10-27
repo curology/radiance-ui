@@ -1,4 +1,4 @@
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { css, keyframes } from '@emotion/core';
 
 import { COLORS, ANIMATION, PROGRESS_BAR_STATUS } from '../../constants';
@@ -19,12 +19,12 @@ export const OuterContainer = styled.div<{
   top: 0;
   left: 0;
   right: 0;
-  background: ${(props) => props.backgroundColor};
+  background: ${props => props.backgroundColor};
   overflow: hidden;
   transition: opacity ${ANIMATION.defaultTiming} ease-in-out 500ms;
   width: 100%;
   z-index: 2;
-  height: ${(props) => `${props.height}px`};
+  height: ${props => `${props.height}px`};
 
   ${({ status }) =>
     (status === PROGRESS_BAR_STATUS.success ||
@@ -59,8 +59,8 @@ export const InnerBar = styled.div<{
 }>`
   position: absolute;
   width: 100%;
-  height: ${(props) => `${props.height}px`};
-  background-color: ${(props) => props.barColor};
+  height: ${props => `${props.height}px`};
+  background-color: ${props => props.barColor};
   animation: ${loadingProgression} ${({ loadingTime }) => loadingTime} ease-in;
   transform: translateX(-5%);
   transition: transform ${ANIMATION.defaultTiming} ease-in-out;

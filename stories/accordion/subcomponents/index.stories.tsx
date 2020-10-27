@@ -9,7 +9,7 @@ import {
   Canvas,
   Story,
 } from '@storybook/addon-docs/blocks';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import accountImage from 'shared/account.png';
 import personImage from 'shared/person.jpg';

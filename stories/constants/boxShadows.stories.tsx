@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import * as BOX_SHADOWS from 'src/constants/boxShadows';
 import { Container, Typography } from 'src/shared-components';

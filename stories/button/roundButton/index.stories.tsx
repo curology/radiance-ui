@@ -10,7 +10,7 @@ import {
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { COLORS, SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import {

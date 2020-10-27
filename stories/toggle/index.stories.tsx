@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { Toggle } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 import {

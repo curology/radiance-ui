@@ -1,4 +1,4 @@
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
@@ -58,7 +58,7 @@ export const roundButtonLoader = (disabled: boolean) => css`
   margin: -3px -3px 0 0;
 
   ${disabled &&
-  `
+    `
     & span {
       background-color: ${COLORS.white};
     }

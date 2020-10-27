@@ -8,7 +8,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { text, boolean } from '@storybook/addon-knobs';
-import styled from 'src/utils/theming/styled';
+import styled from '@emotion/styled';
 import {
   FadeInContainer,
   opacityInAnimationStyle,
