@@ -19,7 +19,7 @@ type ProgressBarProps = {
   loadingTime?: string;
   status: ProgressBarStatusType;
   // ...rest type
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 /**

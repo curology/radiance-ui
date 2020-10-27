@@ -17,24 +17,6 @@ import {
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
 
-const propTypes = {
-  buttonColor: COLORS_PROP_TYPES,
-  buttonType: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-    'action',
-  ]),
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  icon: PropTypes.node.isRequired,
-  isLoading: PropTypes.bool,
-  loading: isLoadingPropFunction,
-  onClick: PropTypes.func,
-  textColor: PropTypes.string,
-};
-
 type RoundButtonProps = {
   /**
    * TODO-TS: Limit type from string to COLORS constants options
@@ -63,7 +45,7 @@ type RoundButtonProps = {
    * Color that will override existing text, icon, and loading colors (except when disabled is true)
    */
   textColor?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 /**
@@ -117,7 +99,24 @@ export const RoundButton = ({
   );
 };
 
-RoundButton.propTypes = propTypes;
 RoundButton.Container = RoundButtonContainer;
+
+RoundButton.propTypes = {
+  buttonColor: COLORS_PROP_TYPES,
+  buttonType: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'quaternary',
+    'action',
+  ]),
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
+  icon: PropTypes.node.isRequired,
+  isLoading: PropTypes.bool,
+  loading: isLoadingPropFunction,
+  onClick: PropTypes.func,
+  textColor: PropTypes.string,
+};
 
 export default withDeprecationWarning(RoundButton, deprecatedProperties);

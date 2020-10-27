@@ -7,21 +7,6 @@ import { ButtonType } from '../..';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
 
-const propTypes = {
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
-  buttonColor: COLORS_PROP_TYPES,
-  buttonType: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-  ]),
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  textColor: PropTypes.string,
-};
-
 type LinkProps = {
   /**
    * Specifies the tag or element to be rendered
@@ -45,7 +30,7 @@ type LinkProps = {
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
   textColor?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 /**
@@ -87,5 +72,19 @@ export const LinkButton = ({
   );
 };
 
-LinkButton.propTypes = propTypes;
 LinkButton.Container = Container;
+
+LinkButton.propTypes = {
+  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
+  buttonColor: COLORS_PROP_TYPES,
+  buttonType: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'quaternary',
+  ]),
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  textColor: PropTypes.string,
+};

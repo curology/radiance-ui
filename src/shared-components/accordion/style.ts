@@ -8,8 +8,6 @@ import {
   SPACER,
 } from 'src/constants';
 
-const border = `1px solid ${COLORS.border}`;
-
 export const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
@@ -22,10 +20,10 @@ export const ExpansionWrapper = styled.div<{ contentHeight: string }>`
 `;
 
 const getBorderStyle = (isOpen: boolean) => css`
-  border: ${border};
+  border: 1px solid ${COLORS.border};
 
   ${ExpansionWrapper} {
-    ${isOpen && `border-top: ${border};`};
+    ${isOpen && `border-top: 1px solid ${COLORS.border};`};
   }
 `;
 
@@ -78,7 +76,7 @@ export const TitleWrapper = styled.div<{
   ${AccordionBox}:last-of-type & {
     &:focus {
       ${({ borderRadius, isOpen }) =>
-    !isOpen &&
+        !isOpen &&
         `
         border-bottom-left-radius: ${borderRadius}; 
         border-bottom-right-radius: ${borderRadius};
