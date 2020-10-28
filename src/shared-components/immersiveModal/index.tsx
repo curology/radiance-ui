@@ -234,8 +234,8 @@ export const ImmersiveModal = ({
 
 ImmersiveModal.propTypes = {
   children: PropTypes.node.isRequired,
-  headerImage: PropTypes.node,
   footerContent: PropTypes.node,
+  headerImage: PropTypes.node,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
 };

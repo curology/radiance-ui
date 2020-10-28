@@ -35,7 +35,7 @@ export const ThumbnailImage = styled.img`
 
 export const MultiplesContainer = styled.div`
   ${thumbnailBase}
-  background-color: ${COLORS.purple15};
+  background-color: ${COLORS.defaultBorder};
 `;
 
 export const MultiplesText = styled.div`

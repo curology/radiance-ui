@@ -24,7 +24,7 @@ describe('<Button />', () => {
     it('renders with adjustable color', () => {
       const button = mount(
         <Button
-          buttonColor={COLORS.statusRed}
+          buttonColor={COLORS.error}
           onClick={() => undefined}
           id="red-button"
         >
@@ -32,7 +32,7 @@ describe('<Button />', () => {
         </Button>,
       );
 
-      expect(button.prop('buttonColor')).toEqual(COLORS.statusRed);
+      expect(button.prop('buttonColor')).toEqual(COLORS.error);
     });
   });
 

@@ -60,12 +60,12 @@ type FieldProps = {
 export const Field = ({
   children: inputChild,
   disabled = false,
-  messages = {},
-  messagesType = 'error',
   hideMessagesIcon = false,
   hintMessage = '',
   label = '',
   labelFor = '',
+  messages = {},
+  messagesType = 'error',
 }: FieldProps) => {
   const htmlFor = labelFor || label;
   const messagesKeys = Object.keys(messages);
@@ -110,10 +110,10 @@ Field.Input = Input;
 Field.propTypes = {
   children: PropTypes.element.isRequired,
   disabled: PropTypes.bool,
-  messages: PropTypes.objectOf(PropTypes.node),
-  messagesType: PropTypes.oneOf(['error', 'success']),
   hideMessagesIcon: PropTypes.bool,
   hintMessage: PropTypes.string,
   label: PropTypes.string,
   labelFor: PropTypes.string,
+  messages: PropTypes.objectOf(PropTypes.node),
+  messagesType: PropTypes.oneOf(['error', 'success']),
 };

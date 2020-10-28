@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import useResetFocus from 'src/utils/accessibility/useResetFocus';
 
@@ -19,14 +18,16 @@ import { OptionType } from './index';
 type DesktopDropdownProps = {
   borderRadius: string;
   closeDropdown: () => void;
-  currentOption: OptionType;
+  currentOption?: OptionType;
   isOpen: boolean;
-  onOptionClick: (event: any) => void;
-  onSelectClick: () => void;
+  onDesktopSelectChange: (
+    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
+  ) => void;
   options: OptionType[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
-  value?: string;
+  toggleDropdown: () => void;
+  value?: string | number;
 };
 
 export const DesktopDropdown = ({
@@ -34,11 +35,11 @@ export const DesktopDropdown = ({
   closeDropdown,
   currentOption,
   isOpen,
-  onOptionClick,
-  onSelectClick,
+  onDesktopSelectChange,
   options,
   optionsContainerMaxHeight,
   textAlign,
+  toggleDropdown,
   value,
 }: DesktopDropdownProps) => {
   const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
@@ -46,14 +47,14 @@ export const DesktopDropdown = ({
   const handleKeyDown = (event: React.KeyboardEvent) => {
     // This key handler allows users to open the dropdown options via the keyboard
     if (event.key === 'Enter') {
-      onSelectClick();
+      toggleDropdown();
     }
   };
 
-  const handleOptionKeydown = (event: React.KeyboardEvent) => {
+  const handleOptionKeydown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     // This allows users to select an option via the enter key
     if (event.key === 'Enter') {
-      onOptionClick(event);
+      onDesktopSelectChange(event);
       resetFocus();
     }
   };
@@ -67,7 +68,7 @@ export const DesktopDropdown = ({
     >
       <DropdownContainer textAlign={textAlign}>
         <DropdownFocusContainer
-          onClick={onSelectClick}
+          onClick={toggleDropdown}
           onKeyDown={handleKeyDown}
           tabIndex={0}
           aria-haspopup="menu"
@@ -93,22 +94,22 @@ export const DesktopDropdown = ({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={value}
+          aria-activedescendant={value ? `${value}` : undefined}
           aria-hidden={!isOpen}
         >
-          {options.map((option) => {
+          {options.map((option, index) => {
             const {
               value: optionValue, disabled, label, ...rest 
             } = option;
 
             return (
               <DropdownOption
-                key={optionValue}
+                key={optionValue || `undefined-${index}`}
                 value={optionValue}
-                id={optionValue}
+                id={`${optionValue}`}
                 selected={value === optionValue}
                 disabled={!!disabled}
-                onClick={onOptionClick}
+                onClick={onDesktopSelectChange}
                 onKeyDown={handleOptionKeydown}
                 role="menuitemradio"
                 aria-disabled={!!disabled}
@@ -125,38 +126,4 @@ export const DesktopDropdown = ({
       </DropdownContainer>
     </OffClickWrapper>
   );
-};
-
-DesktopDropdown.defaultProps = {
-  value: undefined,
-  options: [{ value: null, label: '' }],
-  currentOption: { value: null, label: '' },
-  textAlign: 'left',
-  isOpen: false,
-};
-
-DesktopDropdown.propTypes = {
-  borderRadius: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      value: PropTypes.any,
-      label: PropTypes.string,
-      disabled: PropTypes.bool,
-    }),
-  ),
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  currentOption: PropTypes.shape({
-    // eslint-disable-next-line react/forbid-prop-types
-    value: PropTypes.any,
-    label: PropTypes.string,
-    disabled: PropTypes.bool,
-  }),
-  closeDropdown: PropTypes.func.isRequired,
-  onOptionClick: PropTypes.func.isRequired,
-  onSelectClick: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool,
-  optionsContainerMaxHeight: PropTypes.string.isRequired,
 };

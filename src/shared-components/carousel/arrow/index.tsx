@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { RoundButton } from '../../button';
 import ArrowLeftIcon from '../../../svgs/icons/arrow-left-icon.svg';
@@ -45,14 +44,6 @@ const Arrow = ({
       )}
     </ArrowContainerComponent>
   );
-};
-
-Arrow.propTypes = {
-  bottomRightAlignedArrows: PropTypes.bool,
-  disabled: PropTypes.bool,
-  next: PropTypes.bool,
-  onClick: PropTypes.func,
-  prev: PropTypes.bool,
 };
 
 export default Arrow;

@@ -76,35 +76,35 @@ export const WithIcon = () => (
 
 export const WithColor = () => (
   <Button.Container>
-    <Button buttonColor={COLORS.statusRed}>Primary Button</Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="secondary">
+    <Button buttonColor={COLORS.error}>Primary Button</Button>
+    <Button buttonColor={COLORS.error} buttonType="secondary">
       Secondary Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="tertiary">
+    <Button buttonColor={COLORS.error} buttonType="tertiary">
       Tertiary Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="quaternary">
+    <Button buttonColor={COLORS.error} buttonType="quaternary">
       Quaternary Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} disabled>
+    <Button buttonColor={COLORS.error} disabled>
       Disabled Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} isFullWidth>
+    <Button buttonColor={COLORS.error} isFullWidth>
       Full Width Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} isLoading>
+    <Button buttonColor={COLORS.error} isLoading>
       Primary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} isLoading buttonType="secondary">
+    <Button buttonColor={COLORS.error} isLoading buttonType="secondary">
       Secondary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="tertiary" isLoading>
+    <Button buttonColor={COLORS.error} buttonType="tertiary" isLoading>
       Tertiary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="quaternary" isLoading>
+    <Button buttonColor={COLORS.error} buttonType="quaternary" isLoading>
       Quaternary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} isFullWidth isLoading>
+    <Button buttonColor={COLORS.error} isFullWidth isLoading>
       Full Width Loading
     </Button>
   </Button.Container>

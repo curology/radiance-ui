@@ -23,8 +23,8 @@ const DesktopContainer = styled(DropdownContainer)`
 `;
 
 const options = [
-  { value: '1', label: 'First option' },
-  { value: '2', label: 'Second option (disabled)', disabled: true },
+  { value: 1, label: 'First option' },
+  { value: 2, label: 'Second option (disabled)', disabled: true },
   { value: '3', label: 'Third option' },
   { value: '4', label: 'Fourth option' },
 ];
@@ -66,7 +66,8 @@ export const Mobile = () => {
         borderRadius="4px"
         value={selectedOption}
         options={options}
-        onSelectChange={onChange}
+        onMobileSelectChange={onChange}
+        textAlign="left"
       />
     </DropdownContainer>
   );
