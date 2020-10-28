@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import {
-  COLORS, ANIMATION, SPACER, BOX_SHADOWS, 
+ COLORS, ANIMATION, SPACER, BOX_SHADOWS, 
 } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 

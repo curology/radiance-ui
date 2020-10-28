@@ -102,11 +102,13 @@ export const DesktopDropdown = ({
               value: optionValue, disabled, label, ...rest 
             } = option;
 
+            const id = optionValue ? `${optionValue}` : `undefined-${index}`;
+
             return (
               <DropdownOption
-                key={optionValue || `undefined-${index}`}
+                key={id}
                 value={optionValue}
-                id={`${optionValue}`}
+                id={id}
                 selected={value === optionValue}
                 disabled={!!disabled}
                 onClick={onDesktopSelectChange}

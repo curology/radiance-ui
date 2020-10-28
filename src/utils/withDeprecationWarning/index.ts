@@ -7,22 +7,25 @@ const shouldShowForEnvironment =
     ? allowedEnvironments.includes(environment)
     : false;
 
+// Generic is tricky to type because it covers both React Components and plain objects
+// eslint-disable-next-line @typescript-eslint/ban-types
 export default function withDeprecationWarning<T extends object>(
   obj: T,
-  deprecatedProperties = {}
+  deprecatedProperties: Record<string, string> = {},
 ): T {
   const handler = {
     get(target: T, property: string) {
       const isDeprecatedProperty = Object.keys(deprecatedProperties).includes(
-        property
+        property,
       );
       if (shouldShowForEnvironment && isDeprecatedProperty) {
         // eslint-disable-next-line no-console
         console.warn(
-          `[Deprecation Warning]: ${deprecatedProperties[property]}`
+          `[Deprecation Warning]: ${deprecatedProperties[property]}`,
         );
       }
 
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       return target[property];
     },
   };

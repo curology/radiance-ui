@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import {
-  COLORS, SPACER, ANIMATION, BOX_SHADOWS, 
+ COLORS, SPACER, ANIMATION, BOX_SHADOWS, 
 } from '../../constants';
 
 import { SelectorType, SizeType, StyleType } from '.';

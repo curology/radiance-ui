@@ -26,24 +26,31 @@ const {
 } = ALL_COLORS;
 /* eslint-enable @typescript-eslint/no-unused-vars */
 
-export const COLORS = () => (
-  <MainContainer>
-    {Object.keys(VALID_COLORS).map((category) => {
-      const categoryColors = VALID_COLORS[category];
+export const COLORS = () => {
+  const colorKeys = Object.keys(VALID_COLORS) as Array<
+    keyof typeof VALID_COLORS
+  >;
 
-      return (
-        <React.Fragment key={category}>
-          <Typography.Title>{category}:</Typography.Title>
-          <ColorsContainer>
-            {Object.keys(categoryColors).map((color) => {
-              const colorHex = categoryColors[color];
-              return (
-                <Color key={color} colorName={color} colorHex={colorHex} />
-              );
-            })}
-          </ColorsContainer>
-        </React.Fragment>
-      );
-    })}
-  </MainContainer>
-);
+  return (
+    <MainContainer>
+      {colorKeys.map((category) => {
+        const categoryColors = VALID_COLORS[category];
+
+        return (
+          <React.Fragment key={category}>
+            <Typography.Title>{category}:</Typography.Title>
+            <ColorsContainer>
+              {Object.keys(categoryColors).map((color) => {
+                const colorHex = categoryColors[color] as string;
+
+                return (
+                  <Color key={color} colorName={color} colorHex={colorHex} />
+                );
+              })}
+            </ColorsContainer>
+          </React.Fragment>
+        );
+      })}
+    </MainContainer>
+  );
+};

@@ -6,19 +6,13 @@ function percentToInt(str: string): number {
 }
 
 export function lighten(color: string, modifier: string): string {
-  return tinycolor(color)
-    .lighten(percentToInt(modifier))
-    .toString();
+  return tinycolor(color).lighten(percentToInt(modifier)).toString();
 }
 
 export function darken(color: string, modifier: string): string {
-  return tinycolor(color)
-    .darken(percentToInt(modifier))
-    .toString();
+  return tinycolor(color).darken(percentToInt(modifier)).toString();
 }
 
 export function transparentize(color: string, modifier: number): string {
-  return tinycolor(color)
-    .setAlpha(modifier)
-    .toString();
+  return tinycolor(color).setAlpha(modifier).toString();
 }

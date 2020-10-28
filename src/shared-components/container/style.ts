@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import {
-  SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
+ SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
 } from '../../constants';
 
 const clickableStyle = css`
@@ -76,7 +76,7 @@ type StyledContainer = StyledComponent<
   {
     type?: 'clickable' | 'message';
   },
-  any
+  Record<string, unknown>
 >;
 
 type CompositeContainer = StyledContainer & {

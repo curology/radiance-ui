@@ -3,7 +3,7 @@ export const deprecatedProperties = {
 };
 
 export const isLoadingPropFunction = (
-  props: object,
+  props: Record<string, unknown>,
   propName: string,
   componentName: string,
 ): Error | void => {

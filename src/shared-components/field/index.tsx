@@ -46,9 +46,7 @@ type FieldProps = {
   /**
    * Object of key and React Node message pair. It also accepts an array of React Node as value
    */
-  messages?: {
-    [key: string]: MessageType;
-  };
+  messages?: Record<string, MessageType>;
   messagesType?: MessagesTypes;
 };
 

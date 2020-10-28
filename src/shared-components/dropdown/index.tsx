@@ -72,18 +72,21 @@ export const Dropdown = ({
     event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
   ) => {
     const { currentTarget } = event;
+
     if (currentTarget.hasAttribute('disabled')) {
       return;
     }
 
     // Next Value may be returned as null if the value of <li> is undefined. We want to cast to the real value of undefined
     const nextValue = currentTarget.getAttribute('value') || undefined;
+
     const selectedOption = options.find((option) => {
-      if (nextValue === undefined && option.value === undefined) {
-        return true;
-      }
-      // This covers numbers and strings. <li> value is always returned as string
-      return `${option.value}` === nextValue;
+      const { value: optionValue } = option;
+
+      // This covers numbers and strings. <li> value is always returned as string. Falsy case covers undefined.
+      return optionValue
+        ? `${optionValue}` === nextValue
+        : optionValue === nextValue;
     });
 
     if (selectedOption) {
