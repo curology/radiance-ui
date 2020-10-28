@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1134614,
-    "minified": 1068395,
-    "gzipped": 102461
+    "bundled": 1134971,
+    "minified": 1068509,
+    "gzipped": 102542
   },
   "bundle.umd.js": {
-    "bundled": 1143527,
-    "minified": 1043625,
-    "gzipped": 98369
+    "bundled": 1143870,
+    "minified": 1043787,
+    "gzipped": 98462
   },
   "shared-components/chip/index.js": {
     "bundled": 867,
@@ -500,16 +500,16 @@
     }
   },
   "shared-components/dropdown/index.js": {
-    "bundled": 3504,
-    "minified": 1738,
-    "gzipped": 757,
+    "bundled": 3801,
+    "minified": 1702,
+    "gzipped": 738,
     "treeshaked": {
       "rollup": {
-        "code": 527,
-        "import_statements": 325
+        "code": 474,
+        "import_statements": 275
       },
       "webpack": {
-        "code": 1653
+        "code": 1555
       }
     }
   },
@@ -668,16 +668,16 @@
     }
   },
   "shared-components/chip/style.js": {
-    "bundled": 16114,
-    "minified": 15713,
-    "gzipped": 2630,
+    "bundled": 16195,
+    "minified": 15794,
+    "gzipped": 2627,
     "treeshaked": {
       "rollup": {
-        "code": 1082,
+        "code": 1091,
         "import_statements": 251
       },
       "webpack": {
-        "code": 2316
+        "code": 2325
       }
     }
   },
@@ -780,9 +780,9 @@
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 8978,
-    "minified": 7457,
-    "gzipped": 3158,
+    "bundled": 9185,
+    "minified": 7615,
+    "gzipped": 3358,
     "treeshaked": {
       "rollup": {
         "code": 226,
@@ -864,9 +864,9 @@
     }
   },
   "shared-components/dropdown/mobileDropdown.js": {
-    "bundled": 1437,
-    "minified": 668,
-    "gzipped": 379,
+    "bundled": 1492,
+    "minified": 700,
+    "gzipped": 400,
     "treeshaked": {
       "rollup": {
         "code": 96,
