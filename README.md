@@ -1,6 +1,6 @@
 # ✨ Radiance UI
 
-[![CircleCI](https://circleci.com/gh/PocketDerm/radiance-ui.svg?style=svg)](https://circleci.com/gh/PocketDerm/radiance-ui)
+[![CircleCI](https://circleci.com/gh/curology/radiance-ui.svg?style=svg)](https://circleci.com/gh/curology/radiance-ui)
 
 Curology's React based component library
 
