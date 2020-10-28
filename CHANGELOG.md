@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v12.4.0
+
+- [Internal] Refactor Dropdown, refactor variables names and standarize code across components
+
 # v12.3.1
 
 - [Internal] Convert Carousel, DialogModal, OffClickWrapper to functional components
