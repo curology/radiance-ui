@@ -2110,6 +2110,17 @@
     react-syntax-highlighter "^12.2.1"
     regenerator-runtime "^0.13.3"
 
+"@storybook/addon-toolbars@^6.0.27":
+  version "6.0.27"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.0.27.tgz#20632c610e2e47fb688a1794fd8d31a0c542dd85"
+  integrity sha512-Ak0srUPOX9m44UfQwZK4ue1hCNvkhfhB5PfVwjN6KyglpRCCNdFIT3BIPshmPXSyO1eeRL4rufxWtvtcqCodag==
+  dependencies:
+    "@storybook/addons" "6.0.27"
+    "@storybook/api" "6.0.27"
+    "@storybook/client-api" "6.0.27"
+    "@storybook/components" "6.0.27"
+    core-js "^3.0.1"
+
 "@storybook/addon-viewport@^6.0.27":
   version "6.0.27"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.0.27.tgz#acfecc633b84b9d486e5ca7c302c4a328fe813a9"
@@ -13029,14 +13040,6 @@ resolve@^1.10.0, resolve@^1.12.0, resolve@^1.13.1, resolve@^1.17.0, resolve@^1.3
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
   integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
   dependencies:
-    path-parse "^1.0.6"
-
-resolve@^1.18.1:
-  version "1.18.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.18.1.tgz#018fcb2c5b207d2a6424aee361c5a266da8f4130"
-  integrity sha512-lDfCPaMKfOJXjy0dPayzPdF1phampNWr3qFCjAu+rw/qbQmr5jWH5xN2hwh9QKfw9E5v4hwV7A+jrCmL8yjjqA==
-  dependencies:
-    is-core-module "^2.0.0"
     path-parse "^1.0.6"
 
 restore-cursor@^2.0.0:
