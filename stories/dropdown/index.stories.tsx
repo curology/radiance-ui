@@ -23,10 +23,10 @@ const DesktopContainer = styled(DropdownContainer)`
 `;
 
 const options = [
-  { value: 1, label: 'Number value' },
+  { value: 1, label: 'First option' },
   { value: 2, label: 'Second option (disabled)', disabled: true },
-  { value: undefined, label: 'Undefined value' },
-  { value: '4', label: 'String value' },
+  { value: '3', label: 'Third option' },
+  { value: '4', label: 'Fourth option' },
 ];
 
 export const Desktop = () => {

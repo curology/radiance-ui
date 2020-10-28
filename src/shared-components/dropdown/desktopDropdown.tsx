@@ -94,7 +94,7 @@ export const DesktopDropdown = ({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={`${value}`}
+          aria-activedescendant={value ? `${value}` : undefined}
           aria-hidden={!isOpen}
         >
           {options.map((option, index) => {
