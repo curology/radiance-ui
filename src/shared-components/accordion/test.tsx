@@ -11,7 +11,6 @@ const testAccordion = {
   children: <div>expansion</div>,
 };
 
-/* eslint-disable react/jsx-props-no-spreading */
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
     const component = renderer.create(<Accordion {...testAccordion} />);
@@ -49,4 +48,3 @@ describe('<Accordion />', () => {
     expect(spy).toHaveBeenCalled();
   });
 });
-/* eslint-enable react/jsx-props-no-spreading */

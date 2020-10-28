@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
@@ -22,16 +22,16 @@ type DialogModalProps = {
    * If provided, DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
    */
-  onCloseIconClick?: () => void | null;
+  onCloseIconClick?: () => void;
   title?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
-type DialogModalState = {
-  isClosing: boolean;
-};
-
-const reactPortalSectionId = '#reactPortalSection';
+const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
+const getHtmlNode = () => document.querySelector('html') || document.body;
+const getDomNode = () =>
+  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
+  document.body;
 
 /**
  * Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.
@@ -40,105 +40,79 @@ const reactPortalSectionId = '#reactPortalSection';
  *
  * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
  */
-export class DialogModal extends React.Component<
-  DialogModalProps,
-  DialogModalState
-> {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    onCloseIconClick: PropTypes.func,
-    title: PropTypes.string,
-  };
+export const DialogModal = ({
+  children,
+  onCloseIconClick,
+  title = '',
+  ...rest
+}: DialogModalProps) => {
+  const [isClosing, setIsClosing] = useState(false);
 
-  static defaultProps = {
-    onCloseIconClick: null,
-    title: '',
-  };
+  const domNode = useRef<HTMLElement>(getDomNode());
+  const htmlNode = useRef<HTMLElement>(getHtmlNode());
 
-  state = {
-    isClosing: false,
-  };
+  useEffect(() => {
+    domNode.current = getDomNode();
+    htmlNode.current = getHtmlNode();
+    htmlNode.current.classList.add('no-scroll');
+    return () => htmlNode.current.classList.remove('no-scroll');
+  }, []);
 
-  htmlNode: HTMLElement;
-
-  domNode: HTMLElement;
-
-  constructor(props: DialogModalProps) {
-    super(props);
-
-    this.htmlNode = document.querySelector('html') || document.body;
-
-    this.domNode =
-      document.querySelector(reactPortalSectionId) || document.body;
-  }
-
-  componentDidMount(): void {
-    this.htmlNode.classList.add('no-scroll');
-  }
-
-  componentWillUnmount(): void {
-    this.htmlNode.classList.remove('no-scroll');
-  }
-
-  handleCloseIntent = (): void => {
-    const { onCloseIconClick } = this.props as Required<DialogModalProps>;
-
+  const handleCloseIntent = () => {
     if (onCloseIconClick) {
-      this.setState({ isClosing: true });
+      setIsClosing(true);
       setTimeout(onCloseIconClick, 350);
     }
   };
 
-  handleKeyDown = (event: React.KeyboardEvent): void => {
+  const handleKeyDown = (event: React.KeyboardEvent): void => {
     if (event.key === 'Escape') {
-      this.handleCloseIntent();
+      handleCloseIntent();
     }
   };
 
-  render(): JSX.Element {
-    const {
-      children, title, onCloseIconClick, ...rest 
-    } = this
-      .props as Required<DialogModalProps>;
-    const { isClosing } = this.state;
+  return ReactDOM.createPortal(
+    <Transition
+      appear
+      in={!isClosing}
+      timeout={{
+        appear: 0,
+        enter: 0,
+        exit: 250,
+      }}
+      unmountOnExit
+    >
+      {(transitionState): JSX.Element => (
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        <Overlay className={transitionState} {...rest}>
+          <FocusScope contain restoreFocus autoFocus>
+            <ModalContainer
+              className={transitionState}
+              onKeyDown={handleKeyDown}
+            >
+              {onCloseIconClick && (
+                <CrossIconContainer
+                  onClick={handleCloseIntent}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Close modal"
+                >
+                  <CrossIcon />
+                </CrossIconContainer>
+              )}
+              {!!title && <ModalTitle>{title}</ModalTitle>}
+              {children}
+            </ModalContainer>
+          </FocusScope>
+        </Overlay>
+      )}
+    </Transition>,
+    domNode.current,
+  );
+};
 
-    return ReactDOM.createPortal(
-      <Transition
-        timeout={{
-          appear: 0,
-          enter: 0,
-          exit: 250,
-        }}
-        in={!isClosing}
-        unmountOnExit
-        appear
-      >
-        {(transitionState): JSX.Element => (
-          // eslint-disable-next-line react/jsx-props-no-spreading
-          <Overlay className={transitionState} {...rest}>
-            <FocusScope contain restoreFocus autoFocus>
-              <ModalContainer
-                className={transitionState}
-                onKeyDown={this.handleKeyDown}
-              >
-                {onCloseIconClick && (
-                  <CrossIconContainer
-                    onClick={this.handleCloseIntent}
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Close modal"
-                  >
-                    <CrossIcon />
-                  </CrossIconContainer>
-                )}
-                {!!title && <ModalTitle>{title}</ModalTitle>}
-                {children}
-              </ModalContainer>
-            </FocusScope>
-          </Overlay>
-        )}
-      </Transition>,
-      this.domNode,
-    );
-  }
-}
+DialogModal.propTypes = {
+  children: PropTypes.node.isRequired,
+  onCloseIconClick: PropTypes.func,
+  title: PropTypes.string,
+};

@@ -9,19 +9,17 @@ import {
   MultiplesText,
 } from './style';
 
-class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
-  static propTypes = {
-    /** An array of image src strings that Accordion.Thumbails will use to render */
-    photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  };
+type ThumbnailsProps = {
+  /** An array of image src strings that Accordion.Thumbails will use to render */
+  photoSrcs: Array<string>;
+};
 
+const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
   /**
    * Thumbnail images set with empty alt text because they are decorative.
    * Accessible Accordion functionality does not depend on these thumbnails.
    */
-  renderThumbnails() {
-    const { photoSrcs } = this.props;
-
+  const renderThumbnails = () => {
     if (photoSrcs.length === 0) {
       return null;
     }
@@ -54,11 +52,13 @@ class Thumbnails extends React.Component<{ photoSrcs: string[] }> {
         {secondThumbnail}
       </React.Fragment>
     );
-  }
+  };
 
-  render(): JSX.Element {
-    return <Container>{this.renderThumbnails()}</Container>;
-  }
-}
+  return <Container>{renderThumbnails()}</Container>;
+};
+
+Thumbnails.propTypes = {
+  photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Thumbnails;
