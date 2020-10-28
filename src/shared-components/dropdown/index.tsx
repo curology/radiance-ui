@@ -29,7 +29,7 @@ type DropdownProps = {
   optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
   /**
-   * The currently selected option. Can be initially `undefined`
+   * The currently selected option
    */
   value?: string | number;
 };
