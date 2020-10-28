@@ -1,12 +1,15 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { Banner } from './index';
 
 describe('Banner UI snapshots', () => {
+  const DecoratedBanner = decorateWithThemeProvider(Banner);
+
   test('renders success type and text', () => {
     const component = TestRenderer.create(
-      <Banner content="Success Banner" type="success" />,
+      <DecoratedBanner content="Success Banner" type="success" />,
     );
 
     const tree = component.toJSON();
@@ -15,7 +18,7 @@ describe('Banner UI snapshots', () => {
 
   test('renders error type and text', () => {
     const component = TestRenderer.create(
-      <Banner content="Error banner" type="error" />,
+      <DecoratedBanner content="Error banner" type="error" />,
     );
 
     const tree = component.toJSON();
@@ -23,7 +26,9 @@ describe('Banner UI snapshots', () => {
   });
 
   test('renders info type and text', () => {
-    const component = TestRenderer.create(<Banner content="Default banner" />);
+    const component = TestRenderer.create(
+      <DecoratedBanner content="Default banner" />,
+    );
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -33,7 +38,7 @@ describe('Banner UI snapshots', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
     const component = TestRenderer.create(
-      <Banner content="Banner with click handler" onClick={spy} />,
+      <DecoratedBanner content="Banner with click handler" onClick={spy} />,
     );
 
     component.root.findByType('button').props.onClick();

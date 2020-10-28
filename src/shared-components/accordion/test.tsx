@@ -1,8 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
-import { ThemeProvider } from 'emotion-theming';
-import { primaryTheme } from 'src/constants/themes';
+import { mount } from 'enzyme';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { Accordion } from './index';
 
@@ -13,29 +12,31 @@ const testAccordionProps = {
   children: <div>expansion</div>,
 };
 
-const AccordionWithTheme = (additionalProps?: Record<string, unknown>) => (
-  <ThemeProvider theme={primaryTheme}>
-    <Accordion {...testAccordionProps} {...additionalProps} />
-  </ThemeProvider>
-);
-
 describe('<Accordion />', () => {
+  const DecoratedAccordion = decorateWithThemeProvider(Accordion);
+
   test('renders regular accordion', () => {
-    const component = renderer.create(<AccordionWithTheme />);
+    const component = renderer.create(
+      <DecoratedAccordion {...testAccordionProps} />,
+    );
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('renders no border accordion', () => {
-    const component = renderer.create(<AccordionWithTheme noBorder />);
+    const component = renderer.create(
+      <DecoratedAccordion {...testAccordionProps} noBorder />,
+    );
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('renders disabled accordion', () => {
-    const component = renderer.create(<AccordionWithTheme disabled />);
+    const component = renderer.create(
+      <DecoratedAccordion {...testAccordionProps} disabled />,
+    );
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -43,10 +44,12 @@ describe('<Accordion />', () => {
 
   test('invokes onClick when title is clicked', () => {
     const spy = jest.fn();
-    const titleIndex = 0;
 
-    const component = shallow(<AccordionWithTheme onClick={spy} />);
-    const title = component.childAt(titleIndex);
+    const component = mount(
+      <DecoratedAccordion {...testAccordionProps} onClick={spy} />,
+    );
+
+    const title = component.find('div[role="button"]');
 
     title.simulate('click');
     expect(spy).toHaveBeenCalled();

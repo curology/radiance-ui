@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
-import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 export const ParentContainer = styled.div`
   max-width: 327px;
 `;
 
 export const CalloutContainer = styled.div`
-  background-color: ${COLORS.infoBackground};
+  background-color: ${({ theme }) => theme.COLORS.infoBackground};
   padding: ${SPACER.medium};
   border-radius: 8px;
   display: flex;

@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import TestRenderer from 'react-test-renderer';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { Alert } from './index';
 
@@ -24,10 +25,15 @@ const createNodeMock = (element: ReactElement) => {
 };
 
 describe('Alert UI snapshots', () => {
+  const DecoratedAlert = decorateWithThemeProvider(Alert);
+
   test('renders a default alert', () => {
-    const component = TestRenderer.create(<Alert content={alertText} />, {
-      createNodeMock,
-    });
+    const component = TestRenderer.create(
+      <DecoratedAlert content={alertText} />,
+      {
+        createNodeMock,
+      },
+    );
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -35,7 +41,7 @@ describe('Alert UI snapshots', () => {
 
   test('renders success alert', () => {
     const component = TestRenderer.create(
-      <Alert content={alertText} type="success" />,
+      <DecoratedAlert content={alertText} type="success" />,
       { createNodeMock },
     );
 
@@ -45,7 +51,7 @@ describe('Alert UI snapshots', () => {
 
   test('renders error alert', () => {
     const component = TestRenderer.create(
-      <Alert content={alertText} type="error" />,
+      <DecoratedAlert content={alertText} type="error" />,
       { createNodeMock },
     );
 
@@ -55,7 +61,7 @@ describe('Alert UI snapshots', () => {
 
   test('renders a sticky alert', () => {
     const component = TestRenderer.create(
-      <Alert content={alertText} duration="sticky" />,
+      <DecoratedAlert content={alertText} duration="sticky" />,
       { createNodeMock },
     );
 
@@ -65,7 +71,7 @@ describe('Alert UI snapshots', () => {
 
   test('renders custom component passed in content prop', () => {
     const component = TestRenderer.create(
-      <Alert content={<CustomContentComponent />} />,
+      <DecoratedAlert content={<CustomContentComponent />} />,
       { createNodeMock },
     );
 
@@ -77,7 +83,7 @@ describe('Alert UI snapshots', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
     const component = TestRenderer.create(
-      <Alert
+      <DecoratedAlert
         content={<CustomContentComponent />}
         onExit={spy}
         duration="sticky"
@@ -94,7 +100,7 @@ describe('Alert UI snapshots', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
     const component = TestRenderer.create(
-      <Alert
+      <DecoratedAlert
         content={<CustomContentComponent />}
         type="error"
         ctaContent="Update Payment Method"

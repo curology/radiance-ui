@@ -6,4 +6,9 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-parameters', { loose: true }],
   ],
+  env: {
+    test: {
+      presets: ['@babel/preset-typescript'],
+    },
+  },
 };

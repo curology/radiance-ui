@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
-// eslint-disable-next-line import/prefer-default-export
 export const IndicatorContainer = styled.div`
-  background-color: ${COLORS.error};
+  background-color: ${({ theme }) => theme.COLORS.error};
   min-height: 16px;
   height: 16px;
   max-height: 16px;
@@ -24,6 +23,6 @@ export const IndicatorContainer = styled.div`
     top: 1px;
     ${TYPOGRAPHY_STYLE.label};
     font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
-    color: ${COLORS.white};
+    color: ${({ theme }) => theme.COLORS.white};
   }
 `;

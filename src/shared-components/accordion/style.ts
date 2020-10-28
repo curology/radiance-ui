@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import {
  ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
 } from 'src/constants';
@@ -16,11 +15,11 @@ export const ExpansionWrapper = styled.div<{ contentHeight: string }>`
   transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
 `;
 
-const getBorderStyle = (theme: ThemeType, isOpen: boolean) => css`
+const getBorderStyle = (theme: ThemeType, isOpen: boolean) => `
   border: 1px solid ${theme.COLORS.border};
 
   ${ExpansionWrapper} {
-    ${isOpen && `border-top: 1px solid ${theme.COLORS.border}`};
+    ${isOpen ? `border-top: 1px solid ${theme.COLORS.border};` : ''}
   }
 `;
 
@@ -30,7 +29,7 @@ export const AccordionBox = styled.div<{
   disabled: boolean;
 }>`
   ${({ noBorder, isOpen, theme }) =>
-    !noBorder ? getBorderStyle(theme, isOpen) : ''};
+    !noBorder ? getBorderStyle(theme, isOpen) : ''}
 
   width: 100%;
 
