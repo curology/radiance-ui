@@ -12,6 +12,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { AcneGlyph } from 'src/svgs/glyphs';
 import type { Meta } from '@storybook/react';
+import { COLORS } from 'src/constants';
 
 export const Primary = () => (
   <React.Fragment>
@@ -54,7 +55,7 @@ export const WithControls = () => (
     onClick={action('checkbox clicked')}
     icon={
       boolean('icon', false) ? (
-        <AcneGlyph width={40} height={40} fill="#332e54" />
+        <AcneGlyph width={40} height={40} fill={COLORS.primary} />
       ) : null
     }
     size={select('size', ['large', 'small'], 'large')}

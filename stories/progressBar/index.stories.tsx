@@ -1,5 +1,7 @@
 import React from 'react';
-import { text, select, number, color } from '@storybook/addon-knobs';
+import {
+  text, select, number, color, 
+} from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
@@ -26,7 +28,7 @@ const BarContainer = styled.div`
 
   :before {
     content: 'PAGE CONTENT';
-    color: ${COLORS.purple30};
+    color: ${COLORS.primaryTint3};
   }
 `;
 

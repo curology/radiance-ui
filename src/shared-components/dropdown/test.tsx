@@ -41,9 +41,10 @@ describe('<MobileDropdown />', () => {
       const tree = renderer
         .create(
           <MobileDropdown
-            onSelectChange={() => undefined}
+            onMobileSelectChange={() => undefined}
             borderRadius="4px"
             options={options}
+            textAlign="left"
           />,
         )
         .toJSON();
@@ -59,8 +60,9 @@ describe('<MobileDropdown />', () => {
         <MobileDropdown
           borderRadius="4px"
           options={options}
-          onSelectChange={spy}
+          onMobileSelectChange={spy}
           value=""
+          textAlign="left"
         />,
       );
 
@@ -75,12 +77,14 @@ describe('<DesktopDropdown />', () => {
     const wrapper = shallow(
       <DesktopDropdown
         borderRadius="4px"
-        options={options}
+        closeDropdown={() => undefined}
         currentOption={{ value: 'test1', label: 'Test1' }}
+        isOpen={false}
+        onDesktopSelectChange={() => undefined}
+        options={options}
         optionsContainerMaxHeight="250px"
-        onSelectClick={() => null}
-        closeDropdown={() => null}
-        onOptionClick={() => null}
+        textAlign="left"
+        toggleDropdown={() => undefined}
       />,
     );
 
@@ -97,10 +101,12 @@ describe('<DesktopDropdown />', () => {
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
-          onSelectClick={spy}
+          toggleDropdown={spy}
           optionsContainerMaxHeight="250px"
-          closeDropdown={() => null}
-          onOptionClick={() => null}
+          closeDropdown={() => undefined}
+          onDesktopSelectChange={() => undefined}
+          textAlign="left"
+          isOpen={false}
         />,
       );
 
@@ -117,11 +123,12 @@ describe('<DesktopDropdown />', () => {
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
-          onOptionClick={spy}
+          onDesktopSelectChange={spy}
           isOpen
           optionsContainerMaxHeight="250px"
-          onSelectClick={() => null}
+          toggleDropdown={() => null}
           closeDropdown={() => null}
+          textAlign="left"
         />,
       );
 

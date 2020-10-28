@@ -27,7 +27,7 @@ const titleStyle = css`
 `;
 
 export const baseBodyStyles = `
-  color: ${COLORS.purpleTint1};
+  color: ${COLORS.primaryTint1};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.body};
   line-height: ${round(28 / 16, 2)};
 `;
@@ -37,7 +37,7 @@ const bodyStyle = css`
 `;
 
 const captionStyle = css`
-  color: ${COLORS.purpleTint2};
+  color: ${COLORS.primaryTint2};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   line-height: ${round(24 / 14, 2)};
 `;
@@ -53,7 +53,7 @@ const successStyle = css`
 `;
 
 const labelStyle = css`
-  color: ${COLORS.purpleTint1};
+  color: ${COLORS.primaryTint1};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.label};
   line-height: ${round(20 / 12, 2)};
 `;

@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import {
-  COLORS, BOX_SHADOWS, SPACER, ANIMATION, 
+ COLORS, BOX_SHADOWS, SPACER, ANIMATION, 
 } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
@@ -23,7 +23,7 @@ export const FieldContainer = styled.div`
 export const Label = styled.label<{ disabled: boolean }>`
   ${TYPOGRAPHY_STYLE.label};
 
-  ${({ disabled }) => disabled && `color:${COLORS.purple30};`};
+  ${({ disabled }) => disabled && `color:${COLORS.primaryTint3};`};
 `;
 
 const inputStyles = css`
@@ -94,8 +94,8 @@ const applyMessagesStyles = (messagesType: MessagesTypes) => css`
     &:active,
     &:focus {
       border-color: ${messagesType === 'success'
-    ? COLORS.success
-    : COLORS.error};
+        ? COLORS.success
+        : COLORS.error};
       box-shadow: ${BOX_SHADOWS.focus};
     }
   }

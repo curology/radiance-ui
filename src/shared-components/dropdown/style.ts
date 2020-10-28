@@ -53,7 +53,7 @@ export const dropdownInputStyle = ({
     border: 1px solid ${COLORS.border};
     ${dropdownBorderRadius};
 
-    color: ${COLORS.purple85};
+    color: ${COLORS.primaryTint1};
     line-height: ${SPACER.x4large};
     overflow: hidden;
     text-overflow: ellipsis;
@@ -150,7 +150,7 @@ export const DropdownOptionsContainer = styled.ul<{
 
   &:last-of-type {
     border-radius: ${({ borderRadius }) =>
-    borderRadius ? `0 0 ${borderRadius} ${borderRadius}` : `0 0 4px 4px`};
+      borderRadius ? `0 0 ${borderRadius} ${borderRadius}` : `0 0 4px 4px`};
   }
 `;
 
@@ -158,7 +158,7 @@ export const DropdownOption = styled.li<{
   selected: boolean;
   disabled: boolean;
 }>`
-  color: ${COLORS.purple85};
+  color: ${COLORS.primaryTint1};
   min-height: ${SPACER.x4large};
 
   background-color: ${COLORS.white};

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -55,10 +54,6 @@ const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
   };
 
   return <Container>{renderThumbnails()}</Container>;
-};
-
-Thumbnails.propTypes = {
-  photoSrcs: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Thumbnails;

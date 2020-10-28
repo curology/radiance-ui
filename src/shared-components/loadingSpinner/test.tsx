@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { COLORS } from 'src/constants';
 
 import { LoadingSpinner } from './index';
 
@@ -14,8 +15,8 @@ describe('<LoadingSpinner />', () => {
     it('renders the correct css with custom props', () => {
       const component = renderer.create(
         <LoadingSpinner
-          bgColor="#000000"
-          color="#FFFFFF"
+          bgColor={COLORS.black}
+          color={COLORS.white}
           duration={4}
           size="20px"
           translateX="150px"

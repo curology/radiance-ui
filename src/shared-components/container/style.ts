@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import {
-  SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
+ SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
 } from '../../constants';
 
 const clickableStyle = css`
@@ -74,9 +74,9 @@ export const Image = styled.img`
 type StyledContainer = StyledComponent<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   {
-    type?: 'clickable' | 'message' | undefined;
+    type?: 'clickable' | 'message';
   },
-  any
+  Record<string, unknown>
 >;
 
 type CompositeContainer = StyledContainer & {

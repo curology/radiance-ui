@@ -7,7 +7,9 @@ import {
   Title,
   Stories,
 } from '@storybook/addon-docs/blocks';
-import { text, select, number, boolean } from '@storybook/addon-knobs';
+import {
+  text, select, number, boolean, 
+} from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';
@@ -23,7 +25,7 @@ const TooltipContainer = styled.div<{ height?: string }>`
 `;
 
 const TriggerContainer = styled.div`
-  background: ${COLORS.purple};
+  background: ${COLORS.primary};
   margin: 0 auto;
   padding: ${SPACER.small};
   color: ${COLORS.white};

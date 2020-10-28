@@ -2,14 +2,11 @@
   "extends": "./shared/tsconfig",
   "compilerOptions": {
     "baseUrl": "./",
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "lib",
-    "rootDirs": ["src"],
+    "noEmit": true,
     "paths": {
       "emotion-theming": ["types/emotion-theming"],
       "@emotion/styled": ["types/@emotion/styled"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.tsx", "types/**/*.ts"]
+  "include": ["**/*.js", "**/*.ts", "**/*.tsx"]
 }

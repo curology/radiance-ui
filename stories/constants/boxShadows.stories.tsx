@@ -20,40 +20,46 @@ const BoxesContainer = styled.div`
 /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const { default: defaultExport, ...VALID_BOX_SHADOWS } = BOX_SHADOWS;
 
-export const BoxShadows = () => (
-  <MainContainer>
-    {Object.keys(VALID_BOX_SHADOWS).map((category) => {
-      const categoryBoxShadows = BOX_SHADOWS[category];
+export const BoxShadows = () => {
+  const boxShadowKeys = Object.keys(VALID_BOX_SHADOWS) as Array<
+    keyof typeof VALID_BOX_SHADOWS
+  >;
 
-      return (
-        <React.Fragment key={category}>
-          <Typography.Title>{category}:</Typography.Title>
-          <BoxesContainer>
-            {Object.keys(categoryBoxShadows).map((shadow) => {
-              const boxShadowValue = categoryBoxShadows[shadow];
+  return (
+    <MainContainer>
+      {boxShadowKeys.map((category) => {
+        const categoryBoxShadows = VALID_BOX_SHADOWS[category];
 
-              const styles = css`
-                width: 350px;
-                margin: ${SPACER.large};
-                box-shadow: ${boxShadowValue};
-              `;
+        return (
+          <React.Fragment key={category}>
+            <Typography.Title>{category}:</Typography.Title>
+            <BoxesContainer>
+              {Object.keys(categoryBoxShadows).map((shadow) => {
+                const boxShadowValue = categoryBoxShadows[shadow] as string;
 
-              return (
-                <Container key={shadow} css={styles}>
-                  <Container.Section>
-                    <strong>Key:</strong> {shadow}
-                    <br />
-                    <br />
-                    <strong>Value:</strong> {boxShadowValue}
-                  </Container.Section>
-                </Container>
-              );
-            })}
-          </BoxesContainer>
-        </React.Fragment>
-      );
-    })}
-  </MainContainer>
-);
+                const styles = css`
+                  width: 350px;
+                  margin: ${SPACER.large};
+                  box-shadow: ${boxShadowValue};
+                `;
+
+                return (
+                  <Container key={shadow} css={styles}>
+                    <Container.Section>
+                      <strong>Key:</strong> {shadow}
+                      <br />
+                      <br />
+                      <strong>Value:</strong> {boxShadowValue}
+                    </Container.Section>
+                  </Container>
+                );
+              })}
+            </BoxesContainer>
+          </React.Fragment>
+        );
+      })}
+    </MainContainer>
+  );
+};
 
 BoxShadows.storyName = 'BOX_SHADOWS';

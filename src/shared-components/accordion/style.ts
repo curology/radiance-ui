@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import {
-  ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
+ ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
 } from 'src/constants';
 import { ThemeType } from 'src/constants/themes/types';
 
@@ -74,7 +74,7 @@ export const TitleWrapper = styled.div<{
   ${AccordionBox}:last-of-type & {
     &:focus {
       ${({ borderRadius, isOpen }) =>
-    !isOpen &&
+        !isOpen &&
         `
         border-bottom-left-radius: ${borderRadius}; 
         border-bottom-right-radius: ${borderRadius};

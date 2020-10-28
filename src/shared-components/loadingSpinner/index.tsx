@@ -14,10 +14,6 @@ type LoadingSpinnerProps = {
    */
   color?: string;
   /**
-   * Distance dots will move horizontally
-   */
-  translateX?: string;
-  /**
    * Length of time for animation loop
    */
   duration?: number;
@@ -25,11 +21,11 @@ type LoadingSpinnerProps = {
    * Size of loading dots
    */
   size?: string;
+  /**
+   * Distance dots will move horizontally
+   */
+  translateX?: string;
 };
-
-const DEFAULT_TRANSLATE_X = '100px';
-const DEFAULT_DURATION = 2;
-const DEFAULT_SIZE = '14px';
 
 /**
  * LoadingSpinner will cover the entirety of the container that holds it. The container should have `position: relative;` as part of its styling to prevent the LoadingSpinner from spilling outside the container.
@@ -37,9 +33,9 @@ const DEFAULT_SIZE = '14px';
 export const LoadingSpinner = ({
   bgColor = COLORS.background,
   color = COLORS.primary,
-  translateX = DEFAULT_TRANSLATE_X,
-  duration = DEFAULT_DURATION,
-  size = DEFAULT_SIZE,
+  duration = 2,
+  size = '14px',
+  translateX = '100px',
 }: LoadingSpinnerProps) => (
   <LoadingSpinnerContainer bgColor={bgColor}>
     <Overlay>
@@ -68,15 +64,7 @@ export const LoadingSpinner = ({
 LoadingSpinner.propTypes = {
   bgColor: PropTypes.string,
   color: PropTypes.string,
-  translateX: PropTypes.string,
   duration: PropTypes.number,
   size: PropTypes.string,
-};
-
-LoadingSpinner.defaultProps = {
-  bgColor: COLORS.background,
-  color: COLORS.primary,
-  translateX: DEFAULT_TRANSLATE_X,
-  duration: DEFAULT_DURATION,
-  size: DEFAULT_SIZE,
+  translateX: PropTypes.string,
 };

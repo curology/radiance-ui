@@ -14,25 +14,39 @@ import { COLORS } from 'src/constants';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import type { Meta } from '@storybook/react';
 
+const noop = () => undefined;
+
 export const Default = () => (
   <Button.Container>
-    <Button>Primary Button</Button>
-    <Button buttonType="secondary">Secondary Button</Button>
-    <Button buttonType="tertiary">Tertiary Button</Button>
-    <Button buttonType="quaternary">Quaternary Button</Button>
-    <Button disabled>Disabled Button</Button>
-    <Button isFullWidth>Full Width Button</Button>
-    <Button isLoading>Primary Loading</Button>
-    <Button isLoading buttonType="secondary">
+    <Button onClick={noop}>Primary Button</Button>
+    <Button onClick={noop} buttonType="secondary">
+      Secondary Button
+    </Button>
+    <Button onClick={noop} buttonType="tertiary">
+      Tertiary Button
+    </Button>
+    <Button onClick={noop} buttonType="quaternary">
+      Quaternary Button
+    </Button>
+    <Button onClick={noop} disabled>
+      Disabled Button
+    </Button>
+    <Button onClick={noop} isFullWidth>
+      Full Width Button
+    </Button>
+    <Button onClick={noop} isLoading>
+      Primary Loading
+    </Button>
+    <Button onClick={noop} isLoading buttonType="secondary">
       Secondary Loading
     </Button>
-    <Button buttonType="tertiary" isLoading>
+    <Button onClick={noop} buttonType="tertiary" isLoading>
       Tertiary Loading
     </Button>
-    <Button buttonType="quaternary" isLoading>
+    <Button onClick={noop} buttonType="quaternary" isLoading>
       Quaternary Loading
     </Button>
-    <Button isFullWidth isLoading>
+    <Button onClick={noop} isFullWidth isLoading>
       Full Width Loading
     </Button>
   </Button.Container>
@@ -40,35 +54,52 @@ export const Default = () => (
 
 export const WithIcon = () => (
   <Button.Container>
-    <Button icon={<CheckmarkIcon />}>Primary Button</Button>
-    <Button buttonType="secondary" icon={<CheckmarkIcon />}>
+    <Button onClick={noop} icon={<CheckmarkIcon />}>
+      Primary Button
+    </Button>
+    <Button onClick={noop} buttonType="secondary" icon={<CheckmarkIcon />}>
       Secondary Button
     </Button>
-    <Button buttonType="tertiary" icon={<CheckmarkIcon />}>
+    <Button onClick={noop} buttonType="tertiary" icon={<CheckmarkIcon />}>
       Tertiary Button
     </Button>
-    <Button buttonType="quaternary" icon={<CheckmarkIcon />}>
+    <Button onClick={noop} buttonType="quaternary" icon={<CheckmarkIcon />}>
       Quaternary Button
     </Button>
-    <Button disabled icon={<CheckmarkIcon />}>
+    <Button onClick={noop} disabled icon={<CheckmarkIcon />}>
       Disabled Button
     </Button>
-    <Button isFullWidth icon={<CheckmarkIcon />}>
+    <Button onClick={noop} isFullWidth icon={<CheckmarkIcon />}>
       Full Width Button
     </Button>
-    <Button isLoading icon={<CheckmarkIcon />}>
+    <Button onClick={noop} isLoading icon={<CheckmarkIcon />}>
       Primary Loading
     </Button>
-    <Button isLoading buttonType="secondary" icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      isLoading
+      buttonType="secondary"
+      icon={<CheckmarkIcon />}
+    >
       Secondary Loading
     </Button>
-    <Button isLoading buttonType="tertiary" icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      isLoading
+      buttonType="tertiary"
+      icon={<CheckmarkIcon />}
+    >
       Tertiary Loading
     </Button>
-    <Button isLoading buttonType="quaternary" icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      isLoading
+      buttonType="quaternary"
+      icon={<CheckmarkIcon />}
+    >
       Quaternary Loading
     </Button>
-    <Button isLoading isFullWidth icon={<CheckmarkIcon />}>
+    <Button onClick={noop} isLoading isFullWidth icon={<CheckmarkIcon />}>
       Full Width Loading
     </Button>
   </Button.Container>
@@ -76,35 +107,52 @@ export const WithIcon = () => (
 
 export const WithColor = () => (
   <Button.Container>
-    <Button buttonColor={COLORS.statusRed}>Primary Button</Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="secondary">
+    <Button onClick={noop} buttonColor={COLORS.error}>
+      Primary Button
+    </Button>
+    <Button onClick={noop} buttonColor={COLORS.error} buttonType="secondary">
       Secondary Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="tertiary">
+    <Button onClick={noop} buttonColor={COLORS.error} buttonType="tertiary">
       Tertiary Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="quaternary">
+    <Button onClick={noop} buttonColor={COLORS.error} buttonType="quaternary">
       Quaternary Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} disabled>
+    <Button onClick={noop} buttonColor={COLORS.error} disabled>
       Disabled Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} isFullWidth>
+    <Button onClick={noop} buttonColor={COLORS.error} isFullWidth>
       Full Width Button
     </Button>
-    <Button buttonColor={COLORS.statusRed} isLoading>
+    <Button onClick={noop} buttonColor={COLORS.error} isLoading>
       Primary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} isLoading buttonType="secondary">
+    <Button
+      onClick={noop}
+      buttonColor={COLORS.error}
+      isLoading
+      buttonType="secondary"
+    >
       Secondary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="tertiary" isLoading>
+    <Button
+      onClick={noop}
+      buttonColor={COLORS.error}
+      buttonType="tertiary"
+      isLoading
+    >
       Tertiary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} buttonType="quaternary" isLoading>
+    <Button
+      onClick={noop}
+      buttonColor={COLORS.error}
+      buttonType="quaternary"
+      isLoading
+    >
       Quaternary Loading
     </Button>
-    <Button buttonColor={COLORS.statusRed} isFullWidth isLoading>
+    <Button onClick={noop} buttonColor={COLORS.error} isFullWidth isLoading>
       Full Width Loading
     </Button>
   </Button.Container>
