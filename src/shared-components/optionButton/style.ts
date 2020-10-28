@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import {
-  COLORS, ANIMATION, SPACER, BOX_SHADOWS, 
+ COLORS, ANIMATION, SPACER, BOX_SHADOWS, 
 } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
@@ -128,7 +128,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.div`
-  color: ${COLORS.purple85};
+  color: ${COLORS.primaryTint1};
   line-height: 1.5;
 `;
 

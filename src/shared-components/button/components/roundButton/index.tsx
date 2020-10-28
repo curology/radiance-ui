@@ -39,7 +39,7 @@ type RoundButtonProps = {
    * When loading, onClick function execution is disallowed
    */
   isLoading?: boolean;
-  loading?: boolean | undefined;
+  loading?: boolean;
   onClick?: () => void;
   /**
    * Color that will override existing text, icon, and loading colors (except when disabled is true)

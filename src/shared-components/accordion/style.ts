@@ -45,7 +45,7 @@ export const AccordionBox = styled.div<{
       ? `
     opacity: 0.4;
     background-color: ${COLORS.disabled};
-    border-color: ${COLORS.purple30};
+    border-color: ${COLORS.primaryTint3};
   `
       : ''};
 `;

@@ -1,17 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
-import { OptionType } from './index';
+import { OptionType } from '.';
 
 type MobileDropdownProps = {
   borderRadius: string;
-  onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: OptionType[];
-  textAlign?: 'left' | 'center';
-  value?: string | number | undefined;
+  textAlign: 'left' | 'center';
+  value?: string | number;
 };
 
 /**
@@ -21,9 +20,9 @@ type MobileDropdownProps = {
  */
 export const MobileDropdown = ({
   borderRadius,
-  onSelectChange,
-  options = [{ value: undefined, label: '' }],
-  textAlign = 'left',
+  onMobileSelectChange,
+  options,
+  textAlign,
   value,
 }: MobileDropdownProps) => (
   <DropdownContainer textAlign={textAlign}>
@@ -34,9 +33,9 @@ export const MobileDropdown = ({
         textAlign,
       })}
       value={value || ''}
-      onChange={onSelectChange}
+      onChange={onMobileSelectChange}
     >
-      {options.map((option) => {
+      {options.map((option, index) => {
         let isDisabled = option.disabled;
 
         // Covers the case where default value is disabled
@@ -46,7 +45,11 @@ export const MobileDropdown = ({
         }
 
         return (
-          <option key={option.value} value={option.value} disabled={isDisabled}>
+          <option
+            key={option.value || `undefined-${index}`}
+            value={option.value}
+            disabled={isDisabled}
+          >
             {option.label}
           </option>
         );
@@ -57,17 +60,3 @@ export const MobileDropdown = ({
     </IconContainer>
   </DropdownContainer>
 );
-
-MobileDropdown.propTypes = {
-  borderRadius: PropTypes.string.isRequired,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string,
-      disabled: PropTypes.bool,
-    }),
-  ),
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  onSelectChange: PropTypes.func,
-};

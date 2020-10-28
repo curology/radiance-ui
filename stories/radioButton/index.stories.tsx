@@ -3,6 +3,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RadioButton } from 'src/shared-components';
 import { AcneGlyph } from 'src/svgs/glyphs';
+import { COLORS } from 'src/constants';
 import {
   ArgsTable,
   Description,
@@ -70,7 +71,7 @@ export const WithControls = () => (
     onClick={(action('radio button clicked'), () => undefined)}
     icon={
       boolean('icon', false) ? (
-        <AcneGlyph width={40} height={40} fill="#332e54" />
+        <AcneGlyph width={40} height={40} fill={COLORS.primary} />
       ) : null
     }
     size={select('size', ['large', 'small'], 'small')}

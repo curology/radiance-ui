@@ -88,32 +88,32 @@ export const Loading = () => (
 
 export const WithColor = () => (
   <ButtonsContainer>
-    <RoundButton buttonColor={COLORS.statusRed} icon={<CheckmarkIcon />}>
+    <RoundButton buttonColor={COLORS.error} icon={<CheckmarkIcon />}>
       Primary
     </RoundButton>
     <RoundButton
-      buttonColor={COLORS.statusRed}
+      buttonColor={COLORS.error}
       buttonType="secondary"
       icon={<ArrowRightIcon />}
     >
       Secondary
     </RoundButton>
     <RoundButton
-      buttonColor={COLORS.statusRed}
+      buttonColor={COLORS.error}
       buttonType="tertiary"
       icon={<ArrowLeftIcon />}
     >
       Tertiary
     </RoundButton>
     <RoundButton
-      buttonColor={COLORS.statusRed}
+      buttonColor={COLORS.error}
       buttonType="quaternary"
       icon={<ArrowRightIcon />}
     >
       Quaternary
     </RoundButton>
     <RoundButton
-      buttonColor={COLORS.statusRed}
+      buttonColor={COLORS.error}
       buttonType="action"
       icon={<CrossIcon />}
     >
