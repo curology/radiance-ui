@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { primaryTheme, secondaryTheme } from '.';
 
 type BoxShadow =
@@ -5,6 +7,11 @@ type BoxShadow =
   | typeof secondaryTheme['BOX_SHADOW'];
 
 type Colors = typeof primaryTheme['COLORS'] | typeof secondaryTheme['COLORS'];
+
+export const COLORS_PROP_TYPES = PropTypes.oneOf([
+  ...Object.values(primaryTheme.COLORS),
+  ...Object.values(secondaryTheme.COLORS),
+]);
 
 export type ThemeType = {
   __type: 'primary' | 'secondary';
