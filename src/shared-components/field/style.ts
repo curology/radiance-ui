@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
- COLORS, BOX_SHADOWS, SPACER, ANIMATION, 
-} from '../../constants';
+import { BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
@@ -23,16 +22,17 @@ export const FieldContainer = styled.div`
 export const Label = styled.label<{ disabled: boolean }>`
   ${TYPOGRAPHY_STYLE.label};
 
-  ${({ disabled }) => disabled && `color:${COLORS.primaryTint3};`};
+  ${({ disabled, theme }) =>
+    disabled ? `color: ${theme.COLORS.primaryTint3};` : ''}
 `;
 
-const inputStyles = css`
+const inputStyles = (theme: ThemeType) => css`
   ${TYPOGRAPHY_STYLE.body};
   appearance: none;
-  background: ${COLORS.white};
-  border: 1px solid ${COLORS.border};
+  background: ${theme.COLORS.white};
+  border: 1px solid ${theme.COLORS.border};
   border-radius: ${SPACER.xsmall};
-  color: ${COLORS.primaryTint1};
+  color: ${theme.COLORS.primaryTint1};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
   outline: none;
@@ -41,7 +41,7 @@ const inputStyles = css`
   &:active,
   &:focus {
     outline: none;
-    border-color: ${COLORS.primary};
+    border-color: ${theme.COLORS.primary};
     box-shadow: ${BOX_SHADOWS.focus};
 
     ~ ${HintItem} {
@@ -52,26 +52,26 @@ const inputStyles = css`
   }
 
   &::placeholder {
-    color: ${COLORS.primaryTint3};
+    color: ${theme.COLORS.primaryTint3};
   }
 
   &[disabled] {
-    background-color: ${COLORS.disabled};
-    color: ${COLORS.textDisabled};
+    background-color: ${theme.COLORS.disabled};
+    color: ${theme.COLORS.textDisabled};
     cursor: not-allowed;
-    border: 1px solid ${COLORS.border};
+    border: 1px solid ${theme.COLORS.border};
     box-shadow: none;
   }
 `;
 
 export const Input = styled.input`
-  ${inputStyles};
+  ${({ theme }) => inputStyles(theme)}
   padding: 13px ${SPACER.xlarge} 13px ${SPACER.medium};
 `;
 
 export const Textarea = styled.textarea`
-  ${inputStyles};
-  color: ${COLORS.primary};
+  ${({ theme }) => inputStyles(theme)}
+  color: ${({ theme }) => theme.COLORS.primary};
   display: block;
   height: 100%;
   line-height: ${SPACER.large};
@@ -83,19 +83,21 @@ export const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = (messagesType: MessagesTypes) => css`
+const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
   svg.radiance-field-input-icon {
     opacity: 1;
   }
 
   ${Textarea}, ${Input} {
-    border-color: ${messagesType === 'success' ? COLORS.success : COLORS.error};
+    border-color: ${
+      messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
+    };
 
     &:active,
     &:focus {
-      border-color: ${messagesType === 'success'
-        ? COLORS.success
-        : COLORS.error};
+      border-color: ${
+        messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
+      };
       box-shadow: ${BOX_SHADOWS.focus};
     }
   }
@@ -115,6 +117,6 @@ export const InputContainer = styled.div<{
     transition: opacity ${ANIMATION.defaultTiming};
   }
 
-  ${({ showMessages, messagesType }) =>
-    showMessages && applyMessagesStyles(messagesType)};
+  ${({ showMessages, messagesType, theme }) =>
+    showMessages && applyMessagesStyles(messagesType, theme)}
 `;

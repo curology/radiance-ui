@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/core';
+import { ThemeType } from 'src/constants/themes/types';
 
-import { COLORS, ANIMATION, PROGRESS_BAR_STATUS } from '../../constants';
+import { ANIMATION, PROGRESS_BAR_STATUS } from '../../constants';
 
 import { ProgressBarStatusType } from '.';
 
@@ -12,39 +13,39 @@ const loadingProgression = keyframes`
 
 export const OuterContainer = styled.div<{
   backgroundColor: string;
-  height: number;
+  barHeight: number;
   status: ProgressBarStatusType;
 }>`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background: ${props => props.backgroundColor};
+  background: ${(props) => props.backgroundColor};
   overflow: hidden;
   transition: opacity ${ANIMATION.defaultTiming} ease-in-out 500ms;
   width: 100%;
   z-index: 2;
-  height: ${props => `${props.height}px`};
+  height: ${(props) => `${props.barHeight}px`};
 
   ${({ status }) =>
     (status === PROGRESS_BAR_STATUS.success ||
       status === PROGRESS_BAR_STATUS.error) &&
-    css`
+    `
       opacity: 0;
       transition: opacity ${ANIMATION.defaultTiming} ease-in-out 500ms;
     `};
 `;
 
-const getStatusStyles = (status: ProgressBarStatusType) => {
-  const baseStyles = css`
+const getStatusStyles = (status: ProgressBarStatusType, theme: ThemeType) => {
+  const baseStyles = `
     transform: translateX(0);
     transition: transform ${ANIMATION.defaultTiming} ease-in-out;
   `;
 
   if (status === PROGRESS_BAR_STATUS.error) {
-    return css`
+    return `
       ${baseStyles};
-      background: ${COLORS.error};
+      background: ${theme.COLORS.error};
     `;
   }
 
@@ -52,18 +53,18 @@ const getStatusStyles = (status: ProgressBarStatusType) => {
 };
 
 export const InnerBar = styled.div<{
-  height: number;
+  barHeight: number;
   barColor: string;
   loadingTime: string;
   status: ProgressBarStatusType;
 }>`
   position: absolute;
   width: 100%;
-  height: ${props => `${props.height}px`};
-  background-color: ${props => props.barColor};
+  height: ${(props) => `${props.barHeight}px`};
+  background-color: ${(props) => props.barColor};
   animation: ${loadingProgression} ${({ loadingTime }) => loadingTime} ease-in;
   transform: translateX(-5%);
   transition: transform ${ANIMATION.defaultTiming} ease-in-out;
 
-  ${({ status }) => getStatusStyles(status)};
+  ${({ status, theme }) => getStatusStyles(status, theme)};
 `;

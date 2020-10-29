@@ -17,22 +17,22 @@ export const CalloutContainer = styled.div`
 `;
 
 export const Text = styled.div<{
-  color: string;
+  textColor: string;
 }>`
-  color: ${({ color }) => color};
+  color: ${({ textColor }) => textColor};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
 `;
 
 export const Icon = styled.div<{
-  color: string;
+  iconColor: string;
 }>`
   margin-left: ${SPACER.small};
 
   svg {
-    fill: ${({ color }) => color};
+    fill: ${({ iconColor }) => iconColor};
 
     path {
-      fill: ${({ color }) => color};
+      fill: ${({ iconColor }) => iconColor};
     }
   }
 `;

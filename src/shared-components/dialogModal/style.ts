@@ -2,11 +2,7 @@ import styled from '@emotion/styled';
 
 import Typography from '../typography';
 import {
-  COLORS,
-  MEDIA_QUERIES,
-  SPACER,
-  Z_SCALE,
-  BOX_SHADOWS,
+ MEDIA_QUERIES, SPACER, Z_SCALE, BOX_SHADOWS, 
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -47,7 +43,7 @@ export const ModalContainer = styled.div`
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
-  background: ${COLORS.white};
+  background: ${({ theme }) => theme.COLORS.white};
   padding: ${SPACER.x4large} ${SPACER.large} ${SPACER.xlarge};
   overflow-y: auto;
   max-height: 700px;
@@ -99,7 +95,7 @@ export const CrossIconContainer = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  background: ${COLORS.white};
+  background: ${({ theme }) => theme.COLORS.white};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
