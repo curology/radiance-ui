@@ -9,6 +9,9 @@ const PRIMARY_COLORS = {
   primaryTint2: COLORS.purple70,
   primaryTint3: COLORS.purple30,
   secondary: COLORS.lavender100,
+  secondaryTint1: COLORS.lavender80,
+  secondaryTint2: COLORS.lavender60,
+  secondaryTint3: COLORS.lavender10,
   tertiary: COLORS.purple4,
 
   // general colors
@@ -51,7 +54,7 @@ const PRIMARY_COLORS = {
 
   black: COLORS.black,
   white: COLORS.white,
-};
+} as const;
 
 export const PRIMARY_COLORS_PROP_TYPES = PropTypes.oneOf(
   Object.values(PRIMARY_COLORS),

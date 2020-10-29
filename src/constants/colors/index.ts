@@ -53,7 +53,7 @@ export const brandColors = {
   white: '#ffffff',
   yellow: '#eed153',
   facebookBlue: '#305c99',
-};
+} as const;
 
 export const legacyColors = {
   charcoal: '#353a39',
@@ -63,7 +63,7 @@ export const legacyColors = {
   yellowLight: '#f4f2b0',
   purple80: '#5C5876',
   purple60: '#858298',
-};
+} as const;
 
 export const colorAliases = {
   // Legacy
@@ -118,7 +118,7 @@ export const colorAliases = {
   overlayHidden: 'rgba(45, 45, 48, 0)',
   overlaySolid: 'rgba(45, 45, 48, 1)',
   overlayTransition: 'rgba(45, 45, 48, 0.3)',
-};
+} as const;
 
 export const postcardColors = {
   postcardSocialBg: '#f2f2f2',
@@ -131,7 +131,7 @@ export const postcardColors = {
   postcardBlack: '#414141',
   postcardGrey: '#bfc6cb',
   postcardYellow: brandColors.yellow,
-};
+} as const;
 
 // Dont change these keys -- will affect treatment page guide colors
 export const guideColors = {
@@ -150,24 +150,24 @@ export const guideColors = {
   zincPyrithioneGuide: '#83c6e3',
   ourFavoriteMoisturizersGuide: '#a7a0cf',
   recommendedCleansersGuide: '#cad1b5',
-};
+} as const;
 
 const sharedColors = {
   ...brandColors,
   ...colorAliases,
   ...postcardColors,
   ...guideColors,
-};
+} as const;
 
 const colorsCompilation = {
   ...sharedColors,
   ...legacyColors,
-};
+} as const;
 
 const deprecatedProperties = {
   purple80: 'purple80 is deprecated. Use purple85 instead',
   purple60: 'purple60 is deprecated. Use purple70 instead',
-};
+} as const;
 
 // Do not include deprecated properties in PropTypes or it will trigger warning
 // eslint-disable-next-line
@@ -176,7 +176,7 @@ const { purple80, purple60, ...allOtherLegacyColors } = legacyColors;
 const NON_DEPRECATED_COLORS = {
   ...sharedColors,
   ...allOtherLegacyColors,
-};
+} as const;
 
 export const COLORS_PROP_TYPES = PropTypes.oneOf(
   Object.values(NON_DEPRECATED_COLORS),
