@@ -163,7 +163,7 @@ type BaseButtonStylesTypes = {
   buttonType: ButtonTypeWithAction;
   buttonColor: valueof<ThemeType['COLORS']>;
   isLoading?: boolean;
-  textColor: string;
+  textColor: valueof<ThemeType['COLORS']>;
   isFullWidth?: boolean;
   theme: ThemeType;
 };

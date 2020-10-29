@@ -37,7 +37,7 @@ const ButtonLoader = styled.div<{
   disabled: boolean;
   isFullWidth: boolean;
   isLoading: boolean;
-  textColor: string;
+  textColor: valueof<ThemeType['COLORS']>;
 }>`
   display: flex;
   align-items: center;

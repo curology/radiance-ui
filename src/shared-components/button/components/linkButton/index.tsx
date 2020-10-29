@@ -27,7 +27,7 @@ type LinkProps = {
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: string;
+  textColor?: valueof<ThemeType['COLORS']>;
   [key: string]: unknown;
 };
 

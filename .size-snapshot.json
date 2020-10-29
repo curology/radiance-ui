@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 997229,
-    "minified": 929360,
-    "gzipped": 99156
+    "bundled": 997397,
+    "minified": 929528,
+    "gzipped": 99130
   },
   "bundle.umd.js": {
-    "bundled": 1006469,
-    "minified": 904564,
-    "gzipped": 94808
+    "bundled": 1006637,
+    "minified": 904732,
+    "gzipped": 94802
   },
   "shared-components/avatar/index.js": {
     "bundled": 550,
@@ -458,9 +458,9 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 46012,
-    "minified": 44121,
-    "gzipped": 6978,
+    "bundled": 46132,
+    "minified": 44241,
+    "gzipped": 6957,
     "treeshaked": {
       "rollup": {
         "code": 4466,
@@ -1102,9 +1102,9 @@
     }
   },
   "shared-components/button/shared-components/loader/style.js": {
-    "bundled": 6750,
-    "minified": 5981,
-    "gzipped": 2673,
+    "bundled": 6770,
+    "minified": 6001,
+    "gzipped": 2699,
     "treeshaked": {
       "rollup": {
         "code": 1710,
@@ -1242,9 +1242,9 @@
     }
   },
   "shared-components/button/components/linkButton/style.js": {
-    "bundled": 1702,
-    "minified": 1453,
-    "gzipped": 875,
+    "bundled": 1730,
+    "minified": 1481,
+    "gzipped": 892,
     "treeshaked": {
       "rollup": {
         "code": 41,

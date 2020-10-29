@@ -11,7 +11,7 @@ type LoaderProps = {
   disabled: boolean;
   isFullWidth?: boolean;
   isLoading: boolean;
-  textColor: string;
+  textColor: valueof<ThemeType['COLORS']>;
 };
 
 const Loader = ({

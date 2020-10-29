@@ -42,7 +42,7 @@ type RoundButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors (except when disabled is true)
    */
-  textColor?: string;
+  textColor?: valueof<ThemeType['COLORS']>;
   [key: string]: unknown;
 };
 
