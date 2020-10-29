@@ -1,27 +1,27 @@
 import React from 'react';
+import { ThemeType } from 'src/constants/themes/types';
 
-import { COLORS } from '../../../../constants';
 import ButtonLoader from './style';
 import { ButtonTypeWithAction } from '../..';
 
 type LoaderProps = {
-  buttonColor?: string;
-  buttonType?: ButtonTypeWithAction;
+  buttonColor: valueof<ThemeType['COLORS']>;
+  buttonType: ButtonTypeWithAction;
   className?: string;
-  disabled?: boolean;
+  disabled: boolean;
   isFullWidth?: boolean;
-  isLoading?: boolean;
-  textColor?: string;
+  isLoading: boolean;
+  textColor: valueof<ThemeType['COLORS']>;
 };
 
 const Loader = ({
-  buttonColor = COLORS.primary,
-  buttonType = 'primary',
+  buttonColor,
+  buttonType,
   className = '',
-  disabled = false,
+  disabled,
   isFullWidth = false,
-  isLoading = false,
-  textColor = '',
+  isLoading,
+  textColor,
 }: LoaderProps) => (
   <ButtonLoader
     buttonColor={buttonColor}

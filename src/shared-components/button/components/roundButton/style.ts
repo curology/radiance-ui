@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
+import { ThemeType } from 'src/constants/themes/types';
 
 import { ANIMATION, COLORS } from '../../../../constants';
 import { ButtonBase } from '../../style';
@@ -39,12 +40,12 @@ export const RoundButtonBase = styled(ButtonBase)`
   ${({ isLoading, disabled }) =>
     !isLoading &&
     !disabled &&
-    css`
+    `
       &:hover {
         transition: all ${ANIMATION.defaultTiming} ease-in-out;
         opacity: 1;
       }
-    `};
+    `}
 
   & > svg {
     opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
@@ -58,11 +59,11 @@ export const roundButtonLoader = (disabled: boolean) => css`
   margin: -3px -3px 0 0;
 
   ${disabled &&
-    `
+  `
     & span {
       background-color: ${COLORS.white};
     }
-  `};
+  `}
 `;
 
 /**
@@ -71,7 +72,9 @@ export const roundButtonLoader = (disabled: boolean) => css`
  * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
  * @return string         hex string of the alternate color (e.g. #efefef)
  */
-const determineAlternateTextColor = (buttonColor: string) => {
+const determineAlternateTextColor = (
+  buttonColor: valueof<ThemeType['COLORS']>,
+) => {
   // create a lighter and darker version of the text
   const lighterVersion = tinycolor(buttonColor)
     .lighten(10)
@@ -102,20 +105,27 @@ const determineAlternateTextColor = (buttonColor: string) => {
  * @param  string textColor   custom override for the text color
  * @return string             hex string of the text color
  */
-const buttonTextColor = (buttonColor: string, textColor: string) => {
+const buttonTextColor = (
+  buttonColor: valueof<ThemeType['COLORS']>,
+  textColor: string,
+  theme: ThemeType,
+) => {
   if (textColor !== '') {
     return textColor;
   }
 
-  return textColorsAssociatedWithColors[buttonColor]
-    ? textColorsAssociatedWithColors[buttonColor].tint1
+  const tintedTextColor = textColorsAssociatedWithColors(theme)[buttonColor];
+
+  return tintedTextColor
+    ? tintedTextColor.tint1
     : determineAlternateTextColor(buttonColor);
 };
 
 export const roundButtonTextStyles = (
-  buttonColor: string,
+  buttonColor: valueof<ThemeType['COLORS']>,
   textColor: string,
+  theme: ThemeType,
 ) => css`
-  color: ${buttonTextColor(buttonColor, textColor)};
+  color: ${buttonTextColor(buttonColor, textColor, theme)};
   margin: 10px 0;
 `;

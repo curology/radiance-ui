@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1107135,
-    "minified": 1039741,
-    "gzipped": 102344
+    "bundled": 997397,
+    "minified": 929528,
+    "gzipped": 99130
   },
   "bundle.umd.js": {
-    "bundled": 1116185,
-    "minified": 1015190,
-    "gzipped": 98267
+    "bundled": 1006637,
+    "minified": 904732,
+    "gzipped": 94802
   },
   "shared-components/avatar/index.js": {
     "bundled": 550,
@@ -108,16 +108,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 3685,
-    "minified": 1971,
-    "gzipped": 793,
+    "bundled": 3741,
+    "minified": 2006,
+    "gzipped": 815,
     "treeshaked": {
       "rollup": {
-        "code": 1612,
-        "import_statements": 568
+        "code": 1655,
+        "import_statements": 608
       },
       "webpack": {
-        "code": 2954
+        "code": 3023
       }
     }
   },
@@ -192,9 +192,9 @@
     }
   },
   "_virtual/_rollupPluginBabelHelpers.js": {
-    "bundled": 4853,
-    "minified": 3233,
-    "gzipped": 1177,
+    "bundled": 5593,
+    "minified": 3899,
+    "gzipped": 1264,
     "treeshaked": {
       "rollup": {
         "code": 0,
@@ -458,16 +458,16 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 141742,
-    "minified": 139680,
-    "gzipped": 9904,
+    "bundled": 46132,
+    "minified": 44241,
+    "gzipped": 6957,
     "treeshaked": {
       "rollup": {
-        "code": 4007,
-        "import_statements": 387
+        "code": 4466,
+        "import_statements": 344
       },
       "webpack": {
-        "code": 5583
+        "code": 5941
       }
     }
   },
@@ -752,16 +752,16 @@
     }
   },
   "shared-components/button/components/linkButton/index.js": {
-    "bundled": 2763,
-    "minified": 1385,
-    "gzipped": 620,
+    "bundled": 2830,
+    "minified": 1432,
+    "gzipped": 651,
     "treeshaked": {
       "rollup": {
-        "code": 1083,
-        "import_statements": 374
+        "code": 1138,
+        "import_statements": 414
       },
       "webpack": {
-        "code": 2396
+        "code": 2472
       }
     }
   },
@@ -780,16 +780,16 @@
     }
   },
   "shared-components/button/shared-components/loader/index.js": {
-    "bundled": 1307,
-    "minified": 611,
-    "gzipped": 338,
+    "bundled": 856,
+    "minified": 452,
+    "gzipped": 270,
     "treeshaked": {
       "rollup": {
-        "code": 91,
-        "import_statements": 91
+        "code": 55,
+        "import_statements": 55
       },
       "webpack": {
-        "code": 1184
+        "code": 1105
       }
     }
   },
@@ -822,16 +822,16 @@
     }
   },
   "shared-components/button/components/roundButton/index.js": {
-    "bundled": 3699,
-    "minified": 1941,
-    "gzipped": 785,
+    "bundled": 3771,
+    "minified": 1978,
+    "gzipped": 810,
     "treeshaked": {
       "rollup": {
-        "code": 1506,
-        "import_statements": 583
+        "code": 1551,
+        "import_statements": 623
       },
       "webpack": {
-        "code": 2838
+        "code": 2909
       }
     }
   },
@@ -1102,16 +1102,16 @@
     }
   },
   "shared-components/button/shared-components/loader/style.js": {
-    "bundled": 21279,
-    "minified": 20480,
-    "gzipped": 3756,
+    "bundled": 6770,
+    "minified": 6001,
+    "gzipped": 2699,
     "treeshaked": {
       "rollup": {
         "code": 1710,
-        "import_statements": 236
+        "import_statements": 184
       },
       "webpack": {
-        "code": 2907
+        "code": 2819
       }
     }
   },
@@ -1172,16 +1172,16 @@
     }
   },
   "shared-components/button/components/roundButton/style.js": {
-    "bundled": 32181,
-    "minified": 30517,
-    "gzipped": 5080,
+    "bundled": 28922,
+    "minified": 27237,
+    "gzipped": 5190,
     "treeshaked": {
       "rollup": {
-        "code": 644,
-        "import_statements": 236
+        "code": 630,
+        "import_statements": 222
       },
       "webpack": {
-        "code": 1845
+        "code": 1843
       }
     }
   },
@@ -1200,30 +1200,30 @@
     }
   },
   "shared-components/button/components/textButton/style.js": {
-    "bundled": 1892,
-    "minified": 1771,
-    "gzipped": 1085,
+    "bundled": 1886,
+    "minified": 1743,
+    "gzipped": 1128,
     "treeshaked": {
       "rollup": {
-        "code": 567,
-        "import_statements": 169
+        "code": 548,
+        "import_statements": 126
       },
       "webpack": {
-        "code": 1706
+        "code": 1636
       }
     }
   },
   "shared-components/button/constants.js": {
-    "bundled": 551,
-    "minified": 480,
-    "gzipped": 241,
+    "bundled": 603,
+    "minified": 390,
+    "gzipped": 211,
     "treeshaked": {
       "rollup": {
-        "code": 241,
-        "import_statements": 116
+        "code": 48,
+        "import_statements": 48
       },
       "webpack": {
-        "code": 1307
+        "code": 1036
       }
     }
   },
@@ -1242,16 +1242,16 @@
     }
   },
   "shared-components/button/components/linkButton/style.js": {
-    "bundled": 1604,
-    "minified": 1383,
-    "gzipped": 834,
+    "bundled": 1730,
+    "minified": 1481,
+    "gzipped": 892,
     "treeshaked": {
       "rollup": {
-        "code": 77,
-        "import_statements": 77
+        "code": 41,
+        "import_statements": 41
       },
       "webpack": {
-        "code": 1141
+        "code": 1062
       }
     }
   },
@@ -1312,9 +1312,9 @@
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 36238,
-    "minified": 35182,
-    "gzipped": 4829,
+    "bundled": 36286,
+    "minified": 35230,
+    "gzipped": 4828,
     "treeshaked": {
       "rollup": {
         "code": 2701,
@@ -1350,6 +1350,76 @@
       },
       "webpack": {
         "code": 951
+      }
+    }
+  },
+  "constants/themes/types.js": {
+    "bundled": 432,
+    "minified": 411,
+    "gzipped": 229,
+    "treeshaked": {
+      "rollup": {
+        "code": 244,
+        "import_statements": 170
+      },
+      "webpack": {
+        "code": 1379
+      }
+    }
+  },
+  "constants/themes/secondaryTheme.js": {
+    "bundled": 181,
+    "minified": 161,
+    "gzipped": 133,
+    "treeshaked": {
+      "rollup": {
+        "code": 30,
+        "import_statements": 30
+      },
+      "webpack": {
+        "code": 1030
+      }
+    }
+  },
+  "constants/colors/primary.js": {
+    "bundled": 1640,
+    "minified": 1362,
+    "gzipped": 487,
+    "treeshaked": {
+      "rollup": {
+        "code": 1040,
+        "import_statements": 52
+      },
+      "webpack": {
+        "code": 2141
+      }
+    }
+  },
+  "constants/themes/primaryTheme.js": {
+    "bundled": 169,
+    "minified": 149,
+    "gzipped": 129,
+    "treeshaked": {
+      "rollup": {
+        "code": 28,
+        "import_statements": 28
+      },
+      "webpack": {
+        "code": 1028
+      }
+    }
+  },
+  "constants/colors/secondary.js": {
+    "bundled": 1109,
+    "minified": 831,
+    "gzipped": 370,
+    "treeshaked": {
+      "rollup": {
+        "code": 674,
+        "import_statements": 52
+      },
+      "webpack": {
+        "code": 1705
       }
     }
   }

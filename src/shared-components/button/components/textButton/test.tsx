@@ -1,21 +1,28 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { TextButton } from './index';
 
 describe('<TextButton />', () => {
+  const DecoratedTextButton = decorateWithThemeProvider(TextButton);
+
   describe('UI snapshots', () => {
     it('renders without any props', () => {
       const tree = renderer
-        .create(<TextButton>Button Text</TextButton>)
+        .create(<DecoratedTextButton>Button Text</DecoratedTextButton>)
         .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
     it('renders with disabled prop', () => {
       const tree = renderer
-        .create(<TextButton disabled>Disabled Button Text</TextButton>)
+        .create(
+          <DecoratedTextButton disabled>
+            Disabled Button Text
+          </DecoratedTextButton>,
+        )
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -25,7 +32,9 @@ describe('<TextButton />', () => {
   describe('onClick callback', () => {
     it('should invoke onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(<TextButton onClick={spy}>Button Text</TextButton>);
+      const wrapper = mount(
+        <DecoratedTextButton onClick={spy}>Button Text</DecoratedTextButton>,
+      );
 
       const button = wrapper.find('button');
 
@@ -36,9 +45,9 @@ describe('<TextButton />', () => {
     it('should not be clickable if disabled', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <TextButton disabled onClick={spy}>
+        <DecoratedTextButton disabled onClick={spy}>
           Button Text
-        </TextButton>,
+        </DecoratedTextButton>,
       );
 
       const button = wrapper.find('button');
