@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
-import { ThemeType } from 'src/constants/themes/types';
+import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
 import { ANIMATION, COLORS } from '../../../../constants';
 import { ButtonBase } from '../../style';
@@ -72,9 +72,7 @@ export const roundButtonLoader = (disabled: boolean) => css`
  * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
  * @return string         hex string of the alternate color (e.g. #efefef)
  */
-const determineAlternateTextColor = (
-  buttonColor: valueof<ThemeType['COLORS']>,
-) => {
+const determineAlternateTextColor = (buttonColor: ThemeColors) => {
   // create a lighter and darker version of the text
   const lighterVersion = tinycolor(buttonColor)
     .lighten(10)
@@ -106,7 +104,7 @@ const determineAlternateTextColor = (
  * @return string             hex string of the text color
  */
 const buttonTextColor = (
-  buttonColor: valueof<ThemeType['COLORS']>,
+  buttonColor: ThemeColors,
   textColor: string,
   theme: ThemeType,
 ) => {
@@ -122,7 +120,7 @@ const buttonTextColor = (
 };
 
 export const roundButtonTextStyles = (
-  buttonColor: valueof<ThemeType['COLORS']>,
+  buttonColor: ThemeColors,
   textColor: string,
   theme: ThemeType,
 ) => css`

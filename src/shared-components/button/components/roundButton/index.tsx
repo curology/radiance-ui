@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { COLORS_PROP_TYPES, ThemeType } from 'src/constants/themes/types';
+import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 import Loader from '../../shared-components/loader';
@@ -19,7 +19,7 @@ import {
 } from '../../deprecatedPropsHandler';
 
 type RoundButtonProps = {
-  buttonColor?: valueof<ThemeType['COLORS']>;
+  buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
    */
@@ -42,7 +42,7 @@ type RoundButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors (except when disabled is true)
    */
-  textColor?: valueof<ThemeType['COLORS']>;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 
@@ -53,8 +53,7 @@ type RoundButtonProps = {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const RoundButton = ({
-  buttonColor,
+export const RoundButton = ({buttonColor,
   buttonType = 'primary',
   children = '',
   disabled = false,
@@ -63,8 +62,7 @@ export const RoundButton = ({
   loading = undefined,
   onClick = () => undefined,
   textColor = '',
-  ...rest
-}: RoundButtonProps) => {
+  ...rest}: RoundButtonProps) => {
   const theme = useTheme();
   const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;

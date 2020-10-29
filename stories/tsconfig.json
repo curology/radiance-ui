@@ -4,5 +4,15 @@
     "baseUrl": "../",
     "noEmit": true
   },
-  "include": ["*.js", "*.ts", "*.tsx", "../types/**/*.ts"]
+  "include": [
+    "../src/**/*.ts",
+    "../src/**/*.js",
+    "../src/**/*.tsx",
+    "../stories/**/*.ts",
+    "../stories/**/*.js",
+    "../stories/**/*.tsx",
+    "../tests/**/*.ts",
+    "../tests/**/*.tsx",
+    "../types/**/*.ts"
+  ]
 }

@@ -8,6 +8,8 @@ type BoxShadow =
 
 type Colors = typeof primaryTheme['COLORS'] | typeof secondaryTheme['COLORS'];
 
+export type ThemeColors = valueof<Colors>;
+
 export const COLORS_PROP_TYPES = PropTypes.oneOf([
   ...Object.values(primaryTheme.COLORS),
   ...Object.values(secondaryTheme.COLORS),

@@ -19,6 +19,7 @@ import {
   ArrowLeftIcon,
   CrossIcon,
 } from 'src/svgs/icons';
+import { ThemeColors } from 'src/constants/themes/types';
 
 const ButtonsContainer = styled.div`
   display: flex;
@@ -137,12 +138,12 @@ export const WithControls = () => (
         ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
         'primary',
       )}
-      buttonColor={select('buttonColor', COLORS, COLORS.primary)}
+      buttonColor={select('buttonColor', COLORS, COLORS.primary) as ThemeColors}
       isLoading={boolean('isLoading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}
       icon={<CheckmarkIcon />}
-      textColor={text('textColor', '')}
+      textColor={text('textColor', '') as ThemeColors}
     >
       {text('children', 'Click me!')}
     </RoundButton>

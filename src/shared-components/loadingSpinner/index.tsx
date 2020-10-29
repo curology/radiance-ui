@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeType } from 'src/constants/themes/types';
+import { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 import { LoadingSpinnerContainer, Overlay, Dot } from './style';
@@ -9,11 +9,11 @@ type LoadingSpinnerProps = {
   /**
    * Background color of loading container
    */
-  bgColor?: valueof<ThemeType['COLORS']>;
+  bgColor?: ThemeColors;
   /**
    * Color of the loading dots
    */
-  color?: valueof<ThemeType['COLORS']>;
+  color?: ThemeColors;
   /**
    * Length of time for animation loop
    */

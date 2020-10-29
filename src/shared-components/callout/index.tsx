@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
-import { COLORS_PROP_TYPES, ThemeType } from 'src/constants/themes/types';
+import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants/themes/types';
 
-import {
-  CalloutContainer, Text, Icon, ParentContainer, 
-} from './style';
+import { CalloutContainer, Text, Icon, ParentContainer } from './style';
 
 type CalloutProps = {
   /**
@@ -15,7 +13,7 @@ type CalloutProps = {
   /**
    * Color of the text and icon
    */
-  color?: valueof<ThemeType['COLORS']>;
+  color?: ThemeColors;
   /**
    * Icon displayed inside the callout right aligned
    */

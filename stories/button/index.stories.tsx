@@ -13,6 +13,7 @@ import { Button } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
 
 const noop = () => undefined;
 
@@ -166,11 +167,11 @@ export const WithControls = () => (
         ['primary', 'secondary', 'tertiary', 'quaternary'],
         'primary',
       )}
-      buttonColor={select('buttonColor', COLORS, COLORS.primary)}
+      buttonColor={select('buttonColor', COLORS, COLORS.primary) as ThemeColors}
       isLoading={boolean('isLoading', false)}
       disabled={boolean('disabled', false)}
       onClick={action('button clicked')}
-      textColor={text('textColor', '')}
+      textColor={text('textColor', '') as ThemeColors}
     >
       {text('children', 'Click me!')}
     </Button>

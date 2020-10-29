@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  text, select, number, color, 
-} from '@storybook/addon-knobs';
+import { text, select, number, color } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
@@ -15,6 +13,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
 
 const BarContainer = styled.div`
   position: relative;
@@ -59,8 +58,10 @@ export const WithCustomStyles = () => {
 export const WithControls = () => (
   <BarContainer>
     <ProgressBar
-      backgroundColor={color('backgroundColor', COLORS.background)}
-      barColor={color('barColor', COLORS.primary)}
+      backgroundColor={
+        color('backgroundColor', COLORS.background) as ThemeColors
+      }
+      barColor={color('barColor', COLORS.primary) as ThemeColors}
       loadingTime={text('loadingTime', '20s')}
       height={number('height', 4)}
       status={select(
