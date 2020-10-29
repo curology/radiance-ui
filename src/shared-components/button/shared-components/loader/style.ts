@@ -51,9 +51,7 @@ const ButtonLoader = styled.div<{
   opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
 
   & span {
-    ${({
- disabled, buttonType, buttonColor, theme, 
-}) => {
+    ${({ disabled, buttonType, buttonColor, theme }) => {
       if (disabled) {
         return '';
       }
