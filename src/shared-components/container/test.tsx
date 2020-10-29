@@ -6,9 +6,6 @@ import { Container } from './index';
 
 describe('Container UI snapshots', () => {
   const DecoratedContainer = decorateWithThemeProvider(Container);
-  const DecoratedSection = decorateWithThemeProvider(Container.Section);
-  const DecoratedDivider = decorateWithThemeProvider(Container.Divider);
-  const DecoratedImage = decorateWithThemeProvider(Container.Image);
 
   test('renders basic container', () => {
     const component = renderer.create(
@@ -22,13 +19,13 @@ describe('Container UI snapshots', () => {
   test('renders container helper components', () => {
     const component = renderer.create(
       <DecoratedContainer>
-        <DecoratedSection>Section 1</DecoratedSection>
-        <DecoratedDivider />
+        <Container.Section>Section 1</Container.Section>
+        <Container.Divider />
 
-        <DecoratedImage src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg" />
-        <DecoratedSection>
+        <Container.Image src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg" />
+        <Container.Section>
           <div>Section 2</div>
-        </DecoratedSection>
+        </Container.Section>
       </DecoratedContainer>,
     );
 
