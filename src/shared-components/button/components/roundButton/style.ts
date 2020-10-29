@@ -40,12 +40,12 @@ export const RoundButtonBase = styled(ButtonBase)`
   ${({ isLoading, disabled }) =>
     !isLoading &&
     !disabled &&
-    css`
+    `
       &:hover {
         transition: all ${ANIMATION.defaultTiming} ease-in-out;
         opacity: 1;
       }
-    `};
+    `}
 
   & > svg {
     opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
@@ -63,7 +63,7 @@ export const roundButtonLoader = (disabled: boolean) => css`
     & span {
       background-color: ${COLORS.white};
     }
-  `};
+  `}
 `;
 
 /**
@@ -114,8 +114,10 @@ const buttonTextColor = (
     return textColor;
   }
 
-  return textColorsAssociatedWithColors(theme)[buttonColor]
-    ? textColorsAssociatedWithColors(theme)[buttonColor].tint1
+  const tintedTextColor = textColorsAssociatedWithColors(theme)[buttonColor];
+
+  return tintedTextColor
+    ? tintedTextColor.tint1
     : determineAlternateTextColor(buttonColor);
 };
 

@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 import { ThemeType } from 'src/constants/themes/types';
+import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, BOX_SHADOWS } from '../../constants';
@@ -175,7 +176,7 @@ export const baseButtonStyles = ({
   textColor,
   isFullWidth,
   theme,
-}: BaseButtonStylesTypes) => `
+}: BaseButtonStylesTypes) => css`
   ${TYPOGRAPHY_STYLE.button};
   appearance: none;
   border-radius: ${SPACER.xsmall};
@@ -204,27 +205,22 @@ export const baseButtonStyles = ({
   ${parseTheme(disabled, buttonType, !!isLoading, buttonColor, theme)};
   ${isLoading && loadingStyles};
 
-  ${
-    !!textColor &&
-    !disabled &&
-    `
+  ${!!textColor &&
+  !disabled &&
+  `
     color: ${textColor};
     fill: ${textColor};
-  `
-  };
+  `}
 
-  ${
-    isFullWidth
-      ? `
+  ${isFullWidth
+    ? `
       width: 100%;
     `
-      : `
+    : `
     min-width: 208px;
     max-width: 325px;
     width: max-content;
-
-    `
-  };
+    `}
 `;
 
 export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>(
@@ -269,7 +265,7 @@ export const ButtonContents = styled.div<{
     return `
       transform: translateX(0);
     `;
-  }};
+  }}
 
   & > svg {
     opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};

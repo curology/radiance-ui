@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 992558,
-    "minified": 924714,
-    "gzipped": 99226
+    "bundled": 997229,
+    "minified": 929360,
+    "gzipped": 99156
   },
   "bundle.umd.js": {
-    "bundled": 1001796,
-    "minified": 899890,
-    "gzipped": 94758
+    "bundled": 1006469,
+    "minified": 904564,
+    "gzipped": 94808
   },
   "shared-components/avatar/index.js": {
     "bundled": 550,
@@ -458,16 +458,16 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 36402,
-    "minified": 34544,
-    "gzipped": 6881,
+    "bundled": 46012,
+    "minified": 44121,
+    "gzipped": 6978,
     "treeshaked": {
       "rollup": {
-        "code": 4652,
-        "import_statements": 308
+        "code": 4466,
+        "import_statements": 344
       },
       "webpack": {
-        "code": 6094
+        "code": 5941
       }
     }
   },
@@ -1172,16 +1172,16 @@
     }
   },
   "shared-components/button/components/roundButton/style.js": {
-    "bundled": 33824,
-    "minified": 32137,
-    "gzipped": 5230,
+    "bundled": 28922,
+    "minified": 27237,
+    "gzipped": 5190,
     "treeshaked": {
       "rollup": {
-        "code": 644,
-        "import_statements": 236
+        "code": 630,
+        "import_statements": 222
       },
       "webpack": {
-        "code": 1845
+        "code": 1843
       }
     }
   },
