@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from 'emotion-theming';
 
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
@@ -24,39 +25,44 @@ export const MobileDropdown = ({
   options,
   textAlign,
   value,
-}: MobileDropdownProps) => (
-  <DropdownContainer textAlign={textAlign}>
-    <select
-      css={dropdownInputStyle({
-        borderRadius,
-        shouldBeFullyRounded: true,
-        textAlign,
-      })}
-      value={value || ''}
-      onChange={onMobileSelectChange}
-    >
-      {options.map((option, index) => {
-        let isDisabled = option.disabled;
+}: MobileDropdownProps) => {
+  const theme = useTheme();
 
-        // Covers the case where default value is disabled
-        // In mobile you cannot have a selected value as disabled option
-        if (option.value === value) {
-          isDisabled = false;
-        }
+  return (
+    <DropdownContainer textAlign={textAlign}>
+      <select
+        css={dropdownInputStyle({
+          borderRadius,
+          shouldBeFullyRounded: true,
+          textAlign,
+          theme,
+        })}
+        value={value || ''}
+        onChange={onMobileSelectChange}
+      >
+        {options.map((option, index) => {
+          let isDisabled = option.disabled;
 
-        return (
-          <option
-            key={option.value || `undefined-${index}`}
-            value={option.value}
-            disabled={isDisabled}
-          >
-            {option.label}
-          </option>
-        );
-      })}
-    </select>
-    <IconContainer>
-      <ChevronIcon width={10} height={10} />
-    </IconContainer>
-  </DropdownContainer>
-);
+          // Covers the case where default value is disabled
+          // In mobile you cannot have a selected value as disabled option
+          if (option.value === value) {
+            isDisabled = false;
+          }
+
+          return (
+            <option
+              key={option.value || `undefined-${index}`}
+              value={option.value}
+              disabled={isDisabled}
+            >
+              {option.label}
+            </option>
+          );
+        })}
+      </select>
+      <IconContainer>
+        <ChevronIcon width={10} height={10} />
+      </IconContainer>
+    </DropdownContainer>
+  );
+};

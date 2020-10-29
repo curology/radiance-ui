@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 import { StatusType } from '.';
 
@@ -13,31 +13,31 @@ export const ChipText = styled.span`
   top: 1px;
 `;
 
-const defaultStyle = css`
-  background-color: ${COLORS.defaultBackground};
+const defaultStyle = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.defaultBackground};
   ${ChipText} {
-    color: ${COLORS.primary};
+    color: ${theme.COLORS.primary};
   }
 `;
 
-const successStyle = css`
-  background-color: ${COLORS.success};
+const successStyle = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.success};
   ${ChipText} {
-    color: ${COLORS.white};
+    color: ${theme.COLORS.white};
   }
 `;
 
-const errorStyle = css`
-  background-color: ${COLORS.error};
+const errorStyle = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.error};
   ${ChipText} {
-    color: ${COLORS.white};
+    color: ${theme.COLORS.white};
   }
 `;
 
-const secondaryStyle = css`
-  background-color: ${COLORS.white};
+const secondaryStyle = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.white};
   ${ChipText} {
-    color: ${COLORS.primary};
+    color: ${theme.COLORS.primary};
   }
 `;
 
@@ -51,19 +51,19 @@ export const ChipStyles = styled.div<{ status: StatusType }>`
   align-items: center;
   padding: 0 ${SPACER.small};
 
-  ${({ status }) => {
+  ${({ status, theme }) => {
     switch (status) {
       case 'default':
-        return defaultStyle;
+        return defaultStyle(theme);
       case 'success':
-        return successStyle;
+        return successStyle(theme);
       case 'error':
-        return errorStyle;
+        return errorStyle(theme);
       case 'secondary':
-        return secondaryStyle;
+        return secondaryStyle(theme);
       // support for old pending and closed status will have default styles
       default:
-        return defaultStyle;
+        return defaultStyle(theme);
     }
   }};
 `;

@@ -1,11 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { Container } from './index';
 
 describe('Container UI snapshots', () => {
+  const DecoratedContainer = decorateWithThemeProvider(Container);
+
   test('renders basic container', () => {
-    const component = renderer.create(<Container>Container Content</Container>);
+    const component = renderer.create(
+      <DecoratedContainer>Container Content</DecoratedContainer>,
+    );
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -13,7 +18,7 @@ describe('Container UI snapshots', () => {
 
   test('renders container helper components', () => {
     const component = renderer.create(
-      <Container>
+      <DecoratedContainer>
         <Container.Section>Section 1</Container.Section>
         <Container.Divider />
 
@@ -21,7 +26,7 @@ describe('Container UI snapshots', () => {
         <Container.Section>
           <div>Section 2</div>
         </Container.Section>
-      </Container>,
+      </DecoratedContainer>,
     );
 
     const tree = component.toJSON();
@@ -30,7 +35,9 @@ describe('Container UI snapshots', () => {
 
   test('renders clickable container', () => {
     const component = renderer.create(
-      <Container type="clickable">Container Content</Container>,
+      <DecoratedContainer type="clickable">
+        Container Content
+      </DecoratedContainer>,
     );
 
     const tree = component.toJSON();
@@ -39,7 +46,7 @@ describe('Container UI snapshots', () => {
 
   test('renders message type container', () => {
     const component = renderer.create(
-      <Container type="message">Container Content</Container>,
+      <DecoratedContainer type="message">Container Content</DecoratedContainer>,
     );
 
     const tree = component.toJSON();

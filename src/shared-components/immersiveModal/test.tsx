@@ -1,5 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { ModalTitle } from './style';
 
@@ -9,11 +10,16 @@ const modalTitle = 'Immersive Modal Title';
 const modalBody = 'Immersive Modal Children Content';
 
 describe('<ImmersiveModal />', () => {
+  const DecoratedImmersiveModal = decorateWithThemeProvider(ImmersiveModal);
+
   it('render children content correctly', () => {
     const wrapper = mount(
-      <ImmersiveModal onClose={(): void => undefined} title={modalTitle}>
+      <DecoratedImmersiveModal
+        onClose={(): void => undefined}
+        title={modalTitle}
+      >
         <div>{modalBody}</div>
-      </ImmersiveModal>,
+      </DecoratedImmersiveModal>,
     );
 
     expect(wrapper.find(ModalTitle).text()).toBe(modalTitle);

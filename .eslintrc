@@ -54,6 +54,12 @@
       }
     ],
     "no-use-before-define": "off",
+    "object-curly-newline": [
+      "warn",
+      {
+        "ObjectPattern": { "multiline": false }
+      }
+    ],
     "react/jsx-filename-extension": [
       "warn",
       {

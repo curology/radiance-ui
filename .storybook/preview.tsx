@@ -1,8 +1,8 @@
 import React from 'react';
-import { addDecorator, addParameters } from '@storybook/react';
+import { addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import addons, { StoryContext, StoryGetter } from '@storybook/addons';
-import { Global, css } from '@emotion/core';
+import { Global } from '@emotion/core';
 import { ThemeProvider } from 'emotion-theming';
 import Theme from './theme';
 import {
@@ -12,16 +12,6 @@ import {
 import { primaryTheme, secondaryTheme } from '../src/constants/themes';
 import { ThemeType } from '../src/constants/themes/types';
 import { BREAKPOINTS } from '../src/constants';
-
-const InjectGlobalStyles = (storyFn) => (
-  <React.Fragment>
-    <Global styles={resetStyles} />
-    <Global styles={brandStyles} />
-    {storyFn()}
-  </React.Fragment>
-);
-
-addDecorator(InjectGlobalStyles);
 
 const ADDONS_REQUIRED_IN_OPTIONS = {
   isFullscreen: false,
@@ -86,14 +76,18 @@ export const globalTypes = {
 const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
   const getTheme = (): ThemeType => {
     const {
-      globals: { theme },
+      globals: { theme: contextTheme },
     } = context;
 
-    return theme === primaryTheme.__type ? primaryTheme : secondaryTheme;
+    return contextTheme === primaryTheme.__type ? primaryTheme : secondaryTheme;
   };
 
+  const theme = getTheme();
+
   return (
-    <ThemeProvider theme={getTheme()}>
+    <ThemeProvider theme={theme}>
+      <Global styles={resetStyles} />
+      <Global styles={brandStyles(theme)} />
       <Story {...context} />
     </ThemeProvider>
   );

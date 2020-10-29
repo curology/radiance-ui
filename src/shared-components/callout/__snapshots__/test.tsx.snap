@@ -32,7 +32,6 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
 >
   <div
     className="emotion-0 emotion-1"
-    color="#332e54"
   >
     Simple callout text. 
     <strong>
@@ -86,7 +85,6 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
 >
   <div
     className="emotion-0 emotion-1"
-    color="#706D87"
   >
     Callout text with 
     <strong>
@@ -96,7 +94,6 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
   </div>
   <div
     className="emotion-2 emotion-3"
-    color="#706D87"
   >
     <svg
       height={40}
