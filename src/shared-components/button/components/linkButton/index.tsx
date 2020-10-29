@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { COLORS_PROP_TYPES, ThemeType } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
-import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import Container from '../../shared-components/container';
 import { ButtonType } from '../..';
 import { ButtonContents, ButtonText } from '../../style';
@@ -12,10 +13,7 @@ type LinkProps = {
    * Specifies the tag or element to be rendered
    */
   as?: 'a' | React.ElementType;
-  /**
-   * TODO-TS: Limit type from string to COLORS constants options
-   */
-  buttonColor?: string;
+  buttonColor?: valueof<ThemeType['COLORS']>;
   /**
    * Determines the button's main style theme
    */
@@ -42,7 +40,7 @@ type LinkProps = {
  */
 export const LinkButton = ({
   as = 'a',
-  buttonColor = COLORS.primary,
+  buttonColor,
   buttonType = 'primary',
   children,
   disabled = false,
@@ -50,15 +48,18 @@ export const LinkButton = ({
   textColor = '',
   ...rest
 }: LinkProps) => {
+  const theme = useTheme();
   const ContainerTag = as;
+  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
 
   return (
     <ContainerTag
       css={linkButtonStyles({
         disabled,
         buttonType,
-        buttonColor,
+        buttonColor: buttonColorWithTheme,
         textColor,
+        theme,
       })}
       disabled={disabled}
       onClick={!disabled ? onClick : () => false}

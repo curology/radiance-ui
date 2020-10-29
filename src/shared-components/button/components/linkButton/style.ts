@@ -1,26 +1,29 @@
 import { css } from '@emotion/core';
+import { ThemeType } from 'src/constants/themes/types';
 
 import { ButtonType } from '../..';
 import { baseButtonStyles } from '../../style';
-import { COLORS } from '../../../../constants';
 
 export const linkButtonStyles = ({
   disabled,
   buttonType,
   buttonColor,
   textColor,
+  theme,
 }: {
   disabled: boolean;
   buttonType: ButtonType;
-  buttonColor: string;
+  buttonColor: valueof<ThemeType['COLORS']>;
   textColor: string;
+  theme: ThemeType;
 }) => css`
   ${baseButtonStyles({
     disabled,
     buttonType,
     buttonColor,
     textColor,
+    theme,
   })} span {
-    ${disabled && `color: ${COLORS.textDisabled};`};
+    ${disabled && `color: ${theme.COLORS.textDisabled};`};
   }
 `;
