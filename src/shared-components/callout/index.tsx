@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
+import { COLORS_PROP_TYPES, ThemeType } from 'src/constants/themes/types';
 
 import {
   CalloutContainer, Text, Icon, ParentContainer, 
 } from './style';
-import { COLORS } from '../../constants';
 
 type CalloutProps = {
   /**
@@ -14,7 +15,7 @@ type CalloutProps = {
   /**
    * Color of the text and icon
    */
-  color?: string;
+  color?: valueof<ThemeType['COLORS']>;
   /**
    * Icon displayed inside the callout right aligned
    */
@@ -28,21 +29,22 @@ type CalloutProps = {
  *
  * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
  */
-export const Callout = ({
-  children,
-  color = COLORS.primary,
-  icon = null,
-}: CalloutProps) => (
-  <CalloutContainer>
-    <Text color={color}>{children}</Text>
-    {icon && <Icon color={color}>{icon}</Icon>}
-  </CalloutContainer>
-);
+export const Callout = ({ children, color, icon = null }: CalloutProps) => {
+  const theme = useTheme();
+  const colorWithTheme = color || theme.COLORS.primary;
+
+  return (
+    <CalloutContainer>
+      <Text textColor={colorWithTheme}>{children}</Text>
+      {icon && <Icon iconColor={colorWithTheme}>{icon}</Icon>}
+    </CalloutContainer>
+  );
+};
 
 Callout.Container = ParentContainer;
 
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
-  color: PropTypes.string,
+  color: COLORS_PROP_TYPES,
   icon: PropTypes.node,
 };
