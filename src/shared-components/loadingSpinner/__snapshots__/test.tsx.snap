@@ -101,15 +101,12 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
   >
     <span
       className="emotion-0 emotion-1"
-      size="20px"
     />
     <span
       className="emotion-0 emotion-1"
-      size="20px"
     />
     <span
       className="emotion-0 emotion-1"
-      size="20px"
     />
   </div>
 </div>
@@ -216,15 +213,12 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
   >
     <span
       className="emotion-0 emotion-1"
-      size="14px"
     />
     <span
       className="emotion-0 emotion-1"
-      size="14px"
     />
     <span
       className="emotion-0 emotion-1"
-      size="14px"
     />
   </div>
 </div>

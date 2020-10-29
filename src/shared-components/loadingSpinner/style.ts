@@ -34,11 +34,11 @@ export const Dot = styled.span<{
   dotColor: valueof<ThemeType['COLORS']>;
   translateX: string;
   duration: number;
-  size: string;
+  dotSize: string;
 }>`
   display: block;
-  height: ${(props) => props.size};
-  width: ${(props) => props.size};
+  height: ${(props) => props.dotSize};
+  width: ${(props) => props.dotSize};
 
   background-color: ${(props) => props.dotColor};
   border-radius: 50%;

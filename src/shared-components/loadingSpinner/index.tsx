@@ -31,13 +31,11 @@ type LoadingSpinnerProps = {
 /**
  * LoadingSpinner will cover the entirety of the container that holds it. The container should have `position: relative;` as part of its styling to prevent the LoadingSpinner from spilling outside the container.
  */
-export const LoadingSpinner = ({
-  bgColor,
+export const LoadingSpinner = ({bgColor,
   color,
   duration = 2,
   size = '14px',
-  translateX = '100px',
-}: LoadingSpinnerProps) => {
+  translateX = '100px'}: LoadingSpinnerProps) => {
   const theme = useTheme();
 
   const bgColorWithTheme = bgColor || theme.COLORS.background;
@@ -50,19 +48,19 @@ export const LoadingSpinner = ({
           dotColor={colorWithTheme}
           translateX={translateX}
           duration={duration}
-          size={size}
+          dotSize={size}
         />
         <Dot
           dotColor={colorWithTheme}
           translateX={translateX}
           duration={duration}
-          size={size}
+          dotSize={size}
         />
         <Dot
           dotColor={colorWithTheme}
           translateX={translateX}
           duration={duration}
-          size={size}
+          dotSize={size}
         />
       </Overlay>
     </LoadingSpinnerContainer>
