@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';
@@ -14,33 +15,51 @@ const options = [
 ];
 
 describe('<Dropdown />', () => {
+  const DecoratedDropdown = decorateWithThemeProvider(Dropdown);
+
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
       const wrapper = mount(
-        <Dropdown value="test1" options={options} onChange={() => null} />,
+        <DecoratedDropdown
+          value="test1"
+          options={options}
+          onChange={() => null}
+        />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(wrapper.children().first().name()).toEqual('MobileDropdown');
+
+      expect(wrapper.children().children().children().first().name()).toEqual(
+        'MobileDropdown',
+      );
     });
   });
 
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
       const wrapper = mount(
-        <Dropdown value="test1" options={options} onChange={() => null} />,
+        <DecoratedDropdown
+          value="test1"
+          options={options}
+          onChange={() => null}
+        />,
       );
-      expect(wrapper.children().first().name()).toEqual('DesktopDropdown');
+
+      expect(wrapper.children().children().children().first().name()).toEqual(
+        'DesktopDropdown',
+      );
     });
   });
 });
 
 describe('<MobileDropdown />', () => {
+  const DecoratedMobileDropdown = decorateWithThemeProvider(MobileDropdown);
+
   describe('UI snapshots', () => {
     it('renders correctly', () => {
       const tree = renderer
         .create(
-          <MobileDropdown
+          <DecoratedMobileDropdown
             onMobileSelectChange={() => undefined}
             borderRadius="4px"
             options={options}
@@ -57,7 +76,7 @@ describe('<MobileDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <MobileDropdown
+        <DecoratedMobileDropdown
           borderRadius="4px"
           options={options}
           onMobileSelectChange={spy}
@@ -73,9 +92,11 @@ describe('<MobileDropdown />', () => {
 });
 
 describe('<DesktopDropdown />', () => {
+  const DecoratedDesktopDropdown = decorateWithThemeProvider(DesktopDropdown);
+
   it('renders the current option text', () => {
-    const wrapper = shallow(
-      <DesktopDropdown
+    const wrapper = mount(
+      <DecoratedDesktopDropdown
         borderRadius="4px"
         closeDropdown={() => undefined}
         currentOption={{ value: 'test1', label: 'Test1' }}
@@ -88,7 +109,7 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(wrapper.find('[role="button"]').text().includes('Test1')).toEqual(
+    expect(wrapper.find('div[role="button"]').text().includes('Test1')).toEqual(
       true,
     );
   });
@@ -96,8 +117,8 @@ describe('<DesktopDropdown />', () => {
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = shallow(
-        <DesktopDropdown
+      const wrapper = mount(
+        <DecoratedDesktopDropdown
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
@@ -110,7 +131,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('[role="button"]').simulate('click');
+      wrapper.find('div[role="button"]').simulate('click');
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -119,7 +140,7 @@ describe('<DesktopDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DesktopDropdown
+        <DecoratedDesktopDropdown
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}

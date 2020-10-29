@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import useResetFocus from 'src/utils/accessibility/useResetFocus';
+import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
@@ -42,6 +43,7 @@ export const DesktopDropdown = ({
   toggleDropdown,
   value,
 }: DesktopDropdownProps) => {
+  const theme = useTheme();
   const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
@@ -80,6 +82,7 @@ export const DesktopDropdown = ({
               borderRadius,
               shouldBeFullyRounded: !isOpen,
               textAlign,
+              theme,
             })}
           >
             {currentOption && currentOption.label}
