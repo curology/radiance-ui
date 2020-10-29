@@ -3,11 +3,7 @@ import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import {
-  BOX_SHADOWS,
-  COLORS,
-  SPACER,
-  ANIMATION,
-  MEDIA_QUERIES,
+ BOX_SHADOWS, SPACER, ANIMATION, MEDIA_QUERIES, 
 } from '../../constants';
 
 export const TabsContainer = styled.div`
@@ -37,10 +33,11 @@ export const TabItem = styled.button<{ active: boolean }>`
   transition: ${ANIMATION.defaultTiming};
   border-radius: ${SPACER.xsmall};
 
-  color: ${({ active }) => (active ? COLORS.primary : COLORS.primaryTint3)};
+  color: ${({ active, theme }) =>
+    active ? theme.COLORS.primary : theme.COLORS.primaryTint3};
 
   &:hover {
-    color: ${COLORS.primary};
+    color: ${({ theme }) => theme.COLORS.primary};
     transition: ${ANIMATION.defaultTiming};
   }
 
