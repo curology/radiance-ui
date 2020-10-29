@@ -38,14 +38,16 @@ type LinkProps = {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const LinkButton = ({as = 'a',
+export const LinkButton = ({
+  as = 'a',
   buttonColor,
   buttonType = 'primary',
   children,
   disabled = false,
   onClick = () => undefined,
   textColor = '',
-  ...rest}: LinkProps) => {
+  ...rest
+}: LinkProps) => {
   const theme = useTheme();
   const ContainerTag = as;
   const buttonColorWithTheme = buttonColor || theme.COLORS.primary;

@@ -57,7 +57,7 @@
     "object-curly-newline": [
       "warn",
       {
-        "ObjectPattern": { "multiline": false }
+        "ObjectPattern": { "multiline": true, "minProperties": 10 }
       }
     ],
     "react/jsx-filename-extension": [
