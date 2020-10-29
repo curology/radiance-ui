@@ -8,7 +8,7 @@ import CameraIcon from '../../svgs/icons/camera-icon.svg';
 
 import { Button } from './index';
 
-describe('<DecoratedButton />', () => {
+describe('<Button />', () => {
   const DecoratedButton = decorateWithThemeProvider(Button);
 
   describe('UI snapshots', () => {
