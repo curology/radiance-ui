@@ -1,10 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
+import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
 
 import { VerificationMessages } from './index';
 
 describe('<VerificationMessages />', () => {
+  const DecoratedVerificationMessages = decorateWithThemeProvider(
+    VerificationMessages,
+  );
+
   describe('UI snapshot', () => {
     it('renders with default props and some messages', () => {
       const messages = {
@@ -30,7 +35,7 @@ describe('<VerificationMessages />', () => {
       };
 
       const component = renderer.create(
-        <VerificationMessages messages={messages} />,
+        <DecoratedVerificationMessages messages={messages} />,
       );
 
       const tree = component.toJSON();
@@ -47,7 +52,11 @@ describe('<VerificationMessages />', () => {
       };
 
       const component = renderer.create(
-        <VerificationMessages messages={messages} centered type="success" />,
+        <DecoratedVerificationMessages
+          messages={messages}
+          centered
+          type="success"
+        />,
       );
 
       const tree = component.toJSON();
@@ -60,7 +69,9 @@ describe('<VerificationMessages />', () => {
       const messages = {
         required: [],
       };
-      const wrapper = shallow(<VerificationMessages messages={messages} />);
+      const wrapper = shallow(
+        <DecoratedVerificationMessages messages={messages} />,
+      );
       expect(wrapper.html().indexOf('li') === -1).toBe(true);
     });
   });

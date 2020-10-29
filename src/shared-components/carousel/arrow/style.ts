@@ -13,10 +13,10 @@ export const ArrowContainer = styled.div<{
   transform: translate(0%, -50%);
   display: block;
 
-  ${({ prev }) => prev && `left: ${SPACER.small};`};
-  ${({ next }) => next && `right: ${SPACER.small};`};
+  ${({ prev }) => (prev ? `left: ${SPACER.small};` : '')};
+  ${({ next }) => (next ? `right: ${SPACER.small};` : '')};
 
-  ${({ disabled }) => disabled && `display: none;`};
+  ${({ disabled }) => (disabled ? `display: none;` : '')};
 `;
 
 export const BottomRightAlignedArrowContainer = styled.div<{
@@ -28,12 +28,12 @@ export const BottomRightAlignedArrowContainer = styled.div<{
   align-self: flex-end;
   margin: ${SPACER.small};
 
-  ${({ prev }) => prev && `order: 2; margin-left: auto;`};
-  ${({ next }) => next && `order: 3;`};
+  ${({ prev }) => (prev ? `order: 2; margin-left: auto;` : '')};
+  ${({ next }) => (next ? `order: 3;` : '')};
 
   ${({ disabled, theme }) =>
-    disabled &&
-    `
+    disabled
+      ? `
       button {
         background-color: none;
         border-color: ${theme.COLORS.primary};
@@ -43,5 +43,6 @@ export const BottomRightAlignedArrowContainer = styled.div<{
           color: ${theme.COLORS.primary};
         }
       }
-    `};
+    `
+      : ''};
 `;

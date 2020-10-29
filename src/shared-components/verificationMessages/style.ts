@@ -22,7 +22,7 @@ export const MessageItem = styled.li<{ type: MessagesTypes }>`
   ${({ theme, type }) =>
     type === 'success'
       ? TYPOGRAPHY_STYLE.success(theme)
-      : TYPOGRAPHY_STYLE.error(theme)};
+      : TYPOGRAPHY_STYLE.error(theme)}
 
   line-height: 24px;
 `;

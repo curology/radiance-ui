@@ -131,6 +131,6 @@ export const Text = styled.div`
 `;
 
 export const SubText = styled.div`
-  ${TYPOGRAPHY_STYLE.caption};
+  ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   line-height: 1.5;
 `;

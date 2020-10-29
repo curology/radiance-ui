@@ -1,4 +1,3 @@
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 import { ThemeType } from 'src/constants/themes/types';
@@ -44,12 +43,12 @@ const captionStyle = (theme: ThemeType) => `
 `;
 
 const errorStyle = (theme: ThemeType) => `
-  ${captionStyle(theme)};
+  ${captionStyle(theme)}
   color: ${theme.COLORS.error};
 `;
 
 const successStyle = (theme: ThemeType) => `
-  ${captionStyle(theme)};
+  ${captionStyle(theme)}
   color: ${theme.COLORS.success};
 `;
 
@@ -66,7 +65,7 @@ const buttonStyle = (theme: ThemeType) => `
   text-transform: uppercase;
 `;
 
-const linkStyle = css`
+const linkStyle = () => `
   border-bottom: 1px solid currentColor;
   cursor: pointer;
   text-decoration: none;
@@ -113,7 +112,7 @@ const Label = styled.label`
   ${({ theme }) => labelStyle(theme)}
 `;
 const Link = styled.a`
-  ${({ theme }) => linkStyle(theme)}
+  ${linkStyle()}
 `;
 const Success = styled.p`
   ${({ theme }) => successStyle(theme)}

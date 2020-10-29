@@ -12,18 +12,18 @@ import { BREAKPOINTS } from 'src/constants';
 
 export const Usage = () => (
   <React.Fragment>
-    <div css={TYPOGRAPHY_STYLE.display}>display</div>
-    <div css={TYPOGRAPHY_STYLE.heading}>heading</div>
-    <div css={TYPOGRAPHY_STYLE.title}>title</div>
-    <div css={TYPOGRAPHY_STYLE.body}>body</div>
-    <div css={TYPOGRAPHY_STYLE.caption}>caption</div>
-    <div css={TYPOGRAPHY_STYLE.label}>label</div>
-    <div css={TYPOGRAPHY_STYLE.error}>error</div>
-    <div css={TYPOGRAPHY_STYLE.success}>success</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.display(theme)}>display</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.heading(theme)}>heading</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.title(theme)}>title</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.body(theme)}>body</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.caption(theme)}>caption</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.label(theme)}>label</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.error(theme)}>error</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.success(theme)}>success</div>
     <div>
       <span css={TYPOGRAPHY_STYLE.link}>link</span>
     </div>
-    <div css={TYPOGRAPHY_STYLE.button}>button</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.button(theme)}>button</div>
   </React.Fragment>
 );
 

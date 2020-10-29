@@ -4,13 +4,11 @@ import { ThemeType } from 'src/constants/themes/types';
 import { ButtonType } from '../..';
 import { baseButtonStyles } from '../../style';
 
-export const linkButtonStyles = ({
-  disabled,
+export const linkButtonStyles = ({disabled,
   buttonType,
   buttonColor,
   textColor,
-  theme,
-}: {
+  theme}: {
   disabled: boolean;
   buttonType: ButtonType;
   buttonColor: valueof<ThemeType['COLORS']>;
@@ -23,7 +21,13 @@ export const linkButtonStyles = ({
     buttonColor,
     textColor,
     theme,
-  })} span {
-    ${disabled && `color: ${theme.COLORS.textDisabled};`};
+  })}
+
+  ${disabled
+    ? `
+  span {
+    color: ${theme.COLORS.textDisabled};
   }
+  `
+    : ''}
 `;

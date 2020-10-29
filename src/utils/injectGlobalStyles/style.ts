@@ -214,7 +214,7 @@ export const brandStyles = (theme: ThemeType) => `
   body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    ${baseBodyStyles(theme)};
+    ${baseBodyStyles(theme)}
     background-color: ${theme.COLORS.white};
     font-family: ${FONTS.baseFont};
     font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.normal};
