@@ -10,8 +10,9 @@ import {
 import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { NeckGlyph } from 'src/svgs/glyphs';
-import { BREAKPOINTS, COLORS } from 'src/constants';
+import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 
 export const Default = () => (
   <Callout.Container>
@@ -21,13 +22,17 @@ export const Default = () => (
   </Callout.Container>
 );
 
-export const WithColor = () => (
-  <Callout.Container>
-    <Callout color={COLORS.primaryTint2}>
-      Callout with a <strong>custom color</strong>
-    </Callout>
-  </Callout.Container>
-);
+export const WithColor = () => {
+  const theme = useTheme();
+
+  return (
+    <Callout.Container>
+      <Callout color={theme.COLORS.primaryTint2}>
+        Callout with a <strong>custom color</strong>
+      </Callout>
+    </Callout.Container>
+  );
+};
 
 export const WithIcon = () => (
   <Callout.Container>

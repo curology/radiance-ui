@@ -87,7 +87,7 @@ export const RoundButton = ({
           buttonColor={buttonColorWithTheme}
           buttonType={buttonType}
           disabled={disabled}
-          css={roundButtonLoader(disabled)}
+          css={roundButtonLoader(disabled, theme)}
           isLoading={loadingVal}
           textColor={textColor}
         />

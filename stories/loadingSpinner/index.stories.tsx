@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
-import { BREAKPOINTS, COLORS } from 'src/constants';
+import { BREAKPOINTS } from 'src/constants';
 import {
   ArgsTable,
   Description,
@@ -13,6 +13,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
 const SpinnerContainer = styled.div`
   position: relative;
@@ -41,17 +42,21 @@ export const WithDuration = () => (
   </SpinnerContainer>
 );
 
-export const WithControls = () => (
-  <SpinnerContainer>
-    <LoadingSpinner
-      bgColor={text('bgColor', COLORS.background) as ThemeColors}
-      color={text('color', COLORS.primary) as ThemeColors}
-      translateX={text('translateX', '100px')}
-      duration={number('duration', 2)}
-      size={text('size', '14px')}
-    />
-  </SpinnerContainer>
-);
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <SpinnerContainer>
+      <LoadingSpinner
+        bgColor={text('bgColor', theme.COLORS.background) as ThemeColors}
+        color={text('color', theme.COLORS.primary) as ThemeColors}
+        translateX={text('translateX', '100px')}
+        duration={number('duration', 2)}
+        size={text('size', '14px')}
+      />
+    </SpinnerContainer>
+  );
+};
 
 export default {
   title: 'Components/LoadingSpinner',

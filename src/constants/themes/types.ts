@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-import { primaryTheme, secondaryTheme } from '.';
+import { primaryTheme } from './primaryTheme';
+import { secondaryTheme } from './secondaryTheme';
 
 type BoxShadow =
   | typeof primaryTheme['BOX_SHADOW']

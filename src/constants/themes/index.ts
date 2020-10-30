@@ -1,2 +1,3 @@
-export { default as primaryTheme } from './primaryTheme';
-export { default as secondaryTheme } from './secondaryTheme';
+export { primaryTheme } from './primaryTheme';
+export { secondaryTheme } from './secondaryTheme';
+export { COLORS_PROP_TYPES } from './types';
