@@ -6,7 +6,11 @@
     "project": "./.eslint.tsconfig.json"
   },
   "extends": [
+    "plugin:prettier/recommended",
     "curology",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
@@ -54,12 +58,6 @@
       }
     ],
     "no-use-before-define": "off",
-    "object-curly-newline": [
-      "warn",
-      {
-        "ObjectPattern": { "multiline": true, "minProperties": 10 }
-      }
-    ],
     "react/jsx-filename-extension": [
       "warn",
       {

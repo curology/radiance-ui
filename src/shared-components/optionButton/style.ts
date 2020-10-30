@@ -96,14 +96,24 @@ export const CheckmarkWrapper = styled.div<
   Omit<BaseIconWrapperStylesProps, 'theme'>
 >`
   ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({ buttonType, optionType, selected, theme })}
+    getBaseIconWrapperStyles({
+      buttonType,
+      optionType,
+      selected,
+      theme,
+    })}
 `;
 
 export const IconWrapper = styled.div<
   Omit<BaseIconWrapperStylesProps, 'theme'>
 >`
   ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({ buttonType, optionType, selected, theme })}
+    getBaseIconWrapperStyles({
+      buttonType,
+      optionType,
+      selected,
+      theme,
+    })}
   width: 48px;
   height: 48px;
 
