@@ -51,10 +51,12 @@ export const FlexContainer = styled.div`
   align-items: center;
 `;
 
-const getBaseIconWrapperStyles = ({buttonType,
+const getBaseIconWrapperStyles = ({
+  buttonType,
   optionType,
   selected,
-  theme}: BaseIconWrapperStylesProps) => `
+  theme,
+}: BaseIconWrapperStylesProps) => `
   border: 1px solid;
   border-color: ${theme.COLORS.primary};
   background: ${theme.COLORS.white};

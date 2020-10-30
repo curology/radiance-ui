@@ -4,11 +4,13 @@ import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 import { ButtonType } from '../..';
 import { baseButtonStyles } from '../../style';
 
-export const linkButtonStyles = ({disabled,
+export const linkButtonStyles = ({
+  disabled,
   buttonType,
   buttonColor,
   textColor,
-  theme}: {
+  theme,
+}: {
   disabled: boolean;
   buttonType: ButtonType;
   buttonColor: ThemeColors;

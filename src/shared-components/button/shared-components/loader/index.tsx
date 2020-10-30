@@ -14,13 +14,15 @@ type LoaderProps = {
   textColor: ThemeColors;
 };
 
-const Loader = ({buttonColor,
+const Loader = ({
+  buttonColor,
   buttonType,
   className = '',
   disabled,
   isFullWidth = false,
   isLoading,
-  textColor}: LoaderProps) => (
+  textColor,
+}: LoaderProps) => (
   <ButtonLoader
     buttonColor={buttonColor}
     buttonType={buttonType}

@@ -60,7 +60,8 @@ type ButtonProps = {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const Button = ({buttonColor,
+export const Button = ({
+  buttonColor,
   buttonType = 'primary',
   children,
   disabled = false,
@@ -70,7 +71,8 @@ export const Button = ({buttonColor,
   loading = undefined,
   onClick,
   textColor = '',
-  ...rest}: ButtonProps) => {
+  ...rest
+}: ButtonProps) => {
   const theme = useTheme();
   const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;

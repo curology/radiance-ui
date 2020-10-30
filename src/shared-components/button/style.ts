@@ -161,13 +161,15 @@ type BaseButtonStylesTypes = {
   theme: ThemeType;
 };
 
-export const baseButtonStyles = ({disabled,
+export const baseButtonStyles = ({
+  disabled,
   buttonType,
   buttonColor,
   isLoading,
   textColor,
   isFullWidth,
-  theme}: BaseButtonStylesTypes) => `
+  theme,
+}: BaseButtonStylesTypes) => `
   ${TYPOGRAPHY_STYLE.button(theme)}
   appearance: none;
   border-radius: ${SPACER.xsmall};

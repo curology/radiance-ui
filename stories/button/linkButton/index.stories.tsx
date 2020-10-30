@@ -25,9 +25,11 @@ export const Default = () => (
 );
 
 export const ReactRouterLink = () => {
-  const MockLink = ({to,
+  const MockLink = ({
+    to,
     children,
-    ...rest}: {
+    ...rest
+  }: {
     to: string;
     children: React.ReactNode;
   }) => (

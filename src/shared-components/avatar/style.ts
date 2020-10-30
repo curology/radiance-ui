@@ -6,9 +6,7 @@ const SIZES = {
   large: 80,
 };
 
-const determineSize = ({
-  avatarSize,
-}: {
+const determineSize = ({avatarSize}: {
   avatarSize: 'small' | 'medium' | 'large';
 }) => `
   height: ${SIZES[avatarSize]}px;

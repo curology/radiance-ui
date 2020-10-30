@@ -53,7 +53,8 @@ type RoundButtonProps = {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const RoundButton = ({buttonColor,
+export const RoundButton = ({
+  buttonColor,
   buttonType = 'primary',
   children = '',
   disabled = false,
@@ -62,7 +63,8 @@ export const RoundButton = ({buttonColor,
   loading = undefined,
   onClick = () => undefined,
   textColor = '',
-  ...rest}: RoundButtonProps) => {
+  ...rest
+}: RoundButtonProps) => {
   const theme = useTheme();
   const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
