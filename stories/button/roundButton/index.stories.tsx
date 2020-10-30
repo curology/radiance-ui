@@ -11,7 +11,7 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
-import { COLORS, SPACER } from 'src/constants';
+import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import {
   CheckmarkIcon,
@@ -20,6 +20,7 @@ import {
   CrossIcon,
 } from 'src/svgs/icons';
 import { ThemeColors } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
 const ButtonsContainer = styled.div`
   display: flex;
@@ -87,41 +88,45 @@ export const Loading = () => (
   </ButtonsContainer>
 );
 
-export const WithColor = () => (
-  <ButtonsContainer>
-    <RoundButton buttonColor={COLORS.error} icon={<CheckmarkIcon />}>
-      Primary
-    </RoundButton>
-    <RoundButton
-      buttonColor={COLORS.error}
-      buttonType="secondary"
-      icon={<ArrowRightIcon />}
-    >
-      Secondary
-    </RoundButton>
-    <RoundButton
-      buttonColor={COLORS.error}
-      buttonType="tertiary"
-      icon={<ArrowLeftIcon />}
-    >
-      Tertiary
-    </RoundButton>
-    <RoundButton
-      buttonColor={COLORS.error}
-      buttonType="quaternary"
-      icon={<ArrowRightIcon />}
-    >
-      Quaternary
-    </RoundButton>
-    <RoundButton
-      buttonColor={COLORS.error}
-      buttonType="action"
-      icon={<CrossIcon />}
-    >
-      Action
-    </RoundButton>
-  </ButtonsContainer>
-);
+export const WithColor = () => {
+  const theme = useTheme();
+
+  return (
+    <ButtonsContainer>
+      <RoundButton buttonColor={theme.COLORS.error} icon={<CheckmarkIcon />}>
+        Primary
+      </RoundButton>
+      <RoundButton
+        buttonColor={theme.COLORS.error}
+        buttonType="secondary"
+        icon={<ArrowRightIcon />}
+      >
+        Secondary
+      </RoundButton>
+      <RoundButton
+        buttonColor={theme.COLORS.error}
+        buttonType="tertiary"
+        icon={<ArrowLeftIcon />}
+      >
+        Tertiary
+      </RoundButton>
+      <RoundButton
+        buttonColor={theme.COLORS.error}
+        buttonType="quaternary"
+        icon={<ArrowRightIcon />}
+      >
+        Quaternary
+      </RoundButton>
+      <RoundButton
+        buttonColor={theme.COLORS.error}
+        buttonType="action"
+        icon={<CrossIcon />}
+      >
+        Action
+      </RoundButton>
+    </ButtonsContainer>
+  );
+};
 
 export const RoundButtonContainerWithMultiProp = () => (
   <RoundButton.Container multi>
@@ -130,25 +135,29 @@ export const RoundButtonContainerWithMultiProp = () => (
   </RoundButton.Container>
 );
 
-export const WithControls = () => (
-  <ButtonsContainer>
-    <RoundButton
-      buttonType={select(
-        'buttonType',
-        ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
-        'primary',
-      )}
-      buttonColor={select('buttonColor', COLORS, COLORS.primary) as ThemeColors}
-      isLoading={boolean('isLoading', false)}
-      disabled={boolean('disabled', false)}
-      onClick={action('button clicked')}
-      icon={<CheckmarkIcon />}
-      textColor={text('textColor', '') as ThemeColors}
-    >
-      {text('children', 'Click me!')}
-    </RoundButton>
-  </ButtonsContainer>
-);
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <ButtonsContainer>
+      <RoundButton
+        buttonType={select(
+          'buttonType',
+          ['primary', 'secondary', 'tertiary', 'quaternary', 'action'],
+          'primary',
+        )}
+        buttonColor={select('buttonColor', theme.COLORS, theme.COLORS.primary)}
+        isLoading={boolean('isLoading', false)}
+        disabled={boolean('disabled', false)}
+        onClick={action('button clicked')}
+        icon={<CheckmarkIcon />}
+        textColor={text('textColor', '') as ThemeColors}
+      >
+        {text('children', 'Click me!')}
+      </RoundButton>
+    </ButtonsContainer>
+  );
+};
 
 WithControls.parameters = {
   chromatic: { disable: true },

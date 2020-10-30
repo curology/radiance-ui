@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 852635,
-    "minified": 783404,
-    "gzipped": 92446
+    "bundled": 827439,
+    "minified": 758189,
+    "gzipped": 91394
   },
   "bundle.umd.js": {
-    "bundled": 862161,
-    "minified": 759409,
-    "gzipped": 88484
+    "bundled": 836975,
+    "minified": 734219,
+    "gzipped": 87440
   },
   "shared-components/avatar/index.js": {
     "bundled": 550,
@@ -110,7 +110,7 @@
   "shared-components/button/index.js": {
     "bundled": 3741,
     "minified": 2006,
-    "gzipped": 815,
+    "gzipped": 814,
     "treeshaked": {
       "rollup": {
         "code": 1655,
@@ -458,9 +458,9 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 35974,
-    "minified": 34106,
-    "gzipped": 6775,
+    "bundled": 35978,
+    "minified": 34110,
+    "gzipped": 6768,
     "treeshaked": {
       "rollup": {
         "code": 4650,
@@ -488,7 +488,7 @@
   "shared-components/callout/index.js": {
     "bundled": 1294,
     "minified": 601,
-    "gzipped": 340,
+    "gzipped": 342,
     "treeshaked": {
       "rollup": {
         "code": 510,
@@ -612,16 +612,16 @@
     }
   },
   "shared-components/carousel/style.js": {
-    "bundled": 46209,
-    "minified": 45547,
-    "gzipped": 5097,
+    "bundled": 20523,
+    "minified": 19882,
+    "gzipped": 4875,
     "treeshaked": {
       "rollup": {
-        "code": 2501,
-        "import_statements": 158
+        "code": 3136,
+        "import_statements": 79
       },
       "webpack": {
-        "code": 3678
+        "code": 4187
       }
     }
   },
@@ -822,16 +822,16 @@
     }
   },
   "shared-components/button/components/roundButton/index.js": {
-    "bundled": 3771,
-    "minified": 1978,
+    "bundled": 3778,
+    "minified": 1980,
     "gzipped": 810,
     "treeshaked": {
       "rollup": {
-        "code": 1551,
+        "code": 1553,
         "import_statements": 623
       },
       "webpack": {
-        "code": 2909
+        "code": 2911
       }
     }
   },
@@ -1172,16 +1172,16 @@
     }
   },
   "shared-components/button/components/roundButton/style.js": {
-    "bundled": 28622,
-    "minified": 26937,
-    "gzipped": 5180,
+    "bundled": 28975,
+    "minified": 27269,
+    "gzipped": 5194,
     "treeshaked": {
       "rollup": {
-        "code": 630,
-        "import_statements": 222
+        "code": 594,
+        "import_statements": 186
       },
       "webpack": {
-        "code": 1843
+        "code": 1764
       }
     }
   },
@@ -1354,23 +1354,23 @@
     }
   },
   "constants/themes/types.js": {
-    "bundled": 432,
+    "bundled": 440,
     "minified": 411,
-    "gzipped": 229,
+    "gzipped": 230,
     "treeshaked": {
       "rollup": {
-        "code": 244,
-        "import_statements": 170
+        "code": 278,
+        "import_statements": 204
       },
       "webpack": {
-        "code": 1379
+        "code": 1385
       }
     }
   },
   "constants/themes/secondaryTheme.js": {
-    "bundled": 181,
-    "minified": 161,
-    "gzipped": 133,
+    "bundled": 177,
+    "minified": 154,
+    "gzipped": 128,
     "treeshaked": {
       "rollup": {
         "code": 30,
@@ -1396,9 +1396,9 @@
     }
   },
   "constants/themes/primaryTheme.js": {
-    "bundled": 169,
-    "minified": 149,
-    "gzipped": 129,
+    "bundled": 165,
+    "minified": 142,
+    "gzipped": 124,
     "treeshaked": {
       "rollup": {
         "code": 28,

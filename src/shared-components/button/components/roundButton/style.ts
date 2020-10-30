@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
-import { ANIMATION, COLORS } from '../../../../constants';
+import { ANIMATION } from '../../../../constants';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
 
@@ -54,14 +54,14 @@ export const RoundButtonBase = styled(ButtonBase)`
   }
 `;
 
-export const roundButtonLoader = (disabled: boolean) => css`
+export const roundButtonLoader = (disabled: boolean, theme: ThemeType) => css`
   width: 36px;
   margin: -3px -3px 0 0;
 
   ${disabled &&
   `
     & span {
-      background-color: ${COLORS.white};
+      background-color: ${theme.COLORS.white};
     }
   `}
 `;
@@ -72,7 +72,10 @@ export const roundButtonLoader = (disabled: boolean) => css`
  * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
  * @return string         hex string of the alternate color (e.g. #efefef)
  */
-const determineAlternateTextColor = (buttonColor: ThemeColors) => {
+const determineAlternateTextColor = (
+  buttonColor: ThemeColors,
+  theme: ThemeType,
+) => {
   // create a lighter and darker version of the text
   const lighterVersion = tinycolor(buttonColor)
     .lighten(10)
@@ -88,7 +91,7 @@ const determineAlternateTextColor = (buttonColor: ThemeColors) => {
   const contrastLevel: tinycolor.WCAG2Options = { level: 'AA', size: 'large' };
 
   const lighterIsReadable = tinycolor.isReadable(
-    COLORS.defaultBackground,
+    theme.COLORS.defaultBackground,
     lighterVersion,
     contrastLevel,
   );
@@ -116,7 +119,7 @@ const buttonTextColor = (
 
   return tintedTextColor
     ? tintedTextColor.tint1
-    : determineAlternateTextColor(buttonColor);
+    : determineAlternateTextColor(buttonColor, theme);
 };
 
 export const roundButtonTextStyles = (
