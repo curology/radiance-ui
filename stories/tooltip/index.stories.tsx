@@ -7,9 +7,7 @@ import {
   Title,
   Stories,
 } from '@storybook/addon-docs/blocks';
-import {
-  text, select, number, boolean, 
-} from '@storybook/addon-knobs';
+import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER, COLORS } from 'src/constants';

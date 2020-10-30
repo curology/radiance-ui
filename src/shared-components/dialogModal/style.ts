@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
 
 import Typography from '../typography';
-import {
- MEDIA_QUERIES, SPACER, Z_SCALE, BOX_SHADOWS, 
-} from '../../constants';
+import { MEDIA_QUERIES, SPACER, Z_SCALE, BOX_SHADOWS } from '../../constants';
 
 export const Overlay = styled.div`
   position: fixed;

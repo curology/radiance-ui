@@ -101,9 +101,7 @@ export const DesktopDropdown = ({
           aria-hidden={!isOpen}
         >
           {options.map((option, index) => {
-            const {
-              value: optionValue, disabled, label, ...rest 
-            } = option;
+            const { value: optionValue, disabled, label, ...rest } = option;
 
             const id = optionValue ? `${optionValue}` : `undefined-${index}`;
 

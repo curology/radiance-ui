@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
-import { ThemeType } from 'src/constants/themes/types';
+import { ThemeColors } from 'src/constants/themes/types';
 
 const appPreloader = (translateX: string) => keyframes`
   0% { opacity: 0; transform: translate3d(${translateX}, 0, 0) }
@@ -31,7 +31,7 @@ export const Overlay = styled.div`
 `;
 
 export const Dot = styled.span<{
-  dotColor: valueof<ThemeType['COLORS']>;
+  dotColor: ThemeColors;
   translateX: string;
   duration: number;
   dotSize: string;

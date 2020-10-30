@@ -6,9 +6,13 @@
     "project": "./.eslint.tsconfig.json"
   },
   "extends": [
+    "plugin:prettier/recommended",
     "curology",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
   ],
   "plugins": ["emotion"],
   "globals": {
@@ -54,12 +58,6 @@
       }
     ],
     "no-use-before-define": "off",
-    "object-curly-newline": [
-      "warn",
-      {
-        "ObjectPattern": { "multiline": false }
-      }
-    ],
     "react/jsx-filename-extension": [
       "warn",
       {

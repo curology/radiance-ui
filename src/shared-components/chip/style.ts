@@ -7,7 +7,7 @@ import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 import { StatusType } from '.';
 
 export const ChipText = styled.span`
-  ${TYPOGRAPHY_STYLE.label};
+  ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   position: relative;
   top: 1px;

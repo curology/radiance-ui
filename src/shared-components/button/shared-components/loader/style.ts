@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 import { keyframes } from '@emotion/core';
-import { ThemeType } from 'src/constants/themes/types';
+import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
 import { ButtonTypeWithAction } from '../..';
 
@@ -16,28 +16,28 @@ const primaryLoadingStyles = (theme: ThemeType) => `
   background-color: ${theme.COLORS.white};
 `;
 
-const accentLoadingStyles = (buttonColor: valueof<ThemeType['COLORS']>) => `
+const accentLoadingStyles = (buttonColor: ThemeColors) => `
   background-color: ${buttonColor};
 `;
 
-const quaternaryLoadingStyles = (buttonColor: valueof<ThemeType['COLORS']>) => `
+const quaternaryLoadingStyles = (buttonColor: ThemeColors) => `
   background-color: ${tinycolor(buttonColor)
     .lighten(10)
     .desaturate(50)
     .toHexString()};
 `;
 
-const actionLoadingStyles = (buttonColor: valueof<ThemeType['COLORS']>) => `
+const actionLoadingStyles = (buttonColor: ThemeColors) => `
   background-color: ${buttonColor};
 `;
 
 const ButtonLoader = styled.div<{
-  buttonColor: valueof<ThemeType['COLORS']>;
+  buttonColor: ThemeColors;
   buttonType: ButtonTypeWithAction;
   disabled: boolean;
   isFullWidth: boolean;
   isLoading: boolean;
-  textColor: valueof<ThemeType['COLORS']>;
+  textColor: ThemeColors;
 }>`
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
-import { ThemeType } from 'src/constants/themes/types';
+import { ThemeColors } from 'src/constants/themes/types';
 
 import { PROGRESS_BAR_STATUS } from '../../constants';
 import { OuterContainer, InnerBar } from './style';
@@ -9,8 +9,8 @@ import { OuterContainer, InnerBar } from './style';
 export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 
 type ProgressBarProps = {
-  backgroundColor?: valueof<ThemeType['COLORS']>;
-  barColor?: valueof<ThemeType['COLORS']>;
+  backgroundColor?: ThemeColors;
+  barColor?: ThemeColors;
   /**
    * The bar height
    */

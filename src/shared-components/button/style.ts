@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
-import { ThemeType } from 'src/constants/themes/types';
-import { css } from '@emotion/core';
+import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, BOX_SHADOWS } from '../../constants';
@@ -9,10 +8,7 @@ import { textColorsAssociatedWithColors } from './constants';
 
 import { ButtonTypeWithAction } from '.';
 
-const primaryStyles = (
-  buttonColor: valueof<ThemeType['COLORS']>,
-  theme: ThemeType,
-) => `
+const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   background-color: ${buttonColor};
   border-color: ${buttonColor};
   color: ${theme.COLORS.white};
@@ -30,7 +26,7 @@ const primaryStyles = (
 
 const secondaryStyles = (
   isLoading: boolean,
-  buttonColor: valueof<ThemeType['COLORS']>,
+  buttonColor: ThemeColors,
   theme: ThemeType,
 ) => `
   background-color: transparent;
@@ -48,7 +44,7 @@ const secondaryStyles = (
   }
 `;
 
-const tertiaryStyles = (buttonColor: valueof<ThemeType['COLORS']>) => `
+const tertiaryStyles = (buttonColor: ThemeColors) => `
   border-color: transparent;
   background-color: transparent;
   color: ${buttonColor};
@@ -63,10 +59,7 @@ const tertiaryStyles = (buttonColor: valueof<ThemeType['COLORS']>) => `
   }
 `;
 
-const quaternaryStyles = (
-  buttonColor: valueof<ThemeType['COLORS']>,
-  theme: ThemeType,
-) => `
+const quaternaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   border-color: transparent;
   background-color: transparent;
   color: ${
@@ -96,7 +89,7 @@ const quaternaryStyles = (
 
 const actionStyles = (
   isLoading: boolean,
-  buttonColor: valueof<ThemeType['COLORS']>,
+  buttonColor: ThemeColors,
   theme: ThemeType,
 ) => `
   border-width: 1px;
@@ -137,7 +130,7 @@ function parseTheme(
   disabled: boolean,
   buttonType: ButtonTypeWithAction,
   isLoading: boolean,
-  buttonColor: valueof<ThemeType['COLORS']>,
+  buttonColor: ThemeColors,
   theme: ThemeType,
 ) {
   if (disabled) {
@@ -161,9 +154,9 @@ function parseTheme(
 type BaseButtonStylesTypes = {
   disabled: boolean;
   buttonType: ButtonTypeWithAction;
-  buttonColor: valueof<ThemeType['COLORS']>;
+  buttonColor: ThemeColors;
   isLoading?: boolean;
-  textColor: valueof<ThemeType['COLORS']>;
+  textColor: ThemeColors;
   isFullWidth?: boolean;
   theme: ThemeType;
 };
@@ -176,8 +169,8 @@ export const baseButtonStyles = ({
   textColor,
   isFullWidth,
   theme,
-}: BaseButtonStylesTypes) => css`
-  ${TYPOGRAPHY_STYLE.button};
+}: BaseButtonStylesTypes) => `
+  ${TYPOGRAPHY_STYLE.button(theme)}
   appearance: none;
   border-radius: ${SPACER.xsmall};
   border-style: solid;
@@ -202,30 +195,34 @@ export const baseButtonStyles = ({
     box-shadow: ${BOX_SHADOWS.focus};
   }
 
-  ${parseTheme(disabled, buttonType, !!isLoading, buttonColor, theme)};
-  ${isLoading && loadingStyles};
+  ${parseTheme(disabled, buttonType, !!isLoading, buttonColor, theme)}
+  ${isLoading ? loadingStyles : ''}
 
-  ${!!textColor &&
-  !disabled &&
-  `
+  ${
+    !!textColor && !disabled
+      ? `
     color: ${textColor};
     fill: ${textColor};
-  `}
+  `
+      : ''
+  }
 
-  ${isFullWidth
-    ? `
+  ${
+    isFullWidth
+      ? `
       width: 100%;
     `
-    : `
+      : `
     min-width: 208px;
     max-width: 325px;
     width: max-content;
-    `}
+    `
+  }
 `;
 
-export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>(
-  baseButtonStyles,
-);
+export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>`
+  ${baseButtonStyles}
+`;
 
 // align-items conditional fixes slight button height misalignment for truthy scenario
 // See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081

@@ -51,10 +51,12 @@ export const FlexContainer = styled.div`
   align-items: center;
 `;
 
-const getBaseIconWrapperStyles = ({buttonType,
+const getBaseIconWrapperStyles = ({
+  buttonType,
   optionType,
   selected,
-  theme}: BaseIconWrapperStylesProps) => `
+  theme,
+}: BaseIconWrapperStylesProps) => `
   border: 1px solid;
   border-color: ${theme.COLORS.primary};
   background: ${theme.COLORS.white};
@@ -94,14 +96,24 @@ export const CheckmarkWrapper = styled.div<
   Omit<BaseIconWrapperStylesProps, 'theme'>
 >`
   ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({ buttonType, optionType, selected, theme })}
+    getBaseIconWrapperStyles({
+      buttonType,
+      optionType,
+      selected,
+      theme,
+    })}
 `;
 
 export const IconWrapper = styled.div<
   Omit<BaseIconWrapperStylesProps, 'theme'>
 >`
   ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({ buttonType, optionType, selected, theme })}
+    getBaseIconWrapperStyles({
+      buttonType,
+      optionType,
+      selected,
+      theme,
+    })}
   width: 48px;
   height: 48px;
 
@@ -131,6 +143,6 @@ export const Text = styled.div`
 `;
 
 export const SubText = styled.div`
-  ${TYPOGRAPHY_STYLE.caption};
+  ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   line-height: 1.5;
 `;
