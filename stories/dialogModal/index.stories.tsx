@@ -12,7 +12,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { ANIMATION } from 'src/constants';
-import { modalStoryDecoratorForChromatic } from 'stories/util';
+import { modalStoryDecoratorForChromatic } from 'stories/utils';
 
 const DIALOG_MODAL_STORY_ID_PREFIX = 'components-dialogmodal--';
 

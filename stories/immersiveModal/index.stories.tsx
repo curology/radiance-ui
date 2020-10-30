@@ -12,7 +12,7 @@ import {
 import { Button, ImmersiveModal } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { ANIMATION } from 'src/constants';
-import { modalStoryDecoratorForChromatic } from 'stories/util';
+import { modalStoryDecoratorForChromatic } from 'stories/utils';
 
 import headerImage from './headerImage.jpg';
 

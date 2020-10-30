@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 852059,
-    "minified": 782826,
-    "gzipped": 92305
+    "bundled": 852031,
+    "minified": 782798,
+    "gzipped": 92329
   },
   "bundle.umd.js": {
-    "bundled": 861585,
-    "minified": 758831,
-    "gzipped": 88338
+    "bundled": 861557,
+    "minified": 758803,
+    "gzipped": 88375
   },
   "shared-components/avatar/index.js": {
     "bundled": 550,
@@ -402,9 +402,9 @@
     }
   },
   "shared-components/avatar/style.js": {
-    "bundled": 1577,
-    "minified": 1412,
-    "gzipped": 964,
+    "bundled": 1585,
+    "minified": 1420,
+    "gzipped": 953,
     "treeshaked": {
       "rollup": {
         "code": 334,
@@ -458,9 +458,9 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 35974,
-    "minified": 34106,
-    "gzipped": 6826,
+    "bundled": 35978,
+    "minified": 34110,
+    "gzipped": 6768,
     "treeshaked": {
       "rollup": {
         "code": 4650,
@@ -514,9 +514,9 @@
     }
   },
   "shared-components/dialogModal/style.js": {
-    "bundled": 15836,
-    "minified": 15611,
-    "gzipped": 3599,
+    "bundled": 15808,
+    "minified": 15583,
+    "gzipped": 3592,
     "treeshaked": {
       "rollup": {
         "code": 1798,
@@ -710,9 +710,9 @@
     }
   },
   "shared-components/optionButton/style.js": {
-    "bundled": 37881,
-    "minified": 36700,
-    "gzipped": 4743,
+    "bundled": 37909,
+    "minified": 36728,
+    "gzipped": 4798,
     "treeshaked": {
       "rollup": {
         "code": 2620,
@@ -1242,9 +1242,9 @@
     }
   },
   "shared-components/button/components/linkButton/style.js": {
-    "bundled": 1749,
-    "minified": 1500,
-    "gzipped": 871,
+    "bundled": 1753,
+    "minified": 1504,
+    "gzipped": 874,
     "treeshaked": {
       "rollup": {
         "code": 41,
@@ -1298,9 +1298,9 @@
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 9428,
-    "minified": 7811,
-    "gzipped": 3438,
+    "bundled": 9432,
+    "minified": 7815,
+    "gzipped": 3433,
     "treeshaked": {
       "rollup": {
         "code": 250,
@@ -1312,9 +1312,9 @@
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 36286,
-    "minified": 35230,
-    "gzipped": 4828,
+    "bundled": 36238,
+    "minified": 35182,
+    "gzipped": 4829,
     "treeshaked": {
       "rollup": {
         "code": 2701,
