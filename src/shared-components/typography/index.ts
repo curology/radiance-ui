@@ -1,71 +1,71 @@
-import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import round from 'lodash.round';
+import { ThemeType } from 'src/constants/themes/types';
 
 import { withDeprecationWarning } from '../../utils';
-import { COLORS, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { TYPOGRAPHY_CONSTANTS } from '../../constants';
 
-const displayStyle = css`
-  color: ${COLORS.primary};
+const displayStyle = (theme: ThemeType) => `
+  color: ${theme.COLORS.primary};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.display};
   font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   line-height: ${round(48 / 36, 2)};
 `;
 
-const headingStyle = css`
-  color: ${COLORS.primary};
+const headingStyle = (theme: ThemeType) => `
+  color: ${theme.COLORS.primary};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.heading};
   font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   line-height: ${round(40 / 24, 2)};
 `;
 
-const titleStyle = css`
-  color: ${COLORS.primary};
+const titleStyle = (theme: ThemeType) => `
+  color: ${theme.COLORS.primary};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.title};
   line-height: ${round(32 / 20, 2)};
   font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
 `;
 
-export const baseBodyStyles = `
-  color: ${COLORS.primaryTint1};
+export const baseBodyStyles = (theme: ThemeType) => `
+  color: ${theme.COLORS.primaryTint1};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.body};
   line-height: ${round(28 / 16, 2)};
 `;
 
-const bodyStyle = css`
-  ${baseBodyStyles};
+const bodyStyle = (theme: ThemeType) => `
+  ${baseBodyStyles(theme)}
 `;
 
-const captionStyle = css`
-  color: ${COLORS.primaryTint2};
+const captionStyle = (theme: ThemeType) => `
+  color: ${theme.COLORS.primaryTint2};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   line-height: ${round(24 / 14, 2)};
 `;
 
-const errorStyle = css`
-  ${captionStyle};
-  color: ${COLORS.error};
+const errorStyle = (theme: ThemeType) => `
+  ${captionStyle(theme)}
+  color: ${theme.COLORS.error};
 `;
 
-const successStyle = css`
-  ${captionStyle};
-  color: ${COLORS.success};
+const successStyle = (theme: ThemeType) => `
+  ${captionStyle(theme)}
+  color: ${theme.COLORS.success};
 `;
 
-const labelStyle = css`
-  color: ${COLORS.primaryTint1};
+const labelStyle = (theme: ThemeType) => `
+  color: ${theme.COLORS.primaryTint1};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.label};
   line-height: ${round(20 / 12, 2)};
 `;
 
-const buttonStyle = css`
-  ${labelStyle};
+const buttonStyle = (theme: ThemeType) => `
+  ${labelStyle(theme)}
   font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
   letter-spacing: 1px;
   text-transform: uppercase;
 `;
 
-const linkStyle = css`
+const linkStyle = () => `
   border-bottom: 1px solid currentColor;
   cursor: pointer;
   text-decoration: none;
@@ -93,15 +93,33 @@ export const style = {
   link: linkStyle,
 } as const;
 
-const Button = styled.span(buttonStyle);
-const Caption = styled.p(captionStyle);
-const Display = styled.h1(displayStyle);
-const ErrorComponent = styled.p(errorStyle);
-const Heading = styled.h2(headingStyle);
-const Label = styled.label(labelStyle);
-const Link = styled.a(linkStyle);
-const Success = styled.p(successStyle);
-const Title = styled.h3(titleStyle);
+const Button = styled.span`
+  ${({ theme }) => buttonStyle(theme)}
+`;
+const Caption = styled.p`
+  ${({ theme }) => captionStyle(theme)}
+`;
+const Display = styled.h1`
+  ${({ theme }) => displayStyle(theme)}
+`;
+const ErrorComponent = styled.p`
+  ${({ theme }) => errorStyle(theme)}
+`;
+const Heading = styled.h2`
+  ${({ theme }) => headingStyle(theme)}
+`;
+const Label = styled.label`
+  ${({ theme }) => labelStyle(theme)}
+`;
+const Link = styled.a`
+  ${linkStyle()}
+`;
+const Success = styled.p`
+  ${({ theme }) => successStyle(theme)}
+`;
+const Title = styled.h3`
+  ${({ theme }) => titleStyle(theme)}
+`;
 
 export const Typography = {
   Button,

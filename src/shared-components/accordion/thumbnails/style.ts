@@ -39,6 +39,6 @@ export const MultiplesContainer = styled.div`
 `;
 
 export const MultiplesText = styled.div`
-  ${TYPOGRAPHY_STYLE.label};
+  ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-size: 10px;
 `;

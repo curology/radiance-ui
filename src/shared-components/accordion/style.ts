@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import {
- ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER, 
-} from 'src/constants';
+import { ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER } from 'src/constants';
 import { ThemeType } from 'src/constants/themes/types';
 
 export const Content = styled.div`

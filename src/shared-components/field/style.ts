@@ -7,7 +7,7 @@ import { BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
-  ${TYPOGRAPHY_STYLE.caption};
+  ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   transition: all ${ANIMATION.defaultTiming} ease-in-out;
   opacity: 0;
   max-height: 0;
@@ -20,14 +20,14 @@ export const FieldContainer = styled.div`
 `;
 
 export const Label = styled.label<{ disabled: boolean }>`
-  ${TYPOGRAPHY_STYLE.label};
+  ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
 
   ${({ disabled, theme }) =>
     disabled ? `color: ${theme.COLORS.primaryTint3};` : ''}
 `;
 
 const inputStyles = (theme: ThemeType) => css`
-  ${TYPOGRAPHY_STYLE.body};
+  ${TYPOGRAPHY_STYLE.body(theme)}
   appearance: none;
   background: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};

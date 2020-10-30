@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
-import { COLORS_PROP_TYPES, ThemeType } from 'src/constants/themes/types';
+import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants/themes/types';
 
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
@@ -22,7 +22,7 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type ButtonTypeWithAction = ButtonType | 'action';
 
 type ButtonProps = {
-  buttonColor?: valueof<ThemeType['COLORS']>;
+  buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
    */
@@ -49,7 +49,7 @@ type ButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: valueof<ThemeType['COLORS']>;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 

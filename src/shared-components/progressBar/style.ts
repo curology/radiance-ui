@@ -66,5 +66,5 @@ export const InnerBar = styled.div<{
   transform: translateX(-5%);
   transition: transform ${ANIMATION.defaultTiming} ease-in-out;
 
-  ${({ status, theme }) => getStatusStyles(status, theme)};
+  ${({ status, theme }) => getStatusStyles(status, theme)}
 `;

@@ -19,8 +19,10 @@ export const MessageItem = styled.li<{ type: MessagesTypes }>`
     margin: 0 0 ${SPACER.x2small} 0;
   }
 
-  ${({ type }) =>
-    type === 'success' ? TYPOGRAPHY_STYLE.success : TYPOGRAPHY_STYLE.error};
+  ${({ theme, type }) =>
+    type === 'success'
+      ? TYPOGRAPHY_STYLE.success(theme)
+      : TYPOGRAPHY_STYLE.error(theme)}
 
   line-height: 24px;
 `;

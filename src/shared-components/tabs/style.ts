@@ -2,9 +2,7 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
- BOX_SHADOWS, SPACER, ANIMATION, MEDIA_QUERIES, 
-} from '../../constants';
+import { BOX_SHADOWS, SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -23,7 +21,7 @@ export const TabsContainer = styled.div`
 
 export const TabItem = styled.button<{ active: boolean }>`
   ${buttonReset}
-  ${TYPOGRAPHY_STYLE.button};
+  ${({ theme }) => TYPOGRAPHY_STYLE.button(theme)}
   display: flex;
   align-items: center;
   justify-content: center;

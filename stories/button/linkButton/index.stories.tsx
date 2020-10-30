@@ -12,6 +12,7 @@ import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
 import { COLORS } from 'src/constants';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
 
 export const Default = () => (
   <LinkButton.Container>
@@ -78,10 +79,10 @@ export const WithControls = () => (
         ['primary', 'secondary', 'tertiary', 'quaternary'],
         'primary',
       )}
-      buttonColor={select('buttonColor', COLORS, COLORS.primary)}
+      buttonColor={select('buttonColor', COLORS, COLORS.primary) as ThemeColors}
       disabled={boolean('disabled', false)}
       onClick={action('You clicked a button')}
-      textColor={text('textColor', '')}
+      textColor={text('textColor', '') as ThemeColors}
     >
       {text('children', 'Click it!')}
     </LinkButton>

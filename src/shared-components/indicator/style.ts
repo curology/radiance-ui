@@ -21,7 +21,7 @@ export const IndicatorContainer = styled.div`
   > div {
     position: relative;
     top: 1px;
-    ${TYPOGRAPHY_STYLE.label};
+    ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
     font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
     color: ${({ theme }) => theme.COLORS.white};
   }
