@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
+import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import { VerificationMessages } from './index';
 

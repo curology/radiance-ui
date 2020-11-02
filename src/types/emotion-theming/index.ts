@@ -9,7 +9,7 @@ import { ThemeType } from 'src/constants/themes/types';
 import {
   useTheme as useEmotionTheme,
   ThemeProvider,
-} from '../../node_modules/emotion-theming';
+} from '../../../node_modules/emotion-theming';
 
 export const useTheme = () => useEmotionTheme<ThemeType>();
 

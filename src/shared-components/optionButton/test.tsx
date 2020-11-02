@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import renderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
+import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import AcneGlyph from '../../svgs/glyphs/acne-glyph.svg';
 

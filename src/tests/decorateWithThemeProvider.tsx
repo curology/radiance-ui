@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 
-import { primaryTheme } from '../../src/constants/themes';
-import type { ThemeType } from '../../src/constants/themes/types';
+import { primaryTheme } from '../constants/themes';
+import type { ThemeType } from '../constants/themes/types';
 
 type PropsType = Record<string, unknown>;
 

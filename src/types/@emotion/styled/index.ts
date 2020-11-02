@@ -9,7 +9,7 @@ import { ThemeType } from 'src/constants/themes/types';
 import styled, {
   CreateStyled,
   StyledComponent,
-} from '../../../node_modules/@emotion/styled';
+} from '../../../../node_modules/@emotion/styled';
 
 export default styled as CreateStyled<ThemeType>;
 
