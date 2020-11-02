@@ -8,6 +8,7 @@
     "dist",
     "lib",
     "lib/constants",
+    "lib/icons",
     "lib/utils"
   ],
   "types": "./lib/index.d.ts",
@@ -30,7 +31,7 @@
     "build:icons:deprecated": "svgr --expand-props none --template src/utils/svgToIconTemplate/index.js -d src/icons/ src/svgs/deprecated/",
     "build:icons:index": "create-index src/icons/",
     "build:rollup": "rollup -c",
-    "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx'",
+    "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx' --ignore '**/*.test.{js,ts,tsx}'",
     "build:svgs:index": "create-index src/svgs/ --recursive --update --extensions svg",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build:icons && yarn run build:icons:index && yarn run build-storybook",

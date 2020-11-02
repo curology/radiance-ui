@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { primaryTheme } from 'src/constants/themes';
-import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
+import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import NeckGlyph from '../../svgs/glyphs/neck-glyph.svg';
 

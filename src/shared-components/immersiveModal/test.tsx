@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
+import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import { ModalTitle } from './style';
 

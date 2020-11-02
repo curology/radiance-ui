@@ -1,6 +1,6 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'tests/utils/decorateWithThemeProvider';
+import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import { Banner } from './index';
 
