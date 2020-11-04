@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { ModalTitle } from './style';
 
@@ -10,13 +9,11 @@ const modalTitle = 'Dialog Modal Title';
 const modalBody = 'Dialog Modal Children Content';
 
 describe('<DialogModal />', () => {
-  const DecoratedDialogModal = decorateWithThemeProvider(DialogModal);
-
   it('render children content correctly', () => {
     const wrapper = mount(
-      <DecoratedDialogModal title={modalTitle}>
+      <DialogModal title={modalTitle}>
         <div>{modalBody}</div>
-      </DecoratedDialogModal>,
+      </DialogModal>,
     );
 
     expect(wrapper.find(ModalTitle).text()).toBe(modalTitle);

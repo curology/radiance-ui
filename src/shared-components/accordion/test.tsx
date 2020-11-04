@@ -1,7 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Accordion } from './index';
 
@@ -13,12 +12,8 @@ const testAccordionProps = {
 };
 
 describe('<Accordion />', () => {
-  const DecoratedAccordion = decorateWithThemeProvider(Accordion);
-
   test('renders regular accordion', () => {
-    const component = renderer.create(
-      <DecoratedAccordion {...testAccordionProps} />,
-    );
+    const component = renderer.create(<Accordion {...testAccordionProps} />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -26,7 +21,7 @@ describe('<Accordion />', () => {
 
   test('renders no border accordion', () => {
     const component = renderer.create(
-      <DecoratedAccordion {...testAccordionProps} noBorder />,
+      <Accordion {...testAccordionProps} noBorder />,
     );
 
     const tree = component.toJSON();
@@ -35,7 +30,7 @@ describe('<Accordion />', () => {
 
   test('renders disabled accordion', () => {
     const component = renderer.create(
-      <DecoratedAccordion {...testAccordionProps} disabled />,
+      <Accordion {...testAccordionProps} disabled />,
     );
 
     const tree = component.toJSON();
@@ -46,7 +41,7 @@ describe('<Accordion />', () => {
     const spy = jest.fn();
 
     const component = mount(
-      <DecoratedAccordion {...testAccordionProps} onClick={spy} />,
+      <Accordion {...testAccordionProps} onClick={spy} />,
     );
 
     const title = component.find('div[role="button"]');

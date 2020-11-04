@@ -1,18 +1,15 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Tooltip } from './index';
 
 describe('<Tooltip />', () => {
-  const DecoratedTooltip = decorateWithThemeProvider(Tooltip);
-
   describe('UI snapshot', () => {
     it('renders content and children', () => {
       const component = renderer.create(
-        <DecoratedTooltip position="bottom" content="Tooltip Content">
+        <Tooltip position="bottom" content="Tooltip Content">
           Tooltip Trigger
-        </DecoratedTooltip>,
+        </Tooltip>,
       );
 
       const tree = component.toJSON();
