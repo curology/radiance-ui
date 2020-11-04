@@ -15,22 +15,22 @@ import {
 
 import { OptionType, OptionValue } from './index';
 
-type DesktopDropdownProps<T extends OptionValue> = {
+type DesktopDropdownProps<T extends OptionType> = {
   borderRadius: string;
   closeDropdown: () => void;
-  currentOption?: OptionType<T>;
+  currentOption?: T;
   isOpen: boolean;
   onDesktopSelectChange: (
     event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
   ) => void;
-  options: OptionType<T>[];
+  options: T[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
   toggleDropdown: () => void;
-  value?: string | number;
+  value?: OptionValue;
 };
 
-export const DesktopDropdown = <T extends OptionValue>({
+export const DesktopDropdown = <T extends OptionType>({
   borderRadius,
   closeDropdown,
   currentOption,

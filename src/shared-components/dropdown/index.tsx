@@ -6,7 +6,7 @@ import { DesktopDropdown } from './desktopDropdown';
 
 export type OptionValue = string | number;
 
-export type OptionType<T extends OptionValue> = {
+export type OptionType = {
   disabled?: boolean;
   /**
    * The text to be displayed for the option
@@ -15,16 +15,20 @@ export type OptionType<T extends OptionValue> = {
   /**
    * The option indentifier
    */
-  value: T;
+  value: OptionValue;
+  /**
+   * Any other data we want to pass via Options
+   */
+  [key: string]: unknown;
 };
 
-type DropdownProps<T extends OptionValue> = {
+type DropdownProps<T extends OptionType> = {
   borderRadius?: string;
   /**
    * The handler to be invoked on option change
    */
-  onChange: (option: { value: T }) => void;
-  options: OptionType<T>[];
+  onChange: (option: T) => void;
+  options: T[];
   /**
    * Specifies maximum height of the expanded dropdown
    */
@@ -33,14 +37,14 @@ type DropdownProps<T extends OptionValue> = {
   /**
    * The currently selected option
    */
-  value: T;
+  value?: OptionValue;
 };
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
  * This ships with a mobile implementation that will handle mobile devices automatically.
  */
-export const Dropdown = <T extends OptionValue>({
+export const Dropdown = <T extends OptionType>({
   borderRadius = '4px',
   onChange,
   options,
@@ -64,7 +68,7 @@ export const Dropdown = <T extends OptionValue>({
     const { selectedIndex, selectedOptions } = target;
     const selectedOption = options[selectedIndex];
     if (selectedOptions && selectedOptions.length) {
-      onChange({ value: selectedOption.value });
+      onChange(selectedOption);
     }
 
     closeDropdown();

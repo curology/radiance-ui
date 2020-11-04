@@ -5,12 +5,12 @@ import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
 import { OptionType, OptionValue } from '.';
 
-type MobileDropdownProps<T extends OptionValue> = {
+type MobileDropdownProps<T extends OptionType> = {
   borderRadius: string;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  options: OptionType<T>[];
+  options: T[];
   textAlign: 'left' | 'center';
-  value?: string | number;
+  value?: OptionValue;
 };
 
 /**
@@ -18,7 +18,7 @@ type MobileDropdownProps<T extends OptionValue> = {
  *
  * `<Dropdown /> ` will determine if the user is on a mobile device and render a true `select` tag with `option`(s).
  */
-export const MobileDropdown = <T extends OptionValue>({
+export const MobileDropdown = <T extends OptionType>({
   borderRadius,
   onMobileSelectChange,
   options,
