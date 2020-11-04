@@ -15,7 +15,7 @@ export type OptionType = {
   /**
    * The option indentifier
    */
-  value: OptionValue;
+  value?: OptionValue;
   /**
    * Any other data we want to pass from options
    */
