@@ -28,7 +28,7 @@ const alertIconMapping = {
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
 type AlertProps = {
-  avatarSrc?: string;
+  avatarSrc?: string | null;
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;

@@ -43,7 +43,7 @@ type ImmersiveModalProps = {
   /**
    * The title of the modal
    */
-  title?: string;
+  title?: string | React.ReactNode;
   [key: string]: unknown;
 };
 

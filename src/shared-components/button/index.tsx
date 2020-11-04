@@ -47,7 +47,10 @@ type ButtonProps = {
    */
   isLoading?: boolean;
   loading?: boolean;
-  onClick?: () => void;
+  onClick?: (
+    event: React.SyntheticEvent<HTMLButtonElement>,
+    data?: Record<string, unknown>,
+  ) => void | Promise<void> | boolean;
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
