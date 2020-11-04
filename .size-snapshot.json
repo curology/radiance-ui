@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 1135214,
-    "minified": 1068541,
-    "gzipped": 102578
+    "bundled": 1135555,
+    "minified": 1068840,
+    "gzipped": 102690
   },
   "bundle.umd.js": {
-    "bundled": 1144115,
-    "minified": 1043819,
-    "gzipped": 98501
+    "bundled": 1144454,
+    "minified": 1044118,
+    "gzipped": 98608
   },
   "shared-components/avatar/style.js": {
     "bundled": 1539,
@@ -584,9 +584,9 @@
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 9185,
-    "minified": 7615,
-    "gzipped": 3358,
+    "bundled": 9250,
+    "minified": 7664,
+    "gzipped": 3383,
     "treeshaked": {
       "rollup": {
         "code": 226,
@@ -794,8 +794,8 @@
     }
   },
   "shared-components/dropdown/index.js": {
-    "bundled": 3801,
-    "minified": 1702,
+    "bundled": 3813,
+    "minified": 1688,
     "gzipped": 738,
     "treeshaked": {
       "rollup": {
@@ -906,9 +906,9 @@
     }
   },
   "shared-components/container/style.js": {
-    "bundled": 31365,
-    "minified": 30588,
-    "gzipped": 4133,
+    "bundled": 31561,
+    "minified": 30784,
+    "gzipped": 4160,
     "treeshaked": {
       "rollup": {
         "code": 1264,
@@ -948,9 +948,9 @@
     }
   },
   "shared-components/field/style.js": {
-    "bundled": 35878,
-    "minified": 35360,
-    "gzipped": 4663,
+    "bundled": 35950,
+    "minified": 35432,
+    "gzipped": 4671,
     "treeshaked": {
       "rollup": {
         "code": 2104,
@@ -1048,7 +1048,7 @@
   "shared-components/optionButton/style.js": {
     "bundled": 57502,
     "minified": 56414,
-    "gzipped": 4881,
+    "gzipped": 4860,
     "treeshaked": {
       "rollup": {
         "code": 2205,
@@ -1060,9 +1060,9 @@
     }
   },
   "shared-components/selectorButton/style.js": {
-    "bundled": 50392,
-    "minified": 49602,
-    "gzipped": 5484,
+    "bundled": 50352,
+    "minified": 49562,
+    "gzipped": 5477,
     "treeshaked": {
       "rollup": {
         "code": 2087,
@@ -1158,9 +1158,9 @@
     }
   },
   "shared-components/dropdown/style.js": {
-    "bundled": 60840,
-    "minified": 59852,
-    "gzipped": 5936,
+    "bundled": 60876,
+    "minified": 59888,
+    "gzipped": 5987,
     "treeshaked": {
       "rollup": {
         "code": 2305,
