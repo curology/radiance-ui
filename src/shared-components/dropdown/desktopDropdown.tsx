@@ -14,24 +14,24 @@ import {
   DropdownOption,
 } from './style';
 
-import { OptionType } from './index';
+import { OptionType, OptionValue } from './index';
 
-type DesktopDropdownProps = {
+type DesktopDropdownProps<T extends OptionType> = {
   borderRadius: string;
   closeDropdown: () => void;
-  currentOption?: OptionType;
+  currentOption?: T;
   isOpen: boolean;
   onDesktopSelectChange: (
     event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
   ) => void;
-  options: OptionType[];
+  options: T[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
   toggleDropdown: () => void;
-  value?: string | number;
+  value?: OptionValue;
 };
 
-export const DesktopDropdown = ({
+export const DesktopDropdown = <T extends OptionType>({
   borderRadius,
   closeDropdown,
   currentOption,
@@ -42,7 +42,7 @@ export const DesktopDropdown = ({
   textAlign,
   toggleDropdown,
   value,
-}: DesktopDropdownProps) => {
+}: DesktopDropdownProps<T>) => {
   const theme = useTheme();
   const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
 

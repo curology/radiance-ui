@@ -4,14 +4,14 @@ import { useTheme } from 'emotion-theming';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
-import { OptionType } from '.';
+import { OptionType, OptionValue } from '.';
 
-type MobileDropdownProps = {
+type MobileDropdownProps<T extends OptionType> = {
   borderRadius: string;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
-  options: OptionType[];
+  options: T[];
   textAlign: 'left' | 'center';
-  value?: string | number;
+  value?: OptionValue;
 };
 
 /**
@@ -19,13 +19,13 @@ type MobileDropdownProps = {
  *
  * `<Dropdown /> ` will determine if the user is on a mobile device and render a true `select` tag with `option`(s).
  */
-export const MobileDropdown = ({
+export const MobileDropdown = <T extends OptionType>({
   borderRadius,
   onMobileSelectChange,
   options,
   textAlign,
   value,
-}: MobileDropdownProps) => {
+}: MobileDropdownProps<T>) => {
   const theme = useTheme();
 
   return (
