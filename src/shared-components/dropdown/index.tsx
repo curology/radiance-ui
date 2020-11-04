@@ -17,7 +17,7 @@ export type OptionType = {
    */
   value: OptionValue;
   /**
-   * Any other data we want to pass via Options
+   * Any other data we want to pass from options
    */
   [key: string]: unknown;
 };
