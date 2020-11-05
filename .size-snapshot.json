@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 827439,
-    "minified": 758189,
-    "gzipped": 91394
+    "bundled": 827877,
+    "minified": 758617,
+    "gzipped": 91452
   },
   "bundle.umd.js": {
-    "bundled": 836975,
-    "minified": 734219,
-    "gzipped": 87440
+    "bundled": 837409,
+    "minified": 734655,
+    "gzipped": 87510
   },
   "shared-components/avatar/index.js": {
     "bundled": 550,
@@ -80,9 +80,9 @@
     }
   },
   "shared-components/typography/index.js": {
-    "bundled": 52997,
-    "minified": 51950,
-    "gzipped": 3536,
+    "bundled": 53389,
+    "minified": 52342,
+    "gzipped": 3556,
     "treeshaked": {
       "rollup": {
         "code": 2693,
@@ -108,16 +108,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 3741,
-    "minified": 2006,
-    "gzipped": 814,
+    "bundled": 3730,
+    "minified": 1995,
+    "gzipped": 812,
     "treeshaked": {
       "rollup": {
-        "code": 1655,
+        "code": 1644,
         "import_statements": 608
       },
       "webpack": {
-        "code": 3023
+        "code": 3012
       }
     }
   },
@@ -416,9 +416,9 @@
     }
   },
   "shared-components/button/deprecatedPropsHandler.js": {
-    "bundled": 450,
-    "minified": 337,
-    "gzipped": 211,
+    "bundled": 466,
+    "minified": 339,
+    "gzipped": 213,
     "treeshaked": {
       "rollup": {
         "code": 0,
@@ -516,7 +516,7 @@
   "shared-components/dialogModal/style.js": {
     "bundled": 15808,
     "minified": 15583,
-    "gzipped": 3592,
+    "gzipped": 3598,
     "treeshaked": {
       "rollup": {
         "code": 1798,
@@ -572,7 +572,7 @@
   "shared-components/immersiveModal/style.js": {
     "bundled": 103824,
     "minified": 102608,
-    "gzipped": 7736,
+    "gzipped": 7728,
     "treeshaked": {
       "rollup": {
         "code": 4482,
@@ -1284,22 +1284,22 @@
     }
   },
   "shared-components/dropdown/index.js": {
-    "bundled": 3813,
-    "minified": 1688,
+    "bundled": 3810,
+    "minified": 1689,
     "gzipped": 738,
     "treeshaked": {
       "rollup": {
-        "code": 474,
+        "code": 496,
         "import_statements": 275
       },
       "webpack": {
-        "code": 1555
+        "code": 1577
       }
     }
   },
   "shared-components/dropdown/desktopDropdown.js": {
-    "bundled": 9432,
-    "minified": 7815,
+    "bundled": 9480,
+    "minified": 7863,
     "gzipped": 3433,
     "treeshaked": {
       "rollup": {
