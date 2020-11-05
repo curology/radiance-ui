@@ -16,7 +16,7 @@ import {
 
 import { OptionType, OptionValue } from './index';
 
-type DesktopDropdownProps<T extends OptionType> = {
+type DesktopDropdownProps<T> = {
   borderRadius: string;
   closeDropdown: () => void;
   currentOption?: T;

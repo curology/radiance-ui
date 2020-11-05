@@ -6,7 +6,7 @@ import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
 import { OptionType, OptionValue } from '.';
 
-type MobileDropdownProps<T extends OptionType> = {
+type MobileDropdownProps<T> = {
   borderRadius: string;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: T[];

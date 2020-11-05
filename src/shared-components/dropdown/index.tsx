@@ -22,7 +22,7 @@ export type OptionType = {
   [key: string]: unknown;
 };
 
-type DropdownProps<T extends OptionType> = {
+type DropdownProps<T> = {
   borderRadius?: string;
   /**
    * The handler to be invoked on option change
