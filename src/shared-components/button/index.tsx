@@ -45,7 +45,9 @@ type ButtonProps = {
    */
   isLoading?: boolean;
   loading?: boolean;
-  onClick: () => void;
+  onClick?: (
+    event: React.SyntheticEvent<HTMLButtonElement>,
+  ) => void | Promise<void> | boolean;
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
@@ -130,7 +132,7 @@ Button.propTypes = {
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   loading: isLoadingPropFunction,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   textColor: PropTypes.string,
 };
 

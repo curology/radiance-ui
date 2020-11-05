@@ -146,4 +146,6 @@ const deprecatedProperties = {
   ErrorText: 'ErrorText is deprecated. Use Error instead',
 };
 
-export default withDeprecationWarning(Typography, deprecatedProperties);
+const TYPOGRAPHY = withDeprecationWarning(Typography, deprecatedProperties);
+
+export default TYPOGRAPHY;
