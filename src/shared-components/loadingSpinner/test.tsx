@@ -1,23 +1,20 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 import { primaryTheme } from 'src/constants/themes';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import { LoadingSpinner } from './index';
 
 describe('<LoadingSpinner />', () => {
-  const DecoratedLoadingSpinner = decorateWithThemeProvider(LoadingSpinner);
-
   describe('UI snapshots', () => {
     it('renders the correct css with default props', () => {
-      const component = renderer.create(<DecoratedLoadingSpinner />);
+      const component = renderer.create(<LoadingSpinner />);
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
     });
 
     it('renders the correct css with custom props', () => {
       const component = renderer.create(
-        <DecoratedLoadingSpinner
+        <LoadingSpinner
           bgColor={primaryTheme.COLORS.black}
           color={primaryTheme.COLORS.white}
           duration={4}

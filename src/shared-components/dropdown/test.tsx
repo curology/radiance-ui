@@ -1,7 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';
@@ -15,21 +14,15 @@ const options = [
 ];
 
 describe('<Dropdown />', () => {
-  const DecoratedDropdown = decorateWithThemeProvider(Dropdown);
-
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
       const wrapper = mount(
-        <DecoratedDropdown
-          value="test1"
-          options={options}
-          onChange={() => null}
-        />,
+        <Dropdown value="test1" options={options} onChange={() => undefined} />,
       );
       delete window.document.documentElement.ontouchstart;
 
-      expect(wrapper.children().children().children().first().name()).toEqual(
+      expect(wrapper.children().children().first().name()).toEqual(
         'MobileDropdown',
       );
     });
@@ -38,14 +31,10 @@ describe('<Dropdown />', () => {
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
       const wrapper = mount(
-        <DecoratedDropdown
-          value="test1"
-          options={options}
-          onChange={() => null}
-        />,
+        <Dropdown value="test1" options={options} onChange={() => null} />,
       );
 
-      expect(wrapper.children().children().children().first().name()).toEqual(
+      expect(wrapper.children().children().first().name()).toEqual(
         'DesktopDropdown',
       );
     });
@@ -53,13 +42,11 @@ describe('<Dropdown />', () => {
 });
 
 describe('<MobileDropdown />', () => {
-  const DecoratedMobileDropdown = decorateWithThemeProvider(MobileDropdown);
-
   describe('UI snapshots', () => {
     it('renders correctly', () => {
       const tree = renderer
         .create(
-          <DecoratedMobileDropdown
+          <MobileDropdown
             onMobileSelectChange={() => undefined}
             borderRadius="4px"
             options={options}
@@ -76,7 +63,7 @@ describe('<MobileDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedMobileDropdown
+        <MobileDropdown
           borderRadius="4px"
           options={options}
           onMobileSelectChange={spy}
@@ -92,11 +79,9 @@ describe('<MobileDropdown />', () => {
 });
 
 describe('<DesktopDropdown />', () => {
-  const DecoratedDesktopDropdown = decorateWithThemeProvider(DesktopDropdown);
-
   it('renders the current option text', () => {
     const wrapper = mount(
-      <DecoratedDesktopDropdown
+      <DesktopDropdown
         borderRadius="4px"
         closeDropdown={() => undefined}
         currentOption={{ value: 'test1', label: 'Test1' }}
@@ -118,7 +103,7 @@ describe('<DesktopDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedDesktopDropdown
+        <DesktopDropdown
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
@@ -140,7 +125,7 @@ describe('<DesktopDropdown />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedDesktopDropdown
+        <DesktopDropdown
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}

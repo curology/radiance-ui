@@ -1,26 +1,19 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import CameraIcon from '../../../../svgs/icons/camera-icon.svg';
 
 import { RoundButton } from './index';
 
 describe('<RoundButton />', () => {
-  const DecoratedRoundButton = decorateWithThemeProvider(RoundButton);
-
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const tree = renderer
         .create(
-          <DecoratedRoundButton
-            disabled
-            onClick={() => undefined}
-            icon={<CameraIcon />}
-          >
+          <RoundButton disabled onClick={() => undefined} icon={<CameraIcon />}>
             Button Text
-          </DecoratedRoundButton>,
+          </RoundButton>,
         )
         .toJSON();
 
@@ -32,9 +25,9 @@ describe('<RoundButton />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedRoundButton onClick={spy} icon={<CameraIcon />}>
+        <RoundButton onClick={spy} icon={<CameraIcon />}>
           Button Text
-        </DecoratedRoundButton>,
+        </RoundButton>,
       );
 
       const button = wrapper.find('button');
@@ -46,9 +39,9 @@ describe('<RoundButton />', () => {
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedRoundButton disabled onClick={spy} icon={<CameraIcon />}>
+        <RoundButton disabled onClick={spy} icon={<CameraIcon />}>
           Button Text
-        </DecoratedRoundButton>,
+        </RoundButton>,
       );
 
       const button = wrapper.find('button');
@@ -60,9 +53,9 @@ describe('<RoundButton />', () => {
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedRoundButton isLoading onClick={spy} icon={<CameraIcon />}>
+        <RoundButton isLoading onClick={spy} icon={<CameraIcon />}>
           Button Text
-        </DecoratedRoundButton>,
+        </RoundButton>,
       );
 
       const button = wrapper.find('button');

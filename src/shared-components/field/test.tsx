@@ -1,21 +1,18 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { MessageItem } from '../verificationMessages/style';
 
 import { Field } from './index';
 
 describe('<Field />', () => {
-  const DecoratedField = decorateWithThemeProvider(Field);
-
   describe('UI Snapshot', () => {
     it('renders with default props', () => {
       const component = renderer.create(
-        <DecoratedField>
+        <Field>
           <Field.Input />
-        </DecoratedField>,
+        </Field>,
       );
 
       const tree = component.toJSON();
@@ -26,9 +23,9 @@ describe('<Field />', () => {
       const labelText = 'Test Label';
       const labelFor = 'for-input-id';
       const component = renderer.create(
-        <DecoratedField label={labelText} labelFor={labelFor}>
+        <Field label={labelText} labelFor={labelFor}>
           <Field.Input />
-        </DecoratedField>,
+        </Field>,
       );
 
       const tree = component.toJSON();
@@ -42,13 +39,13 @@ describe('<Field />', () => {
         </React.Fragment>
       );
       const component = renderer.create(
-        <DecoratedField
+        <Field
           hideMessagesIcon
           hintMessage="hint message"
           messages={{ error: errorMessage }}
         >
           <Field.Input />
-        </DecoratedField>,
+        </Field>,
       );
 
       const tree = component.toJSON();
@@ -60,9 +57,9 @@ describe('<Field />', () => {
     it('renders the error message', () => {
       const messages = { maxLength: 'Maximum 6 characteres' };
       const wrapper = mount(
-        <DecoratedField messages={messages} messagesType="error">
+        <Field messages={messages} messagesType="error">
           <Field.Input />
-        </DecoratedField>,
+        </Field>,
       );
 
       const li = wrapper.find(MessageItem);
@@ -74,9 +71,9 @@ describe('<Field />', () => {
     it('renders the success messages', () => {
       const messages = { success: 'Thanks for completing' };
       const wrapper = mount(
-        <DecoratedField messages={messages} messagesType="success">
+        <Field messages={messages} messagesType="success">
           <Field.Input />
-        </DecoratedField>,
+        </Field>,
       );
 
       const li = wrapper.find(MessageItem);

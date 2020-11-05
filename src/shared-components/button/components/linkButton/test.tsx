@@ -1,20 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { LinkButton } from './index';
 
 describe('<LinkButton/>', () => {
-  const DecoratedLinkButton = decorateWithThemeProvider(LinkButton);
-
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const tree = renderer
         .create(
-          <DecoratedLinkButton onClick={() => undefined} href="#">
+          <LinkButton onClick={() => undefined} href="#">
             Click me!
-          </DecoratedLinkButton>,
+          </LinkButton>,
         )
         .toJSON();
 
@@ -24,11 +21,9 @@ describe('<LinkButton/>', () => {
 
   describe('href handling', () => {
     it('should link to a path', () => {
-      const wrapper = mount(
-        <DecoratedLinkButton href="/some/path">text</DecoratedLinkButton>,
-      );
+      const wrapper = mount(<LinkButton href="/some/path">text</LinkButton>);
 
-      expect(wrapper.prop('href')).toEqual('/some/path');
+      expect(wrapper.children().prop('href')).toEqual('/some/path');
     });
   });
 
@@ -36,9 +31,7 @@ describe('<LinkButton/>', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
 
-      const button = mount(
-        <DecoratedLinkButton onClick={spy}>text</DecoratedLinkButton>,
-      );
+      const button = mount(<LinkButton onClick={spy}>text</LinkButton>);
 
       button.simulate('click');
       expect(spy).toHaveBeenCalled();
@@ -48,9 +41,9 @@ describe('<LinkButton/>', () => {
       const spy = jest.fn();
 
       const button = mount(
-        <DecoratedLinkButton disabled href="#" onClick={spy}>
+        <LinkButton disabled href="#" onClick={spy}>
           text
-        </DecoratedLinkButton>,
+        </LinkButton>,
       );
 
       button.simulate('click');

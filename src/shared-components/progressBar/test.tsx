@@ -1,18 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 import { primaryTheme } from 'src/constants/themes';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
 
 import { ProgressBar } from './index';
 
 describe('<ProgressBar />', () => {
-  const DecoratedProgressBar = decorateWithThemeProvider(ProgressBar);
-
   describe('UI snapshot', () => {
     it('renders with default props', () => {
-      const component = renderer.create(
-        <DecoratedProgressBar status="loading" />,
-      );
+      const component = renderer.create(<ProgressBar status="loading" />);
 
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
@@ -20,7 +15,7 @@ describe('<ProgressBar />', () => {
 
     it('renders with custom props', () => {
       const component = renderer.create(
-        <DecoratedProgressBar
+        <ProgressBar
           status="loading"
           backgroundColor={primaryTheme.COLORS.error}
           barColor={primaryTheme.COLORS.warning}

@@ -1,20 +1,15 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Carousel } from './index';
 
 const cards = [<Carousel.Card key="card1">Card 1</Carousel.Card>];
 
 describe('<Carousel />', () => {
-  const DecoratedCarousel = decorateWithThemeProvider(Carousel);
-
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const tree = renderer
-        .create(
-          <DecoratedCarousel numCardsVisible={1}>{cards}</DecoratedCarousel>,
-        )
+        .create(<Carousel numCardsVisible={1}>{cards}</Carousel>)
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -23,13 +18,9 @@ describe('<Carousel />', () => {
     it('renders with bottom right aligned arrows', () => {
       const tree = renderer
         .create(
-          <DecoratedCarousel
-            numCardsVisible={2}
-            bottomRightAlignedArrows
-            hideDots
-          >
+          <Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>
             {cards}
-          </DecoratedCarousel>,
+          </Carousel>,
         )
         .toJSON();
 
