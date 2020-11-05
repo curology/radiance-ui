@@ -1,19 +1,16 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { TabItem } from './style';
 
 import { Tabs } from './index';
 
 describe('<Tabs />', () => {
-  const DecoratedTabs = decorateWithThemeProvider(Tabs);
-
   describe('UI snapshot', () => {
     it('renders with default props', () => {
       const component = renderer.create(
-        <DecoratedTabs
+        <Tabs
           tabItems={[
             { id: 1, text: 'Tab 1' },
             { id: 2, text: 'Tab 2' },
@@ -28,7 +25,7 @@ describe('<Tabs />', () => {
 
     it('renders with initialActiveTabId and onClick props', () => {
       const component = renderer.create(
-        <DecoratedTabs
+        <Tabs
           initialActiveTabId={2}
           onClick={() => undefined}
           tabItems={[
@@ -48,7 +45,7 @@ describe('<Tabs />', () => {
     test('returns correct params', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedTabs
+        <Tabs
           initialActiveTabId={1}
           tabItems={[
             { id: 1, text: 'Tab 1' },

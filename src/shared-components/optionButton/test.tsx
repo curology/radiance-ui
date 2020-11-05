@@ -1,20 +1,17 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
-import { decorateWithThemeProvider } from 'src/tests/decorateWithThemeProvider';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import AcneGlyph from '../../svgs/glyphs/acne-glyph.svg';
 
 import { OptionButton } from './index';
 
 describe('<OptionButton />', () => {
-  const DecoratedOptionButton = decorateWithThemeProvider(OptionButton);
-
   describe('UI snapshots', () => {
     it('checkbox selected, without custom icon', () => {
       const tree = renderer
         .create(
-          <DecoratedOptionButton
+          <OptionButton
             selected
             onClick={() => undefined}
             text="checkbox text"
@@ -30,7 +27,7 @@ describe('<OptionButton />', () => {
     it('radio unselected, with icon node prop', () => {
       const tree = renderer
         .create(
-          <DecoratedOptionButton
+          <OptionButton
             onClick={() => undefined}
             text="radio text"
             optionType="radio"
@@ -48,7 +45,7 @@ describe('<OptionButton />', () => {
     it('is invoked when clicked', () => {
       const spy = jest.fn();
       const wrapper = mount(
-        <DecoratedOptionButton
+        <OptionButton
           onClick={spy}
           text="checkbox text"
           optionType="checkbox"
