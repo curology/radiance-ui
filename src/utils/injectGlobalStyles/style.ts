@@ -1,7 +1,7 @@
 import 'focus-visible';
 import { ThemeType } from 'src/constants/themes/types';
 
-import { FONTS, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { TYPOGRAPHY_CONSTANTS } from '../../constants';
 import { baseBodyStyles } from '../../shared-components/typography';
 
 /**
@@ -216,7 +216,7 @@ export const brandStyles = (theme: ThemeType) => `
     -webkit-font-smoothing: antialiased;
     ${baseBodyStyles(theme)}
     background-color: ${theme.COLORS.white};
-    font-family: ${FONTS.baseFont};
+    font-family: ${theme.FONTS.baseFont};
     font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.normal};
     margin: 0;
     transition-timing-function: ease-in-out;
