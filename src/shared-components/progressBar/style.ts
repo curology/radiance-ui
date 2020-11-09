@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
-import { ThemeType } from 'src/constants/themes/types';
 
-import { ANIMATION, PROGRESS_BAR_STATUS } from '../../constants';
+import { ANIMATION, PROGRESS_BAR_STATUS, ThemeType } from '../../constants';
 
 import { ProgressBarStatusType } from '.';
 

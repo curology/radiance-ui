@@ -1,9 +1,14 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
-import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, SPACER, BOX_SHADOWS } from '../../constants';
+import {
+  ANIMATION,
+  SPACER,
+  BOX_SHADOWS,
+  ThemeColors,
+  ThemeType,
+} from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
 import { ButtonTypeWithAction } from '.';

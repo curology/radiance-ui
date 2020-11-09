@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
-import { ThemeType } from 'src/constants/themes/types';
 
 import Typography from '../typography';
 import {
@@ -9,6 +8,7 @@ import {
   SPACER,
   Z_SCALE,
   ANIMATION,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 

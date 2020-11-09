@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
-import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants/themes/types';
 
 import { CalloutContainer, Text, Icon, ParentContainer } from './style';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
 type CalloutProps = {
   /**

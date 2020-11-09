@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
-import { ANIMATION, BREAKPOINTS, BOX_SHADOWS, SPACER } from 'src/constants';
-import { ThemeType } from 'src/constants/themes/types';
+
+import {
+  ANIMATION,
+  BREAKPOINTS,
+  BOX_SHADOWS,
+  SPACER,
+  ThemeType,
+} from '../../constants';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 import Loader from '../../shared-components/loader';
@@ -17,6 +16,7 @@ import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
 type RoundButtonProps = {
   buttonColor?: ThemeColors;

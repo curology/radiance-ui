@@ -6,8 +6,8 @@ import {
 } from 'enzyme';
 import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import { ThemeType } from 'src/constants/themes/types';
-import { primaryTheme } from 'src/constants';
+
+import { primaryTheme, ThemeType } from '../constants';
 
 // We customize enzyme helper methods to bake-in theming and keep unit tests DRY
 export const mount = (
