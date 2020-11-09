@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { ThemeType } from 'src/constants/themes/types';
 
-import { SPACER, COLORS } from '../../constants';
+import { SPACER } from '../../constants';
 
 import { CarouselType } from '.';
 
@@ -11,34 +11,34 @@ export const Card = styled.div`
   margin: 0 ${SPACER.small};
 `;
 
-const primaryStyles = css`
+const primaryStyles = (theme: ThemeType) => `
   .slick-dots {
     li {
-      background-color: ${COLORS.primary};
+      background-color: ${theme.COLORS.primary};
     }
   }
 `;
 
-const secondaryStyles = css`
+const secondaryStyles = (theme: ThemeType) => `
   .slick-dots {
     li {
-      background-color: ${COLORS.white};
+      background-color: ${theme.COLORS.white};
     }
   }
 `;
 
-const parseStyle = (carouselType: CarouselType) => {
+const parseStyle = (carouselType: CarouselType, theme: ThemeType) => {
   switch (carouselType) {
     case 'primary':
-      return primaryStyles;
+      return primaryStyles(theme);
     case 'secondary':
-      return secondaryStyles;
+      return secondaryStyles(theme);
     default:
-      return primaryStyles;
+      return primaryStyles(theme);
   }
 };
 
-const dotStyles = css`
+const dotStyles = `
   display: flex !important;
   position: absolute;
   left: 50%;
@@ -67,7 +67,7 @@ const dotStyles = css`
 `;
 
 // styles from the react-slick library
-const reactSlickStyles = css`
+const reactSlickStyles = `
   .slick-slider {
     position: relative;
     display: flex;
@@ -174,7 +174,7 @@ const parseOuterStyle = (numCardsVisible: number) => {
       maxWidth = '375px';
   }
 
-  return css`
+  return `
     max-width: ${maxWidth};
   `;
 };
@@ -189,15 +189,15 @@ export const InnerContainer = styled.div<{
   overflow: hidden !important;
   padding-bottom: ${SPACER.large};
 
-  ${reactSlickStyles};
+  ${reactSlickStyles}
 
   .slick-slider {
     flex-wrap: wrap;
   }
 
   .slick-dots {
-    ${dotStyles};
+    ${dotStyles}
   }
 
-  ${({ carouselType }) => parseStyle(carouselType)};
+  ${({ carouselType, theme }) => parseStyle(carouselType, theme)}
 `;

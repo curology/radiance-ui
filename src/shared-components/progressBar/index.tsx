@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
+import { ThemeColors } from 'src/constants/themes/types';
 
-import { COLORS, PROGRESS_BAR_STATUS } from '../../constants';
+import { PROGRESS_BAR_STATUS } from '../../constants';
 import { OuterContainer, InnerBar } from './style';
 
 export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 
 type ProgressBarProps = {
-  backgroundColor?: string;
-  barColor?: string;
+  backgroundColor?: ThemeColors;
+  barColor?: ThemeColors;
   /**
    * The bar height
    */
@@ -27,28 +29,35 @@ type ProgressBarProps = {
  * To start the animation use `loading` status. To control the result pass `success` or `error` to the status property.
  */
 export const ProgressBar = ({
-  backgroundColor = COLORS.background,
-  barColor = COLORS.primary,
+  backgroundColor,
+  barColor,
   height = 4,
   loadingTime = '20s',
   status,
   ...rest
-}: ProgressBarProps) => (
-  <OuterContainer
-    status={status}
-    height={height}
-    backgroundColor={backgroundColor}
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    {...rest}
-  >
-    <InnerBar
+}: ProgressBarProps) => {
+  const theme = useTheme();
+
+  const backgroundColorWithTheme = backgroundColor || theme.COLORS.background;
+  const barColorWithTheme = barColor || theme.COLORS.primary;
+
+  return (
+    <OuterContainer
       status={status}
-      height={height}
-      barColor={barColor}
-      loadingTime={loadingTime}
-    />
-  </OuterContainer>
-);
+      barHeight={height}
+      backgroundColor={backgroundColorWithTheme}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
+    >
+      <InnerBar
+        status={status}
+        barHeight={height}
+        barColor={barColorWithTheme}
+        loadingTime={loadingTime}
+      />
+    </OuterContainer>
+  );
+};
 
 ProgressBar.propTypes = {
   backgroundColor: PropTypes.string,

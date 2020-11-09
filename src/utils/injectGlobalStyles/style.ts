@@ -1,5 +1,7 @@
 import 'focus-visible';
-import { COLORS, FONTS, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { ThemeType } from 'src/constants/themes/types';
+
+import { FONTS, TYPOGRAPHY_CONSTANTS } from '../../constants';
 import { baseBodyStyles } from '../../shared-components/typography';
 
 /**
@@ -203,7 +205,7 @@ export const resetStyles = `
   ${focusStyles}
 `;
 
-export const brandStyles = `
+export const brandStyles = (theme: ThemeType) => `
   html {
     overflow-x: hidden;
     font-size: 16px;
@@ -212,8 +214,8 @@ export const brandStyles = `
   body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    ${baseBodyStyles};
-    background-color: ${COLORS.white};
+    ${baseBodyStyles(theme)}
+    background-color: ${theme.COLORS.white};
     font-family: ${FONTS.baseFont};
     font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.normal};
     margin: 0;

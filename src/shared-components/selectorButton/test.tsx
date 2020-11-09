@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import AcneOneGlyph from '../../svgs/glyphs/acne-one-glyph.svg';
 
@@ -170,14 +170,14 @@ describe('<SelectorButton />', () => {
   describe('onClick callback', () => {
     it('is invoked on click', () => {
       const spy = jest.fn();
-      const wrapper = shallow(<SelectorButton checked={false} onClick={spy} />);
+      const wrapper = mount(<SelectorButton checked={false} onClick={spy} />);
 
       wrapper.simulate('click');
       expect(spy).toHaveBeenCalled();
     });
 
     it('Does nothing when no onClick is set', () => {
-      const wrapper = shallow(<SelectorButton checked={false} />);
+      const wrapper = mount(<SelectorButton checked={false} />);
       // Just check that no exception is thrown
       wrapper.simulate('click');
       wrapper.simulate('keypress', { key: 'Enter' });
@@ -185,7 +185,7 @@ describe('<SelectorButton />', () => {
 
     it('is invoked when enter is pressed', () => {
       const spy = jest.fn();
-      const wrapper = shallow(<SelectorButton checked={false} onClick={spy} />);
+      const wrapper = mount(<SelectorButton checked={false} onClick={spy} />);
 
       wrapper.simulate('keypress', { key: 'Enter' });
       expect(spy).toHaveBeenCalled();

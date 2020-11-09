@@ -1,12 +1,11 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { mount, shallow } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Toggle } from './index';
 
 describe('<Toggle />', () => {
   const labelText = 'Label Text';
-
   describe('UI snapshot', () => {
     it('renders the component', () => {
       const component = renderer.create(

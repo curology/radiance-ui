@@ -1,73 +1,17 @@
 import React from 'react';
-import { addDecorator, addParameters } from '@storybook/react';
+import { addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import addons from '@storybook/addons';
-import { Global, css } from '@emotion/core';
+import addons, { StoryContext, StoryGetter } from '@storybook/addons';
+import { Global } from '@emotion/core';
+import { ThemeProvider } from 'emotion-theming';
 import Theme from './theme';
 import {
   resetStyles,
   brandStyles,
 } from '../src/utils/injectGlobalStyles/style';
+import { primaryTheme, secondaryTheme } from '../src/constants/themes';
+import { ThemeType } from '../src/constants/themes/types';
 import { BREAKPOINTS } from '../src/constants';
-
-const InjectGlobalStyles = (storyFn) => (
-  <React.Fragment>
-    <Global styles={resetStyles} />
-    <Global styles={brandStyles} />
-    <Global
-      styles={css`
-        @font-face {
-          font-family: 'nocturno';
-          src: url('https://s3-us-west-1.amazonaws.com/fonts-california.typotheque.com/WF-029669-009918-001560-fa6dd062b0c32d6d9a297bd175bb0381.eot');
-          src: url('https://s3-us-west-1.amazonaws.com/fonts-california.typotheque.com/WF-029669-009918-001560-fa6dd062b0c32d6d9a297bd175bb0381.eot?#iefix')
-              format('embedded-opentype'),
-            url('https://s3-us-west-1.amazonaws.com/fonts-california.typotheque.com/WF-029669-009918-001560-fa6dd062b0c32d6d9a297bd175bb0381.woff2')
-              format('woff2'),
-            url('https://s3-us-west-1.amazonaws.com/fonts-california.typotheque.com/WF-029669-009918-001560-fa6dd062b0c32d6d9a297bd175bb0381.woff')
-              format('woff'),
-            url('https://s3-us-west-1.amazonaws.com/fonts-california.typotheque.com/WF-029669-009918-001560-fa6dd062b0c32d6d9a297bd175bb0381.svg#Typotheque_webfonts_service')
-              format('svg');
-        }
-      `}
-    />
-    <Global
-      styles={css`
-        @font-face {
-          font-family: 'larssiet';
-          src: url('https://assets.curology.com/fonts/larssiet/34535B_1_0.eot');
-          src: url('https://assets.curology.com/fonts/larssiet/34535B_1_0.eot?#iefix')
-              format('embedded-opentype'),
-            url('https://assets.curology.com/fonts/larssiet/34535B_1_0.woff2')
-              format('woff2'),
-            url('https://assets.curology.com/fonts/larssiet/34535B_1_0.woff')
-              format('woff'),
-            url('https://assets.curology.com/fonts/larssiet/34535B_1_0.ttf')
-              format('truetype');
-        }
-      `}
-    />
-    <Global
-      styles={css`
-        @font-face {
-          font-family: 'larssiet';
-          font-weight: bold;
-          src: url('https://assets.curology.com/fonts/larssiet/34535B_0_0.eot');
-          src: url('https://assets.curology.com/fonts/larssiet/34535B_0_0.eot?#iefix')
-              format('embedded-opentype'),
-            url('https://assets.curology.com/fonts/larssiet/34535B_0_0.woff2')
-              format('woff2'),
-            url('https://assets.curology.com/fonts/larssiet/34535B_0_0.woff')
-              format('woff'),
-            url('https://assets.curology.com/fonts/larssiet/34535B_0_0.ttf')
-              format('truetype');
-        }
-      `}
-    />
-    {storyFn()}
-  </React.Fragment>
-);
-
-addDecorator(InjectGlobalStyles);
 
 const ADDONS_REQUIRED_IN_OPTIONS = {
   isFullscreen: false,
@@ -110,3 +54,42 @@ addParameters({
 });
 
 addons.setConfig(ADDONS_CONFIG);
+
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: primaryTheme.__type,
+    toolbar: {
+      icon: 'switchalt',
+      items: [
+        { value: primaryTheme.__type, title: 'Primary Theme' },
+        {
+          value: secondaryTheme.__type,
+          title: 'Secondary Theme',
+        },
+      ],
+    },
+  },
+};
+
+const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
+  const getTheme = (): ThemeType => {
+    const {
+      globals: { theme: contextTheme },
+    } = context;
+
+    return contextTheme === primaryTheme.__type ? primaryTheme : secondaryTheme;
+  };
+
+  const theme = getTheme();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Global styles={resetStyles} />
+      <Global styles={brandStyles(theme)} />
+      <Story {...context} />
+    </ThemeProvider>
+  );
+};
+export const decorators = [withThemeProvider];

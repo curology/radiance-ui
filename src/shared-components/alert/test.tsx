@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import TestRenderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Alert } from './index';
 
@@ -25,7 +25,7 @@ const createNodeMock = (element: ReactElement) => {
 
 describe('Alert UI snapshots', () => {
   test('renders a default alert', () => {
-    const component = TestRenderer.create(<Alert content={alertText} />, {
+    const component = renderer.create(<Alert content={alertText} />, {
       createNodeMock,
     });
 
@@ -34,7 +34,7 @@ describe('Alert UI snapshots', () => {
   });
 
   test('renders success alert', () => {
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Alert content={alertText} type="success" />,
       { createNodeMock },
     );
@@ -44,7 +44,7 @@ describe('Alert UI snapshots', () => {
   });
 
   test('renders error alert', () => {
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Alert content={alertText} type="error" />,
       { createNodeMock },
     );
@@ -54,7 +54,7 @@ describe('Alert UI snapshots', () => {
   });
 
   test('renders a sticky alert', () => {
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Alert content={alertText} duration="sticky" />,
       { createNodeMock },
     );
@@ -64,7 +64,7 @@ describe('Alert UI snapshots', () => {
   });
 
   test('renders custom component passed in content prop', () => {
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Alert content={<CustomContentComponent />} />,
       { createNodeMock },
     );
@@ -76,7 +76,7 @@ describe('Alert UI snapshots', () => {
   test('Alert onExit is triggered on click', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Alert
         content={<CustomContentComponent />}
         onExit={spy}
@@ -93,7 +93,7 @@ describe('Alert UI snapshots', () => {
   test('Alert with custom CTA', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Alert
         content={<CustomContentComponent />}
         type="error"

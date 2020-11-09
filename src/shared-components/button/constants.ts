@@ -1,13 +1,14 @@
-import { COLORS } from '../../constants';
+import { ThemeType } from 'src/constants/themes/types';
 
 // TODO: potentially break out these pairings to the color constants file
-export const textColorsAssociatedWithColors = {
-  [COLORS.primary]: {
-    tint1: COLORS.primaryTint1,
-    tint2: COLORS.primaryTint2,
-  },
-  [COLORS.secondary]: {
-    tint1: COLORS.lavender80,
-    tint2: COLORS.lavender60,
-  },
-};
+export const textColorsAssociatedWithColors = (theme: ThemeType) =>
+  ({
+    [theme.COLORS.primary]: {
+      tint1: theme.COLORS.primaryTint1,
+      tint2: theme.COLORS.primaryTint2,
+    },
+    [theme.COLORS.secondary]: {
+      tint1: theme.COLORS.secondaryTint1,
+      tint2: theme.COLORS.secondaryTint2,
+    },
+  } as const);

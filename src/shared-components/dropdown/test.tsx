@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';
@@ -18,10 +18,13 @@ describe('<Dropdown />', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
       const wrapper = mount(
-        <Dropdown value="test1" options={options} onChange={() => null} />,
+        <Dropdown value="test1" options={options} onChange={() => undefined} />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(wrapper.children().first().name()).toEqual('MobileDropdown');
+
+      expect(wrapper.children().children().first().name()).toEqual(
+        'MobileDropdown',
+      );
     });
   });
 
@@ -30,7 +33,10 @@ describe('<Dropdown />', () => {
       const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
-      expect(wrapper.children().first().name()).toEqual('DesktopDropdown');
+
+      expect(wrapper.children().children().first().name()).toEqual(
+        'DesktopDropdown',
+      );
     });
   });
 });
@@ -74,7 +80,7 @@ describe('<MobileDropdown />', () => {
 
 describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <DesktopDropdown
         borderRadius="4px"
         closeDropdown={() => undefined}
@@ -88,7 +94,7 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(wrapper.find('[role="button"]').text().includes('Test1')).toEqual(
+    expect(wrapper.find('div[role="button"]').text().includes('Test1')).toEqual(
       true,
     );
   });
@@ -96,7 +102,7 @@ describe('<DesktopDropdown />', () => {
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = shallow(
+      const wrapper = mount(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -110,7 +116,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('[role="button"]').simulate('click');
+      wrapper.find('div[role="button"]').simulate('click');
       expect(spy).toHaveBeenCalled();
     });
   });

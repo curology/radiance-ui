@@ -7,12 +7,10 @@ import {
   Title,
   Stories,
 } from '@storybook/addon-docs/blocks';
-import {
-  text, select, number, boolean, 
-} from '@storybook/addon-knobs';
+import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
-import { SPACER, COLORS } from 'src/constants';
+import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
 
@@ -25,10 +23,10 @@ const TooltipContainer = styled.div<{ height?: string }>`
 `;
 
 const TriggerContainer = styled.div`
-  background: ${COLORS.primary};
+  background: ${({ theme }) => theme.COLORS.primary};
   margin: 0 auto;
   padding: ${SPACER.small};
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.COLORS.white};
   text-align: center;
   width: 100%;
 `;

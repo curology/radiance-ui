@@ -27,7 +27,7 @@ export const Usage = () => (
   </React.Fragment>
 );
 
-const sourceCode = `<Typography.Display css={emotionSerializedStyleValue}>Override!</Typography.Display>`;
+const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
 export default {
   title: 'Components/Typography',
