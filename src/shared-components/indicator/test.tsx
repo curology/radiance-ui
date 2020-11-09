@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Indicator } from './index';
 

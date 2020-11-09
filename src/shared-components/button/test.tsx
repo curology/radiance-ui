@@ -1,8 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { primaryTheme } from 'src/constants/themes';
 
-import { COLORS } from '../../constants';
 import CameraIcon from '../../svgs/icons/camera-icon.svg';
 
 import { Button } from './index';
@@ -23,12 +23,18 @@ describe('<Button />', () => {
 
     it('renders with adjustable color', () => {
       const button = mount(
-        <Button buttonColor={COLORS.statusRed} id="red-button">
+        <Button
+          buttonColor={primaryTheme.COLORS.error}
+          onClick={() => undefined}
+          id="red-button"
+        >
           Button Text
         </Button>,
       );
 
-      expect(button.prop('buttonColor')).toEqual(COLORS.statusRed);
+      expect(button.children().prop('buttonColor')).toEqual(
+        primaryTheme.COLORS.error,
+      );
     });
   });
 

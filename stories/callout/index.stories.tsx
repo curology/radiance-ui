@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -11,8 +10,9 @@ import {
 import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { NeckGlyph } from 'src/svgs/glyphs';
-import { COLORS } from 'src/constants';
+import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 
 export const Default = () => (
   <Callout.Container>
@@ -22,13 +22,17 @@ export const Default = () => (
   </Callout.Container>
 );
 
-export const WithColor = () => (
-  <Callout.Container>
-    <Callout color={COLORS.primaryTint2}>
-      Callout with a <strong>custom color</strong>
-    </Callout>
-  </Callout.Container>
-);
+export const WithColor = () => {
+  const theme = useTheme();
+
+  return (
+    <Callout.Container>
+      <Callout color={theme.COLORS.primaryTint2}>
+        Callout with a <strong>custom color</strong>
+      </Callout>
+    </Callout.Container>
+  );
+};
 
 export const WithIcon = () => (
   <Callout.Container>
@@ -45,6 +49,10 @@ export const WithoutContainer = () => (
   </Callout>
 );
 
+WithoutContainer.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs, BREAKPOINTS.md] },
+};
+
 export const WithControls = () => (
   <Callout
     icon={
@@ -58,10 +66,15 @@ export const WithControls = () => (
   </Callout>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Callout',
   component: Callout,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -72,10 +85,9 @@ export default {
             language="tsx"
             code={"import { Callout } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

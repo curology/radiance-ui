@@ -5,29 +5,28 @@ import {
   Heading,
   Source,
   Title,
-  Primary,
   Stories,
 } from '@storybook/addon-docs/blocks';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
-import { SPACER, COLORS } from 'src/constants';
+import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
 
 const TooltipContainer = styled.div<{ height?: string }>`
   max-width: 800px;
-  height: ${({ height = '225px' }) => height};
+  height: ${({ height = '275px' }) => height};
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
 const TriggerContainer = styled.div`
-  background: ${COLORS.purple};
+  background: ${({ theme }) => theme.COLORS.primary};
   margin: 0 auto;
   padding: ${SPACER.small};
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.COLORS.white};
   text-align: center;
   width: 100%;
 `;
@@ -139,6 +138,10 @@ export const WithControls = () => (
   </TooltipContainer>
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
@@ -153,10 +156,9 @@ export default {
             language="tsx"
             code={"import { Tooltip } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

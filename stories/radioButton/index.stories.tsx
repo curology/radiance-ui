@@ -7,12 +7,12 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary as PrimaryBlock,
   Source,
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
@@ -64,21 +64,29 @@ export const Secondary = () => {
   );
 };
 
-export const WithControls = () => (
-  <RadioButton
-    checked={boolean('checked', false)}
-    type={select('type', ['primary', 'secondary'], 'primary')}
-    onClick={(action('radio button clicked'), () => undefined)}
-    icon={
-      boolean('icon', false) ? (
-        <AcneGlyph width={40} height={40} fill="#332e54" />
-      ) : null
-    }
-    size={select('size', ['large', 'small'], 'small')}
-  >
-    {text('children', 'Render radio label here')}
-  </RadioButton>
-);
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <RadioButton
+      checked={boolean('checked', false)}
+      type={select('type', ['primary', 'secondary'], 'primary')}
+      onClick={(action('radio button clicked'), () => undefined)}
+      icon={
+        boolean('icon', false) ? (
+          <AcneGlyph width={40} height={40} fill={theme.COLORS.primary} />
+        ) : null
+      }
+      size={select('size', ['large', 'small'], 'small')}
+    >
+      {text('children', 'Render radio label here')}
+    </RadioButton>
+  );
+};
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
 
 export default {
   title: 'Components/RadioButton',
@@ -94,10 +102,9 @@ export default {
             language="tsx"
             code={"import { RadioButton } from 'radiance-ui';"}
           />
-          <PrimaryBlock />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

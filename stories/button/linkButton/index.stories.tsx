@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -11,8 +10,9 @@ import {
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
-import { COLORS } from 'src/constants';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
 export const Default = () => (
   <LinkButton.Container>
@@ -51,43 +51,58 @@ export const ReactRouterLink = () => {
   );
 };
 
-export const WithColor = () => (
-  <LinkButton.Container>
-    <LinkButton buttonColor={COLORS.statusRed} href="https://www.curology.com">
-      Primary
-    </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="secondary">
-      Secondary
-    </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="tertiary">
-      Tertiary
-    </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} buttonType="quaternary">
-      Quaternary
-    </LinkButton>
-    <LinkButton buttonColor={COLORS.statusRed} disabled>
-      Disabled
-    </LinkButton>
-  </LinkButton.Container>
-);
+export const WithColor = () => {
+  const theme = useTheme();
 
-export const WithControls = () => (
-  <LinkButton.Container>
-    <LinkButton
-      buttonType={select(
-        'buttonType',
-        ['primary', 'secondary', 'tertiary', 'quaternary'],
-        'primary',
-      )}
-      buttonColor={select('buttonColor', COLORS, COLORS.primary)}
-      disabled={boolean('disabled', false)}
-      onClick={action('You clicked a button')}
-      textColor={text('textColor', '')}
-    >
-      {text('children', 'Click it!')}
-    </LinkButton>
-  </LinkButton.Container>
-);
+  return (
+    <LinkButton.Container>
+      <LinkButton
+        buttonColor={theme.COLORS.error}
+        href="https://www.curology.com"
+      >
+        Primary
+      </LinkButton>
+      <LinkButton buttonColor={theme.COLORS.error} buttonType="secondary">
+        Secondary
+      </LinkButton>
+      <LinkButton buttonColor={theme.COLORS.error} buttonType="tertiary">
+        Tertiary
+      </LinkButton>
+      <LinkButton buttonColor={theme.COLORS.error} buttonType="quaternary">
+        Quaternary
+      </LinkButton>
+      <LinkButton buttonColor={theme.COLORS.error} disabled>
+        Disabled
+      </LinkButton>
+    </LinkButton.Container>
+  );
+};
+
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <LinkButton.Container>
+      <LinkButton
+        buttonType={select(
+          'buttonType',
+          ['primary', 'secondary', 'tertiary', 'quaternary'],
+          'primary',
+        )}
+        buttonColor={select('buttonColor', theme.COLORS, theme.COLORS.primary)}
+        disabled={boolean('disabled', false)}
+        onClick={action('You clicked a button')}
+        textColor={text('textColor', '') as ThemeColors}
+      >
+        {text('children', 'Click it!')}
+      </LinkButton>
+    </LinkButton.Container>
+  );
+};
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
 
 export default {
   title: 'Components/Button/LinkButton',
@@ -103,10 +118,9 @@ export default {
             language="tsx"
             code={"import { LinkButton } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

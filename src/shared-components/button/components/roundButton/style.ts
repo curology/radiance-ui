@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
-import { ANIMATION, COLORS } from '../../../../constants';
+import { ANIMATION, ThemeColors, ThemeType } from '../../../../constants';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
 
@@ -39,12 +39,12 @@ export const RoundButtonBase = styled(ButtonBase)`
   ${({ isLoading, disabled }) =>
     !isLoading &&
     !disabled &&
-    css`
+    `
       &:hover {
         transition: all ${ANIMATION.defaultTiming} ease-in-out;
         opacity: 1;
       }
-    `};
+    `}
 
   & > svg {
     opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
@@ -53,16 +53,16 @@ export const RoundButtonBase = styled(ButtonBase)`
   }
 `;
 
-export const roundButtonLoader = (disabled: boolean) => css`
+export const roundButtonLoader = (disabled: boolean, theme: ThemeType) => css`
   width: 36px;
   margin: -3px -3px 0 0;
 
   ${disabled &&
-    `
+  `
     & span {
-      background-color: ${COLORS.white};
+      background-color: ${theme.COLORS.white};
     }
-  `};
+  `}
 `;
 
 /**
@@ -71,7 +71,10 @@ export const roundButtonLoader = (disabled: boolean) => css`
  * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
  * @return string         hex string of the alternate color (e.g. #efefef)
  */
-const determineAlternateTextColor = (buttonColor: string) => {
+const determineAlternateTextColor = (
+  buttonColor: ThemeColors,
+  theme: ThemeType,
+) => {
   // create a lighter and darker version of the text
   const lighterVersion = tinycolor(buttonColor)
     .lighten(10)
@@ -87,7 +90,7 @@ const determineAlternateTextColor = (buttonColor: string) => {
   const contrastLevel: tinycolor.WCAG2Options = { level: 'AA', size: 'large' };
 
   const lighterIsReadable = tinycolor.isReadable(
-    COLORS.defaultBackground,
+    theme.COLORS.defaultBackground,
     lighterVersion,
     contrastLevel,
   );
@@ -102,20 +105,27 @@ const determineAlternateTextColor = (buttonColor: string) => {
  * @param  string textColor   custom override for the text color
  * @return string             hex string of the text color
  */
-const buttonTextColor = (buttonColor: string, textColor: string) => {
+const buttonTextColor = (
+  buttonColor: ThemeColors,
+  textColor: string,
+  theme: ThemeType,
+) => {
   if (textColor !== '') {
     return textColor;
   }
 
-  return textColorsAssociatedWithColors[buttonColor]
-    ? textColorsAssociatedWithColors[buttonColor].tint1
-    : determineAlternateTextColor(buttonColor);
+  const tintedTextColor = textColorsAssociatedWithColors(theme)[buttonColor];
+
+  return tintedTextColor
+    ? tintedTextColor.tint1
+    : determineAlternateTextColor(buttonColor, theme);
 };
 
 export const roundButtonTextStyles = (
-  buttonColor: string,
+  buttonColor: ThemeColors,
   textColor: string,
+  theme: ThemeType,
 ) => css`
-  color: ${buttonTextColor(buttonColor, textColor)};
+  color: ${buttonTextColor(buttonColor, textColor, theme)};
   margin: 10px 0;
 `;

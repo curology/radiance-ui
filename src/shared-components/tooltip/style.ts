@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 import { ArrowAlignTypes, PositionTypes } from '.';
 
@@ -102,10 +102,10 @@ export const TooltipBox = styled.div<{
       bottom: auto;
     `};
 
-  background: ${COLORS.primary};
+  background: ${({ theme }) => theme.COLORS.primary};
   box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
   border-radius: ${({ isSmall }) => (isSmall ? SPACER.xsmall : SPACER.small)};
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.COLORS.white};
   min-width: ${({ isSmall }) => (isSmall ? '0px' : '100px')};
   opacity: ${({ open }) => (open ? '1' : '0')};
   padding: ${({ isSmall }) =>

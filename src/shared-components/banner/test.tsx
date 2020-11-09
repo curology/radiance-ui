@@ -1,11 +1,11 @@
 import React from 'react';
-import TestRenderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Banner } from './index';
 
 describe('Banner UI snapshots', () => {
   test('renders success type and text', () => {
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Banner content="Success Banner" type="success" />,
     );
 
@@ -14,7 +14,7 @@ describe('Banner UI snapshots', () => {
   });
 
   test('renders error type and text', () => {
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Banner content="Error banner" type="error" />,
     );
 
@@ -23,7 +23,7 @@ describe('Banner UI snapshots', () => {
   });
 
   test('renders info type and text', () => {
-    const component = TestRenderer.create(<Banner content="Default banner" />);
+    const component = renderer.create(<Banner content="Default banner" />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe('Banner UI snapshots', () => {
   test('Banner with click handler', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const component = TestRenderer.create(
+    const component = renderer.create(
       <Banner content="Banner with click handler" onClick={spy} />,
     );
 

@@ -1,13 +1,10 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styled, { StyledComponent } from '@emotion/styled';
-import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
-import {
-  SPACER, BOX_SHADOWS, COLORS, MEDIA_QUERIES, 
-} from '../../constants';
+import { SPACER, BOX_SHADOWS, MEDIA_QUERIES, ThemeType } from '../../constants';
 
-const clickableStyle = css`
+const clickableStyle = `
   box-shadow: ${BOX_SHADOWS.clickable};
   cursor: pointer;
   transition: box-shadow 200ms;
@@ -17,7 +14,7 @@ const clickableStyle = css`
   }
 `;
 
-const messageStyle = css`
+const messageStyle = `
   border-radius: 16px;
   box-shadow: ${BOX_SHADOWS.message};
 `;
@@ -31,15 +28,15 @@ const getContainerTypeStyles = (type?: ContainerType) => {
     case 'clickable':
       return clickableStyle;
     default:
-      return css``;
+      return ``;
   }
 };
 
-export const containerStyles = (type?: ContainerType) => css`
-  background-color: ${COLORS.white};
-  border: 1px solid ${COLORS.border};
+export const containerStyles = (theme: ThemeType, type?: ContainerType) => `
+  background-color: ${theme.COLORS.white};
+  border: 1px solid ${theme.COLORS.border};
 
-  ${getContainerTypeStyles(type)};
+  ${getContainerTypeStyles(type)}
 `;
 
 export const Section = styled.div`
@@ -53,7 +50,7 @@ export const Section = styled.div`
 
 export const Divider = styled.div`
   margin: 0 ${SPACER.large};
-  border-bottom: 1px solid ${COLORS.divider};
+  border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.divider}`};
 
   ${MEDIA_QUERIES.lgUp} {
     margin: 0 ${SPACER.x2large};
@@ -74,9 +71,9 @@ export const Image = styled.img`
 type StyledContainer = StyledComponent<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   {
-    type?: 'clickable' | 'message' | undefined;
+    type?: 'clickable' | 'message';
   },
-  any
+  Record<string, unknown>
 >;
 
 type CompositeContainer = StyledContainer & {
@@ -89,7 +86,7 @@ type CompositeContainer = StyledContainer & {
 // styled component is not well supported. CompositeContainer defines those
 // subcomponents ahead of time to account for styled.div limitations.
 const Container = styled.div<{ type?: ContainerType }>`
-  ${({ type }) => containerStyles(type)};
+  ${({ theme, type }) => containerStyles(theme, type)};
 ` as CompositeContainer;
 
 Container.Section = Section;

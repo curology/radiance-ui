@@ -1,20 +1,23 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import {
-  ANIMATION, COLORS, SPACER, BOX_SHADOWS, 
+  ANIMATION,
+  SPACER,
+  BOX_SHADOWS,
+  ThemeColors,
+  ThemeType,
 } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
 import { ButtonTypeWithAction } from '.';
 
-const primaryStyles = (buttonColor: string) => css`
+const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   background-color: ${buttonColor};
   border-color: ${buttonColor};
-  color: ${COLORS.white};
-  fill: ${COLORS.white};
+  color: ${theme.COLORS.white};
+  fill: ${theme.COLORS.white};
   &:visited,
   &:hover {
     opacity: 0.8;
@@ -22,11 +25,15 @@ const primaryStyles = (buttonColor: string) => css`
   &:focus,
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
-    color: ${COLORS.white};
+    color: ${theme.COLORS.white};
   }
 `;
 
-const secondaryStyles = (isLoading: boolean, buttonColor: string) => css`
+const secondaryStyles = (
+  isLoading: boolean,
+  buttonColor: ThemeColors,
+  theme: ThemeType,
+) => `
   background-color: transparent;
   border-color: ${buttonColor};
   color: ${buttonColor};
@@ -37,12 +44,12 @@ const secondaryStyles = (isLoading: boolean, buttonColor: string) => css`
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
     background-color: ${isLoading ? 'inherit' : buttonColor};
-    color: ${isLoading ? buttonColor : COLORS.white};
-    fill: ${isLoading ? 'inherit' : COLORS.white};
+    color: ${isLoading ? buttonColor : theme.COLORS.white};
+    fill: ${isLoading ? 'inherit' : theme.COLORS.white};
   }
 `;
 
-const tertiaryStyles = (buttonColor: string) => css`
+const tertiaryStyles = (buttonColor: ThemeColors) => `
   border-color: transparent;
   background-color: transparent;
   color: ${buttonColor};
@@ -57,15 +64,19 @@ const tertiaryStyles = (buttonColor: string) => css`
   }
 `;
 
-const quaternaryStyles = (buttonColor: string) => css`
+const quaternaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   border-color: transparent;
   background-color: transparent;
-  color: ${textColorsAssociatedWithColors[buttonColor]
-    ? textColorsAssociatedWithColors[buttonColor].tint2
-    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
-  fill: ${textColorsAssociatedWithColors[buttonColor]
-    ? textColorsAssociatedWithColors[buttonColor].tint2
-    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
+  color: ${
+    textColorsAssociatedWithColors(theme)[buttonColor]
+      ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
+      : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
+  };
+  fill: ${
+    textColorsAssociatedWithColors(theme)[buttonColor]
+      ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
+      : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
+  };
 
   &:hover,
   &:focus,
@@ -73,16 +84,22 @@ const quaternaryStyles = (buttonColor: string) => css`
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${textColorsAssociatedWithColors[buttonColor]
-    ? textColorsAssociatedWithColors[buttonColor].tint2
-    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()};
+    color: ${
+      textColorsAssociatedWithColors(theme)[buttonColor]
+        ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
+        : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
+    };
   }
 `;
 
-const actionStyles = (isLoading: boolean, buttonColor: string) => css`
+const actionStyles = (
+  isLoading: boolean,
+  buttonColor: ThemeColors,
+  theme: ThemeType,
+) => `
   border-width: 1px;
-  border-color: ${COLORS.border};
-  background-color: ${COLORS.white};
+  border-color: ${theme.COLORS.border};
+  background-color: ${theme.COLORS.white};
   color: ${buttonColor};
   fill: ${buttonColor};
   box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickable};
@@ -92,7 +109,7 @@ const actionStyles = (isLoading: boolean, buttonColor: string) => css`
   }
 `;
 
-const loadingStyles = css`
+const loadingStyles = `
   cursor: not-allowed;
 
   &:hover {
@@ -100,17 +117,17 @@ const loadingStyles = css`
   }
 `;
 
-const disabledStyles = css`
-  background-color: ${COLORS.disabled};
-  border-color: ${COLORS.disabled};
-  color: ${COLORS.textDisabled};
+const disabledStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.disabled};
+  border-color: ${theme.COLORS.disabled};
+  color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
-  fill: ${COLORS.textDisabled};
+  fill: ${theme.COLORS.textDisabled};
 
   &:visited,
   &:hover {
     opacity: 1;
-    color: ${COLORS.textDisabled};
+    color: ${theme.COLORS.textDisabled};
   }
 `;
 
@@ -118,33 +135,35 @@ function parseTheme(
   disabled: boolean,
   buttonType: ButtonTypeWithAction,
   isLoading: boolean,
-  buttonColor: string,
+  buttonColor: ThemeColors,
+  theme: ThemeType,
 ) {
   if (disabled) {
-    return disabledStyles;
+    return disabledStyles(theme);
   }
 
   switch (buttonType) {
     case 'secondary':
-      return secondaryStyles(isLoading, buttonColor);
+      return secondaryStyles(isLoading, buttonColor, theme);
     case 'tertiary':
       return tertiaryStyles(buttonColor);
     case 'quaternary':
-      return quaternaryStyles(buttonColor);
+      return quaternaryStyles(buttonColor, theme);
     case 'action':
-      return actionStyles(isLoading, buttonColor);
+      return actionStyles(isLoading, buttonColor, theme);
     default:
-      return primaryStyles(buttonColor);
+      return primaryStyles(buttonColor, theme);
   }
 }
 
 type BaseButtonStylesTypes = {
   disabled: boolean;
   buttonType: ButtonTypeWithAction;
-  buttonColor: string;
+  buttonColor: ThemeColors;
   isLoading?: boolean;
-  textColor: string;
+  textColor: ThemeColors;
   isFullWidth?: boolean;
+  theme: ThemeType;
 };
 
 export const baseButtonStyles = ({
@@ -154,8 +173,9 @@ export const baseButtonStyles = ({
   isLoading,
   textColor,
   isFullWidth,
-}: BaseButtonStylesTypes) => css`
-  ${TYPOGRAPHY_STYLE.button};
+  theme,
+}: BaseButtonStylesTypes) => `
+  ${TYPOGRAPHY_STYLE.button(theme)}
   appearance: none;
   border-radius: ${SPACER.xsmall};
   border-style: solid;
@@ -180,29 +200,34 @@ export const baseButtonStyles = ({
     box-shadow: ${BOX_SHADOWS.focus};
   }
 
-  ${parseTheme(disabled, buttonType, !!isLoading, buttonColor)};
-  ${isLoading && loadingStyles};
+  ${parseTheme(disabled, buttonType, !!isLoading, buttonColor, theme)}
+  ${isLoading ? loadingStyles : ''}
 
-  ${!!textColor &&
-  !disabled &&
-  `
+  ${
+    !!textColor && !disabled
+      ? `
     color: ${textColor};
     fill: ${textColor};
-  `};
+  `
+      : ''
+  }
 
-  ${isFullWidth
-    ? `
+  ${
+    isFullWidth
+      ? `
       width: 100%;
     `
-    : `
+      : `
     min-width: 208px;
     max-width: 325px;
     width: max-content;
-
-    `};
+    `
+  }
 `;
 
-export const ButtonBase = styled.button(baseButtonStyles);
+export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>`
+  ${baseButtonStyles}
+`;
 
 // align-items conditional fixes slight button height misalignment for truthy scenario
 // See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
@@ -228,21 +253,21 @@ export const ButtonContents = styled.div<{
 
   ${({ isLoading, hasIcon }) => {
     if (isLoading && hasIcon) {
-      return css`
+      return `
         transform: translateX(-30px);
       `;
     }
 
     if (isLoading && !hasIcon) {
-      return css`
+      return `
         transform: translateX(-15px);
       `;
     }
 
-    return css`
+    return `
       transform: translateX(0);
     `;
-  }};
+  }}
 
   & > svg {
     opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
@@ -262,7 +287,7 @@ export const ButtonText = styled.span<{
 
   ${({ isLoading, hasIcon }) => {
     if (isLoading && !hasIcon) {
-      return css`
+      return `
         padding-left: ${SPACER.medium};
       `;
     }

@@ -17,9 +17,7 @@ type VerificationMessagesProps = {
   /**
    * Object of key and React Node message pair. It also accepts an array of React Node as value
    */
-  messages?: {
-    [key: string]: MessageType;
-  };
+  messages?: Record<string, MessageType>;
   type?: MessagesTypes;
 };
 
@@ -38,28 +36,29 @@ export const VerificationMessages = ({
   type = 'error',
 }: VerificationMessagesProps) => {
   const messageKeys = Object.keys(messages);
-
-  if (messageKeys.length === 0) {
-    return null;
-  }
+  const showMessages = messageKeys.length > 0;
 
   return (
     <TransitionGroup component={centered ? CenteredMessageList : MessageList}>
-      {messageKeys
-        .filter((key) => {
-          const message = messages[key];
-          if (!Array.isArray(message)) {
-            return true;
-          }
-          return message.length > 0;
-        })
-        .map((key) => (
-          <HelperTransition key={key}>
-            <MessageItem type={type}>
-              {formatMessage(messages[key])}
-            </MessageItem>
-          </HelperTransition>
-        ))}
+      {showMessages ? (
+        messageKeys
+          .filter((key) => {
+            const message = messages[key];
+            if (!Array.isArray(message)) {
+              return true;
+            }
+            return message.length > 0;
+          })
+          .map((key) => (
+            <HelperTransition key={key}>
+              <MessageItem type={type}>
+                {formatMessage(messages[key])}
+              </MessageItem>
+            </HelperTransition>
+          ))
+      ) : (
+        <React.Fragment />
+      )}
     </TransitionGroup>
   );
 };

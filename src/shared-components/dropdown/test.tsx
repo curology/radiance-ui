@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow, mount } from 'enzyme';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';
@@ -18,10 +18,13 @@ describe('<Dropdown />', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
       const wrapper = mount(
-        <Dropdown value="test1" options={options} onChange={() => null} />,
+        <Dropdown value="test1" options={options} onChange={() => undefined} />,
       );
       delete window.document.documentElement.ontouchstart;
-      expect(wrapper.children().first().name()).toEqual('MobileDropdown');
+
+      expect(wrapper.children().children().first().name()).toEqual(
+        'MobileDropdown',
+      );
     });
   });
 
@@ -30,7 +33,10 @@ describe('<Dropdown />', () => {
       const wrapper = mount(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
-      expect(wrapper.children().first().name()).toEqual('DesktopDropdown');
+
+      expect(wrapper.children().children().first().name()).toEqual(
+        'DesktopDropdown',
+      );
     });
   });
 });
@@ -41,9 +47,10 @@ describe('<MobileDropdown />', () => {
       const tree = renderer
         .create(
           <MobileDropdown
-            onSelectChange={() => undefined}
+            onMobileSelectChange={() => undefined}
             borderRadius="4px"
             options={options}
+            textAlign="left"
           />,
         )
         .toJSON();
@@ -59,8 +66,9 @@ describe('<MobileDropdown />', () => {
         <MobileDropdown
           borderRadius="4px"
           options={options}
-          onSelectChange={spy}
+          onMobileSelectChange={spy}
           value=""
+          textAlign="left"
         />,
       );
 
@@ -72,19 +80,21 @@ describe('<MobileDropdown />', () => {
 
 describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <DesktopDropdown
         borderRadius="4px"
-        options={options}
+        closeDropdown={() => undefined}
         currentOption={{ value: 'test1', label: 'Test1' }}
+        isOpen={false}
+        onDesktopSelectChange={() => undefined}
+        options={options}
         optionsContainerMaxHeight="250px"
-        onSelectClick={() => null}
-        closeDropdown={() => null}
-        onOptionClick={() => null}
+        textAlign="left"
+        toggleDropdown={() => undefined}
       />,
     );
 
-    expect(wrapper.find('[role="button"]').text().includes('Test1')).toEqual(
+    expect(wrapper.find('div[role="button"]').text().includes('Test1')).toEqual(
       true,
     );
   });
@@ -92,19 +102,21 @@ describe('<DesktopDropdown />', () => {
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = shallow(
+      const wrapper = mount(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
-          onSelectClick={spy}
+          toggleDropdown={spy}
           optionsContainerMaxHeight="250px"
-          closeDropdown={() => null}
-          onOptionClick={() => null}
+          closeDropdown={() => undefined}
+          onDesktopSelectChange={() => undefined}
+          textAlign="left"
+          isOpen={false}
         />,
       );
 
-      wrapper.find('[role="button"]').simulate('click');
+      wrapper.find('div[role="button"]').simulate('click');
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -117,11 +129,12 @@ describe('<DesktopDropdown />', () => {
           borderRadius="4px"
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
-          onOptionClick={spy}
+          onDesktopSelectChange={spy}
           isOpen
           optionsContainerMaxHeight="250px"
-          onSelectClick={() => null}
+          toggleDropdown={() => null}
           closeDropdown={() => null}
+          textAlign="left"
         />,
       );
 

@@ -4,14 +4,13 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Chip } from 'src/shared-components';
 import { text, select } from '@storybook/addon-knobs';
-import { SPACER } from 'src/constants';
+import { BREAKPOINTS, SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
 const ChipContainer = styled.div`
@@ -40,10 +39,15 @@ export const WithControls = () => (
   />
 );
 
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 export default {
   title: 'Components/Chip',
   component: Chip,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -51,10 +55,9 @@ export default {
           <Description />
           <Heading>Usage:</Heading>
           <Source language="tsx" code={"import { Chip } from 'radiance-ui';"} />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

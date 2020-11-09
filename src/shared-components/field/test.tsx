@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { MessageItem } from '../verificationMessages/style';
 

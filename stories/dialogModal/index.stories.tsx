@@ -7,14 +7,17 @@ import {
   Heading,
   Anchor,
   Source,
+  Story,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { ANIMATION } from 'src/constants';
+import { modalStoryDecoratorForChromatic } from 'stories/utils';
 
 const DIALOG_MODAL_STORY_ID_PREFIX = 'components-dialogmodal--';
 
-export const Default = ({ isOpen = true }) => {
-  const [openModal, setOpenModal] = useState(isOpen);
+export const Default = () => {
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <React.Fragment>
@@ -45,9 +48,46 @@ export const Default = ({ isOpen = true }) => {
 };
 
 Default.id = `${DIALOG_MODAL_STORY_ID_PREFIX}default`;
+Default.parameters = {
+  chromatic: { disable: true },
+};
 
-export const WithCloseIcon = ({ isOpen = true }) => {
-  const [withCloseIcon, setWithCloseIcon] = useState(isOpen);
+export const DefaultOpened = () => {
+  const [openModal, setOpenModal] = useState(true);
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setOpenModal(true)}>open dialog modal</Button>
+
+      {openModal && (
+        <DialogModal title="Heads up!">
+          <p>
+            This will remove the cleanser and moisturizer from your free trial,
+            too. Just the custom bottle will be sent your way!
+          </p>
+          <Button.Container>
+            <Button isFullWidth onClick={() => setOpenModal(false)}>
+              Yes, remove
+            </Button>
+            <Button
+              isFullWidth
+              onClick={() => setOpenModal(false)}
+              buttonType="tertiary"
+            >
+              never mind
+            </Button>
+          </Button.Container>
+        </DialogModal>
+      )}
+    </React.Fragment>
+  );
+};
+
+DefaultOpened.storyName = 'Default (Opened)';
+DefaultOpened.decorators = [modalStoryDecoratorForChromatic];
+
+export const WithCloseIcon = () => {
+  const [withCloseIcon, setWithCloseIcon] = useState(false);
 
   return (
     <React.Fragment>
@@ -80,11 +120,51 @@ export const WithCloseIcon = ({ isOpen = true }) => {
 };
 
 WithCloseIcon.id = `${DIALOG_MODAL_STORY_ID_PREFIX}with-close-icon`;
+WithCloseIcon.parameters = {
+  chromatic: { disable: true },
+};
+
+export const WithCloseIconOpened = () => {
+  const [withCloseIcon, setWithCloseIcon] = useState(true);
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setWithCloseIcon(true)}>with close icon</Button>
+      {withCloseIcon && (
+        <DialogModal
+          title="Heads up!"
+          onCloseIconClick={() => setWithCloseIcon(false)}
+        >
+          <p>
+            This will remove the cleanser and moisturizer from your free trial,
+            too. Just the custom bottle will be sent your way!
+          </p>
+          <Button.Container>
+            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+              Yes, remove
+            </Button>
+            <Button
+              isFullWidth
+              onClick={() => setWithCloseIcon(false)}
+              buttonType="tertiary"
+            >
+              never mind
+            </Button>
+          </Button.Container>
+        </DialogModal>
+      )}
+    </React.Fragment>
+  );
+};
+
+WithCloseIconOpened.storyName = 'With Close Icon (Opened)';
+WithCloseIconOpened.decorators = [modalStoryDecoratorForChromatic];
 
 export default {
   title: 'Components/DialogModal',
   component: DialogModal,
   parameters: {
+    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 25 },
     docs: {
       page: () => (
         <React.Fragment>
@@ -99,20 +179,19 @@ export default {
           <ArgsTable />
           <Heading>Stories</Heading>
           <Description>
-            Source code for the stories can be found in the individual story
-            canvas tabs. Keeping the modals closed-by-default on the docs page
-            (unlike the open-by-default configuration on the canvas pages)
-            interferes with Storybook source inference.
+            The below stories are the not-open-by-default versions of the
+            modals. We define open stories separately solely for Chromatic
+            visual regression testing.
           </Description>
           <Heading>Default</Heading>
           <Canvas>
-            <Default isOpen={false} />
+            <Story id={Default.id} />
           </Canvas>
           <Anchor storyId={Default.id} />
           <Heading>With Close Icon</Heading>
           <Anchor storyId={WithCloseIcon.id} />
           <Canvas>
-            <WithCloseIcon isOpen={false} />
+            <Story id={WithCloseIcon.id} />
           </Canvas>
         </React.Fragment>
       ),

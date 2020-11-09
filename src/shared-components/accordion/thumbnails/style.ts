@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { style as TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
-import { COLORS, SPACER } from 'src/constants';
+import { SPACER } from 'src/constants';
 
 export const Container = styled.div`
   display: flex;
@@ -35,10 +35,10 @@ export const ThumbnailImage = styled.img`
 
 export const MultiplesContainer = styled.div`
   ${thumbnailBase}
-  background-color: ${COLORS.purple15};
+  background-color: ${({ theme }) => theme.COLORS.defaultBorder};
 `;
 
 export const MultiplesText = styled.div`
-  ${TYPOGRAPHY_STYLE.label};
+  ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-size: 10px;
 `;

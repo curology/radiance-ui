@@ -1,20 +1,19 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { Accordion } from './index';
 
-const testAccordion = {
+const testAccordionProps = {
   title: <div>title</div>,
   isOpen: false,
   onClick: (): void => undefined,
   children: <div>expansion</div>,
 };
 
-/* eslint-disable react/jsx-props-no-spreading */
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
-    const component = renderer.create(<Accordion {...testAccordion} />);
+    const component = renderer.create(<Accordion {...testAccordionProps} />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -22,7 +21,7 @@ describe('<Accordion />', () => {
 
   test('renders no border accordion', () => {
     const component = renderer.create(
-      <Accordion noBorder {...testAccordion} />,
+      <Accordion {...testAccordionProps} noBorder />,
     );
 
     const tree = component.toJSON();
@@ -31,7 +30,7 @@ describe('<Accordion />', () => {
 
   test('renders disabled accordion', () => {
     const component = renderer.create(
-      <Accordion disabled {...testAccordion} />,
+      <Accordion {...testAccordionProps} disabled />,
     );
 
     const tree = component.toJSON();
@@ -40,13 +39,14 @@ describe('<Accordion />', () => {
 
   test('invokes onClick when title is clicked', () => {
     const spy = jest.fn();
-    const titleIndex = 0;
 
-    const component = shallow(<Accordion {...testAccordion} onClick={spy} />);
-    const title = component.childAt(titleIndex);
+    const component = mount(
+      <Accordion {...testAccordionProps} onClick={spy} />,
+    );
+
+    const title = component.find('div[role="button"]');
 
     title.simulate('click');
     expect(spy).toHaveBeenCalled();
   });
 });
-/* eslint-enable react/jsx-props-no-spreading */

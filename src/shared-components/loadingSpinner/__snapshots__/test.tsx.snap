@@ -65,7 +65,7 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
   display: block;
   height: 20px;
   width: 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 50%;
   opacity: 0;
   -webkit-animation-name: animation-0;
@@ -101,18 +101,12 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
   >
     <span
       className="emotion-0 emotion-1"
-      color="#FFFFFF"
-      size="20px"
     />
     <span
       className="emotion-0 emotion-1"
-      color="#FFFFFF"
-      size="20px"
     />
     <span
       className="emotion-0 emotion-1"
-      color="#FFFFFF"
-      size="20px"
     />
   </div>
 </div>
@@ -219,18 +213,12 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
   >
     <span
       className="emotion-0 emotion-1"
-      color="#332e54"
-      size="14px"
     />
     <span
       className="emotion-0 emotion-1"
-      color="#332e54"
-      size="14px"
     />
     <span
       className="emotion-0 emotion-1"
-      color="#332e54"
-      size="14px"
     />
   </div>
 </div>

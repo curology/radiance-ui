@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Title,
   Anchor,
@@ -39,6 +38,8 @@ export const Standard = () => {
     </Accordion.Container>
   );
 };
+
+Standard.id = `${ACCORDION_STORY_ID_PREFIX}standard`;
 
 export const NoBorder = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -115,11 +116,13 @@ export const WithControls = () => (
     <Accordion
       title={
         <Accordion.Content>
-          <Accordion.Truncate>{text('Title text', 'Title')}</Accordion.Truncate>
+          <Accordion.Truncate>
+            {text('Title text', 'Title text: Use Knobs To Modify Component')}
+          </Accordion.Truncate>
         </Accordion.Content>
       }
       onClick={action('Accordion clicked')}
-      isOpen={boolean('isOpen', false)}
+      isOpen={boolean('isOpen', true)}
       noBorder={boolean('noBorder', false)}
       disabled={boolean('disabled', false)}
       rightAlignArrow={boolean('rightAlignArrow', false)}
@@ -132,6 +135,10 @@ export const WithControls = () => (
 );
 
 WithControls.id = `${ACCORDION_STORY_ID_PREFIX}with-controls`;
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
 
 export default {
   title: 'Components/Accordion',
@@ -147,10 +154,14 @@ export default {
             language="tsx"
             code={"import { Accordion } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
           <Heading>Stories</Heading>
+          <Anchor storyId={Standard.id} />
+          <Heading>Standard</Heading>
+          <Canvas>
+            <Story id={Standard.id} />
+          </Canvas>
           <Anchor storyId={NoBorder.id} />
           <Heading>No Border</Heading>
           <Description>

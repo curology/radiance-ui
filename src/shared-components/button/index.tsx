@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
+import { useTheme } from 'emotion-theming';
 
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
@@ -9,11 +9,11 @@ import withDeprecationWarning from '../../utils/withDeprecationWarning';
 import { LinkButton } from './components/linkButton';
 import RoundButton from './components/roundButton';
 import { TextButton } from './components/textButton';
-import { COLORS, COLORS_PROP_TYPES } from '../../constants';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from './deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**
@@ -22,10 +22,7 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type ButtonTypeWithAction = ButtonType | 'action';
 
 type ButtonProps = {
-  /**
-   * TODO-TS: Limit type from string to COLORS constants options
-   */
-  buttonColor?: string;
+  buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
    */
@@ -47,13 +44,15 @@ type ButtonProps = {
    * When loading, onClick function execution is disallowed
    */
   isLoading?: boolean;
-  loading?: boolean | undefined;
-  onClick?: () => void;
+  loading?: boolean;
+  onClick?: (
+    event: React.SyntheticEvent<HTMLButtonElement>,
+  ) => void | Promise<void> | boolean;
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: string;
-  [key: string]: any;
+  textColor?: ThemeColors;
+  [key: string]: unknown;
 };
 
 /**
@@ -63,99 +62,79 @@ type ButtonProps = {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export class Button extends React.Component<ButtonProps> {
-  static Container = Container;
+export const Button = ({
+  buttonColor,
+  buttonType = 'primary',
+  children,
+  disabled = false,
+  icon = null,
+  isFullWidth = false,
+  isLoading = false,
+  loading = undefined,
+  onClick,
+  textColor = '',
+  ...rest
+}: ButtonProps) => {
+  const theme = useTheme();
+  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const loadingVal = loading === undefined ? isLoading : loading;
 
-  static propTypes = {
-    buttonColor: COLORS_PROP_TYPES,
-    buttonType: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'tertiary',
-      'quaternary',
-    ]),
-    children: PropTypes.node.isRequired,
-    disabled: PropTypes.bool,
-    icon: PropTypes.node,
-    isFullWidth: PropTypes.bool,
-    isLoading: PropTypes.bool,
-    loading: isLoadingPropFunction,
-    onClick: PropTypes.func,
-    textColor: PropTypes.string,
-  };
-
-  static defaultProps = {
-    buttonColor: COLORS.primary,
-    buttonType: 'primary',
-    disabled: false,
-    icon: null,
-    isFullWidth: false,
-    isLoading: false,
-    loading: undefined,
-    onClick: () => undefined,
-    textColor: '',
-  };
-
-  render() {
-    const {
-      buttonColor = COLORS.primary,
-      buttonType = 'primary',
-      children,
-      disabled = false,
-      icon = null,
-      isFullWidth = false,
-      isLoading = false,
-      loading = undefined,
-      onClick = () => undefined,
-      textColor = '',
-      ...rest
-    } = this.props;
-
-    const loadingVal = loading === undefined ? isLoading : loading;
-
-    return (
-      <ButtonBase
-        disabled={disabled}
-        onClick={
-          !disabled && !loadingVal ? onClick : (event) => event.preventDefault()
-        }
-        buttonType={buttonType}
-        buttonColor={buttonColor}
-        isLoading={loadingVal}
-        type="button"
-        textColor={textColor}
+  return (
+    <ButtonBase
+      buttonColor={buttonColorWithTheme}
+      buttonType={buttonType}
+      disabled={disabled}
+      isFullWidth={isFullWidth}
+      isLoading={loadingVal}
+      onClick={
+        !disabled && !loadingVal ? onClick : (event) => event.preventDefault()
+      }
+      textColor={textColor}
+      type="button"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
+    >
+      <ButtonContents
+        hasIcon={!!icon}
         isFullWidth={isFullWidth}
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...rest}
+        isLoading={loadingVal}
       >
-        <ButtonContents
-          isLoading={loadingVal}
-          hasIcon={!!icon}
-          isFullWidth={isFullWidth}
-        >
-          {icon}
-          <ButtonText
-            isLoading={loadingVal}
-            hasIcon={!!icon}
-            css={css`
-              padding-top: 2px;
-            `}
-          >
-            {children}
-          </ButtonText>
-        </ButtonContents>
-        <Loader
-          buttonColor={buttonColor}
-          buttonType={buttonType}
-          disabled={disabled}
-          isFullWidth={isFullWidth}
-          isLoading={loadingVal}
-          textColor={textColor}
-        />
-      </ButtonBase>
-    );
-  }
-}
+        {icon}
+        <ButtonText hasIcon={!!icon} isLoading={loadingVal}>
+          {children}
+        </ButtonText>
+      </ButtonContents>
+      <Loader
+        buttonColor={buttonColorWithTheme}
+        buttonType={buttonType}
+        disabled={disabled}
+        isFullWidth={isFullWidth}
+        isLoading={loadingVal}
+        textColor={textColor}
+      />
+    </ButtonBase>
+  );
+};
+
+Button.Container = Container;
+
+Button.propTypes = {
+  buttonColor: COLORS_PROP_TYPES,
+  buttonType: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'quaternary',
+  ]),
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  icon: PropTypes.node,
+  isFullWidth: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  loading: isLoadingPropFunction,
+  onClick: PropTypes.func,
+  textColor: PropTypes.string,
+};
 
 export { LinkButton, RoundButton, TextButton };
 export default withDeprecationWarning(Button, deprecatedProperties);

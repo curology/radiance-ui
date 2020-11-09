@@ -3,5 +3,16 @@
   "compilerOptions": {
     "baseUrl": "../",
     "noEmit": true
-  }
+  },
+  "include": [
+    "../src/**/*.ts",
+    "../src/**/*.js",
+    "../src/**/*.tsx",
+    "../stories/**/*.ts",
+    "../stories/**/*.js",
+    "../stories/**/*.tsx",
+    "../tests/**/*.ts",
+    "../tests/**/*.tsx",
+    "../types/**/*.ts"
+  ]
 }

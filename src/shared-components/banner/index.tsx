@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
-import { COLORS } from '../../constants';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
@@ -23,8 +23,8 @@ export type BannerType = 'default' | 'success' | 'error' | 'danger';
 
 type BannerProps = {
   content: React.ReactNode;
-  type?: BannerType;
   onClick?: () => void;
+  type?: BannerType;
 };
 
 /**
@@ -34,7 +34,8 @@ type BannerProps = {
  *
  * Banners are not dismissable.
  */
-export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
+export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
+  const theme = useTheme();
   const Icon = bannerIconMapping[type];
 
   return (
@@ -45,7 +46,7 @@ export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
     >
       <MainContainer>
         <IconContainer>
-          <Icon fill={COLORS.white} />
+          <Icon fill={theme.COLORS.white} />
         </IconContainer>
         <ContentContainer>{content}</ContentContainer>
       </MainContainer>
@@ -55,6 +56,6 @@ export const Banner = ({ content, type = 'default', onClick }: BannerProps) => {
 
 Banner.propTypes = {
   content: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['default', 'success', 'error']),
   onClick: PropTypes.func,
+  type: PropTypes.oneOf(['default', 'success', 'error', 'danger']),
 };

@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import { LinkButton } from './index';
 
@@ -21,9 +21,9 @@ describe('<LinkButton/>', () => {
 
   describe('href handling', () => {
     it('should link to a path', () => {
-      const wrapper = shallow(<LinkButton href="/some/path">text</LinkButton>);
+      const wrapper = mount(<LinkButton href="/some/path">text</LinkButton>);
 
-      expect(wrapper.prop('href')).toEqual('/some/path');
+      expect(wrapper.children().prop('href')).toEqual('/some/path');
     });
   });
 
@@ -31,7 +31,7 @@ describe('<LinkButton/>', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
 
-      const button = shallow(<LinkButton onClick={spy}>text</LinkButton>);
+      const button = mount(<LinkButton onClick={spy}>text</LinkButton>);
 
       button.simulate('click');
       expect(spy).toHaveBeenCalled();
@@ -40,7 +40,7 @@ describe('<LinkButton/>', () => {
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
 
-      const button = shallow(
+      const button = mount(
         <LinkButton disabled href="#" onClick={spy}>
           text
         </LinkButton>,

@@ -1,8 +1,8 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { primaryTheme } from 'src/constants/themes';
 
 import NeckGlyph from '../../svgs/glyphs/neck-glyph.svg';
-import { COLORS } from '../../constants';
 
 import { Callout } from './index';
 
@@ -21,7 +21,7 @@ describe('<Callout />', () => {
       const component = renderer.create(
         <Callout
           icon={<NeckGlyph width={40} height={40} />}
-          color={COLORS.primaryTint2}
+          color={primaryTheme.COLORS.primaryTint2}
         >
           Callout text with <strong>custom color</strong> and icon.
         </Callout>,

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import { COLORS } from 'src/constants';
+import React, { useEffect, useState, useRef } from 'react';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
+import { useTheme } from 'emotion-theming';
 
 import Thumbnails from './thumbnails';
 import {
@@ -15,15 +15,23 @@ import {
 } from './style';
 
 type AccordionProps = {
+  /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
   borderRadius?: string;
+  /** node(s) that will render only when expanded */
   children: React.ReactNode;
+  /** when true, the accordion will be greyed out and the onClick prop will be disabled */
   disabled?: boolean;
+  /** determine if the accordion is collapsed (false) or expanded (true) */
   isOpen: boolean;
+  /** when true, border lines between accordions and title/children nodes will disappear */
   noBorder?: boolean;
+  /** invoked when title node is clicked */
   onClick: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent> | React.KeyboardEvent,
   ) => void;
+  /** when true, the arrow is aligned flush with the right side of the component */
   rightAlignArrow?: boolean;
+  /** node that will render whether collapsed or expanded */
   title: React.ReactNode;
 };
 
@@ -32,131 +40,91 @@ type AccordionProps = {
  *
  * The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
  */
-export class Accordion extends React.Component<
-  AccordionProps & Required<AccordionProps>,
-  { contentHeight: string }
-> {
-  static propTypes = {
-    /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
-    borderRadius: PropTypes.string,
-    /** node(s) that will render only when expanded */
-    children: PropTypes.node.isRequired,
-    /** when true, the accordion will be greyed out and the onClick prop will be disabled */
-    disabled: PropTypes.bool,
-    /** determine if the accordion is collapsed (false) or expanded (true) */
-    isOpen: PropTypes.bool.isRequired,
-    /** when true, border lines between accordions and title/children nodes will disappear */
-    noBorder: PropTypes.bool,
-    /** invoked when title node is clicked */
-    onClick: PropTypes.func.isRequired,
-    /** when true, the arrow is aligned flush with the right side of the component */
-    rightAlignArrow: PropTypes.bool,
-    /** node that will render whether collapsed or expanded */
-    title: PropTypes.node.isRequired,
-  };
+export const Accordion = ({
+  borderRadius = '4px',
+  children,
+  disabled = false,
+  isOpen,
+  noBorder = false,
+  onClick,
+  rightAlignArrow = false,
+  title,
+}: AccordionProps) => {
+  const theme = useTheme();
+  const [contentHeight, setContentHeight] = useState('0px');
 
-  static defaultProps = {
-    borderRadius: '4px',
-    disabled: false,
-    noBorder: false,
-    rightAlignArrow: false,
-  };
+  const contentRef = useRef<HTMLDivElement>(null);
 
-  static Container = Container;
-
-  static Content = Content;
-
-  static Thumbnails = Thumbnails;
-
-  static Truncate = Truncate;
-
-  contentRef = React.createRef<HTMLDivElement>();
-
-  state = { contentHeight: '0px' };
-
-  componentDidMount() {
-    this.updateHeight();
-  }
-
-  componentDidUpdate() {
-    this.updateHeight();
-  }
-
-  // prettier-ignore
-  getContentHeight = (isOpen: boolean) => (
-    `${
-      isOpen && this.contentRef.current
-        ? this.contentRef.current.clientHeight
-        : '0'
-    }px`
-  );
-
-  updateHeight() {
-    const { isOpen } = this.props;
-    const { contentHeight } = this.state;
-
-    const nextHeight = this.getContentHeight(isOpen);
+  useEffect(() => {
+    const nextHeight =
+      isOpen && contentRef.current
+        ? `${contentRef.current.clientHeight}px`
+        : '0px';
 
     if (contentHeight !== nextHeight) {
-      this.setState({ contentHeight: nextHeight });
+      setContentHeight(nextHeight);
     }
-  }
+  });
 
-  handleKeyDown = (event: React.KeyboardEvent): void => {
-    const { onClick, disabled } = this.props;
+  const handleKeyDown = (event: React.KeyboardEvent): void => {
     if (!disabled && event.key === 'Enter') {
       onClick(event);
     }
   };
 
-  render() {
-    const { contentHeight } = this.state;
-    const {
-      borderRadius,
-      title,
-      isOpen,
-      onClick,
-      children,
-      noBorder,
-      disabled,
-      rightAlignArrow,
-    } = this.props;
+  return (
+    <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
+      <TitleWrapper
+        onClick={(event): void => {
+          if (!disabled) {
+            onClick(event);
+          }
+        }}
+        borderRadius={borderRadius}
+        onKeyDown={handleKeyDown}
+        disabled={!!disabled}
+        role="button"
+        isOpen={isOpen}
+        tabIndex={disabled ? -1 : 0}
+        aria-disabled={!!disabled}
+        aria-expanded={isOpen}
+      >
+        <Truncate>{title}</Truncate>
+        <ArrowWrapper rightAlign={!!rightAlignArrow}>
+          <ChevronIcon
+            rotate={isOpen ? 90 : 0}
+            width={16}
+            height={16}
+            fill={theme.COLORS.primary}
+          />
+        </ArrowWrapper>
+      </TitleWrapper>
+      <ExpansionWrapper
+        contentHeight={contentHeight}
+        aria-disabled={!!disabled}
+        aria-hidden={!isOpen}
+      >
+        <div ref={contentRef}>{children}</div>
+      </ExpansionWrapper>
+    </AccordionBox>
+  );
+};
 
-    return (
-      <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
-        <TitleWrapper
-          onClick={(event): void => {
-            if (!disabled) {
-              onClick(event);
-            }
-          }}
-          borderRadius={borderRadius}
-          onKeyDown={this.handleKeyDown}
-          disabled={!!disabled}
-          role="button"
-          isOpen={isOpen}
-          tabIndex={disabled ? -1 : 0}
-          aria-disabled={!!disabled}
-          aria-expanded={isOpen}
-        >
-          <Truncate>{title}</Truncate>
-          <ArrowWrapper rightAlign={!!rightAlignArrow}>
-            <ChevronIcon
-              rotate={isOpen ? 90 : 0}
-              width={16}
-              height={16}
-              fill={COLORS.purple}
-            />
-          </ArrowWrapper>
-        </TitleWrapper>
-        <ExpansionWrapper
-          contentHeight={contentHeight}
-          aria-disabled={!!disabled}
-          aria-hidden={!isOpen}
-        >
-          <div ref={this.contentRef}>{children}</div>
-        </ExpansionWrapper>
-      </AccordionBox>
-    );
-  }
-}
+Accordion.Container = Container;
+
+Accordion.Content = Content;
+
+Accordion.Thumbnails = Thumbnails;
+
+Accordion.Truncate = Truncate;
+
+Accordion.propTypes = {
+  borderRadius: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  isOpen: PropTypes.bool.isRequired,
+  noBorder: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+  rightAlignArrow: PropTypes.bool,
+  title: PropTypes.node.isRequired,
+};

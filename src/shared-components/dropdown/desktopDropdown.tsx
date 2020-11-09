@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import useResetFocus from 'src/utils/accessibility/useResetFocus';
+import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
@@ -14,46 +14,49 @@ import {
   DropdownOption,
 } from './style';
 
-import { OptionType } from './index';
+import { OptionType, OptionValue } from './index';
 
-type DesktopDropdownProps = {
+type DesktopDropdownProps<T> = {
   borderRadius: string;
   closeDropdown: () => void;
-  currentOption: OptionType;
+  currentOption?: T;
   isOpen: boolean;
-  onOptionClick: (event: any) => void;
-  onSelectClick: () => void;
-  options: OptionType[];
+  onDesktopSelectChange: (
+    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
+  ) => void;
+  options: T[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
-  value?: string;
+  toggleDropdown: () => void;
+  value?: OptionValue;
 };
 
-export const DesktopDropdown = ({
+export const DesktopDropdown = <T extends OptionType>({
   borderRadius,
   closeDropdown,
   currentOption,
   isOpen,
-  onOptionClick,
-  onSelectClick,
+  onDesktopSelectChange,
   options,
   optionsContainerMaxHeight,
   textAlign,
+  toggleDropdown,
   value,
-}: DesktopDropdownProps) => {
+}: DesktopDropdownProps<T>) => {
+  const theme = useTheme();
   const { initialFocus, resetFocus } = useResetFocus<HTMLDivElement>();
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     // This key handler allows users to open the dropdown options via the keyboard
     if (event.key === 'Enter') {
-      onSelectClick();
+      toggleDropdown();
     }
   };
 
-  const handleOptionKeydown = (event: React.KeyboardEvent) => {
+  const handleOptionKeydown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     // This allows users to select an option via the enter key
     if (event.key === 'Enter') {
-      onOptionClick(event);
+      onDesktopSelectChange(event);
       resetFocus();
     }
   };
@@ -67,7 +70,7 @@ export const DesktopDropdown = ({
     >
       <DropdownContainer textAlign={textAlign}>
         <DropdownFocusContainer
-          onClick={onSelectClick}
+          onClick={toggleDropdown}
           onKeyDown={handleKeyDown}
           tabIndex={0}
           aria-haspopup="menu"
@@ -79,6 +82,7 @@ export const DesktopDropdown = ({
               borderRadius,
               shouldBeFullyRounded: !isOpen,
               textAlign,
+              theme,
             })}
           >
             {currentOption && currentOption.label}
@@ -93,22 +97,22 @@ export const DesktopDropdown = ({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={value}
+          aria-activedescendant={value ? `${value}` : undefined}
           aria-hidden={!isOpen}
         >
-          {options.map((option) => {
-            const {
-              value: optionValue, disabled, label, ...rest 
-            } = option;
+          {options.map((option, index) => {
+            const { value: optionValue, disabled, label, ...rest } = option;
+
+            const id = optionValue ? `${optionValue}` : `undefined-${index}`;
 
             return (
               <DropdownOption
-                key={optionValue}
+                key={id}
                 value={optionValue}
-                id={optionValue}
+                id={id}
                 selected={value === optionValue}
                 disabled={!!disabled}
-                onClick={onOptionClick}
+                onClick={onDesktopSelectChange}
                 onKeyDown={handleOptionKeydown}
                 role="menuitemradio"
                 aria-disabled={!!disabled}
@@ -125,38 +129,4 @@ export const DesktopDropdown = ({
       </DropdownContainer>
     </OffClickWrapper>
   );
-};
-
-DesktopDropdown.defaultProps = {
-  value: undefined,
-  options: [{ value: null, label: '' }],
-  currentOption: { value: null, label: '' },
-  textAlign: 'left',
-  isOpen: false,
-};
-
-DesktopDropdown.propTypes = {
-  borderRadius: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  value: PropTypes.any,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      // eslint-disable-next-line react/forbid-prop-types
-      value: PropTypes.any,
-      label: PropTypes.string,
-      disabled: PropTypes.bool,
-    }),
-  ),
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  currentOption: PropTypes.shape({
-    // eslint-disable-next-line react/forbid-prop-types
-    value: PropTypes.any,
-    label: PropTypes.string,
-    disabled: PropTypes.bool,
-  }),
-  closeDropdown: PropTypes.func.isRequired,
-  onOptionClick: PropTypes.func.isRequired,
-  onSelectClick: PropTypes.func.isRequired,
-  isOpen: PropTypes.bool,
-  optionsContainerMaxHeight: PropTypes.string.isRequired,
 };

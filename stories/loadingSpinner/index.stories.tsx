@@ -2,17 +2,18 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { text, number } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
-import { COLORS } from 'src/constants';
+import { BREAKPOINTS } from 'src/constants';
 import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
 const SpinnerContainer = styled.div`
   position: relative;
@@ -24,6 +25,10 @@ export const Default = () => (
     <LoadingSpinner />
   </SpinnerContainer>
 );
+
+Default.parameters = {
+  chromatic: { disable: false },
+};
 
 export const WithTranslateX = () => (
   <SpinnerContainer>
@@ -37,22 +42,27 @@ export const WithDuration = () => (
   </SpinnerContainer>
 );
 
-export const WithControls = () => (
-  <SpinnerContainer>
-    <LoadingSpinner
-      bgColor={text('bgColor', COLORS.background)}
-      color={text('color', COLORS.primary)}
-      translateX={text('translateX', '100px')}
-      duration={number('duration', 2)}
-      size={text('size', '14px')}
-    />
-  </SpinnerContainer>
-);
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <SpinnerContainer>
+      <LoadingSpinner
+        bgColor={text('bgColor', theme.COLORS.background) as ThemeColors}
+        color={text('color', theme.COLORS.primary) as ThemeColors}
+        translateX={text('translateX', '100px')}
+        duration={number('duration', 2)}
+        size={text('size', '14px')}
+      />
+    </SpinnerContainer>
+  );
+};
 
 export default {
   title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
+    chromatic: { disable: true, viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -63,10 +73,9 @@ export default {
             language="tsx"
             code={"import { LoadingSpinner } from 'radiance-ui';"}
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable />
-          <Stories />
+          <Stories includePrimary />
         </React.Fragment>
       ),
     },

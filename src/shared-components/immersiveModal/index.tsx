@@ -43,7 +43,7 @@ type ImmersiveModalProps = {
   /**
    * The title of the modal
    */
-  title?: string;
+  title?: string | JSX.Element;
   [key: string]: unknown;
 };
 
@@ -106,6 +106,10 @@ export const ImmersiveModal = ({
   }, 100);
 
   const handleCloseIntent = () => {
+    if (isClosing) {
+      return;
+    }
+
     setIsClosing(true);
     setShowMobileHeaderBar(false);
     setTimeout(onClose, 450);
@@ -230,8 +234,8 @@ export const ImmersiveModal = ({
 
 ImmersiveModal.propTypes = {
   children: PropTypes.node.isRequired,
-  headerImage: PropTypes.node,
   footerContent: PropTypes.node,
+  headerImage: PropTypes.node,
   onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
 };

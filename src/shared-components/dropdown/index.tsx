@@ -3,80 +3,102 @@ import PropTypes from 'prop-types';
 
 import { MobileDropdown } from './mobileDropdown';
 import { DesktopDropdown } from './desktopDropdown';
-import allowNullPropType from '../../utils/allowNullPropType';
+
+export type OptionValue = string | number;
 
 export type OptionType = {
-  /**
-   * The option indentifier
-   */
-  value: string | undefined;
+  disabled?: boolean;
   /**
    * The text to be displayed for the option
    */
   label: string;
-  disabled?: boolean;
+  /**
+   * The option indentifier
+   */
+  value?: OptionValue;
+  /**
+   * Any other data we want to pass from options
+   */
+  [key: string]: unknown;
 };
 
-type DropdownProps = {
+type DropdownProps<T> = {
   borderRadius?: string;
   /**
    * The handler to be invoked on option change
    */
-  onChange: (option: OptionType) => void;
-  options: OptionType[];
+  onChange: (option: T) => void;
+  options: T[];
   /**
    * Specifies maximum height of the expanded dropdown
    */
   optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
   /**
-   * The currently selected option. Can mount as `null`
+   * The currently selected option
    */
-  value?: string;
+  value?: OptionValue;
 };
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
  * This ships with a mobile implementation that will handle mobile devices automatically.
  */
-export const Dropdown = ({
+export const Dropdown = <T extends OptionType>({
   borderRadius = '4px',
   onChange,
   options,
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
-}: DropdownProps) => {
+}: DropdownProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
 
-  const onSelectClick = () => {
+  const toggleDropdown = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   const closeDropdown = () => setIsOpen(false);
 
-  const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const onMobileSelectChange = (
+    event: React.ChangeEvent<HTMLSelectElement>,
+  ) => {
     const { target } = event;
-    const { value: nextValue, selectedOptions } = target;
-
+    const { selectedIndex, selectedOptions } = target;
+    const selectedOption = options[selectedIndex];
     if (selectedOptions && selectedOptions.length) {
-      const { label } = selectedOptions[0];
-      onChange({ value: nextValue, label });
+      onChange(selectedOption);
     }
 
     closeDropdown();
   };
 
-  const onOptionClick = (event: React.MouseEvent<HTMLLIElement>) => {
-    const target = event.currentTarget;
-    if (target.hasAttribute('disabled')) {
+  const onDesktopSelectChange = (
+    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
+  ) => {
+    const { currentTarget } = event;
+
+    if (currentTarget.hasAttribute('disabled')) {
       return;
     }
 
-    const nextValue = target.getAttribute('value') as string;
-    const label = target.innerText;
-    onChange({ value: nextValue, label });
+    // Next Value may be returned as null if the value of <li> is undefined. We want to cast to the real value of undefined
+    const nextValue = currentTarget.getAttribute('value') || undefined;
+
+    const selectedOption = options.find((option) => {
+      const { value: optionValue } = option;
+
+      // This covers numbers and strings. <li> value is always returned as string. Falsy case covers undefined.
+      return optionValue
+        ? `${optionValue}` === nextValue
+        : optionValue === nextValue;
+    });
+
+    if (selectedOption) {
+      onChange(selectedOption);
+    }
+
     closeDropdown();
   };
 
@@ -84,10 +106,10 @@ export const Dropdown = ({
     return (
       <MobileDropdown
         borderRadius={borderRadius}
-        value={value}
+        onMobileSelectChange={onMobileSelectChange}
         options={options}
         textAlign={textAlign}
-        onSelectChange={onSelectChange}
+        value={value}
       />
     );
   }
@@ -100,11 +122,11 @@ export const Dropdown = ({
       closeDropdown={closeDropdown}
       currentOption={currentOption}
       isOpen={isOpen}
-      onOptionClick={onOptionClick}
-      onSelectClick={onSelectClick}
+      onDesktopSelectChange={onDesktopSelectChange}
       options={options}
       optionsContainerMaxHeight={optionsContainerMaxHeight}
       textAlign={textAlign}
+      toggleDropdown={toggleDropdown}
       value={value}
     />
   );
@@ -112,17 +134,15 @@ export const Dropdown = ({
 
 Dropdown.propTypes = {
   borderRadius: PropTypes.string,
-  value: allowNullPropType(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  ),
+  onChange: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string,
+      label: PropTypes.string.isRequired,
       disabled: PropTypes.bool,
-    }),
+    }).isRequired,
   ).isRequired,
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  onChange: PropTypes.func.isRequired,
   optionsContainerMaxHeight: PropTypes.string,
+  textAlign: PropTypes.oneOf(['left', 'center']),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

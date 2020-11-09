@@ -14,7 +14,7 @@ export const BASE_CONFIG = {
   message: `0 12px 20px 0 ${transparentize(boxShadowColor, 0.05)}`,
   focus: `0px 0px 0px 2px ${COLORS.white}, 0px 0px 0px 4px ${COLORS.primary}`,
   focusInner: `inset 0px 0px 0px 2px ${COLORS.primary}`,
-};
+} as const;
 
 export const OLD_BASE_CONFIG = {
   boxShadow1: `0 12px 20px 0 ${transparentize(boxShadowColor, 0.05)}`,
@@ -23,7 +23,7 @@ export const OLD_BASE_CONFIG = {
   boxShadow4: `0 1px 3px 0 ${transparentize(boxShadowColor, 0.15)}`,
   boxShadow5: `0 1px 2px 0 ${transparentize(boxShadowColor, 0.06)}`,
   boxShadowOnOverlay: `0 12px 20px 0 ${boxShadowOverlayColor}`,
-};
+} as const;
 
 export const DESIGN_SYSTEM_NAMING = {
   elevation2: OLD_BASE_CONFIG.boxShadow5,
@@ -31,15 +31,17 @@ export const DESIGN_SYSTEM_NAMING = {
   elevation6: OLD_BASE_CONFIG.boxShadow3,
   elevation11: OLD_BASE_CONFIG.boxShadow2,
   elevation20: OLD_BASE_CONFIG.boxShadow1,
-};
+} as const;
 
 export const ALIASED_CONFIG = {
   card: OLD_BASE_CONFIG.boxShadow4,
-};
+} as const;
 
-export default {
+const BOX_SHADOWS = {
   ...BASE_CONFIG,
   ...OLD_BASE_CONFIG,
   ...DESIGN_SYSTEM_NAMING,
   ...ALIASED_CONFIG,
-};
+} as const;
+
+export default BOX_SHADOWS;

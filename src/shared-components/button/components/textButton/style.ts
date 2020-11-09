@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
-import { BOX_SHADOWS, COLORS, SPACER } from '../../../../constants';
+import { BOX_SHADOWS, SPACER } from '../../../../constants';
 
 export const BaseTextButton = styled.button<{ disabled: boolean }>`
   border-color: transparent;
   background-color: transparent;
   border-radius: ${SPACER.xsmall};
 
-  color: ${({ disabled }) =>
-    `${disabled ? COLORS.textDisabled : COLORS.primary}`};
+  color: ${({ disabled, theme }) =>
+    `${disabled ? theme.COLORS.textDisabled : theme.COLORS.primary}`};
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
 
   &:hover {

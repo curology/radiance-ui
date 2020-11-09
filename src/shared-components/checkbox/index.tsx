@@ -19,7 +19,7 @@ type CheckboxProps = {
   ) => void;
   size?: SizeType;
   type?: StyleType;
-  [key: string]: any;
+  [key: string]: unknown;
 };
 
 /**
@@ -44,10 +44,10 @@ export const Checkbox = ({
     onClick={
       disabled
         ? (
-          event:
+            event:
               | React.MouseEvent<HTMLDivElement, MouseEvent>
               | React.KeyboardEvent,
-        ) => event.preventDefault()
+          ) => event.preventDefault()
         : onClick
     }
     selector="checkbox"

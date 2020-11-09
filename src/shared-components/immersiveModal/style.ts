@@ -1,15 +1,14 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import Typography from '../typography';
 import {
   BOX_SHADOWS,
-  COLORS,
   MEDIA_QUERIES,
   SPACER,
   Z_SCALE,
   ANIMATION,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
@@ -50,7 +49,7 @@ export const CrossIconContainer = styled.button`
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  background: ${COLORS.white};
+  background: ${({ theme }) => theme.COLORS.white};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -113,26 +112,26 @@ export const ModalFooter = styled.div`
   margin-bottom: ${SPACER.xlarge};
 `;
 
-const commonHeaderBarStyles = css`
+const commonHeaderBarStyles = (theme: ThemeType) => `
   position: fixed;
   top: 0;
   left: 0;
   z-index: ${Z_SCALE.modal + 1};
   width: 100%;
-  background: ${COLORS.white};
-  color: ${COLORS.primary};
+  background: ${theme.COLORS.white};
+  color: ${theme.COLORS.primary};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   height: 56px;
-  border-bottom: 1px solid ${COLORS.border};
+  border-bottom: 1px solid ${theme.COLORS.border};
   pointer-events: none;
 `;
 
 export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
-  ${commonHeaderBarStyles};
+  ${({ theme }) => commonHeaderBarStyles(theme)}
 
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showMobileHeaderBar }): string =>
@@ -146,7 +145,7 @@ export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
 `;
 
 export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
-  ${commonHeaderBarStyles};
+  ${({ theme }) => commonHeaderBarStyles(theme)}
 
   top: 56px;
   border-top-left-radius: 8px;
@@ -155,7 +154,7 @@ export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
 
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showDesktopHeaderBar }): string =>
-    showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
+      showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
 
   opacity: ${({ showDesktopHeaderBar }): number =>
     showDesktopHeaderBar ? 1 : 0};
@@ -221,7 +220,7 @@ export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
-  background: ${COLORS.white};
+  background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
@@ -241,7 +240,7 @@ export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   min-height: 100%;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  background: ${COLORS.white};
+  background: ${({ theme }) => theme.COLORS.white};
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage
       ? `${SPACER.xlarge} ${SPACER.large} 0`
@@ -249,10 +248,10 @@ export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
 
   ${MEDIA_QUERIES.mdUp} {
     padding: ${({ hasHeaderImage }): string =>
-    hasHeaderImage
-      ? `${SPACER.x2large} ${SPACER.x4large} 0`
-      : `72px ${SPACER.x2large} 0`};
+      hasHeaderImage
+        ? `${SPACER.x2large} ${SPACER.x4large} 0`
+        : `72px ${SPACER.x2large} 0`};
     min-height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
+      hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
   }
 `;

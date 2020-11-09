@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useTheme } from 'emotion-theming';
 
 import {
   FieldContainer,
@@ -16,7 +17,6 @@ import {
   MessagesTypes,
   MessageType,
 } from '../verificationMessages';
-import { COLORS } from '../../constants';
 
 type FieldProps = {
   /**
@@ -46,9 +46,7 @@ type FieldProps = {
   /**
    * Object of key and React Node message pair. It also accepts an array of React Node as value
    */
-  messages?: {
-    [key: string]: MessageType;
-  };
+  messages?: Record<string, MessageType>;
   messagesType?: MessagesTypes;
 };
 
@@ -60,24 +58,28 @@ type FieldProps = {
 export const Field = ({
   children: inputChild,
   disabled = false,
-  messages = {},
-  messagesType = 'error',
   hideMessagesIcon = false,
   hintMessage = '',
   label = '',
   labelFor = '',
+  messages = {},
+  messagesType = 'error',
 }: FieldProps) => {
+  const theme = useTheme();
   const htmlFor = labelFor || label;
   const messagesKeys = Object.keys(messages);
   const showMessages = messagesKeys.length > 0;
   const MessageIcon =
     messagesType === 'success' ? (
       <CheckmarkIcon
-        fill={COLORS.success}
+        fill={theme.COLORS.success}
         className="radiance-field-input-icon"
       />
     ) : (
-      <ErrorIcon fill={COLORS.error} className="radiance-field-input-icon" />
+      <ErrorIcon
+        fill={theme.COLORS.error}
+        className="radiance-field-input-icon"
+      />
     );
 
   return (
@@ -110,10 +112,10 @@ Field.Input = Input;
 Field.propTypes = {
   children: PropTypes.element.isRequired,
   disabled: PropTypes.bool,
-  messages: PropTypes.objectOf(PropTypes.node),
-  messagesType: PropTypes.oneOf(['error', 'success']),
   hideMessagesIcon: PropTypes.bool,
   hintMessage: PropTypes.string,
   label: PropTypes.string,
   labelFor: PropTypes.string,
+  messages: PropTypes.objectOf(PropTypes.node),
+  messagesType: PropTypes.oneOf(['error', 'success']),
 };

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import Arrow from 'src/svgs/icons/arrow.svg';
+import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
 import {
@@ -11,7 +12,6 @@ import {
   TooltipContent,
   ArrowImageContainer,
 } from './style';
-import { COLORS } from '../../constants';
 
 export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
@@ -54,6 +54,10 @@ type TooltipProps = {
   /**
    * Adjusts positioning, in px
    */
+  nudgeBottom?: number;
+  /**
+   * Adjusts positioning, in px
+   */
   nudgeLeft?: number;
   /**
    * Adjusts positioning, in px
@@ -63,10 +67,6 @@ type TooltipProps = {
    * Adjusts positioning, in px
    */
   nudgeTop?: number;
-  /**
-   * Adjusts positioning, in px
-   */
-  nudgeBottom?: number;
   position?: PositionTypes;
 };
 
@@ -85,12 +85,13 @@ export const Tooltip = ({
   display = true,
   hasRestrictedWidth = false,
   isSmall = false,
+  nudgeBottom = 0,
   nudgeLeft = 0,
   nudgeRight = 0,
   nudgeTop = 0,
-  nudgeBottom = 0,
   position = 'top',
 }: TooltipProps) => {
+  const theme = useTheme();
   const [clicked, setClicked] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -140,16 +141,16 @@ export const Tooltip = ({
           displayTooltip={display}
           hasRestrictedWidth={hasRestrictedWidth}
           isSmall={isSmall}
+          nudgeBottom={nudgeBottom}
           nudgeLeft={nudgeLeft}
           nudgeRight={nudgeRight}
           nudgeTop={nudgeTop}
-          nudgeBottom={nudgeBottom}
           open={open}
           position={position}
         >
           <TooltipContent>{content}</TooltipContent>
           <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
-            <Arrow width={16} height={16} fill={COLORS.primary} />
+            <Arrow width={16} height={16} fill={theme.COLORS.primary} />
           </ArrowImageContainer>
         </TooltipBox>
       </MainContainer>
@@ -170,9 +171,9 @@ Tooltip.propTypes = {
   display: PropTypes.bool,
   hasRestrictedWidth: PropTypes.bool,
   isSmall: PropTypes.bool,
+  nudgeBottom: PropTypes.number,
   nudgeLeft: PropTypes.number,
   nudgeRight: PropTypes.number,
   nudgeTop: PropTypes.number,
-  nudgeBottom: PropTypes.number,
   position: PropTypes.oneOf(['top', 'bottom']),
 };

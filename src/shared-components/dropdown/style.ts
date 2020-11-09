@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import {
-  COLORS,
   BOX_SHADOWS,
   SPACER,
   ANIMATION,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
@@ -13,6 +13,7 @@ type DropdownInputStyleProps = {
   borderRadius: string;
   shouldBeFullyRounded: boolean;
   textAlign: 'left' | 'center';
+  theme: ThemeType;
 };
 
 export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
@@ -31,6 +32,7 @@ export const dropdownInputStyle = ({
   borderRadius,
   shouldBeFullyRounded,
   textAlign,
+  theme,
 }: DropdownInputStyleProps) => {
   /**
    * When Desktop dropdown is open, we want only the top borders rounded.
@@ -43,17 +45,17 @@ export const dropdownInputStyle = ({
   return css`
     appearance: none;
     box-shadow: ${BOX_SHADOWS.clickable};
-    background: ${COLORS.white};
+    background: ${theme.COLORS.white};
     background-image: none;
 
     width: 100%;
     min-height: ${SPACER.x4large};
     max-height: ${SPACER.x4large};
 
-    border: 1px solid ${COLORS.border};
+    border: 1px solid ${theme.COLORS.border};
     ${dropdownBorderRadius};
 
-    color: ${COLORS.purple85};
+    color: ${theme.COLORS.primaryTint1};
     line-height: ${SPACER.x4large};
     overflow: hidden;
     text-overflow: ellipsis;
@@ -127,10 +129,10 @@ export const DropdownOptionsContainer = styled.ul<{
   margin: 0;
   border-radius: 0;
   border: 0;
-  border-color: ${COLORS.border};
+  border-color: ${({ theme }) => theme.COLORS.border};
   border-style: solid;
   border-width: 0 1px;
-  background: ${COLORS.white};
+  background: ${({ theme }) => theme.COLORS.white};
   box-shadow: ${BOX_SHADOWS.clickable};
 
   overflow-y: auto;
@@ -142,15 +144,15 @@ export const DropdownOptionsContainer = styled.ul<{
 
   ${({ isOpen, optionsContainerMaxHeight }) =>
     isOpen &&
-    css`
+    `
       max-height: ${optionsContainerMaxHeight};
       border-bottom-width: 1px;
       transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
-    `};
+    `}
 
   &:last-of-type {
     border-radius: ${({ borderRadius }) =>
-    borderRadius ? `0 0 ${borderRadius} ${borderRadius}` : `0 0 4px 4px`};
+      borderRadius ? `0 0 ${borderRadius} ${borderRadius}` : `0 0 4px 4px`};
   }
 `;
 
@@ -158,44 +160,44 @@ export const DropdownOption = styled.li<{
   selected: boolean;
   disabled: boolean;
 }>`
-  color: ${COLORS.purple85};
+  color: ${({ theme }) => theme.COLORS.primaryTint1};
   min-height: ${SPACER.x4large};
 
-  background-color: ${COLORS.white};
+  background-color: ${({ theme }) => theme.COLORS.white};
   cursor: pointer;
   padding: 18px ${SPACER.medium} 14px ${SPACER.medium};
 
   &:hover {
-    background-color: ${COLORS.infoBackground};
+    background-color: ${({ theme }) => theme.COLORS.infoBackground};
   }
 
   &:focus {
     outline: none;
-    background-color: ${COLORS.infoBackground};
+    background-color: ${({ theme }) => theme.COLORS.infoBackground};
     box-shadow: ${BOX_SHADOWS.focusInner};
   }
 
   ${({ selected }) =>
     selected &&
-    css`
+    `
       font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
-    `};
+    `}
 
-  ${({ disabled }) =>
+  ${({ disabled, theme }) =>
     disabled &&
-    css`
-      background-color: ${COLORS.white};
-      color: ${COLORS.textDisabled};
+    `
+      background-color: ${theme.COLORS.white};
+      color: ${theme.COLORS.textDisabled};
       font-weight: normal;
       cursor: not-allowed;
 
       &:hover {
-        background-color: ${COLORS.white};
+        background-color: ${theme.COLORS.white};
         font-weight: normal;
       }
       &:focus {
-        background-color: ${COLORS.white};
+        background-color: ${theme.COLORS.white};
         font-weight: normal;
       }
-    `};
+    `}
 `;
