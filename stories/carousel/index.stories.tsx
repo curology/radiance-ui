@@ -10,7 +10,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
-import { ANIMATION, SPACER } from 'src/constants';
+import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
 
@@ -134,7 +134,7 @@ export default {
     /**
      * There is visual jank when this component loads--this reduces brittleness in Chromatic
      */
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
+    chromatic: { delay: 2000 },
     docs: {
       page: () => (
         <React.Fragment>
