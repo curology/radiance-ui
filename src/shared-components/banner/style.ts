@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
-import { ThemeType } from 'src/constants/themes/types';
 
 import {
   BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 

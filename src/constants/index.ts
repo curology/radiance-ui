@@ -9,6 +9,6 @@ export { default as LAYOUT } from './layout';
 export { default as MEDIA_QUERIES } from './mediaQueries';
 export { default as PROGRESS_BAR_STATUS } from './progressBarStatus';
 export { default as SPACER } from './spacer';
-export { primaryTheme, secondaryTheme, COLORS_PROP_TYPES } from './themes';
+export * from './themes';
 export { default as TYPOGRAPHY_CONSTANTS } from './typography';
 export { default as Z_SCALE } from './zScale';

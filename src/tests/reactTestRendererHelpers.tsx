@@ -1,8 +1,8 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { ThemeProvider } from 'emotion-theming';
-import { primaryTheme } from 'src/constants';
-import { ThemeType } from 'src/constants/themes/types';
+
+import { primaryTheme, ThemeType } from '../constants';
 
 // We customize react-test-renderer methods to bake-in theming and keep unit tests DRY
 export const renderer = {

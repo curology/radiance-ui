@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import { ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER, TYPOGRAPHY_CONSTANTS, ThemeType } from '../../constants';
 
 import { StatusType } from '.';
 

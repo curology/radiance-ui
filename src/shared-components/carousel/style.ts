@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { ThemeType } from 'src/constants/themes/types';
 
-import { SPACER } from '../../constants';
+import { SPACER, ThemeType } from '../../constants';
 
 import { CarouselType } from '.';
 

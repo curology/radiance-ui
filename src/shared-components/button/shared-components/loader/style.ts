@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 import { keyframes } from '@emotion/core';
-import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
 import { ButtonTypeWithAction } from '../..';
+import { ThemeColors, ThemeType } from '../../../../constants';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }
