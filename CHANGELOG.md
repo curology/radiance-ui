@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# v13.0.0
+
+- [Theming] Adds theming functionality to components ([#466](https://github.com/curology/radiance-ui/pull/466))
+  - **BREAKING**: All component usage *must* be wrapped with an `emotion-theming` `<ThemeProvider>`, as component internals require access to a provided theme object. 
+    - See [da0fd4c](https://github.com/curology/radiance-ui/commit/da0fd4ced5c9064c94ebb7c607b845fe156e7e95#diff-e201de4e2ea4ee79f492c0495d7f3fce6389034fe26bfb8f3c877f8c03edf914R88) for how our [https://radiance-ui.curology.com/](https://radiance-ui.curology.com/) storybook site is configured
+    - See [#505](https://github.com/curology/radiance-ui/pull/505/files) for wrapping test utilites with theme context.
+
 # v12.4.0
 
 - [Internal] Refactor Dropdown, refactor variables names and standarize code across components
