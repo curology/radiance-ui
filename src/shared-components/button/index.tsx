@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
-import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants/themes/types';
 
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
@@ -14,6 +13,7 @@ import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from './deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**

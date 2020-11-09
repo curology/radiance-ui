@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
-import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
 import { ButtonType } from '../..';
+import { ThemeColors, ThemeType } from '../../../../constants';
 import { baseButtonStyles } from '../../style';
 
 export const linkButtonStyles = ({

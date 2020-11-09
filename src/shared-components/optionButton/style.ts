@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import { ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, SPACER, BOX_SHADOWS } from '../../constants';
+import { ANIMATION, SPACER, BOX_SHADOWS, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
 type BaseIconWrapperStylesProps = {

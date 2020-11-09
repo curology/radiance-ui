@@ -1,9 +1,8 @@
 import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styled, { StyledComponent } from '@emotion/styled';
 import PropTypes from 'prop-types';
-import { ThemeType } from 'src/constants/themes/types';
 
-import { SPACER, BOX_SHADOWS, MEDIA_QUERIES } from '../../constants';
+import { SPACER, BOX_SHADOWS, MEDIA_QUERIES, ThemeType } from '../../constants';
 
 const clickableStyle = `
   box-shadow: ${BOX_SHADOWS.clickable};

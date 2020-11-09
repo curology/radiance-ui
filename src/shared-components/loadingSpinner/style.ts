@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
-import { ThemeColors } from 'src/constants/themes/types';
+
+import { ThemeColors } from '../../constants';
 
 const appPreloader = (translateX: string) => keyframes`
   0% { opacity: 0; transform: translate3d(${translateX}, 0, 0) }
