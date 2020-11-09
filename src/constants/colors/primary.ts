@@ -54,6 +54,7 @@ const PRIMARY_COLORS = {
 
   black: COLORS.black,
   white: COLORS.white,
+  transparent: 'transparent',
 } as const;
 
 export const PRIMARY_COLORS_PROP_TYPES = PropTypes.oneOf(

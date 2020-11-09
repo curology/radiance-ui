@@ -54,6 +54,7 @@ const SECONDARY_COLORS = {
 
   black: COLORS.black,
   white: COLORS.white,
+  transparent: 'transparent',
 } as const;
 
 export const SECONDARY_COLORS_PROP_TYPES = PropTypes.oneOf(
