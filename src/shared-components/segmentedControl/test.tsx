@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { SegmentedControl } from './index';
 
@@ -23,12 +23,11 @@ describe('<SegmentedControl />', () => {
 
   test('calls onClick when button is clicked', () => {
     const spy = jest.fn();
-    const buttonIndex = 2;
 
-    const component = shallow(
+    const wrapper = mount(
       <SegmentedControl {...testSegmentedControl} onClick={spy} />,
     );
-    const button = component.childAt(buttonIndex);
+    const button = wrapper.find('button').last();
 
     button.simulate('click');
     expect(spy).toHaveBeenCalled();
