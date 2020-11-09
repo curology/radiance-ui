@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 827853,
-    "minified": 758593,
-    "gzipped": 91427
+    "bundled": 823005,
+    "minified": 753745,
+    "gzipped": 91062
   },
   "bundle.umd.js": {
-    "bundled": 837385,
-    "minified": 734631,
-    "gzipped": 87482
+    "bundled": 832537,
+    "minified": 729783,
+    "gzipped": 87250
   },
   "constants/themes/secondaryTheme.js": {
     "bundled": 177,
@@ -234,9 +234,9 @@
     }
   },
   "shared-components/progressBar/style.js": {
-    "bundled": 7971,
-    "minified": 7515,
-    "gzipped": 2253,
+    "bundled": 7851,
+    "minified": 7395,
+    "gzipped": 2196,
     "treeshaked": {
       "rollup": {
         "code": 1495,
@@ -472,9 +472,9 @@
     }
   },
   "shared-components/carousel/style.js": {
-    "bundled": 20523,
-    "minified": 19882,
-    "gzipped": 4875,
+    "bundled": 20339,
+    "minified": 19698,
+    "gzipped": 4811,
     "treeshaked": {
       "rollup": {
         "code": 3136,
@@ -514,9 +514,9 @@
     }
   },
   "shared-components/toggle/style.js": {
-    "bundled": 7101,
-    "minified": 6871,
-    "gzipped": 2513,
+    "bundled": 6921,
+    "minified": 6691,
+    "gzipped": 2463,
     "treeshaked": {
       "rollup": {
         "code": 735,
@@ -626,9 +626,9 @@
     }
   },
   "shared-components/accordion/style.js": {
-    "bundled": 36238,
-    "minified": 35182,
-    "gzipped": 4829,
+    "bundled": 36006,
+    "minified": 34950,
+    "gzipped": 4790,
     "treeshaked": {
       "rollup": {
         "code": 2701,
@@ -654,9 +654,9 @@
     }
   },
   "shared-components/field/style.js": {
-    "bundled": 35325,
-    "minified": 34582,
-    "gzipped": 4808,
+    "bundled": 34905,
+    "minified": 34162,
+    "gzipped": 4780,
     "treeshaked": {
       "rollup": {
         "code": 2492,
@@ -906,9 +906,9 @@
     }
   },
   "shared-components/container/style.js": {
-    "bundled": 17553,
-    "minified": 16808,
-    "gzipped": 2931,
+    "bundled": 17313,
+    "minified": 16568,
+    "gzipped": 2878,
     "treeshaked": {
       "rollup": {
         "code": 1322,
@@ -948,9 +948,9 @@
     }
   },
   "shared-components/banner/style.js": {
-    "bundled": 14830,
-    "minified": 14290,
-    "gzipped": 3374,
+    "bundled": 14602,
+    "minified": 14062,
+    "gzipped": 3327,
     "treeshaked": {
       "rollup": {
         "code": 1593,
@@ -1032,9 +1032,9 @@
     }
   },
   "shared-components/alert/style.js": {
-    "bundled": 35497,
-    "minified": 34532,
-    "gzipped": 5262,
+    "bundled": 35145,
+    "minified": 34180,
+    "gzipped": 5189,
     "treeshaked": {
       "rollup": {
         "code": 3041,
@@ -1074,9 +1074,9 @@
     }
   },
   "shared-components/selectorButton/style.js": {
-    "bundled": 23956,
-    "minified": 23222,
-    "gzipped": 4195,
+    "bundled": 23656,
+    "minified": 22922,
+    "gzipped": 4162,
     "treeshaked": {
       "rollup": {
         "code": 2157,
@@ -1088,9 +1088,9 @@
     }
   },
   "shared-components/typography/index.js": {
-    "bundled": 53389,
-    "minified": 52342,
-    "gzipped": 3556,
+    "bundled": 52849,
+    "minified": 51802,
+    "gzipped": 3508,
     "treeshaked": {
       "rollup": {
         "code": 2693,
@@ -1116,9 +1116,9 @@
     }
   },
   "shared-components/loadingSpinner/style.js": {
-    "bundled": 9621,
-    "minified": 9240,
-    "gzipped": 2786,
+    "bundled": 9585,
+    "minified": 9204,
+    "gzipped": 2761,
     "treeshaked": {
       "rollup": {
         "code": 1413,
@@ -1144,9 +1144,9 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 35978,
-    "minified": 34110,
-    "gzipped": 6768,
+    "bundled": 35866,
+    "minified": 33998,
+    "gzipped": 6763,
     "treeshaked": {
       "rollup": {
         "code": 4650,
@@ -1172,9 +1172,9 @@
     }
   },
   "shared-components/button/shared-components/loader/style.js": {
-    "bundled": 6674,
-    "minified": 5905,
-    "gzipped": 2574,
+    "bundled": 6670,
+    "minified": 5901,
+    "gzipped": 2570,
     "treeshaked": {
       "rollup": {
         "code": 1710,
@@ -1186,9 +1186,9 @@
     }
   },
   "shared-components/immersiveModal/style.js": {
-    "bundled": 103824,
-    "minified": 102608,
-    "gzipped": 7728,
+    "bundled": 103152,
+    "minified": 101936,
+    "gzipped": 7724,
     "treeshaked": {
       "rollup": {
         "code": 4482,
@@ -1284,9 +1284,9 @@
     }
   },
   "shared-components/button/components/linkButton/style.js": {
-    "bundled": 1753,
-    "minified": 1504,
-    "gzipped": 874,
+    "bundled": 1745,
+    "minified": 1496,
+    "gzipped": 860,
     "treeshaked": {
       "rollup": {
         "code": 41,
@@ -1326,9 +1326,9 @@
     }
   },
   "shared-components/dropdown/style.js": {
-    "bundled": 44533,
-    "minified": 43354,
-    "gzipped": 5931,
+    "bundled": 44185,
+    "minified": 43006,
+    "gzipped": 5906,
     "treeshaked": {
       "rollup": {
         "code": 2644,
@@ -1340,9 +1340,9 @@
     }
   },
   "shared-components/optionButton/style.js": {
-    "bundled": 38541,
-    "minified": 37360,
-    "gzipped": 4891,
+    "bundled": 38105,
+    "minified": 36924,
+    "gzipped": 4850,
     "treeshaked": {
       "rollup": {
         "code": 2620,
@@ -1368,9 +1368,9 @@
     }
   },
   "shared-components/chip/style.js": {
-    "bundled": 7380,
-    "minified": 6895,
-    "gzipped": 2630,
+    "bundled": 7256,
+    "minified": 6771,
+    "gzipped": 2590,
     "treeshaked": {
       "rollup": {
         "code": 1300,
@@ -1410,9 +1410,9 @@
     }
   },
   "shared-components/button/components/roundButton/style.js": {
-    "bundled": 28975,
-    "minified": 27269,
-    "gzipped": 5194,
+    "bundled": 28663,
+    "minified": 26957,
+    "gzipped": 5167,
     "treeshaked": {
       "rollup": {
         "code": 594,

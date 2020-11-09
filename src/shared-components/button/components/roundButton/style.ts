@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
-import { ThemeColors, ThemeType } from 'src/constants/themes/types';
 
-import { ANIMATION } from '../../../../constants';
+import { ANIMATION, ThemeColors, ThemeType } from '../../../../constants';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
 

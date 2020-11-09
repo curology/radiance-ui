@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
-import { ThemeType } from 'src/constants/themes/types';
 
 import {
   BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
   ANIMATION,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 

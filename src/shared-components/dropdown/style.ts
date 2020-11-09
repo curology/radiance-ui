@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { ThemeType } from 'src/constants/themes/types';
 
 import {
   BOX_SHADOWS,
   SPACER,
   ANIMATION,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 

@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { ThemeType } from 'src/constants/themes/types';
 
-import { BOX_SHADOWS, SPACER } from '../../constants';
+import { BOX_SHADOWS, SPACER, ThemeType } from '../../constants';
 
 export const Container = styled.div`
   position: relative;

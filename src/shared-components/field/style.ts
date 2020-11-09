@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { ThemeType } from 'src/constants/themes/types';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { BOX_SHADOWS, SPACER, ANIMATION } from '../../constants';
+import { BOX_SHADOWS, SPACER, ANIMATION, ThemeType } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`

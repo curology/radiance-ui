@@ -1,7 +1,6 @@
 import 'focus-visible';
-import { ThemeType } from 'src/constants/themes/types';
 
-import { TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { ThemeType, TYPOGRAPHY_CONSTANTS } from '../../constants';
 import { baseBodyStyles } from '../../shared-components/typography';
 
 /**

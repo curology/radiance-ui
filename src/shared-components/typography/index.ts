@@ -1,9 +1,8 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
-import { ThemeType } from 'src/constants/themes/types';
 
 import { withDeprecationWarning } from '../../utils';
-import { TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { TYPOGRAPHY_CONSTANTS, ThemeType } from '../../constants';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
