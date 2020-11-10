@@ -185,7 +185,7 @@ export const ImmersiveModal = ({
                 className="modal-offclick-wrapper"
               >
                 <MobileTopOverlay onClick={handleCloseIntent} />
-                <FocusScope contain restoreFocus autoFocus>
+                <FocusScope contain restoreFocus>
                   <MainModalContentContainer
                     id={MODAL_DESKTOP_SCROLLING_ID}
                     hasHeaderImage={!!headerImage}
