@@ -1,25 +1,25 @@
 {
   "bundle.js": {
-    "bundled": 823005,
-    "minified": 753745,
-    "gzipped": 91062
+    "bundled": 823543,
+    "minified": 754225,
+    "gzipped": 91270
   },
   "bundle.umd.js": {
-    "bundled": 832537,
-    "minified": 729783,
-    "gzipped": 87250
+    "bundled": 833103,
+    "minified": 730203,
+    "gzipped": 87447
   },
   "constants/themes/secondaryTheme.js": {
-    "bundled": 177,
-    "minified": 154,
-    "gzipped": 128,
+    "bundled": 256,
+    "minified": 227,
+    "gzipped": 150,
     "treeshaked": {
       "rollup": {
-        "code": 30,
-        "import_statements": 30
+        "code": 59,
+        "import_statements": 59
       },
       "webpack": {
-        "code": 1030
+        "code": 1112
       }
     }
   },
@@ -52,16 +52,16 @@
     }
   },
   "constants/themes/primaryTheme.js": {
-    "bundled": 165,
-    "minified": 142,
-    "gzipped": 124,
+    "bundled": 238,
+    "minified": 209,
+    "gzipped": 146,
     "treeshaked": {
       "rollup": {
-        "code": 28,
-        "import_statements": 28
+        "code": 55,
+        "import_statements": 55
       },
       "webpack": {
-        "code": 1028
+        "code": 1108
       }
     }
   },
@@ -1158,16 +1158,16 @@
     }
   },
   "constants/colors/primary.js": {
-    "bundled": 1640,
-    "minified": 1362,
-    "gzipped": 487,
+    "bundled": 1670,
+    "minified": 1388,
+    "gzipped": 497,
     "treeshaked": {
       "rollup": {
-        "code": 1040,
+        "code": 1066,
         "import_statements": 52
       },
       "webpack": {
-        "code": 2141
+        "code": 2167
       }
     }
   },
@@ -1298,16 +1298,16 @@
     }
   },
   "constants/colors/secondary.js": {
-    "bundled": 1109,
-    "minified": 831,
-    "gzipped": 370,
+    "bundled": 1139,
+    "minified": 857,
+    "gzipped": 380,
     "treeshaked": {
       "rollup": {
-        "code": 674,
+        "code": 700,
         "import_statements": 52
       },
       "webpack": {
-        "code": 1705
+        "code": 1731
       }
     }
   },
@@ -1420,6 +1420,34 @@
       },
       "webpack": {
         "code": 1764
+      }
+    }
+  },
+  "constants/fonts/secondary.js": {
+    "bundled": 150,
+    "minified": 133,
+    "gzipped": 100,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "constants/fonts/primary.js": {
+    "bundled": 338,
+    "minified": 321,
+    "gzipped": 234,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
       }
     }
   }
