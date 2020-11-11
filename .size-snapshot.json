@@ -1,25 +1,25 @@
 {
   "bundle.js": {
-    "bundled": 822499,
-    "minified": 753986,
-    "gzipped": 91173
+    "bundled": 823371,
+    "minified": 754553,
+    "gzipped": 91244
   },
   "bundle.umd.js": {
-    "bundled": 831999,
-    "minified": 730007,
-    "gzipped": 87358
+    "bundled": 832961,
+    "minified": 730364,
+    "gzipped": 87394
   },
   "constants/themes/secondaryTheme.js": {
-    "bundled": 256,
-    "minified": 227,
-    "gzipped": 150,
+    "bundled": 369,
+    "minified": 330,
+    "gzipped": 183,
     "treeshaked": {
       "rollup": {
-        "code": 59,
-        "import_statements": 59
+        "code": 103,
+        "import_statements": 103
       },
       "webpack": {
-        "code": 1112
+        "code": 1215
       }
     }
   },
@@ -52,16 +52,16 @@
     }
   },
   "constants/themes/primaryTheme.js": {
-    "bundled": 238,
-    "minified": 209,
-    "gzipped": 146,
+    "bundled": 345,
+    "minified": 306,
+    "gzipped": 182,
     "treeshaked": {
       "rollup": {
-        "code": 55,
-        "import_statements": 55
+        "code": 97,
+        "import_statements": 97
       },
       "webpack": {
-        "code": 1108
+        "code": 1207
       }
     }
   },
@@ -1382,16 +1382,16 @@
     }
   },
   "shared-components/immersiveModal/index.js": {
-    "bundled": 6767,
-    "minified": 3670,
-    "gzipped": 1354,
+    "bundled": 6809,
+    "minified": 3711,
+    "gzipped": 1368,
     "treeshaked": {
       "rollup": {
-        "code": 843,
+        "code": 868,
         "import_statements": 784
       },
       "webpack": {
-        "code": 1704
+        "code": 1733
       }
     }
   },
@@ -1441,6 +1441,34 @@
     "bundled": 338,
     "minified": 321,
     "gzipped": 234,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "constants/typography/primaryTypography.js": {
+    "bundled": 360,
+    "minified": 237,
+    "gzipped": 181,
+    "treeshaked": {
+      "rollup": {
+        "code": 0,
+        "import_statements": 0
+      },
+      "webpack": {
+        "code": 951
+      }
+    }
+  },
+  "constants/typography/secondaryTypography.js": {
+    "bundled": 406,
+    "minified": 241,
+    "gzipped": 184,
     "treeshaked": {
       "rollup": {
         "code": 0,
