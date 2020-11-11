@@ -21,7 +21,6 @@ import {
   ModalFooter,
   MainModalContentContainer,
 } from './style';
-import CrossIconComponent from './crossIconComponent';
 
 type ImmersiveModalProps = {
   /**
@@ -186,7 +185,7 @@ export const ImmersiveModal = ({
                 className="modal-offclick-wrapper"
               >
                 <MobileTopOverlay onClick={handleCloseIntent} />
-                <FocusScope contain restoreFocus autoFocus>
+                <FocusScope contain restoreFocus>
                   <MainModalContentContainer
                     id={MODAL_DESKTOP_SCROLLING_ID}
                     hasHeaderImage={!!headerImage}
@@ -202,10 +201,12 @@ export const ImmersiveModal = ({
                       showDesktopHeaderBar={showDesktopHeaderBar}
                     >
                       {title}
-                      <CrossIconComponent
-                        isVisible={showDesktopHeaderBar}
+                      <CrossIconContainer
                         onClick={handleCloseIntent}
-                      />
+                        tabIndex={showDesktopHeaderBar ? 0 : -1}
+                      >
+                        <CrossIcon />
+                      </CrossIconContainer>
                     </DesktopHeaderBar>
 
                     {headerImage && (
