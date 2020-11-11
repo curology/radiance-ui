@@ -238,5 +238,5 @@ ImmersiveModal.propTypes = {
   footerContent: PropTypes.node,
   headerImage: PropTypes.node,
   onClose: PropTypes.func.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
