@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v13.1.1
+
+- [Bugfix] Removes manual focus handling for ImmersiveModal, fixing scroll behavior when two or more focusable footer items are present ([#517](https://github.com/curology/radiance-ui/pull/517))
+
 # v13.1.0
 
 - [Theming] Adds FONTS constants to theme objects ([#509](https://github.com/curology/radiance-ui/pull/509))
