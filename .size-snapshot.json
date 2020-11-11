@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 823543,
-    "minified": 754225,
-    "gzipped": 91270
+    "bundled": 822499,
+    "minified": 753986,
+    "gzipped": 91173
   },
   "bundle.umd.js": {
-    "bundled": 833103,
-    "minified": 730203,
-    "gzipped": 87447
+    "bundled": 831999,
+    "minified": 730007,
+    "gzipped": 87358
   },
   "constants/themes/secondaryTheme.js": {
     "bundled": 256,
@@ -1382,16 +1382,16 @@
     }
   },
   "shared-components/immersiveModal/index.js": {
-    "bundled": 6821,
-    "minified": 3718,
-    "gzipped": 1381,
+    "bundled": 6767,
+    "minified": 3670,
+    "gzipped": 1354,
     "treeshaked": {
       "rollup": {
-        "code": 888,
-        "import_statements": 829
+        "code": 843,
+        "import_statements": 784
       },
       "webpack": {
-        "code": 1776
+        "code": 1704
       }
     }
   },
