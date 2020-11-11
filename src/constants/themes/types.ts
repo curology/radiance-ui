@@ -11,6 +11,10 @@ type Colors = typeof primaryTheme['COLORS'] | typeof secondaryTheme['COLORS'];
 
 type Fonts = typeof primaryTheme['FONTS'] | typeof secondaryTheme['FONTS'];
 
+type Typography =
+  | typeof primaryTheme['TYPOGRAPHY']
+  | typeof secondaryTheme['TYPOGRAPHY'];
+
 export type ThemeColors = valueof<Colors>;
 
 export const COLORS_PROP_TYPES = PropTypes.oneOf([
@@ -23,4 +27,5 @@ export type ThemeType = {
   BOX_SHADOW: BoxShadow;
   COLORS: Colors;
   FONTS: Fonts;
+  TYPOGRAPHY: Typography;
 };
