@@ -1,3 +1,4 @@
+// TODO: Update when values are finalized
 const fontSize = {
   display: '2.25rem', // 36px
   heading: '1.5rem', // 24px
