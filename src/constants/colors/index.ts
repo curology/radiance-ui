@@ -76,6 +76,7 @@ export const colorAliases = {
   primaryTint1: brandColors.purple85,
   primaryTint2: brandColors.purple70,
   primaryTint3: brandColors.purple30,
+  primaryTint4: brandColors.purple15,
   secondary: brandColors.lavender100,
   tertiary: brandColors.purple4,
 
@@ -91,7 +92,6 @@ export const colorAliases = {
   errorBorder: brandColors.statusRedBorder,
   default: brandColors.purple70,
   defaultBackground: brandColors.purple10,
-  defaultBorder: brandColors.purple15,
   accent: brandColors.red,
   disabled: brandColors.purple10,
   failure: brandColors.red,

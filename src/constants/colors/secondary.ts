@@ -4,15 +4,21 @@ import COLORS from '.';
 
 const SECONDARY_COLORS = {
   // brand colors
-  primary: '#4c0000',
-  primaryTint1: '#b20000',
-  primaryTint2: '',
-  primaryTint3: '#ff0000',
-  secondary: '#ff8000',
-  secondaryTint1: '',
-  secondaryTint2: '',
-  secondaryTint3: '',
-  tertiary: '',
+  primary: '#2C2A25',
+  primaryTint1: '#2C2A25',
+  primaryTint2: '#2C2A25',
+  primaryTint3: '#2C2A25',
+  primaryTint4: '#F0EEEC',
+  secondary: '#C4BFB7',
+  secondaryTint1: '#D2CEC8',
+  secondaryTint2: '#E1DEDA',
+  secondaryTint3: '#F0EEEC',
+  secondaryTint4: '#F0EEEC',
+  tertiary: '#FEE582',
+  tertiaryTint1: '#FBEEAE',
+  tertiaryTint2: '#FDF2C2',
+  tertiaryTint3: '#FEF6D5',
+  tertiaryTint4: '#FEFAE9',
 
   // general colors
   success: '',
@@ -26,7 +32,6 @@ const SECONDARY_COLORS = {
   errorBorder: '',
   default: '',
   defaultBackground: '',
-  defaultBorder: '',
   accent: '',
   disabled: '',
   failure: '',
