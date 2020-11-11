@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { BOX_SHADOWS, COLORS, SPACER } from '../../constants';
+import { BOX_SHADOWS, SPACER, ThemeType } from '../../constants';
 
 export const Container = styled.div`
   position: relative;
@@ -17,7 +17,7 @@ export const Container = styled.div`
 `;
 
 export const Label = styled.span`
-  color: ${COLORS.primaryTint1};
+  color: ${({ theme }) => theme.COLORS.primaryTint1};
   margin: 0;
   font-size: ${SPACER.medium};
   line-height: ${SPACER.large};
@@ -33,14 +33,14 @@ export const trackStyle = {
   width: 40,
 };
 
-export const thumbStyle = {
+export const thumbStyle = (theme: ThemeType) => ({
   height: 22,
   width: 22,
-  border: `1px solid ${COLORS.border}`,
+  border: `1px solid ${theme.COLORS.border}`,
   boxShadow: `none`,
-  background: COLORS.white,
-  backgroundColor: COLORS.white,
-};
+  background: theme.COLORS.white,
+  backgroundColor: theme.COLORS.white,
+});
 
 export const ReactToggleButtonContainer = styled.div`
   > div:first-of-type {

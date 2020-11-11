@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { mount } from 'src/tests/enzymeHelpers';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
 
 import AcneGlyph from '../../svgs/glyphs/acne-glyph.svg';
 
@@ -44,7 +44,7 @@ describe('<OptionButton />', () => {
   describe('onClick callback', () => {
     it('is invoked when clicked', () => {
       const spy = jest.fn();
-      const wrapper = shallow(
+      const wrapper = mount(
         <OptionButton
           onClick={spy}
           text="checkbox text"

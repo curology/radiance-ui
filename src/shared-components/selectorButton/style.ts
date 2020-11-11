@@ -1,9 +1,6 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
-import {
- COLORS, SPACER, ANIMATION, BOX_SHADOWS, 
-} from '../../constants';
+import { SPACER, ANIMATION, BOX_SHADOWS, ThemeType } from '../../constants';
 
 import { SelectorType, SizeType, StyleType } from '.';
 
@@ -26,7 +23,7 @@ export const OuterContainer = styled.div<{ selector: SelectorType }>`
     ${SelectorContainer} {
       box-shadow: ${BOX_SHADOWS.focus};
 
-      ${({ selector }) => css`
+      ${({ selector }) => `
         border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
       `};
     }
@@ -39,24 +36,24 @@ export const SelectorIcon = styled.div<{ disabled: boolean }>`
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  ${({ disabled }) => css`
+  ${({ disabled }) => `
     cursor: ${disabled ? 'not-allowed' : 'pointer'};
   `};
 `;
 
-const primarySelectorStyle = (checked: boolean) => css`
-  background-color: ${checked ? COLORS.primary : 'transparent'};
-  border-color: ${COLORS.primary};
+const primarySelectorStyle = (checked: boolean, theme: ThemeType) => `
+  background-color: ${checked ? theme.COLORS.primary : 'transparent'};
+  border-color: ${theme.COLORS.primary};
 `;
 
-const secondarySelectorStyle = (checked: boolean) => css`
-  background-color: ${checked ? COLORS.secondary : 'transparent'};
-  border-color: ${checked ? COLORS.secondary : COLORS.primary};
+const secondarySelectorStyle = (checked: boolean, theme: ThemeType) => `
+  background-color: ${checked ? theme.COLORS.secondary : 'transparent'};
+  border-color: ${checked ? theme.COLORS.secondary : theme.COLORS.primary};
 `;
 
-const disabledSelectorStyle = css`
-  background-color: ${COLORS.primaryTint3};
-  border-color: ${COLORS.primaryTint3};
+const disabledSelectorStyle = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.primaryTint3};
+  border-color: ${theme.COLORS.primaryTint3};
   cursor: not-allowed;
 `;
 
@@ -72,27 +69,28 @@ export const Selector = styled.div<{
   border: 1px solid;
   cursor: pointer;
   display: flex;
-  ${({ size }) => css`
+  ${({ size }) => `
     width: ${size === 'large' ? '3rem' : SPACER.xlarge};
     height: ${size === 'large' ? '3rem' : SPACER.xlarge};
-  `} justify-content: center;
+  `}
+  justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
 
-  ${({ selector }) => css`
+  ${({ selector }) => `
     border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
   `}
 
-  ${({ type, checked, disabled }) => {
+  ${({ type, checked, disabled, theme }) => {
     if (disabled) {
-      return disabledSelectorStyle;
+      return disabledSelectorStyle(theme);
     }
     switch (type) {
       case 'primary':
-        return primarySelectorStyle(checked);
+        return primarySelectorStyle(checked, theme);
       case 'secondary':
-        return secondarySelectorStyle(checked);
+        return secondarySelectorStyle(checked, theme);
       default:
-        return primarySelectorStyle(checked);
+        return primarySelectorStyle(checked, theme);
     }
   }}
 

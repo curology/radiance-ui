@@ -3,7 +3,6 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RadioButton } from 'src/shared-components';
 import { AcneGlyph } from 'src/svgs/glyphs';
-import { COLORS } from 'src/constants';
 import {
   ArgsTable,
   Description,
@@ -13,6 +12,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
@@ -64,21 +64,25 @@ export const Secondary = () => {
   );
 };
 
-export const WithControls = () => (
-  <RadioButton
-    checked={boolean('checked', false)}
-    type={select('type', ['primary', 'secondary'], 'primary')}
-    onClick={(action('radio button clicked'), () => undefined)}
-    icon={
-      boolean('icon', false) ? (
-        <AcneGlyph width={40} height={40} fill={COLORS.primary} />
-      ) : null
-    }
-    size={select('size', ['large', 'small'], 'small')}
-  >
-    {text('children', 'Render radio label here')}
-  </RadioButton>
-);
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <RadioButton
+      checked={boolean('checked', false)}
+      type={select('type', ['primary', 'secondary'], 'primary')}
+      onClick={(action('radio button clicked'), () => undefined)}
+      icon={
+        boolean('icon', false) ? (
+          <AcneGlyph width={40} height={40} fill={theme.COLORS.primary} />
+        ) : null
+      }
+      size={select('size', ['large', 'small'], 'small')}
+    >
+      {text('children', 'Render radio label here')}
+    </RadioButton>
+  );
+};
 
 WithControls.parameters = {
   chromatic: { disable: true },

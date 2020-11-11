@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
-import { COLORS } from '../../constants';
 import { LoadingSpinnerContainer, Overlay, Dot } from './style';
+import { ThemeColors } from '../../constants';
 
 type LoadingSpinnerProps = {
   /**
    * Background color of loading container
    */
-  bgColor?: string;
+  bgColor?: ThemeColors;
   /**
    * Color of the loading dots
    */
-  color?: string;
+  color?: ThemeColors;
   /**
    * Length of time for animation loop
    */
@@ -31,35 +32,42 @@ type LoadingSpinnerProps = {
  * LoadingSpinner will cover the entirety of the container that holds it. The container should have `position: relative;` as part of its styling to prevent the LoadingSpinner from spilling outside the container.
  */
 export const LoadingSpinner = ({
-  bgColor = COLORS.background,
-  color = COLORS.primary,
+  bgColor,
+  color,
   duration = 2,
   size = '14px',
   translateX = '100px',
-}: LoadingSpinnerProps) => (
-  <LoadingSpinnerContainer bgColor={bgColor}>
-    <Overlay>
-      <Dot
-        color={color}
-        translateX={translateX}
-        duration={duration}
-        size={size}
-      />
-      <Dot
-        color={color}
-        translateX={translateX}
-        duration={duration}
-        size={size}
-      />
-      <Dot
-        color={color}
-        translateX={translateX}
-        duration={duration}
-        size={size}
-      />
-    </Overlay>
-  </LoadingSpinnerContainer>
-);
+}: LoadingSpinnerProps) => {
+  const theme = useTheme();
+
+  const bgColorWithTheme = bgColor || theme.COLORS.background;
+  const colorWithTheme = color || theme.COLORS.primary;
+
+  return (
+    <LoadingSpinnerContainer bgColor={bgColorWithTheme}>
+      <Overlay>
+        <Dot
+          dotColor={colorWithTheme}
+          translateX={translateX}
+          duration={duration}
+          dotSize={size}
+        />
+        <Dot
+          dotColor={colorWithTheme}
+          translateX={translateX}
+          duration={duration}
+          dotSize={size}
+        />
+        <Dot
+          dotColor={colorWithTheme}
+          translateX={translateX}
+          duration={duration}
+          dotSize={size}
+        />
+      </Overlay>
+    </LoadingSpinnerContainer>
+  );
+};
 
 LoadingSpinner.propTypes = {
   bgColor: PropTypes.string,

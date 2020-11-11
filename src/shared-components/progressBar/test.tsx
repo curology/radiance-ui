@@ -1,5 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { primaryTheme } from 'src/constants/themes';
 
 import { ProgressBar } from './index';
 
@@ -16,8 +17,8 @@ describe('<ProgressBar />', () => {
       const component = renderer.create(
         <ProgressBar
           status="loading"
-          backgroundColor="red"
-          barColor="yellow"
+          backgroundColor={primaryTheme.COLORS.error}
+          barColor={primaryTheme.COLORS.warning}
           height={5}
           loadingTime="30s"
           customProp="allows ..rest props"

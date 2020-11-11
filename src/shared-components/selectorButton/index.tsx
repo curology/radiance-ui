@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
+import { useTheme } from 'emotion-theming';
 
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import CircleSolidIcon from '../../svgs/icons/circle-solid-icon.svg';
-import { COLORS } from '../../constants';
 import {
   OuterContainer,
   Selector,
@@ -42,11 +42,13 @@ export const SelectorButton = ({
   type = 'primary',
   ...rest
 }: SelectorButtonProps) => {
+  const theme = useTheme();
+
   const checkedIcon =
     selector === 'radio' ? (
       <CircleSolidIcon
         css={css`
-          color: ${COLORS.white};
+          color: ${theme.COLORS.white};
         `}
         width={8}
         height={8}
@@ -54,7 +56,7 @@ export const SelectorButton = ({
     ) : (
       <CheckmarkIcon
         css={css`
-          color: ${COLORS.white};
+          color: ${theme.COLORS.white};
         `}
         width={16}
         height={16}

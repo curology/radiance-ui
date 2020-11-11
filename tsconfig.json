@@ -3,9 +3,13 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": true,
+    "declarationMap": true,
     "emitDeclarationOnly": true,
     "outDir": "lib",
-    "rootDirs": ["src"]
+    // The folder structure in outDir is based on "The longest common path of all non-declaration input files."
+    // To match our babel output, we need to compile everything in `src` without also nesting it in a folder named `src`.
+    // Setting the `rootDir` to `src` will guarantee this behavior, and raise compilation errors if violated.
+    "rootDir": "src"
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.tsx", "types/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.tsx"]
 }

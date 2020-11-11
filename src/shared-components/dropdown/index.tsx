@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { MobileDropdown } from './mobileDropdown';
 import { DesktopDropdown } from './desktopDropdown';
 
+export type OptionValue = string | number;
+
 export type OptionType = {
   disabled?: boolean;
   /**
@@ -13,16 +15,20 @@ export type OptionType = {
   /**
    * The option indentifier
    */
-  value?: string | number;
+  value?: OptionValue;
+  /**
+   * Any other data we want to pass from options
+   */
+  [key: string]: unknown;
 };
 
-type DropdownProps = {
+type DropdownProps<T> = {
   borderRadius?: string;
   /**
    * The handler to be invoked on option change
    */
-  onChange: (option: OptionType) => void;
-  options: OptionType[];
+  onChange: (option: T) => void;
+  options: T[];
   /**
    * Specifies maximum height of the expanded dropdown
    */
@@ -31,21 +37,21 @@ type DropdownProps = {
   /**
    * The currently selected option
    */
-  value?: string | number;
+  value?: OptionValue;
 };
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
  * This ships with a mobile implementation that will handle mobile devices automatically.
  */
-export const Dropdown = ({
+export const Dropdown = <T extends OptionType>({
   borderRadius = '4px',
   onChange,
   options,
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
-}: DropdownProps) => {
+}: DropdownProps<T>) => {
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
 
@@ -59,10 +65,10 @@ export const Dropdown = ({
     event: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const { target } = event;
-    const { value: nextValue, selectedOptions } = target;
+    const { selectedIndex, selectedOptions } = target;
+    const selectedOption = options[selectedIndex];
     if (selectedOptions && selectedOptions.length) {
-      const { label } = selectedOptions[0];
-      onChange({ value: nextValue, label });
+      onChange(selectedOption);
     }
 
     closeDropdown();
@@ -92,6 +98,7 @@ export const Dropdown = ({
     if (selectedOption) {
       onChange(selectedOption);
     }
+
     closeDropdown();
   };
 
@@ -131,9 +138,9 @@ Dropdown.propTypes = {
   options: PropTypes.arrayOf(
     PropTypes.shape({
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string,
+      label: PropTypes.string.isRequired,
       disabled: PropTypes.bool,
-    }),
+    }).isRequired,
   ).isRequired,
   optionsContainerMaxHeight: PropTypes.string,
   textAlign: PropTypes.oneOf(['left', 'center']),

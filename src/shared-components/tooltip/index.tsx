@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import Arrow from 'src/svgs/icons/arrow.svg';
+import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
 import {
@@ -11,7 +12,6 @@ import {
   TooltipContent,
   ArrowImageContainer,
 } from './style';
-import { COLORS } from '../../constants';
 
 export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
@@ -91,6 +91,7 @@ export const Tooltip = ({
   nudgeTop = 0,
   position = 'top',
 }: TooltipProps) => {
+  const theme = useTheme();
   const [clicked, setClicked] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -149,7 +150,7 @@ export const Tooltip = ({
         >
           <TooltipContent>{content}</TooltipContent>
           <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
-            <Arrow width={16} height={16} fill={COLORS.primary} />
+            <Arrow width={16} height={16} fill={theme.COLORS.primary} />
           </ArrowImageContainer>
         </TooltipBox>
       </MainContainer>

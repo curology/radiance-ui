@@ -10,11 +10,12 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
-import { ANIMATION, COLORS, SPACER } from 'src/constants';
+import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 
 const Card = styled(Carousel.Card)`
-  background-color: ${COLORS.border};
+  background-color: ${({ theme }) => theme.COLORS.border};
   text-align: center;
   padding: ${SPACER.large};
 `;
@@ -76,36 +77,51 @@ const CarouselContainer = styled.div<{ bgColor?: string }>`
   height: 150px;
   width: 375px;
   align-items: center;
-  background-color: ${({ bgColor }) => bgColor || COLORS.background};
+  background-color: ${({ bgColor, theme }) =>
+    bgColor || theme.COLORS.background};
 `;
 
-export const SecondaryStyle = () => (
-  <CarouselContainer bgColor={COLORS.secondary}>
-    <Carousel numCardsVisible={1} carouselType="secondary">
-      {cards}
-    </Carousel>
-  </CarouselContainer>
-);
+export const SecondaryStyle = () => {
+  const theme = useTheme();
+
+  return (
+    <CarouselContainer bgColor={theme.COLORS.secondary}>
+      <Carousel numCardsVisible={1} carouselType="secondary">
+        {cards}
+      </Carousel>
+    </CarouselContainer>
+  );
+};
 
 SecondaryStyle.storyName = 'Secondary Style (all dots are white)';
 
-export const WithControls = () => (
-  <CarouselContainer bgColor={text('Background color', COLORS.background)}>
-    <Carousel
-      autoplay={boolean('autoplay', true)}
-      autoplaySpeed={number('autoplaySpeed, in milliseconds', 5000)}
-      carouselType={select('carouselType', ['primary', 'secondary'], 'primary')}
-      centerMode={boolean('centerMode', true)}
-      hideArrows={boolean('hideArrows', false)}
-      bottomRightAlignedArrows={boolean('bottomRightAlignedArrows', false)}
-      hideDots={boolean('hideDots', false)}
-      infinite={boolean('infinite', false)}
-      numCardsVisible={number('numCardsVisible', 1) as 1 | 2 | 3}
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <CarouselContainer
+      bgColor={text('Background color', theme.COLORS.background)}
     >
-      {cards}
-    </Carousel>
-  </CarouselContainer>
-);
+      <Carousel
+        autoplay={boolean('autoplay', true)}
+        autoplaySpeed={number('autoplaySpeed, in milliseconds', 5000)}
+        carouselType={select(
+          'carouselType',
+          ['primary', 'secondary'],
+          'primary',
+        )}
+        centerMode={boolean('centerMode', true)}
+        hideArrows={boolean('hideArrows', false)}
+        bottomRightAlignedArrows={boolean('bottomRightAlignedArrows', false)}
+        hideDots={boolean('hideDots', false)}
+        infinite={boolean('infinite', false)}
+        numCardsVisible={number('numCardsVisible', 1) as 1 | 2 | 3}
+      >
+        {cards}
+      </Carousel>
+    </CarouselContainer>
+  );
+};
 
 WithControls.parameters = {
   chromatic: { disable: true },
@@ -118,7 +134,7 @@ export default {
     /**
      * There is visual jank when this component loads--this reduces brittleness in Chromatic
      */
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) },
+    chromatic: { delay: 2000 },
     docs: {
       page: () => (
         <React.Fragment>

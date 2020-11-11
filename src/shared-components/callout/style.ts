@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
-import { COLORS, SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
 export const ParentContainer = styled.div`
   max-width: 327px;
 `;
 
 export const CalloutContainer = styled.div`
-  background-color: ${COLORS.infoBackground};
+  background-color: ${({ theme }) => theme.COLORS.infoBackground};
   padding: ${SPACER.medium};
   border-radius: 8px;
   display: flex;
@@ -17,22 +17,22 @@ export const CalloutContainer = styled.div`
 `;
 
 export const Text = styled.div<{
-  color: string;
+  textColor: string;
 }>`
-  color: ${({ color }) => color};
+  color: ${({ textColor }) => textColor};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
 `;
 
 export const Icon = styled.div<{
-  color: string;
+  iconColor: string;
 }>`
   margin-left: ${SPACER.small};
 
   svg {
-    fill: ${({ color }) => color};
+    fill: ${({ iconColor }) => iconColor};
 
     path {
-      fill: ${({ color }) => color};
+      fill: ${({ iconColor }) => iconColor};
     }
   }
 `;
