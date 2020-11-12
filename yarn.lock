@@ -2950,11 +2950,6 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^23.0.2":
-  version "23.3.14"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.14.tgz#37daaf78069e7948520474c87b80092ea912520a"
-  integrity sha512-Q5hTcfdudEL2yOmluA1zaSyPbzWPmJ3XfSWeP3RyoYvS9hnje1ZyagrZOuQ6+1nQC1Gw+7gap3pLNL3xL6UBug==
-
 "@types/jest@^26.0.13":
   version "26.0.15"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.15.tgz#12e02c0372ad0548e07b9f4e19132b834cb1effe"
@@ -3938,7 +3933,7 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
-atob@^2.1.1, atob@^2.1.2:
+atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
@@ -5611,16 +5606,6 @@ css-url-regex@^1.1.0:
 css-what@2.1, css-what@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-2.1.2.tgz#c0876d9d0480927d7d4920dcd72af3595649554d"
-
-css@^2.2.1:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/css/-/css-2.2.4.tgz#c646755c73971f2bba6a601e2cf2fd71b1298929"
-  integrity sha512-oUnjmWpy0niI3x/mPL8dVEI1l7MnG3+HHyRPHf+YFSbK+svOhXpmSOcDURUh2aOCgl2grzrOPt1nHLuCVFULLw==
-  dependencies:
-    inherits "^2.0.3"
-    source-map "^0.6.1"
-    source-map-resolve "^0.5.2"
-    urix "^0.1.0"
 
 cssesc@^3.0.0:
   version "3.0.0"
@@ -8997,15 +8982,10 @@ jest-each@^26.6.2:
     jest-util "^26.6.2"
     pretty-format "^26.6.2"
 
-jest-emotion@^10.0.32:
-  version "10.0.32"
-  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-10.0.32.tgz#8e36a871911f78841701224a95b7c535c65b70b6"
-  integrity sha512-hW3IwWc47qRuxnGsWFGY6uIMX8F4YBzq+Qci3LAYUCUqUBNP+1DU1L5Nudo9Ry0NHVFOqDnDeip1p2UR0kVMwA==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-    "@types/jest" "^23.0.2"
-    chalk "^2.4.1"
-    css "^2.2.1"
+jest-emotion@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-11.0.0.tgz#0131e60f5067c65c73981cd0565f777672cafb28"
+  integrity sha512-nw+iYPcHM+H5huUIsDh53uEIp6SrN5v+MOxa7qyXReae9foCTACDkFuF/1Hfkik/R8mDMir7q5QEiVMRJ0/f2Q==
 
 jest-environment-jsdom@^26.6.2:
   version "26.6.2"
@@ -13046,16 +13026,6 @@ source-map-resolve@^0.5.0:
   integrity sha512-Htz+RnsXWk5+P2slx5Jh3Q66vhQj1Cllm0zvnaY98+NFx+Dv2CF/f5O/t8x+KaNdrdIAsruNzoh/KpialbqAnw==
   dependencies:
     atob "^2.1.2"
-    decode-uri-component "^0.2.0"
-    resolve-url "^0.2.1"
-    source-map-url "^0.4.0"
-    urix "^0.1.0"
-
-source-map-resolve@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz#72e2cc34095543e43b2c62b2c4c10d4a9054f259"
-  dependencies:
-    atob "^2.1.1"
     decode-uri-component "^0.2.0"
     resolve-url "^0.2.1"
     source-map-url "^0.4.0"
