@@ -58,7 +58,7 @@ const SECONDARY_COLORS = {
   overlaySolid: '',
 
   black: COLORS.black,
-  white: COLORS.white,
+  white: '#FFFEF2',
   transparent: 'transparent',
 } as const;
 
