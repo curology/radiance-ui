@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v13.2.0
+
+- [Theming] Add TYPOGRAPHY constants to theme object ([#520](https://github.com/curology/radiance-ui/pull/520))
+- [PropTypes] Fix ImmersiveModal title prop typing ([#518](https://github.com/curology/radiance-ui/pull/518))
+
 # v13.1.1
 
 - [Bugfix] Removes manual focus handling for ImmersiveModal, fixing scroll behavior when two or more focusable footer items are present ([#517](https://github.com/curology/radiance-ui/pull/517))
