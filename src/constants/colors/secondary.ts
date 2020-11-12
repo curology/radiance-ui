@@ -21,36 +21,36 @@ const SECONDARY_COLORS = {
   tertiaryTint4: '#FEFAE9',
 
   // general colors
-  success: '',
-  successBackground: '',
-  successBorder: '',
-  info: '',
-  infoBackground: '',
-  infoBorder: '',
-  error: '',
-  errorBackground: '',
-  errorBorder: '',
-  default: '',
-  defaultBackground: '',
-  accent: '',
+  success: '#406237',
+  successBackground: '#ECEFEB',
+  successBorder: '#ECEFEB',
+  info: '#2C2A25',
+  infoBackground: '#FEFAE9',
+  infoBorder: '#FEFAE9',
+  error: '#A33F29',
+  errorBackground: '#F6ECEA',
+  errorBorder: '#F6ECEA',
+  default: '#2C2A25',
+  defaultBackground: '#F0EEEC',
+  accent: '#F0EEEC',
   disabled: '',
   failure: '',
   hover: '',
   warning: '',
 
   // ui colors
-  background: '',
-  backgroundDark: '',
-  border: '',
-  divider: '',
+  background: '#FFFEF2',
+  backgroundDark: '#C4BFB7',
+  border: '#E1DEDA',
+  divider: '#E1DEDA',
 
   // form colors
   radioBorder: '',
   radioBorderSelected: '',
 
   // typography
-  textMuted: '',
-  textGhost: '',
+  textMuted: '#C4BFB7',
+  textGhost: '#C4BFB7',
   textDisabled: '',
 
   // overlay

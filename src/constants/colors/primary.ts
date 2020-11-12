@@ -13,7 +13,7 @@ const PRIMARY_COLORS = {
   secondaryTint1: COLORS.lavender80,
   secondaryTint2: COLORS.lavender60,
   secondaryTint3: COLORS.lavender10,
-  secondaryTint4: '#A6A1E21A',
+  secondaryTint4: COLORS.lavender10,
   tertiary: COLORS.purple4,
   tertiaryTint1: COLORS.purple4,
   tertiaryTint2: COLORS.purple4,
