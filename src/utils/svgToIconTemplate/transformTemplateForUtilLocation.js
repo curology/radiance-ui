@@ -16,7 +16,7 @@ function transformTemplateForUtilLocation(utilLocation) {
       ${imports}
       import { css } from '@emotion/core';
 
-      import { propTypes, defaultProps, iconStyles } from '${utilLocation}';
+      import { ICON_PROP_TYPES, ICON_DEFAULT_PROPS, iconStyles } from '${utilLocation}';
 
       const ${componentName} = (props) => {
         return (
@@ -24,8 +24,8 @@ function transformTemplateForUtilLocation(utilLocation) {
         );
       };
 
-      ${componentName}.propTypes = propTypes;
-      ${componentName}.defaultProps = defaultProps;
+      ${componentName}.propTypes = ICON_PROP_TYPES;
+      ${componentName}.defaultProps = ICON_DEFAULT_PROPS;
 
       ${exports}
     `;

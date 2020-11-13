@@ -4,7 +4,7 @@ import { css } from '@emotion/core';
 
 import { ANIMATION } from '../../constants';
 
-export const ICON_PROP_TYPES = {
+export const propTypes = {
   className: PropTypes.string,
   fill: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -16,7 +16,7 @@ export const ICON_PROP_TYPES = {
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-export const ICON_DEFAULT_PROPS = {
+export const defaultProps = {
   height: 16,
   rotate: 0,
   width: 16,
@@ -26,7 +26,7 @@ export type IconsProps = {
   className?: string;
   fill?: string;
   height?: string | number;
-  displayInline?: boolean;
+  inline?: boolean;
   /**
    * Clockwise rotation, in degrees
    */
@@ -38,7 +38,7 @@ export type IconsProps = {
  * TODO: Rename `inline` prop usage so that we do not pass it to the DOM, which raises warnings
  */
 export const iconStyles = (props: IconsProps) => css`
-  display: ${props.displayInline ? 'inline-block' : 'block'};
+  display: ${props.inline ? 'inline-block' : 'block'};
   transform: rotate(${props.rotate}deg);
   color: ${props.fill};
   transition: color ${ANIMATION.defaultTiming},
