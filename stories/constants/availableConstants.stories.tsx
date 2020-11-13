@@ -10,6 +10,10 @@ const {
   BOX_SHADOWS,
   COLORS,
   COLORS_PROP_TYPES,
+  // TODO-theming: Add to story once finalized,
+  // otherwise visual tests will fail with every change
+  primaryTheme,
+  secondaryTheme,
   ...VALID_CONSTANTS
 } = CONSTANTS;
 /* eslint-enable @typescript-eslint/no-unused-vars */

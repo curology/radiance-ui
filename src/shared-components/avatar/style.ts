@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 
-import { COLORS } from '../../constants';
-
 const SIZES = {
   small: 32,
   medium: 48,
@@ -17,9 +15,11 @@ const determineSize = ({
   width: ${SIZES[avatarSize]}px;
 `;
 
-const AvatarImage = styled.img`
+const AvatarImage = styled.img<{
+  avatarSize: 'small' | 'medium' | 'large';
+}>`
   ${determineSize}
-  background-color: ${COLORS.secondary};
+  background-color: ${({ theme }) => theme.COLORS.secondary};
   border-radius: 50%;
   overflow: hidden;
 `;

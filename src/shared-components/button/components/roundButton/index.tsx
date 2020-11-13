@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
-import { COLORS, COLORS_PROP_TYPES } from '../../../../constants';
 import Loader from '../../shared-components/loader';
 import {
   RoundButtonWrapper,
@@ -16,12 +16,10 @@ import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
 type RoundButtonProps = {
-  /**
-   * TODO-TS: Limit type from string to COLORS constants options
-   */
-  buttonColor?: string;
+  buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
    */
@@ -44,7 +42,7 @@ type RoundButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors (except when disabled is true)
    */
-  textColor?: string;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 
@@ -56,7 +54,7 @@ type RoundButtonProps = {
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
 export const RoundButton = ({
-  buttonColor = COLORS.primary,
+  buttonColor,
   buttonType = 'primary',
   children = '',
   disabled = false,
@@ -67,6 +65,8 @@ export const RoundButton = ({
   textColor = '',
   ...rest
 }: RoundButtonProps) => {
+  const theme = useTheme();
+  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
@@ -75,7 +75,7 @@ export const RoundButton = ({
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
-        buttonColor={buttonColor}
+        buttonColor={buttonColorWithTheme}
         isLoading={loadingVal}
         type="button"
         textColor={textColor}
@@ -84,16 +84,18 @@ export const RoundButton = ({
       >
         {icon}
         <Loader
-          buttonColor={buttonColor}
+          buttonColor={buttonColorWithTheme}
           buttonType={buttonType}
           disabled={disabled}
-          css={roundButtonLoader(disabled)}
+          css={roundButtonLoader(disabled, theme)}
           isLoading={loadingVal}
           textColor={textColor}
         />
       </RoundButtonBase>
       {children && (
-        <p css={roundButtonTextStyles(buttonColor, textColor)}>{children}</p>
+        <p css={roundButtonTextStyles(buttonColorWithTheme, textColor, theme)}>
+          {children}
+        </p>
       )}
     </RoundButtonWrapper>
   );

@@ -10,9 +10,10 @@ import {
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Button } from 'src/shared-components';
-import { COLORS } from 'src/constants';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
 const noop = () => undefined;
 
@@ -105,77 +106,102 @@ export const WithIcon = () => (
   </Button.Container>
 );
 
-export const WithColor = () => (
-  <Button.Container>
-    <Button onClick={noop} buttonColor={COLORS.error}>
-      Primary Button
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} buttonType="secondary">
-      Secondary Button
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} buttonType="tertiary">
-      Tertiary Button
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} buttonType="quaternary">
-      Quaternary Button
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} disabled>
-      Disabled Button
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} isFullWidth>
-      Full Width Button
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} isLoading>
-      Primary Loading
-    </Button>
-    <Button
-      onClick={noop}
-      buttonColor={COLORS.error}
-      isLoading
-      buttonType="secondary"
-    >
-      Secondary Loading
-    </Button>
-    <Button
-      onClick={noop}
-      buttonColor={COLORS.error}
-      buttonType="tertiary"
-      isLoading
-    >
-      Tertiary Loading
-    </Button>
-    <Button
-      onClick={noop}
-      buttonColor={COLORS.error}
-      buttonType="quaternary"
-      isLoading
-    >
-      Quaternary Loading
-    </Button>
-    <Button onClick={noop} buttonColor={COLORS.error} isFullWidth isLoading>
-      Full Width Loading
-    </Button>
-  </Button.Container>
-);
+export const WithColor = () => {
+  const theme = useTheme();
 
-export const WithControls = () => (
-  <Button.Container>
-    <Button
-      buttonType={select(
-        'buttonType',
-        ['primary', 'secondary', 'tertiary', 'quaternary'],
-        'primary',
-      )}
-      buttonColor={select('buttonColor', COLORS, COLORS.primary)}
-      isLoading={boolean('isLoading', false)}
-      disabled={boolean('disabled', false)}
-      onClick={action('button clicked')}
-      textColor={text('textColor', '')}
-    >
-      {text('children', 'Click me!')}
-    </Button>
-  </Button.Container>
-);
+  return (
+    <Button.Container>
+      <Button onClick={noop} buttonColor={theme.COLORS.error}>
+        Primary Button
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        buttonType="secondary"
+      >
+        Secondary Button
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        buttonType="tertiary"
+      >
+        Tertiary Button
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        buttonType="quaternary"
+      >
+        Quaternary Button
+      </Button>
+      <Button onClick={noop} buttonColor={theme.COLORS.error} disabled>
+        Disabled Button
+      </Button>
+      <Button onClick={noop} buttonColor={theme.COLORS.error} isFullWidth>
+        Full Width Button
+      </Button>
+      <Button onClick={noop} buttonColor={theme.COLORS.error} isLoading>
+        Primary Loading
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        isLoading
+        buttonType="secondary"
+      >
+        Secondary Loading
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        buttonType="tertiary"
+        isLoading
+      >
+        Tertiary Loading
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        buttonType="quaternary"
+        isLoading
+      >
+        Quaternary Loading
+      </Button>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        isFullWidth
+        isLoading
+      >
+        Full Width Loading
+      </Button>
+    </Button.Container>
+  );
+};
+
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <Button.Container>
+      <Button
+        buttonType={select(
+          'buttonType',
+          ['primary', 'secondary', 'tertiary', 'quaternary'],
+          'primary',
+        )}
+        buttonColor={select('buttonColor', theme.COLORS, theme.COLORS.primary)}
+        isLoading={boolean('isLoading', false)}
+        disabled={boolean('disabled', false)}
+        onClick={action('button clicked')}
+        textColor={text('textColor', '') as ThemeColors}
+      >
+        {text('children', 'Click me!')}
+      </Button>
+    </Button.Container>
+  );
+};
 
 WithControls.parameters = {
   chromatic: { disable: true },

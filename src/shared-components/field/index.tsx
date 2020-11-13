@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useTheme } from 'emotion-theming';
 
 import {
   FieldContainer,
@@ -16,7 +17,6 @@ import {
   MessagesTypes,
   MessageType,
 } from '../verificationMessages';
-import { COLORS } from '../../constants';
 
 type FieldProps = {
   /**
@@ -65,17 +65,21 @@ export const Field = ({
   messages = {},
   messagesType = 'error',
 }: FieldProps) => {
+  const theme = useTheme();
   const htmlFor = labelFor || label;
   const messagesKeys = Object.keys(messages);
   const showMessages = messagesKeys.length > 0;
   const MessageIcon =
     messagesType === 'success' ? (
       <CheckmarkIcon
-        fill={COLORS.success}
+        fill={theme.COLORS.success}
         className="radiance-field-input-icon"
       />
     ) : (
-      <ErrorIcon fill={COLORS.error} className="radiance-field-input-icon" />
+      <ErrorIcon
+        fill={theme.COLORS.error}
+        className="radiance-field-input-icon"
+      />
     );
 
   return (

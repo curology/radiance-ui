@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/core';
 
 import {
   BOX_SHADOWS,
-  COLORS,
   MEDIA_QUERIES,
   SPACER,
   ANIMATION,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
@@ -38,18 +38,18 @@ const fadeInMobile = keyframes`
   to { opacity: 1; transform: translate3d(0, 0px, 0); }
 `;
 
-const defaultAlertStyles = css`
-  background-color: ${COLORS.primary};
+const defaultAlertStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.primary};
   box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 `;
 
-const successAlertStyles = css`
-  background-color: ${COLORS.success};
+const successAlertStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.success};
   box-shadow: 0px 8px 24px rgba(43, 110, 51, 0.05);
 `;
 
-const errorAlertStyles = css`
-  background-color: ${COLORS.error};
+const errorAlertStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.error};
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
@@ -76,16 +76,16 @@ export const AlertContainer = styled.button<{
     box-shadow: ${BOX_SHADOWS.focus};
   }
 
-  ${({ alertType }) => {
+  ${({ alertType, theme }) => {
     switch (alertType) {
       case 'danger':
-        return errorAlertStyles;
+        return errorAlertStyles(theme);
       case 'error':
-        return errorAlertStyles;
+        return errorAlertStyles(theme);
       case 'success':
-        return successAlertStyles;
+        return successAlertStyles(theme);
       default:
-        return defaultAlertStyles;
+        return defaultAlertStyles(theme);
     }
   }};
 
@@ -93,7 +93,7 @@ export const AlertContainer = styled.button<{
     animation: ${fadeInDesktop} ${ANIMATION.defaultTiming} 1;
     margin: 0 auto ${SPACER.medium};
     transform: ${({ exiting }) =>
-    exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
+      exiting ? 'translate3d(24px, 0, 0)' : 'translate3d(0, 0, 0)'};
   }
 `;
 
@@ -102,7 +102,7 @@ export const MainContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.COLORS.white};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   padding: ${SPACER.medium};
 `;
@@ -119,7 +119,7 @@ export const CtaContent = styled.div`
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.COLORS.white};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
@@ -127,13 +127,13 @@ export const CtaContent = styled.div`
 export const IconContainer = styled.div<{ hasAvatar: boolean }>`
   ${({ hasAvatar }) =>
     hasAvatar &&
-    css`
+    `
       min-width: 32px;
     `};
 
   svg {
     height: ${SPACER.medium};
     width: ${SPACER.medium};
-    fill: ${COLORS.white};
+    fill: ${({ theme }) => theme.COLORS.white};
   }
 `;

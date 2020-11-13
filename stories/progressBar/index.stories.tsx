@@ -1,11 +1,9 @@
 import React from 'react';
-import {
-  text, select, number, color, 
-} from '@storybook/addon-knobs';
+import { text, select, number, color } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { ProgressBar } from 'src/shared-components';
-import { ANIMATION, COLORS, PROGRESS_BAR_STATUS } from 'src/constants';
+import { ANIMATION, PROGRESS_BAR_STATUS } from 'src/constants';
 import {
   ArgsTable,
   Description,
@@ -15,12 +13,14 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import { ThemeColors } from 'src/constants/themes/types';
+import { useTheme } from 'emotion-theming';
 
 const BarContainer = styled.div`
   position: relative;
   width: 100%;
   height: 150px;
-  border: 1px solid ${COLORS.border};
+  border: 1px solid ${({ theme }) => theme.COLORS.border};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -28,7 +28,7 @@ const BarContainer = styled.div`
 
   :before {
     content: 'PAGE CONTENT';
-    color: ${COLORS.primaryTint3};
+    color: ${({ theme }) => theme.COLORS.primaryTint3};
   }
 `;
 
@@ -56,21 +56,27 @@ export const WithCustomStyles = () => {
   );
 };
 
-export const WithControls = () => (
-  <BarContainer>
-    <ProgressBar
-      backgroundColor={color('backgroundColor', COLORS.background)}
-      barColor={color('barColor', COLORS.primary)}
-      loadingTime={text('loadingTime', '20s')}
-      height={number('height', 4)}
-      status={select(
-        'status',
-        PROGRESS_BAR_STATUS,
-        PROGRESS_BAR_STATUS.loading,
-      )}
-    />
-  </BarContainer>
-);
+export const WithControls = () => {
+  const theme = useTheme();
+
+  return (
+    <BarContainer>
+      <ProgressBar
+        backgroundColor={
+          color('backgroundColor', theme.COLORS.background) as ThemeColors
+        }
+        barColor={color('barColor', theme.COLORS.primary) as ThemeColors}
+        loadingTime={text('loadingTime', '20s')}
+        height={number('height', 4)}
+        status={select(
+          'status',
+          PROGRESS_BAR_STATUS,
+          PROGRESS_BAR_STATUS.loading,
+        )}
+      />
+    </BarContainer>
+  );
+};
 
 WithControls.parameters = {
   chromatic: { disable: true },
