@@ -1,29 +1,28 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import {
   BOX_SHADOWS,
-  COLORS,
   MEDIA_QUERIES,
   SPACER,
+  ThemeType,
   TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
 import { BannerType } from '.';
 
-const defaultAlertStyles = css`
-  background-color: ${COLORS.primary};
+const defaultAlertStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.primary};
   box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 `;
 
-const successAlertStyles = css`
-  background-color: ${COLORS.success};
+const successAlertStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.success};
   box-shadow: 0px 8px 24px rgba(43, 110, 51, 0.05);
 `;
 
-const errorAlertStyles = css`
-  background-color: ${COLORS.error};
+const errorAlertStyles = (theme: ThemeType) => `
+  background-color: ${theme.COLORS.error};
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
@@ -44,16 +43,16 @@ export const BannerContainer = styled.button<{
   padding: ${SPACER.medium};
   border-radius: ${SPACER.small};
 
-  ${({ bannerType }) => {
+  ${({ bannerType, theme }) => {
     switch (bannerType) {
       case 'danger':
-        return errorAlertStyles;
+        return errorAlertStyles(theme);
       case 'error':
-        return errorAlertStyles;
+        return errorAlertStyles(theme);
       case 'success':
-        return successAlertStyles;
+        return successAlertStyles(theme);
       default:
-        return defaultAlertStyles;
+        return defaultAlertStyles(theme);
     }
   }};
 
@@ -68,7 +67,7 @@ export const MainContainer = styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-start;
-  color: ${COLORS.white};
+  color: ${({ theme }) => theme.COLORS.white};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
 `;
 
@@ -80,6 +79,6 @@ export const IconContainer = styled.div`
   svg {
     height: ${SPACER.medium};
     width: ${SPACER.medium};
-    fill: ${COLORS.white};
+    fill: ${({ theme }) => theme.COLORS.white};
   }
 `;

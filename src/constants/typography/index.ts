@@ -7,14 +7,16 @@ const fontSize = throwOnUndefinedProperty({
   body: '1rem', // 16px
   caption: '0.875rem', // 14px
   label: '0.75rem', // 12px
-});
+} as const);
 
 const fontWeight = throwOnUndefinedProperty({
   bold: 'bold',
   normal: 400,
-});
+} as const);
 
-export default throwOnUndefinedProperty({
+const TYPOGRAPHY_CONSTANTS = throwOnUndefinedProperty({
   fontSize,
   fontWeight,
 });
+
+export default TYPOGRAPHY_CONSTANTS;

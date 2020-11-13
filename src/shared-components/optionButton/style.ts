@@ -1,38 +1,29 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
- COLORS, ANIMATION, SPACER, BOX_SHADOWS, 
-} from '../../constants';
+import { ANIMATION, SPACER, BOX_SHADOWS, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
 type BaseIconWrapperStylesProps = {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
   selected?: boolean;
+  theme: ThemeType;
 };
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
+) => (optionType === 'checkbox' ? 'border-radius: 4px' : 'border-radius: 50%');
+
+const getTypeColor = (
+  buttonType: BaseIconWrapperStylesProps['buttonType'],
+  theme: ThemeType,
 ) => {
-  if (optionType === 'checkbox') {
-    return css`
-      border-radius: 4px;
-    `;
-  }
-
-  return css`
-    border-radius: 50%;
-  `;
-};
-
-const getTypeColor = (buttonType: BaseIconWrapperStylesProps['buttonType']) => {
   if (buttonType === 'secondary') {
-    return COLORS.secondary;
+    return theme.COLORS.secondary;
   }
 
-  return COLORS.primary;
+  return theme.COLORS.primary;
 };
 
 export const ClickableContainer = styled.button<{
@@ -40,7 +31,7 @@ export const ClickableContainer = styled.button<{
   containerType: ContainerType;
 }>`
   border-radius: ${({ borderRadius }) => borderRadius};
-  ${({ containerType }) => containerStyles(containerType)};
+  ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
@@ -63,10 +54,11 @@ const getBaseIconWrapperStyles = ({
   buttonType,
   optionType,
   selected,
-}: BaseIconWrapperStylesProps) => css`
+  theme,
+}: BaseIconWrapperStylesProps) => `
   border: 1px solid;
-  border-color: ${COLORS.primary};
-  background: ${COLORS.white};
+  border-color: ${theme.COLORS.primary};
+  background: ${theme.COLORS.white};
   width: 32px;
   height: 32px;
   display: flex;
@@ -83,42 +75,59 @@ const getBaseIconWrapperStyles = ({
     transition: all ${ANIMATION.defaultTiming};
   }
 
-  ${selected &&
-  css`
-    background: ${getTypeColor(buttonType)};
-    border-color: ${getTypeColor(buttonType)};
+  ${
+    selected
+      ? `
+    background: ${getTypeColor(buttonType, theme)};
+    border-color: ${getTypeColor(buttonType, theme)};
 
     svg {
       opacity: 1;
-      color: ${COLORS.white};
-      fill: ${COLORS.white};
+      color: ${theme.COLORS.white};
+      fill: ${theme.COLORS.white};
     }
-  `};
+  `
+      : ''
+  }
 `;
 
-export const CheckmarkWrapper = styled.div<BaseIconWrapperStylesProps>`
-  ${({ buttonType, optionType, selected }) =>
-    getBaseIconWrapperStyles({ buttonType, optionType, selected })};
+export const CheckmarkWrapper = styled.div<
+  Omit<BaseIconWrapperStylesProps, 'theme'>
+>`
+  ${({ buttonType, optionType, selected, theme }) =>
+    getBaseIconWrapperStyles({
+      buttonType,
+      optionType,
+      selected,
+      theme,
+    })}
 `;
 
-export const IconWrapper = styled.div<BaseIconWrapperStylesProps>`
-  ${({ buttonType, optionType, selected }) =>
-    getBaseIconWrapperStyles({ buttonType, optionType, selected })};
+export const IconWrapper = styled.div<
+  Omit<BaseIconWrapperStylesProps, 'theme'>
+>`
+  ${({ buttonType, optionType, selected, theme }) =>
+    getBaseIconWrapperStyles({
+      buttonType,
+      optionType,
+      selected,
+      theme,
+    })}
   width: 48px;
   height: 48px;
 
   svg {
     opacity: 1;
-    color: ${COLORS.primary};
-    fill: ${COLORS.primary};
+    color: ${({ theme }) => theme.COLORS.primary};
+    fill: ${({ theme }) => theme.COLORS.primary};
   }
 
-  ${({ selected }) =>
+  ${({ selected, theme }) =>
     selected &&
-    css`
+    `
       svg {
-        color: ${COLORS.white};
-        fill: ${COLORS.white};
+        color: ${theme.COLORS.white};
+        fill: ${theme.COLORS.white};
       }
     `};
 `;
@@ -128,11 +137,11 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.div`
-  color: ${COLORS.primaryTint1};
+  color: ${({ theme }) => theme.COLORS.primaryTint1};
   line-height: 1.5;
 `;
 
 export const SubText = styled.div`
-  ${TYPOGRAPHY_STYLE.caption};
+  ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   line-height: 1.5;
 `;

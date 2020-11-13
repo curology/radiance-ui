@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { mount } from 'src/tests/enzymeHelpers';
 
 import { ModalTitle } from './style';
 
@@ -11,7 +11,7 @@ const modalBody = 'Immersive Modal Children Content';
 describe('<ImmersiveModal />', () => {
   it('render children content correctly', () => {
     const wrapper = mount(
-      <ImmersiveModal onClose={(): void => undefined} title={modalTitle}>
+      <ImmersiveModal onClose={() => undefined} title={modalTitle}>
         <div>{modalBody}</div>
       </ImmersiveModal>,
     );

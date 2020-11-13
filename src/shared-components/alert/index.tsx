@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
 import { Avatar } from '../avatar';
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
-import { COLORS } from '../../constants';
 import {
   AlertsContainer,
   AlertContainer,
@@ -68,6 +68,7 @@ export const Alert = (alertProps: AlertProps) => {
     type = 'default',
     ...rest
   } = alertProps;
+  const theme = useTheme();
   const [exiting, setExiting] = useState(false);
   const [exited, setExited] = useState(false);
 
@@ -137,7 +138,7 @@ export const Alert = (alertProps: AlertProps) => {
           {avatarSrc ? (
             <Avatar size="small" src={avatarSrc} alt="avatar" />
           ) : (
-            <Icon fill={COLORS.white} />
+            <Icon fill={theme.COLORS.white} />
           )}
         </IconContainer>
         <ContentContainer truncateText={truncateText} ref={contentText}>
@@ -147,7 +148,7 @@ export const Alert = (alertProps: AlertProps) => {
       {ctaContent && (
         <CtaContent>
           <div>{ctaContent}</div>
-          <ChevronIcon fill={COLORS.white} width={14} height={14} />
+          <ChevronIcon fill={theme.COLORS.white} width={14} height={14} />
         </CtaContent>
       )}
     </AlertContainer>

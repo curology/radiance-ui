@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
 import Loader from './shared-components/loader';
 import Container from './shared-components/container';
@@ -8,11 +9,11 @@ import withDeprecationWarning from '../../utils/withDeprecationWarning';
 import { LinkButton } from './components/linkButton';
 import RoundButton from './components/roundButton';
 import { TextButton } from './components/textButton';
-import { COLORS, COLORS_PROP_TYPES } from '../../constants';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from './deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**
@@ -21,10 +22,7 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 export type ButtonTypeWithAction = ButtonType | 'action';
 
 type ButtonProps = {
-  /**
-   * TODO-TS: Limit type from string to COLORS constants options
-   */
-  buttonColor?: string;
+  buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
    */
@@ -47,11 +45,13 @@ type ButtonProps = {
    */
   isLoading?: boolean;
   loading?: boolean;
-  onClick: () => void;
+  onClick?: (
+    event: React.SyntheticEvent<HTMLButtonElement>,
+  ) => void | Promise<void> | boolean;
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: string;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 
@@ -63,7 +63,7 @@ type ButtonProps = {
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
 export const Button = ({
-  buttonColor = COLORS.primary,
+  buttonColor,
   buttonType = 'primary',
   children,
   disabled = false,
@@ -75,11 +75,13 @@ export const Button = ({
   textColor = '',
   ...rest
 }: ButtonProps) => {
+  const theme = useTheme();
+  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
     <ButtonBase
-      buttonColor={buttonColor}
+      buttonColor={buttonColorWithTheme}
       buttonType={buttonType}
       disabled={disabled}
       isFullWidth={isFullWidth}
@@ -103,7 +105,7 @@ export const Button = ({
         </ButtonText>
       </ButtonContents>
       <Loader
-        buttonColor={buttonColor}
+        buttonColor={buttonColorWithTheme}
         buttonType={buttonType}
         disabled={disabled}
         isFullWidth={isFullWidth}
@@ -130,7 +132,7 @@ Button.propTypes = {
   isFullWidth: PropTypes.bool,
   isLoading: PropTypes.bool,
   loading: isLoadingPropFunction,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   textColor: PropTypes.string,
 };
 

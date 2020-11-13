@@ -1,6 +1,6 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { shallow } from 'src/tests/enzymeHelpers';
 
 import { VerificationMessages } from './index';
 

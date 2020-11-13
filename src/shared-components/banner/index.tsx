@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
-import { COLORS } from '../../constants';
 import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
 import ErrorIcon from '../../svgs/icons/error-icon.svg';
 import InfoIcon from '../../svgs/icons/info-icon.svg';
@@ -35,6 +35,7 @@ type BannerProps = {
  * Banners are not dismissable.
  */
 export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
+  const theme = useTheme();
   const Icon = bannerIconMapping[type];
 
   return (
@@ -45,7 +46,7 @@ export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
     >
       <MainContainer>
         <IconContainer>
-          <Icon fill={COLORS.white} />
+          <Icon fill={theme.COLORS.white} />
         </IconContainer>
         <ContentContainer>{content}</ContentContainer>
       </MainContainer>

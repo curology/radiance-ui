@@ -1,5 +1,26 @@
 # CHANGELOG
 
+# v13.2.0
+
+- [Theming] Add TYPOGRAPHY constants to theme object ([#520](https://github.com/curology/radiance-ui/pull/520))
+- [PropTypes] Fix ImmersiveModal title prop typing ([#518](https://github.com/curology/radiance-ui/pull/518))
+
+# v13.1.1
+
+- [Bugfix] Removes manual focus handling for ImmersiveModal, fixing scroll behavior when two or more focusable footer items are present ([#517](https://github.com/curology/radiance-ui/pull/517))
+
+# v13.1.0
+
+- [Theming] Adds FONTS constants to theme objects ([#509](https://github.com/curology/radiance-ui/pull/509))
+- [Theming] Adds `'transparent'` as valid property of COLORS object ([#512](https://github.com/curology/radiance-ui/pull/512))
+
+# v13.0.0
+
+- [Theming] Adds theming functionality to components ([#466](https://github.com/curology/radiance-ui/pull/466))
+  - **BREAKING**: All component usage _must_ be wrapped with an `emotion-theming` `<ThemeProvider>`, as component internals require access to a provided theme object.
+    - See [da0fd4c](https://github.com/curology/radiance-ui/commit/da0fd4ced5c9064c94ebb7c607b845fe156e7e95#diff-e201de4e2ea4ee79f492c0495d7f3fce6389034fe26bfb8f3c877f8c03edf914R88) for how our [https://radiance-ui.curology.com/](https://radiance-ui.curology.com/) storybook site is configured
+    - See [#505](https://github.com/curology/radiance-ui/pull/505/files) for wrapping test utilites with theme context.
+
 # v12.4.0
 
 - [Internal] Refactor Dropdown, refactor variables names and standarize code across components

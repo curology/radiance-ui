@@ -44,10 +44,10 @@ export const Checkbox = ({
     onClick={
       disabled
         ? (
-          event:
+            event:
               | React.MouseEvent<HTMLDivElement, MouseEvent>
               | React.KeyboardEvent,
-        ) => event.preventDefault()
+          ) => event.preventDefault()
         : onClick
     }
     selector="checkbox"

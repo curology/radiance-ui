@@ -1,11 +1,4 @@
-const allowedEnvironments = ['test', 'development', 'dev'];
-
-const environment = process.env.NODE_ENV;
-
-const shouldShowForEnvironment =
-  typeof environment === 'string'
-    ? allowedEnvironments.includes(environment)
-    : false;
+import shouldShowForEnvironment from '../shouldShowForEnvironment';
 
 // Generic is tricky to type because it covers both React Components and plain objects
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -18,7 +11,7 @@ export default function withDeprecationWarning<T extends object>(
       const isDeprecatedProperty = Object.keys(deprecatedProperties).includes(
         property,
       );
-      if (shouldShowForEnvironment && isDeprecatedProperty) {
+      if (shouldShowForEnvironment() && isDeprecatedProperty) {
         // eslint-disable-next-line no-console
         console.warn(
           `[Deprecation Warning]: ${deprecatedProperties[property]}`,
