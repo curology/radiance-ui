@@ -114,6 +114,15 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
+        css={
+          Object {
+            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
+            "name": "vpdwsp",
+            "next": undefined,
+            "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
+            "toString": [Function],
+          }
+        }
         height={16}
         width={16}
       />
@@ -248,6 +257,15 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
+        css={
+          Object {
+            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
+            "name": "vpdwsp",
+            "next": undefined,
+            "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
+            "toString": [Function],
+          }
+        }
         height={8}
         width={8}
       />
@@ -377,6 +395,15 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
       disabled={false}
     >
       <svg
+        css={
+          Object {
+            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
+            "name": "vpdwsp",
+            "next": undefined,
+            "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
+            "toString": [Function],
+          }
+        }
         height={16}
         width={16}
       />
@@ -506,6 +533,15 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
       disabled={false}
     >
       <svg
+        css={
+          Object {
+            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
+            "name": "vpdwsp",
+            "next": undefined,
+            "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
+            "toString": [Function],
+          }
+        }
         height={16}
         width={16}
       />
@@ -888,6 +924,15 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
     >
       <svg
         className="emotion-0"
+        css={
+          Object {
+            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
+            "name": "vpdwsp",
+            "next": undefined,
+            "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
+            "toString": [Function],
+          }
+        }
         height={8}
         width={8}
       />
@@ -1022,6 +1067,15 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
     >
       <svg
         className="emotion-0"
+        css={
+          Object {
+            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
+            "name": "vpdwsp",
+            "next": undefined,
+            "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
+            "toString": [Function],
+          }
+        }
         height={8}
         width={8}
       />
