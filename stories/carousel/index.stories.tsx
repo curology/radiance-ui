@@ -46,6 +46,7 @@ export const Autoplay5Seconds = () => (
   </Carousel>
 );
 
+// This test is brittle in Chromatic snapshot environment due to autoplay functionality
 Autoplay5Seconds.parameters = {
   chromatic: { disable: true },
 };
@@ -56,6 +57,7 @@ export const AutoplayInfinite = () => (
   </Carousel>
 );
 
+// This test is brittle in Chromatic snapshot environment due to autoplay functionality
 AutoplayInfinite.parameters = {
   chromatic: { disable: true },
 };
