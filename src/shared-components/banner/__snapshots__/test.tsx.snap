@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner UI snapshots renders error type and text 1`] = `
-.emotion-4 {
+.emotion-5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,17 +22,28 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   height: 1rem;
   width: 1rem;
   fill: #ffffff;
 }
 
-.emotion-2 {
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #ffffff;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-3 {
   margin: -3px 0 0 1rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   background: transparent;
   border: none;
   width: 100%;
@@ -45,43 +56,35 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   box-shadow: 0px 8px 24px rgba(189,32,15,0.05);
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
 @media (min-width:768px) {
-  .emotion-6 {
+  .emotion-7 {
     margin: 0 auto 1rem;
   }
 }
 
 <button
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   tabIndex={-1}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-0 emotion-1"
+      className="emotion-1 emotion-2"
     >
       <svg
-        css={
-          Object {
-            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-            "name": "1rrdgtl",
-            "next": undefined,
-            "styles": "display:block;transform:rotate(0deg);color:#ffffff;transition:color 350ms,transform 350ms;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-0"
         height={16}
         width={16}
       />
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       Error banner
     </div>
@@ -90,7 +93,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
 `;
 
 exports[`Banner UI snapshots renders info type and text 1`] = `
-.emotion-4 {
+.emotion-5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -111,17 +114,28 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   height: 1rem;
   width: 1rem;
   fill: #ffffff;
 }
 
-.emotion-2 {
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #ffffff;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-3 {
   margin: -3px 0 0 1rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   background: transparent;
   border: none;
   width: 100%;
@@ -134,43 +148,35 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
 @media (min-width:768px) {
-  .emotion-6 {
+  .emotion-7 {
     margin: 0 auto 1rem;
   }
 }
 
 <button
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   tabIndex={-1}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-0 emotion-1"
+      className="emotion-1 emotion-2"
     >
       <svg
-        css={
-          Object {
-            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-            "name": "1rrdgtl",
-            "next": undefined,
-            "styles": "display:block;transform:rotate(0deg);color:#ffffff;transition:color 350ms,transform 350ms;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-0"
         height={16}
         width={16}
       />
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       Default banner
     </div>
@@ -179,7 +185,7 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
 `;
 
 exports[`Banner UI snapshots renders success type and text 1`] = `
-.emotion-6 {
+.emotion-7 {
   background: transparent;
   border: none;
   width: 100%;
@@ -192,18 +198,18 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
 @media (min-width:768px) {
-  .emotion-6 {
+  .emotion-7 {
     margin: 0 auto 1rem;
   }
 }
 
-.emotion-4 {
+.emotion-5 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -224,42 +230,45 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-0 svg {
+.emotion-1 svg {
   height: 1rem;
   width: 1rem;
   fill: #ffffff;
 }
 
-.emotion-2 {
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #ffffff;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-3 {
   margin: -3px 0 0 1rem;
 }
 
 <button
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   tabIndex={-1}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-0 emotion-1"
+      className="emotion-1 emotion-2"
     >
       <svg
-        css={
-          Object {
-            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-            "name": "1rrdgtl",
-            "next": undefined,
-            "styles": "display:block;transform:rotate(0deg);color:#ffffff;transition:color 350ms,transform 350ms;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-0"
         height={16}
         width={16}
       />
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       Success Banner
     </div>

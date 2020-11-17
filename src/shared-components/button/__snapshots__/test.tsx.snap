@@ -91,7 +91,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -130,24 +130,24 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   width: max-content;
 }
 
-.emotion-6:hover {
+.emotion-7:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-6:active,
-.emotion-6:focus {
+.emotion-7:active,
+.emotion-7:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
-.emotion-6:visited,
-.emotion-6:hover {
+.emotion-7:visited,
+.emotion-7:hover {
   opacity: 1;
   color: #c3c0cd;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -171,7 +171,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   transform: translateX(0);
 }
 
-.emotion-2 > svg {
+.emotion-3 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
@@ -180,12 +180,22 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-1 {
   line-height: 1.5;
   margin: 0;
   padding-top: 2px;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -207,7 +217,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   opacity: 0;
 }
 
-.emotion-4 span {
+.emotion-5 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -215,51 +225,43 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-4 span:nth-of-type(1) {
+.emotion-5 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-4 span:nth-of-type(2) {
+.emotion-5 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-4 span:nth-of-type(3) {
+.emotion-5 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <button
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   disabled={true}
   onClick={[Function]}
   type="button"
 >
   <div
-    className="emotion-2 emotion-3"
+    className="emotion-3 emotion-4"
   >
     <svg
-      css={
-        Object {
-          "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-          "name": "vpdwsp",
-          "next": undefined,
-          "styles": "display:block;transform:rotate(0deg);color:;transition:color 350ms,transform 350ms;",
-          "toString": [Function],
-        }
-      }
+      className="emotion-0"
       height={16}
       width={16}
     />
     <span
-      className="emotion-0 emotion-1"
+      className="emotion-1 emotion-2"
     >
       Button Text
     </span>
   </div>
   <div
-    className=" emotion-4 emotion-5"
+    className=" emotion-5 emotion-6"
     disabled={true}
   >
     <div>

@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 823863,
-    "minified": 754423,
-    "gzipped": 90193
+    "bundled": 824114,
+    "minified": 754452,
+    "gzipped": 90200
   },
   "bundle.umd.js": {
-    "bundled": 833547,
-    "minified": 730251,
-    "gzipped": 86340
+    "bundled": 833802,
+    "minified": 730257,
+    "gzipped": 86344
   },
   "constants/themes/secondaryTheme.js": {
     "bundled": 369,
@@ -1648,16 +1648,16 @@
     }
   },
   "shared-components/icon/index.js": {
-    "bundled": 2020,
-    "minified": 1123,
-    "gzipped": 543,
+    "bundled": 2271,
+    "minified": 1152,
+    "gzipped": 546,
     "treeshaked": {
       "rollup": {
-        "code": 341,
-        "import_statements": 220
+        "code": 334,
+        "import_statements": 213
       },
       "webpack": {
-        "code": 1981
+        "code": 1813
       }
     }
   },

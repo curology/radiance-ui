@@ -8,7 +8,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,14 +20,25 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-6 {
+.emotion-2 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: max-height 350ms ease-in-out;
   transition: max-height 350ms ease-in-out;
 }
 
-.emotion-8 {
+.emotion-9 {
   border: 1px solid #ededf0;
   width: 100%;
   opacity: 0.4;
@@ -35,11 +46,11 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   border-color: #c3c0cd;
 }
 
-.emotion-8:not(:last-child) {
+.emotion-9:not(:last-child) {
   border-bottom: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,24 +62,24 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-4:focus {
+.emotion-5:focus {
   outline: none;
   box-shadow: inset 0px 0px 0px 2px #332e54;
 }
 
-.emotion-9:last-of-type .emotion-4:focus {
+.emotion-10:last-of-type .emotion-5:focus {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-9 emotion-10"
   disabled={true}
 >
   <div
     aria-disabled={true}
     aria-expanded={false}
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
     disabled={true}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -83,18 +94,10 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
       </div>
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       <svg
-        css={
-          Object {
-            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-            "name": "1w700my",
-            "next": undefined,
-            "styles": "display:block;transform:rotate(0deg);color:#332e54;transition:color 350ms,transform 350ms;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         height={16}
         width={16}
       />
@@ -103,7 +106,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   <div
     aria-disabled={true}
     aria-hidden={true}
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     <div>
       <div>
@@ -115,7 +118,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 `;
 
 exports[`<Accordion /> renders no border accordion 1`] = `
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -127,12 +130,12 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   cursor: pointer;
 }
 
-.emotion-4:focus {
+.emotion-5:focus {
   outline: none;
   box-shadow: inset 0px 0px 0px 2px #332e54;
 }
 
-.emotion-9:last-of-type .emotion-4:focus {
+.emotion-10:last-of-type .emotion-5:focus {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -144,7 +147,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -156,29 +159,40 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-6 {
+.emotion-2 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: max-height 350ms ease-in-out;
   transition: max-height 350ms ease-in-out;
 }
 
-.emotion-8 {
+.emotion-9 {
   width: 100%;
 }
 
-.emotion-8:not(:last-child) {
+.emotion-9:not(:last-child) {
   border-bottom: none;
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-9 emotion-10"
   disabled={false}
 >
   <div
     aria-disabled={false}
     aria-expanded={false}
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -193,18 +207,10 @@ exports[`<Accordion /> renders no border accordion 1`] = `
       </div>
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       <svg
-        css={
-          Object {
-            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-            "name": "1w700my",
-            "next": undefined,
-            "styles": "display:block;transform:rotate(0deg);color:#332e54;transition:color 350ms,transform 350ms;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         height={16}
         width={16}
       />
@@ -213,7 +219,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   <div
     aria-disabled={false}
     aria-hidden={true}
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     <div>
       <div>
@@ -225,16 +231,16 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 `;
 
 exports[`<Accordion /> renders regular accordion 1`] = `
-.emotion-8 {
+.emotion-9 {
   border: 1px solid #ededf0;
   width: 100%;
 }
 
-.emotion-8:not(:last-child) {
+.emotion-9:not(:last-child) {
   border-bottom: none;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,12 +252,12 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   cursor: pointer;
 }
 
-.emotion-4:focus {
+.emotion-5:focus {
   outline: none;
   box-shadow: inset 0px 0px 0px 2px #332e54;
 }
 
-.emotion-9:last-of-type .emotion-4:focus {
+.emotion-10:last-of-type .emotion-5:focus {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -263,7 +269,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   width: 100%;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -275,7 +281,18 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-6 {
+.emotion-2 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: max-height 350ms ease-in-out;
@@ -283,13 +300,13 @@ exports[`<Accordion /> renders regular accordion 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  className="emotion-9 emotion-10"
   disabled={false}
 >
   <div
     aria-disabled={false}
     aria-expanded={false}
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
     disabled={false}
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -304,18 +321,10 @@ exports[`<Accordion /> renders regular accordion 1`] = `
       </div>
     </div>
     <div
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
     >
       <svg
-        css={
-          Object {
-            "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-            "name": "1w700my",
-            "next": undefined,
-            "styles": "display:block;transform:rotate(0deg);color:#332e54;transition:color 350ms,transform 350ms;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         height={16}
         width={16}
       />
@@ -324,7 +333,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   <div
     aria-disabled={false}
     aria-hidden={true}
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     <div>
       <div>

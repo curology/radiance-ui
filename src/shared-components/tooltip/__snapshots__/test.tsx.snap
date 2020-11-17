@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
-.emotion-8 {
+.emotion-9 {
   position: relative;
   -webkit-align-items: left;
   -webkit-box-align: left;
@@ -16,7 +16,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   max-width: none;
   top: 120%;
   background: #332e54;
@@ -48,7 +48,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   z-index: 4;
   top: -8px;
@@ -59,9 +59,20 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   margin-left: -10px;
 }
 
+.emotion-4 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
 <div>
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-9 emotion-10"
   >
     <div
       className="emotion-0 emotion-1"
@@ -72,7 +83,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
       Tooltip Trigger
     </div>
     <div
-      className="emotion-6 emotion-7"
+      className="emotion-7 emotion-8"
       open={false}
     >
       <div
@@ -81,18 +92,10 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
         Tooltip Content
       </div>
       <div
-        className="emotion-4 emotion-5"
+        className="emotion-5 emotion-6"
       >
         <svg
-          css={
-            Object {
-              "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVE0RSIsImZpbGUiOiJzdHlsZS50cyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNzcyB9IGZyb20gJ0BlbW90aW9uL2NvcmUnO1xuXG5pbXBvcnQgeyBBTklNQVRJT04gfSBmcm9tICcuLi8uLi9jb25zdGFudHMnO1xuXG5pbXBvcnQgeyBJY29uUHJvcHMgfSBmcm9tICcuJztcblxudHlwZSBJY29uU3R5bGVzUHJvcHMgPSBQaWNrPEljb25Qcm9wcywgJ2Rpc3BsYXlJbmxpbmUnIHwgJ2ZpbGwnIHwgJ3JvdGF0ZSc+O1xuXG5jb25zdCBpY29uU3R5bGVzID0gKHsgZGlzcGxheUlubGluZSwgZmlsbCwgcm90YXRlIH06IEljb25TdHlsZXNQcm9wcykgPT4gY3NzYFxuICBkaXNwbGF5OiAke2Rpc3BsYXlJbmxpbmUgPyAnaW5saW5lLWJsb2NrJyA6ICdibG9jayd9O1xuICB0cmFuc2Zvcm06IHJvdGF0ZSgke3JvdGF0ZX1kZWcpO1xuICBjb2xvcjogJHtmaWxsfTtcbiAgdHJhbnNpdGlvbjogY29sb3IgJHtBTklNQVRJT04uZGVmYXVsdFRpbWluZ30sXG4gICAgdHJhbnNmb3JtICR7QU5JTUFUSU9OLmRlZmF1bHRUaW1pbmd9O1xuYDtcblxuZXhwb3J0IGRlZmF1bHQge1xuICBpY29uU3R5bGVzLFxufTtcbiJdfQ== */",
-              "name": "1w700my",
-              "next": undefined,
-              "styles": "display:block;transform:rotate(0deg);color:#332e54;transition:color 350ms,transform 350ms;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-4"
           height={16}
           width={16}
         />

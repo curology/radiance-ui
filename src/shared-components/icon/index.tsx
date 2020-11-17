@@ -17,6 +17,8 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
   [key: string]: unknown;
 }
 
+type IconComponentProps = Omit<IconProps, 'displayInline' | 'fill' | 'rotate'>;
+
 /**
  * Helper component to pass the necessary props down to direct SVG imports, supported by SVGR.
  *
@@ -25,16 +27,12 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 export const Icon = ({
   children,
   className,
-  displayInline = false,
-  fill,
   height = 16,
-  rotate = 0,
   width = 16,
   ...rest
-}: IconProps & { children: JSX.Element }) =>
+}: IconComponentProps & { children: JSX.Element }) =>
   React.cloneElement(children, {
     className,
-    css: Style.iconStyles({ displayInline, fill, rotate }),
     height,
     width,
     ...rest,
@@ -64,9 +62,12 @@ export const useIcon = (
 
   const ThemeIcon = theme.__type === 'primary' ? PrimaryIcon : SecondaryIcon;
 
+  const { displayInline = false, fill, rotate = 0, ...rest } = props;
+
+  // React.cloneElement not fully compatible with css prop: https://github.com/emotion-js/emotion/pull/1985/files#diff-6e9f0af93add92299d604a909f5b4a3c366a28c819127d9b7f33f3694cdfcffcR251
   return (
-    <Icon {...props}>
-      <ThemeIcon />
+    <Icon {...rest}>
+      <ThemeIcon css={Style.iconStyles({ displayInline, fill, rotate })} />
     </Icon>
   );
 };
