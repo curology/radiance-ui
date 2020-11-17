@@ -1,8 +1,5 @@
 const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
-const transformTemplateForUtilLocation = require('../src/utils/svgToIconTemplate/transformTemplateForUtilLocation.js');
-
-const UTIL_LOCATION = '../../utils/icons';
 
 // SVGs will not load properly if we do not remove the default rule before adding our own
 function removeDefaultStorybookSvgRule(config) {
@@ -41,8 +38,7 @@ module.exports = (webpackSettings) => {
       {
         loader: '@svgr/webpack',
         options: {
-          template: transformTemplateForUtilLocation(UTIL_LOCATION),
-          expandProps: false,
+          expandProps: 'end',
           babel: false,
         },
       },
