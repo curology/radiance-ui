@@ -46,11 +46,19 @@ export const Autoplay5Seconds = () => (
   </Carousel>
 );
 
+Autoplay5Seconds.parameters = {
+  chromatic: { disable: true },
+};
+
 export const AutoplayInfinite = () => (
   <Carousel numCardsVisible={1} autoplay infinite>
     {cards}
   </Carousel>
 );
+
+AutoplayInfinite.parameters = {
+  chromatic: { disable: true },
+};
 
 export const HideDots = () => (
   <Carousel numCardsVisible={1} hideDots>
