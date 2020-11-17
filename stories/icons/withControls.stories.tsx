@@ -1,7 +1,8 @@
 import React from 'react';
 import { text, number, boolean } from '@storybook/addon-knobs';
-import CameraIcon from 'src/svgs/icons/camera-icon.svg';
 import { useTheme } from 'emotion-theming';
+
+import { CameraIcon } from '../../src/icons';
 
 export const WithControls = () => {
   const theme = useTheme();

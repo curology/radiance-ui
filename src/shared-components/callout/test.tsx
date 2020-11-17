@@ -2,7 +2,7 @@ import React from 'react';
 import { renderer } from 'src/tests/reactTestRendererHelpers';
 import { primaryTheme } from 'src/constants/themes';
 
-import NeckGlyph from '../../svgs/glyphs/neck-glyph.svg';
+import { NeckGlyph } from '../../icons';
 
 import { Callout } from './index';
 

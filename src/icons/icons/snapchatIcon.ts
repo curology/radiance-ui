@@ -1,5 +1,5 @@
-import SnapshotIconPrimary from './svgs/snapshot-icon.svg';
+import SnapchatIconPrimary from './svgs/snapchat-icon.svg';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export const SnapshotIcon = (props: IconProps) =>
-  useIcon(SnapshotIconPrimary, SnapshotIconPrimary, props);
+export const SnapchatIcon = (props: IconProps) =>
+  useIcon(SnapchatIconPrimary, SnapchatIconPrimary, props);

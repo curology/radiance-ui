@@ -32,6 +32,7 @@ export type IconsProps = {
    */
   rotate?: number;
   width?: string | number;
+  [key: string]: unknown;
 };
 
 /**

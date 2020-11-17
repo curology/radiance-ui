@@ -1,5 +1,7 @@
 import React from 'react';
-import { IconsProps, defaultProps, propTypes } from 'src/utils/icons';
+// import {  propTypes } from 'src/utils/icons';
+
+import { IconProps } from '../../src/shared-components/icon';
 
 /**
  * We construct a mock Icon components to use Storybook's ArgsTable functionality.
@@ -12,7 +14,7 @@ export const MockIcon = ({
   inline,
   rotate = 0,
   width = 16,
-}: IconsProps) => (
+}: IconProps) => (
   <svg
     className={className}
     fill={fill}
@@ -24,5 +26,4 @@ export const MockIcon = ({
   />
 );
 
-MockIcon.propTypes = propTypes;
-MockIcon.defaultProps = defaultProps;
+// MockIcon.propTypes = propTypes;
