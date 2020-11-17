@@ -46,11 +46,21 @@ export const Autoplay5Seconds = () => (
   </Carousel>
 );
 
+// This test is brittle in Chromatic snapshot environment due to autoplay functionality
+Autoplay5Seconds.parameters = {
+  chromatic: { disable: true },
+};
+
 export const AutoplayInfinite = () => (
   <Carousel numCardsVisible={1} autoplay infinite>
     {cards}
   </Carousel>
 );
+
+// This test is brittle in Chromatic snapshot environment due to autoplay functionality
+AutoplayInfinite.parameters = {
+  chromatic: { disable: true },
+};
 
 export const HideDots = () => (
   <Carousel numCardsVisible={1} hideDots>
