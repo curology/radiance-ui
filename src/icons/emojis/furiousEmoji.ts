@@ -1,5 +1,5 @@
 import FuriousEmojiPrimary from './svgs/furious-emoji.svg';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export const FuriousEmoji = (props: IconProps) =>
+export default (props: IconProps) =>
   useIcon(FuriousEmojiPrimary, FuriousEmojiPrimary, props);

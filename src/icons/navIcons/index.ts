@@ -1,14 +1,14 @@
 // @create-index
 
-export * from './cameraNavIcon';
-export * from './cameraSelectedNavIcon';
-export * from './homeNavIcon';
-export * from './homeSelectedNavIcon';
-export * from './messagesNavIcon';
-export * from './messagesSelectedNavIcon';
-export * from './moreNavIcon';
-export * from './moreSelectedNavIcon';
-export * from './notificationsNavIcon';
-export * from './notificationsSelectedNavIcon';
-export * from './profileNavIcon';
-export * from './profileSelectedNavIcon';
+export { default as CameraNavIcon } from './cameraNavIcon';
+export { default as CameraSelectedNavIcon } from './cameraSelectedNavIcon';
+export { default as HomeNavIcon } from './homeNavIcon';
+export { default as HomeSelectedNavIcon } from './homeSelectedNavIcon';
+export { default as MessagesNavIcon } from './messagesNavIcon';
+export { default as MessagesSelectedNavIcon } from './messagesSelectedNavIcon';
+export { default as MoreNavIcon } from './moreNavIcon';
+export { default as MoreSelectedNavIcon } from './moreSelectedNavIcon';
+export { default as NotificationsNavIcon } from './notificationsNavIcon';
+export { default as NotificationsSelectedNavIcon } from './notificationsSelectedNavIcon';
+export { default as ProfileNavIcon } from './profileNavIcon';
+export { default as ProfileSelectedNavIcon } from './profileSelectedNavIcon';

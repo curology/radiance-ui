@@ -1,5 +1,5 @@
 import MicIconPrimary from './svgs/mic-icon.svg';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export const MicIcon = (props: IconProps) =>
+export default (props: IconProps) =>
   useIcon(MicIconPrimary, MicIconPrimary, props);

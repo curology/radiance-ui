@@ -1,7 +1,7 @@
 import SevereAcneSelectedEmojiPrimary from './svgs/severe-acne-selected-emoji.svg';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export const SevereAcneSelectedEmoji = (props: IconProps) =>
+export default (props: IconProps) =>
   useIcon(
     SevereAcneSelectedEmojiPrimary,
     SevereAcneSelectedEmojiPrimary,

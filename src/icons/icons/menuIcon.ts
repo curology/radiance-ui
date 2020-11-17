@@ -1,5 +1,5 @@
 import MenuIconPrimary from './svgs/menu-icon.svg';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export const MenuIcon = (props: IconProps) =>
+export default (props: IconProps) =>
   useIcon(MenuIconPrimary, MenuIconPrimary, props);

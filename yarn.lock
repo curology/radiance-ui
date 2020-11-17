@@ -5289,10 +5289,9 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-index@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/create-index/-/create-index-2.6.0.tgz#6839c1445513a23c655d331bcdb34528466d6bf9"
-  integrity sha512-c9p7sNMIfiKv+RRORw9jbwxMRLrkt0Hq8PFGLxcDXGoMqqGrwnDIw97tUnpdp9rAkIToAPbqejH6qHpGWQGAww==
+"create-index@https://github.com/curology/create-index.git#2020-updates":
+  version "0.0.0-development"
+  resolved "https://github.com/curology/create-index.git#22df8d161e601463be81f42786cc919a84f53fc2"
   dependencies:
     chalk "^4.0.0"
     glob "^7.1.6"

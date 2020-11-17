@@ -1,4 +1,4 @@
 // @create-index
 
-export * from './logo';
-export * from './wordmark';
+export { default as Logo } from './logo';
+export { default as Wordmark } from './wordmark';
