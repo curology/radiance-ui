@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 824153,
-    "minified": 754452,
-    "gzipped": 90200
+    "bundled": 824238,
+    "minified": 754464,
+    "gzipped": 90199
   },
   "bundle.umd.js": {
-    "bundled": 833841,
-    "minified": 730257,
-    "gzipped": 86344
+    "bundled": 833936,
+    "minified": 730269,
+    "gzipped": 86348
   },
   "icons/icons/crossIcon.js": {
     "bundled": 238,
@@ -1004,16 +1004,16 @@
     }
   },
   "shared-components/icon/index.js": {
-    "bundled": 2310,
-    "minified": 1152,
-    "gzipped": 546,
+    "bundled": 2395,
+    "minified": 1164,
+    "gzipped": 545,
     "treeshaked": {
       "rollup": {
         "code": 334,
         "import_statements": 213
       },
       "webpack": {
-        "code": 1813
+        "code": 1836
       }
     }
   },
