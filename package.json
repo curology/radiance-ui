@@ -27,7 +27,7 @@
     "build:icons:glyphs:index": "create-index src/icons/glyphs --extensions ts -o index.ts",
     "build:icons:icons:index": "create-index src/icons/icons --extensions ts -o index.ts",
     "build:icons:logos:index": "create-index src/icons/logos --extensions ts -o index.ts",
-    "build:icons:navicons:index": "create-index src/icons/navicons --extensions ts -o index.ts",
+    "build:icons:navicons:index": "create-index src/icons/navIcons --extensions ts -o index.ts",
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx' --ignore '**/*.test.{js,ts,tsx}'",
     "publish-package": "run-s build && yarn publish",
