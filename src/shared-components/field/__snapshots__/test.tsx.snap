@@ -106,6 +106,7 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
   >
     <svg
       className="radiance-field-input-icon emotion-0"
+      fill="#BD200F"
       height={16}
       width={16}
     />
@@ -406,6 +407,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
   >
     <svg
       className="radiance-field-input-icon emotion-2"
+      fill="#BD200F"
       height={16}
       width={16}
     />

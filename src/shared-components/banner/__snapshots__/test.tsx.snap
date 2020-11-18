@@ -79,6 +79,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />
@@ -171,6 +172,7 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />
@@ -263,6 +265,7 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />

@@ -125,6 +125,7 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />
@@ -327,6 +328,7 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />
@@ -529,6 +531,7 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />
@@ -741,6 +744,7 @@ exports[`Alert UI snapshots renders error alert 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />
@@ -911,6 +915,7 @@ exports[`Alert UI snapshots renders success alert 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="#ffffff"
         height={16}
         width={16}
       />

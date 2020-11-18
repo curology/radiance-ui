@@ -98,6 +98,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
     >
       <svg
         className="emotion-2"
+        fill="#332e54"
         height={16}
         width={16}
       />
@@ -211,6 +212,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
     >
       <svg
         className="emotion-2"
+        fill="#332e54"
         height={16}
         width={16}
       />
@@ -325,6 +327,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
     >
       <svg
         className="emotion-2"
+        fill="#332e54"
         height={16}
         width={16}
       />

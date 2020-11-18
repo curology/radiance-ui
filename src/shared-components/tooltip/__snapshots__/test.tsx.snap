@@ -96,6 +96,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
       >
         <svg
           className="emotion-4"
+          fill="#332e54"
           height={16}
           width={16}
         />
