@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 823371,
-    "minified": 754553,
-    "gzipped": 91244
+    "bundled": 824030,
+    "minified": 755172,
+    "gzipped": 91383
   },
   "bundle.umd.js": {
-    "bundled": 832961,
-    "minified": 730364,
-    "gzipped": 87394
+    "bundled": 833640,
+    "minified": 730963,
+    "gzipped": 87548
   },
   "constants/themes/secondaryTheme.js": {
     "bundled": 369,
@@ -318,9 +318,9 @@
     }
   },
   "shared-components/toggle/index.js": {
-    "bundled": 1804,
-    "minified": 993,
-    "gzipped": 520,
+    "bundled": 1803,
+    "minified": 992,
+    "gzipped": 519,
     "treeshaked": {
       "rollup": {
         "code": 302,
@@ -682,16 +682,16 @@
     }
   },
   "shared-components/accordion/thumbnails/style.js": {
-    "bundled": 11587,
-    "minified": 11311,
-    "gzipped": 2350,
+    "bundled": 11578,
+    "minified": 11302,
+    "gzipped": 2343,
     "treeshaked": {
       "rollup": {
-        "code": 920,
+        "code": 919,
         "import_statements": 147
       },
       "webpack": {
-        "code": 2030
+        "code": 2029
       }
     }
   },
@@ -1130,16 +1130,16 @@
     }
   },
   "constants/colors/index.js": {
-    "bundled": 5000,
-    "minified": 4035,
+    "bundled": 4999,
+    "minified": 4034,
     "gzipped": 1471,
     "treeshaked": {
       "rollup": {
-        "code": 2880,
+        "code": 2879,
         "import_statements": 182
       },
       "webpack": {
-        "code": 4107
+        "code": 4106
       }
     }
   },
@@ -1158,16 +1158,16 @@
     }
   },
   "constants/colors/primary.js": {
-    "bundled": 1670,
-    "minified": 1388,
-    "gzipped": 497,
+    "bundled": 1838,
+    "minified": 1536,
+    "gzipped": 516,
     "treeshaked": {
       "rollup": {
-        "code": 1066,
+        "code": 1189,
         "import_statements": 52
       },
       "webpack": {
-        "code": 2167
+        "code": 2300
       }
     }
   },
@@ -1298,16 +1298,16 @@
     }
   },
   "constants/colors/secondary.js": {
-    "bundled": 1139,
-    "minified": 857,
-    "gzipped": 380,
+    "bundled": 1444,
+    "minified": 1142,
+    "gzipped": 485,
     "treeshaked": {
       "rollup": {
-        "code": 700,
+        "code": 990,
         "import_statements": 52
       },
       "webpack": {
-        "code": 1731
+        "code": 2015
       }
     }
   },
@@ -1424,9 +1424,9 @@
     }
   },
   "constants/fonts/secondary.js": {
-    "bundled": 150,
-    "minified": 133,
-    "gzipped": 100,
+    "bundled": 347,
+    "minified": 330,
+    "gzipped": 240,
     "treeshaked": {
       "rollup": {
         "code": 0,
