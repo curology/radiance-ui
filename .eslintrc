@@ -133,13 +133,6 @@
       "rules": {
         "no-alert": "off"
       }
-    },
-    {
-      "files": ["src/icons/**"],
-      "rules": {
-        "import/extensions": "off",
-        "react/jsx-props-no-spreading": "off"
-      }
     }
   ]
 }
