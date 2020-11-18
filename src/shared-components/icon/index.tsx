@@ -69,7 +69,10 @@ export const useIcon = (
 
   const { displayInline = false, rotate = 0, ...rest } = props;
 
-  // React.cloneElement not fully compatible with css prop: https://github.com/emotion-js/emotion/pull/1985/files#diff-6e9f0af93add92299d604a909f5b4a3c366a28c819127d9b7f33f3694cdfcffcR251
+  /**
+   * React.cloneElement not fully compatible with css prop, so we apply it here instead of in Icon.
+   * @see: https://github.com/emotion-js/emotion/pull/1985/files#diff-6e9f0af93add92299d604a909f5b4a3c366a28c819127d9b7f33f3694cdfcffcR251
+   */
   return (
     <Icon {...rest}>
       <ThemeIcon
