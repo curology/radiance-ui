@@ -22,7 +22,7 @@ type IconComponentProps = Omit<IconProps, 'displayInline' | 'fill' | 'rotate'>;
 /**
  * Helper component to pass the necessary props down to direct SVG imports, supported by SVGR.
  *
- * It's not strictly necessary but this helps with documenting usage.
+ * **This component should not be used directly**, and so is not included in the `shared-components` export.
  */
 export const Icon = ({
   children,
