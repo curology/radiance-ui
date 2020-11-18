@@ -5282,7 +5282,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
 
 "create-index@https://github.com/curology/create-index.git#2020-updates":
   version "0.0.0-development"
-  resolved "https://github.com/curology/create-index.git#22df8d161e601463be81f42786cc919a84f53fc2"
+  resolved "https://github.com/curology/create-index.git#8e4a5238bf3ac7a452562137842fcdbb511297d5"
   dependencies:
     chalk "^4.0.0"
     glob "^7.1.6"
