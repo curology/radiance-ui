@@ -3,7 +3,6 @@ import {
   ArgsTable,
   Description,
   Heading,
-  Primary,
   Source,
   Stories,
   Title,
@@ -137,10 +136,9 @@ export default {
               "import { CameraIcon } from 'radiance-ui/lib/icons'\n\n<CameraIcon width={16} height={16} />"
             }
           />
-          <Primary />
           <Heading>Props:</Heading>
           <ArgsTable of={IconComponent} />
-          <Stories />
+          <Stories includePrimary />
           <Heading>Notes</Heading>
           <Description>
             See **Icon Library** for all available icon components and previews.
