@@ -52,6 +52,7 @@ export default [
           '@emotion/styled': 'styled',
           '@emotion/styled-base': '_styled',
           '@react-aria/focus': '@react-aria/focus',
+          'emotion-theming': 'emotionTheming',
           'lodash.round': 'round',
           'lodash.throttle': 'throttle',
           'lodash.uniqueid': 'uniqueid',
