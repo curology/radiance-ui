@@ -1,5 +1,4 @@
-import CourseGlyphPrimary from './svgs/course-glyph.svg';
+import { CourseGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(CourseGlyphPrimary, CourseGlyphPrimary, props);
+export default (props: IconProps) => useIcon(CourseGlyph, CourseGlyph, props);

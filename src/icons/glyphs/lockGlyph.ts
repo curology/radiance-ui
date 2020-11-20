@@ -1,5 +1,4 @@
-import LockGlyphPrimary from './svgs/lock-glyph.svg';
+import { LockGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(LockGlyphPrimary, LockGlyphPrimary, props);
+export default (props: IconProps) => useIcon(LockGlyph, LockGlyph, props);

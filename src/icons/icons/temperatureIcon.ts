@@ -1,5 +1,5 @@
-import TemperatureIconPrimary from './svgs/temperature-icon.svg';
+import { TemperatureIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(TemperatureIconPrimary, TemperatureIconPrimary, props);
+  useIcon(TemperatureIcon, TemperatureIcon, props);

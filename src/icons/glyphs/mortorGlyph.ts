@@ -1,5 +1,4 @@
-import MortorGlyphPrimary from './svgs/mortor-glyph.svg';
+import { MortorGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(MortorGlyphPrimary, MortorGlyphPrimary, props);
+export default (props: IconProps) => useIcon(MortorGlyph, MortorGlyph, props);

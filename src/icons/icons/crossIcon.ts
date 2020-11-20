@@ -1,5 +1,4 @@
-import CrossIconPrimary from './svgs/cross-icon.svg';
+import { CrossIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(CrossIconPrimary, CrossIconPrimary, props);
+export default (props: IconProps) => useIcon(CrossIcon, CrossIcon, props);

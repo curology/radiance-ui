@@ -1,5 +1,4 @@
-import BagIconPrimary from './svgs/bag-icon.svg';
+import { BagIcon } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(BagIconPrimary, BagIconPrimary, props);
+export default (props: IconProps) => useIcon(BagIcon, BagIcon, props);

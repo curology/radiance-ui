@@ -1,5 +1,4 @@
-import ShuffleIconPrimary from './svgs/shuffle-icon.svg';
+import { ShuffleIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ShuffleIconPrimary, ShuffleIconPrimary, props);
+export default (props: IconProps) => useIcon(ShuffleIcon, ShuffleIcon, props);

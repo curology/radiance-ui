@@ -1,5 +1,4 @@
-import ChestGlyphPrimary from './svgs/chest-glyph.svg';
+import { ChestGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ChestGlyphPrimary, ChestGlyphPrimary, props);
+export default (props: IconProps) => useIcon(ChestGlyph, ChestGlyph, props);

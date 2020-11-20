@@ -1,5 +1,5 @@
-import PackagingGlyphPrimary from './svgs/packaging-glyph.svg';
+import { PackagingGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(PackagingGlyphPrimary, PackagingGlyphPrimary, props);
+  useIcon(PackagingGlyph, PackagingGlyph, props);

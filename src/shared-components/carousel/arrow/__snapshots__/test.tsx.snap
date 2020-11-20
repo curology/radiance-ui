@@ -367,9 +367,17 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+          fill="currentColor"
+        />
+      </svg>
       <div
         className="emotion-1 emotion-2"
         disabled={true}
@@ -654,9 +662,17 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+          fill="currentColor"
+        />
+      </svg>
       <div
         className="emotion-1 emotion-2"
         disabled={false}

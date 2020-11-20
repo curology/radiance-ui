@@ -1,5 +1,5 @@
-import WrinklesGlyphPrimary from './svgs/wrinkles-glyph.svg';
+import { WrinklesGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(WrinklesGlyphPrimary, WrinklesGlyphPrimary, props);
+  useIcon(WrinklesGlyph, WrinklesGlyph, props);

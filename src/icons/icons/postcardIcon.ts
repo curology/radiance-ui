@@ -1,5 +1,4 @@
-import PostcardIconPrimary from './svgs/postcard-icon.svg';
+import { PostcardIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(PostcardIconPrimary, PostcardIconPrimary, props);
+export default (props: IconProps) => useIcon(PostcardIcon, PostcardIcon, props);

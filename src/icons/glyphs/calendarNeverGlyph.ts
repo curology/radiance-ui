@@ -1,5 +1,5 @@
-import CalendarNeverGlyphPrimary from './svgs/calendar-never-glyph.svg';
+import { CalendarNeverGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(CalendarNeverGlyphPrimary, CalendarNeverGlyphPrimary, props);
+  useIcon(CalendarNeverGlyph, CalendarNeverGlyph, props);

@@ -1,5 +1,4 @@
-import SmileyEmojiPrimary from './svgs/smiley-emoji.svg';
+import { SmileyEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(SmileyEmojiPrimary, SmileyEmojiPrimary, props);
+export default (props: IconProps) => useIcon(SmileyEmoji, SmileyEmoji, props);

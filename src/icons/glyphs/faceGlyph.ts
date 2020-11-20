@@ -1,5 +1,4 @@
-import FaceGlyphPrimary from './svgs/face-glyph.svg';
+import { FaceGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(FaceGlyphPrimary, FaceGlyphPrimary, props);
+export default (props: IconProps) => useIcon(FaceGlyph, FaceGlyph, props);

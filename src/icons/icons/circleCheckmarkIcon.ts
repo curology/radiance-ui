@@ -1,5 +1,5 @@
-import CircleCheckmarkIconPrimary from './svgs/circle-checkmark-icon.svg';
+import { CircleCheckmarkIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(CircleCheckmarkIconPrimary, CircleCheckmarkIconPrimary, props);
+  useIcon(CircleCheckmarkIcon, CircleCheckmarkIcon, props);

@@ -1,5 +1,5 @@
-import TreatmentPlanIconPrimary from './svgs/treatment-plan-icon.svg';
+import { TreatmentPlanIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(TreatmentPlanIconPrimary, TreatmentPlanIconPrimary, props);
+  useIcon(TreatmentPlanIcon, TreatmentPlanIcon, props);

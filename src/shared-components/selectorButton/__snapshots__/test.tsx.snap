@@ -121,9 +121,17 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.96 2l-9.7 9.42L.88 7.1 0 7.99l5.26 5.18L15.83 2.9l-.87-.9z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       checked={true}
@@ -262,9 +270,21 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={8}
+        viewBox="0 0 16 16"
         width={8}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={8}
+          cy={8}
+          fill="currentColor"
+          r={7.4}
+          stroke="currentColor"
+          strokeWidth={1.2}
+        />
+      </svg>
     </div>
     <div
       checked={true}
@@ -402,9 +422,17 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 48 48"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M23.995 26A1.996 1.996 0 0122 23.995c0-1.107.897-1.995 1.995-1.995S26 22.897 26 23.995A2.017 2.017 0 0123.995 26zm0-2.807a.8.8 0 00-.802.802c0 .449.363.812.802.812.44 0 .812-.363.812-.812a.821.821 0 00-.812-.802z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       checked={false}
@@ -542,9 +570,17 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 48 48"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M23.995 26A1.996 1.996 0 0122 23.995c0-1.107.897-1.995 1.995-1.995S26 22.897 26 23.995A2.017 2.017 0 0123.995 26zm0-2.807a.8.8 0 00-.802.802c0 .449.363.812.802.812.44 0 .812-.363.812-.812a.821.821 0 00-.812-.802z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       checked={false}
@@ -931,9 +967,21 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={8}
+        viewBox="0 0 16 16"
         width={8}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={8}
+          cy={8}
+          fill="currentColor"
+          r={7.4}
+          stroke="currentColor"
+          strokeWidth={1.2}
+        />
+      </svg>
     </div>
     <div
       checked={true}
@@ -1072,9 +1120,21 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={8}
+        viewBox="0 0 16 16"
         width={8}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={8}
+          cy={8}
+          fill="currentColor"
+          r={7.4}
+          stroke="currentColor"
+          strokeWidth={1.2}
+        />
+      </svg>
     </div>
     <div
       checked={true}

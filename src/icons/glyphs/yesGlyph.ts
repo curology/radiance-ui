@@ -1,5 +1,4 @@
-import YesGlyphPrimary from './svgs/yes-glyph.svg';
+import { YesGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(YesGlyphPrimary, YesGlyphPrimary, props);
+export default (props: IconProps) => useIcon(YesGlyph, YesGlyph, props);

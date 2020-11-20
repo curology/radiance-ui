@@ -1,5 +1,4 @@
-import TransferIconPrimary from './svgs/transfer-icon.svg';
+import { TransferIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(TransferIconPrimary, TransferIconPrimary, props);
+export default (props: IconProps) => useIcon(TransferIcon, TransferIcon, props);

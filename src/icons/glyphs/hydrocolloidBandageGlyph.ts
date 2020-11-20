@@ -1,9 +1,5 @@
-import HydrocolloidBandageGlyphPrimary from './svgs/hydrocolloid-bandage-glyph.svg';
+import { HydrocolloidBandageGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(
-    HydrocolloidBandageGlyphPrimary,
-    HydrocolloidBandageGlyphPrimary,
-    props,
-  );
+  useIcon(HydrocolloidBandageGlyph, HydrocolloidBandageGlyph, props);

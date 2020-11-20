@@ -1,5 +1,5 @@
-import OilCleanserGlyphPrimary from './svgs/oil-cleanser-glyph.svg';
+import { OilCleanserGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(OilCleanserGlyphPrimary, OilCleanserGlyphPrimary, props);
+  useIcon(OilCleanserGlyph, OilCleanserGlyph, props);

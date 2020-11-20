@@ -1,5 +1,5 @@
-import FineLinesGlyphPrimary from './svgs/fine-lines-glyph.svg';
+import { FineLinesGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(FineLinesGlyphPrimary, FineLinesGlyphPrimary, props);
+  useIcon(FineLinesGlyph, FineLinesGlyph, props);

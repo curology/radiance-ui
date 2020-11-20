@@ -1,5 +1,4 @@
-import GoogleIconPrimary from './svgs/google-icon.svg';
+import { GoogleIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(GoogleIconPrimary, GoogleIconPrimary, props);
+export default (props: IconProps) => useIcon(GoogleIcon, GoogleIcon, props);

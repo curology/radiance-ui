@@ -1,5 +1,5 @@
-import MoisturizerGlyphPrimary from './svgs/moisturizer-glyph.svg';
+import { MoisturizerGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(MoisturizerGlyphPrimary, MoisturizerGlyphPrimary, props);
+  useIcon(MoisturizerGlyph, MoisturizerGlyph, props);

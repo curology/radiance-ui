@@ -1,5 +1,4 @@
-import ZincGlyphPrimary from './svgs/zinc-glyph.svg';
+import { ZincGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ZincGlyphPrimary, ZincGlyphPrimary, props);
+export default (props: IconProps) => useIcon(ZincGlyph, ZincGlyph, props);

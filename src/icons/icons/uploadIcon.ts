@@ -1,5 +1,4 @@
-import UploadIconPrimary from './svgs/upload-icon.svg';
+import { UploadIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(UploadIconPrimary, UploadIconPrimary, props);
+export default (props: IconProps) => useIcon(UploadIcon, UploadIcon, props);

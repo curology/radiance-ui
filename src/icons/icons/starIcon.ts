@@ -1,5 +1,4 @@
-import StarIconPrimary from './svgs/star-icon.svg';
+import { StarIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(StarIconPrimary, StarIconPrimary, props);
+export default (props: IconProps) => useIcon(StarIcon, StarIcon, props);

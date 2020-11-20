@@ -1,9 +1,5 @@
-import OverwhelmedSelectedEmojiPrimary from './svgs/overwhelmed-selected-emoji.svg';
+import { OverwhelmedSelectedEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(
-    OverwhelmedSelectedEmojiPrimary,
-    OverwhelmedSelectedEmojiPrimary,
-    props,
-  );
+  useIcon(OverwhelmedSelectedEmoji, OverwhelmedSelectedEmoji, props);

@@ -1,5 +1,4 @@
-import LunchGlyphPrimary from './svgs/lunch-glyph.svg';
+import { LunchGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(LunchGlyphPrimary, LunchGlyphPrimary, props);
+export default (props: IconProps) => useIcon(LunchGlyph, LunchGlyph, props);

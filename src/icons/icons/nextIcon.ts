@@ -1,5 +1,4 @@
-import NextIconPrimary from './svgs/next-icon.svg';
+import { NextIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(NextIconPrimary, NextIconPrimary, props);
+export default (props: IconProps) => useIcon(NextIcon, NextIcon, props);

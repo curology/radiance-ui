@@ -1,5 +1,4 @@
-import NoneGlyphPrimary from './svgs/none-glyph.svg';
+import { NoneGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(NoneGlyphPrimary, NoneGlyphPrimary, props);
+export default (props: IconProps) => useIcon(NoneGlyph, NoneGlyph, props);

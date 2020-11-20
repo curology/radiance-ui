@@ -1,5 +1,4 @@
-import PhoneIconPrimary from './svgs/phone-icon.svg';
+import { PhoneIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(PhoneIconPrimary, PhoneIconPrimary, props);
+export default (props: IconProps) => useIcon(PhoneIcon, PhoneIcon, props);

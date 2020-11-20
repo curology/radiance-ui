@@ -1,5 +1,5 @@
-import FlagCanadaGlyphPrimary from './svgs/flag-canada-glyph.svg';
+import { FlagCanadaGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(FlagCanadaGlyphPrimary, FlagCanadaGlyphPrimary, props);
+  useIcon(FlagCanadaGlyph, FlagCanadaGlyph, props);

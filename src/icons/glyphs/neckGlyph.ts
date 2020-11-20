@@ -1,5 +1,4 @@
-import NeckGlyphPrimary from './svgs/neck-glyph.svg';
+import { NeckGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(NeckGlyphPrimary, NeckGlyphPrimary, props);
+export default (props: IconProps) => useIcon(NeckGlyph, NeckGlyph, props);

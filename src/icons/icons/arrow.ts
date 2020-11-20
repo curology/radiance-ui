@@ -1,5 +1,4 @@
-import ArrowIconPrimary from './svgs/arrow.svg';
+import { Arrow } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ArrowIconPrimary, ArrowIconPrimary, props);
+export default (props: IconProps) => useIcon(Arrow, Arrow, props);

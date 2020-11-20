@@ -1,5 +1,4 @@
-import CameraIconPrimary from './svgs/camera-icon.svg';
+import { CameraIcon } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(CameraIconPrimary, CameraIconPrimary, props);
+export default (props: IconProps) => useIcon(CameraIcon, CameraIcon, props);

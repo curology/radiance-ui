@@ -1,5 +1,4 @@
-import EditIconPrimary from './svgs/edit-icon.svg';
+import { EditIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(EditIconPrimary, EditIconPrimary, props);
+export default (props: IconProps) => useIcon(EditIcon, EditIcon, props);

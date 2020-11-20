@@ -1,5 +1,5 @@
-import NoticeableAcneEmojiPrimary from './svgs/noticeable-acne-emoji.svg';
+import { NoticeableAcneEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(NoticeableAcneEmojiPrimary, NoticeableAcneEmojiPrimary, props);
+  useIcon(NoticeableAcneEmoji, NoticeableAcneEmoji, props);

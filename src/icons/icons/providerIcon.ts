@@ -1,5 +1,4 @@
-import ProviderIconPrimary from './svgs/provider-icon.svg';
+import { ProviderIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ProviderIconPrimary, ProviderIconPrimary, props);
+export default (props: IconProps) => useIcon(ProviderIcon, ProviderIcon, props);

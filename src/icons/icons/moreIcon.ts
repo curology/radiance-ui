@@ -1,5 +1,4 @@
-import MoreIconPrimary from './svgs/more-icon.svg';
+import { MoreIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(MoreIconPrimary, MoreIconPrimary, props);
+export default (props: IconProps) => useIcon(MoreIcon, MoreIcon, props);

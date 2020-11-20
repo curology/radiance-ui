@@ -1,5 +1,5 @@
-import TimeMostOfTheTimeGlyphPrimary from './svgs/time-most-of-the-time-glyph.svg';
+import { TimeMostOfTheTimeGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(TimeMostOfTheTimeGlyphPrimary, TimeMostOfTheTimeGlyphPrimary, props);
+  useIcon(TimeMostOfTheTimeGlyph, TimeMostOfTheTimeGlyph, props);

@@ -1,5 +1,4 @@
-import ContrastIconPrimary from './svgs/contrast-icon.svg';
+import { ContrastIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ContrastIconPrimary, ContrastIconPrimary, props);
+export default (props: IconProps) => useIcon(ContrastIcon, ContrastIcon, props);

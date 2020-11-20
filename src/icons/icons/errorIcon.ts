@@ -1,5 +1,4 @@
-import ErrorIconPrimary from './svgs/error-icon.svg';
+import { ErrorIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(ErrorIconPrimary, ErrorIconPrimary, props);
+export default (props: IconProps) => useIcon(ErrorIcon, ErrorIcon, props);

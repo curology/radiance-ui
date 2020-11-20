@@ -1,5 +1,4 @@
-import FacebookIconPrimary from './svgs/facebook-icon.svg';
+import { FacebookIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(FacebookIconPrimary, FacebookIconPrimary, props);
+export default (props: IconProps) => useIcon(FacebookIcon, FacebookIcon, props);

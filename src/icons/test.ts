@@ -10,7 +10,7 @@ import fs from 'fs';
  * transformFileName("someIcon.ts") === "someicon"
  */
 const transformFileName = (fileName: string) =>
-  fileName.toLowerCase().replace(/(-|.ts$|.svg$|)/g, '');
+  fileName.toLowerCase().replace(/(-|.tsx$|.ts$|.svg$|)/g, '');
 
 const SVG_DIRECTORY_NAME = 'svgs';
 
@@ -21,8 +21,8 @@ const testIconDirectory = (directory: string) => {
       .filter((file) => {
         // Ignore svg directory
         if (file === SVG_DIRECTORY_NAME) return false;
-        // Ignore exports file
-        if (file === 'index.ts') return false;
+        // Ignore exports files
+        if (file === 'index') return false;
 
         return true;
       })

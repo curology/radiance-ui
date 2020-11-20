@@ -1,9 +1,5 @@
-import UnsatisfiedSelectedEmojiPrimary from './svgs/unsatisfied-selected-emoji.svg';
+import { UnsatisfiedSelectedEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(
-    UnsatisfiedSelectedEmojiPrimary,
-    UnsatisfiedSelectedEmojiPrimary,
-    props,
-  );
+  useIcon(UnsatisfiedSelectedEmoji, UnsatisfiedSelectedEmoji, props);

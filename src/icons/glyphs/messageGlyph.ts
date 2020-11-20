@@ -1,5 +1,4 @@
-import MessageGlyphPrimary from './svgs/message-glyph.svg';
+import { MessageGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(MessageGlyphPrimary, MessageGlyphPrimary, props);
+export default (props: IconProps) => useIcon(MessageGlyph, MessageGlyph, props);

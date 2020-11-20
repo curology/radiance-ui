@@ -1,5 +1,4 @@
-import YouTubeIconPrimary from './svgs/you-tube-icon.svg';
+import { YouTubeIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(YouTubeIconPrimary, YouTubeIconPrimary, props);
+export default (props: IconProps) => useIcon(YouTubeIcon, YouTubeIcon, props);

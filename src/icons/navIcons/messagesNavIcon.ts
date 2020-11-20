@@ -1,5 +1,5 @@
-import MessagesNavIconPrimary from './svgs/messages-nav-icon.svg';
+import { MessagesNavIcon } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(MessagesNavIconPrimary, MessagesNavIconPrimary, props);
+  useIcon(MessagesNavIcon, MessagesNavIcon, props);

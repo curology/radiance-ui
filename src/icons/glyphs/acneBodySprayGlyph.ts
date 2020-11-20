@@ -1,5 +1,5 @@
-import AcneBodySprayGlyphPrimary from './svgs/acne-body-spray-glyph.svg';
+import { AcneBodySprayGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(AcneBodySprayGlyphPrimary, AcneBodySprayGlyphPrimary, props);
+  useIcon(AcneBodySprayGlyph, AcneBodySprayGlyph, props);

@@ -1,5 +1,4 @@
-import CalendarIconPrimary from './svgs/calendar-icon.svg';
+import { CalendarIcon } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(CalendarIconPrimary, CalendarIconPrimary, props);
+export default (props: IconProps) => useIcon(CalendarIcon, CalendarIcon, props);

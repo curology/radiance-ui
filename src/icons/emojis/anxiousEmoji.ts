@@ -1,5 +1,4 @@
-import AnxiousEmojiPrimary from './svgs/anxious-emoji.svg';
+import { AnxiousEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(AnxiousEmojiPrimary, AnxiousEmojiPrimary, props);
+export default (props: IconProps) => useIcon(AnxiousEmoji, AnxiousEmoji, props);

@@ -1,5 +1,4 @@
-import SparkleEmojiPrimary from './svgs/sparkle-emoji.svg';
+import { SparkleEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(SparkleEmojiPrimary, SparkleEmojiPrimary, props);
+export default (props: IconProps) => useIcon(SparkleEmoji, SparkleEmoji, props);

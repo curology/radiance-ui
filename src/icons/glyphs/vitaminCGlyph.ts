@@ -1,5 +1,5 @@
-import VitaminCGlyphPrimary from './svgs/vitamin-c-glyph.svg';
+import { VitaminCGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(VitaminCGlyphPrimary, VitaminCGlyphPrimary, props);
+  useIcon(VitaminCGlyph, VitaminCGlyph, props);

@@ -1,5 +1,4 @@
-import HelpIconPrimary from './svgs/help-icon.svg';
+import { HelpIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(HelpIconPrimary, HelpIconPrimary, props);
+export default (props: IconProps) => useIcon(HelpIcon, HelpIcon, props);

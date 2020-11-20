@@ -1,5 +1,4 @@
-import LogoutIconPrimary from './svgs/logout-icon.svg';
+import { LogoutIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(LogoutIconPrimary, LogoutIconPrimary, props);
+export default (props: IconProps) => useIcon(LogoutIcon, LogoutIcon, props);

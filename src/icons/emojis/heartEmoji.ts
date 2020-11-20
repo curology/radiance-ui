@@ -1,5 +1,4 @@
-import HeartEmojiPrimary from './svgs/heart-emoji.svg';
+import { HeartEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(HeartEmojiPrimary, HeartEmojiPrimary, props);
+export default (props: IconProps) => useIcon(HeartEmoji, HeartEmoji, props);

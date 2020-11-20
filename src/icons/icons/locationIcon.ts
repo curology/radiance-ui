@@ -1,5 +1,4 @@
-import LocationIconPrimary from './svgs/location-icon.svg';
+import { LocationIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(LocationIconPrimary, LocationIconPrimary, props);
+export default (props: IconProps) => useIcon(LocationIcon, LocationIcon, props);

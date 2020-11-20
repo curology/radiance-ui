@@ -1,5 +1,4 @@
-import PreviousIconPrimary from './svgs/previous-icon.svg';
+import { PreviousIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(PreviousIconPrimary, PreviousIconPrimary, props);
+export default (props: IconProps) => useIcon(PreviousIcon, PreviousIcon, props);

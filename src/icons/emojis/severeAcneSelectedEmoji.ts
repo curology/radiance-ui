@@ -1,9 +1,5 @@
-import SevereAcneSelectedEmojiPrimary from './svgs/severe-acne-selected-emoji.svg';
+import { SevereAcneSelectedEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(
-    SevereAcneSelectedEmojiPrimary,
-    SevereAcneSelectedEmojiPrimary,
-    props,
-  );
+  useIcon(SevereAcneSelectedEmoji, SevereAcneSelectedEmoji, props);

@@ -1,5 +1,5 @@
-import ZincSoapBarGlyphPrimary from './svgs/zinc-soap-bar-glyph.svg';
+import { ZincSoapBarGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(ZincSoapBarGlyphPrimary, ZincSoapBarGlyphPrimary, props);
+  useIcon(ZincSoapBarGlyph, ZincSoapBarGlyph, props);

@@ -1,5 +1,4 @@
-import GiftIconPrimary from './svgs/gift-icon.svg';
+import { GiftIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(GiftIconPrimary, GiftIconPrimary, props);
+export default (props: IconProps) => useIcon(GiftIcon, GiftIcon, props);

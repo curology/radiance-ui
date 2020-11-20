@@ -1,5 +1,5 @@
-import AcneThreeGlyphPrimary from './svgs/acne-three-glyph.svg';
+import { AcneThreeGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(AcneThreeGlyphPrimary, AcneThreeGlyphPrimary, props);
+  useIcon(AcneThreeGlyph, AcneThreeGlyph, props);

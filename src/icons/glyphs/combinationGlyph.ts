@@ -1,5 +1,5 @@
-import CombinationGlyphPrimary from './svgs/combination-glyph.svg';
+import { CombinationGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(CombinationGlyphPrimary, CombinationGlyphPrimary, props);
+  useIcon(CombinationGlyph, CombinationGlyph, props);

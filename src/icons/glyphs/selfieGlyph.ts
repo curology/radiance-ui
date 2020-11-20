@@ -1,5 +1,4 @@
-import SelfieGlyphPrimary from './svgs/selfie-glyph.svg';
+import { SelfieGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(SelfieGlyphPrimary, SelfieGlyphPrimary, props);
+export default (props: IconProps) => useIcon(SelfieGlyph, SelfieGlyph, props);

@@ -1,5 +1,4 @@
-import GlobeGlyphPrimary from './svgs/globe-glyph.svg';
+import { GlobeGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(GlobeGlyphPrimary, GlobeGlyphPrimary, props);
+export default (props: IconProps) => useIcon(GlobeGlyph, GlobeGlyph, props);

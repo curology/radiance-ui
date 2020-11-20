@@ -100,8 +100,15 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
         className="emotion-2"
         fill="#332e54"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
   </div>
   <div
@@ -214,8 +221,15 @@ exports[`<Accordion /> renders no border accordion 1`] = `
         className="emotion-2"
         fill="#332e54"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
   </div>
   <div
@@ -329,8 +343,15 @@ exports[`<Accordion /> renders regular accordion 1`] = `
         className="emotion-2"
         fill="#332e54"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
   </div>
   <div

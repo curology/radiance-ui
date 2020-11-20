@@ -1,5 +1,4 @@
-import TungstenIconPrimary from './svgs/tungsten-icon.svg';
+import { TungstenIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(TungstenIconPrimary, TungstenIconPrimary, props);
+export default (props: IconProps) => useIcon(TungstenIcon, TungstenIcon, props);

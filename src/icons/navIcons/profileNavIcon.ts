@@ -1,5 +1,5 @@
-import ProfileNavIconPrimary from './svgs/profile-nav-icon.svg';
+import { ProfileNavIcon } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(ProfileNavIconPrimary, ProfileNavIconPrimary, props);
+  useIcon(ProfileNavIcon, ProfileNavIcon, props);

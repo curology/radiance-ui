@@ -1,5 +1,4 @@
-import SunGlyphPrimary from './svgs/sun-glyph.svg';
+import { SunGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(SunGlyphPrimary, SunGlyphPrimary, props);
+export default (props: IconProps) => useIcon(SunGlyph, SunGlyph, props);

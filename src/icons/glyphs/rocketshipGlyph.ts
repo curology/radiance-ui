@@ -1,5 +1,5 @@
-import RocketshipGlyphPrimary from './svgs/rocketship-glyph.svg';
+import { RocketshipGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(RocketshipGlyphPrimary, RocketshipGlyphPrimary, props);
+  useIcon(RocketshipGlyph, RocketshipGlyph, props);

@@ -1,5 +1,5 @@
-import TimeAlwaysGlyphPrimary from './svgs/time-always-glyph.svg';
+import { TimeAlwaysGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(TimeAlwaysGlyphPrimary, TimeAlwaysGlyphPrimary, props);
+  useIcon(TimeAlwaysGlyph, TimeAlwaysGlyph, props);

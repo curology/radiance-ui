@@ -1,5 +1,4 @@
-import VeryDryGlyphPrimary from './svgs/very-dry-glyph.svg';
+import { VeryDryGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(VeryDryGlyphPrimary, VeryDryGlyphPrimary, props);
+export default (props: IconProps) => useIcon(VeryDryGlyph, VeryDryGlyph, props);

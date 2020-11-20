@@ -1,5 +1,5 @@
-import PinterestIconPrimary from './svgs/pinterest-icon.svg';
+import { PinterestIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(PinterestIconPrimary, PinterestIconPrimary, props);
+  useIcon(PinterestIcon, PinterestIcon, props);

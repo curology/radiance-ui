@@ -1,39 +1,39 @@
 {
   "bundle.js": {
-    "bundled": 823765,
-    "minified": 754362,
-    "gzipped": 90168
+    "bundled": 820258,
+    "minified": 751927,
+    "gzipped": 89968
   },
   "bundle.umd.js": {
-    "bundled": 833441,
-    "minified": 730202,
-    "gzipped": 86312
+    "bundled": 829898,
+    "minified": 728010,
+    "gzipped": 86111
   },
   "icons/icons/crossIcon.js": {
-    "bundled": 238,
-    "minified": 206,
-    "gzipped": 156,
+    "bundled": 233,
+    "minified": 201,
+    "gzipped": 151,
     "treeshaked": {
       "rollup": {
-        "code": 75,
-        "import_statements": 75
+        "code": 70,
+        "import_statements": 70
       },
       "webpack": {
-        "code": 1096
+        "code": 1091
       }
     }
   },
   "icons/icons/checkmarkIcon.js": {
-    "bundled": 262,
-    "minified": 230,
-    "gzipped": 161,
+    "bundled": 257,
+    "minified": 225,
+    "gzipped": 154,
     "treeshaked": {
       "rollup": {
-        "code": 79,
-        "import_statements": 79
+        "code": 74,
+        "import_statements": 74
       },
       "webpack": {
-        "code": 1100
+        "code": 1095
       }
     }
   },
@@ -52,30 +52,30 @@
     }
   },
   "icons/icons/circleSolidIcon.js": {
-    "bundled": 275,
-    "minified": 243,
-    "gzipped": 161,
+    "bundled": 269,
+    "minified": 237,
+    "gzipped": 153,
     "treeshaked": {
       "rollup": {
-        "code": 82,
-        "import_statements": 82
+        "code": 76,
+        "import_statements": 76
       },
       "webpack": {
-        "code": 1103
+        "code": 1097
       }
     }
   },
   "icons/icons/chevronIcon.js": {
-    "bundled": 250,
-    "minified": 218,
-    "gzipped": 158,
+    "bundled": 245,
+    "minified": 213,
+    "gzipped": 153,
     "treeshaked": {
       "rollup": {
-        "code": 77,
-        "import_statements": 77
+        "code": 72,
+        "import_statements": 72
       },
       "webpack": {
-        "code": 1098
+        "code": 1093
       }
     }
   },
@@ -94,16 +94,16 @@
     }
   },
   "icons/icons/infoIcon.js": {
-    "bundled": 232,
-    "minified": 200,
-    "gzipped": 153,
+    "bundled": 227,
+    "minified": 195,
+    "gzipped": 149,
     "treeshaked": {
       "rollup": {
-        "code": 74,
-        "import_statements": 74
+        "code": 69,
+        "import_statements": 69
       },
       "webpack": {
-        "code": 1095
+        "code": 1090
       }
     }
   },
@@ -122,16 +122,16 @@
     }
   },
   "icons/icons/errorIcon.js": {
-    "bundled": 238,
-    "minified": 206,
-    "gzipped": 156,
+    "bundled": 233,
+    "minified": 201,
+    "gzipped": 151,
     "treeshaked": {
       "rollup": {
-        "code": 75,
-        "import_statements": 75
+        "code": 70,
+        "import_statements": 70
       },
       "webpack": {
-        "code": 1096
+        "code": 1091
       }
     }
   },
@@ -150,16 +150,16 @@
     }
   },
   "icons/icons/arrowLeftIcon.js": {
-    "bundled": 263,
-    "minified": 231,
-    "gzipped": 164,
+    "bundled": 257,
+    "minified": 225,
+    "gzipped": 154,
     "treeshaked": {
       "rollup": {
-        "code": 80,
-        "import_statements": 80
+        "code": 74,
+        "import_statements": 74
       },
       "webpack": {
-        "code": 1101
+        "code": 1095
       }
     }
   },
@@ -262,30 +262,30 @@
     }
   },
   "icons/icons/arrow.js": {
-    "bundled": 213,
-    "minified": 181,
-    "gzipped": 150,
+    "bundled": 209,
+    "minified": 177,
+    "gzipped": 148,
     "treeshaked": {
       "rollup": {
-        "code": 70,
-        "import_statements": 70
+        "code": 66,
+        "import_statements": 66
       },
       "webpack": {
-        "code": 1091
+        "code": 1087
       }
     }
   },
   "icons/icons/arrowRightIcon.js": {
-    "bundled": 269,
-    "minified": 237,
-    "gzipped": 164,
+    "bundled": 263,
+    "minified": 231,
+    "gzipped": 156,
     "treeshaked": {
       "rollup": {
-        "code": 81,
-        "import_statements": 81
+        "code": 75,
+        "import_statements": 75
       },
       "webpack": {
-        "code": 1102
+        "code": 1096
       }
     }
   },
@@ -1602,6 +1602,132 @@
       },
       "webpack": {
         "code": 1105
+      }
+    }
+  },
+  "icons/icons/svgs/ArrowLeftIcon.js": {
+    "bundled": 465,
+    "minified": 394,
+    "gzipped": 300,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/Arrow.js": {
+    "bundled": 435,
+    "minified": 364,
+    "gzipped": 288,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/ArrowRightIcon.js": {
+    "bundled": 475,
+    "minified": 404,
+    "gzipped": 307,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/CheckmarkIcon.js": {
+    "bundled": 457,
+    "minified": 386,
+    "gzipped": 300,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/CircleSolidIcon.js": {
+    "bundled": 474,
+    "minified": 379,
+    "gzipped": 275,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/ErrorIcon.js": {
+    "bundled": 836,
+    "minified": 753,
+    "gzipped": 470,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/ChevronIcon.js": {
+    "bundled": 452,
+    "minified": 381,
+    "gzipped": 285,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/CrossIcon.js": {
+    "bundled": 498,
+    "minified": 427,
+    "gzipped": 304,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
+      }
+    }
+  },
+  "icons/icons/svgs/InfoIcon.js": {
+    "bundled": 478,
+    "minified": 407,
+    "gzipped": 307,
+    "treeshaked": {
+      "rollup": {
+        "code": 84,
+        "import_statements": 84
+      },
+      "webpack": {
+        "code": 1141
       }
     }
   }

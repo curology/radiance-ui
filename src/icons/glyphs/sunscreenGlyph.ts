@@ -1,5 +1,5 @@
-import SunscreenGlyphPrimary from './svgs/sunscreen-glyph.svg';
+import { SunscreenGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(SunscreenGlyphPrimary, SunscreenGlyphPrimary, props);
+  useIcon(SunscreenGlyph, SunscreenGlyph, props);

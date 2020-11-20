@@ -1,5 +1,5 @@
-import NiacinamideGlyphPrimary from './svgs/niacinamide-glyph.svg';
+import { NiacinamideGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(NiacinamideGlyphPrimary, NiacinamideGlyphPrimary, props);
+  useIcon(NiacinamideGlyph, NiacinamideGlyph, props);

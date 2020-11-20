@@ -1,9 +1,5 @@
-import NotificationsSelectedNavIconPrimary from './svgs/notifications-selected-nav-icon.svg';
+import { NotificationsSelectedNavIcon } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(
-    NotificationsSelectedNavIconPrimary,
-    NotificationsSelectedNavIconPrimary,
-    props,
-  );
+  useIcon(NotificationsSelectedNavIcon, NotificationsSelectedNavIcon, props);

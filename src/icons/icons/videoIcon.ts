@@ -1,5 +1,4 @@
-import VideoIconPrimary from './svgs/video-icon.svg';
+import { VideoIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(VideoIconPrimary, VideoIconPrimary, props);
+export default (props: IconProps) => useIcon(VideoIcon, VideoIcon, props);

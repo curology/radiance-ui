@@ -1,5 +1,4 @@
-import OtherGlyphPrimary from './svgs/other-glyph.svg';
+import { OtherGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(OtherGlyphPrimary, OtherGlyphPrimary, props);
+export default (props: IconProps) => useIcon(OtherGlyph, OtherGlyph, props);

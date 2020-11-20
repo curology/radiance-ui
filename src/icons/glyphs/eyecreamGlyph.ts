@@ -1,5 +1,5 @@
-import EyecreamGlyphPrimary from './svgs/eyecream-glyph.svg';
+import { EyecreamGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(EyecreamGlyphPrimary, EyecreamGlyphPrimary, props);
+  useIcon(EyecreamGlyph, EyecreamGlyph, props);

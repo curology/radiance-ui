@@ -1,5 +1,4 @@
-import RefreshIconPrimary from './svgs/refresh-icon.svg';
+import { RefreshIcon } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) =>
-  useIcon(RefreshIconPrimary, RefreshIconPrimary, props);
+export default (props: IconProps) => useIcon(RefreshIcon, RefreshIcon, props);

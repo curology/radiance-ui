@@ -1,5 +1,5 @@
-import PreparedSelectedEmojiPrimary from './svgs/prepared-selected-emoji.svg';
+import { PreparedSelectedEmoji } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(PreparedSelectedEmojiPrimary, PreparedSelectedEmojiPrimary, props);
+  useIcon(PreparedSelectedEmoji, PreparedSelectedEmoji, props);
