@@ -129,6 +129,12 @@
       }
     },
     {
+      "files": ["src/icons/**/svgs/index.tsx"],
+      "rules": {
+        "prettier/prettier": "off"
+      }
+    },
+    {
       "files": ["stories/**/*.{js,ts,tsx}"],
       "rules": {
         "no-alert": "off"
