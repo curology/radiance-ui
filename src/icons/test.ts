@@ -10,7 +10,8 @@ import fs from 'fs';
  * transformFileName("someIcon.ts") === "someicon"
  */
 const transformFileName = (fileName: string) =>
-  fileName.toLowerCase().replace(/(-|.tsx$|.ts$|.svg$|)/g, '');
+  // Sanitize theme naming for now
+  fileName.toLowerCase().replace(/(-|.tsx$|.ts$|.svg$|primary|secondary)/g, '');
 
 const SVG_DIRECTORY_NAME = 'svgs';
 
@@ -26,15 +27,19 @@ const testIconDirectory = (directory: string) => {
 
         return true;
       })
-      .map(transformFileName);
+      .map(transformFileName)
+      .sort();
 
-    const svgFilenames = fs
-      .readdirSync(
-        path.resolve(__dirname, `${directory}/${SVG_DIRECTORY_NAME}`),
-      )
-      .map(transformFileName);
+    const svgFilenames = fs.readdirSync(
+      path.resolve(__dirname, `${directory}/${SVG_DIRECTORY_NAME}`),
+    );
 
-    expect(iconFilenames.sort()).toEqual(svgFilenames.sort());
+    // TODO: Handle Primary + Secondary better
+    const associatedSvgIconFilenames = Array.from(new Set(svgFilenames))
+      .map(transformFileName)
+      .sort();
+
+    expect(iconFilenames).toEqual(associatedSvgIconFilenames);
   });
 };
 
