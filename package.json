@@ -38,7 +38,7 @@
     "build:rollup": "rollup -c",
     "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx' --ignore '**/*.test.{js,ts,tsx}'",
     "publish-package": "run-s build && yarn publish",
-    "heroku-postbuild": "yarn run build:icons:index && yarn run build-storybook",
+    "heroku-postbuild": "yarn run build:icons:all && yarn run build-storybook",
     "tsc": "tsc",
     "chromatic": "chromatic --skip '@(dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/enzyme**|dependabot/npm_and_yarn/jest**)' --project-token"
   },
