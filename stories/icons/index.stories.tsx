@@ -112,11 +112,11 @@ Examples include "sun", "selfie", "pills".
 \n - _Logo_: Logos and Wordmarks
 \n - _Nav Icons_: Any SVG used in conjunction with UI for navigation
 \n\nIf you don't know which category it belongs to, get a second opinion.
-\n\nAdd the SVG file into \`src/icons/ICON_TYPE/svgs\` with a corresponding export component. 
-A few things to note:
+\n\nAdd the SVG file into \`src/svgs/ICON_TYPE/\` with a corresponding export component in \`src/icons/ICON_TYPE/\`, then run \`yarn run build:icons:all\`. Seeing existing files for more context.
+\n\nA few things to note:
 \n\n- No need to optimize the SVG since SVGR will optimize the SVG for us.
 \n- SVGR will convert all SVGs to a React Component during build time, so consumers of the library will not need to run SVGR on their projects.
-\n- If you want to use SVGs in a storybook story, you'll want to import directly from the \`src/icons\` folder.
+\n- If you want to use SVGs in a storybook story, you'll want to import directly from the \`src/icons\` folder, which includes theming context.
 \n\nAfter adding the SVG file, run \`yarn run storybook\` and confirm the icon looks correct, and then open a PR with the changes.
 `;
 
