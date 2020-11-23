@@ -64,7 +64,7 @@
     "@babel/preset-react": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@babel/register": "^7.12.1",
-    "@emotion/babel-preset-css-prop": "10.0.27",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
@@ -112,7 +112,7 @@
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-curology": "^0.1.0",
-    "eslint-plugin-emotion": "10.0.27",
+    "eslint-plugin-emotion": "^11.0.0",
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.1.4",
@@ -121,7 +121,7 @@
     "husky": "^4.3.0",
     "isobject": "^4.0.0",
     "jest": "^26.4.2",
-    "jest-emotion": "^10.0.32",
+    "jest-emotion": "^11.0.0",
     "jest-junit": "^12.0.0",
     "lint-staged": "^10.1.3",
     "prettier": "2.2.0",
@@ -136,10 +136,10 @@
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
-    "@emotion/core": "10.0.35",
-    "@emotion/styled": "10.0.27",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@react-aria/focus": "^3.0.2",
-    "emotion-theming": "10.0.27",
+    "emotion-theming": "^11.0.0",
     "focus-visible": "^5.1.0",
     "lodash.round": "^4.0.4",
     "lodash.throttle": "^4.1.1",
@@ -153,8 +153,8 @@
     "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
-    "@emotion/core": "10.0.35",
-    "@emotion/styled": "10.0.27",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
