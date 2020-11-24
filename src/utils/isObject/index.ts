@@ -1,2 +1,9 @@
-export default (val: any) =>
-  val != null && typeof val === 'object' && Array.isArray(val) === false;
+export default (
+  val:
+    | string
+    | number
+    | Record<string, unknown>
+    | Array<unknown>
+    | null
+    | undefined,
+) => val != null && typeof val === 'object' && Array.isArray(val) === false;
