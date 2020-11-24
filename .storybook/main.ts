@@ -52,4 +52,8 @@ module.exports = {
     // Return the altered config
     return config;
   },
+  reactOptions: {
+    fastRefresh: true,
+    strictMode: true,
+  },
 } as StorybookConfig;
