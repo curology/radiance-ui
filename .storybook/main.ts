@@ -1,5 +1,7 @@
 import type { StorybookConfig } from '@storybook/core/types';
 
+const babelConfig = require('../babel.config');
+
 module.exports = {
   /**
    * Storybook convention is to include "stories" in the filename, but it is also
@@ -27,4 +29,5 @@ module.exports = {
     check: true,
     checkOptions: {},
   },
+  babel: babelConfig,
 } as StorybookConfig;
