@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 820263,
-    "minified": 751936,
-    "gzipped": 89964
+    "bundled": 820389,
+    "minified": 751954,
+    "gzipped": 89976
   },
   "bundle.umd.js": {
-    "bundled": 829903,
-    "minified": 728019,
-    "gzipped": 86109
+    "bundled": 830035,
+    "minified": 728037,
+    "gzipped": 86119
   },
   "icons/icons/crossIcon.js": {
     "bundled": 233,
@@ -360,9 +360,9 @@
     }
   },
   "utils/throwOnUndefinedProperty/index.js": {
-    "bundled": 405,
-    "minified": 227,
-    "gzipped": 168,
+    "bundled": 531,
+    "minified": 245,
+    "gzipped": 179,
     "treeshaked": {
       "rollup": {
         "code": 0,
