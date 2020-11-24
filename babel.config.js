@@ -1,6 +1,11 @@
 module.exports = {
   presets: [
-    '@babel/env',
+    [
+      '@babel/env',
+      {
+        modules: false,
+      },
+    ],
     '@babel/react',
     '@babel/preset-typescript',
     '@emotion/babel-preset-css-prop',
@@ -11,4 +16,9 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { loose: true }],
     ['@babel/plugin-transform-parameters', { loose: true }],
   ],
+  env: {
+    test: {
+      presets: ['@babel/env'],
+    },
+  },
 };
