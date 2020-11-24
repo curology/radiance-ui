@@ -78,7 +78,6 @@ typings/
 # build files
 dist/
 lib/
-src/icons/
 .out
 
 # JetBrains

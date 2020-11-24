@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
-.emotion-8 {
+.emotion-9 {
   position: relative;
   -webkit-align-items: left;
   -webkit-box-align: left;
@@ -16,7 +16,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   max-width: none;
   top: 120%;
   background: #332e54;
@@ -48,7 +48,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   z-index: 4;
   top: -8px;
@@ -59,9 +59,20 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   margin-left: -10px;
 }
 
+.emotion-4 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332e54;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
 <div>
   <div
-    className="emotion-8 emotion-9"
+    className="emotion-9 emotion-10"
   >
     <div
       className="emotion-0 emotion-1"
@@ -72,7 +83,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
       Tooltip Trigger
     </div>
     <div
-      className="emotion-6 emotion-7"
+      className="emotion-7 emotion-8"
       open={false}
     >
       <div
@@ -81,13 +92,22 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
         Tooltip Content
       </div>
       <div
-        className="emotion-4 emotion-5"
+        className="emotion-5 emotion-6"
       >
         <svg
+          className="emotion-4"
+          data-name="Layer 1"
           fill="#332e54"
           height={16}
+          viewBox="0 0 46.29 32.92"
           width={16}
-        />
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M27.07 30.75a4.63 4.63 0 01-7.85 0L0 0h46.27z"
+            fill="#332e54"
+          />
+        </svg>
       </div>
     </div>
   </div>

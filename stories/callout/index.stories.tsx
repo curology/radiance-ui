@@ -9,10 +9,11 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
-import { NeckGlyph } from 'src/svgs/glyphs';
 import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
+
+import { NeckGlyph } from '../../src/icons';
 
 export const Default = () => (
   <Callout.Container>

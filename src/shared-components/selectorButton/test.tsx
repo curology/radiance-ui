@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'src/tests/enzymeHelpers';
 import { renderer } from 'src/tests/reactTestRendererHelpers';
 
-import AcneOneGlyph from '../../svgs/glyphs/acne-one-glyph.svg';
+import { AcneOneGlyph } from '../../icons';
 
 import { SelectorButton } from './index';
 

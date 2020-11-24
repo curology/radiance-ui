@@ -10,7 +10,7 @@ import {
   IconWrapper,
   CheckmarkWrapper,
 } from './style';
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
+import { CheckmarkIcon } from '../../icons';
 
 type OptionButtonProps = {
   borderRadius?: string;

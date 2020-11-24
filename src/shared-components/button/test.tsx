@@ -3,7 +3,7 @@ import { mount } from 'src/tests/enzymeHelpers';
 import { renderer } from 'src/tests/reactTestRendererHelpers';
 import { primaryTheme } from 'src/constants/themes';
 
-import CameraIcon from '../../svgs/icons/camera-icon.svg';
+import { CameraIcon } from '../../icons';
 
 import { Button } from './index';
 
