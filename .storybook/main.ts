@@ -1,4 +1,8 @@
 import type { StorybookConfig } from '@storybook/core/types';
+const path = require('path');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
+
+const babelConfig = require('../babel.config');
 
 module.exports = {
   /**
@@ -26,5 +30,26 @@ module.exports = {
   typescript: {
     check: true,
     checkOptions: {},
+  },
+  babel: babelConfig,
+  webpackFinal: (config, { configType }) => {
+    // Allow resolving absolute paths within `/stories`, e.g. import * from 'stories/utils';
+    config.resolve.modules.push(path.resolve(__dirname, '..'));
+
+    if (configType === 'DEVELOPMENT') {
+      config.plugins.push(
+        new CircularDependencyPlugin({
+          exclude: /node_modules/,
+          // add errors to webpack instead of warnings
+          failOnError: true,
+          allowAsyncCycles: false,
+          // set the current working directory for displaying module paths
+          cwd: process.cwd(),
+        }),
+      );
+    }
+
+    // Return the altered config
+    return config;
   },
 } as StorybookConfig;
