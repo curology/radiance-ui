@@ -158,7 +158,6 @@ export const Carousel = ({
   return (
     <OuterContainer numCardsVisible={numCardsVisible}>
       <InnerContainer carouselType={carouselType} onClick={onUserInteraction}>
-        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Slider ref={slider} {...carouselSettings}>
           {children}
         </Slider>
