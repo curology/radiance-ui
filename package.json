@@ -86,7 +86,6 @@
     "@storybook/theming": "^6.0.27",
     "@svgr/cli": "^5.5.0",
     "@svgr/rollup": "^5.5.0",
-    "@svgr/webpack": "^5.5.0",
     "@types/enzyme": "^3.10.6",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.13",

@@ -21,12 +21,8 @@
   },
   "settings": {
     "import/resolver": {
-      "node": {},
-      "webpack": {
-        "config": "./.storybook/webpack.config.js"
-      }
-    },
-    "import/extensions": [".js", ".md"]
+      "node": {}
+    }
   },
   "rules": {
     "@typescript-eslint/camelcase": "off",

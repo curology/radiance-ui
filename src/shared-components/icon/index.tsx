@@ -22,7 +22,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 }
 
 /**
- * Helper component to pass the necessary props down to direct SVG imports, supported by @svgr (webpack and rollup).
+ * Helper component to pass the necessary props down to direct SVG imports, supported by @svgr (cli and rollup).
  *
  * **This component should not be used directly**, and so is not included in the `shared-components` export.
  */
@@ -43,11 +43,11 @@ export const Icon = ({
 );
 
 Icon.propTypes = {
-  children: PropTypes.element.isRequired,
   className: PropTypes.string,
   displayInline: PropTypes.bool,
   fill: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  IconComponent: PropTypes.elementType.isRequired,
   rotate: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
