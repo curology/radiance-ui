@@ -11,6 +11,11 @@ export default function throwOnUndefinedProperty<
         return target[property];
       }
 
+      // Allow React-Fast-Refresh to check if objects are components
+      if (property === '$$typeof') {
+        return;
+      }
+
       throw new Error(`Property '${property}' is not defined`);
     },
   };
