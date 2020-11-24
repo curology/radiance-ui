@@ -1,12 +1,282 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] = `
-.emotion-2 {
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+.emotion-24 {
   overflow: hidden !important;
   padding-bottom: 1.5rem;
 }
 
-.emotion-2 .slick-slider {
+.emotion-24 .slick-slider {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,7 +305,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 .slick-list {
+.emotion-24 .slick-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -51,17 +321,17 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   overflow: hidden;
 }
 
-.emotion-2 .slick-list:focus {
+.emotion-24 .slick-list:focus {
   outline: none;
 }
 
-.emotion-2 .slick-list.dragging {
+.emotion-24 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-.emotion-2 .slick-slider .slick-track,
-.emotion-2 .slick-slider .slick-list {
+.emotion-24 .slick-slider .slick-track,
+.emotion-24 .slick-slider .slick-list {
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
@@ -71,7 +341,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   transform: translate3d(0,0,0);
 }
 
-.emotion-2 .slick-track {
+.emotion-24 .slick-track {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -83,34 +353,34 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   align-items: center;
 }
 
-.emotion-2 .slick-loading .slick-track {
+.emotion-24 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-.emotion-2 .slick-slide {
+.emotion-24 .slick-slide {
   display: none;
   float: left;
   height: 100%;
   min-height: 1px;
 }
 
-.emotion-2 .slick-slide.slick-loading img {
+.emotion-24 .slick-slide.slick-loading img {
   display: none;
 }
 
-.emotion-2 .slick-slide.dragging img {
+.emotion-24 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-.emotion-2 .slick-initialized .slick-slide {
+.emotion-24 .slick-initialized .slick-slide {
   display: block;
 }
 
-.emotion-2 .slick-loading .slick-slide {
+.emotion-24 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-.emotion-2 .slick-vertical .slick-slide {
+.emotion-24 .slick-vertical .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,17 +389,17 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   border: 1px solid transparent;
 }
 
-.emotion-2 .slick-arrow.slick-hidden {
+.emotion-24 .slick-arrow.slick-hidden {
   display: none;
 }
 
-.emotion-2 .slick-slider {
+.emotion-24 .slick-slider {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.emotion-2 .slick-dots {
+.emotion-24 .slick-dots {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -142,7 +412,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   bottom: -32px;
 }
 
-.emotion-2 .slick-dots li {
+.emotion-24 .slick-dots li {
   border-radius: 50%;
   height: 0.25rem;
   width: 0.25rem;
@@ -150,43 +420,392 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   opacity: 0.25;
 }
 
-.emotion-2 .slick-dots li:first-of-type {
+.emotion-24 .slick-dots li:first-of-type {
   margin-left: 0.25rem;
 }
 
-.emotion-2 .slick-dots li button {
+.emotion-24 .slick-dots li button {
   display: none;
 }
 
-.emotion-2 .slick-dots li.slick-active {
+.emotion-24 .slick-dots li.slick-active {
   opacity: 1;
 }
 
-.emotion-2 .slick-dots li {
+.emotion-24 .slick-dots li {
   background-color: #332e54;
 }
 
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  min-height: 52px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ededf0;
+  border-color: #ededf0;
+  color: #c3c0cd;
+  cursor: not-allowed;
+  fill: #c3c0cd;
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.emotion-3:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-3:active,
+.emotion-3:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-3:visited,
+.emotion-3:hover {
+  opacity: 1;
+  color: #c3c0cd;
+}
+
+.emotion-3 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin: 0 auto;
+}
+
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  width: 38px;
+  opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
+}
+
+.emotion-1 span {
+  border-radius: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+}
+
+.emotion-1 span:nth-of-type(1) {
+  -webkit-animation: animation-0 1750ms infinite linear;
+  animation: animation-0 1750ms infinite linear;
+}
+
+.emotion-1 span:nth-of-type(2) {
+  -webkit-animation: animation-0 1750ms infinite linear -300ms;
+  animation: animation-0 1750ms infinite linear -300ms;
+}
+
+.emotion-1 span:nth-of-type(3) {
+  -webkit-animation: animation-0 1750ms infinite linear -600ms;
+  animation: animation-0 1750ms infinite linear -600ms;
+}
+
+.emotion-1 span {
+  background-color: #ffffff;
+}
+
+.emotion-9 {
   width: 311px !important;
   min-height: 48px;
   margin: 0 0.5rem;
 }
 
-.emotion-4 {
+.emotion-26 {
   max-width: 702px;
+}
+
+.emotion-7 {
+  display: block;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0.5rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-left: auto;
+}
+
+.emotion-7 button {
+  background-color: none;
+  border-color: #332e54;
+  color: #332e54;
+}
+
+.emotion-7 button:hover {
+  color: #332e54;
+}
+
+.emotion-22 {
+  display: block;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin: 0.5rem;
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.emotion-18 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  min-height: 52px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #332e54;
+  border-color: #332e54;
+  color: #ffffff;
+  fill: #ffffff;
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.emotion-18:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-18:active,
+.emotion-18:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-18:visited,
+.emotion-18:hover {
+  opacity: 0.8;
+}
+
+.emotion-18:focus,
+.emotion-18:not([href]):not([tabindex]):hover,
+.emotion-18:not([href]):not([tabindex]):focus {
+  color: #ffffff;
+}
+
+.emotion-18:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  opacity: 1;
+}
+
+.emotion-18 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin: 0 auto;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  width: 38px;
+  opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
+}
+
+.emotion-16 span {
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+}
+
+.emotion-16 span:nth-of-type(1) {
+  -webkit-animation: animation-0 1750ms infinite linear;
+  animation: animation-0 1750ms infinite linear;
+}
+
+.emotion-16 span:nth-of-type(2) {
+  -webkit-animation: animation-0 1750ms infinite linear -300ms;
+  animation: animation-0 1750ms infinite linear -300ms;
+}
+
+.emotion-16 span:nth-of-type(3) {
+  -webkit-animation: animation-0 1750ms infinite linear -600ms;
+  animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-26 emotion-27"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-24 emotion-25"
     >
       <div
         class="slick-slider slick-initialized"
+        dir="ltr"
       >
-        
+        <div
+          class="emotion-7 emotion-8"
+          disabled=""
+        >
+          <div
+            class="emotion-5 emotion-6"
+          >
+            <button
+              class="emotion-3 emotion-4"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="emotion-0"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="emotion-1 emotion-2"
+                disabled=""
+              >
+                <div>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </button>
+            
+          </div>
+        </div>
         <div
           class="slick-list"
         >
@@ -203,7 +822,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
             >
               <div>
                 <div
-                  class="emotion-0 emotion-1"
+                  class="emotion-9 emotion-10"
                   style="width: 100%; display: inline-block;"
                   tabindex="-1"
                 >
@@ -211,10 +830,78 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
                 </div>
               </div>
             </div>
+            <div
+              aria-hidden="false"
+              class="slick-slide slick-active"
+              data-index="1"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  class="emotion-9 emotion-10"
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  Card 2
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="2"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  class="emotion-9 emotion-10"
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  Card 3
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
-        
+        <div
+          class="emotion-22 emotion-8"
+        >
+          <div
+            class="emotion-5 emotion-6"
+          >
+            <button
+              class="emotion-18 emotion-4"
+              type="button"
+            >
+              <svg
+                class="emotion-0"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M.01 7.41H13.6L7.27 1.09 8.15.2l7.86 7.86-8.19 7.87-.86-.9 6.62-6.37H.01V7.41z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="emotion-16 emotion-2"
+              >
+                <div>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </button>
+            
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -222,16 +909,196 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 `;
 
 exports[`<Carousel /> UI snapshots renders with props 1`] = `
-.emotion-4 {
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0) scale(1,1);
+    -ms-transform: translate3d(0,0,0) scale(1,1);
+    transform: translate3d(0,0,0) scale(1,1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px,0,0) scale(1,1);
+    -ms-transform: translate3d(12px,0,0) scale(1,1);
+    transform: translate3d(12px,0,0) scale(1,1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
+    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
+    transform: translate3d(16px,0,0) scale(.85,.85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px,0,0);
+    -ms-transform: translate3d(16px,0,0);
+    transform: translate3d(16px,0,0);
+  }
+}
+
+.emotion-26 {
   max-width: 375px;
 }
 
-.emotion-2 {
+.emotion-24 {
   overflow: hidden !important;
   padding-bottom: 1.5rem;
 }
 
-.emotion-2 .slick-slider {
+.emotion-24 .slick-slider {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -260,7 +1127,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 .slick-list {
+.emotion-24 .slick-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,17 +1143,17 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   overflow: hidden;
 }
 
-.emotion-2 .slick-list:focus {
+.emotion-24 .slick-list:focus {
   outline: none;
 }
 
-.emotion-2 .slick-list.dragging {
+.emotion-24 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-.emotion-2 .slick-slider .slick-track,
-.emotion-2 .slick-slider .slick-list {
+.emotion-24 .slick-slider .slick-track,
+.emotion-24 .slick-slider .slick-list {
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
@@ -296,7 +1163,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   transform: translate3d(0,0,0);
 }
 
-.emotion-2 .slick-track {
+.emotion-24 .slick-track {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -308,34 +1175,34 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   align-items: center;
 }
 
-.emotion-2 .slick-loading .slick-track {
+.emotion-24 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-.emotion-2 .slick-slide {
+.emotion-24 .slick-slide {
   display: none;
   float: left;
   height: 100%;
   min-height: 1px;
 }
 
-.emotion-2 .slick-slide.slick-loading img {
+.emotion-24 .slick-slide.slick-loading img {
   display: none;
 }
 
-.emotion-2 .slick-slide.dragging img {
+.emotion-24 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-.emotion-2 .slick-initialized .slick-slide {
+.emotion-24 .slick-initialized .slick-slide {
   display: block;
 }
 
-.emotion-2 .slick-loading .slick-slide {
+.emotion-24 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-.emotion-2 .slick-vertical .slick-slide {
+.emotion-24 .slick-vertical .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -344,17 +1211,17 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   border: 1px solid transparent;
 }
 
-.emotion-2 .slick-arrow.slick-hidden {
+.emotion-24 .slick-arrow.slick-hidden {
   display: none;
 }
 
-.emotion-2 .slick-slider {
+.emotion-24 .slick-slider {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-.emotion-2 .slick-dots {
+.emotion-24 .slick-dots {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -367,7 +1234,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   bottom: -32px;
 }
 
-.emotion-2 .slick-dots li {
+.emotion-24 .slick-dots li {
   border-radius: 50%;
   height: 0.25rem;
   width: 0.25rem;
@@ -375,45 +1242,380 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   opacity: 0.25;
 }
 
-.emotion-2 .slick-dots li:first-of-type {
+.emotion-24 .slick-dots li:first-of-type {
   margin-left: 0.25rem;
 }
 
-.emotion-2 .slick-dots li button {
+.emotion-24 .slick-dots li button {
   display: none;
 }
 
-.emotion-2 .slick-dots li.slick-active {
+.emotion-24 .slick-dots li.slick-active {
   opacity: 1;
 }
 
-.emotion-2 .slick-dots li {
+.emotion-24 .slick-dots li {
   background-color: #332e54;
 }
 
+.emotion-7 {
+  position: absolute;
+  top: 50%;
+  z-index: 2000;
+  -webkit-transform: translate(0%,-50%);
+  -ms-transform: translate(0%,-50%);
+  transform: translate(0%,-50%);
+  display: block;
+  left: 0.5rem;
+  display: none;
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  min-height: 52px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ededf0;
+  border-color: #ededf0;
+  color: #c3c0cd;
+  cursor: not-allowed;
+  fill: #c3c0cd;
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.emotion-3:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-3:active,
+.emotion-3:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-3:visited,
+.emotion-3:hover {
+  opacity: 1;
+  color: #c3c0cd;
+}
+
+.emotion-3 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin: 0 auto;
+}
+
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  width: 38px;
+  opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
+}
+
+.emotion-1 span {
+  border-radius: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+}
+
+.emotion-1 span:nth-of-type(1) {
+  -webkit-animation: animation-0 1750ms infinite linear;
+  animation: animation-0 1750ms infinite linear;
+}
+
+.emotion-1 span:nth-of-type(2) {
+  -webkit-animation: animation-0 1750ms infinite linear -300ms;
+  animation: animation-0 1750ms infinite linear -300ms;
+}
+
+.emotion-1 span:nth-of-type(3) {
+  -webkit-animation: animation-0 1750ms infinite linear -600ms;
+  animation: animation-0 1750ms infinite linear -600ms;
+}
+
+.emotion-1 span {
+  background-color: #ffffff;
+}
+
+.emotion-9 {
   width: 311px !important;
   min-height: 48px;
   margin: 0 0.5rem;
 }
 
+.emotion-22 {
+  position: absolute;
+  top: 50%;
+  z-index: 2000;
+  -webkit-transform: translate(0%,-50%);
+  -ms-transform: translate(0%,-50%);
+  transform: translate(0%,-50%);
+  display: block;
+  right: 0.5rem;
+}
+
+.emotion-18 {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  -webkit-letter-spacing: 1px;
+  -moz-letter-spacing: 1px;
+  -ms-letter-spacing: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  min-height: 52px;
+  opacity: 1;
+  padding: 0 1.5rem;
+  position: relative;
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-width: 1px;
+  border-color: #ededf0;
+  background-color: #ffffff;
+  color: #332e54;
+  fill: #332e54;
+  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  min-width: 208px;
+  max-width: 325px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  max-width: unset;
+  min-height: unset;
+  min-width: unset;
+  height: 48px;
+  width: 48px;
+  padding: 0;
+}
+
+.emotion-18:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+}
+
+.emotion-18:active,
+.emotion-18:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+}
+
+.emotion-18:hover {
+  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+}
+
+.emotion-18:hover {
+  -webkit-transition: all 350ms ease-in-out;
+  transition: all 350ms ease-in-out;
+  opacity: 1;
+}
+
+.emotion-18 > svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin: 0 auto;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin-top: -6px;
+  width: 38px;
+  opacity: 0;
+  width: 36px;
+  margin: -3px -3px 0 0;
+}
+
+.emotion-16 span {
+  background-color: #332e54;
+  border-radius: 50%;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+}
+
+.emotion-16 span:nth-of-type(1) {
+  -webkit-animation: animation-0 1750ms infinite linear;
+  animation: animation-0 1750ms infinite linear;
+}
+
+.emotion-16 span:nth-of-type(2) {
+  -webkit-animation: animation-0 1750ms infinite linear -300ms;
+  animation: animation-0 1750ms infinite linear -300ms;
+}
+
+.emotion-16 span:nth-of-type(3) {
+  -webkit-animation: animation-0 1750ms infinite linear -600ms;
+  animation: animation-0 1750ms infinite linear -600ms;
+}
+
 <div>
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-26 emotion-27"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-24 emotion-25"
     >
       <div
         class="slick-slider slick-initialized"
+        dir="ltr"
       >
-        
+        <div
+          class="emotion-7 emotion-8"
+          disabled=""
+        >
+          <div
+            class="emotion-5 emotion-6"
+          >
+            <button
+              class="emotion-3 emotion-4"
+              disabled=""
+              type="button"
+            >
+              <svg
+                class="emotion-0"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="emotion-1 emotion-2"
+                disabled=""
+              >
+                <div>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </button>
+            
+          </div>
+        </div>
         <div
           class="slick-list"
+          style="padding: 0px 50px;"
         >
           <div
             class="slick-track"
-            style="width: -100px; opacity: 1; transform: translate3d(0px, 0px, 0px);"
+            style="width: -300px; opacity: 1; transform: translate3d(-50px, 0px, 0px);"
           >
             <div
               aria-hidden="false"
@@ -424,7 +1626,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
             >
               <div>
                 <div
-                  class="emotion-0 emotion-1"
+                  class="emotion-9 emotion-10"
                   style="width: 100%; display: inline-block;"
                   tabindex="-1"
                 >
@@ -432,10 +1634,104 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
                 </div>
               </div>
             </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="1"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  class="emotion-9 emotion-10"
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  Card 2
+                </div>
+              </div>
+            </div>
+            <div
+              aria-hidden="true"
+              class="slick-slide"
+              data-index="2"
+              style="outline: none;"
+              tabindex="-1"
+            >
+              <div>
+                <div
+                  class="emotion-9 emotion-10"
+                  style="width: 100%; display: inline-block;"
+                  tabindex="-1"
+                >
+                  Card 3
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
-        
+        <div
+          class="emotion-22 emotion-8"
+        >
+          <div
+            class="emotion-5 emotion-6"
+          >
+            <button
+              class="emotion-18 emotion-4"
+              type="button"
+            >
+              <svg
+                class="emotion-0"
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M.01 7.41H13.6L7.27 1.09 8.15.2l7.86 7.86-8.19 7.87-.86-.9 6.62-6.37H.01V7.41z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="emotion-16 emotion-2"
+              >
+                <div>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              </div>
+            </button>
+            
+          </div>
+        </div>
+        <ul
+          class="slick-dots"
+          style="display: block;"
+        >
+          <li
+            class="slick-active"
+          >
+            <button>
+              1
+            </button>
+          </li>
+          <li
+            class=""
+          >
+            <button>
+              2
+            </button>
+          </li>
+          <li
+            class=""
+          >
+            <button>
+              3
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
