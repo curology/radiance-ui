@@ -12,7 +12,7 @@ import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 const Card = styled(Carousel.Card)`
   background-color: ${({ theme }) => theme.COLORS.border};

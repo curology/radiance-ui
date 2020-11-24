@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Global } from '@emotion/core';
+import { Global, useTheme } from '@emotion/react';
 import Arrow from 'src/svgs/icons/arrow.svg';
-import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
 import {

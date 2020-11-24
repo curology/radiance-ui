@@ -12,7 +12,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { AcneGlyph } from 'src/svgs/glyphs';
 import type { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 export const Primary = () => (
   <React.Fragment>

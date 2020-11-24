@@ -20,7 +20,7 @@ import {
   CrossIcon,
 } from 'src/svgs/icons';
 import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 const ButtonsContainer = styled.div`
   display: flex;

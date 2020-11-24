@@ -1,11 +1,17 @@
 {
   "presets": [
-    ["@babel/env", {
-      "modules": false
-    }],
+    [
+      "@babel/env",
+      {
+        "modules": false
+      }
+    ],
     "@babel/react",
     "@babel/preset-typescript",
-    "@emotion/babel-preset-css-prop"
+    [
+      "@babel/preset-react",
+      { "runtime": "automatic", "importSource": "@emotion/react" }
+    ]
   ],
   "env": {
     "test": {

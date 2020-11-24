@@ -12,7 +12,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
 import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Thumbnails from './thumbnails';
 import {

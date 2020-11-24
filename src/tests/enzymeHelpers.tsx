@@ -5,7 +5,7 @@ import {
   ShallowRendererProps,
 } from 'enzyme';
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 
 import { primaryTheme, ThemeType } from '../constants';
 

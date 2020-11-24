@@ -13,7 +13,7 @@ import { Button } from 'src/shared-components';
 import { CheckmarkIcon } from 'src/svgs/icons';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 const noop = () => undefined;
 

@@ -12,10 +12,6 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "paths": {
-      "emotion-theming": ["src/types/emotion-theming"],
-      "@emotion/styled": ["src/types/@emotion/styled"]
-    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,

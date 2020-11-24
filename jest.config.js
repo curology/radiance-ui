@@ -19,6 +19,6 @@ module.exports = {
     '\\.svg': '<rootDir>/tests/__mocks__/svgMock.js',
   },
   setupFilesAfterEnv: ['<rootDir>tests/setupTests.ts'],
-  snapshotSerializers: ['jest-emotion'],
+  snapshotSerializers: ['@emotion/jest/serializer'],
   testPathIgnorePatterns: ['/node_modules/', '/lib/', '/__snapshots__'],
 };

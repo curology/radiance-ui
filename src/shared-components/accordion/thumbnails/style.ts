@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { style as TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
 import { SPACER } from 'src/constants';
 

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import tinycolor from 'tinycolor2';
 
 import { ANIMATION, ThemeColors, ThemeType } from '../../../../constants';
