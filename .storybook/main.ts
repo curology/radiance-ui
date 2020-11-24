@@ -54,6 +54,7 @@ module.exports = {
   },
   reactOptions: {
     fastRefresh: true,
-    strictMode: true,
+    // TODO: Does not play well with emotion theming
+    // strictMode: true,
   },
 } as StorybookConfig;
