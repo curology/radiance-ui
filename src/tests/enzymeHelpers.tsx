@@ -14,7 +14,7 @@ export const mount = (
   Component: React.ReactElement,
   options?: MountRendererProps,
   theme: ThemeType = primaryTheme,
-) =>
+): ReturnType<typeof enzymeMount> =>
   enzymeMount(
     <ThemeProvider theme={theme}>{Component}</ThemeProvider>,
     options,
@@ -24,7 +24,7 @@ export const shallow = (
   Component: React.ReactElement,
   options?: ShallowRendererProps,
   theme: ThemeType = primaryTheme,
-) =>
+): ReturnType<typeof enzymeShallow> =>
   enzymeShallow(
     <ThemeProvider theme={theme}>{Component}</ThemeProvider>,
     options,

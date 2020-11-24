@@ -77,7 +77,7 @@ export const ImmersiveModal = ({
   onClose,
   title = '',
   ...rest
-}: ImmersiveModalProps) => {
+}: ImmersiveModalProps): React.ReactPortal => {
   const [isClosing, setIsClosing] = useState(false);
   const [showMobileHeaderBar, setShowMobileHeaderBar] = useState(false);
   const [showDesktopHeaderBar, setShowDesktopHeaderBar] = useState(false);

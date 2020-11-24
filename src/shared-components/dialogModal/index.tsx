@@ -45,7 +45,7 @@ export const DialogModal = ({
   onCloseIconClick,
   title = '',
   ...rest
-}: DialogModalProps) => {
+}: DialogModalProps): React.ReactPortal => {
   const [isClosing, setIsClosing] = useState(false);
 
   const domNode = useRef<HTMLElement>(getDomNode());
