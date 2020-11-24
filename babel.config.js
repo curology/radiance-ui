@@ -1,6 +1,6 @@
 module.exports = {
   presets: [
-    ['@babel/env'],
+    '@babel/env',
     '@babel/react',
     '@babel/preset-typescript',
     '@emotion/babel-preset-css-prop',
