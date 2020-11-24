@@ -4,7 +4,7 @@ import useResetFocus from 'src/utils/accessibility/useResetFocus';
 import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
-import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
+import { ChevronIcon } from '../../icons';
 import {
   DropdownContainer,
   DropdownFocusContainer,

@@ -10,8 +10,7 @@ import {
   Input,
   HintItem,
 } from './style';
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import ErrorIcon from '../../svgs/icons/error-icon.svg';
+import { CheckmarkIcon, ErrorIcon } from '../../icons';
 import {
   VerificationMessages,
   MessagesTypes,

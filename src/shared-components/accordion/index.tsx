@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
-import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 import { useTheme } from 'emotion-theming';
 
+import { ChevronIcon } from '../../icons';
 import Thumbnails from './thumbnails';
 import {
   AccordionBox,

@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
 
-export const ParentContainer = styled.div`
+const ParentContainer = styled.div`
   max-width: 327px;
 `;
 
-export const CalloutContainer = styled.div`
+const CalloutContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.infoBackground};
   padding: ${SPACER.medium};
   border-radius: 8px;
@@ -16,14 +16,14 @@ export const CalloutContainer = styled.div`
   align-items: center;
 `;
 
-export const Text = styled.div<{
+const Text = styled.div<{
   textColor: string;
 }>`
   color: ${({ textColor }) => textColor};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
 `;
 
-export const Icon = styled.div<{
+const Icon = styled.div<{
   iconColor: string;
 }>`
   margin-left: ${SPACER.small};
@@ -36,3 +36,10 @@ export const Icon = styled.div<{
     }
   }
 `;
+
+export default {
+  CalloutContainer,
+  Icon,
+  ParentContainer,
+  Text,
+};

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
 
-import CrossIcon from '../../svgs/icons/cross-icon.svg';
+import { CrossIcon } from '../../icons';
 import {
   Overlay,
   ModalContainer,

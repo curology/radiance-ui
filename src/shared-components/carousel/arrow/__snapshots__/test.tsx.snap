@@ -181,7 +181,7 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   }
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -199,7 +199,17 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   justify-content: center;
 }
 
-.emotion-6 {
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
   display: block;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
@@ -211,17 +221,17 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   margin-left: auto;
 }
 
-.emotion-6 button {
+.emotion-7 button {
   background-color: none;
   border-color: #332e54;
   color: #332e54;
 }
 
-.emotion-6 button:hover {
+.emotion-7 button:hover {
   color: #332e54;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -267,31 +277,31 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   padding: 0;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
-.emotion-2:visited,
-.emotion-2:hover {
+.emotion-3:visited,
+.emotion-3:hover {
   opacity: 1;
   color: #c3c0cd;
 }
 
-.emotion-2 > svg {
+.emotion-3 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   margin: 0 auto;
 }
 
-.emotion-0 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -315,7 +325,7 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   margin: -3px -3px 0 0;
 }
 
-.emotion-0 span {
+.emotion-1 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -323,41 +333,53 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   position: absolute;
 }
 
-.emotion-0 span:nth-of-type(1) {
+.emotion-1 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-0 span:nth-of-type(2) {
+.emotion-1 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-0 span:nth-of-type(3) {
+.emotion-1 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
-.emotion-0 span {
+.emotion-1 span {
   background-color: #ffffff;
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   disabled={true}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <button
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
       disabled={true}
       onClick={[Function]}
       type="button"
     >
-      <svg />
+      <svg
+        className="emotion-0"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+          fill="currentColor"
+        />
+      </svg>
       <div
-        className="emotion-0 emotion-1"
+        className="emotion-1 emotion-2"
         disabled={true}
       >
         <div>
@@ -463,7 +485,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   position: absolute;
   top: 50%;
   z-index: 2000;
@@ -474,7 +496,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   left: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -492,7 +514,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -539,28 +561,28 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   padding: 0;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
   opacity: 1;
 }
 
-.emotion-2 > svg {
+.emotion-3 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
@@ -568,6 +590,16 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -591,7 +623,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   margin: -3px -3px 0 0;
 }
 
-.emotion-0 span {
+.emotion-1 span {
   background-color: #332e54;
   border-radius: 50%;
   display: inline-block;
@@ -600,37 +632,49 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-0 span:nth-of-type(1) {
+.emotion-1 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-0 span:nth-of-type(2) {
+.emotion-1 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-0 span:nth-of-type(3) {
+.emotion-1 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <div
-  className="emotion-6 emotion-7"
+  className="emotion-7 emotion-8"
   disabled={false}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <button
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
       disabled={false}
       onClick={[Function]}
       type="button"
     >
-      <svg />
+      <svg
+        className="emotion-0"
+        fill="none"
+        height={16}
+        viewBox="0 0 16 16"
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+          fill="currentColor"
+        />
+      </svg>
       <div
-        className="emotion-0 emotion-1"
+        className="emotion-1 emotion-2"
         disabled={false}
       >
         <div>
