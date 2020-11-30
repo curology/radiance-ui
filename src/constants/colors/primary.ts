@@ -32,6 +32,7 @@ const PRIMARY_COLORS = {
   errorBorder: COLORS.statusRedBorder,
   default: COLORS.purple70,
   defaultBackground: COLORS.purple10,
+  defaultBorder: COLORS.purple15,
   accent: COLORS.red,
   disabled: COLORS.purple10,
   failure: COLORS.red,

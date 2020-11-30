@@ -92,6 +92,7 @@ export const colorAliases = {
   errorBorder: brandColors.statusRedBorder,
   default: brandColors.purple70,
   defaultBackground: brandColors.purple10,
+  defaultBorder: brandColors.purple15,
   accent: brandColors.red,
   disabled: brandColors.purple10,
   failure: brandColors.red,
