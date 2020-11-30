@@ -32,6 +32,7 @@ const SECONDARY_COLORS = {
   errorBorder: '#F6ECEA',
   default: '#2C2A25',
   defaultBackground: '#F0EEEC',
+  defaultBorder: '#F0EEEC',
   accent: '#F0EEEC',
   disabled: '',
   failure: '',
