@@ -1,32 +1,30 @@
 import PropTypes from 'prop-types';
 
-import COLORS from '.';
-
 const SECONDARY_COLORS = {
   // brand colors
-  primary: '#2C2A25',
-  primaryTint1: '#2C2A25',
-  primaryTint2: '#2C2A25',
-  primaryTint3: '#2C2A25',
-  primaryTint4: '#F0EEEC',
-  secondary: '#C4BFB7',
-  secondaryTint1: '#D2CEC8',
-  secondaryTint2: '#E1DEDA',
-  secondaryTint3: '#F0EEEC',
-  secondaryTint4: '#F0EEEC',
-  tertiary: '#FEE582',
-  tertiaryTint1: '#FBEEAE',
-  tertiaryTint2: '#FDF2C2',
-  tertiaryTint3: '#FEF6D5',
-  tertiaryTint4: '#FEFAE9',
+  primary: '#2D2926',
+  primaryTint1: '#2D2926',
+  primaryTint2: '#2D2926',
+  primaryTint3: '#2D2926',
+  primaryTint4: '#F2F0EF',
+  secondary: '#F3EA5D',
+  secondaryTint1: '#FCF4A8',
+  secondaryTint2: '#FDF7BE',
+  secondaryTint3: '#FDF9D3',
+  secondaryTint4: '#FEFCE5',
+  tertiary: '#CBC5BF',
+  tertiaryTint1: '#D8D3CF',
+  tertiaryTint2: '#E5E2DF',
+  tertiaryTint3: '#F2F0EF',
+  tertiaryTint4: '#F2F0EF',
 
   // general colors
   success: '#406237',
   successBackground: '#ECEFEB',
   successBorder: '#ECEFEB',
   info: '#2C2A25',
-  infoBackground: '#FEFAE9',
-  infoBorder: '#FEFAE9',
+  infoBackground: '#FDF9D3',
+  infoBorder: '#FDF9D3',
   error: '#A33F29',
   errorBackground: '#F6ECEA',
   errorBorder: '#F6ECEA',
@@ -40,25 +38,25 @@ const SECONDARY_COLORS = {
   warning: '',
 
   // ui colors
-  background: '#FFFEF2',
+  background: '#FFFDF2',
   backgroundDark: '#C4BFB7',
-  border: '#E1DEDA',
-  divider: '#E1DEDA',
+  border: '#E5E2DF',
+  divider: '#E5E2DF',
 
   // form colors
   radioBorder: '',
   radioBorderSelected: '',
 
   // typography
-  textMuted: '#C4BFB7',
-  textGhost: '#C4BFB7',
-  textDisabled: '',
+  textMuted: '#2D2926',
+  textGhost: '#CBC5BF', // TODO: Delete?
+  textDisabled: '#CBC5BF',
 
   // overlay
-  overlay: '',
-  overlaySolid: '',
+  overlay: 'rgba(45, 41, 38, 0.7)',
+  overlaySolid: '#2D2926',
 
-  black: COLORS.black,
+  black: '#2D2926',
   white: '#FFFEF2',
   transparent: 'transparent',
 } as const;
