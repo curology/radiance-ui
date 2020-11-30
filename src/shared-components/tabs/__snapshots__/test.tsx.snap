@@ -122,23 +122,20 @@ exports[`<Tabs /> UI snapshot renders with default props 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  class="emotion-6 emotion-7"
 >
   <button
-    className="emotion-0 emotion-1"
-    onClick={[Function]}
+    class="emotion-0 emotion-1"
   >
     Tab 1
   </button>
   <button
-    className="emotion-2 emotion-1"
-    onClick={[Function]}
+    class="emotion-2 emotion-1"
   >
     Tab 2
   </button>
   <button
-    className="emotion-2 emotion-1"
-    onClick={[Function]}
+    class="emotion-2 emotion-1"
   >
     Tab 3
   </button>
@@ -267,23 +264,20 @@ exports[`<Tabs /> UI snapshot renders with initialActiveTabId and onClick props 
 }
 
 <div
-  className="emotion-6 emotion-7"
+  class="emotion-6 emotion-7"
 >
   <button
-    className="emotion-0 emotion-1"
-    onClick={[Function]}
+    class="emotion-0 emotion-1"
   >
     Tab 1
   </button>
   <button
-    className="emotion-2 emotion-1"
-    onClick={[Function]}
+    class="emotion-2 emotion-1"
   >
     Tab 2
   </button>
   <button
-    className="emotion-0 emotion-1"
-    onClick={[Function]}
+    class="emotion-0 emotion-1"
   >
     Tab 3
   </button>

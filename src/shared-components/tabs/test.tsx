@@ -1,15 +1,12 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
-import { mount } from 'src/tests/enzymeHelpers';
-
-import { TabItem } from './style';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Tabs } from './index';
 
 describe('<Tabs />', () => {
   describe('UI snapshot', () => {
     it('renders with default props', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Tabs
           tabItems={[
             { id: 1, text: 'Tab 1' },
@@ -19,12 +16,11 @@ describe('<Tabs />', () => {
         />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('renders with initialActiveTabId and onClick props', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Tabs
           initialActiveTabId={2}
           onClick={() => undefined}
@@ -36,15 +32,14 @@ describe('<Tabs />', () => {
         />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('on click function', () => {
     test('returns correct params', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { container } = render(
         <Tabs
           initialActiveTabId={1}
           tabItems={[
@@ -56,7 +51,7 @@ describe('<Tabs />', () => {
         />,
       );
 
-      wrapper.find(TabItem).first().simulate('click');
+      container.querySelector('button')?.click();
 
       expect(spy).toHaveBeenCalledWith({ id: 1, text: 'Tab 1' });
     });
