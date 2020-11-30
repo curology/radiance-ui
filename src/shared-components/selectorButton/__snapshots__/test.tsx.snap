@@ -105,26 +105,23 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="checkbox"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -134,15 +131,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -254,48 +248,42 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={8}
+        height="8"
         viewBox="0 0 16 16"
-        width={8}
+        width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={8}
-          cy={8}
+          cx="8"
+          cy="8"
           fill="currentColor"
-          r={7.4}
+          r="7.4"
           stroke="currentColor"
-          strokeWidth={1.2}
+          stroke-width="1.2"
         />
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -406,26 +394,23 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
 }
 
 <div
-  aria-checked={false}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-9 emotion-10"
   role="checkbox"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 48 48"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -435,15 +420,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
       </svg>
     </div>
     <div
-      checked={false}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -554,26 +536,23 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
 }
 
 <div
-  aria-checked={false}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 48 48"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -583,15 +562,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
       </svg>
     </div>
     <div
-      checked={false}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -692,30 +668,24 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
 }
 
 <div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-8 emotion-9"
   role="checkbox"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>
@@ -816,30 +786,24 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
 }
 
 <div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-8 emotion-9"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>
@@ -951,48 +915,42 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={8}
+        height="8"
         viewBox="0 0 16 16"
-        width={8}
+        width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={8}
-          cy={8}
+          cx="8"
+          cy="8"
           fill="currentColor"
-          r={7.4}
+          r="7.4"
           stroke="currentColor"
-          strokeWidth={1.2}
+          stroke-width="1.2"
         />
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="small"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -1104,48 +1062,42 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={8}
+        height="8"
         viewBox="0 0 16 16"
-        width={8}
+        width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={8}
-          cy={8}
+          cx="8"
+          cy="8"
           fill="currentColor"
-          r={7.4}
+          r="7.4"
           stroke="currentColor"
-          strokeWidth={1.2}
+          stroke-width="1.2"
         />
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="small"
+      class="emotion-3 emotion-4"
       type="secondary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -1246,30 +1198,24 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 <div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-8 emotion-9"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>
@@ -1363,25 +1309,19 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 }
 
 <div
-  aria-checked={false}
-  className="emotion-6 emotion-7"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-6 emotion-7"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
@@ -1482,30 +1422,24 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 <div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-8 emotion-9"
   role="checkbox"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>
