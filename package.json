@@ -86,6 +86,8 @@
     "@storybook/theming": "^6.1.5",
     "@svgr/cli": "^5.5.0",
     "@svgr/rollup": "^5.5.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
     "@types/enzyme": "^3.10.6",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^26.0.13",
