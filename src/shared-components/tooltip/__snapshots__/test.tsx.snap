@@ -72,35 +72,31 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
 
 <div>
   <div
-    className="emotion-9 emotion-10"
+    class="emotion-9 emotion-10"
   >
     <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      class="emotion-0 emotion-1"
     >
       Tooltip Trigger
     </div>
     <div
-      className="emotion-7 emotion-8"
-      open={false}
+      class="emotion-7 emotion-8"
     >
       <div
-        className="emotion-2 emotion-3"
+        class="emotion-2 emotion-3"
       >
         Tooltip Content
       </div>
       <div
-        className="emotion-5 emotion-6"
+        class="emotion-5 emotion-6"
       >
         <svg
-          className="emotion-4"
+          class="emotion-4"
           data-name="Layer 1"
           fill="#332e54"
-          height={16}
+          height="16"
           viewBox="0 0 46.29 32.92"
-          width={16}
+          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
