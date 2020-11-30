@@ -36,6 +36,13 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
   color: #ffffff;
 }
 
@@ -114,9 +121,17 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 16 16"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.96 2l-9.7 9.42L.88 7.1 0 7.99l5.26 5.18L15.83 2.9l-.87-.9z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       checked={true}
@@ -196,6 +211,13 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
   color: #ffffff;
 }
 
@@ -248,9 +270,21 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={8}
+        viewBox="0 0 16 16"
         width={8}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={8}
+          cy={8}
+          fill="currentColor"
+          r={7.4}
+          stroke="currentColor"
+          strokeWidth={1.2}
+        />
+      </svg>
     </div>
     <div
       checked={true}
@@ -269,7 +303,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 `;
 
 exports[`<SelectorButton /> UI snapshots when Icon added displays icon for checkbox with size 'large' 1`] = `
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -285,7 +319,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -296,14 +330,14 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
   text-align: left;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -320,16 +354,26 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   margin-bottom: 20px;
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-8:focus .emotion-5 {
+.emotion-9:focus .emotion-6 {
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 4px;
 }
 
-.emotion-2 {
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -356,41 +400,50 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   border-color: #332e54;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
 }
 
 <div
   aria-checked={false}
-  className="emotion-8 emotion-9"
+  className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="checkbox"
   tabIndex={0}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-0 emotion-1"
+      className="emotion-1 emotion-2"
       disabled={false}
     >
       <svg
+        className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 48 48"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M23.995 26A1.996 1.996 0 0122 23.995c0-1.107.897-1.995 1.995-1.995S26 22.897 26 23.995A2.017 2.017 0 0123.995 26zm0-2.807a.8.8 0 00-.802.802c0 .449.363.812.802.812.44 0 .812-.363.812-.812a.821.821 0 00-.812-.802z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       checked={false}
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
       disabled={false}
       size="large"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -398,7 +451,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
 `;
 
 exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio button with size 'large' 1`] = `
-.emotion-8 {
+.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -415,16 +468,16 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   margin-bottom: 20px;
 }
 
-.emotion-8:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-8:focus .emotion-5 {
+.emotion-9:focus .emotion-6 {
   box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
   border-radius: 100%;
 }
 
-.emotion-4 {
+.emotion-5 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -440,7 +493,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   position: relative;
 }
 
-.emotion-0 {
+.emotion-1 {
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -451,14 +504,24 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
   text-align: left;
 }
 
-.emotion-2 {
+.emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -485,41 +548,50 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   border-color: #332e54;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-3:active,
+.emotion-3:focus {
   outline: none;
 }
 
 <div
   aria-checked={false}
-  className="emotion-8 emotion-9"
+  className="emotion-9 emotion-10"
   onClick={[Function]}
   onKeyPress={[Function]}
   role="radio"
   tabIndex={0}
 >
   <div
-    className="emotion-4 emotion-5"
+    className="emotion-5 emotion-6"
   >
     <div
-      className="emotion-0 emotion-1"
+      className="emotion-1 emotion-2"
       disabled={false}
     >
       <svg
+        className="emotion-0"
+        fill="none"
         height={16}
+        viewBox="0 0 48 48"
         width={16}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M23.995 26A1.996 1.996 0 0122 23.995c0-1.107.897-1.995 1.995-1.995S26 22.897 26 23.995A2.017 2.017 0 0123.995 26zm0-2.807a.8.8 0 00-.802.802c0 .449.363.812.802.812.44 0 .812-.363.812-.812a.821.821 0 00-.812-.802z"
+          fill="currentColor"
+        />
+      </svg>
     </div>
     <div
       checked={false}
-      className="emotion-2 emotion-3"
+      className="emotion-3 emotion-4"
       disabled={false}
       size="large"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    className="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -836,6 +908,13 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
   color: #ffffff;
 }
 
@@ -888,9 +967,21 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={8}
+        viewBox="0 0 16 16"
         width={8}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={8}
+          cy={8}
+          fill="currentColor"
+          r={7.4}
+          stroke="currentColor"
+          strokeWidth={1.2}
+        />
+      </svg>
     </div>
     <div
       checked={true}
@@ -970,6 +1061,13 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
   color: #ffffff;
 }
 
@@ -1022,9 +1120,21 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
     >
       <svg
         className="emotion-0"
+        fill="none"
         height={8}
+        viewBox="0 0 16 16"
         width={8}
-      />
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={8}
+          cy={8}
+          fill="currentColor"
+          r={7.4}
+          stroke="currentColor"
+          strokeWidth={1.2}
+        />
+      </svg>
     </div>
     <div
       checked={true}

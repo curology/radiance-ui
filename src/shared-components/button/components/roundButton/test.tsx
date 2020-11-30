@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'src/tests/enzymeHelpers';
 import { renderer } from 'src/tests/reactTestRendererHelpers';
 
-import CameraIcon from '../../../../svgs/icons/camera-icon.svg';
+import { CameraIcon } from '../../../../icons';
 
 import { RoundButton } from './index';
 

@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { RoundButton } from '../../button';
-import ArrowLeftIcon from '../../../svgs/icons/arrow-left-icon.svg';
-import ArrowRightIcon from '../../../svgs/icons/arrow-right-icon.svg';
+import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
 import { ArrowContainer, BottomRightAlignedArrowContainer } from './style';
 
 type ArrowProps = {
