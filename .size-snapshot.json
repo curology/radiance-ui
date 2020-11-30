@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 821159,
-    "minified": 752672,
-    "gzipped": 90129
+    "bundled": 821210,
+    "minified": 752704,
+    "gzipped": 90160
   },
   "bundle.umd.js": {
-    "bundled": 830831,
-    "minified": 728720,
-    "gzipped": 86294
+    "bundled": 830884,
+    "minified": 728265,
+    "gzipped": 86275
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -1130,16 +1130,16 @@
     }
   },
   "constants/colors/secondary.js": {
-    "bundled": 1472,
-    "minified": 1166,
-    "gzipped": 489,
+    "bundled": 1490,
+    "minified": 1167,
+    "gzipped": 504,
     "treeshaked": {
       "rollup": {
-        "code": 1014,
-        "import_statements": 52
+        "code": 1017,
+        "import_statements": 26
       },
       "webpack": {
-        "code": 2039
+        "code": 2011
       }
     }
   },
