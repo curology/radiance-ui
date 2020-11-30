@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 821048,
-    "minified": 752573,
-    "gzipped": 90109
+    "bundled": 821159,
+    "minified": 752672,
+    "gzipped": 90129
   },
   "bundle.umd.js": {
-    "bundled": 830714,
-    "minified": 728636,
-    "gzipped": 86277
+    "bundled": 830831,
+    "minified": 728720,
+    "gzipped": 86294
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -864,9 +864,9 @@
     }
   },
   "shared-components/toggle/index.js": {
-    "bundled": 1803,
-    "minified": 992,
-    "gzipped": 519,
+    "bundled": 1804,
+    "minified": 993,
+    "gzipped": 520,
     "treeshaked": {
       "rollup": {
         "code": 302,
@@ -1074,30 +1074,30 @@
     }
   },
   "shared-components/accordion/thumbnails/style.js": {
-    "bundled": 11578,
-    "minified": 11302,
-    "gzipped": 2343,
+    "bundled": 11587,
+    "minified": 11311,
+    "gzipped": 2350,
     "treeshaked": {
       "rollup": {
-        "code": 919,
+        "code": 920,
         "import_statements": 147
       },
       "webpack": {
-        "code": 2029
+        "code": 2030
       }
     }
   },
   "constants/colors/index.js": {
-    "bundled": 4999,
-    "minified": 4034,
-    "gzipped": 1471,
+    "bundled": 5038,
+    "minified": 4069,
+    "gzipped": 1475,
     "treeshaked": {
       "rollup": {
-        "code": 2879,
+        "code": 2904,
         "import_statements": 182
       },
       "webpack": {
-        "code": 4106
+        "code": 4131
       }
     }
   },
@@ -1130,16 +1130,16 @@
     }
   },
   "constants/colors/secondary.js": {
-    "bundled": 1444,
-    "minified": 1142,
-    "gzipped": 485,
+    "bundled": 1472,
+    "minified": 1166,
+    "gzipped": 489,
     "treeshaked": {
       "rollup": {
-        "code": 990,
+        "code": 1014,
         "import_statements": 52
       },
       "webpack": {
-        "code": 2015
+        "code": 2039
       }
     }
   },
@@ -1340,16 +1340,16 @@
     }
   },
   "constants/colors/primary.js": {
-    "bundled": 1838,
-    "minified": 1536,
-    "gzipped": 516,
+    "bundled": 1872,
+    "minified": 1566,
+    "gzipped": 520,
     "treeshaked": {
       "rollup": {
-        "code": 1189,
+        "code": 1214,
         "import_statements": 52
       },
       "webpack": {
-        "code": 2300
+        "code": 2327
       }
     }
   },
