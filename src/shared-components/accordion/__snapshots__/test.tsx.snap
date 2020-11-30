@@ -73,35 +73,33 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 }
 
 <div
-  className="emotion-9 emotion-10"
-  disabled={true}
+  class="emotion-9 emotion-10"
+  disabled=""
 >
   <div
-    aria-disabled={true}
-    aria-expanded={false}
-    className="emotion-5 emotion-6"
-    disabled={true}
-    onClick={[Function]}
-    onKeyDown={[Function]}
+    aria-disabled="true"
+    aria-expanded="false"
+    class="emotion-5 emotion-6"
+    disabled=""
     role="button"
-    tabIndex={-1}
+    tabindex="-1"
   >
     <div
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
       <div>
         title
       </div>
     </div>
     <div
-      className="emotion-3 emotion-4"
+      class="emotion-3 emotion-4"
     >
       <svg
-        className="emotion-2"
+        class="emotion-2"
         fill="#332e54"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -112,9 +110,9 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
     </div>
   </div>
   <div
-    aria-disabled={true}
-    aria-hidden={true}
-    className="emotion-7 emotion-8"
+    aria-disabled="true"
+    aria-hidden="true"
+    class="emotion-7 emotion-8"
   >
     <div>
       <div>
@@ -194,35 +192,31 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 }
 
 <div
-  className="emotion-9 emotion-10"
-  disabled={false}
+  class="emotion-9 emotion-10"
 >
   <div
-    aria-disabled={false}
-    aria-expanded={false}
-    className="emotion-5 emotion-6"
-    disabled={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
+    aria-disabled="false"
+    aria-expanded="false"
+    class="emotion-5 emotion-6"
     role="button"
-    tabIndex={0}
+    tabindex="0"
   >
     <div
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
       <div>
         title
       </div>
     </div>
     <div
-      className="emotion-3 emotion-4"
+      class="emotion-3 emotion-4"
     >
       <svg
-        className="emotion-2"
+        class="emotion-2"
         fill="#332e54"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -233,9 +227,9 @@ exports[`<Accordion /> renders no border accordion 1`] = `
     </div>
   </div>
   <div
-    aria-disabled={false}
-    aria-hidden={true}
-    className="emotion-7 emotion-8"
+    aria-disabled="false"
+    aria-hidden="true"
+    class="emotion-7 emotion-8"
   >
     <div>
       <div>
@@ -316,35 +310,31 @@ exports[`<Accordion /> renders regular accordion 1`] = `
 }
 
 <div
-  className="emotion-9 emotion-10"
-  disabled={false}
+  class="emotion-9 emotion-10"
 >
   <div
-    aria-disabled={false}
-    aria-expanded={false}
-    className="emotion-5 emotion-6"
-    disabled={false}
-    onClick={[Function]}
-    onKeyDown={[Function]}
+    aria-disabled="false"
+    aria-expanded="false"
+    class="emotion-5 emotion-6"
     role="button"
-    tabIndex={0}
+    tabindex="0"
   >
     <div
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     >
       <div>
         title
       </div>
     </div>
     <div
-      className="emotion-3 emotion-4"
+      class="emotion-3 emotion-4"
     >
       <svg
-        className="emotion-2"
+        class="emotion-2"
         fill="#332e54"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -355,9 +345,9 @@ exports[`<Accordion /> renders regular accordion 1`] = `
     </div>
   </div>
   <div
-    aria-disabled={false}
-    aria-hidden={true}
-    className="emotion-7 emotion-8"
+    aria-disabled="false"
+    aria-hidden="true"
+    class="emotion-7 emotion-8"
   >
     <div>
       <div>

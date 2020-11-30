@@ -39,7 +39,7 @@ exports[`<Indicator /> UI snapshots renders the correct css with a number 1`] = 
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
 >
   <div>
     3
@@ -86,7 +86,7 @@ exports[`<Indicator /> UI snapshots renders the correct css with a text 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
 >
   <div>
     1

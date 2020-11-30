@@ -94,19 +94,19 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
 }
 
 <div
-  className="emotion-8 emotion-9"
+  class="emotion-8 emotion-9"
 >
   <div
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     />
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     />
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     />
   </div>
 </div>
@@ -206,19 +206,19 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
 }
 
 <div
-  className="emotion-8 emotion-9"
+  class="emotion-8 emotion-9"
 >
   <div
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     />
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     />
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-0 emotion-1"
     />
   </div>
 </div>

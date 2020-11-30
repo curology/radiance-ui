@@ -1,19 +1,19 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
 import { primaryTheme } from 'src/constants/themes';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { LoadingSpinner } from './index';
 
 describe('<LoadingSpinner />', () => {
   describe('UI snapshots', () => {
     it('renders the correct css with default props', () => {
-      const component = renderer.create(<LoadingSpinner />);
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      const { container } = render(<LoadingSpinner />);
+
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('renders the correct css with custom props', () => {
-      const component = renderer.create(
+      const { container } = render(
         <LoadingSpinner
           bgColor={primaryTheme.COLORS.black}
           color={primaryTheme.COLORS.white}
@@ -22,8 +22,8 @@ describe('<LoadingSpinner />', () => {
           translateX="150px"
         />,
       );
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });
