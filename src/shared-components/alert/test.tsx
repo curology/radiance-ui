@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import React from 'react';
+import { act, fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import assert from 'src/utils/assert';
 
 import { Alert } from './index';
 
@@ -14,97 +15,81 @@ const CustomContentComponent = () => (
   </div>
 );
 
-const createNodeMock = (element: ReactElement) => {
-  if (element.type === 'div') {
-    return {
-      innerHTML: alertText,
-    };
-  }
-  return null;
-};
-
 describe('Alert UI snapshots', () => {
   test('renders a default alert', () => {
-    const component = renderer.create(<Alert content={alertText} />, {
-      createNodeMock,
-    });
+    const { container } = render(<Alert content={alertText} />);
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders success alert', () => {
-    const component = renderer.create(
-      <Alert content={alertText} type="success" />,
-      { createNodeMock },
-    );
+    const { container } = render(<Alert content={alertText} type="success" />);
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders error alert', () => {
-    const component = renderer.create(
-      <Alert content={alertText} type="error" />,
-      { createNodeMock },
-    );
+    const { container } = render(<Alert content={alertText} type="error" />);
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders a sticky alert', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Alert content={alertText} duration="sticky" />,
-      { createNodeMock },
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders custom component passed in content prop', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Alert content={<CustomContentComponent />} />,
-      { createNodeMock },
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('Alert onExit is triggered on click', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const component = renderer.create(
+    const { container } = render(
       <Alert
         content={<CustomContentComponent />}
         onExit={spy}
         duration="sticky"
       />,
-      { createNodeMock },
     );
 
-    component.root.findByType('button').props.onClick();
-    jest.runAllTimers();
+    assert(container.firstElementChild);
+    fireEvent.click(container.firstElementChild);
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
     expect(spy).toHaveBeenCalled();
   });
 
   test('Alert with custom CTA', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const component = renderer.create(
+    const { container } = render(
       <Alert
         content={<CustomContentComponent />}
         type="error"
         ctaContent="Update Payment Method"
         onExit={spy}
       />,
-      { createNodeMock },
     );
 
-    component.root.findByType('button').props.onClick();
-    jest.runAllTimers();
+    assert(container.firstElementChild);
+    fireEvent.click(container.firstElementChild);
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
     expect(spy).toHaveBeenCalled();
   });
 });

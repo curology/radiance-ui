@@ -5,7 +5,7 @@ import * as ReactTestingLibrary from '@testing-library/react';
 import { primaryTheme, ThemeType } from '../constants';
 
 // We customize @testing-library methods to bake-in theming and keep unit tests DRY
-export const render = (
+const customRender = (
   Component: React.ReactElement,
   options?: Omit<ReactTestingLibrary.RenderOptions, 'queries'>,
   theme: ThemeType = primaryTheme,
@@ -15,4 +15,6 @@ export const render = (
     options,
   );
 
-export const { fireEvent, screen, waitFor } = ReactTestingLibrary;
+export * from '@testing-library/react';
+
+export { customRender as render };
