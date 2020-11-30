@@ -16,10 +16,12 @@ exports[`<FadeInContainer /> UI snapshot renders with default props 1`] = `
   animation: animation-0 350ms ease-in-out;
 }
 
-<div
-  className="emotion-0 emotion-1"
->
-  Default Props example
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    Default Props example
+  </div>
 </div>
 `;
 
@@ -49,9 +51,11 @@ exports[`<FadeInContainer /> UI snapshot renders with slide and speed props set 
   animation: animation-0 500ms ease-in-out;
 }
 
-<div
-  className="emotion-0 emotion-1"
->
-  FadeInContainer Content Here
+<div>
+  <div
+    class="emotion-0 emotion-1"
+  >
+    FadeInContainer Content Here
+  </div>
 </div>
 `;
