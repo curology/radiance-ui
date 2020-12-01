@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
 
 import { CameraIcon } from '../../../../icons';
 
@@ -9,58 +8,50 @@ import { RoundButton } from './index';
 describe('<RoundButton />', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
-      const tree = renderer
-        .create(
-          <RoundButton disabled onClick={() => undefined} icon={<CameraIcon />}>
-            Button Text
-          </RoundButton>,
-        )
-        .toJSON();
+      const { container } = render(
+        <RoundButton disabled onClick={() => undefined} icon={<CameraIcon />}>
+          Button Text
+        </RoundButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('onClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getByRole } = render(
         <RoundButton onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>,
       );
 
-      const button = wrapper.find('button');
-
-      button.simulate('click');
+      fireEvent.click(getByRole('button'));
       expect(spy).toHaveBeenCalled();
     });
 
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getByRole } = render(
         <RoundButton disabled onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>,
       );
 
-      const button = wrapper.find('button');
-
-      button.simulate('click');
+      fireEvent.click(getByRole('button'));
       expect(spy).not.toHaveBeenCalled();
     });
 
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getByRole } = render(
         <RoundButton isLoading onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>,
       );
 
-      const button = wrapper.find('button');
-
-      button.simulate('click');
+      fireEvent.click(getByRole('button'));
       expect(spy).not.toHaveBeenCalled();
     });
   });

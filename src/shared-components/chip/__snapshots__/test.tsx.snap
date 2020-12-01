@@ -41,10 +41,10 @@ exports[`<Chip /> UI snapshots renders the correct css and text 1`] = `
 }
 
 <div
-  className="emotion-2 emotion-3"
+  class="emotion-2 emotion-3"
 >
   <span
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     Success
   </span>

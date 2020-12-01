@@ -1,31 +1,29 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import Arrow from './index';
 
 describe('<Arrow />', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
-      const tree = renderer
-        .create(<Arrow prev disabled={false} onClick={() => undefined} />)
-        .toJSON();
+      const { container } = render(
+        <Arrow prev disabled={false} onClick={() => undefined} />,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('renders with bottom right alignment', () => {
-      const tree = renderer
-        .create(
-          <Arrow
-            bottomRightAlignedArrows
-            prev
-            disabled
-            onClick={() => undefined}
-          />,
-        )
-        .toJSON();
+      const { container } = render(
+        <Arrow
+          bottomRightAlignedArrows
+          prev
+          disabled
+          onClick={() => undefined}
+        />,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

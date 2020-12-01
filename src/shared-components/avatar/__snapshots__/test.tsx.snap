@@ -11,7 +11,7 @@ exports[`<Avatar /> UI snapshot render with size large styles 1`] = `
 
 <img
   alt="avatar"
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
 />
 `;
@@ -27,12 +27,12 @@ exports[`<Avatar /> UI snapshot render with size medium styles 1`] = `
 
 <img
   alt="avatar"
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
 />
 `;
 
-exports[`<Avatar /> UI snapshot renders the component with default props 1`] = `
+exports[`<Avatar /> UI snapshot renders the Avatar with default props 1`] = `
 .emotion-0 {
   height: 32px;
   width: 32px;
@@ -43,7 +43,7 @@ exports[`<Avatar /> UI snapshot renders the component with default props 1`] = `
 
 <img
   alt="avatar"
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   src="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
 />
 `;

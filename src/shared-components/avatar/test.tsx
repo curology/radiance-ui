@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Avatar } from '.';
 
@@ -8,31 +8,26 @@ describe('<Avatar />', () => {
     'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=';
 
   describe('UI snapshot', () => {
-    it('renders the component with default props', () => {
-      const component = renderer.create(
-        <Avatar src={imageExample} alt="avatar" />,
-      );
+    it('renders the Avatar with default props', () => {
+      const { container } = render(<Avatar src={imageExample} alt="avatar" />);
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('render with size medium styles', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Avatar size="medium" src={imageExample} alt="avatar" />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('render with size large styles', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Avatar size="large" src={imageExample} alt="avatar" />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });
