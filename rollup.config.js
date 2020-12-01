@@ -18,9 +18,7 @@ const defaultConfig = {
     }),
     resolve({
       extensions,
-      customResolveOptions: {
-        moduleDirectory: [path.resolve(__dirname, '.'), 'node_modules'],
-      },
+      moduleDirectories: [path.resolve(__dirname, '.'), 'node_modules'],
     }),
     commonjs({
       include: 'node_modules/**',
