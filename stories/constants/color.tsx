@@ -3,30 +3,27 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const ColorContainer = styled.div`
+  margin: 48px 48px 0 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column nowrap;
   justify-content: center;
-  flex: 1;
-  padding: 16px;
+  align-items: center;
 `;
 
 const ColorSample = styled.div`
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   background-color: ${(props) => props.color};
-  border-radius: 99999px;
-  border: 1px solid #000;
-  overflow: hidden;
+  border-radius: 40px;
 `;
 
 const ColorName = styled.div`
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 8px;
 `;
 
 const ColorHex = styled.div`
-  font-size: 8px;
+  font-size: 12px;
 `;
 
 type ColorProps = {
