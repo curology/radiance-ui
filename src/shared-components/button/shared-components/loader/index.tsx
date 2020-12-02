@@ -2,7 +2,7 @@ import React from 'react';
 
 import ButtonLoader from './style';
 import { ButtonTypeWithAction } from '../..';
-import { ThemeColors } from '../../../../constants';
+import { ThemeColorOrEmptyString, ThemeColors } from '../../../../constants';
 
 type LoaderProps = {
   buttonColor: ThemeColors;
@@ -11,7 +11,7 @@ type LoaderProps = {
   disabled: boolean;
   isFullWidth?: boolean;
   isLoading: boolean;
-  textColor: ThemeColors;
+  textColor: ThemeColorOrEmptyString;
 };
 
 const Loader = ({

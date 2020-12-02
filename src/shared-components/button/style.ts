@@ -8,6 +8,7 @@ import {
   BOX_SHADOWS,
   ThemeColors,
   ThemeType,
+  ThemeColorOrEmptyString,
 } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
@@ -161,7 +162,7 @@ type BaseButtonStylesTypes = {
   buttonType: ButtonTypeWithAction;
   buttonColor: ThemeColors;
   isLoading?: boolean;
-  textColor: ThemeColors;
+  textColor: ThemeColorOrEmptyString;
   isFullWidth?: boolean;
   theme: ThemeType;
 };

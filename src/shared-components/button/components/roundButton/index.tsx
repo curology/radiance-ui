@@ -16,7 +16,11 @@ import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import {
+  COLORS_PROP_TYPES,
+  ThemeColors,
+  ThemeColorOrEmptyString,
+} from '../../../../constants';
 
 type RoundButtonProps = {
   buttonColor?: ThemeColors;
@@ -42,7 +46,7 @@ type RoundButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors (except when disabled is true)
    */
-  textColor?: ThemeColors;
+  textColor?: ThemeColorOrEmptyString;
   [key: string]: unknown;
 };
 

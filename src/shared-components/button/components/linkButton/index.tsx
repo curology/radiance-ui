@@ -6,7 +6,11 @@ import Container from '../../shared-components/container';
 import { ButtonType } from '../..';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import {
+  COLORS_PROP_TYPES,
+  ThemeColors,
+  ThemeColorOrEmptyString,
+} from '../../../../constants';
 
 type LinkProps = {
   /**
@@ -27,7 +31,7 @@ type LinkProps = {
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: ThemeColors;
+  textColor?: ThemeColorOrEmptyString;
   [key: string]: unknown;
 };
 
