@@ -8,11 +8,17 @@ const PRIMARY_COLORS = {
   primaryTint1: COLORS.purple85,
   primaryTint2: COLORS.purple70,
   primaryTint3: COLORS.purple30,
+  primaryTint4: COLORS.purple15,
   secondary: COLORS.lavender100,
   secondaryTint1: COLORS.lavender80,
   secondaryTint2: COLORS.lavender60,
   secondaryTint3: COLORS.lavender10,
+  secondaryTint4: COLORS.lavender10,
   tertiary: COLORS.purple4,
+  tertiaryTint1: COLORS.purple4,
+  tertiaryTint2: COLORS.purple4,
+  tertiaryTint3: COLORS.purple4,
+  tertiaryTint4: COLORS.purple4,
 
   // general colors
   success: COLORS.statusGreen,

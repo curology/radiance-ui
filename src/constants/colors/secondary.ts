@@ -1,59 +1,63 @@
 import PropTypes from 'prop-types';
 
-import COLORS from '.';
-
 const SECONDARY_COLORS = {
   // brand colors
-  primary: '#4c0000',
-  primaryTint1: '#b20000',
-  primaryTint2: '',
-  primaryTint3: '#ff0000',
-  secondary: '#ff8000',
-  secondaryTint1: '',
-  secondaryTint2: '',
-  secondaryTint3: '',
-  tertiary: '',
+  primary: '#2D2926',
+  primaryTint1: '#2D2926',
+  primaryTint2: '#2D2926',
+  primaryTint3: '#2D2926',
+  primaryTint4: '#F2F0EF',
+  secondary: '#F3EA5D',
+  secondaryTint1: '#FCF4A8',
+  secondaryTint2: '#FDF7BE',
+  secondaryTint3: '#FDF9D3',
+  secondaryTint4: '#FEFCE5',
+  tertiary: '#CBC5BF',
+  tertiaryTint1: '#D8D3CF',
+  tertiaryTint2: '#E5E2DF',
+  tertiaryTint3: '#F2F0EF',
+  tertiaryTint4: '#F2F0EF',
 
   // general colors
-  success: '',
-  successBackground: '',
-  successBorder: '',
-  info: '',
-  infoBackground: '',
-  infoBorder: '',
-  error: '',
-  errorBackground: '',
-  errorBorder: '',
-  default: '',
-  defaultBackground: '',
-  defaultBorder: '',
-  accent: '',
+  success: '#406237',
+  successBackground: '#ECEFEB',
+  successBorder: '#ECEFEB',
+  info: '#2C2A25',
+  infoBackground: '#FDF9D3',
+  infoBorder: '#FDF9D3',
+  error: '#A33F29',
+  errorBackground: '#F6ECEA',
+  errorBorder: '#F6ECEA',
+  default: '#2C2A25',
+  defaultBackground: '#F0EEEC',
+  defaultBorder: '#F0EEEC',
+  accent: '#F0EEEC',
   disabled: '',
   failure: '',
   hover: '',
   warning: '',
 
   // ui colors
-  background: '',
-  backgroundDark: '',
-  border: '',
-  divider: '',
+  background: '#FFFDF2',
+  backgroundDark: '#C4BFB7',
+  border: '#E5E2DF',
+  divider: '#E5E2DF',
 
   // form colors
   radioBorder: '',
   radioBorderSelected: '',
 
   // typography
-  textMuted: '',
-  textGhost: '',
-  textDisabled: '',
+  textMuted: '#2D2926',
+  textGhost: '#CBC5BF', // TODO: Delete?
+  textDisabled: '#CBC5BF',
 
   // overlay
-  overlay: '',
-  overlaySolid: '',
+  overlay: 'rgba(45, 41, 38, 0.7)',
+  overlaySolid: '#2D2926',
 
-  black: COLORS.black,
-  white: COLORS.white,
+  black: '#2D2926',
+  white: '#FFFDF2',
   transparent: 'transparent',
 } as const;
 
