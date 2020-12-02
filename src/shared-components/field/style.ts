@@ -55,7 +55,7 @@ const inputStyles = (theme: ThemeType) => css`
   }
 
   &[disabled] {
-    background-color: ${theme.COLORS.defaultBackground};
+    background-color: ${theme.COLORS.defaultLight};
     color: ${theme.COLORS.textDisabled};
     cursor: not-allowed;
     border: 1px solid ${theme.COLORS.border};

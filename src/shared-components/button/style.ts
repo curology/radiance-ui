@@ -118,7 +118,7 @@ const loadingStyles = `
 `;
 
 const disabledStyles = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.defaultBackground};
+  background-color: ${theme.COLORS.defaultLight};
   border-color: ${theme.COLORS.border};
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;

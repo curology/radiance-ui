@@ -90,7 +90,7 @@ const determineAlternateTextColor = (
   const contrastLevel: tinycolor.WCAG2Options = { level: 'AA', size: 'large' };
 
   const lighterIsReadable = tinycolor.isReadable(
-    theme.COLORS.defaultBackground,
+    theme.COLORS.defaultLight,
     lighterVersion,
     contrastLevel,
   );
