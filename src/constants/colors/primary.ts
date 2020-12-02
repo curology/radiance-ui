@@ -32,7 +32,7 @@ const PRIMARY_COLORS = {
   infoBackground: '#EEEDF7',
   infoBorder: '#E5E3F3',
   black: '#000000',
-  white: '#ffffff',
+  white: '#FFFFFF',
   transparent: 'transparent',
 
   // ui colors

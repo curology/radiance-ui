@@ -28,7 +28,7 @@ exports[`<Chip /> UI snapshots renders the correct css and text 1`] = `
 }
 
 .emotion-2 .emotion-1 {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-0 {

@@ -41,7 +41,7 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
 }
 
 .emotion-2 > div:first-of-type > input:focus {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   outline: none;
   border-radius: 12px;
 }
@@ -164,9 +164,9 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
               "MozBoxSizing": "border-box",
               "WebkitBoxSizing": "border-box",
               "alignSelf": "center",
-              "background": "#ffffff",
+              "background": "#FFFFFF",
               "backgroundColor": "rgb(255,255,255)",
-              "border": "1px solid #ededf0",
+              "border": "1px solid #EDEDF0",
               "borderRadius": "50%",
               "boxShadow": "none",
               "boxSizing": "border-box",
