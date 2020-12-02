@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { IndicatorContainer } from './style';
 
-type IndicatorProps = {
+interface IndicatorProps {
   text: string | number;
-};
+}
 
 /**
  * Indicators are used in navigation to help with wayfinding for messages and notifications.

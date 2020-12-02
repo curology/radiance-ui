@@ -18,7 +18,7 @@ import {
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
-type RoundButtonProps = {
+interface RoundButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
@@ -44,7 +44,7 @@ type RoundButtonProps = {
    */
   textColor?: ThemeColors;
   [key: string]: unknown;
-};
+}
 
 /**
  * `<RoundButton />` behaves mostly the same as `<Button />` except that it requires an `icon` prop since that is the main content placed with in the round button. Any children of the component will be rendered immediately below the round button.

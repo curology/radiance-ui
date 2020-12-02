@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
-type RadioButtonProps = {
+interface RadioButtonProps {
   checked: boolean;
   /**
    * Text label displayed next to the radio button
@@ -22,7 +22,7 @@ type RadioButtonProps = {
   size?: SizeType;
   type?: StyleType;
   [key: string]: unknown;
-};
+}
 
 /**
  * `<RadioButton />` is a controlled component that represents a radio selection. This means that the `onClick` function should be used to change the checked state of the radio button.

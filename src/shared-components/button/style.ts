@@ -156,7 +156,7 @@ function parseTheme(
   }
 }
 
-type BaseButtonStylesTypes = {
+export interface BaseButtonStylesTypes {
   disabled: boolean;
   buttonType: ButtonTypeWithAction;
   buttonColor: ThemeColors;
@@ -164,7 +164,7 @@ type BaseButtonStylesTypes = {
   textColor: ThemeColors;
   isFullWidth?: boolean;
   theme: ThemeType;
-};
+}
 
 export const baseButtonStyles = ({
   disabled,

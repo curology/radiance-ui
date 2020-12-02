@@ -4,7 +4,7 @@ import ButtonLoader from './style';
 import { ButtonTypeWithAction } from '../..';
 import { ThemeColors } from '../../../../constants';
 
-type LoaderProps = {
+interface LoaderProps {
   buttonColor: ThemeColors;
   buttonType: ButtonTypeWithAction;
   className?: string;
@@ -12,7 +12,7 @@ type LoaderProps = {
   isFullWidth?: boolean;
   isLoading: boolean;
   textColor: ThemeColors;
-};
+}
 
 const Loader = ({
   buttonColor,

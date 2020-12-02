@@ -3,20 +3,20 @@ import React, { useState } from 'react';
 
 import { TabsContainer, TabItem } from './style';
 
-type TabType = {
+interface TabType {
   id: number;
   text: string;
-};
+}
 
 // Hardcoding TabType below to show the actual type in the docs
-type TabsProps = {
+interface TabsProps {
   initialActiveTabId?: number;
   onClick?: (tab: TabType) => unknown;
   tabItems: Array<{
     id: number;
     text: string;
   }>;
-};
+}
 
 export const Tabs = ({
   initialActiveTabId = 1,

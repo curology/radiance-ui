@@ -5,7 +5,7 @@ import { FadeInContainer as StyledContainer } from './style';
 
 export { opacityInAnimationStyle } from './style';
 
-type FadeInContainerProps = {
+interface FadeInContainerProps {
   children: React.ReactNode;
   /**
    * Adds a slide in animation
@@ -15,7 +15,7 @@ type FadeInContainerProps = {
    * Animation transition duration
    */
   speed?: string;
-};
+}
 
 export const FadeInContainer = ({
   children,

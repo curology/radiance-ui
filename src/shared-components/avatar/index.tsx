@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import Style from './style';
 
-type AvatarProps = {
+interface AvatarProps {
   alt: string;
   size?: 'small' | 'medium' | 'large';
   src: string;
-};
+}
 
 export const Avatar = ({ alt, size = 'small', src }: AvatarProps) => (
   <Style.AvatarImage alt={alt} avatarSize={size} src={src} />

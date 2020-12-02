@@ -4,12 +4,12 @@ import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, BOX_SHADOWS, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
-type BaseIconWrapperStylesProps = {
+interface BaseIconWrapperStylesProps {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
   selected?: boolean;
   theme: ThemeType;
-};
+}
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],

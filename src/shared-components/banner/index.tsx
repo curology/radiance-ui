@@ -19,11 +19,11 @@ const bannerIconMapping = {
 
 export type BannerType = 'default' | 'success' | 'error' | 'danger';
 
-type BannerProps = {
+interface BannerProps {
   content: React.ReactNode;
   onClick?: () => void;
   type?: BannerType;
-};
+}
 
 /**
  * The `<Banner />` component provides only the styling and onClick behavior of banners.

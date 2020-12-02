@@ -209,9 +209,9 @@ export const ModalContainer = styled.div`
   }
 `;
 
-type HasHeaderImageProps = {
+interface HasHeaderImageProps {
   hasHeaderImage: boolean;
-};
+}
 
 // 32px comes from top overlay
 // 272px comes from 32px top overlay + 240px image

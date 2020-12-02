@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { useTheme } from 'emotion-theming';
 
 import { ChevronIcon } from '../../icons';
-import Thumbnails from './thumbnails';
+import { Thumbnails } from './thumbnails';
 import {
   AccordionBox,
   ArrowWrapper,
@@ -14,7 +14,8 @@ import {
   Truncate,
 } from './style';
 
-type AccordionProps = {
+export { ThumbnailsProps } from './thumbnails';
+interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
   borderRadius?: string;
   /** node(s) that will render only when expanded */
@@ -33,7 +34,7 @@ type AccordionProps = {
   rightAlignArrow?: boolean;
   /** node that will render whether collapsed or expanded */
   title: React.ReactNode;
-};
+}
 
 /**
  * A list of items that allows each item's content to be expanded and collapsed by clicking its title bar.

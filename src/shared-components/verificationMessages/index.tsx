@@ -9,7 +9,7 @@ import formatMessage from './formatMessage';
 export type MessagesTypes = 'error' | 'success';
 export type MessageType = string | JSX.Element | Array<string | JSX.Element>;
 
-type VerificationMessagesProps = {
+interface VerificationMessagesProps {
   /**
    * Centers the messages
    */
@@ -19,7 +19,7 @@ type VerificationMessagesProps = {
    */
   messages?: Record<string, MessageType>;
   type?: MessagesTypes;
-};
+}
 
 /**
  * Verification messages help provide context and status within forms.

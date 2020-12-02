@@ -15,7 +15,7 @@ const BASE_SLIDER_CONFIG = {
 
 export type CarouselType = 'primary' | 'secondary';
 
-type CarouselProps = {
+interface CarouselProps {
   /**
    * Auto-advance the carousel cards
    */
@@ -44,7 +44,7 @@ type CarouselProps = {
    */
   infinite?: boolean;
   numCardsVisible: 1 | 2 | 3;
-};
+}
 
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.

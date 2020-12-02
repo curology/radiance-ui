@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ButtonContents } from '../../style';
 import { BaseTextButton } from './style';
 
-type TextButtonProps = {
+interface TextButtonProps {
   /**
    * Node/text to be rendered inside the button
    */
@@ -12,7 +12,7 @@ type TextButtonProps = {
   disabled?: boolean;
   onClick?: () => void;
   [key: string]: unknown;
-};
+}
 
 /**
  * `TextButton` will render a block of text (or node) that will function as a button.
