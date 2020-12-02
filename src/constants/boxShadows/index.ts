@@ -3,17 +3,18 @@
  */
 
 import { transparentize } from '../../utils';
-import COLORS from '../colors';
+// TODO: Add theme support for box shadow
+import PRIMARY_COLORS from '../colors/primary';
 
-const boxShadowColor = `${COLORS.primary}`;
+const boxShadowColor = `${PRIMARY_COLORS.primary}`;
 const boxShadowOverlayColor = '#505050';
 
 export const BASE_CONFIG = {
   clickable: `0px 8px 24px rgba(52, 51, 82, 0.05)`,
   clickableHover: `0px 8px 24px rgba(52, 51, 82, 0.10)`,
   message: `0 12px 20px 0 ${transparentize(boxShadowColor, 0.05)}`,
-  focus: `0px 0px 0px 2px ${COLORS.white}, 0px 0px 0px 4px ${COLORS.primary}`,
-  focusInner: `inset 0px 0px 0px 2px ${COLORS.primary}`,
+  focus: `0px 0px 0px 2px ${PRIMARY_COLORS.white}, 0px 0px 0px 4px ${PRIMARY_COLORS.primary}`,
+  focusInner: `inset 0px 0px 0px 2px ${PRIMARY_COLORS.primary}`,
 } as const;
 
 export const OLD_BASE_CONFIG = {
