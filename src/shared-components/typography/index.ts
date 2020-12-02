@@ -61,13 +61,13 @@ const buttonStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.button};
   line-height: ${round(20 / 12, 2)};
-  letter-spacing: 1px;
-  text-transform: uppercase;
   ${
     theme.__type === 'primary'
       ? `font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};`
       : ''
   }
+  letter-spacing: 1px;
+  text-transform: uppercase;
 `;
 
 const linkStyle = () => `
