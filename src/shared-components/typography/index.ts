@@ -58,10 +58,16 @@ const labelStyle = (theme: ThemeType) => `
 `;
 
 const buttonStyle = (theme: ThemeType) => `
-  ${labelStyle(theme)}
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  color: ${theme.COLORS.primaryTint1};
+  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.button};
+  line-height: ${round(20 / 12, 2)};
   letter-spacing: 1px;
   text-transform: uppercase;
+  ${
+    theme.__type === 'primary'
+      ? `font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};`
+      : ''
+  }
 `;
 
 const linkStyle = () => `
