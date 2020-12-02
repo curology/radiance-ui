@@ -1,9 +1,9 @@
 import throwOnUndefinedProperty from '../../utils/throwOnUndefinedProperty';
 
-export type KeyType = {
+export interface KeyType {
   key: string;
   keyCode: number;
-};
+}
 
 const keyboardKeys = throwOnUndefinedProperty({
   escape: {

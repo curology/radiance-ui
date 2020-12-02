@@ -22,10 +22,10 @@ export const COLORS_PROP_TYPES = PropTypes.oneOf([
   ...Object.values(secondaryTheme.COLORS),
 ]);
 
-export type ThemeType = {
+export interface ThemeType {
   __type: 'primary' | 'secondary';
   BOX_SHADOW: BoxShadow;
   COLORS: Colors;
   FONTS: Fonts;
   TYPOGRAPHY: Typography;
-};
+}
