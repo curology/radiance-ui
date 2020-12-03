@@ -105,7 +105,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
         >
           <path
             d="M27.07 30.75a4.63 4.63 0 01-7.85 0L0 0h46.27z"
-            fill="#332e54"
+            fill="currentColor"
           />
         </svg>
       </div>

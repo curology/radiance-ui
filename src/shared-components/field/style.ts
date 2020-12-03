@@ -51,7 +51,7 @@ const inputStyles = (theme: ThemeType) => css`
   }
 
   &::placeholder {
-    color: ${theme.COLORS.primaryTint3};
+    color: ${theme.COLORS.textDisabled};
   }
 
   &[disabled] {
