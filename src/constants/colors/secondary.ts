@@ -32,7 +32,7 @@ const SECONDARY_COLORS = {
   infoLight: '#FDF9D3',
   infoBorder: '#FDF9D3',
   black: '#2D2926',
-  white: '#FFFEF2',
+  white: '#FFFDF2',
   transparent: 'transparent',
 
   // ui colors

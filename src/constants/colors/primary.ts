@@ -46,7 +46,7 @@ const PRIMARY_COLORS = {
 
   // overlay
   overlay: 'rgba(45, 45, 48, 0.7)',
-  overlaySolid: 'rgba(45, 45, 48, 1)',
+  overlaySolid: '#2D2D30',
 } as const;
 
 export const PRIMARY_COLORS_PROP_TYPES = PropTypes.oneOf(
