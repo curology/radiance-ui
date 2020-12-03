@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 815565,
-    "minified": 748649,
-    "gzipped": 89641
+    "bundled": 811784,
+    "minified": 745601,
+    "gzipped": 89092
   },
   "bundle.umd.js": {
-    "bundled": 825052,
-    "minified": 724995,
-    "gzipped": 85716
+    "bundled": 821231,
+    "minified": 721947,
+    "gzipped": 85177
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -206,9 +206,9 @@
     }
   },
   "shared-components/button/components/linkButton/style.js": {
-    "bundled": 1809,
-    "minified": 1560,
-    "gzipped": 902,
+    "bundled": 1745,
+    "minified": 1496,
+    "gzipped": 878,
     "treeshaked": {
       "rollup": {
         "code": 41,
@@ -444,16 +444,16 @@
     }
   },
   "shared-components/button/index.js": {
-    "bundled": 3730,
-    "minified": 1995,
-    "gzipped": 813,
+    "bundled": 3658,
+    "minified": 1977,
+    "gzipped": 804,
     "treeshaked": {
       "rollup": {
-        "code": 1644,
+        "code": 1626,
         "import_statements": 608
       },
       "webpack": {
-        "code": 3012
+        "code": 2994
       }
     }
   },
@@ -1074,30 +1074,30 @@
     }
   },
   "shared-components/button/components/linkButton/index.js": {
-    "bundled": 2830,
-    "minified": 1432,
-    "gzipped": 651,
+    "bundled": 2758,
+    "minified": 1414,
+    "gzipped": 642,
     "treeshaked": {
       "rollup": {
-        "code": 1138,
+        "code": 1120,
         "import_statements": 414
       },
       "webpack": {
-        "code": 2472
+        "code": 2454
       }
     }
   },
   "constants/colors/secondary.js": {
-    "bundled": 1260,
-    "minified": 1009,
-    "gzipped": 452,
+    "bundled": 1156,
+    "minified": 991,
+    "gzipped": 442,
     "treeshaked": {
       "rollup": {
-        "code": 859,
+        "code": 841,
         "import_statements": 26
       },
       "webpack": {
-        "code": 1853
+        "code": 1835
       }
     }
   },
@@ -1158,16 +1158,16 @@
     }
   },
   "shared-components/button/components/roundButton/index.js": {
-    "bundled": 3778,
-    "minified": 1980,
-    "gzipped": 811,
+    "bundled": 3706,
+    "minified": 1962,
+    "gzipped": 805,
     "treeshaked": {
       "rollup": {
-        "code": 1553,
+        "code": 1535,
         "import_statements": 623
       },
       "webpack": {
-        "code": 2911
+        "code": 2893
       }
     }
   },
@@ -1186,16 +1186,16 @@
     }
   },
   "shared-components/container/style.js": {
-    "bundled": 17313,
-    "minified": 16568,
-    "gzipped": 2878,
+    "bundled": 17296,
+    "minified": 16551,
+    "gzipped": 2909,
     "treeshaked": {
       "rollup": {
-        "code": 1322,
+        "code": 1321,
         "import_statements": 201
       },
       "webpack": {
-        "code": 2504
+        "code": 2503
       }
     }
   },
@@ -1284,16 +1284,16 @@
     }
   },
   "constants/colors/primary.js": {
-    "bundled": 1250,
-    "minified": 999,
-    "gzipped": 467,
+    "bundled": 1146,
+    "minified": 981,
+    "gzipped": 464,
     "treeshaked": {
       "rollup": {
-        "code": 859,
+        "code": 841,
         "import_statements": 26
       },
       "webpack": {
-        "code": 1853
+        "code": 1835
       }
     }
   },
@@ -1326,9 +1326,9 @@
     }
   },
   "shared-components/button/shared-components/loader/style.js": {
-    "bundled": 6734,
-    "minified": 5965,
-    "gzipped": 2602,
+    "bundled": 6670,
+    "minified": 5901,
+    "gzipped": 2568,
     "treeshaked": {
       "rollup": {
         "code": 1710,
@@ -1340,9 +1340,9 @@
     }
   },
   "shared-components/button/components/roundButton/style.js": {
-    "bundled": 28630,
-    "minified": 26924,
-    "gzipped": 5161,
+    "bundled": 25574,
+    "minified": 24267,
+    "gzipped": 4798,
     "treeshaked": {
       "rollup": {
         "code": 594,
@@ -1424,9 +1424,9 @@
     }
   },
   "shared-components/button/style.js": {
-    "bundled": 36036,
-    "minified": 34168,
-    "gzipped": 6805,
+    "bundled": 35880,
+    "minified": 34012,
+    "gzipped": 6753,
     "treeshaked": {
       "rollup": {
         "code": 4652,

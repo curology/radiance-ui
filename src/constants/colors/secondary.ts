@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const SECONDARY_COLORS = {
-  // brand colors
   primary: '#2D2926',
   primaryTint1: '#2D2926',
   primaryTint2: '#2D2926',
@@ -17,8 +16,6 @@ const SECONDARY_COLORS = {
   tertiaryTint2: '#E5E2DF',
   tertiaryTint3: '#F2F0EF',
   tertiaryTint4: '#F2F0EF',
-
-  // general colors
   default: '#2C2A25',
   defaultLight: '#F0EEEC',
   defaultBorder: '#F0EEEC',
@@ -31,22 +28,15 @@ const SECONDARY_COLORS = {
   info: '#2C2A25',
   infoLight: '#FDF9D3',
   infoBorder: '#FDF9D3',
+  background: '#FFFDF2',
+  backgroundDark: '#C4BFB7',
+  overlay: 'rgba(45, 41, 38, 0.7)',
+  overlaySolid: '#2D2926',
+  border: '#E5E2DF',
+  textDisabled: '#CBC5BF',
   black: '#2D2926',
   white: '#FFFDF2',
   transparent: 'transparent',
-
-  // ui colors
-  background: '#FFFDF2',
-  backgroundDark: '#C4BFB7',
-  border: '#E5E2DF',
-  divider: '#E5E2DF',
-
-  // typography
-  textDisabled: '#CBC5BF',
-
-  // overlay
-  overlay: 'rgba(45, 41, 38, 0.7)',
-  overlaySolid: '#2D2926',
 } as const;
 
 export const SECONDARY_COLORS_PROP_TYPES = PropTypes.oneOf(

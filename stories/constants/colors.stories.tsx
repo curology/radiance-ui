@@ -13,12 +13,14 @@ const MainContainer = styled.div`
 
 export const COLORS = () => {
   const theme = useTheme();
-  const colorKeys = Object.keys(theme.COLORS);
+  const colorKeys = Object.keys(theme.COLORS) as Array<
+    keyof typeof theme['COLORS']
+  >;
 
   return (
     <MainContainer>
       {colorKeys.map((colorKey) => {
-        const colorHex = theme.COLORS[colorKey] as string;
+        const colorHex = theme.COLORS[colorKey];
         return (
           <Color key={colorKey} colorName={colorKey} colorHex={colorHex} />
         );

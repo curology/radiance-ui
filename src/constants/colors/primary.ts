@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const PRIMARY_COLORS = {
-  // brand colors
   primary: '#332E54',
   primaryTint1: '#524D6E',
   primaryTint2: '#706D87',
@@ -17,8 +16,6 @@ const PRIMARY_COLORS = {
   tertiaryTint2: '#F8F8FA',
   tertiaryTint3: '#F8F8FA',
   tertiaryTint4: '#F8F8FA',
-
-  // general colors
   default: '#706D87',
   defaultLight: '#EDEDF0',
   defaultBorder: '#E1E0E6',
@@ -31,22 +28,15 @@ const PRIMARY_COLORS = {
   info: '#554CB3',
   infoLight: '#EEEDF7',
   infoBorder: '#E5E3F3',
+  background: '#F8F8FA',
+  backgroundDark: '#F8F8FA',
+  overlay: 'rgba(45, 45, 48, 0.7)',
+  overlaySolid: '#2D2D30',
+  border: '#EDEDF0',
+  textDisabled: '#C3C0CD',
   black: '#000000',
   white: '#FFFFFF',
   transparent: 'transparent',
-
-  // ui colors
-  background: '#F8F8FA',
-  backgroundDark: '#F8F8FA',
-  border: '#EDEDF0',
-  divider: '#EDEDF0',
-
-  // typography
-  textDisabled: '#C3C0CD',
-
-  // overlay
-  overlay: 'rgba(45, 45, 48, 0.7)',
-  overlaySolid: '#2D2D30',
 } as const;
 
 export const PRIMARY_COLORS_PROP_TYPES = PropTypes.oneOf(
