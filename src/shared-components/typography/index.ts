@@ -2,32 +2,32 @@ import styled from '@emotion/styled';
 import round from 'lodash.round';
 
 import { withDeprecationWarning } from '../../utils';
-import { TYPOGRAPHY_CONSTANTS, ThemeType } from '../../constants';
+import { ThemeType } from '../../constants';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.display};
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  font-size: ${theme.TYPOGRAPHY.fontSize.display};
+  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
   line-height: ${round(48 / 36, 2)};
 `;
 
 const headingStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.heading};
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  font-size: ${theme.TYPOGRAPHY.fontSize.heading};
+  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
   line-height: ${round(40 / 24, 2)};
 `;
 
 const titleStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.title};
+  font-size: ${theme.TYPOGRAPHY.fontSize.title};
   line-height: ${round(32 / 20, 2)};
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
 `;
 
 export const baseBodyStyles = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.body};
+  font-size: ${theme.TYPOGRAPHY.fontSize.body};
   line-height: ${round(28 / 16, 2)};
 `;
 
@@ -37,7 +37,7 @@ const bodyStyle = (theme: ThemeType) => `
 
 const captionStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint2};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${theme.TYPOGRAPHY.fontSize.caption};
   line-height: ${round(24 / 14, 2)};
 `;
 
@@ -53,13 +53,19 @@ const successStyle = (theme: ThemeType) => `
 
 const labelStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.label};
+  font-size: ${theme.TYPOGRAPHY.fontSize.label};
   line-height: ${round(20 / 12, 2)};
 `;
 
 const buttonStyle = (theme: ThemeType) => `
-  ${labelStyle(theme)}
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  color: ${theme.COLORS.primaryTint1};
+  font-size: ${theme.TYPOGRAPHY.fontSize.button};
+  line-height: ${round(20 / 12, 2)};
+  ${
+    theme.__type === 'primary'
+      ? `font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};`
+      : ''
+  }
   letter-spacing: 1px;
   text-transform: uppercase;
 `;
