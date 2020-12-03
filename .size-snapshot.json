@@ -2,12 +2,12 @@
   "bundle.js": {
     "bundled": 813250,
     "minified": 747004,
-    "gzipped": 89223
+    "gzipped": 89239
   },
   "bundle.umd.js": {
     "bundled": 822707,
     "minified": 723490,
-    "gzipped": 85353
+    "gzipped": 85369
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -880,7 +880,7 @@
   "shared-components/tabs/style.js": {
     "bundled": 5295,
     "minified": 5081,
-    "gzipped": 2394,
+    "gzipped": 2411,
     "treeshaked": {
       "rollup": {
         "code": 1094,
