@@ -4,11 +4,19 @@ import round from 'lodash.round';
 import { withDeprecationWarning } from '../../utils';
 import { ThemeType } from '../../constants';
 
+/**
+ * We use theme.FONTS.baseFont for all primary styles, but use a
+ * different secondary font for Display, Heading, and Title styles
+ */
+const setSecondaryHeadingFont = (theme: ThemeType) =>
+  theme.__type === 'secondary' ? `font-family: ${theme.FONTS.headerFont};` : '';
+
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.display};
   font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
   line-height: ${round(48 / 36, 2)};
+  ${setSecondaryHeadingFont(theme)}
 `;
 
 const headingStyle = (theme: ThemeType) => `
@@ -16,6 +24,7 @@ const headingStyle = (theme: ThemeType) => `
   font-size: ${theme.TYPOGRAPHY.fontSize.heading};
   font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
   line-height: ${round(40 / 24, 2)};
+  ${setSecondaryHeadingFont(theme)}
 `;
 
 const titleStyle = (theme: ThemeType) => `
@@ -23,6 +32,7 @@ const titleStyle = (theme: ThemeType) => `
   font-size: ${theme.TYPOGRAPHY.fontSize.title};
   line-height: ${round(32 / 20, 2)};
   font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  ${setSecondaryHeadingFont(theme)}
 `;
 
 export const baseBodyStyles = (theme: ThemeType) => `
