@@ -1,5 +1,15 @@
 # CHANGELOG
 
+# v13.3.0
+- [Tab] Update Secondary inactive Tab color ([#588](https://github.com/curology/radiance-ui/pull/588))
+- [Theming] Update Secondary button font-size and font-weight ([#585](https://github.com/curology/radiance-ui/pull/585))
+- [Theming] Update Secondary Colors and Fonts ([#524](https://github.com/curology/radiance-ui/pull/524))
+- [Theming] Updates generation of Icons to be theme-aware ([#529](https://github.com/curology/radiance-ui/pull/529))
+- [Field] Update Secondary placeholder color ([#582](https://github.com/curology/radiance-ui/pull/582))
+- [Icon] Remove hard-coded Arrow Icon fill color ([#580](https://github.com/curology/radiance-ui/pull/580))
+- [Internal] Streamlines multiple `babel.config.js` files into one ([#551](https://github.com/curology/radiance-ui/pull/551))
+- [Internal] Updates multiple dependencies
+
 # v13.2.0
 
 - [Theming] Add TYPOGRAPHY constants to theme object ([#520](https://github.com/curology/radiance-ui/pull/520))
