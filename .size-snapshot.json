@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 811784,
-    "minified": 745601,
-    "gzipped": 89092
+    "bundled": 813250,
+    "minified": 747004,
+    "gzipped": 89223
   },
   "bundle.umd.js": {
-    "bundled": 821231,
-    "minified": 721947,
-    "gzipped": 85177
+    "bundled": 822707,
+    "minified": 723490,
+    "gzipped": 85353
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -150,9 +150,9 @@
     }
   },
   "constants/typography/secondaryTypography.js": {
-    "bundled": 406,
-    "minified": 241,
-    "gzipped": 184,
+    "bundled": 396,
+    "minified": 259,
+    "gzipped": 188,
     "treeshaked": {
       "rollup": {
         "code": 0,
@@ -262,16 +262,16 @@
     }
   },
   "constants/typography/index.js": {
-    "bundled": 533,
-    "minified": 410,
-    "gzipped": 243,
+    "bundled": 564,
+    "minified": 427,
+    "gzipped": 248,
     "treeshaked": {
       "rollup": {
-        "code": 225,
+        "code": 242,
         "import_statements": 57
       },
       "webpack": {
-        "code": 1223
+        "code": 1240
       }
     }
   },
@@ -584,16 +584,16 @@
     }
   },
   "shared-components/typography/index.js": {
-    "bundled": 52849,
-    "minified": 51802,
-    "gzipped": 3508,
+    "bundled": 54171,
+    "minified": 53066,
+    "gzipped": 3538,
     "treeshaked": {
       "rollup": {
-        "code": 2693,
-        "import_statements": 166
+        "code": 2892,
+        "import_statements": 119
       },
       "webpack": {
-        "code": 3924
+        "code": 4078
       }
     }
   },
@@ -1564,9 +1564,9 @@
     }
   },
   "constants/typography/primaryTypography.js": {
-    "bundled": 360,
-    "minified": 237,
-    "gzipped": 181,
+    "bundled": 391,
+    "minified": 254,
+    "gzipped": 185,
     "treeshaked": {
       "rollup": {
         "code": 0,
