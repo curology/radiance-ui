@@ -16,11 +16,7 @@ import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
-import {
-  COLORS_PROP_TYPES,
-  ThemeColors,
-  ThemeColorOrEmptyString,
-} from '../../../../constants';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
 type RoundButtonProps = {
   buttonColor?: ThemeColors;
@@ -46,7 +42,7 @@ type RoundButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors (except when disabled is true)
    */
-  textColor?: ThemeColorOrEmptyString;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 
@@ -66,7 +62,7 @@ export const RoundButton = ({
   isLoading = false,
   loading = undefined,
   onClick = () => undefined,
-  textColor = '',
+  textColor,
   ...rest
 }: RoundButtonProps) => {
   const theme = useTheme();
@@ -97,7 +93,7 @@ export const RoundButton = ({
         />
       </RoundButtonBase>
       {children && (
-        <p css={roundButtonTextStyles(buttonColorWithTheme, textColor, theme)}>
+        <p css={roundButtonTextStyles(buttonColorWithTheme, theme, textColor)}>
           {children}
         </p>
       )}

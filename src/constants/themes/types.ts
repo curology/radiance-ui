@@ -16,7 +16,6 @@ type Typography =
   | typeof secondaryTheme['TYPOGRAPHY'];
 
 export type ThemeColors = valueof<Colors>;
-export type ThemeColorOrEmptyString = ThemeColors | '';
 
 export const COLORS_PROP_TYPES = PropTypes.oneOf([
   ...Object.values(primaryTheme.COLORS),

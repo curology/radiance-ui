@@ -6,11 +6,7 @@ import Container from '../../shared-components/container';
 import { ButtonType } from '../..';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
-import {
-  COLORS_PROP_TYPES,
-  ThemeColors,
-  ThemeColorOrEmptyString,
-} from '../../../../constants';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
 type LinkProps = {
   /**
@@ -31,7 +27,7 @@ type LinkProps = {
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: ThemeColorOrEmptyString;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 
@@ -49,7 +45,7 @@ export const LinkButton = ({
   children,
   disabled = false,
   onClick = () => undefined,
-  textColor = '',
+  textColor,
   ...rest
 }: LinkProps) => {
   const theme = useTheme();

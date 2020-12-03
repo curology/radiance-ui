@@ -13,11 +13,7 @@ import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from './deprecatedPropsHandler';
-import {
-  COLORS_PROP_TYPES,
-  ThemeColors,
-  ThemeColorOrEmptyString,
-} from '../../constants';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**
@@ -55,7 +51,7 @@ type ButtonProps = {
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
-  textColor?: ThemeColorOrEmptyString;
+  textColor?: ThemeColors;
   [key: string]: unknown;
 };
 
@@ -76,7 +72,7 @@ export const Button = ({
   isLoading = false,
   loading = undefined,
   onClick,
-  textColor = '',
+  textColor,
   ...rest
 }: ButtonProps) => {
   const theme = useTheme();

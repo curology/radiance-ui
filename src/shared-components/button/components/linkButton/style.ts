@@ -1,11 +1,7 @@
 import { css } from '@emotion/core';
 
 import { ButtonType } from '../..';
-import {
-  ThemeColorOrEmptyString,
-  ThemeColors,
-  ThemeType,
-} from '../../../../constants';
+import { ThemeColors, ThemeType } from '../../../../constants';
 import { baseButtonStyles } from '../../style';
 
 export const linkButtonStyles = ({
@@ -18,7 +14,7 @@ export const linkButtonStyles = ({
   disabled: boolean;
   buttonType: ButtonType;
   buttonColor: ThemeColors;
-  textColor: ThemeColorOrEmptyString;
+  textColor?: ThemeColors;
   theme: ThemeType;
 }) => css`
   ${baseButtonStyles({

@@ -107,10 +107,10 @@ const determineAlternateTextColor = (
  */
 const buttonTextColor = (
   buttonColor: ThemeColors,
-  textColor: string,
   theme: ThemeType,
+  textColor?: string,
 ) => {
-  if (textColor !== '') {
+  if (textColor) {
     return textColor;
   }
 
@@ -123,9 +123,9 @@ const buttonTextColor = (
 
 export const roundButtonTextStyles = (
   buttonColor: ThemeColors,
-  textColor: string,
   theme: ThemeType,
+  textColor?: string,
 ) => css`
-  color: ${buttonTextColor(buttonColor, textColor, theme)};
+  color: ${buttonTextColor(buttonColor, theme, textColor)};
   margin: 10px 0;
 `;

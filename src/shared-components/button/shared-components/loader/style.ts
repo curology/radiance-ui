@@ -3,11 +3,7 @@ import tinycolor from 'tinycolor2';
 import { keyframes } from '@emotion/core';
 
 import { ButtonTypeWithAction } from '../..';
-import {
-  ThemeColorOrEmptyString,
-  ThemeColors,
-  ThemeType,
-} from '../../../../constants';
+import { ThemeColors, ThemeType } from '../../../../constants';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }
@@ -41,7 +37,7 @@ const ButtonLoader = styled.div<{
   disabled: boolean;
   isFullWidth: boolean;
   isLoading: boolean;
-  textColor: ThemeColorOrEmptyString;
+  textColor?: ThemeColors;
 }>`
   display: flex;
   align-items: center;
