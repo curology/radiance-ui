@@ -24,6 +24,7 @@ const defaultConfig = {
       include: 'node_modules/**',
     }),
     babel({
+      babelHelpers: 'bundled', // TODO: Investigate 'runtime' option
       extensions,
       exclude: 'node_modules/**',
     }),

@@ -2,12 +2,12 @@
   "bundle.js": {
     "bundled": 821205,
     "minified": 752699,
-    "gzipped": 90131
+    "gzipped": 90127
   },
   "bundle.umd.js": {
     "bundled": 830879,
     "minified": 728260,
-    "gzipped": 86251
+    "gzipped": 86246
   },
   "icons/icons/arrow.js": {
     "bundled": 209,
@@ -1398,7 +1398,7 @@
   "shared-components/field/style.js": {
     "bundled": 34905,
     "minified": 34162,
-    "gzipped": 4780,
+    "gzipped": 4783,
     "treeshaked": {
       "rollup": {
         "code": 2492,
