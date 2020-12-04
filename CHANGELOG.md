@@ -1,11 +1,17 @@
 # CHANGELOG
 
+# v14.0.1
+
+- [Hotfix] v14.0.0 re-release for CJS build correction
+
 # v14.0.0
+
 - [Theming] Adds theming logic to typography display, heading and title ([#589](https://github.com/curology/radiance-ui/pull/589))
 - [Colors] Complete refactor and cleanup of colors usage ([#584](https://github.com/curology/radiance-ui/pull/584))
   - **BREAKING**: `COLORS` cannot be imported as a constant anymore. Colors must be accessed via the theme object
 
 # v13.3.0
+
 - [Tab] Update Secondary inactive Tab color ([#588](https://github.com/curology/radiance-ui/pull/588))
 - [Theming] Update Secondary button font-size and font-weight ([#585](https://github.com/curology/radiance-ui/pull/585))
 - [Theming] Update Secondary Colors and Fonts ([#524](https://github.com/curology/radiance-ui/pull/524))
