@@ -16,12 +16,12 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   -moz-appearance: none;
   appearance: none;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
-  background: #ffffff;
+  background: #FFFFFF;
   background-image: none;
   width: 100%;
   min-height: 3.5rem;
   max-height: 3.5rem;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   border-radius: 4px;
   color: #524D6E;
   line-height: 3.5rem;

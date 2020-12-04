@@ -7,7 +7,7 @@ const ParentContainer = styled.div`
 `;
 
 const CalloutContainer = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.infoBackground};
+  background-color: ${({ theme }) => theme.COLORS.infoLight};
   padding: ${SPACER.medium};
   border-radius: 8px;
   display: flex;

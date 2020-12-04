@@ -118,8 +118,8 @@ const loadingStyles = `
 `;
 
 const disabledStyles = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.disabled};
-  border-color: ${theme.COLORS.disabled};
+  background-color: ${theme.COLORS.defaultLight};
+  border-color: ${theme.COLORS.border};
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
@@ -161,7 +161,7 @@ type BaseButtonStylesTypes = {
   buttonType: ButtonTypeWithAction;
   buttonColor: ThemeColors;
   isLoading?: boolean;
-  textColor: ThemeColors;
+  textColor?: ThemeColors;
   isFullWidth?: boolean;
   theme: ThemeType;
 };

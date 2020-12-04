@@ -25,7 +25,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
@@ -39,11 +39,11 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 }
 
 .emotion-9 {
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   width: 100%;
   opacity: 0.4;
-  background-color: #ededf0;
-  border-color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #C3C0CD;
 }
 
 .emotion-9:not(:last-child) {
@@ -64,7 +64,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 
 .emotion-5:focus {
   outline: none;
-  box-shadow: inset 0px 0px 0px 2px #332e54;
+  box-shadow: inset 0px 0px 0px 2px #332E54;
 }
 
 .emotion-10:last-of-type .emotion-5:focus {
@@ -98,7 +98,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
     >
       <svg
         className="emotion-2"
-        fill="#332e54"
+        fill="#332E54"
         height={16}
         viewBox="0 0 16 16"
         width={16}
@@ -140,7 +140,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 
 .emotion-5:focus {
   outline: none;
-  box-shadow: inset 0px 0px 0px 2px #332e54;
+  box-shadow: inset 0px 0px 0px 2px #332E54;
 }
 
 .emotion-10:last-of-type .emotion-5:focus {
@@ -172,7 +172,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
@@ -219,7 +219,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
     >
       <svg
         className="emotion-2"
-        fill="#332e54"
+        fill="#332E54"
         height={16}
         viewBox="0 0 16 16"
         width={16}
@@ -248,7 +248,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 
 exports[`<Accordion /> renders regular accordion 1`] = `
 .emotion-9 {
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   width: 100%;
 }
 
@@ -270,7 +270,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
 
 .emotion-5:focus {
   outline: none;
-  box-shadow: inset 0px 0px 0px 2px #332e54;
+  box-shadow: inset 0px 0px 0px 2px #332E54;
 }
 
 .emotion-10:last-of-type .emotion-5:focus {
@@ -302,7 +302,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
@@ -341,7 +341,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
     >
       <svg
         className="emotion-2"
-        fill="#332e54"
+        fill="#332E54"
         height={16}
         viewBox="0 0 16 16"
         width={16}

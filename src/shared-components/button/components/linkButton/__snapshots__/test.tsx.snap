@@ -28,10 +28,10 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #332e54;
-  border-color: #332e54;
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: #332E54;
+  border-color: #332E54;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -47,7 +47,7 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
 .emotion-4:active,
 .emotion-4:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-4:visited,
@@ -58,7 +58,7 @@ exports[`<LinkButton/> UI snapshots renders with props 1`] = `
 .emotion-4:focus,
 .emotion-4:not([href]):not([tabindex]):hover,
 .emotion-4:not([href]):not([tabindex]):focus {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-2 {

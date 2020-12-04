@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 const SECONDARY_COLORS = {
-  // brand colors
   primary: '#2D2926',
   primaryTint1: '#2D2926',
   primaryTint2: '#2D2926',
@@ -17,45 +16,24 @@ const SECONDARY_COLORS = {
   tertiaryTint2: '#E5E2DF',
   tertiaryTint3: '#F2F0EF',
   tertiaryTint4: '#F2F0EF',
-
-  // general colors
-  success: '#406237',
-  successBackground: '#ECEFEB',
-  successBorder: '#ECEFEB',
-  info: '#2C2A25',
-  infoBackground: '#FDF9D3',
-  infoBorder: '#FDF9D3',
-  error: '#A33F29',
-  errorBackground: '#F6ECEA',
-  errorBorder: '#F6ECEA',
   default: '#2C2A25',
-  defaultBackground: '#F0EEEC',
+  defaultLight: '#F0EEEC',
   defaultBorder: '#F0EEEC',
-  accent: '#F0EEEC',
-  disabled: '',
-  failure: '',
-  hover: '',
-  warning: '',
-
-  // ui colors
+  success: '#406237',
+  successLight: '#ECEFEB',
+  successBorder: '#ECEFEB',
+  error: '#A33F29',
+  errorLight: '#F6ECEA',
+  errorBorder: '#F6ECEA',
+  info: '#2C2A25',
+  infoLight: '#FDF9D3',
+  infoBorder: '#FDF9D3',
   background: '#FFFDF2',
   backgroundDark: '#C4BFB7',
-  border: '#E5E2DF',
-  divider: '#E5E2DF',
-
-  // form colors
-  radioBorder: '',
-  radioBorderSelected: '',
-
-  // typography
-  textMuted: '#2D2926',
-  textGhost: '#CBC5BF', // TODO: Delete?
-  textDisabled: '#CBC5BF',
-
-  // overlay
   overlay: 'rgba(45, 41, 38, 0.7)',
   overlaySolid: '#2D2926',
-
+  border: '#E5E2DF',
+  textDisabled: '#CBC5BF',
   black: '#2D2926',
   white: '#FFFDF2',
   transparent: 'transparent',

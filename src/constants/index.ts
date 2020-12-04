@@ -1,8 +1,6 @@
 export { default as ANIMATION } from './animation';
 export { default as BOX_SHADOWS } from './boxShadows';
 export { default as BREAKPOINTS } from './breakpoints';
-// TODO: Remove once all consumer usage is using theming
-export { default as COLORS } from './colors';
 export { default as FONTS } from './fonts';
 export { default as GRID } from './grid';
 export { default as LAYOUT } from './layout';

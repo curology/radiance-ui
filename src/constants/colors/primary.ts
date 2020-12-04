@@ -1,65 +1,41 @@
 import PropTypes from 'prop-types';
 
-import COLORS from '.';
-
 const PRIMARY_COLORS = {
-  // brand colors
-  primary: COLORS.purple100,
-  primaryTint1: COLORS.purple85,
-  primaryTint2: COLORS.purple70,
-  primaryTint3: COLORS.purple30,
-  primaryTint4: COLORS.purple15,
-  secondary: COLORS.lavender100,
-  secondaryTint1: COLORS.lavender80,
-  secondaryTint2: COLORS.lavender60,
-  secondaryTint3: COLORS.lavender10,
-  secondaryTint4: COLORS.lavender10,
-  tertiary: COLORS.purple4,
-  tertiaryTint1: COLORS.purple4,
-  tertiaryTint2: COLORS.purple4,
-  tertiaryTint3: COLORS.purple4,
-  tertiaryTint4: COLORS.purple4,
-
-  // general colors
-  success: COLORS.statusGreen,
-  successBackground: COLORS.statusGreenBackground,
-  successBorder: COLORS.statusGreenBorder,
-  info: COLORS.statusPurple,
-  infoBackground: COLORS.statusPurpleBackground,
-  infoBorder: COLORS.statusPurpleBorder,
-  error: COLORS.statusRed,
-  errorBackground: COLORS.statusRedBackground,
-  errorBorder: COLORS.statusRedBorder,
-  default: COLORS.purple70,
-  defaultBackground: COLORS.purple10,
-  defaultBorder: COLORS.purple15,
-  accent: COLORS.red,
-  disabled: COLORS.purple10,
-  failure: COLORS.red,
-  hover: COLORS.purple4,
-  warning: COLORS.yellowLight,
-
-  // ui colors
-  background: COLORS.purple4,
-  backgroundDark: COLORS.purple4,
-  border: COLORS.purple10,
-  divider: COLORS.purple10,
-
-  // form colors
-  radioBorder: COLORS.purple30,
-  radioBorderSelected: COLORS.lavender100,
-
-  // typography
-  textMuted: COLORS.purple70,
-  textGhost: COLORS.purple30,
-  textDisabled: COLORS.purple30,
-
-  // overlay
+  primary: '#332E54',
+  primaryTint1: '#524D6E',
+  primaryTint2: '#706D87',
+  primaryTint3: '#C3C0CD',
+  primaryTint4: '#E1E0E6',
+  secondary: '#A6A1E2',
+  secondaryTint1: '#B8B4E8',
+  secondaryTint2: '#CAC7EE',
+  secondaryTint3: '#EFEEF7',
+  secondaryTint4: '#EFEEF7',
+  tertiary: '#F8F8FA',
+  tertiaryTint1: '#F8F8FA',
+  tertiaryTint2: '#F8F8FA',
+  tertiaryTint3: '#F8F8FA',
+  tertiaryTint4: '#F8F8FA',
+  default: '#706D87',
+  defaultLight: '#EDEDF0',
+  defaultBorder: '#E1E0E6',
+  success: '#2B6E33',
+  successLight: '#EAF1EB',
+  successBorder: '#DFE9E0',
+  error: '#BD200F',
+  errorLight: '#F7EAE8',
+  errorBorder: '#F3DEDC',
+  info: '#554CB3',
+  infoLight: '#EEEDF7',
+  infoBorder: '#E5E3F3',
+  background: '#F8F8FA',
+  backgroundDark: '#F8F8FA',
   overlay: 'rgba(45, 45, 48, 0.7)',
-  overlaySolid: 'rgba(45, 45, 48, 1)',
-
-  black: COLORS.black,
-  white: COLORS.white,
+  overlaySolid: '#2D2D30',
+  border: '#EDEDF0',
+  textDisabled: '#C3C0CD',
+  black: '#000000',
+  white: '#FFFFFF',
   transparent: 'transparent',
 } as const;
 

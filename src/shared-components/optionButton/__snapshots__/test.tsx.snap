@@ -3,8 +3,8 @@
 exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`] = `
 .emotion-9 {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
@@ -21,7 +21,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 
 .emotion-9:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-7 {
@@ -44,8 +44,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 
 .emotion-1 {
   border: 1px solid;
-  border-color: #332e54;
-  background: #ffffff;
+  border-color: #332E54;
+  background: #FFFFFF;
   width: 32px;
   height: 32px;
   display: -webkit-box;
@@ -69,8 +69,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   -webkit-transition: all 350ms;
   transition: all 350ms;
   border-radius: 4px;
-  background: #332e54;
-  border-color: #332e54;
+  background: #332E54;
+  border-color: #332E54;
 }
 
 .emotion-1 svg {
@@ -81,8 +81,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 
 .emotion-1 svg {
   opacity: 1;
-  color: #ffffff;
-  fill: #ffffff;
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-0 {
@@ -147,8 +147,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`] = `
 .emotion-9 {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
@@ -165,7 +165,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-9:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-7 {
@@ -207,8 +207,8 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-1 {
   border: 1px solid;
-  border-color: #332e54;
-  background: #ffffff;
+  border-color: #332E54;
+  background: #FFFFFF;
   width: 32px;
   height: 32px;
   display: -webkit-box;
@@ -244,8 +244,8 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-1 svg {
   opacity: 1;
-  color: #332e54;
-  fill: #332e54;
+  color: #332E54;
+  fill: #332E54;
 }
 
 <button

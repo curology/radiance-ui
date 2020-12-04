@@ -50,7 +50,7 @@ export const Section = styled.div`
 
 export const Divider = styled.div`
   margin: 0 ${SPACER.large};
-  border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.divider}`};
+  border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.border}`};
 
   ${MEDIA_QUERIES.lgUp} {
     margin: 0 ${SPACER.x2large};

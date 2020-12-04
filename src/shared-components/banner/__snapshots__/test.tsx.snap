@@ -18,14 +18,14 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 0.875rem;
 }
 
 .emotion-1 svg {
   height: 1rem;
   width: 1rem;
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 
 .emotion-0 {
@@ -33,7 +33,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #ffffff;
+  color: #FFFFFF;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
@@ -58,7 +58,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
 
 .emotion-7:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 @media (min-width:768px) {
@@ -79,7 +79,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
     >
       <svg
         className="emotion-0"
-        fill="#ffffff"
+        fill="#FFFFFF"
         height={16}
         viewBox="0 0 16 16"
         width={16}
@@ -120,14 +120,14 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 0.875rem;
 }
 
 .emotion-1 svg {
   height: 1rem;
   width: 1rem;
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 
 .emotion-0 {
@@ -135,7 +135,7 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #ffffff;
+  color: #FFFFFF;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
@@ -154,13 +154,13 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   margin: 0 auto 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #332e54;
+  background-color: #332E54;
   box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
 }
 
 .emotion-7:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 @media (min-width:768px) {
@@ -181,7 +181,7 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
     >
       <svg
         className="emotion-0"
-        fill="#ffffff"
+        fill="#FFFFFF"
         height={16}
         viewBox="0 0 16 16"
         width={16}
@@ -218,7 +218,7 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
 
 .emotion-7:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 @media (min-width:768px) {
@@ -244,14 +244,14 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   -webkit-box-align: flex-start;
   -ms-flex-align: flex-start;
   align-items: flex-start;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 0.875rem;
 }
 
 .emotion-1 svg {
   height: 1rem;
   width: 1rem;
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
 
 .emotion-0 {
@@ -259,7 +259,7 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: #ffffff;
+  color: #FFFFFF;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
@@ -281,7 +281,7 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
     >
       <svg
         className="emotion-0"
-        fill="#ffffff"
+        fill="#FFFFFF"
         height={16}
         viewBox="0 0 16 16"
         width={16}

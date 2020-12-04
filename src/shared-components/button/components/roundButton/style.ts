@@ -68,8 +68,6 @@ export const roundButtonLoader = (disabled: boolean, theme: ThemeType) => css`
 /**
  * Given a color as an argument,
  * determine an alternate color for pairing
- * @param  string color   the current color name of the round button (e.g purple, primary, etc.)
- * @return string         hex string of the alternate color (e.g. #efefef)
  */
 const determineAlternateTextColor = (
   buttonColor: ThemeColors,
@@ -90,7 +88,7 @@ const determineAlternateTextColor = (
   const contrastLevel: tinycolor.WCAG2Options = { level: 'AA', size: 'large' };
 
   const lighterIsReadable = tinycolor.isReadable(
-    theme.COLORS.defaultBackground,
+    theme.COLORS.defaultLight,
     lighterVersion,
     contrastLevel,
   );
@@ -101,16 +99,13 @@ const determineAlternateTextColor = (
 
 /**
  * get the text color of the button
- * @param  string color       the current color name of the round button (e.g purple, primary, etc.)
- * @param  string textColor   custom override for the text color
- * @return string             hex string of the text color
  */
 const buttonTextColor = (
   buttonColor: ThemeColors,
-  textColor: string,
   theme: ThemeType,
+  textColor?: ThemeColors,
 ) => {
-  if (textColor !== '') {
+  if (textColor) {
     return textColor;
   }
 
@@ -123,9 +118,9 @@ const buttonTextColor = (
 
 export const roundButtonTextStyles = (
   buttonColor: ThemeColors,
-  textColor: string,
   theme: ThemeType,
+  textColor?: ThemeColors,
 ) => css`
-  color: ${buttonTextColor(buttonColor, textColor, theme)};
+  color: ${buttonTextColor(buttonColor, theme, textColor)};
   margin: 10px 0;
 `;

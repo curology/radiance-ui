@@ -26,7 +26,7 @@ export default {
           <Source
             language="tsx"
             code={
-              "import { BOX_SHADOWS, COLORS, SPACER } from 'radiance-ui/lib/constants';"
+              "import { BOX_SHADOWS, SPACER } from 'radiance-ui/lib/constants';"
             }
           />
           <Stories includePrimary />
