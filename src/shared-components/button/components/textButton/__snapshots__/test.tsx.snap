@@ -53,12 +53,11 @@ exports[`<TextButton /> UI snapshots renders with disabled prop 1`] = `
 }
 
 <button
-  className="emotion-2 emotion-3"
-  disabled={true}
-  onClick={[Function]}
+  class="emotion-2 emotion-3"
+  disabled=""
 >
   <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     Disabled Button Text
   </div>
@@ -118,12 +117,10 @@ exports[`<TextButton /> UI snapshots renders without any props 1`] = `
 }
 
 <button
-  className="emotion-2 emotion-3"
-  disabled={false}
-  onClick={[Function]}
+  class="emotion-2 emotion-3"
 >
   <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     Button Text
   </div>

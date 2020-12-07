@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render, screen } from 'src/tests/testingLibraryHelpers';
 
 import { Toggle } from './index';
 
@@ -8,41 +7,61 @@ describe('<Toggle />', () => {
   const labelText = 'Label Text';
   describe('UI snapshot', () => {
     it('renders the component', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('when label is undefined', () => {
     test('does not render a label component', () => {
-      const wrapper = shallow(
+      const { container } = render(
         <Toggle checked={false} onChange={() => undefined} />,
       );
-      expect(wrapper.html().indexOf('label') === -1).toBe(true);
+      expect(container.querySelectorAll('label').length).toBe(0);
     });
   });
 
   describe('when label is a string', () => {
     test('renders a text component', () => {
-      const wrapper = shallow(
+      render(
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      expect(wrapper.html().indexOf(labelText) > 0).toBe(true);
+      expect(screen.getByText(labelText)).toMatchInlineSnapshot(`
+        .emotion-0 {
+          color: #524D6E;
+          margin: 0;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          text-align: left;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          margin-right: 0.5rem;
+        }
+
+        <span
+          class="emotion-0 emotion-1"
+        >
+          Label Text
+        </span>
+      `);
     });
   });
 
   describe('when checkbox is clicked', () => {
     test('fires onChange function with correct argument when function exists', () => {
       const spy = jest.fn();
-      const wrapper = mount(<Toggle checked={false} onChange={spy} />);
+      const { container } = render(<Toggle checked={false} onChange={spy} />);
 
-      wrapper.find('[type="checkbox"]').simulate('click');
-      expect(spy).toHaveBeenCalled();
+      container.querySelector<HTMLElement>('[type="checkbox"]')?.click();
+
+      expect(spy).toHaveBeenCalledWith(false);
     });
   });
 });

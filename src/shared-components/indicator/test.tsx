@@ -1,20 +1,20 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Indicator } from './index';
 
 describe('<Indicator />', () => {
   describe('UI snapshots', () => {
     it('renders the correct css with a text', () => {
-      const component = renderer.create(<Indicator text="1" />);
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      const { container } = render(<Indicator text="1" />);
+
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     it('renders the correct css with a number', () => {
-      const component = renderer.create(<Indicator text={3} />);
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      const { container } = render(<Indicator text={3} />);
+
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

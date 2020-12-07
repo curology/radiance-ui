@@ -241,20 +241,19 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 }
 
 <button
-  className="emotion-7 emotion-8"
-  disabled={true}
-  onClick={[Function]}
+  class="emotion-7 emotion-8"
+  disabled=""
   type="button"
 >
   <div
-    className="emotion-3 emotion-4"
+    class="emotion-3 emotion-4"
   >
     <svg
-      className="emotion-0"
+      class="emotion-0"
       fill="none"
-      height={16}
+      height="16"
       viewBox="0 0 16 16"
-      width={16}
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -267,14 +266,14 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
       />
     </svg>
     <span
-      className="emotion-1 emotion-2"
+      class="emotion-1 emotion-2"
     >
       Button Text
     </span>
   </div>
   <div
-    className=" emotion-5 emotion-6"
-    disabled={true}
+    class=" emotion-5 emotion-6"
+    disabled=""
   >
     <div>
       <span />

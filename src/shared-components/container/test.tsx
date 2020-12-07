@@ -1,18 +1,17 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Container } from './index';
 
 describe('Container UI snapshots', () => {
   test('renders basic container', () => {
-    const component = renderer.create(<Container>Container Content</Container>);
+    const { container } = render(<Container>Container Content</Container>);
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders container helper components', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Container>
         <Container.Section>Section 1</Container.Section>
         <Container.Divider />
@@ -24,25 +23,22 @@ describe('Container UI snapshots', () => {
       </Container>,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders clickable container', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Container type="clickable">Container Content</Container>,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('renders message type container', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Container type="message">Container Content</Container>,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

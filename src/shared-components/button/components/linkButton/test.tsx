@@ -1,29 +1,32 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import assert from 'src/utils/assert';
 
 import { LinkButton } from './index';
 
 describe('<LinkButton/>', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
-      const tree = renderer
-        .create(
-          <LinkButton onClick={() => undefined} href="#">
-            Click me!
-          </LinkButton>,
-        )
-        .toJSON();
+      const { container } = render(
+        <LinkButton onClick={() => undefined} href="#">
+          Click me!
+        </LinkButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 
   describe('href handling', () => {
     it('should link to a path', () => {
-      const wrapper = mount(<LinkButton href="/some/path">text</LinkButton>);
+      const href = '/some/path';
 
-      expect(wrapper.children().prop('href')).toEqual('/some/path');
+      const { getByRole } = render(<LinkButton href={href}>text</LinkButton>);
+
+      const anchorLink = getByRole('link') as HTMLAnchorElement;
+
+      // Covers domain, e.g. http://localhost:8000/some/path
+      expect(anchorLink.href.includes(href)).toBeTruthy();
     });
   });
 
@@ -31,22 +34,26 @@ describe('<LinkButton/>', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
 
-      const button = mount(<LinkButton onClick={spy}>text</LinkButton>);
+      const { container } = render(<LinkButton onClick={spy}>text</LinkButton>);
 
-      button.simulate('click');
+      assert(container.firstElementChild);
+      fireEvent.click(container.firstElementChild);
+
       expect(spy).toHaveBeenCalled();
     });
 
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
 
-      const button = mount(
+      const { container } = render(
         <LinkButton disabled href="#" onClick={spy}>
           text
         </LinkButton>,
       );
 
-      button.simulate('click');
+      assert(container.firstElementChild);
+      fireEvent.click(container.firstElementChild);
+
       expect(spy).not.toHaveBeenCalled();
     });
   });
