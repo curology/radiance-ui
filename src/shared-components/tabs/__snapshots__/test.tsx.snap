@@ -63,18 +63,18 @@ exports[`<Tabs /> UI snapshot renders with default props 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   border-radius: 0.25rem;
-  color: #332e54;
+  color: #332E54;
 }
 
 .emotion-0:hover {
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: 350ms;
   transition: 350ms;
 }
 
 .emotion-0:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-2 {
@@ -107,18 +107,18 @@ exports[`<Tabs /> UI snapshot renders with default props 1`] = `
   -webkit-transition: 350ms;
   transition: 350ms;
   border-radius: 0.25rem;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-2:hover {
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: 350ms;
   transition: 350ms;
 }
 
 .emotion-2:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 <div
@@ -205,18 +205,18 @@ exports[`<Tabs /> UI snapshot renders with initialActiveTabId and onClick props 
   -webkit-transition: 350ms;
   transition: 350ms;
   border-radius: 0.25rem;
-  color: #332e54;
+  color: #332E54;
 }
 
 .emotion-2:hover {
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: 350ms;
   transition: 350ms;
 }
 
 .emotion-2:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-0 {
@@ -249,18 +249,18 @@ exports[`<Tabs /> UI snapshot renders with initialActiveTabId and onClick props 
   -webkit-transition: 350ms;
   transition: 350ms;
   border-radius: 0.25rem;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0:hover {
-  color: #332e54;
+  color: #332E54;
   -webkit-transition: 350ms;
   transition: 350ms;
 }
 
 .emotion-0:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 <div

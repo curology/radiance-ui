@@ -43,7 +43,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-9 {
@@ -68,7 +68,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 4px;
 }
 
@@ -95,8 +95,8 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
   border-radius: 4px;
-  background-color: #332e54;
-  border-color: #332e54;
+  background-color: #332E54;
+  border-color: #332E54;
 }
 
 .emotion-3:active,
@@ -166,7 +166,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -212,7 +212,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-3 {
@@ -238,8 +238,8 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
   border-radius: 100%;
-  background-color: #332e54;
-  border-color: #332e54;
+  background-color: #332E54;
+  border-color: #332E54;
 }
 
 .emotion-3:active,
@@ -347,7 +347,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 4px;
 }
 
@@ -385,7 +385,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
   transition: background-color 350ms;
   border-radius: 4px;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-3:active,
@@ -455,7 +455,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -527,7 +527,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
   transition: background-color 350ms;
   border-radius: 100%;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-3:active,
@@ -631,7 +631,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 4px;
 }
 
@@ -659,7 +659,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox
   transition: background-color 350ms;
   border-radius: 4px;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-2:active,
@@ -715,7 +715,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -770,7 +770,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio bu
   transition: background-color 350ms;
   border-radius: 100%;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-2:active,
@@ -833,7 +833,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -879,7 +879,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-3 {
@@ -905,8 +905,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
   border-radius: 100%;
-  background-color: #332e54;
-  border-color: #332e54;
+  background-color: #332E54;
+  border-color: #332E54;
 }
 
 .emotion-3:active,
@@ -980,7 +980,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 .emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -1026,7 +1026,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-3 {
@@ -1052,8 +1052,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
   border-radius: 100%;
-  background-color: #a6a1e2;
-  border-color: #a6a1e2;
+  background-color: #A6A1E2;
+  border-color: #A6A1E2;
 }
 
 .emotion-3:active,
@@ -1127,7 +1127,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -1182,7 +1182,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   transition: background-color 350ms;
   border-radius: 100%;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-2:active,
@@ -1245,7 +1245,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 }
 
 .emotion-6:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 100%;
 }
 
@@ -1300,7 +1300,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   transition: background-color 350ms;
   border-radius: 100%;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-2:active,
@@ -1385,7 +1385,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 .emotion-8:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 4px;
 }
 
@@ -1413,7 +1413,7 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   transition: background-color 350ms;
   border-radius: 4px;
   background-color: transparent;
-  border-color: #332e54;
+  border-color: #332E54;
 }
 
 .emotion-2:active,

@@ -17,7 +17,7 @@ describe('<ProgressBar />', () => {
         <ProgressBar
           status="loading"
           backgroundColor={primaryTheme.COLORS.error}
-          barColor={primaryTheme.COLORS.warning}
+          barColor={primaryTheme.COLORS.info}
           height={5}
           loadingTime="30s"
           customProp="allows ..rest props"

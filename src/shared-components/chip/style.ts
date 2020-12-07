@@ -13,7 +13,7 @@ export const ChipText = styled.span`
 `;
 
 const defaultStyle = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.defaultBackground};
+  background-color: ${theme.COLORS.defaultLight};
   ${ChipText} {
     color: ${theme.COLORS.primary};
   }

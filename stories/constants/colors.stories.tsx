@@ -1,54 +1,28 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { SPACER } from 'src/constants';
-import { Typography } from 'src/shared-components';
-import * as ALL_COLORS from 'src/constants/colors';
+import { useTheme } from 'emotion-theming';
 
 import Color from './color';
 
 const MainContainer = styled.div`
-  padding: ${SPACER.xlarge};
-`;
-
-const ColorsContainer = styled.div`
-  margin: ${SPACER.xlarge} 0;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 `;
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
-const {
-  default: defaultExport,
-  COLORS_PROP_TYPES,
-  ...VALID_COLORS
-} = ALL_COLORS;
-/* eslint-enable @typescript-eslint/no-unused-vars */
-
 export const COLORS = () => {
-  const colorKeys = Object.keys(VALID_COLORS) as Array<
-    keyof typeof VALID_COLORS
+  const theme = useTheme();
+  const colorKeys = Object.keys(theme.COLORS) as Array<
+    keyof typeof theme['COLORS']
   >;
 
   return (
     <MainContainer>
-      {colorKeys.map((category) => {
-        const categoryColors = VALID_COLORS[category];
-
+      {colorKeys.map((colorKey) => {
+        const colorHex = theme.COLORS[colorKey];
         return (
-          <React.Fragment key={category}>
-            <Typography.Title>{category}:</Typography.Title>
-            <ColorsContainer>
-              {Object.keys(categoryColors).map((color) => {
-                const colorHex = categoryColors[color] as string;
-
-                return (
-                  <Color key={color} colorName={color} colorHex={colorHex} />
-                );
-              })}
-            </ColorsContainer>
-          </React.Fragment>
+          <Color key={colorKey} colorName={colorKey} colorHex={colorHex} />
         );
       })}
     </MainContainer>

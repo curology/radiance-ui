@@ -163,7 +163,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 }
 
 .emotion-2 .slick-dots li {
-  background-color: #332e54;
+  background-color: #332E54;
 }
 
 .emotion-0 {
@@ -386,7 +386,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-2 .slick-dots li {
-  background-color: #332e54;
+  background-color: #332E54;
 }
 
 .emotion-0 {

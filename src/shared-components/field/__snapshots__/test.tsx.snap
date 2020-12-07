@@ -43,8 +43,8 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #ffffff;
-  border: 1px solid #ededf0;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
   border-radius: 0.25rem;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
@@ -58,8 +58,8 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
 .emotion-1:active,
 .emotion-1:focus {
   outline: none;
-  border-color: #332e54;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  border-color: #332E54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-1:active ~ .e1gqjikl0,
@@ -70,26 +70,26 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
 }
 
 .emotion-1::-webkit-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1::-moz-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1:-ms-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1::placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1[disabled] {
-  background-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   box-shadow: none;
 }
 
@@ -148,8 +148,8 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #ffffff;
-  border: 1px solid #ededf0;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
   border-radius: 0.25rem;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
@@ -163,8 +163,8 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 .emotion-0:active,
 .emotion-0:focus {
   outline: none;
-  border-color: #332e54;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  border-color: #332E54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-0:active ~ .emotion-3,
@@ -175,26 +175,26 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0::-moz-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0::placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0[disabled] {
-  background-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   box-shadow: none;
 }
 
@@ -230,7 +230,7 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 .emotion-8 .e1gqjikl4:focus,
 .emotion-8 .emotion-1:focus {
   border-color: #BD200F;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-2 {
@@ -330,8 +330,8 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #ffffff;
-  border: 1px solid #ededf0;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
   border-radius: 0.25rem;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
@@ -345,8 +345,8 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  border-color: #332e54;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  border-color: #332E54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:active ~ .e1gqjikl0,
@@ -357,26 +357,26 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
 }
 
 .emotion-3::-webkit-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3::-moz-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3:-ms-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3::placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3[disabled] {
-  background-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   box-shadow: none;
 }
 

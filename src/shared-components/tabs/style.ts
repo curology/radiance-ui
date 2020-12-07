@@ -32,7 +32,7 @@ export const TabItem = styled.button<{ active: boolean }>`
   border-radius: ${SPACER.xsmall};
 
   color: ${({ active, theme }) =>
-    active ? theme.COLORS.primary : theme.COLORS.primaryTint3};
+    active ? theme.COLORS.primary : theme.COLORS.textDisabled};
 
   &:hover {
     color: ${({ theme }) => theme.COLORS.primary};

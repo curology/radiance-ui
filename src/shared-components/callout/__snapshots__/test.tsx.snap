@@ -23,7 +23,7 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
 }
 
 .emotion-0 {
-  color: #332e54;
+  color: #332E54;
   font-size: 0.875rem;
 }
 

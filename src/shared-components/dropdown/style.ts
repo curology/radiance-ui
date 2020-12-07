@@ -168,12 +168,12 @@ export const DropdownOption = styled.li<{
   padding: 18px ${SPACER.medium} 14px ${SPACER.medium};
 
   &:hover {
-    background-color: ${({ theme }) => theme.COLORS.infoBackground};
+    background-color: ${({ theme }) => theme.COLORS.infoLight};
   }
 
   &:focus {
     outline: none;
-    background-color: ${({ theme }) => theme.COLORS.infoBackground};
+    background-color: ${({ theme }) => theme.COLORS.infoLight};
     box-shadow: ${BOX_SHADOWS.focusInner};
   }
 

@@ -51,11 +51,11 @@ const inputStyles = (theme: ThemeType) => css`
   }
 
   &::placeholder {
-    color: ${theme.COLORS.primaryTint3};
+    color: ${theme.COLORS.textDisabled};
   }
 
   &[disabled] {
-    background-color: ${theme.COLORS.disabled};
+    background-color: ${theme.COLORS.defaultLight};
     color: ${theme.COLORS.textDisabled};
     cursor: not-allowed;
     border: 1px solid ${theme.COLORS.border};
