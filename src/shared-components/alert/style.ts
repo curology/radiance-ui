@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
 import {
-  BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
   ANIMATION,
@@ -73,7 +72,7 @@ export const AlertContainer = styled.button<{
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 
   ${({ alertType, theme }) => {

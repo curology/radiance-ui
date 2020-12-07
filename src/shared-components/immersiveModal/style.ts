@@ -3,7 +3,6 @@ import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import Typography from '../typography';
 import {
-  BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
   Z_SCALE,
@@ -64,7 +63,7 @@ export const CrossIconContainer = styled.button`
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -219,7 +218,7 @@ export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modalMobile};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
