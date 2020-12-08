@@ -25,7 +25,7 @@ export default {
           <Heading>Usage:</Heading>
           <Source
             language="tsx"
-            code={"import {  SPACER } from 'radiance-ui/lib/constants';"}
+            code={"import { SPACER } from 'radiance-ui/lib/constants';"}
           />
           <Stories includePrimary />
         </React.Fragment>

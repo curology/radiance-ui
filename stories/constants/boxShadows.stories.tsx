@@ -34,6 +34,7 @@ export const BoxShadows = () => {
             <Container.Section>
               <strong>Key:</strong> {boxShadowKey}
               <br />
+              <br />
               <strong>Value:</strong> {boxShadowValue}
             </Container.Section>
           </Container>
