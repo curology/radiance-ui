@@ -40,7 +40,7 @@ export const ModalContainer = styled.div`
   right: 0;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modalMobile};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   padding: ${SPACER.x4large} ${SPACER.large} ${SPACER.xlarge};
   overflow-y: auto;
@@ -69,7 +69,6 @@ export const ModalContainer = styled.div`
   ${MEDIA_QUERIES.mdUp} {
     position: relative;
     width: 456px;
-    box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
     border-radius: 8px;
     padding: ${SPACER.x4large};
 

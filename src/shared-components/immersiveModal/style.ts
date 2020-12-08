@@ -218,13 +218,12 @@ export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modalMobile};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
   ${MEDIA_QUERIES.mdUp} {
-    box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
     border-radius: 8px;
     margin-top: 56px;
     overflow-y: auto;
