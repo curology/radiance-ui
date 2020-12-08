@@ -89,7 +89,7 @@ export const IconLibrary = () => (
     <Style.Icons>
       {Object.entries(navIconComponents).map(([name, Icon]) => (
         <Style.IconContainer key={name}>
-          <Icon width={25} height={25} />
+          <Icon />
           <Style.IconLabel>{name}</Style.IconLabel>
         </Style.IconContainer>
       ))}
