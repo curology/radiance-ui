@@ -35,9 +35,9 @@ const testIconDirectory = (directory: string) => {
       path.resolve(__dirname, `${directory}/${SVG_DIRECTORY_NAME}`),
     );
 
-    const associatedSvgIconFilenames = Array.from(new Set(svgFilenames))
-      .map(transformIconFileNames)
-      .sort();
+    const associatedSvgIconFilenames = Array.from(
+      new Set(svgFilenames.map(transformIconFileNames).sort()),
+    );
 
     expect(iconFilenames).toEqual(associatedSvgIconFilenames);
   });
