@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import {
-  MEDIA_QUERIES,
-  SPACER,
-  ThemeType,
-  TYPOGRAPHY_CONSTANTS,
-} from '../../constants';
+import { MEDIA_QUERIES, SPACER, ThemeType } from '../../constants';
 
 import { BannerType } from '.';
 
@@ -67,7 +62,7 @@ export const MainContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   color: ${({ theme }) => theme.COLORS.white};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
 `;
 
 export const ContentContainer = styled.div`

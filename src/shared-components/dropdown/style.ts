@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import {
-  SPACER,
-  ANIMATION,
-  ThemeType,
-  TYPOGRAPHY_CONSTANTS,
-} from '../../constants';
+import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
 type DropdownInputStyleProps = {
   borderRadius: string;
@@ -176,10 +171,10 @@ export const DropdownOption = styled.li<{
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
   }
 
-  ${({ selected }) =>
+  ${({ selected, theme }) =>
     selected &&
     `
-      font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+      font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
     `}
 
   ${({ disabled, theme }) =>

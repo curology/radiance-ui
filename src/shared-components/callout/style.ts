@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER } from '../../constants';
 
 const ParentContainer = styled.div`
   max-width: 327px;
@@ -20,7 +20,7 @@ const Text = styled.div<{
   textColor: string;
 }>`
   color: ${({ textColor }) => textColor};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
 `;
 
 const Icon = styled.div<{

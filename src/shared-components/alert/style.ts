@@ -1,13 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
-import {
-  MEDIA_QUERIES,
-  SPACER,
-  ANIMATION,
-  ThemeType,
-  TYPOGRAPHY_CONSTANTS,
-} from '../../constants';
+import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
 
 import { AlertType } from '.';
 
@@ -102,7 +96,7 @@ export const MainContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   color: ${({ theme }) => theme.COLORS.white};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   padding: ${SPACER.medium};
 `;
 
@@ -119,7 +113,7 @@ export const CtaContent = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${({ theme }) => theme.COLORS.white};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
