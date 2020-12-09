@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { BOX_SHADOWS, SPACER, ThemeType } from '../../constants';
+import { SPACER, ThemeType } from '../../constants';
 
 export const Container = styled.div`
   position: relative;
@@ -46,7 +46,7 @@ export const ReactToggleButtonContainer = styled.div`
   > div:first-of-type {
     > input {
       &:focus {
-        box-shadow: ${BOX_SHADOWS.focus};
+        box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
         outline: none;
         border-radius: 12px;
       }

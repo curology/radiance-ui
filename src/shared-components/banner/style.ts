@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import {
-  BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
   ThemeType,
@@ -34,7 +33,7 @@ export const BannerContainer = styled.button<{
   width: 100%;
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 
   cursor: ${({ onClick }) => (onClick ? `pointer` : `inherit`)};

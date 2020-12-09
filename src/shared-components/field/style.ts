@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { BOX_SHADOWS, SPACER, ANIMATION, ThemeType } from '../../constants';
+import { SPACER, ANIMATION, ThemeType } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
@@ -41,7 +41,7 @@ const inputStyles = (theme: ThemeType) => css`
   &:focus {
     outline: none;
     border-color: ${theme.COLORS.primary};
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${theme.BOX_SHADOWS.focus};
 
     ~ ${HintItem} {
       max-height: 24px;
@@ -97,7 +97,7 @@ const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
       border-color: ${
         messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
       };
-      box-shadow: ${BOX_SHADOWS.focus};
+      box-shadow: ${theme.BOX_SHADOWS.focus};
     }
   }
 `;

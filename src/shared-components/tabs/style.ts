@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { BOX_SHADOWS, SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
+import { SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -41,6 +41,6 @@ export const TabItem = styled.button<{ active: boolean }>`
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;

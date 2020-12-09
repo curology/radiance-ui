@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import {
-  BOX_SHADOWS,
   SPACER,
   ANIMATION,
   ThemeType,
@@ -44,7 +43,7 @@ export const dropdownInputStyle = ({
 
   return css`
     appearance: none;
-    box-shadow: ${BOX_SHADOWS.clickable};
+    box-shadow: ${theme.BOX_SHADOWS.clickable};
     background: ${theme.COLORS.white};
     background-image: none;
 
@@ -69,13 +68,13 @@ export const dropdownInputStyle = ({
     cursor: pointer;
 
     &:hover {
-      box-shadow: ${BOX_SHADOWS.clickableHover};
+      box-shadow: ${theme.BOX_SHADOWS.clickableHover};
       transition: 200ms ease-in-out;
     }
 
     &:focus {
       outline: none;
-      box-shadow: ${BOX_SHADOWS.clickableHover};
+      box-shadow: ${theme.BOX_SHADOWS.clickableHover};
       transition: 200ms ease-in-out;
     }
 
@@ -88,7 +87,7 @@ export const dropdownInputStyle = ({
 export const DropdownFocusContainer = styled.div`
   &:focus {
     > div:first-of-type {
-      box-shadow: ${BOX_SHADOWS.focusInner};
+      box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
       outline: none;
     }
   }
@@ -133,7 +132,7 @@ export const DropdownOptionsContainer = styled.ul<{
   border-style: solid;
   border-width: 0 1px;
   background: ${({ theme }) => theme.COLORS.white};
-  box-shadow: ${BOX_SHADOWS.clickable};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
 
   overflow-y: auto;
   max-height: 0;
@@ -174,7 +173,7 @@ export const DropdownOption = styled.li<{
   &:focus {
     outline: none;
     background-color: ${({ theme }) => theme.COLORS.infoLight};
-    box-shadow: ${BOX_SHADOWS.focusInner};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
   }
 
   ${({ selected }) =>
