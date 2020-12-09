@@ -1,5 +1,5 @@
-import { OftenDryGlyph } from './svgs';
+import { OftenDryGlyph, OftenDryGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(OftenDryGlyph, OftenDryGlyph, props);
+  useIcon(OftenDryGlyph, OftenDryGlyphSecondary, props);

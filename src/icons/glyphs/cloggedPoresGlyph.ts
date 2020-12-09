@@ -1,5 +1,5 @@
-import { CloggedPoresGlyph } from './svgs';
+import { CloggedPoresGlyph, CloggedPoresGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(CloggedPoresGlyph, CloggedPoresGlyph, props);
+  useIcon(CloggedPoresGlyph, CloggedPoresGlyphSecondary, props);
