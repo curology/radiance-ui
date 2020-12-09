@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, TYPOGRAPHY_CONSTANTS, ThemeType } from '../../constants';
+import { SPACER, ThemeType } from '../../constants';
 
 import { StatusType } from '.';
 
 export const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
   position: relative;
   top: 1px;
 `;

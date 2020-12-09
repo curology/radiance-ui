@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER } from '../../constants';
 
 import { ArrowAlignTypes, PositionTypes } from '.';
 
@@ -118,7 +118,7 @@ export const TooltipBox = styled.div<{
   transition: 350ms;
   z-index: 5;
   text-align: left;
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'none')};
 `;
 

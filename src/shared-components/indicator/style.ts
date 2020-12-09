@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER } from '../../constants';
 
 export const IndicatorContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.error};
@@ -22,7 +22,7 @@ export const IndicatorContainer = styled.div`
     position: relative;
     top: 1px;
     ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
-    font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+    font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
     color: ${({ theme }) => theme.COLORS.white};
   }
 `;

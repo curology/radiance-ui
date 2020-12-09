@@ -9,7 +9,6 @@ import {
   Z_SCALE,
   ANIMATION,
   ThemeType,
-  TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -120,7 +119,7 @@ const commonHeaderBarStyles = (theme: ThemeType) => `
   width: 100%;
   background: ${theme.COLORS.white};
   color: ${theme.COLORS.primary};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${theme.TYPOGRAPHY.fontSize.caption};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
