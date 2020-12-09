@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 
-import {
-  ANIMATION,
-  BREAKPOINTS,
-  BOX_SHADOWS,
-  SPACER,
-  ThemeType,
-} from '../../constants';
+import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -71,7 +65,7 @@ export const TitleWrapper = styled.div<{
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focusInner};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
   }
 
   ${AccordionBox}:last-of-type & {
@@ -100,7 +94,7 @@ export const Truncate = styled.div`
 export const Container = styled.div<{
   borderRadius?: string;
 }>`
-  box-shadow: ${BOX_SHADOWS.clickable};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACER, ANIMATION, BOX_SHADOWS, ThemeType } from '../../constants';
+import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
 import { SelectorType, SizeType, StyleType } from '.';
 
@@ -21,7 +21,7 @@ export const OuterContainer = styled.div<{ selector: SelectorType }>`
   :focus {
     outline: none;
     ${SelectorContainer} {
-      box-shadow: ${BOX_SHADOWS.focus};
+      box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
 
       ${({ selector }) => `
         border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
