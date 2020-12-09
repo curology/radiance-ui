@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v15.0.0
+
+- [Theming] **BREAKING** Adds theming logic to box shadows and remove it from constants ([#610](https://github.com/curology/radiance-ui/pull/610))
+- [Fonts/Typography] **BREAKING** Remove FONTS and TYPOGRAPHY_CONSTANTS from constants (access via theme now) ([#614](https://github.com/curology/radiance-ui/pull/614))
+
 # v14.0.1
 
 - [Hotfix] v14.0.0 re-release for CJS build correction
