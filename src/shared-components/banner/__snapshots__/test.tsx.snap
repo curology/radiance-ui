@@ -80,7 +80,9 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
       <svg
         className="emotion-0"
         fill="#FFFFFF"
+        height={16}
         viewBox="0 0 16 16"
+        width={16}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -180,7 +182,9 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
       <svg
         className="emotion-0"
         fill="#FFFFFF"
+        height={16}
         viewBox="0 0 16 16"
+        width={16}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -278,7 +282,9 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
       <svg
         className="emotion-0"
         fill="#FFFFFF"
+        height={16}
         viewBox="0 0 16 16"
+        width={16}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
