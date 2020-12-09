@@ -1,10 +1,4 @@
-<svg
-  width="20"
-  height="20"
-  viewBox="0 0 20 20"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <title>Camera Nav Icon</title>
   <path
     d="M18.6829 3H1.31707C0.585366 3 0 3.58537 0 4.31707V16.4634C0 17.1854 0.585366 17.7805 1.31707 17.7805H18.6829C19.4049 17.7805 20 17.1951 20 16.4634V4.31707C20 3.58537 19.4146 3 18.6829 3ZM18.5854 16.3561H1.41463V4.41463H18.5854V16.3561Z"

@@ -1,10 +1,4 @@
-<svg
-  width="20"
-  height="20"
-  viewBox="0 0 20 20"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
   <title>Camera Selected Nav Icon</title>
   <path
     d="M10.0047 6.42112C8.40395 6.42112 7.1081 7.7265 7.1081 9.31772C7.1081 10.9185 8.41347 12.2143 10.0047 12.2143C11.5959 12.2143 12.9013 10.9089 12.9013 9.31772C12.9013 7.7265 11.6054 6.42112 10.0047 6.42112Z"
