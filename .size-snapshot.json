@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 818068,
-    "minified": 750408,
-    "gzipped": 87838
+    "bundled": 818107,
+    "minified": 750422,
+    "gzipped": 87848
   },
   "bundle.umd.js": {
-    "bundled": 827470,
-    "minified": 727193,
-    "gzipped": 84063
+    "bundled": 827511,
+    "minified": 727207,
+    "gzipped": 84074
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -1368,9 +1368,9 @@
     }
   },
   "shared-components/icon/index.js": {
-    "bundled": 1924,
-    "minified": 1065,
-    "gzipped": 512,
+    "bundled": 1963,
+    "minified": 1079,
+    "gzipped": 522,
     "treeshaked": {
       "rollup": {
         "code": 346,

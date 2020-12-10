@@ -77,12 +77,19 @@ export const IconLibrary = () => (
 
     <Typography.Heading>Glyphs</Typography.Heading>
     <Style.Icons>
-      {Object.entries(glyphComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon width={48} height={48} />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
+      {Object.entries(glyphComponents).map(([name, Icon]) => {
+        // Rough hack to determine if React function component returns null.
+        const renderedIcon = Icon({});
+
+        if (renderedIcon === null) return null;
+
+        return (
+          <Style.IconContainer key={name}>
+            <Icon width={48} height={48} />
+            <Style.IconLabel>{name}</Style.IconLabel>
+          </Style.IconContainer>
+        );
+      })}
     </Style.Icons>
 
     <Typography.Heading>Nav Icons</Typography.Heading>
