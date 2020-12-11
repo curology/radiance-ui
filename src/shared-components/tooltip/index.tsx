@@ -150,7 +150,7 @@ export const Tooltip = ({
         >
           <TooltipContent>{content}</TooltipContent>
           <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
-            <ArrowIcon fill={theme.COLORS.primary} />
+            <ArrowIcon width={16} height={16} fill={theme.COLORS.primary} />
           </ArrowImageContainer>
         </TooltipBox>
       </MainContainer>
