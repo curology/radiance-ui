@@ -1,5 +1,5 @@
-import { EyeClosedIcon } from './svgs';
+import { EyeClosedIcon, EyeClosedIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(EyeClosedIcon, EyeClosedIcon, props);
+  useIcon(EyeClosedIcon, EyeClosedIconSecondary, props);

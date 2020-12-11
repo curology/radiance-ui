@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function SvgArrow(props: React.SVGProps<SVGSVGElement>) {
+function SvgArrowIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 46.29 32.92"
@@ -16,4 +16,4 @@ function SvgArrow(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export default SvgArrow;
+export default SvgArrowIcon;

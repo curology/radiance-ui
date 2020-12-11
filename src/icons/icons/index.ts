@@ -1,6 +1,7 @@
 // @create-index
 
-export { default as Arrow } from './arrow';
+export { default as AppleIcon } from './appleIcon';
+export { default as ArrowIcon } from './arrowIcon';
 export { default as ArrowLeftIcon } from './arrowLeftIcon';
 export { default as ArrowRightIcon } from './arrowRightIcon';
 export { default as BagIcon } from './bagIcon';
@@ -29,6 +30,7 @@ export { default as FacebookIcon } from './facebookIcon';
 export { default as FlagIcon } from './flagIcon';
 export { default as GiftIcon } from './giftIcon';
 export { default as GoogleIcon } from './googleIcon';
+export { default as GraphIcon } from './graphIcon';
 export { default as GridIcon } from './gridIcon';
 export { default as HeartIcon } from './heartIcon';
 export { default as HelpIcon } from './helpIcon';
@@ -36,6 +38,7 @@ export { default as HomeIcon } from './homeIcon';
 export { default as ImageIcon } from './imageIcon';
 export { default as InfoIcon } from './infoIcon';
 export { default as InstagramIcon } from './instagramIcon';
+export { default as LightbulbIcon } from './lightbulbIcon';
 export { default as LightningIcon } from './lightningIcon';
 export { default as LocationIcon } from './locationIcon';
 export { default as LockIcon } from './lockIcon';
@@ -44,6 +47,7 @@ export { default as MailIcon } from './mailIcon';
 export { default as MenuIcon } from './menuIcon';
 export { default as MicIcon } from './micIcon';
 export { default as MinusIcon } from './minusIcon';
+export { default as MoonIcon } from './moonIcon';
 export { default as MoreIcon } from './moreIcon';
 export { default as NextIcon } from './nextIcon';
 export { default as PaperclipIcon } from './paperclipIcon';
