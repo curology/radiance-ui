@@ -1,5 +1,5 @@
-import { ElatedSelectedEmoji } from './svgs';
+import { ElatedSelectedEmoji, ElatedSelectedEmojiSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(ElatedSelectedEmoji, ElatedSelectedEmoji, props);
+  useIcon(ElatedSelectedEmoji, ElatedSelectedEmojiSecondary, props);
