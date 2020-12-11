@@ -14,7 +14,6 @@ const defaultConfig = {
   input: 'src/index.ts',
   plugins: [
     svgr({
-      dimensions: false,
       expandProps: 'end',
     }),
     resolve({
