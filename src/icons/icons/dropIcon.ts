@@ -1,4 +1,5 @@
-import { DropIcon } from './svgs';
+import { DropIcon, DropIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(DropIcon, DropIcon, props);
+export default (props: IconProps) =>
+  useIcon(DropIcon, DropIconSecondary, props);

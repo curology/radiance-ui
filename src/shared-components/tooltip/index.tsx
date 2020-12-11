@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 
-import { Arrow } from '../../icons';
+import { ArrowIcon } from '../../icons';
 import { OffClickWrapper } from '../offClickWrapper';
 import {
   MainContainer,
@@ -150,7 +150,7 @@ export const Tooltip = ({
         >
           <TooltipContent>{content}</TooltipContent>
           <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
-            <Arrow width={16} height={16} fill={theme.COLORS.primary} />
+            <ArrowIcon width={16} height={16} fill={theme.COLORS.primary} />
           </ArrowImageContainer>
         </TooltipBox>
       </MainContainer>

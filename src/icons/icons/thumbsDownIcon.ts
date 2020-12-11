@@ -1,5 +1,5 @@
-import { ThumbsDownIcon } from './svgs';
+import { ThumbsDownIcon, ThumbsDownIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(ThumbsDownIcon, ThumbsDownIcon, props);
+  useIcon(ThumbsDownIcon, ThumbsDownIconSecondary, props);
