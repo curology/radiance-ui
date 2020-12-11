@@ -7,20 +7,24 @@ import {
   Stories,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
-import { BREAKPOINTS } from 'src/constants';
 
 export * from './boxShadows.stories';
 export * from './colors.stories';
 export * from './fonts.stories';
 export * from './typography.stories';
 
-const styledComponentSource =
-  // eslint-disable-next-line no-template-curly-in-string
-  'export const StyledComponent = styled.div`\n  color: ${({ theme }) => theme.COLORS.primary};\n`';
+const styledComponentSource = `export const StyledComponent = styled.div\`
+  color: \${({ theme }) => theme.COLORS.primary};
+\``;
 
-const cssPropSource =
-  // eslint-disable-next-line no-template-curly-in-string
-  '<Component css={(theme: ThemeType) => css`color: ${theme.COLORS.primary}`}>';
+const cssPropSource = '<Component css={(theme) => {}}>';
+
+const useThemeSource = `import { useTheme } from 'emotion-theming';
+...
+const theme = useTheme();
+`;
+
+const globalSource = '<Global styles={(theme) => {}} />';
 
 export default {
   title: 'Constants/Theme',
@@ -32,14 +36,53 @@ export default {
           <Title />
           <Description />
           <Heading>Usage:</Heading>
-          <Description>
-            The `theme` object is accessible (in theme aware apps using
-            `emotion-theming`) from these 2 common contexts: Styled component
-            (as a prop) and as a React component css prop (as a function
-            parameter):
-          </Description>
+          <p>
+            The <code>theme</code> object is accessible from{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://emotion.sh/docs/theming#themeprovider-reactcomponenttype"
+            >
+              theme aware apps.
+            </a>
+            <br />
+            There are 4 common scenarios where you can use the theme object ({' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://emotion.sh/docs/theming#usage"
+            >
+              emotion docs on theme usage
+            </a>
+            ):
+          </p>
+          <ol>
+            <li>
+              <code>styled</code>: as a prop
+            </li>
+            <li>
+              <code>css</code>: as function parameter
+            </li>
+            <li>
+              Inside a component using <code>withTheme/useTheme</code>
+            </li>
+            <li>
+              <code>&lt;Global&gt;</code> component form the styles prop (
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://emotion.sh/docs/globals"
+              >
+                emotion docs on Global
+              </a>
+              )
+            </li>
+          </ol>
+          <h3>Examples:</h3>
           <Source language="tsx" code={styledComponentSource} />
           <Source language="tsx" code={cssPropSource} />
+          <Source language="tsx" code={useThemeSource} />
+          <Source language="tsx" code={globalSource} />
           <Stories includePrimary />
         </React.Fragment>
       ),
