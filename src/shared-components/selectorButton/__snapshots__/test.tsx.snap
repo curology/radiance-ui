@@ -423,9 +423,9 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for check
       <svg
         className="emotion-0"
         fill="none"
-        height={16}
+        height={48}
         viewBox="0 0 48 48"
-        width={16}
+        width={48}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -571,9 +571,9 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio
       <svg
         className="emotion-0"
         fill="none"
-        height={16}
+        height={48}
         viewBox="0 0 48 48"
-        width={16}
+        width={48}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
