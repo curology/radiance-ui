@@ -25,7 +25,7 @@ const cssPropSource =
 export default {
   title: 'Constants/Theme',
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
+    chromatic: { disable: true },
     docs: {
       page: () => (
         <React.Fragment>
