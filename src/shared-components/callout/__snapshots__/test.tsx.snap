@@ -108,9 +108,9 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
     <svg
       class="emotion-2"
       fill="none"
-      height="40"
+      height="48"
       viewBox="0 0 48 48"
-      width="40"
+      width="48"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

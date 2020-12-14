@@ -19,10 +19,7 @@ describe('<Callout />', () => {
     });
     it('renders callout with custom color and icon', () => {
       const { container } = render(
-        <Callout
-          icon={<NeckGlyph width={40} height={40} />}
-          color={primaryTheme.COLORS.primaryTint2}
-        >
+        <Callout icon={<NeckGlyph />} color={primaryTheme.COLORS.primaryTint2}>
           Callout text with <strong>custom color</strong> and icon.
         </Callout>,
       );
