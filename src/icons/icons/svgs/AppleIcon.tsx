@@ -3,7 +3,7 @@ import * as React from 'react';
 function SvgAppleIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width={14}
+      width={16}
       height={16}
       viewBox="0 0 14 16"
       fill="none"
