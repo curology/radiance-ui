@@ -1,5 +1,26 @@
 # CHANGELOG
 
+# v16.0.0
+
+- [Icons] **BREAKING CHANGE**: Renames a number of icon components:
+  - `Arrow` --> `ArrowIcon`
+  - `TimeAlwaysGlyph` --> `ClockAlwaysGlyph`
+  - `TimeMostOfTheTimeGlyph` --> `ClockMostOfTheTimeGlyph`
+  - `TimeSometimesGlyph` --> `ClockSometimesGlyph`
+  - `TimeNeverGlyph` --> `ClockNeverGlyph`
+  - `CalendarAlwaysGlyph` --> `TimeAlwaysGlyph`
+  - `CalendarMostOfTheTimeGlyph` --> `TimeMostOfTheTimeGlyph`
+  - `CalendarSometimesGlyph` --> `TimeSometimesGlyph`
+  - `CalendarNeverGlyph` --> `TimeNeverGlyph`
+  - `MildAcneEmoji` --> `MildIrritationEmoji`
+  - `MildAcneSelectedEmoji` --> `MildIrritationSelectedEmoji`
+  - `NoticeableAcneEmoji` --> `NoticeableIrritationEmoji`
+  - `NoticeableAcneSelectedEmoji` --> `NoticeableIrritationSelectedEmoji`
+  - `SevereAcneEmoji` --> `SevereIrritationEmoji`
+  - `SevereAcneSelectedEmoji` --> `SevereIrritationSelectedEmoji`
+- [Icons] **BREAKING CHANGE** Removes `height` and `width` default values of `16`, default values now supplied by `svg` files according to type (`16x16` for `Icons`, `20x20` for `NavIcons`, and `48x48` for both Emoji and Glyphs)
+- [Icons] Adds secondary icons for non-Logo icons.
+
 # v15.0.0
 
 - [Theming] **BREAKING** Adds theming logic to box shadows and remove it from constants ([#610](https://github.com/curology/radiance-ui/pull/610))
