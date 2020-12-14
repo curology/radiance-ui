@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, ANIMATION, ThemeType } from '../../constants';
+import { SPACER, ANIMATION, ThemeType, BORDER_RADIUS } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
@@ -30,7 +30,7 @@ const inputStyles = (theme: ThemeType) => css`
   appearance: none;
   background: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${BORDER_RADIUS.small};
   color: ${theme.COLORS.primaryTint1};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;

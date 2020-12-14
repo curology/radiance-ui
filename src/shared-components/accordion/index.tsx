@@ -4,6 +4,7 @@ import { useTheme } from 'emotion-theming';
 
 import { ChevronIcon } from '../../icons';
 import Thumbnails from './thumbnails';
+import { BORDER_RADIUS } from '../../constants';
 import {
   AccordionBox,
   ArrowWrapper,
@@ -41,7 +42,7 @@ type AccordionProps = {
  * The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
  */
 export const Accordion = ({
-  borderRadius = '4px',
+  borderRadius = BORDER_RADIUS.small,
   children,
   disabled = false,
   isOpen,

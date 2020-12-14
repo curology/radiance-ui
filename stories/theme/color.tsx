@@ -14,7 +14,7 @@ const ColorSample = styled.div`
   height: 40px;
   width: 40px;
   background-color: ${(props) => props.color};
-  border-radius: 40px;
+  border-radius: 50%;
 `;
 
 const ColorName = styled.div`

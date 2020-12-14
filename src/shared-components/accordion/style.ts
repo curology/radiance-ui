@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
 
-import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
+import {
+  ANIMATION,
+  BORDER_RADIUS,
+  BREAKPOINTS,
+  SPACER,
+  ThemeType,
+} from '../../constants';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -98,7 +104,7 @@ export const Container = styled.div<{
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
-  ${({ borderRadius = '4px' }) => `
+  ${({ borderRadius = BORDER_RADIUS.small }) => `
     > div:first-of-type {
       border-top-left-radius: ${borderRadius};
       border-top-right-radius: ${borderRadius};

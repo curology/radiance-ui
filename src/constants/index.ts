@@ -1,4 +1,5 @@
 export { default as ANIMATION } from './animation';
+export { default as BORDER_RADIUS } from './borderRadius';
 export { default as BREAKPOINTS } from './breakpoints';
 export { default as GRID } from './grid';
 export { default as LAYOUT } from './layout';

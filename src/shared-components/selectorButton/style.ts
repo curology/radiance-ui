@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACER, ANIMATION, ThemeType } from '../../constants';
+import { SPACER, ANIMATION, ThemeType, BORDER_RADIUS } from '../../constants';
 
 import { SelectorType, SizeType, StyleType } from '.';
 
@@ -24,7 +24,7 @@ export const OuterContainer = styled.div<{ selector: SelectorType }>`
       box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
 
       ${({ selector }) => `
-        border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+        border-radius: ${selector === 'checkbox' ? BORDER_RADIUS.small : '50%'};
       `};
     }
   }
@@ -77,7 +77,7 @@ export const Selector = styled.div<{
   transition: background-color ${ANIMATION.defaultTiming};
 
   ${({ selector }) => `
-    border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+    border-radius: ${selector === 'checkbox' ? BORDER_RADIUS.small : '50%'};
   `}
 
   ${({ type, checked, disabled, theme }) => {

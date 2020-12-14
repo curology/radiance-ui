@@ -11,6 +11,7 @@ import {
   CheckmarkWrapper,
 } from './style';
 import { CheckmarkIcon } from '../../icons';
+import { BORDER_RADIUS } from '../../constants';
 
 type OptionButtonProps = {
   borderRadius?: string;
@@ -31,7 +32,7 @@ type OptionButtonProps = {
 };
 
 export const OptionButton = ({
-  borderRadius = '4px',
+  borderRadius = BORDER_RADIUS.small,
   buttonType = 'primary',
   icon,
   onClick,

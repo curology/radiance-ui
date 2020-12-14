@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import { MobileDropdown } from './mobileDropdown';
 import { DesktopDropdown } from './desktopDropdown';
+import { BORDER_RADIUS } from '../../constants';
 
 export type OptionValue = string | number;
 
@@ -45,7 +46,7 @@ type DropdownProps<T> = {
  * This ships with a mobile implementation that will handle mobile devices automatically.
  */
 export const Dropdown = <T extends OptionType>({
-  borderRadius = '4px',
+  borderRadius = BORDER_RADIUS.small,
   onChange,
   options,
   optionsContainerMaxHeight = '250px',

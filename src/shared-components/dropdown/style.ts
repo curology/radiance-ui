@@ -146,7 +146,7 @@ export const DropdownOptionsContainer = styled.ul<{
 
   &:last-of-type {
     border-radius: ${({ borderRadius }) =>
-      borderRadius ? `0 0 ${borderRadius} ${borderRadius}` : `0 0 4px 4px`};
+      `0 0 ${borderRadius} ${borderRadius}`};
   }
 `;
 
