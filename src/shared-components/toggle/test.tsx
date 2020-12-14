@@ -20,7 +20,8 @@ describe('<Toggle />', () => {
       const { container } = render(
         <Toggle checked={false} onChange={() => undefined} />,
       );
-      expect(container.querySelectorAll('label').length).toBe(0);
+      // TODO: Make <Label /> an actual label element, not a span, and use getByLabelText
+      expect(container.querySelectorAll('span').length).toBe(0);
     });
   });
 

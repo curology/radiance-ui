@@ -167,7 +167,6 @@ describe('<SelectorButton />', () => {
       );
 
       assert(container.firstElementChild);
-
       userEvent.click(container.firstElementChild);
 
       expect(spy).toHaveBeenCalled();
@@ -176,6 +175,7 @@ describe('<SelectorButton />', () => {
     it('Does nothing when no onClick is set', () => {
       const { container } = render(<SelectorButton checked={false} />);
       assert(container.firstElementChild);
+
       // Just check that no exception is thrown
       userEvent.click(container.firstElementChild);
       userEvent.type(container.firstElementChild, '{enter}');
@@ -189,7 +189,11 @@ describe('<SelectorButton />', () => {
 
       assert(container.firstElementChild);
 
-      // https://github.com/testing-library/dom-testing-library/issues/405#issuecomment-602106188
+      /**
+       * onKeyPress does not work as we might expect. TODO: SelectorButton should return a button, not a div,
+       * so we should rely on onClick for both mouse and keyboard behavior.
+       * @see https://github.com/testing-library/dom-testing-library/issues/405#issuecomment-602106188
+       */
       userEvent.type(container.firstElementChild, '{enter}');
 
       expect(spy).toHaveBeenCalled();

@@ -58,11 +58,12 @@ describe('<VerificationMessages />', () => {
         required: [],
       };
 
-      const { container } = render(
+      const { queryAllByRole } = render(
         <VerificationMessages messages={messages} />,
       );
 
-      expect(container.querySelectorAll('li').length).toBe(0);
+      expect(queryAllByRole('list').length).toBe(1);
+      expect(queryAllByRole('listitem').length).toBe(0);
     });
   });
 });

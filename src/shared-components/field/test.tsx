@@ -49,31 +49,29 @@ describe('<Field />', () => {
 
   describe('when provided some messages', () => {
     it('renders the error message', () => {
-      const messages = { maxLength: 'Maximum 6 characteres' };
-      const { container } = render(
+      const maxLength = 'Maximum 6 characters';
+      const messages = { maxLength };
+      const { getAllByText } = render(
         <Field messages={messages} messagesType="error">
           <Field.Input />
         </Field>,
       );
 
-      const li = container.querySelectorAll('li');
-
-      expect(li).toHaveLength(1);
-      expect(li[0].textContent).toEqual(messages.maxLength);
+      const message = getAllByText(maxLength);
+      expect(message.length).toBe(1);
     });
 
     it('renders the success messages', () => {
+      const success = 'Thanks for completing';
       const messages = { success: 'Thanks for completing' };
-      const { container } = render(
+      const { getAllByText } = render(
         <Field messages={messages} messagesType="success">
           <Field.Input />
         </Field>,
       );
 
-      const li = container.querySelectorAll('li');
-
-      expect(li).toHaveLength(1);
-      expect(li[0].textContent).toEqual(messages.success);
+      const message = getAllByText(success);
+      expect(message.length).toBe(1);
     });
   });
 });
