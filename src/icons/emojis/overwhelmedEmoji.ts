@@ -1,5 +1,5 @@
-import { OverwhelmedEmoji } from './svgs';
+import { OverwhelmedEmoji, OverwhelmedEmojiSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(OverwhelmedEmoji, OverwhelmedEmoji, props);
+  useIcon(OverwhelmedEmoji, OverwhelmedEmojiSecondary, props);

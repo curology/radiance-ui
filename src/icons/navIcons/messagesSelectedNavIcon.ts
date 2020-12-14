@@ -1,5 +1,8 @@
-import { MessagesSelectedNavIcon } from './svgs';
+import {
+  MessagesSelectedNavIcon,
+  MessagesSelectedNavIconSecondary,
+} from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(MessagesSelectedNavIcon, MessagesSelectedNavIcon, props);
+  useIcon(MessagesSelectedNavIcon, MessagesSelectedNavIconSecondary, props);

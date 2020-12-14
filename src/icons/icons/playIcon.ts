@@ -1,4 +1,5 @@
-import { PlayIcon } from './svgs';
+import { PlayIcon, PlayIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(PlayIcon, PlayIcon, props);
+export default (props: IconProps) =>
+  useIcon(PlayIcon, PlayIconSecondary, props);

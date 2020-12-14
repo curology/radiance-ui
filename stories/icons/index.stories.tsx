@@ -43,6 +43,15 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+/**
+ * Rough hack to determine if React function component returns null.
+ */
+const shouldRenderIcon = (Icon: valueof<typeof iconComponents>) => {
+  const renderedIcon = Icon({});
+
+  return renderedIcon !== null;
+};
+
 export const IconLibrary = () => (
   <React.Fragment>
     <Typography.Heading>Logos</Typography.Heading>
@@ -57,12 +66,16 @@ export const IconLibrary = () => (
 
     <Typography.Heading>Icons</Typography.Heading>
     <Style.Icons>
-      {Object.entries(iconComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon width={20} height={20} />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
+      {Object.entries(iconComponents).map(([name, Icon]) => {
+        if (!shouldRenderIcon(Icon)) return null;
+
+        return (
+          <Style.IconContainer key={name}>
+            <Icon width={20} height={20} />
+            <Style.IconLabel>{name}</Style.IconLabel>
+          </Style.IconContainer>
+        );
+      })}
     </Style.Icons>
 
     <Typography.Heading>Emojis</Typography.Heading>
@@ -77,12 +90,16 @@ export const IconLibrary = () => (
 
     <Typography.Heading>Glyphs</Typography.Heading>
     <Style.Icons>
-      {Object.entries(glyphComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon width={48} height={48} />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
+      {Object.entries(glyphComponents).map(([name, Icon]) => {
+        if (!shouldRenderIcon(Icon)) return null;
+
+        return (
+          <Style.IconContainer key={name}>
+            <Icon width={48} height={48} />
+            <Style.IconLabel>{name}</Style.IconLabel>
+          </Style.IconContainer>
+        );
+      })}
     </Style.Icons>
 
     <Typography.Heading>Nav Icons</Typography.Heading>

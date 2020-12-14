@@ -1,5 +1,5 @@
-import { PaperclipIcon } from './svgs';
+import { PaperclipIcon, PaperclipIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(PaperclipIcon, PaperclipIcon, props);
+  useIcon(PaperclipIcon, PaperclipIconSecondary, props);

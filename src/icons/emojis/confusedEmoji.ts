@@ -1,5 +1,5 @@
-import { ConfusedEmoji } from './svgs';
+import { ConfusedEmoji, ConfusedEmojiSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(ConfusedEmoji, ConfusedEmoji, props);
+  useIcon(ConfusedEmoji, ConfusedEmojiSecondary, props);

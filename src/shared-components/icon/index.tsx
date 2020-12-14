@@ -53,13 +53,15 @@ Icon.propTypes = {
 };
 
 export const useIcon = (
-  PrimaryIcon: SVGComponent,
+  PrimaryIcon: SVGComponent | null,
   SecondaryIcon: SVGComponent,
   props: IconProps,
 ) => {
   const theme = useTheme();
 
   const ThemeIcon = theme.__type === 'primary' ? PrimaryIcon : SecondaryIcon;
+
+  if (ThemeIcon === null) return null;
 
   return <Icon IconComponent={ThemeIcon} {...props} />;
 };
