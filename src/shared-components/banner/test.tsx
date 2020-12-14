@@ -9,7 +9,7 @@ describe('Banner UI snapshots', () => {
       <Banner content="Success Banner" type="success" />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders error type and text', () => {
@@ -17,13 +17,13 @@ describe('Banner UI snapshots', () => {
       <Banner content="Error banner" type="error" />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders info type and text', () => {
     const { container } = render(<Banner content="Default banner" />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('Banner with click handler', () => {

@@ -16,7 +16,7 @@ describe('<Tabs />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with initialActiveTabId and onClick props', () => {
@@ -32,7 +32,7 @@ describe('<Tabs />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

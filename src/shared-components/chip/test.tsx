@@ -8,7 +8,7 @@ describe('<Chip />', () => {
     it('renders the correct css and text', () => {
       const { container } = render(<Chip status="success" text="Success" />);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

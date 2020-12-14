@@ -12,7 +12,7 @@ describe('<Tooltip />', () => {
         </Tooltip>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

@@ -15,7 +15,7 @@ describe('<Callout />', () => {
         </Callout>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
     it('renders callout with custom color and icon', () => {
       const { container } = render(
@@ -27,7 +27,7 @@ describe('<Callout />', () => {
         </Callout>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

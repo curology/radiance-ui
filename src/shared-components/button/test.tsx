@@ -15,7 +15,7 @@ describe('<Button />', () => {
         </Button>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

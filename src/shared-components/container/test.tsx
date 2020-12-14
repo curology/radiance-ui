@@ -7,7 +7,7 @@ describe('Container UI snapshots', () => {
   test('renders basic container', () => {
     const { container } = render(<Container>Container Content</Container>);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders container helper components', () => {
@@ -23,7 +23,7 @@ describe('Container UI snapshots', () => {
       </Container>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders clickable container', () => {
@@ -31,7 +31,7 @@ describe('Container UI snapshots', () => {
       <Container type="clickable">Container Content</Container>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders message type container', () => {
@@ -39,6 +39,6 @@ describe('Container UI snapshots', () => {
       <Container type="message">Container Content</Container>,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 });

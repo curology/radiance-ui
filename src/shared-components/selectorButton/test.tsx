@@ -13,7 +13,7 @@ describe('<SelectorButton />', () => {
         <SelectorButton checked={false} onClick={() => undefined} />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when children is a node', () => {
@@ -23,7 +23,7 @@ describe('<SelectorButton />', () => {
         </SelectorButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when checked type is primary', () => {
@@ -33,7 +33,7 @@ describe('<SelectorButton />', () => {
         </SelectorButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when checked type is secondary', () => {
@@ -43,7 +43,7 @@ describe('<SelectorButton />', () => {
         </SelectorButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when is checkbox', () => {
@@ -57,7 +57,7 @@ describe('<SelectorButton />', () => {
         </SelectorButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     describe('when Icon added', () => {
@@ -74,7 +74,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
 
       it("hides icon for radio button size 'small'", () => {
@@ -90,7 +90,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
 
       it("displays icon for checkbox with size 'large'", () => {
@@ -106,7 +106,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
 
       it("displays icon for radio button with size 'large'", () => {
@@ -122,7 +122,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
 
       it('displays check mark for checked checkbox', () => {
@@ -138,7 +138,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
 
       it('displays check mark for checked radio button', () => {
@@ -154,7 +154,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstChild).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
     });
   });

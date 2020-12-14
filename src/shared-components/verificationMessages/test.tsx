@@ -32,7 +32,7 @@ describe('<VerificationMessages />', () => {
         <VerificationMessages messages={messages} />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with non-default props', () => {
@@ -48,7 +48,7 @@ describe('<VerificationMessages />', () => {
         <VerificationMessages messages={messages} centered type="success" />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

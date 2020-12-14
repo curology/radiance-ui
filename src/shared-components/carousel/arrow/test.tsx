@@ -10,7 +10,7 @@ describe('<Arrow />', () => {
         <Arrow prev disabled={false} onClick={() => undefined} />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with bottom right alignment', () => {
@@ -23,7 +23,7 @@ describe('<Arrow />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

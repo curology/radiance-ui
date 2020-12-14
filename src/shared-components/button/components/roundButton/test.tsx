@@ -14,7 +14,7 @@ describe('<RoundButton />', () => {
         </RoundButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

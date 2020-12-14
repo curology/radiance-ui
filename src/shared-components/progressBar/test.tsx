@@ -9,7 +9,7 @@ describe('<ProgressBar />', () => {
     it('renders with default props', () => {
       const { container } = render(<ProgressBar status="loading" />);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with custom props', () => {
@@ -24,7 +24,7 @@ describe('<ProgressBar />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

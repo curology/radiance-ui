@@ -9,7 +9,7 @@ describe('<LoadingSpinner />', () => {
     it('renders the correct css with default props', () => {
       const { container } = render(<LoadingSpinner />);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders the correct css with custom props', () => {
@@ -23,7 +23,7 @@ describe('<LoadingSpinner />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

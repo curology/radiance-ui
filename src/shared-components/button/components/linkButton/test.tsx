@@ -13,7 +13,7 @@ describe('<LinkButton/>', () => {
         </LinkButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

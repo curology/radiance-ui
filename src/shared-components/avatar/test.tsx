@@ -11,7 +11,7 @@ describe('<Avatar />', () => {
     it('renders the Avatar with default props', () => {
       const { container } = render(<Avatar src={imageExample} alt="avatar" />);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('render with size medium styles', () => {
@@ -19,7 +19,7 @@ describe('<Avatar />', () => {
         <Avatar size="medium" src={imageExample} alt="avatar" />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('render with size large styles', () => {
@@ -27,7 +27,7 @@ describe('<Avatar />', () => {
         <Avatar size="large" src={imageExample} alt="avatar" />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

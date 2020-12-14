@@ -8,13 +8,13 @@ describe('<Indicator />', () => {
     it('renders the correct css with a text', () => {
       const { container } = render(<Indicator text="1" />);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders the correct css with a number', () => {
       const { container } = render(<Indicator text={3} />);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

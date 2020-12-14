@@ -11,7 +11,7 @@ describe('<Toggle />', () => {
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

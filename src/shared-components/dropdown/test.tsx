@@ -62,7 +62,7 @@ describe('<MobileDropdown />', () => {
           textAlign="left"
         />,
       );
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

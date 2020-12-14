@@ -19,19 +19,19 @@ describe('Alert UI snapshots', () => {
   test('renders a default alert', () => {
     const { container } = render(<Alert content={alertText} />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders success alert', () => {
     const { container } = render(<Alert content={alertText} type="success" />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders error alert', () => {
     const { container } = render(<Alert content={alertText} type="error" />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders a sticky alert', () => {
@@ -39,7 +39,7 @@ describe('Alert UI snapshots', () => {
       <Alert content={alertText} duration="sticky" />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders custom component passed in content prop', () => {
@@ -47,7 +47,7 @@ describe('Alert UI snapshots', () => {
       <Alert content={<CustomContentComponent />} />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('Alert onExit is triggered on click', () => {

@@ -12,7 +12,7 @@ describe('<Carousel />', () => {
         <Carousel numCardsVisible={1}>{cards}</Carousel>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with bottom right aligned arrows', () => {
@@ -22,7 +22,7 @@ describe('<Carousel />', () => {
         </Carousel>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

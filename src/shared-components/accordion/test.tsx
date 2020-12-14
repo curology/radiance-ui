@@ -14,7 +14,7 @@ describe('<Accordion />', () => {
   test('renders regular accordion', () => {
     const { container } = render(<Accordion {...testAccordionProps} />);
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders no border accordion', () => {
@@ -22,7 +22,7 @@ describe('<Accordion />', () => {
       <Accordion {...testAccordionProps} noBorder />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders disabled accordion', () => {
@@ -30,7 +30,7 @@ describe('<Accordion />', () => {
       <Accordion {...testAccordionProps} disabled />,
     );
 
-    expect(container.firstChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('invokes onClick when title is clicked', () => {

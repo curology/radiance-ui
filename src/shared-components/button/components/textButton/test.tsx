@@ -8,14 +8,14 @@ describe('<TextButton />', () => {
     it('renders without any props', () => {
       const { container } = render(<TextButton>Button Text</TextButton>);
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
     it('renders with disabled prop', () => {
       const { container } = render(
         <TextButton disabled>Disabled Button Text</TextButton>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

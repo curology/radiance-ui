@@ -12,7 +12,7 @@ describe('<Field />', () => {
         </Field>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with label and labelFor props', () => {
@@ -24,7 +24,7 @@ describe('<Field />', () => {
         </Field>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with errorMessage, hintMessage and hideMessagesIcon props', () => {
@@ -43,7 +43,7 @@ describe('<Field />', () => {
         </Field>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

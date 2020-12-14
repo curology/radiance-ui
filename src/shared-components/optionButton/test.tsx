@@ -19,7 +19,7 @@ describe('<OptionButton />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('radio unselected, with icon node prop', () => {
@@ -33,7 +33,7 @@ describe('<OptionButton />', () => {
         />,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 

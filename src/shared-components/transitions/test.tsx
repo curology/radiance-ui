@@ -10,7 +10,7 @@ describe('<FadeInContainer />', () => {
         <FadeInContainer>Default Props example</FadeInContainer>,
       );
 
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with slide and speed props set', () => {
@@ -19,7 +19,7 @@ describe('<FadeInContainer />', () => {
           FadeInContainer Content Here
         </FadeInContainer>,
       );
-      expect(container.firstChild).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });
