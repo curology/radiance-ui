@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { userEvent, render } from 'src/tests/testingLibraryHelpers';
 
 import { CameraIcon } from '../../../../icons';
 
@@ -27,7 +27,7 @@ describe('<RoundButton />', () => {
         </RoundButton>,
       );
 
-      fireEvent.click(getByRole('button'));
+      userEvent.click(getByRole('button'));
       expect(spy).toHaveBeenCalled();
     });
 
@@ -39,7 +39,7 @@ describe('<RoundButton />', () => {
         </RoundButton>,
       );
 
-      fireEvent.click(getByRole('button'));
+      userEvent.click(getByRole('button'));
       expect(spy).not.toHaveBeenCalled();
     });
 
@@ -51,7 +51,7 @@ describe('<RoundButton />', () => {
         </RoundButton>,
       );
 
-      fireEvent.click(getByRole('button'));
+      userEvent.click(getByRole('button'));
       expect(spy).not.toHaveBeenCalled();
     });
   });

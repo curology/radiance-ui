@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { act, userEvent, render } from 'src/tests/testingLibraryHelpers';
 import assert from 'src/utils/assert';
 
 import { Alert } from './index';
@@ -62,7 +62,7 @@ describe('Alert UI snapshots', () => {
     );
 
     assert(container.firstElementChild);
-    fireEvent.click(container.firstElementChild);
+    userEvent.click(container.firstElementChild);
 
     act(() => {
       jest.runAllTimers();
@@ -84,7 +84,7 @@ describe('Alert UI snapshots', () => {
     );
 
     assert(container.firstElementChild);
-    fireEvent.click(container.firstElementChild);
+    userEvent.click(container.firstElementChild);
 
     act(() => {
       jest.runAllTimers();

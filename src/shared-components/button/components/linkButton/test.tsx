@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { userEvent, render } from 'src/tests/testingLibraryHelpers';
 import assert from 'src/utils/assert';
 
 import { LinkButton } from './index';
@@ -37,7 +37,7 @@ describe('<LinkButton/>', () => {
       const { container } = render(<LinkButton onClick={spy}>text</LinkButton>);
 
       assert(container.firstElementChild);
-      fireEvent.click(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
 
       expect(spy).toHaveBeenCalled();
     });
@@ -52,7 +52,7 @@ describe('<LinkButton/>', () => {
       );
 
       assert(container.firstElementChild);
-      fireEvent.click(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
 
       expect(spy).not.toHaveBeenCalled();
     });
