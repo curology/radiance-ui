@@ -1,5 +1,5 @@
-import { SupportCenterGlyph } from './svgs';
+import { SupportCenterGlyph, SupportCenterGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(SupportCenterGlyph, SupportCenterGlyph, props);
+  useIcon(SupportCenterGlyph, SupportCenterGlyphSecondary, props);

@@ -1,5 +1,5 @@
-import { DarkSpotsGlyph } from './svgs';
+import { DarkSpotsGlyph, DarkSpotsGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(DarkSpotsGlyph, DarkSpotsGlyph, props);
+  useIcon(DarkSpotsGlyph, DarkSpotsGlyphSecondary, props);

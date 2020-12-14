@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, SPACER, BOX_SHADOWS, ThemeType } from '../../constants';
+import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
 type BaseIconWrapperStylesProps = {
@@ -39,7 +39,7 @@ export const ClickableContainer = styled.button<{
 
   :focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
 

@@ -28,16 +28,12 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
  */
 export const Icon = ({
   displayInline = false,
-  height = 16,
   IconComponent,
   rotate = 0,
-  width = 16,
   ...rest
 }: IconProps & { IconComponent: SVGComponent }) => (
   <IconComponent
     css={Style.iconStyles({ displayInline, fill: rest.fill, rotate })}
-    height={height}
-    width={width}
     {...rest}
   />
 );
@@ -53,13 +49,15 @@ Icon.propTypes = {
 };
 
 export const useIcon = (
-  PrimaryIcon: SVGComponent,
+  PrimaryIcon: SVGComponent | null,
   SecondaryIcon: SVGComponent,
   props: IconProps,
 ) => {
   const theme = useTheme();
 
   const ThemeIcon = theme.__type === 'primary' ? PrimaryIcon : SecondaryIcon;
+
+  if (ThemeIcon === null) return null;
 
   return <Icon IconComponent={ThemeIcon} {...props} />;
 };

@@ -3,13 +3,11 @@ import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import Typography from '../typography';
 import {
-  BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
   Z_SCALE,
   ANIMATION,
   ThemeType,
-  TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -64,7 +62,7 @@ export const CrossIconContainer = styled.button`
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -120,7 +118,7 @@ const commonHeaderBarStyles = (theme: ThemeType) => `
   width: 100%;
   background: ${theme.COLORS.white};
   color: ${theme.COLORS.primary};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${theme.TYPOGRAPHY.fontSize.caption};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -219,13 +217,12 @@ export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
   ${MEDIA_QUERIES.mdUp} {
-    box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
     border-radius: 8px;
     margin-top: 56px;
     overflow-y: auto;

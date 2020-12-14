@@ -2,13 +2,7 @@ import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
-  ANIMATION,
-  SPACER,
-  BOX_SHADOWS,
-  ThemeColors,
-  ThemeType,
-} from '../../constants';
+import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
 import { ButtonTypeWithAction } from '.';
@@ -102,10 +96,10 @@ const actionStyles = (
   background-color: ${theme.COLORS.white};
   color: ${buttonColor};
   fill: ${buttonColor};
-  box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickable};
+  box-shadow: ${isLoading ? 'none' : theme.BOX_SHADOWS.clickable};
 
   &:hover {
-    box-shadow: ${isLoading ? 'none' : BOX_SHADOWS.clickableHover};
+    box-shadow: ${isLoading ? 'none' : theme.BOX_SHADOWS.clickableHover};
   }
 `;
 
@@ -197,7 +191,7 @@ export const baseButtonStyles = ({
   &:active,
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${theme.BOX_SHADOWS.focus};
   }
 
   ${parseTheme(disabled, buttonType, !!isLoading, buttonColor, theme)}

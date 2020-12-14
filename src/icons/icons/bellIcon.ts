@@ -1,4 +1,5 @@
-import { BellIcon } from './svgs';
+import { BellIcon, BellIconSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(BellIcon, BellIcon, props);
+export default (props: IconProps) =>
+  useIcon(BellIcon, BellIconSecondary, props);

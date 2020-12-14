@@ -1,5 +1,5 @@
-import { CheckmarkIcon } from './svgs';
+import { CheckmarkIcon, CheckmarkIconSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(CheckmarkIcon, CheckmarkIcon, props);
+  useIcon(CheckmarkIcon, CheckmarkIconSecondary, props);

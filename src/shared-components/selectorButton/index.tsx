@@ -57,8 +57,6 @@ export const SelectorButton = ({
         css={css`
           color: ${theme.COLORS.white};
         `}
-        width={16}
-        height={16}
       />
     );
   return (
