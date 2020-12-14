@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'src/tests/testingLibraryHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { TextButton } from './index';
 
@@ -26,7 +26,7 @@ describe('<TextButton />', () => {
         <TextButton onClick={spy}>Button Text</TextButton>,
       );
 
-      getByRole('button').click();
+      userEvent.click(getByRole('button'));
 
       expect(spy).toHaveBeenCalled();
     });
@@ -39,7 +39,7 @@ describe('<TextButton />', () => {
         </TextButton>,
       );
 
-      getByRole('button').click();
+      userEvent.click(getByRole('button'));
 
       expect(spy).not.toHaveBeenCalled();
     });

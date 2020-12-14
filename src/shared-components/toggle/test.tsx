@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from 'src/tests/testingLibraryHelpers';
+import { render, screen, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Toggle } from './index';
 
@@ -57,9 +57,9 @@ describe('<Toggle />', () => {
   describe('when checkbox is clicked', () => {
     test('fires onChange function with correct argument when function exists', () => {
       const spy = jest.fn();
-      const { container } = render(<Toggle checked={false} onChange={spy} />);
+      const { getByRole } = render(<Toggle checked={false} onChange={spy} />);
 
-      container.querySelector<HTMLElement>('[type="checkbox"]')?.click();
+      userEvent.click(getByRole('checkbox'));
 
       expect(spy).toHaveBeenCalledWith(false);
     });

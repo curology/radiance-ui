@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'src/tests/testingLibraryHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Banner } from './index';
 
@@ -33,7 +33,7 @@ describe('Banner UI snapshots', () => {
       <Banner content="Banner with click handler" onClick={spy} />,
     );
 
-    getByRole('button').click();
+    userEvent.click(getByRole('button'));
 
     jest.runAllTimers();
     expect(spy).toHaveBeenCalled();

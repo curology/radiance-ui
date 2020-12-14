@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'src/tests/testingLibraryHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Tabs } from './index';
 
@@ -39,7 +39,7 @@ describe('<Tabs />', () => {
   describe('on click function', () => {
     test('returns correct params', () => {
       const spy = jest.fn();
-      const { container } = render(
+      const { getByRole } = render(
         <Tabs
           initialActiveTabId={1}
           tabItems={[
@@ -51,7 +51,7 @@ describe('<Tabs />', () => {
         />,
       );
 
-      container.querySelector('button')?.click();
+      userEvent.click(getByRole('button', { name: 'Tab 1' }));
 
       expect(spy).toHaveBeenCalledWith({ id: 1, text: 'Tab 1' });
     });
