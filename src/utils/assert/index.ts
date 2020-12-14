@@ -12,4 +12,4 @@ function assert(value: any, message?: string) {
   }
 }
 
-export default assert;
+export { assert };

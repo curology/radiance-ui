@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, userEvent } from 'src/tests/testingLibraryHelpers';
-import assert from 'src/utils/assert';
+import { assert } from 'src/utils/assert';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';

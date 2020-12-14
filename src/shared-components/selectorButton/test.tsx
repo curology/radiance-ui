@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, userEvent } from 'src/tests/testingLibraryHelpers';
-import assert from 'src/utils/assert';
+import { assert } from 'src/utils/assert';
 
 import { AcneOneGlyph } from '../../icons';
 
