@@ -78,10 +78,10 @@ export const SelectorButton = ({
         </SelectorIcon>
         <Selector
           type={type}
-          checked={checked}
+          selectorChecked={checked}
           disabled={disabled}
           selector={selector}
-          size={size}
+          selectorSize={size}
         />
       </SelectorContainer>
 
