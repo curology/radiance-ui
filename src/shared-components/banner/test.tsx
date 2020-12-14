@@ -27,15 +27,12 @@ describe('Banner UI snapshots', () => {
   });
 
   test('Banner with click handler', () => {
-    jest.useFakeTimers();
     const spy = jest.fn();
     const { getByRole } = render(
       <Banner content="Banner with click handler" onClick={spy} />,
     );
 
     userEvent.click(getByRole('button'));
-
-    jest.runAllTimers();
     expect(spy).toHaveBeenCalled();
   });
 });
