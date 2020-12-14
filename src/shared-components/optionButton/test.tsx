@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { userEvent, render } from 'src/tests/testingLibraryHelpers';
 import assert from 'src/utils/assert';
 
 import { AcneGlyph } from '../../icons';
@@ -48,9 +48,9 @@ describe('<OptionButton />', () => {
         />,
       );
 
-      assert(container.firstChild);
+      assert(container.firstElementChild);
 
-      fireEvent.click(container.firstChild);
+      userEvent.click(container.firstElementChild);
       expect(spy).toHaveBeenCalled();
     });
   });

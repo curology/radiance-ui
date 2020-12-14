@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'src/tests/testingLibraryHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Accordion } from './index';
 
@@ -40,9 +40,8 @@ describe('<Accordion />', () => {
       <Accordion {...testAccordionProps} onClick={spy} />,
     );
 
-    const title = getByRole('button');
+    userEvent.click(getByRole('button'));
 
-    title.click();
     expect(spy).toHaveBeenCalled();
   });
 });

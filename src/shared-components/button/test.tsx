@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { userEvent, render } from 'src/tests/testingLibraryHelpers';
 import assert from 'src/utils/assert';
 
 import { CameraIcon } from '../../icons';
@@ -24,8 +24,8 @@ describe('<Button />', () => {
       const spy = jest.fn();
       const { container } = render(<Button onClick={spy}>Button Text</Button>);
 
-      assert(container.firstChild);
-      fireEvent.click(container.firstChild);
+      assert(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
 
       expect(spy).toHaveBeenCalled();
     });
@@ -38,8 +38,8 @@ describe('<Button />', () => {
         </Button>,
       );
 
-      assert(container.firstChild);
-      fireEvent.click(container.firstChild);
+      assert(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
 
       expect(spy).not.toHaveBeenCalled();
     });
@@ -52,8 +52,8 @@ describe('<Button />', () => {
         </Button>,
       );
 
-      assert(container.firstChild);
-      fireEvent.click(container.firstChild);
+      assert(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
 
       expect(spy).not.toHaveBeenCalled();
     });

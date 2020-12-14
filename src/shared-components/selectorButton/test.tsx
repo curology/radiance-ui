@@ -1,7 +1,6 @@
 import React from 'react';
-import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 import assert from 'src/utils/assert';
-import userEvent from '@testing-library/user-event';
 
 import { AcneOneGlyph } from '../../icons';
 
@@ -167,9 +166,9 @@ describe('<SelectorButton />', () => {
         <SelectorButton checked={false} onClick={spy} />,
       );
 
-      assert(container.firstChild);
+      assert(container.firstElementChild);
 
-      fireEvent.click(container.firstChild);
+      userEvent.click(container.firstElementChild);
 
       expect(spy).toHaveBeenCalled();
     });
@@ -178,7 +177,7 @@ describe('<SelectorButton />', () => {
       const { container } = render(<SelectorButton checked={false} />);
       assert(container.firstElementChild);
       // Just check that no exception is thrown
-      fireEvent.click(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
       userEvent.type(container.firstElementChild, '{enter}');
     });
 

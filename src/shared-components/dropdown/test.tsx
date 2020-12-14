@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
+import { fireEvent, render, userEvent } from 'src/tests/testingLibraryHelpers';
 import assert from 'src/utils/assert';
 
 import { DesktopDropdown } from './desktopDropdown';
@@ -82,7 +82,6 @@ describe('<MobileDropdown />', () => {
       const select = getByRole('combobox');
       fireEvent.change(select, { value: 'test1' });
 
-      // wrapper.find('select').simulate('change', { target: { value: 'test1' } });
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -124,7 +123,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      fireEvent.click(getByRole('button'));
+      userEvent.click(getByRole('button'));
 
       expect(spy).toHaveBeenCalled();
     });
@@ -150,7 +149,7 @@ describe('<DesktopDropdown />', () => {
       const li = container.querySelector('li');
 
       assert(li);
-      fireEvent.click(li);
+      userEvent.click(li);
 
       expect(spy).toHaveBeenCalled();
     });
