@@ -69,7 +69,7 @@ export const IconLibrary = () => (
 
         return (
           <Style.IconContainer key={name}>
-            <Icon width={20} height={20} />
+            <Icon />
             <Style.IconLabel>{name}</Style.IconLabel>
           </Style.IconContainer>
         );
