@@ -57,7 +57,7 @@ export const OptionButton = ({
           optionType={optionType}
           buttonType={buttonType}
         >
-          {selected ? <CheckmarkIcon width={16} height={16} /> : icon}
+          {selected ? <CheckmarkIcon /> : icon}
         </IconWrapper>
       ) : (
         <CheckmarkWrapper
@@ -65,7 +65,7 @@ export const OptionButton = ({
           optionType={optionType}
           buttonType={buttonType}
         >
-          <CheckmarkIcon width={16} height={16} />
+          <CheckmarkIcon />
         </CheckmarkWrapper>
       )}
       <TextContainer>

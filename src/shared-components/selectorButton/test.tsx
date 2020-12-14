@@ -75,7 +75,7 @@ describe('<SelectorButton />', () => {
             checked={false}
             onClick={() => undefined}
             selector="checkbox"
-            icon={<AcneOneGlyph width={16} height={16} />}
+            icon={<AcneOneGlyph />}
             size="small"
           >
             SelectorButton Text
@@ -91,7 +91,7 @@ describe('<SelectorButton />', () => {
             checked={false}
             onClick={() => undefined}
             selector="radio"
-            icon={<AcneOneGlyph width={16} height={16} />}
+            icon={<AcneOneGlyph />}
             size="small"
           >
             SelectorButton Text
@@ -107,7 +107,7 @@ describe('<SelectorButton />', () => {
             checked={false}
             onClick={() => undefined}
             selector="checkbox"
-            icon={<AcneOneGlyph width={16} height={16} />}
+            icon={<AcneOneGlyph />}
             size="large"
           >
             SelectorButton Text
@@ -123,7 +123,7 @@ describe('<SelectorButton />', () => {
             checked={false}
             onClick={() => undefined}
             selector="radio"
-            icon={<AcneOneGlyph width={16} height={16} />}
+            icon={<AcneOneGlyph />}
             size="large"
           >
             SelectorButton Text
@@ -139,7 +139,7 @@ describe('<SelectorButton />', () => {
             checked
             onClick={() => undefined}
             selector="checkbox"
-            icon={<AcneOneGlyph width={16} height={16} />}
+            icon={<AcneOneGlyph />}
             size="large"
           >
             SelectorButton Text
@@ -155,7 +155,7 @@ describe('<SelectorButton />', () => {
             checked
             onClick={() => undefined}
             selector="radio"
-            icon={<AcneOneGlyph width={16} height={16} />}
+            icon={<AcneOneGlyph />}
             size="large"
           >
             SelectorButton Text

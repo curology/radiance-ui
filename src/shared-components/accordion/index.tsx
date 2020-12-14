@@ -91,12 +91,7 @@ export const Accordion = ({
       >
         <Truncate>{title}</Truncate>
         <ArrowWrapper rightAlign={!!rightAlignArrow}>
-          <ChevronIcon
-            rotate={isOpen ? 90 : 0}
-            width={16}
-            height={16}
-            fill={theme.COLORS.primary}
-          />
+          <ChevronIcon rotate={isOpen ? 90 : 0} fill={theme.COLORS.primary} />
         </ArrowWrapper>
       </TitleWrapper>
       <ExpansionWrapper

@@ -3,6 +3,8 @@ import * as React from 'react';
 function SvgLogoPrimary(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
+      width={48}
+      height={53}
       viewBox="0 0 48 53"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -37,7 +37,7 @@ export const WithColor = () => {
 
 export const WithIcon = () => (
   <Callout.Container>
-    <Callout icon={<NeckGlyph width={48} height={48} />}>
+    <Callout icon={<NeckGlyph />}>
       <strong>We recommend</strong> this bundle because you indicated concern
       about <strong>dry skin</strong> and <strong>body acne</strong>
     </Callout>
@@ -55,11 +55,7 @@ WithoutContainer.parameters = {
 };
 
 export const WithControls = () => (
-  <Callout
-    icon={
-      boolean('With Icon', true) ? <NeckGlyph width={48} height={48} /> : null
-    }
-  >
+  <Callout icon={boolean('With Icon', true) ? <NeckGlyph /> : null}>
     {text(
       'text',
       'We recommend this bundle because you indicated concern about dry skin and body acne',
