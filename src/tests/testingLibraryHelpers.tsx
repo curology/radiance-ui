@@ -9,7 +9,9 @@ interface RenderOptions extends ReactTestingLibrary.RenderOptions {
 }
 
 // We customize @testing-library methods to bake-in theming and keep unit tests DRY.
-// We do not use built-in { wrapper } option because it causes an inscrutable error.
+// We do not use ReactTestingLibrary.render(Component, { wrapper }) option because
+// `@testing-library/react` is (somehow) overwriting React with its own API when used.
+// This issue is specific to this repo and is not present in other implementations.
 // <ThemeProvider> leaves no DOM trace, anyway, so there's no functional difference.
 const customRender = (
   Component: React.ReactElement,
