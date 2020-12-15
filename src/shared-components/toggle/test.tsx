@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Toggle } from './index';
 
@@ -27,31 +27,11 @@ describe('<Toggle />', () => {
 
   describe('when label is a string', () => {
     test('renders a text component', () => {
-      render(
+      const { getByText } = render(
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      expect(screen.getByText(labelText)).toMatchInlineSnapshot(`
-        .emotion-0 {
-          color: #524D6E;
-          margin: 0;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          text-align: left;
-          cursor: pointer;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          margin-right: 0.5rem;
-        }
-
-        <span
-          class="emotion-0 emotion-1"
-        >
-          Label Text
-        </span>
-      `);
+      getByText(labelText);
     });
   });
 
