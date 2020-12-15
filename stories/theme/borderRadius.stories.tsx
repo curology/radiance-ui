@@ -1,10 +1,12 @@
 import React from 'react';
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { useTheme } from 'emotion-theming';
 import { SPACER } from 'src/constants';
+import { Container } from 'src/shared-components';
 
 const MainContainer = styled.div`
-  padding: ${SPACER.large} ${SPACER.large};
+  padding: ${SPACER.xlarge};
 `;
 
 export const BorderRadius = () => {
@@ -17,10 +19,22 @@ export const BorderRadius = () => {
     <MainContainer>
       {borderRadiusKeys.map((borderRadiusKey) => {
         const borderRadiusValue = theme.BORDER_RADIUS[borderRadiusKey];
+        const borderRadiusBoxStyles = css`
+          width: 350px;
+          margin-bottom: ${SPACER.xlarge};
+          border: 2px solid ${theme.COLORS.primary};
+          border-radius: ${borderRadiusValue};
+        `;
+
         return (
-          <p key={borderRadiusKey}>
-            <strong>{borderRadiusKey}</strong>: {borderRadiusValue}
-          </p>
+          <Container key={borderRadiusKey} css={borderRadiusBoxStyles}>
+            <Container.Section>
+              <strong>Key:</strong> {borderRadiusKey}
+              <br />
+              <br />
+              <strong>Value:</strong> {borderRadiusValue}
+            </Container.Section>
+          </Container>
         );
       })}
     </MainContainer>

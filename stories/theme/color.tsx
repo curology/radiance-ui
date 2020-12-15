@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { SPACER } from 'src/constants';
 
 const ColorContainer = styled.div`
-  margin: 48px 48px 0 0;
+  margin: 0 ${SPACER.x3large} ${SPACER.x3large} 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

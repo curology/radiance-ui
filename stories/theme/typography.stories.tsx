@@ -5,7 +5,7 @@ import { SPACER } from 'src/constants';
 import { Typography } from 'src/shared-components';
 
 const MainContainer = styled.div`
-  padding: ${SPACER.large};
+  padding: ${SPACER.xlarge};
 `;
 
 const CategoryContainer = styled.div`
