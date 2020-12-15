@@ -15,7 +15,7 @@ const clickableStyle = (theme: ThemeType) => `
 `;
 
 const messageStyle = (theme: ThemeType) => `
-  border-radius: 16px;
+  border-radius: ${theme.BORDER_RADIUS.medium};
   box-shadow: ${theme.BOX_SHADOWS.clickable};
 `;
 

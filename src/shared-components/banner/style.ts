@@ -35,7 +35,7 @@ export const BannerContainer = styled.button<{
   position: relative;
   margin: 0 auto ${SPACER.small};
   padding: ${SPACER.medium};
-  border-radius: ${SPACER.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
 
   ${({ bannerType, theme }) => {
     switch (bannerType) {

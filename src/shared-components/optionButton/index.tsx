@@ -31,7 +31,7 @@ type OptionButtonProps = {
 };
 
 export const OptionButton = ({
-  borderRadius = '4px',
+  borderRadius,
   buttonType = 'primary',
   icon,
   onClick,

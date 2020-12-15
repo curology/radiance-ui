@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 
 import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
+import { BorderRadiusValues } from '.';
+
 export const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
@@ -56,13 +58,14 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
 `;
 
 export const TitleWrapper = styled.div<{
-  borderRadius: string;
+  borderRadius?: BorderRadiusValues;
   disabled: boolean;
   isOpen: boolean;
 }>`
   display: flex;
   justify-content: space-between;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  
   &:focus {
     outline: none;
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
@@ -70,12 +73,14 @@ export const TitleWrapper = styled.div<{
 
   ${AccordionBox}:last-of-type & {
     &:focus {
-      ${({ borderRadius, isOpen }) =>
-        !isOpen &&
-        `
-        border-bottom-left-radius: ${borderRadius}; 
-        border-bottom-right-radius: ${borderRadius};
-        `}}
+      ${({ borderRadius, isOpen, theme }) => {
+        if (!isOpen) {
+          const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+          return `border-bottom-left-radius: ${borderRadiusValue}; 
+                  border-bottom-right-radius: ${borderRadiusValue};`;
+        }
+        return '';
+      }}}
     }
   }
 `;
@@ -92,36 +97,40 @@ export const Truncate = styled.div`
  * component if opting out of default values.
  */
 export const Container = styled.div<{
-  borderRadius?: string;
+  borderRadius?: BorderRadiusValues;
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
-  ${({ borderRadius = '4px' }) => `
+  ${({ borderRadius, theme }) => {
+    const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+
+    return `
     > div:first-of-type {
-      border-top-left-radius: ${borderRadius};
-      border-top-right-radius: ${borderRadius};
+      border-top-left-radius: ${borderRadiusValue};
+      border-top-right-radius: ${borderRadiusValue};
 
       ${TitleWrapper} {
-        border-top-left-radius: ${borderRadius};
-        border-top-right-radius: ${borderRadius};
+        border-top-left-radius: ${borderRadiusValue};
+        border-top-right-radius: ${borderRadiusValue};
       }
 
       ${AccordionBox} {
-        border-top-left-radius: ${borderRadius};
-        border-top-right-radius: ${borderRadius};
+        border-top-left-radius: ${borderRadiusValue};
+        border-top-right-radius: ${borderRadiusValue};
       }
     }
 
     > div:last-of-type {
-      border-bottom-left-radius: ${borderRadius};
-      border-bottom-right-radius: ${borderRadius};
+      border-bottom-left-radius: ${borderRadiusValue};
+      border-bottom-right-radius: ${borderRadiusValue};
 
       ${AccordionBox} {
-        border-bottom-left-radius: ${borderRadius};
-        border-bottom-right-radius: ${borderRadius};
+        border-bottom-left-radius: ${borderRadiusValue};
+        border-bottom-right-radius: ${borderRadiusValue};
       }
     }
-  `}
+  `;
+  }}
 `;

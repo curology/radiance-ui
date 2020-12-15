@@ -46,7 +46,7 @@ export const CrossIconContainer = styled.button`
   z-index: ${Z_SCALE.e2000};
   width: 40px;
   height: 40px;
-  border-radius: 40px;
+  border-radius: 50%;
   background: ${({ theme }) => theme.COLORS.white};
   display: flex;
   flex-flow: row nowrap;
@@ -75,8 +75,8 @@ export const HeaderImageContainer = styled.div`
     min-height: 240px;
     max-height: 240px;
     width: 100%;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
+    border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+    border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   }
 
   ${MEDIA_QUERIES.mdUp} {
@@ -86,8 +86,8 @@ export const HeaderImageContainer = styled.div`
     img {
       height: 264px;
       max-height: 264px;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+      border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     }
   }
 `;
@@ -146,8 +146,8 @@ export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   ${({ theme }) => commonHeaderBarStyles(theme)}
 
   top: 56px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: none;
 
   transition: opacity ${ANIMATION.defaultTiming}
@@ -215,15 +215,15 @@ type HasHeaderImageProps = {
 // 272px comes from 32px top overlay + 240px image
 export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
   ${MEDIA_QUERIES.mdUp} {
-    border-radius: 8px;
+    border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     margin-top: 56px;
     overflow-y: auto;
     height: 100%;
@@ -235,8 +235,8 @@ export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   flex-flow: column nowrap;
   justify-content: space-between;
   min-height: 100%;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background: ${({ theme }) => theme.COLORS.white};
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage

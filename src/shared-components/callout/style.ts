@@ -9,7 +9,7 @@ const ParentContainer = styled.div`
 const CalloutContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.infoLight};
   padding: ${SPACER.medium};
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

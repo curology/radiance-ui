@@ -8,6 +8,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 
+export * from './borderRadius.stories';
 export * from './boxShadows.stories';
 export * from './colors.stories';
 export * from './fonts.stories';

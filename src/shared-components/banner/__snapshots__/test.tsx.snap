@@ -51,7 +51,7 @@ exports[`Banner UI snapshots renders error type and text 1`] = `
   position: relative;
   margin: 0 auto 0.5rem;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: #BD200F;
   box-shadow: 0px 8px 24px rgba(189,32,15,0.05);
 }
@@ -153,7 +153,7 @@ exports[`Banner UI snapshots renders info type and text 1`] = `
   position: relative;
   margin: 0 auto 0.5rem;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: #332E54;
   box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
 }
@@ -211,7 +211,7 @@ exports[`Banner UI snapshots renders success type and text 1`] = `
   position: relative;
   margin: 0 auto 0.5rem;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   background-color: #2B6E33;
   box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
 }
