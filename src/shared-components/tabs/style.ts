@@ -2,12 +2,7 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
-  SPACER,
-  ANIMATION,
-  MEDIA_QUERIES,
-  BORDER_RADIUS,
-} from '../../constants';
+import { SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -34,7 +29,7 @@ export const TabItem = styled.button<{ active: boolean }>`
   margin: 0;
   padding: ${SPACER.medium} ${SPACER.large};
   transition: ${ANIMATION.defaultTiming};
-  border-radius: ${BORDER_RADIUS.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
 
   color: ${({ active, theme }) =>
     active ? theme.COLORS.primary : theme.COLORS.textDisabled};

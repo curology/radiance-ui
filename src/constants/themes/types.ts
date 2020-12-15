@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { primaryTheme } from './primaryTheme';
 import { secondaryTheme } from './secondaryTheme';
 
+type BorderRadius =
+  | typeof primaryTheme['BORDER_RADIUS']
+  | typeof secondaryTheme['BORDER_RADIUS'];
+
 type BoxShadows =
   | typeof primaryTheme['BOX_SHADOWS']
   | typeof secondaryTheme['BOX_SHADOWS'];
@@ -24,6 +28,7 @@ export const COLORS_PROP_TYPES = PropTypes.oneOf([
 
 export type ThemeType = {
   __type: 'primary' | 'secondary';
+  BORDER_RADIUS: BorderRadius;
   BOX_SHADOWS: BoxShadows;
   COLORS: Colors;
   FONTS: Fonts;

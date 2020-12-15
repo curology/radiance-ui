@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { BORDER_RADIUS, SPACER, ThemeType } from '../../constants';
+import { SPACER, ThemeType } from '../../constants';
 
 import { StatusType } from '.';
 
@@ -42,7 +42,7 @@ const secondaryStyle = (theme: ThemeType) => `
 
 export const ChipStyles = styled.div<{ status: StatusType }>`
   align-items: center;
-  border-radius: ${BORDER_RADIUS.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
   display: inline-flex;
   height: ${SPACER.large};
   flex-flow: row nowrap;

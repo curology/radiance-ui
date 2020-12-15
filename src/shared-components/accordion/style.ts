@@ -1,12 +1,6 @@
 import styled from '@emotion/styled';
 
-import {
-  ANIMATION,
-  BORDER_RADIUS,
-  BREAKPOINTS,
-  SPACER,
-  ThemeType,
-} from '../../constants';
+import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
 export const Content = styled.div`
   padding: ${SPACER.medium};
@@ -104,30 +98,34 @@ export const Container = styled.div<{
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
-  ${({ borderRadius = BORDER_RADIUS.small }) => `
+  ${({ borderRadius, theme }) => {
+    const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+
+    return `
     > div:first-of-type {
-      border-top-left-radius: ${borderRadius};
-      border-top-right-radius: ${borderRadius};
+      border-top-left-radius: ${borderRadiusValue};
+      border-top-right-radius: ${borderRadiusValue};
 
       ${TitleWrapper} {
-        border-top-left-radius: ${borderRadius};
-        border-top-right-radius: ${borderRadius};
+        border-top-left-radius: ${borderRadiusValue};
+        border-top-right-radius: ${borderRadiusValue};
       }
 
       ${AccordionBox} {
-        border-top-left-radius: ${borderRadius};
-        border-top-right-radius: ${borderRadius};
+        border-top-left-radius: ${borderRadiusValue};
+        border-top-right-radius: ${borderRadiusValue};
       }
     }
 
     > div:last-of-type {
-      border-bottom-left-radius: ${borderRadius};
-      border-bottom-right-radius: ${borderRadius};
+      border-bottom-left-radius: ${borderRadiusValue};
+      border-bottom-right-radius: ${borderRadiusValue};
 
       ${AccordionBox} {
-        border-bottom-left-radius: ${borderRadius};
-        border-bottom-right-radius: ${borderRadius};
+        border-bottom-left-radius: ${borderRadiusValue};
+        border-bottom-right-radius: ${borderRadiusValue};
       }
     }
-  `}
+  `;
+  }}
 `;

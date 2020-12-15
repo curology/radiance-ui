@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { BORDER_RADIUS, SPACER } from '../../constants';
+import { SPACER } from '../../constants';
 
 const ParentContainer = styled.div`
   max-width: 327px;
@@ -9,7 +9,7 @@ const ParentContainer = styled.div`
 const CalloutContainer = styled.div`
   background-color: ${({ theme }) => theme.COLORS.infoLight};
   padding: ${SPACER.medium};
-  border-radius: ${BORDER_RADIUS.medium};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;

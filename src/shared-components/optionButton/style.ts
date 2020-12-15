@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, SPACER, ThemeType, BORDER_RADIUS } from '../../constants';
+import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
 type BaseIconWrapperStylesProps = {
@@ -13,9 +13,10 @@ type BaseIconWrapperStylesProps = {
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
+  theme: ThemeType,
 ) =>
   optionType === 'checkbox'
-    ? `border-radius: ${BORDER_RADIUS.small};`
+    ? `border-radius: ${theme.BORDER_RADIUS.small};`
     : 'border-radius: 50%';
 
 const getTypeColor = (
@@ -71,7 +72,7 @@ const getBaseIconWrapperStyles = ({
   align-items: center;
   transition: all ${ANIMATION.defaultTiming};
 
-  ${getOptionTypeStyles(optionType)};
+  ${getOptionTypeStyles(optionType, theme)};
 
   svg {
     opacity: 0;

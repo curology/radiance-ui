@@ -2,13 +2,7 @@ import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import {
-  ANIMATION,
-  BORDER_RADIUS,
-  SPACER,
-  ThemeColors,
-  ThemeType,
-} from '../../constants';
+import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 
 import { ButtonTypeWithAction } from '.';
@@ -177,7 +171,7 @@ export const baseButtonStyles = ({
 }: BaseButtonStylesTypes) => `
   ${TYPOGRAPHY_STYLE.button(theme)}
   appearance: none;
-  border-radius:  ${BORDER_RADIUS.small};
+  border-radius:  ${theme.BORDER_RADIUS.small};
   border-style: solid;
   border-width: 1px;
   cursor: pointer;

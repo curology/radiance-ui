@@ -1,13 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
-import {
-  MEDIA_QUERIES,
-  SPACER,
-  ANIMATION,
-  ThemeType,
-  BORDER_RADIUS,
-} from '../../constants';
+import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
 
 import { AlertType } from '.';
 
@@ -63,7 +57,7 @@ export const AlertContainer = styled.button<{
   margin: 0 auto ${SPACER.small};
   padding: 0;
   width: 327px;
-  border-radius: ${BORDER_RADIUS.medium};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   opacity: ${({ exiting }) => (exiting ? '0' : '1')};
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   transition: ${ANIMATION.defaultTiming};

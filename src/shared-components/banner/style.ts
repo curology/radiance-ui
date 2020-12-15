@@ -1,12 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import {
-  BORDER_RADIUS,
-  MEDIA_QUERIES,
-  SPACER,
-  ThemeType,
-} from '../../constants';
+import { MEDIA_QUERIES, SPACER, ThemeType } from '../../constants';
 
 import { BannerType } from '.';
 
@@ -40,7 +35,7 @@ export const BannerContainer = styled.button<{
   position: relative;
   margin: 0 auto ${SPACER.small};
   padding: ${SPACER.medium};
-  border-radius: ${BORDER_RADIUS.medium};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
 
   ${({ bannerType, theme }) => {
     switch (bannerType) {

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { SPACER, BORDER_RADIUS } from '../../constants';
+import { SPACER } from '../../constants';
 
 import { ArrowAlignTypes, PositionTypes } from '.';
 
@@ -104,8 +104,8 @@ export const TooltipBox = styled.div<{
 
   background: ${({ theme }) => theme.COLORS.primary};
   box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
-  border-radius: ${({ isSmall }) =>
-    isSmall ? BORDER_RADIUS.small : BORDER_RADIUS.medium};
+  border-radius: ${({ isSmall, theme }) =>
+    isSmall ? theme.BORDER_RADIUS.small : theme.BORDER_RADIUS.medium};
   color: ${({ theme }) => theme.COLORS.white};
   min-width: ${({ isSmall }) => (isSmall ? '0px' : '100px')};
   opacity: ${({ open }) => (open ? '1' : '0')};

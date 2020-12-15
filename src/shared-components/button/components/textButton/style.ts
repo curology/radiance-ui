@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
 
-import { BORDER_RADIUS } from '../../../../constants';
-
 export const BaseTextButton = styled.button<{ disabled: boolean }>`
   border-color: transparent;
   background-color: transparent;
-  border-radius: ${BORDER_RADIUS.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
 
   color: ${({ disabled, theme }) =>
     `${disabled ? theme.COLORS.textDisabled : theme.COLORS.primary}`};
