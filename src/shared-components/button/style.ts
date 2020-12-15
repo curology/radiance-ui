@@ -171,7 +171,7 @@ export const baseButtonStyles = ({
 }: BaseButtonStylesTypes) => `
   ${TYPOGRAPHY_STYLE.button(theme)}
   appearance: none;
-  border-radius:  ${theme.BORDER_RADIUS.small};
+  border-radius: ${theme.BORDER_RADIUS.small};
   border-style: solid;
   border-width: 1px;
   cursor: pointer;

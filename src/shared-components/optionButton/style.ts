@@ -31,10 +31,11 @@ const getTypeColor = (
 };
 
 export const ClickableContainer = styled.button<{
-  borderRadius: string;
+  borderRadius?: string;
   containerType: ContainerType;
 }>`
-  border-radius: ${({ borderRadius }) => borderRadius};
+  border-radius: ${({ borderRadius, theme }) =>
+    borderRadius || theme.BORDER_RADIUS.small};
   ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};

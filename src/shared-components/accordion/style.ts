@@ -56,13 +56,14 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
 `;
 
 export const TitleWrapper = styled.div<{
-  borderRadius: string;
+  borderRadius?: string;
   disabled: boolean;
   isOpen: boolean;
 }>`
   display: flex;
   justify-content: space-between;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  
   &:focus {
     outline: none;
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
@@ -70,12 +71,14 @@ export const TitleWrapper = styled.div<{
 
   ${AccordionBox}:last-of-type & {
     &:focus {
-      ${({ borderRadius, isOpen }) =>
-        !isOpen &&
-        `
-        border-bottom-left-radius: ${borderRadius}; 
-        border-bottom-right-radius: ${borderRadius};
-        `}}
+      ${({ borderRadius, isOpen, theme }) => {
+        if (!isOpen) {
+          const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+          return `border-bottom-left-radius: ${borderRadiusValue}; 
+                  border-bottom-right-radius: ${borderRadiusValue};`;
+        }
+        return '';
+      }}}
     }
   }
 `;

@@ -48,7 +48,7 @@ export const ReactToggleButtonContainer = styled.div`
       &:focus {
         box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
         outline: none;
-        border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+        border-radius: 12px;
       }
     }
   }

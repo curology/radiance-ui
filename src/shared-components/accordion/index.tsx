@@ -55,8 +55,6 @@ export const Accordion = ({
 
   const contentRef = useRef<HTMLDivElement>(null);
 
-  const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
-
   useEffect(() => {
     const nextHeight =
       isOpen && contentRef.current
@@ -82,7 +80,7 @@ export const Accordion = ({
             onClick(event);
           }
         }}
-        borderRadius={borderRadiusValue}
+        borderRadius={borderRadius}
         onKeyDown={handleKeyDown}
         disabled={!!disabled}
         role="button"

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
 
 import {
   ClickableContainer,
@@ -41,46 +40,41 @@ export const OptionButton = ({
   subtext,
   text,
   ...rest
-}: OptionButtonProps) => {
-  const theme = useTheme();
-  const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
-
-  return (
-    <ClickableContainer
-      borderRadius={borderRadiusValue}
-      onClick={onClick}
-      type="button"
-      role={optionType}
-      containerType="clickable"
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...rest}
-    >
-      <FlexContainer>
-        {icon ? (
-          <IconWrapper
-            selected={selected}
-            optionType={optionType}
-            buttonType={buttonType}
-          >
-            {selected ? <CheckmarkIcon /> : icon}
-          </IconWrapper>
-        ) : (
-          <CheckmarkWrapper
-            selected={selected}
-            optionType={optionType}
-            buttonType={buttonType}
-          >
-            <CheckmarkIcon />
-          </CheckmarkWrapper>
-        )}
-        <TextContainer>
-          <Text>{text}</Text>
-          {subtext && <SubText>{subtext}</SubText>}
-        </TextContainer>
-      </FlexContainer>
-    </ClickableContainer>
-  );
-};
+}: OptionButtonProps) => (
+  <ClickableContainer
+    borderRadius={borderRadius}
+    onClick={onClick}
+    type="button"
+    role={optionType}
+    containerType="clickable"
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    {...rest}
+  >
+    <FlexContainer>
+      {icon ? (
+        <IconWrapper
+          selected={selected}
+          optionType={optionType}
+          buttonType={buttonType}
+        >
+          {selected ? <CheckmarkIcon /> : icon}
+        </IconWrapper>
+      ) : (
+        <CheckmarkWrapper
+          selected={selected}
+          optionType={optionType}
+          buttonType={buttonType}
+        >
+          <CheckmarkIcon />
+        </CheckmarkWrapper>
+      )}
+      <TextContainer>
+        <Text>{text}</Text>
+        {subtext && <SubText>{subtext}</SubText>}
+      </TextContainer>
+    </FlexContainer>
+  </ClickableContainer>
+);
 
 OptionButton.propTypes = {
   borderRadius: PropTypes.string,
