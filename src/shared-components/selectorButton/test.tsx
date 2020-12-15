@@ -74,7 +74,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstElementChild).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(0);
       });
 
       it("hides icon for radio button size 'small'", () => {
@@ -90,7 +90,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstElementChild).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(0);
       });
 
       it("displays icon for checkbox with size 'large'", () => {
@@ -106,7 +106,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstElementChild).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(1);
       });
 
       it("displays icon for radio button with size 'large'", () => {
@@ -122,7 +122,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.firstElementChild).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(1);
       });
 
       it('displays check mark for checked checkbox', () => {
