@@ -41,7 +41,6 @@ describe('<Toggle />', () => {
       const { getByRole } = render(<Toggle checked={false} onChange={spy} />);
 
       userEvent.click(getByRole('checkbox'));
-
       expect(spy).toHaveBeenCalledWith(false);
     });
   });
