@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import { useTheme } from 'emotion-theming';
 
+import { ThemeType } from '../../constants';
 import { ChevronIcon } from '../../icons';
 import Thumbnails from './thumbnails';
 import {
@@ -14,9 +15,15 @@ import {
   Truncate,
 } from './style';
 
+export type BorderRadiusValues =
+  | valueof<ThemeType['BORDER_RADIUS']>
+  | '0.25rem'
+  | '0.5rem'
+  | '2rem';
+
 type AccordionProps = {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
-  borderRadius?: string;
+  borderRadius?: BorderRadiusValues;
   /** node(s) that will render only when expanded */
   children: React.ReactNode;
   /** when true, the accordion will be greyed out and the onClick prop will be disabled */

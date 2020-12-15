@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 
 import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
+import { BorderRadiusValues } from '.';
+
 export const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
@@ -56,7 +58,7 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
 `;
 
 export const TitleWrapper = styled.div<{
-  borderRadius?: string;
+  borderRadius?: BorderRadiusValues;
   disabled: boolean;
   isOpen: boolean;
 }>`
@@ -95,7 +97,7 @@ export const Truncate = styled.div`
  * component if opting out of default values.
  */
 export const Container = styled.div<{
-  borderRadius?: string;
+  borderRadius?: BorderRadiusValues;
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
