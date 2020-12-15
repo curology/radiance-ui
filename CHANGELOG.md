@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v16.1.0
+
+- [Theming] Adds theming logic for border radius. Changed Container type message border radius from 16px to 8px ([#642](https://github.com/curology/radiance-ui/pull/642))
+
 # v16.0.0
 
 - [Icons] **BREAKING CHANGE**: Renames a number of icon components:
