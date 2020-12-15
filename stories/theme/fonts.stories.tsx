@@ -4,7 +4,7 @@ import { useTheme } from 'emotion-theming';
 import { SPACER } from 'src/constants';
 
 const MainContainer = styled.div`
-  padding: ${SPACER.large} ${SPACER.large};
+  padding: ${SPACER.xlarge};
 `;
 
 export const FONTS = () => {

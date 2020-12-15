@@ -41,7 +41,7 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
   margin: 0 auto 0.5rem;
   padding: 0;
   width: 327px;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;
@@ -250,7 +250,7 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
   margin: 0 auto 0.5rem;
   padding: 0;
   width: 327px;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;
@@ -459,7 +459,7 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
   margin: 0 auto 0.5rem;
   padding: 0;
   width: 327px;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;
@@ -721,7 +721,7 @@ exports[`Alert UI snapshots renders error alert 1`] = `
   margin: 0 auto 0.5rem;
   padding: 0;
   width: 327px;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;
@@ -900,7 +900,7 @@ exports[`Alert UI snapshots renders success alert 1`] = `
   margin: 0 auto 0.5rem;
   padding: 0;
   width: 327px;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   opacity: 1;
   -webkit-animation: animation-0 350ms 1;
   animation: animation-0 350ms 1;

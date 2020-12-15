@@ -29,7 +29,7 @@ export const TabItem = styled.button<{ active: boolean }>`
   margin: 0;
   padding: ${SPACER.medium} ${SPACER.large};
   transition: ${ANIMATION.defaultTiming};
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
 
   color: ${({ active, theme }) =>
     active ? theme.COLORS.primary : theme.COLORS.textDisabled};

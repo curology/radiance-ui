@@ -1,4 +1,4 @@
-export default {
+const Z_SCALE = {
   e0: 0,
   e2: 2,
   e3: 3,
@@ -12,4 +12,6 @@ export default {
    */
   // Todo this should use one of the above declarations, but hacking for now
   modal: 999999,
-};
+} as const;
+
+export default Z_SCALE;

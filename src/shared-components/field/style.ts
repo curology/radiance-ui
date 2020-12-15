@@ -30,7 +30,7 @@ const inputStyles = (theme: ThemeType) => css`
   appearance: none;
   background: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${theme.BORDER_RADIUS.small};
   color: ${theme.COLORS.primaryTint1};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;

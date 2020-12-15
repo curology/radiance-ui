@@ -62,7 +62,7 @@ exports[`<Tabs /> UI snapshot renders with default props 1`] = `
   padding: 1rem 1.5rem;
   -webkit-transition: 350ms;
   transition: 350ms;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #332E54;
 }
 
@@ -106,7 +106,7 @@ exports[`<Tabs /> UI snapshot renders with default props 1`] = `
   padding: 1rem 1.5rem;
   -webkit-transition: 350ms;
   transition: 350ms;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #C3C0CD;
 }
 
@@ -204,7 +204,7 @@ exports[`<Tabs /> UI snapshot renders with initialActiveTabId and onClick props 
   padding: 1rem 1.5rem;
   -webkit-transition: 350ms;
   transition: 350ms;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #332E54;
 }
 
@@ -248,7 +248,7 @@ exports[`<Tabs /> UI snapshot renders with initialActiveTabId and onClick props 
   padding: 1rem 1.5rem;
   -webkit-transition: 350ms;
   transition: 350ms;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #C3C0CD;
 }
 

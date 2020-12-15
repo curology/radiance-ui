@@ -42,7 +42,7 @@ const secondaryStyle = (theme: ThemeType) => `
 
 export const ChipStyles = styled.div<{ status: StatusType }>`
   align-items: center;
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
   display: inline-flex;
   height: ${SPACER.large};
   flex-flow: row nowrap;

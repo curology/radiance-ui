@@ -167,7 +167,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 
 .emotion-9:focus .emotion-6 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .emotion-5 {
@@ -237,7 +237,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #332E54;
   border-color: #332E54;
 }
@@ -314,7 +314,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 
 .emotion-9:focus .emotion-6 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .emotion-5 {
@@ -384,7 +384,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #332E54;
   border-color: #332E54;
 }
@@ -461,7 +461,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 
 .emotion-9:focus .emotion-6 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .emotion-5 {
@@ -531,7 +531,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #A6A1E2;
   border-color: #A6A1E2;
 }
@@ -608,7 +608,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 
 .emotion-8:focus .emotion-5 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .emotion-4 {
@@ -660,7 +660,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: transparent;
   border-color: #332E54;
 }
@@ -726,7 +726,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 
 .emotion-6:focus .emotion-5 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .emotion-4 {
@@ -778,7 +778,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: transparent;
   border-color: #332E54;
 }
