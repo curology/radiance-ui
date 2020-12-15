@@ -43,7 +43,7 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
 .emotion-2 > div:first-of-type > input:focus {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   outline: none;
-  border-radius: 12px;
+  border-radius: 32px;
 }
 
 <div
