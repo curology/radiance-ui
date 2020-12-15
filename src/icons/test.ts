@@ -76,18 +76,20 @@ const ICONS_MAP = {
 
 describe('icons', () => {
   describe('exported icons', () => {
-    describe(ICONS_MAP.emojis, () => testIconDirectory(ICONS_MAP.emojis));
-    describe(ICONS_MAP.glyphs, () => testIconDirectory(ICONS_MAP.glyphs));
-    describe(ICONS_MAP.icons, () => testIconDirectory(ICONS_MAP.icons));
-    describe(ICONS_MAP.logos, () => testIconDirectory(ICONS_MAP.logos));
-    describe(ICONS_MAP.navIcons, () => testIconDirectory(ICONS_MAP.navIcons));
+    describe(`${ICONS_MAP.emojis}`, () => testIconDirectory(ICONS_MAP.emojis));
+    describe(`${ICONS_MAP.glyphs}`, () => testIconDirectory(ICONS_MAP.glyphs));
+    describe(`${ICONS_MAP.icons}`, () => testIconDirectory(ICONS_MAP.icons));
+    describe(`${ICONS_MAP.logos}`, () => testIconDirectory(ICONS_MAP.logos));
+    describe(`${ICONS_MAP.navIcons}`, () =>
+      testIconDirectory(ICONS_MAP.navIcons));
   });
 
   describe('generated icons', () => {
-    describe(ICONS_MAP.emojis, () => testSvgDirectory(ICONS_MAP.emojis));
-    describe(ICONS_MAP.glyphs, () => testSvgDirectory(ICONS_MAP.glyphs));
-    describe(ICONS_MAP.icons, () => testSvgDirectory(ICONS_MAP.icons));
-    describe(ICONS_MAP.logos, () => testSvgDirectory(ICONS_MAP.logos));
-    describe(ICONS_MAP.navIcons, () => testSvgDirectory(ICONS_MAP.navIcons));
+    describe(`${ICONS_MAP.emojis}`, () => testSvgDirectory(ICONS_MAP.emojis));
+    describe(`${ICONS_MAP.glyphs}`, () => testSvgDirectory(ICONS_MAP.glyphs));
+    describe(`${ICONS_MAP.icons}`, () => testSvgDirectory(ICONS_MAP.icons));
+    describe(`${ICONS_MAP.logos}`, () => testSvgDirectory(ICONS_MAP.logos));
+    describe(`${ICONS_MAP.navIcons}`, () =>
+      testSvgDirectory(ICONS_MAP.navIcons));
   });
 });

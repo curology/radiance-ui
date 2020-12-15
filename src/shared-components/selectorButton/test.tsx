@@ -176,6 +176,7 @@ describe('<SelectorButton />', () => {
       expect(spy).toHaveBeenCalled();
     });
 
+    // eslint-disable-next-line jest/expect-expect
     it('Does nothing when no onClick is set', () => {
       const wrapper = mount(<SelectorButton checked={false} />);
       // Just check that no exception is thrown
