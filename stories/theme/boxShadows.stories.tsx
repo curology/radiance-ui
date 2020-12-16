@@ -9,8 +9,8 @@ const MainContainer = styled.div`
   padding: ${SPACER.xlarge};
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 export const BoxShadows = () => {
@@ -25,7 +25,8 @@ export const BoxShadows = () => {
         const boxShadowValue = theme.BOX_SHADOWS[boxShadowKey];
         const boxShadowBoxStyles = css`
           width: 350px;
-          margin: ${SPACER.large};
+          min-height: 135px;
+          margin: 0 ${SPACER.x5large} ${SPACER.x5large} 0;
           box-shadow: ${boxShadowValue};
         `;
 

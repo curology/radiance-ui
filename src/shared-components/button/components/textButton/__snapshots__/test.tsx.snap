@@ -36,7 +36,7 @@ exports[`<TextButton /> UI snapshots renders with disabled prop 1`] = `
 .emotion-2 {
   border-color: transparent;
   background-color: transparent;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #C3C0CD;
   cursor: not-allowed;
 }
@@ -69,7 +69,7 @@ exports[`<TextButton /> UI snapshots renders without any props 1`] = `
 .emotion-2 {
   border-color: transparent;
   background-color: transparent;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #332E54;
   cursor: pointer;
 }

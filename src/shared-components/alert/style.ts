@@ -57,7 +57,7 @@ export const AlertContainer = styled.button<{
   margin: 0 auto ${SPACER.small};
   padding: 0;
   width: 327px;
-  border-radius: ${SPACER.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   opacity: ${({ exiting }) => (exiting ? '0' : '1')};
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   transition: ${ANIMATION.defaultTiming};

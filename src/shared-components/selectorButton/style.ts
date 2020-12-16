@@ -23,8 +23,10 @@ export const OuterContainer = styled.div<{ selector: SelectorType }>`
     ${SelectorContainer} {
       box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
 
-      ${({ selector }) => `
-        border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+      ${({ selector, theme }) => `
+        border-radius: ${
+          selector === 'checkbox' ? theme.BORDER_RADIUS.small : '50%'
+        };
       `};
     }
   }
@@ -76,8 +78,10 @@ export const Selector = styled.div<{
   justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
 
-  ${({ selector }) => `
-    border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+  ${({ selector, theme }) => `
+    border-radius: ${
+      selector === 'checkbox' ? theme.BORDER_RADIUS.small : '50%'
+    };
   `}
 
   ${({ type, checked, disabled, theme }) => {

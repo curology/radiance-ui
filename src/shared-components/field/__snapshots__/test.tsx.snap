@@ -45,7 +45,7 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
   appearance: none;
   background: #FFFFFF;
   border: 1px solid #EDEDF0;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
@@ -151,7 +151,7 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
   appearance: none;
   background: #FFFFFF;
   border: 1px solid #EDEDF0;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
@@ -342,7 +342,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
   appearance: none;
   background: #FFFFFF;
   border: 1px solid #EDEDF0;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;

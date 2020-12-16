@@ -38,8 +38,8 @@ export const ModalContainer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   padding: ${SPACER.x4large} ${SPACER.large} ${SPACER.xlarge};
@@ -69,7 +69,7 @@ export const ModalContainer = styled.div`
   ${MEDIA_QUERIES.mdUp} {
     position: relative;
     width: 456px;
-    border-radius: 8px;
+    border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     padding: ${SPACER.x4large};
 
     &.entering,
@@ -91,7 +91,7 @@ export const CrossIconContainer = styled.div`
   z-index: ${Z_SCALE.e2000};
   width: 40px;
   height: 40px;
-  border-radius: 40px;
+  border-radius: 50%;
   background: ${({ theme }) => theme.COLORS.white};
   display: flex;
   flex-flow: row nowrap;

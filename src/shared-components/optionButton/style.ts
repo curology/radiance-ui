@@ -13,7 +13,11 @@ type BaseIconWrapperStylesProps = {
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
-) => (optionType === 'checkbox' ? 'border-radius: 4px' : 'border-radius: 50%');
+  theme: ThemeType,
+) =>
+  optionType === 'checkbox'
+    ? `border-radius: ${theme.BORDER_RADIUS.small};`
+    : 'border-radius: 50%';
 
 const getTypeColor = (
   buttonType: BaseIconWrapperStylesProps['buttonType'],
@@ -27,10 +31,11 @@ const getTypeColor = (
 };
 
 export const ClickableContainer = styled.button<{
-  borderRadius: string;
+  borderRadius?: string;
   containerType: ContainerType;
 }>`
-  border-radius: ${({ borderRadius }) => borderRadius};
+  border-radius: ${({ borderRadius, theme }) =>
+    borderRadius || theme.BORDER_RADIUS.small};
   ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
@@ -68,7 +73,7 @@ const getBaseIconWrapperStyles = ({
   align-items: center;
   transition: all ${ANIMATION.defaultTiming};
 
-  ${getOptionTypeStyles(optionType)};
+  ${getOptionTypeStyles(optionType, theme)};
 
   svg {
     opacity: 0;
