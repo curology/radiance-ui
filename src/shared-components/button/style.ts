@@ -129,7 +129,7 @@ const loadingStyles = `
 
 const disabledStyles = (theme: ThemeType) => `
   background-color: ${theme.COLORS.defaultLight};
-  border-color: ${theme.COLORS.border};
+  border-color: ${theme.COLORS.defaultLight};
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
