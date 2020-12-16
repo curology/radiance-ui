@@ -13,7 +13,9 @@ const statefulLoader = keyframes`
 `;
 
 const primaryLoadingStyles = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.white};
+  background-color: ${
+    theme.__type === 'primary' ? theme.COLORS.white : theme.COLORS.primary
+  };
 `;
 
 const accentLoadingStyles = (buttonColor: ThemeColors) => `

@@ -7,21 +7,37 @@ import { textColorsAssociatedWithColors } from './constants';
 
 import { ButtonTypeWithAction } from '.';
 
-const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
-  background-color: ${buttonColor};
-  border-color: ${buttonColor};
-  color: ${theme.COLORS.white};
-  fill: ${theme.COLORS.white};
+const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
+  let backgroundColor = buttonColor;
+  // If it is not a custom color and the theme is secondary
+  if (
+    backgroundColor === theme.COLORS.primary &&
+    theme.__type === 'secondary'
+  ) {
+    backgroundColor = theme.COLORS.secondary;
+  }
+
+  const fontColor =
+    theme.__type === 'primary' ? theme.COLORS.white : theme.COLORS.primary;
+
+  return `
+  background-color: ${backgroundColor};
+  border-color: ${backgroundColor};
+  color: ${fontColor};
+  fill: ${fontColor};
+
   &:visited,
   &:hover {
     opacity: 0.8;
   }
+  
   &:focus,
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
-    color: ${theme.COLORS.white};
+    color: ${fontColor};
   }
 `;
+};
 
 const secondaryStyles = (
   isLoading: boolean,
