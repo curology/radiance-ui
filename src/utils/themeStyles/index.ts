@@ -1,3 +1,6 @@
+/**
+ *  Any conditional style based on theme.__type should be on this file
+ */
 import { ThemeColors, ThemeType } from '../../constants';
 
 export const primaryButtonFontColor = (theme: ThemeType) =>
@@ -11,7 +14,7 @@ export const primaryButtonBackgroundColor = (
     return theme.COLORS.secondary;
   }
 
-  // If buttonColor is not COLORS.primary then it is custom
+  // If buttonColor is not COLORS.primary then it is custom, return as is
   return buttonColor;
 };
 
