@@ -40,7 +40,7 @@
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build-storybook",
     "tsc": "tsc",
-    "chromatic": "chromatic --skip '@(dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/enzyme**|dependabot/npm_and_yarn/jest**)' --project-token"
+    "chromatic": "chromatic --skip '@(dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/enzyme**|dependabot/npm_and_yarn/jest**|dependabot/npm_and_yarn/husky**)' --project-token"
   },
   "repository": {
     "type": "git",
@@ -73,13 +73,11 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@storybook/addon-a11y": "^6.1.10",
-    "@storybook/addon-actions": "^6.1.10",
-    "@storybook/addon-docs": "^6.1.10",
+    "@storybook/addon-docs": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-knobs": "^6.1.10",
     "@storybook/addon-links": "^6.1.10",
     "@storybook/addon-storysource": "^6.1.10",
-    "@storybook/addon-toolbars": "^6.1.10",
-    "@storybook/addon-viewport": "^6.1.10",
     "@storybook/core": "^6.1.10",
     "@storybook/react": "^6.1.10",
     "@storybook/source-loader": "^6.1.10",
