@@ -4,21 +4,16 @@ import tinycolor from 'tinycolor2';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
+import {
+  primaryButtonFontColor,
+  primaryButtonBackgroundColor,
+} from '../../utils/themeStyles';
 
 import { ButtonTypeWithAction } from '.';
 
 const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
-  let backgroundColor = buttonColor;
-  // If it is not a custom color and the theme is secondary
-  if (
-    backgroundColor === theme.COLORS.primary &&
-    theme.__type === 'secondary'
-  ) {
-    backgroundColor = theme.COLORS.secondary;
-  }
-
-  const fontColor =
-    theme.__type === 'primary' ? theme.COLORS.white : theme.COLORS.primary;
+  const backgroundColor = primaryButtonBackgroundColor(theme, buttonColor);
+  const fontColor = primaryButtonFontColor(theme);
 
   return `
   background-color: ${backgroundColor};
