@@ -3,13 +3,10 @@ import round from 'lodash.round';
 
 import { withDeprecationWarning } from '../../utils';
 import { ThemeType } from '../../constants';
-
-/**
- * We use theme.FONTS.baseFont for all primary styles, but use a
- * different secondary font for Display, Heading, and Title styles
- */
-const setSecondaryHeadingFont = (theme: ThemeType) =>
-  theme.__type === 'secondary' ? `font-family: ${theme.FONTS.headerFont};` : '';
+import {
+  setSecondaryHeadingFont,
+  setButtonStyleFontWeight,
+} from '../../utils/themeStyles';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
@@ -71,13 +68,9 @@ const buttonStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${theme.TYPOGRAPHY.fontSize.button};
   line-height: ${round(20 / 12, 2)};
-  ${
-    theme.__type === 'primary'
-      ? `font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};`
-      : ''
-  }
   letter-spacing: 1px;
   text-transform: uppercase;
+  ${setButtonStyleFontWeight(theme)}
 `;
 
 const linkStyle = () => `
