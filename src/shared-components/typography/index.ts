@@ -68,9 +68,9 @@ const buttonStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${theme.TYPOGRAPHY.fontSize.button};
   line-height: ${round(20 / 12, 2)};
+  ${setButtonStyleFontWeight(theme)}
   letter-spacing: 1px;
   text-transform: uppercase;
-  ${setButtonStyleFontWeight(theme)}
 `;
 
 const linkStyle = () => `
