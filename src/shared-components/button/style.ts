@@ -4,24 +4,35 @@ import tinycolor from 'tinycolor2';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
+import {
+  primaryButtonFontColor,
+  primaryButtonBackgroundColor,
+} from '../../utils/themeStyles';
 
 import { ButtonTypeWithAction } from '.';
 
-const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
-  background-color: ${buttonColor};
-  border-color: ${buttonColor};
-  color: ${theme.COLORS.white};
-  fill: ${theme.COLORS.white};
+const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
+  const backgroundColor = primaryButtonBackgroundColor(theme, buttonColor);
+  const fontColor = primaryButtonFontColor(theme);
+
+  return `
+  background-color: ${backgroundColor};
+  border-color: ${backgroundColor};
+  color: ${fontColor};
+  fill: ${fontColor};
+
   &:visited,
   &:hover {
     opacity: 0.8;
   }
+  
   &:focus,
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
-    color: ${theme.COLORS.white};
+    color: ${fontColor};
   }
 `;
+};
 
 const secondaryStyles = (
   isLoading: boolean,
@@ -113,7 +124,7 @@ const loadingStyles = `
 
 const disabledStyles = (theme: ThemeType) => `
   background-color: ${theme.COLORS.defaultLight};
-  border-color: ${theme.COLORS.border};
+  border-color: ${theme.COLORS.defaultLight};
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
