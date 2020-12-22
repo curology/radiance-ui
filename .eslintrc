@@ -65,6 +65,7 @@
         "extensions": [".js", ".tsx"]
       }
     ],
+    "react/react-in-jsx-scope": "off",
     "react/require-default-props": [
       "error",
       {
