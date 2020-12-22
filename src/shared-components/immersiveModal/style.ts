@@ -3,13 +3,11 @@ import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import Typography from '../typography';
 import {
-  BOX_SHADOWS,
   MEDIA_QUERIES,
   SPACER,
   Z_SCALE,
   ANIMATION,
   ThemeType,
-  TYPOGRAPHY_CONSTANTS,
 } from '../../constants';
 
 export const Overlay = styled.div`
@@ -48,7 +46,7 @@ export const CrossIconContainer = styled.button`
   z-index: ${Z_SCALE.e2000};
   width: 40px;
   height: 40px;
-  border-radius: 40px;
+  border-radius: 50%;
   background: ${({ theme }) => theme.COLORS.white};
   display: flex;
   flex-flow: row nowrap;
@@ -64,7 +62,7 @@ export const CrossIconContainer = styled.button`
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -77,8 +75,8 @@ export const HeaderImageContainer = styled.div`
     min-height: 240px;
     max-height: 240px;
     width: 100%;
-    border-top-left-radius: 32px;
-    border-top-right-radius: 32px;
+    border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+    border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   }
 
   ${MEDIA_QUERIES.mdUp} {
@@ -88,8 +86,8 @@ export const HeaderImageContainer = styled.div`
     img {
       height: 264px;
       max-height: 264px;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+      border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     }
   }
 `;
@@ -120,7 +118,7 @@ const commonHeaderBarStyles = (theme: ThemeType) => `
   width: 100%;
   background: ${theme.COLORS.white};
   color: ${theme.COLORS.primary};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${theme.TYPOGRAPHY.fontSize.caption};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -148,8 +146,8 @@ export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   ${({ theme }) => commonHeaderBarStyles(theme)}
 
   top: 56px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: none;
 
   transition: opacity ${ANIMATION.defaultTiming}
@@ -217,16 +215,15 @@ type HasHeaderImageProps = {
 // 272px comes from 32px top overlay + 240px image
 export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
-  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
     hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
 
   ${MEDIA_QUERIES.mdUp} {
-    box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
-    border-radius: 8px;
+    border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     margin-top: 56px;
     overflow-y: auto;
     height: 100%;
@@ -238,8 +235,8 @@ export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   flex-flow: column nowrap;
   justify-content: space-between;
   min-height: 100%;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background: ${({ theme }) => theme.COLORS.white};
   padding: ${({ hasHeaderImage }): string =>
     hasHeaderImage

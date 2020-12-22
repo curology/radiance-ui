@@ -1,4 +1,4 @@
-export default {
+const SPACER = {
   x2small: '0.125rem', // 2px
   xsmall: '0.25rem', // 4px
   small: '0.5rem', // 8px
@@ -10,4 +10,6 @@ export default {
   x3large: '3rem', // 48px
   x4large: '3.5rem', // 56px
   x5large: '4rem', // 64px
-};
+} as const;
+
+export default SPACER;

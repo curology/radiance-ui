@@ -1,50 +1,46 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { userEvent, render } from 'src/tests/testingLibraryHelpers';
+import { assert } from 'src/utils/assert';
 
-import AcneGlyph from '../../svgs/glyphs/acne-glyph.svg';
+import { AcneGlyph } from '../../icons';
 
 import { OptionButton } from './index';
 
 describe('<OptionButton />', () => {
   describe('UI snapshots', () => {
     it('checkbox selected, without custom icon', () => {
-      const tree = renderer
-        .create(
-          <OptionButton
-            selected
-            onClick={() => undefined}
-            text="checkbox text"
-            optionType="checkbox"
-            buttonType="primary"
-          />,
-        )
-        .toJSON();
+      const { container } = render(
+        <OptionButton
+          selected
+          onClick={() => undefined}
+          text="checkbox text"
+          optionType="checkbox"
+          buttonType="primary"
+        />,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('radio unselected, with icon node prop', () => {
-      const tree = renderer
-        .create(
-          <OptionButton
-            onClick={() => undefined}
-            text="radio text"
-            optionType="radio"
-            icon={<AcneGlyph />}
-            buttonType="secondary"
-          />,
-        )
-        .toJSON();
+      const { container } = render(
+        <OptionButton
+          onClick={() => undefined}
+          text="radio text"
+          optionType="radio"
+          icon={<AcneGlyph />}
+          buttonType="secondary"
+        />,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 
   describe('onClick callback', () => {
     it('is invoked when clicked', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { container } = render(
         <OptionButton
           onClick={spy}
           text="checkbox text"
@@ -52,7 +48,9 @@ describe('<OptionButton />', () => {
         />,
       );
 
-      wrapper.simulate('click');
+      assert(container.firstElementChild);
+
+      userEvent.click(container.firstElementChild);
       expect(spy).toHaveBeenCalled();
     });
   });

@@ -2,7 +2,6 @@ import React from 'react';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RadioButton } from 'src/shared-components';
-import { AcneGlyph } from 'src/svgs/glyphs';
 import {
   ArgsTable,
   Description,
@@ -13,6 +12,8 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
+
+import { AcneGlyph } from '../../src/icons';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);

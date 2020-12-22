@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import CircleSolidIcon from '../../svgs/icons/circle-solid-icon.svg';
+import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
 import {
   OuterContainer,
   Selector,
@@ -58,8 +57,6 @@ export const SelectorButton = ({
         css={css`
           color: ${theme.COLORS.white};
         `}
-        width={16}
-        height={16}
       />
     );
   return (
@@ -79,10 +76,10 @@ export const SelectorButton = ({
         </SelectorIcon>
         <Selector
           type={type}
-          checked={checked}
+          selectorChecked={checked}
           disabled={disabled}
           selector={selector}
-          size={size}
+          selectorSize={size}
         />
       </SelectorContainer>
 

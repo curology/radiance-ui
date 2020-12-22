@@ -2,31 +2,31 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react';
 import styled, { StyledComponent } from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { SPACER, BOX_SHADOWS, MEDIA_QUERIES, ThemeType } from '../../constants';
+import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
 
-const clickableStyle = `
-  box-shadow: ${BOX_SHADOWS.clickable};
+const clickableStyle = (theme: ThemeType) => `
+  box-shadow: ${theme.BOX_SHADOWS.clickable};
   cursor: pointer;
   transition: box-shadow 200ms;
 
   &:hover {
-    box-shadow: ${BOX_SHADOWS.clickableHover};
+    box-shadow: ${theme.BOX_SHADOWS.clickableHover};
   }
 `;
 
-const messageStyle = `
-  border-radius: 16px;
-  box-shadow: ${BOX_SHADOWS.message};
+const messageStyle = (theme: ThemeType) => `
+  border-radius: ${theme.BORDER_RADIUS.medium};
+  box-shadow: ${theme.BOX_SHADOWS.clickable};
 `;
 
 export type ContainerType = 'clickable' | 'message';
 
-const getContainerTypeStyles = (type?: ContainerType) => {
+const getContainerTypeStyles = (theme: ThemeType, type?: ContainerType) => {
   switch (type) {
     case 'message':
-      return messageStyle;
+      return messageStyle(theme);
     case 'clickable':
-      return clickableStyle;
+      return clickableStyle(theme);
     default:
       return ``;
   }
@@ -36,7 +36,7 @@ export const containerStyles = (theme: ThemeType, type?: ContainerType) => `
   background-color: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};
 
-  ${getContainerTypeStyles(type)}
+  ${getContainerTypeStyles(theme, type)}
 `;
 
 export const Section = styled.div`
@@ -50,7 +50,7 @@ export const Section = styled.div`
 
 export const Divider = styled.div`
   margin: 0 ${SPACER.large};
-  border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.divider}`};
+  border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.border}`};
 
   ${MEDIA_QUERIES.lgUp} {
     margin: 0 ${SPACER.x2large};

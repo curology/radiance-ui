@@ -1,7 +1,5 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-
-import { ModalTitle } from './style';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { DialogModal } from './index';
 
@@ -10,13 +8,13 @@ const modalBody = 'Dialog Modal Children Content';
 
 describe('<DialogModal />', () => {
   it('render children content correctly', () => {
-    const wrapper = mount(
+    const { getAllByText } = render(
       <DialogModal title={modalTitle}>
         <div>{modalBody}</div>
       </DialogModal>,
     );
 
-    expect(wrapper.find(ModalTitle).text()).toBe(modalTitle);
-    expect(wrapper.text().includes(modalBody)).toBeTruthy();
+    getAllByText(modalTitle);
+    getAllByText(modalBody);
   });
 });

@@ -1,14 +1,36 @@
-module.exports = {
-  presets: ['@babel/env', '@babel/react', '@emotion/babel-preset-css-prop'],
-  plugins: [
-    '@babel/plugin-proposal-export-namespace-from',
-    '@babel/plugin-proposal-export-default-from',
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-transform-parameters', { loose: true }],
+/**
+ * We want test config to match non-test config as much as possible, but require
+ * a different modules setting for env for jest to understand import statements
+ *
+ * @param {false | 'auto'} modules
+ * @see https://babeljs.io/docs/en/babel-preset-env#modules
+ */
+const getPresets = (modules) => [
+  [
+    '@babel/env',
+    {
+      modules,
+    },
   ],
+  '@babel/react',
+  '@babel/preset-typescript',
+  '@emotion/babel-preset-css-prop',
+];
+
+const plugins = [
+  '@babel/plugin-proposal-export-namespace-from',
+  '@babel/plugin-proposal-export-default-from',
+  ['@babel/plugin-proposal-class-properties', { loose: true }],
+  ['@babel/plugin-transform-parameters', { loose: true }],
+];
+
+module.exports = {
+  presets: getPresets(false),
+  plugins,
   env: {
     test: {
-      presets: ['@babel/preset-typescript'],
+      presets: getPresets('auto'),
+      plugins,
     },
   },
 };

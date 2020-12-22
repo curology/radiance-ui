@@ -1,9 +1,74 @@
 # CHANGELOG
 
+# v16.1.0
+
+- [Theming] Adds theming logic for border radius. Changed Container type message border radius from 16px to 8px ([#642](https://github.com/curology/radiance-ui/pull/642))
+
+# v16.0.0
+
+- [Icons] **BREAKING CHANGE**: Renames a number of icon components:
+  - `Arrow` --> `ArrowIcon`
+  - `TimeAlwaysGlyph` --> `ClockAlwaysGlyph`
+  - `TimeMostOfTheTimeGlyph` --> `ClockMostOfTheTimeGlyph`
+  - `TimeSometimesGlyph` --> `ClockSometimesGlyph`
+  - `TimeNeverGlyph` --> `ClockNeverGlyph`
+  - `CalendarAlwaysGlyph` --> `TimeAlwaysGlyph`
+  - `CalendarMostOfTheTimeGlyph` --> `TimeMostOfTheTimeGlyph`
+  - `CalendarSometimesGlyph` --> `TimeSometimesGlyph`
+  - `CalendarNeverGlyph` --> `TimeNeverGlyph`
+  - `MildAcneEmoji` --> `MildIrritationEmoji`
+  - `MildAcneSelectedEmoji` --> `MildIrritationSelectedEmoji`
+  - `NoticeableAcneEmoji` --> `NoticeableIrritationEmoji`
+  - `NoticeableAcneSelectedEmoji` --> `NoticeableIrritationSelectedEmoji`
+  - `SevereAcneEmoji` --> `SevereIrritationEmoji`
+  - `SevereAcneSelectedEmoji` --> `SevereIrritationSelectedEmoji`
+- [Icons] **BREAKING CHANGE** Removes `height` and `width` default values of `16`, default values now supplied by `svg` files according to type (`16x16` for `Icons`, `20x20` for `NavIcons`, and `48x48` for both Emoji and Glyphs)
+- [Icons] Adds secondary icons for non-Logo icons.
+
+# v15.0.0
+
+- [Theming] **BREAKING** Adds theming logic to box shadows and remove it from constants ([#610](https://github.com/curology/radiance-ui/pull/610))
+- [Fonts/Typography] **BREAKING** Remove FONTS and TYPOGRAPHY_CONSTANTS from constants (access via theme now) ([#614](https://github.com/curology/radiance-ui/pull/614))
+
+# v14.0.1
+
+- [Hotfix] v14.0.0 re-release for CJS build correction
+
+# v14.0.0
+
+- [Theming] Adds theming logic to typography display, heading and title ([#589](https://github.com/curology/radiance-ui/pull/589))
+- [Colors] Complete refactor and cleanup of colors usage ([#584](https://github.com/curology/radiance-ui/pull/584))
+  - **BREAKING**: `COLORS` cannot be imported as a constant anymore. Colors must be accessed via the theme object
+
+# v13.3.0
+
+- [Tab] Update Secondary inactive Tab color ([#588](https://github.com/curology/radiance-ui/pull/588))
+- [Theming] Update Secondary button font-size and font-weight ([#585](https://github.com/curology/radiance-ui/pull/585))
+- [Theming] Update Secondary Colors and Fonts ([#524](https://github.com/curology/radiance-ui/pull/524))
+- [Theming] Updates generation of Icons to be theme-aware ([#529](https://github.com/curology/radiance-ui/pull/529))
+- [Field] Update Secondary placeholder color ([#582](https://github.com/curology/radiance-ui/pull/582))
+- [Icon] Remove hard-coded Arrow Icon fill color ([#580](https://github.com/curology/radiance-ui/pull/580))
+- [Internal] Streamlines multiple `babel.config.js` files into one ([#551](https://github.com/curology/radiance-ui/pull/551))
+- [Internal] Updates multiple dependencies
+
+# v13.2.0
+
+- [Theming] Add TYPOGRAPHY constants to theme object ([#520](https://github.com/curology/radiance-ui/pull/520))
+- [PropTypes] Fix ImmersiveModal title prop typing ([#518](https://github.com/curology/radiance-ui/pull/518))
+
+# v13.1.1
+
+- [Bugfix] Removes manual focus handling for ImmersiveModal, fixing scroll behavior when two or more focusable footer items are present ([#517](https://github.com/curology/radiance-ui/pull/517))
+
+# v13.1.0
+
+- [Theming] Adds FONTS constants to theme objects ([#509](https://github.com/curology/radiance-ui/pull/509))
+- [Theming] Adds `'transparent'` as valid property of COLORS object ([#512](https://github.com/curology/radiance-ui/pull/512))
+
 # v13.0.0
 
 - [Theming] Adds theming functionality to components ([#466](https://github.com/curology/radiance-ui/pull/466))
-  - **BREAKING**: All component usage *must* be wrapped with an `emotion-theming` `<ThemeProvider>`, as component internals require access to a provided theme object. 
+  - **BREAKING**: All component usage _must_ be wrapped with an `emotion-theming` `<ThemeProvider>`, as component internals require access to a provided theme object.
     - See [da0fd4c](https://github.com/curology/radiance-ui/commit/da0fd4ced5c9064c94ebb7c607b845fe156e7e95#diff-e201de4e2ea4ee79f492c0495d7f3fce6389034fe26bfb8f3c877f8c03edf914R88) for how our [https://radiance-ui.curology.com/](https://radiance-ui.curology.com/) storybook site is configured
     - See [#505](https://github.com/curology/radiance-ui/pull/505/files) for wrapping test utilites with theme context.
 

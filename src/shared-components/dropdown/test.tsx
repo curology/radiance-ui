@@ -1,6 +1,5 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
-import { mount } from 'src/tests/enzymeHelpers';
+import { fireEvent, render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';
@@ -17,26 +16,25 @@ describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
-      const wrapper = mount(
+      const { getByRole, getAllByRole, queryAllByRole } = render(
         <Dropdown value="test1" options={options} onChange={() => undefined} />,
       );
       delete window.document.documentElement.ontouchstart;
 
-      expect(wrapper.children().children().first().name()).toEqual(
-        'MobileDropdown',
-      );
+      getByRole('combobox');
+      expect(getAllByRole('option').length).toBe(3);
+      expect(queryAllByRole('button').length).toBe(0);
     });
   });
 
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
-      const wrapper = mount(
+      const { getByRole } = render(
         <Dropdown value="test1" options={options} onChange={() => null} />,
       );
 
-      expect(wrapper.children().children().first().name()).toEqual(
-        'DesktopDropdown',
-      );
+      // button only used in Desktop implementation
+      getByRole('button');
     });
   });
 });
@@ -44,25 +42,22 @@ describe('<Dropdown />', () => {
 describe('<MobileDropdown />', () => {
   describe('UI snapshots', () => {
     it('renders correctly', () => {
-      const tree = renderer
-        .create(
-          <MobileDropdown
-            onMobileSelectChange={() => undefined}
-            borderRadius="4px"
-            options={options}
-            textAlign="left"
-          />,
-        )
-        .toJSON();
-
-      expect(tree).toMatchSnapshot();
+      const { container } = render(
+        <MobileDropdown
+          onMobileSelectChange={() => undefined}
+          borderRadius="4px"
+          options={options}
+          textAlign="left"
+        />,
+      );
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 
   describe('onSelectChange callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getByRole } = render(
         <MobileDropdown
           borderRadius="4px"
           options={options}
@@ -72,7 +67,9 @@ describe('<MobileDropdown />', () => {
         />,
       );
 
-      wrapper.find('select').simulate('change', { target: { value: 'test1' } });
+      const select = getByRole('combobox');
+      fireEvent.change(select, { value: 'test1' });
+
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -80,7 +77,7 @@ describe('<MobileDropdown />', () => {
 
 describe('<DesktopDropdown />', () => {
   it('renders the current option text', () => {
-    const wrapper = mount(
+    const { getByRole } = render(
       <DesktopDropdown
         borderRadius="4px"
         closeDropdown={() => undefined}
@@ -94,15 +91,13 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(wrapper.find('div[role="button"]').text().includes('Test1')).toEqual(
-      true,
-    );
+    getByRole('button', { name: 'Test1' });
   });
 
   describe('onSelectClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getByRole } = render(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -116,7 +111,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('div[role="button"]').simulate('click');
+      userEvent.click(getByRole('button'));
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -124,7 +119,7 @@ describe('<DesktopDropdown />', () => {
   describe('onOptionClick callback', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getAllByRole } = render(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -138,8 +133,9 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      wrapper.find('li').first().simulate('click');
-
+      const listItems = getAllByRole('menuitemradio');
+      // Arbitrarily select last item
+      userEvent.click(listItems[listItems.length - 1]);
       expect(spy).toHaveBeenCalled();
     });
   });

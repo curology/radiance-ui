@@ -91,7 +91,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-7 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
@@ -104,7 +104,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -118,11 +118,11 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ededf0;
-  border-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  fill: #c3c0cd;
+  fill: #C3C0CD;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -130,24 +130,24 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   width: max-content;
 }
 
-.emotion-6:hover {
+.emotion-7:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-6:active,
-.emotion-6:focus {
+.emotion-7:active,
+.emotion-7:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-6:visited,
-.emotion-6:hover {
+.emotion-7:visited,
+.emotion-7:hover {
   opacity: 1;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
-.emotion-2 {
+.emotion-3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -171,7 +171,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   transform: translateX(0);
 }
 
-.emotion-2 > svg {
+.emotion-3 > svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
@@ -180,12 +180,22 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-0 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-1 {
   line-height: 1.5;
   margin: 0;
   padding-top: 2px;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -207,7 +217,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   opacity: 0;
 }
 
-.emotion-4 span {
+.emotion-5 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -215,40 +225,55 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-4 span:nth-of-type(1) {
+.emotion-5 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-4 span:nth-of-type(2) {
+.emotion-5 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-4 span:nth-of-type(3) {
+.emotion-5 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <button
-  className="emotion-6 emotion-7"
-  disabled={true}
-  onClick={[Function]}
+  class="emotion-7 emotion-8"
+  disabled=""
   type="button"
 >
   <div
-    className="emotion-2 emotion-3"
+    class="emotion-3 emotion-4"
   >
-    <svg />
+    <svg
+      class="emotion-0"
+      fill="none"
+      height="16"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M10.69 2.25l1.46 1.77h2.61v9.43H1.26V4.02h2.63l.38-.46 1.06-1.3h5.36v-.01zM11.28 1H4.73L3.29 2.76H0V14.7h16V2.77h-3.27L11.28 1z"
+        fill="currentColor"
+      />
+      <path
+        d="M8.01 6.4c1.12 0 2.02.91 2.02 2.02 0 1.11-.91 2.02-2.02 2.02-1.11 0-2.02-.91-2.02-2.02 0-1.11.9-2.02 2.02-2.02zm0-1.25c-1.81 0-3.27 1.47-3.27 3.27s1.47 3.27 3.27 3.27c1.81 0 3.27-1.47 3.27-3.27S9.81 5.15 8.01 5.15z"
+        fill="currentColor"
+      />
+    </svg>
     <span
-      className="emotion-0 emotion-1"
+      class="emotion-1 emotion-2"
     >
       Button Text
     </span>
   </div>
   <div
-    className=" emotion-4 emotion-5"
-    disabled={true}
+    class=" emotion-5 emotion-6"
+    disabled=""
   >
     <div>
       <span />

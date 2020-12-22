@@ -10,7 +10,7 @@ import {
   IconWrapper,
   CheckmarkWrapper,
 } from './style';
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
+import { CheckmarkIcon } from '../../icons';
 
 type OptionButtonProps = {
   borderRadius?: string;
@@ -31,7 +31,7 @@ type OptionButtonProps = {
 };
 
 export const OptionButton = ({
-  borderRadius = '4px',
+  borderRadius,
   buttonType = 'primary',
   icon,
   onClick,
@@ -57,7 +57,7 @@ export const OptionButton = ({
           optionType={optionType}
           buttonType={buttonType}
         >
-          {selected ? <CheckmarkIcon width={16} height={16} /> : icon}
+          {selected ? <CheckmarkIcon /> : icon}
         </IconWrapper>
       ) : (
         <CheckmarkWrapper
@@ -65,7 +65,7 @@ export const OptionButton = ({
           optionType={optionType}
           buttonType={buttonType}
         >
-          <CheckmarkIcon width={16} height={16} />
+          <CheckmarkIcon />
         </CheckmarkWrapper>
       )}
       <TextContainer>

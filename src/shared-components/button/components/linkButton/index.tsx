@@ -45,7 +45,7 @@ export const LinkButton = ({
   children,
   disabled = false,
   onClick = () => undefined,
-  textColor = '',
+  textColor,
   ...rest
 }: LinkProps) => {
   const theme = useTheme();

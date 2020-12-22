@@ -1,43 +1,38 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Banner } from './index';
 
 describe('Banner UI snapshots', () => {
   test('renders success type and text', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Banner content="Success Banner" type="success" />,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders error type and text', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Banner content="Error banner" type="error" />,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders info type and text', () => {
-    const component = renderer.create(<Banner content="Default banner" />);
+    const { container } = render(<Banner content="Default banner" />);
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('Banner with click handler', () => {
-    jest.useFakeTimers();
     const spy = jest.fn();
-    const component = renderer.create(
+    const { getByRole } = render(
       <Banner content="Banner with click handler" onClick={spy} />,
     );
 
-    component.root.findByType('button').props.onClick();
-    jest.runAllTimers();
+    userEvent.click(getByRole('button'));
     expect(spy).toHaveBeenCalled();
   });
 });
