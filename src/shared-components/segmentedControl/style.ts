@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { SPACER, BOX_SHADOWS } from '../../constants';
+import { SPACER } from '../../constants';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 
 type SegmentItemProps = {
@@ -72,7 +72,7 @@ export const Indicator = styled.button<IndicatorProps>`
   box-shadow: 0px 2px 4px rgba(51, 46, 84, 0.05);
   border: none;
   &:focus {
-    box-shadow: ${BOX_SHADOWS.focusInner};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
     outline: none;
   }
 `;

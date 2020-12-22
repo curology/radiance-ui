@@ -1,6 +1,5 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
-import { mount } from 'src/tests/enzymeHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { SegmentedControl } from './index';
 
@@ -14,22 +13,23 @@ const testSegmentedControl = {
 
 describe('<SegmentedControl />', () => {
   test('renders a regular segmented control', () => {
-    const component = renderer.create(
+    const { container } = render(
       <SegmentedControl {...testSegmentedControl} />,
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('calls onClick when button is clicked', () => {
     const spy = jest.fn();
 
-    const wrapper = mount(
+    const { getByRole } = render(
       <SegmentedControl {...testSegmentedControl} onClick={spy} />,
     );
-    const button = wrapper.find('button').last();
 
-    button.simulate('click');
+    const button = getByRole('button', { name: 'Tab 3' });
+
+    userEvent.click(button);
     expect(spy).toHaveBeenCalled();
   });
 });
