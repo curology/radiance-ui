@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { BOX_SHADOWS, SPACER, ANIMATION, ThemeType } from '../../constants';
+import { SPACER, ANIMATION, ThemeType } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 
 export const HintItem = styled.div`
@@ -30,7 +30,7 @@ const inputStyles = (theme: ThemeType) => css`
   appearance: none;
   background: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${theme.BORDER_RADIUS.small};
   color: ${theme.COLORS.primaryTint1};
   transition: border-color ${ANIMATION.defaultTiming};
   width: 100%;
@@ -41,7 +41,7 @@ const inputStyles = (theme: ThemeType) => css`
   &:focus {
     outline: none;
     border-color: ${theme.COLORS.primary};
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${theme.BOX_SHADOWS.focus};
 
     ~ ${HintItem} {
       max-height: 24px;
@@ -51,11 +51,11 @@ const inputStyles = (theme: ThemeType) => css`
   }
 
   &::placeholder {
-    color: ${theme.COLORS.primaryTint3};
+    color: ${theme.COLORS.textDisabled};
   }
 
   &[disabled] {
-    background-color: ${theme.COLORS.disabled};
+    background-color: ${theme.COLORS.defaultLight};
     color: ${theme.COLORS.textDisabled};
     cursor: not-allowed;
     border: 1px solid ${theme.COLORS.border};
@@ -97,7 +97,7 @@ const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
       border-color: ${
         messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
       };
-      box-shadow: ${BOX_SHADOWS.focus};
+      box-shadow: ${theme.BOX_SHADOWS.focus};
     }
   }
 `;

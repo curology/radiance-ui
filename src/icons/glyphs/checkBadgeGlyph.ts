@@ -1,5 +1,5 @@
-import { CheckBadgeGlyph } from './svgs';
+import { CheckBadgeGlyph, CheckBadgeGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(CheckBadgeGlyph, CheckBadgeGlyph, props);
+  useIcon(CheckBadgeGlyph, CheckBadgeGlyphSecondary, props);

@@ -14,9 +14,6 @@ module.exports = {
   addons: [
     '@storybook/addon-knobs',
     '@storybook/addon-a11y',
-    '@storybook/addon-actions',
-    '@storybook/addon-toolbars',
-    '@storybook/addon-viewport',
     '@storybook/addon-storysource',
     {
       name: '@storybook/addon-docs',
@@ -24,6 +21,14 @@ module.exports = {
         configureJSX: true,
         babelOptions: {},
         sourceLoaderOptions: null,
+      },
+    },
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false,
+        controls: false,
+        docs: false, // Uses custom config above
       },
     },
   ],

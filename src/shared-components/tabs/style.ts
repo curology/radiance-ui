@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { BOX_SHADOWS, SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
+import { SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
 export const TabsContainer = styled.div`
   display: flex;
@@ -29,10 +29,10 @@ export const TabItem = styled.button<{ active: boolean }>`
   margin: 0;
   padding: ${SPACER.medium} ${SPACER.large};
   transition: ${ANIMATION.defaultTiming};
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
 
   color: ${({ active, theme }) =>
-    active ? theme.COLORS.primary : theme.COLORS.primaryTint3};
+    active ? theme.COLORS.primary : theme.COLORS.textDisabled};
 
   &:hover {
     color: ${({ theme }) => theme.COLORS.primary};
@@ -41,6 +41,6 @@ export const TabItem = styled.button<{ active: boolean }>`
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;

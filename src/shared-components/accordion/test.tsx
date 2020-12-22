@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Accordion } from './index';
 
@@ -13,40 +12,36 @@ const testAccordionProps = {
 
 describe('<Accordion />', () => {
   test('renders regular accordion', () => {
-    const component = renderer.create(<Accordion {...testAccordionProps} />);
+    const { container } = render(<Accordion {...testAccordionProps} />);
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders no border accordion', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Accordion {...testAccordionProps} noBorder />,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('renders disabled accordion', () => {
-    const component = renderer.create(
+    const { container } = render(
       <Accordion {...testAccordionProps} disabled />,
     );
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 
   test('invokes onClick when title is clicked', () => {
     const spy = jest.fn();
 
-    const component = mount(
+    const { getByRole } = render(
       <Accordion {...testAccordionProps} onClick={spy} />,
     );
 
-    const title = component.find('div[role="button"]');
+    userEvent.click(getByRole('button'));
 
-    title.simulate('click');
     expect(spy).toHaveBeenCalled();
   });
 });

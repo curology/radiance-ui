@@ -1,4 +1,5 @@
-import { TextureGlyph } from './svgs';
+import { TextureGlyph, TextureGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(TextureGlyph, TextureGlyph, props);
+export default (props: IconProps) =>
+  useIcon(TextureGlyph, TextureGlyphSecondary, props);

@@ -122,7 +122,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -136,11 +136,11 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ededf0;
-  border-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  fill: #c3c0cd;
+  fill: #C3C0CD;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -163,13 +163,13 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:visited,
 .emotion-3:hover {
   opacity: 1;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3 > svg {
@@ -237,7 +237,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-1 span {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .emotion-5 {
@@ -246,20 +246,19 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  className="emotion-6 emotion-7"
+  class="emotion-6 emotion-7"
 >
   <button
-    className="emotion-3 emotion-4"
-    disabled={true}
-    onClick={[Function]}
+    class="emotion-3 emotion-4"
+    disabled=""
     type="button"
   >
     <svg
-      className="emotion-0"
+      class="emotion-0"
       fill="none"
-      height={16}
+      height="16"
       viewBox="0 0 16 16"
-      width={16}
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -272,8 +271,8 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
       />
     </svg>
     <div
-      className="emotion-1 emotion-2"
-      disabled={true}
+      class="emotion-1 emotion-2"
+      disabled=""
     >
       <div>
         <span />
@@ -283,7 +282,7 @@ exports[`<RoundButton /> UI snapshots renders with props 1`] = `
     </div>
   </button>
   <p
-    className="emotion-5"
+    class="emotion-5"
   >
     Button Text
   </p>

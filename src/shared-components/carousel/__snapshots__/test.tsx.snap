@@ -433,7 +433,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 }
 
 .emotion-24 .slick-dots li {
-  background-color: #332e54;
+  background-color: #332E54;
 }
 
 .emotion-5 {
@@ -467,7 +467,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -481,11 +481,11 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ededf0;
-  border-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  fill: #c3c0cd;
+  fill: #C3C0CD;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -508,13 +508,13 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:visited,
 .emotion-3:hover {
   opacity: 1;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3 > svg {
@@ -582,7 +582,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 }
 
 .emotion-1 span {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .emotion-9 {
@@ -609,12 +609,12 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 
 .emotion-7 button {
   background-color: none;
-  border-color: #332e54;
-  color: #332e54;
+  border-color: #332E54;
+  color: #332E54;
 }
 
 .emotion-7 button:hover {
-  color: #332e54;
+  color: #332E54;
 }
 
 .emotion-22 {
@@ -641,7 +641,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -655,10 +655,10 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #332e54;
-  border-color: #332e54;
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: #332E54;
+  border-color: #332E54;
+  color: #FFFFFF;
+  fill: #FFFFFF;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -681,7 +681,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 .emotion-18:active,
 .emotion-18:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-18:visited,
@@ -692,7 +692,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 .emotion-18:focus,
 .emotion-18:not([href]):not([tabindex]):hover,
 .emotion-18:not([href]):not([tabindex]):focus {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 .emotion-18:hover {
@@ -733,7 +733,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 }
 
 .emotion-16 span {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -756,151 +756,149 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
-<div>
+<div
+  class="emotion-26 emotion-27"
+>
   <div
-    class="emotion-26 emotion-27"
+    class="emotion-24 emotion-25"
   >
     <div
-      class="emotion-24 emotion-25"
+      class="slick-slider slick-initialized"
+      dir="ltr"
     >
       <div
-        class="slick-slider slick-initialized"
-        dir="ltr"
+        class="emotion-7 emotion-8"
+        disabled=""
       >
         <div
-          class="emotion-7 emotion-8"
-          disabled=""
+          class="emotion-5 emotion-6"
         >
-          <div
-            class="emotion-5 emotion-6"
+          <button
+            class="emotion-3 emotion-4"
+            disabled=""
+            type="button"
           >
-            <button
-              class="emotion-3 emotion-4"
+            <svg
+              class="emotion-0"
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="emotion-1 emotion-2"
               disabled=""
-              type="button"
             >
-              <svg
-                class="emotion-0"
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
-                  fill="currentColor"
-                />
-              </svg>
-              <div
-                class="emotion-1 emotion-2"
-                disabled=""
-              >
-                <div>
-                  <span />
-                  <span />
-                  <span />
-                </div>
+              <div>
+                <span />
+                <span />
+                <span />
               </div>
-            </button>
-            
-          </div>
+            </div>
+          </button>
+          
         </div>
+      </div>
+      <div
+        class="slick-list"
+      >
         <div
-          class="slick-list"
+          class="slick-track"
+          style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
         >
           <div
-            class="slick-track"
-            style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
           >
-            <div
-              aria-hidden="false"
-              class="slick-slide slick-active slick-current"
-              data-index="0"
-              style="outline: none;"
-              tabindex="-1"
-            >
-              <div>
-                <div
-                  class="emotion-9 emotion-10"
-                  style="width: 100%; display: inline-block;"
-                  tabindex="-1"
-                >
-                  Card 1
-                </div>
+            <div>
+              <div
+                class="emotion-9 emotion-10"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Card 1
               </div>
             </div>
-            <div
-              aria-hidden="false"
-              class="slick-slide slick-active"
-              data-index="1"
-              style="outline: none;"
-              tabindex="-1"
-            >
-              <div>
-                <div
-                  class="emotion-9 emotion-10"
-                  style="width: 100%; display: inline-block;"
-                  tabindex="-1"
-                >
-                  Card 2
-                </div>
+          </div>
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active"
+            data-index="1"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="emotion-9 emotion-10"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Card 2
               </div>
             </div>
-            <div
-              aria-hidden="true"
-              class="slick-slide"
-              data-index="2"
-              style="outline: none;"
-              tabindex="-1"
-            >
-              <div>
-                <div
-                  class="emotion-9 emotion-10"
-                  style="width: 100%; display: inline-block;"
-                  tabindex="-1"
-                >
-                  Card 3
-                </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="emotion-9 emotion-10"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Card 3
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div
+        class="emotion-22 emotion-8"
+      >
         <div
-          class="emotion-22 emotion-8"
+          class="emotion-5 emotion-6"
         >
-          <div
-            class="emotion-5 emotion-6"
+          <button
+            class="emotion-18 emotion-4"
+            type="button"
           >
-            <button
-              class="emotion-18 emotion-4"
-              type="button"
+            <svg
+              class="emotion-0"
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                class="emotion-0"
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M.01 7.41H13.6L7.27 1.09 8.15.2l7.86 7.86-8.19 7.87-.86-.9 6.62-6.37H.01V7.41z"
-                  fill="currentColor"
-                />
-              </svg>
-              <div
-                class="emotion-16 emotion-2"
-              >
-                <div>
-                  <span />
-                  <span />
-                  <span />
-                </div>
+              <path
+                d="M.01 7.41H13.6L7.27 1.09 8.15.2l7.86 7.86-8.19 7.87-.86-.9 6.62-6.37H.01V7.41z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="emotion-16 emotion-2"
+            >
+              <div>
+                <span />
+                <span />
+                <span />
               </div>
-            </button>
-            
-          </div>
+            </div>
+          </button>
+          
         </div>
       </div>
     </div>
@@ -1255,7 +1253,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-24 .slick-dots li {
-  background-color: #332e54;
+  background-color: #332E54;
 }
 
 .emotion-7 {
@@ -1301,7 +1299,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -1315,11 +1313,11 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ededf0;
-  border-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  fill: #c3c0cd;
+  fill: #C3C0CD;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -1342,13 +1340,13 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:visited,
 .emotion-3:hover {
   opacity: 1;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3 > svg {
@@ -1416,7 +1414,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-1 span {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .emotion-9 {
@@ -1449,7 +1447,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -1464,10 +1462,10 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-width: 1px;
-  border-color: #ededf0;
-  background-color: #ffffff;
-  color: #332e54;
-  fill: #332e54;
+  border-color: #EDEDF0;
+  background-color: #FFFFFF;
+  color: #332E54;
+  fill: #332E54;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   min-width: 208px;
   max-width: 325px;
@@ -1491,7 +1489,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 .emotion-18:active,
 .emotion-18:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-18:hover {
@@ -1536,7 +1534,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-16 span {
-  background-color: #332e54;
+  background-color: #332E54;
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -1559,180 +1557,178 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
-<div>
+<div
+  class="emotion-26 emotion-27"
+>
   <div
-    class="emotion-26 emotion-27"
+    class="emotion-24 emotion-25"
   >
     <div
-      class="emotion-24 emotion-25"
+      class="slick-slider slick-initialized"
+      dir="ltr"
     >
       <div
-        class="slick-slider slick-initialized"
-        dir="ltr"
+        class="emotion-7 emotion-8"
+        disabled=""
       >
         <div
-          class="emotion-7 emotion-8"
-          disabled=""
+          class="emotion-5 emotion-6"
         >
-          <div
-            class="emotion-5 emotion-6"
+          <button
+            class="emotion-3 emotion-4"
+            disabled=""
+            type="button"
           >
-            <button
-              class="emotion-3 emotion-4"
+            <svg
+              class="emotion-0"
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="emotion-1 emotion-2"
               disabled=""
-              type="button"
-            >
-              <svg
-                class="emotion-0"
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
-                  fill="currentColor"
-                />
-              </svg>
-              <div
-                class="emotion-1 emotion-2"
-                disabled=""
-              >
-                <div>
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
-            </button>
-            
-          </div>
-        </div>
-        <div
-          class="slick-list"
-          style="padding: 0px 50px;"
-        >
-          <div
-            class="slick-track"
-            style="width: -300px; opacity: 1; transform: translate3d(-50px, 0px, 0px);"
-          >
-            <div
-              aria-hidden="false"
-              class="slick-slide slick-active slick-center slick-current"
-              data-index="0"
-              style="outline: none;"
-              tabindex="-1"
             >
               <div>
-                <div
-                  class="emotion-9 emotion-10"
-                  style="width: 100%; display: inline-block;"
-                  tabindex="-1"
-                >
-                  Card 1
-                </div>
+                <span />
+                <span />
+                <span />
               </div>
             </div>
-            <div
-              aria-hidden="true"
-              class="slick-slide"
-              data-index="1"
-              style="outline: none;"
-              tabindex="-1"
-            >
-              <div>
-                <div
-                  class="emotion-9 emotion-10"
-                  style="width: 100%; display: inline-block;"
-                  tabindex="-1"
-                >
-                  Card 2
-                </div>
-              </div>
-            </div>
-            <div
-              aria-hidden="true"
-              class="slick-slide"
-              data-index="2"
-              style="outline: none;"
-              tabindex="-1"
-            >
-              <div>
-                <div
-                  class="emotion-9 emotion-10"
-                  style="width: 100%; display: inline-block;"
-                  tabindex="-1"
-                >
-                  Card 3
-                </div>
-              </div>
-            </div>
-          </div>
+          </button>
+          
         </div>
-        <div
-          class="emotion-22 emotion-8"
-        >
-          <div
-            class="emotion-5 emotion-6"
-          >
-            <button
-              class="emotion-18 emotion-4"
-              type="button"
-            >
-              <svg
-                class="emotion-0"
-                fill="none"
-                height="16"
-                viewBox="0 0 16 16"
-                width="16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M.01 7.41H13.6L7.27 1.09 8.15.2l7.86 7.86-8.19 7.87-.86-.9 6.62-6.37H.01V7.41z"
-                  fill="currentColor"
-                />
-              </svg>
-              <div
-                class="emotion-16 emotion-2"
-              >
-                <div>
-                  <span />
-                  <span />
-                  <span />
-                </div>
-              </div>
-            </button>
-            
-          </div>
-        </div>
-        <ul
-          class="slick-dots"
-          style="display: block;"
-        >
-          <li
-            class="slick-active"
-          >
-            <button>
-              1
-            </button>
-          </li>
-          <li
-            class=""
-          >
-            <button>
-              2
-            </button>
-          </li>
-          <li
-            class=""
-          >
-            <button>
-              3
-            </button>
-          </li>
-        </ul>
       </div>
+      <div
+        class="slick-list"
+        style="padding: 0px 50px;"
+      >
+        <div
+          class="slick-track"
+          style="width: -300px; opacity: 1; transform: translate3d(-50px, 0px, 0px);"
+        >
+          <div
+            aria-hidden="false"
+            class="slick-slide slick-active slick-center slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="emotion-9 emotion-10"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Card 1
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="1"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="emotion-9 emotion-10"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Card 2
+              </div>
+            </div>
+          </div>
+          <div
+            aria-hidden="true"
+            class="slick-slide"
+            data-index="2"
+            style="outline: none;"
+            tabindex="-1"
+          >
+            <div>
+              <div
+                class="emotion-9 emotion-10"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
+              >
+                Card 3
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="emotion-22 emotion-8"
+      >
+        <div
+          class="emotion-5 emotion-6"
+        >
+          <button
+            class="emotion-18 emotion-4"
+            type="button"
+          >
+            <svg
+              class="emotion-0"
+              fill="none"
+              height="16"
+              viewBox="0 0 16 16"
+              width="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.01 7.41H13.6L7.27 1.09 8.15.2l7.86 7.86-8.19 7.87-.86-.9 6.62-6.37H.01V7.41z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="emotion-16 emotion-2"
+            >
+              <div>
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
+          </button>
+          
+        </div>
+      </div>
+      <ul
+        class="slick-dots"
+        style="display: block;"
+      >
+        <li
+          class="slick-active"
+        >
+          <button>
+            1
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            2
+          </button>
+        </li>
+        <li
+          class=""
+        >
+          <button>
+            3
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

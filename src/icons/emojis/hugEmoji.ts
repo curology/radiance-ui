@@ -1,4 +1,5 @@
-import { HugEmoji } from './svgs';
+import { HugEmoji, HugEmojiSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(HugEmoji, HugEmoji, props);
+export default (props: IconProps) =>
+  useIcon(HugEmoji, HugEmojiSecondary, props);

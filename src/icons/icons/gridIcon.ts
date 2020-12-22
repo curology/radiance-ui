@@ -1,4 +1,5 @@
-import { GridIcon } from './svgs';
+import { GridIcon, GridIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(GridIcon, GridIcon, props);
+export default (props: IconProps) =>
+  useIcon(GridIcon, GridIconSecondary, props);

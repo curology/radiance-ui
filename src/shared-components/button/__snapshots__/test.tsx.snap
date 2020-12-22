@@ -104,7 +104,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -118,11 +118,11 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ededf0;
-  border-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  fill: #c3c0cd;
+  fill: #C3C0CD;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -138,13 +138,13 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 .emotion-7:active,
 .emotion-7:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-7:visited,
 .emotion-7:hover {
   opacity: 1;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3 {
@@ -241,20 +241,19 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 }
 
 <button
-  className="emotion-7 emotion-8"
-  disabled={true}
-  onClick={[Function]}
+  class="emotion-7 emotion-8"
+  disabled=""
   type="button"
 >
   <div
-    className="emotion-3 emotion-4"
+    class="emotion-3 emotion-4"
   >
     <svg
-      className="emotion-0"
+      class="emotion-0"
       fill="none"
-      height={16}
+      height="16"
       viewBox="0 0 16 16"
-      width={16}
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -267,14 +266,14 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
       />
     </svg>
     <span
-      className="emotion-1 emotion-2"
+      class="emotion-1 emotion-2"
     >
       Button Text
     </span>
   </div>
   <div
-    className=" emotion-5 emotion-6"
-    disabled={true}
+    class=" emotion-5 emotion-6"
+    disabled=""
   >
     <div>
       <span />

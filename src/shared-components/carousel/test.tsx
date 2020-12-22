@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'src/tests/reactTestingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Carousel } from './index';
 
@@ -16,7 +16,7 @@ describe('<Carousel />', () => {
         <Carousel numCardsVisible={1}>{cards}</Carousel>,
       );
 
-      expect(container).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with bottom right aligned arrows', () => {
@@ -26,7 +26,7 @@ describe('<Carousel />', () => {
         </Carousel>,
       );
 
-      expect(container).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

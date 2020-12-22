@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 
-import { SPACER, TYPOGRAPHY_CONSTANTS } from '../../constants';
+import { SPACER } from '../../constants';
 
 const ParentContainer = styled.div`
   max-width: 327px;
 `;
 
 const CalloutContainer = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.infoBackground};
+  background-color: ${({ theme }) => theme.COLORS.infoLight};
   padding: ${SPACER.medium};
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -20,7 +20,7 @@ const Text = styled.div<{
   textColor: string;
 }>`
   color: ${({ textColor }) => textColor};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
 `;
 
 const Icon = styled.div<{

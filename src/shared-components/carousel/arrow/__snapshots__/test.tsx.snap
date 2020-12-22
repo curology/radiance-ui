@@ -223,12 +223,12 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
 
 .emotion-7 button {
   background-color: none;
-  border-color: #332e54;
-  color: #332e54;
+  border-color: #332E54;
+  color: #332E54;
 }
 
 .emotion-7 button:hover {
-  color: #332e54;
+  color: #332E54;
 }
 
 .emotion-3 {
@@ -244,7 +244,7 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -258,11 +258,11 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   transition: all 350ms ease-in-out;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #ededf0;
-  border-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  border-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  fill: #c3c0cd;
+  fill: #C3C0CD;
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -285,13 +285,13 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:visited,
 .emotion-3:hover {
   opacity: 1;
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3 > svg {
@@ -349,28 +349,27 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
 }
 
 .emotion-1 span {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 <div
-  className="emotion-7 emotion-8"
-  disabled={true}
+  class="emotion-7 emotion-8"
+  disabled=""
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <button
-      className="emotion-3 emotion-4"
-      disabled={true}
-      onClick={[Function]}
+      class="emotion-3 emotion-4"
+      disabled=""
       type="button"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -379,8 +378,8 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
         />
       </svg>
       <div
-        className="emotion-1 emotion-2"
-        disabled={true}
+        class="emotion-1 emotion-2"
+        disabled=""
       >
         <div>
           <span />
@@ -527,7 +526,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   cursor: pointer;
@@ -542,10 +541,10 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   border-width: 1px;
-  border-color: #ededf0;
-  background-color: #ffffff;
-  color: #332e54;
-  fill: #332e54;
+  border-color: #EDEDF0;
+  background-color: #FFFFFF;
+  color: #332E54;
+  fill: #332E54;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   min-width: 208px;
   max-width: 325px;
@@ -569,7 +568,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:hover {
@@ -624,7 +623,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-1 span {
-  background-color: #332e54;
+  background-color: #332E54;
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -648,24 +647,21 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
-  disabled={false}
+  class="emotion-7 emotion-8"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <button
-      className="emotion-3 emotion-4"
-      disabled={false}
-      onClick={[Function]}
+      class="emotion-3 emotion-4"
       type="button"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -674,8 +670,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
         />
       </svg>
       <div
-        className="emotion-1 emotion-2"
-        disabled={false}
+        class="emotion-1 emotion-2"
       >
         <div>
           <span />

@@ -1,4 +1,5 @@
-import { MoreNavIcon } from './svgs';
+import { MoreNavIcon, MoreNavIconSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(MoreNavIcon, MoreNavIcon, props);
+export default (props: IconProps) =>
+  useIcon(MoreNavIcon, MoreNavIconSecondary, props);
