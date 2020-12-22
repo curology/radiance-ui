@@ -7,7 +7,7 @@ exports[`Container UI snapshots renders basic container 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
 >
   Container Content
 </div>
@@ -28,7 +28,7 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   type="clickable"
 >
   Container Content
@@ -70,22 +70,22 @@ exports[`Container UI snapshots renders container helper components 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  class="emotion-8 emotion-9"
 >
   <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     Section 1
   </div>
   <div
-    className="emotion-2 emotion-3"
+    class="emotion-2 emotion-3"
   />
   <img
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
     src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg"
   />
   <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <div>
       Section 2
@@ -103,7 +103,7 @@ exports[`Container UI snapshots renders message type container 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   type="message"
 >
   Container Content

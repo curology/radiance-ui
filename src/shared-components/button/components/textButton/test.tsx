@@ -1,49 +1,46 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { TextButton } from './index';
 
 describe('<TextButton />', () => {
   describe('UI snapshots', () => {
     it('renders without any props', () => {
-      const tree = renderer
-        .create(<TextButton>Button Text</TextButton>)
-        .toJSON();
+      const { container } = render(<TextButton>Button Text</TextButton>);
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
     it('renders with disabled prop', () => {
-      const tree = renderer
-        .create(<TextButton disabled>Disabled Button Text</TextButton>)
-        .toJSON();
+      const { container } = render(
+        <TextButton disabled>Disabled Button Text</TextButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 
   describe('onClick callback', () => {
     it('should invoke onClick', () => {
       const spy = jest.fn();
-      const wrapper = mount(<TextButton onClick={spy}>Button Text</TextButton>);
+      const { getByRole } = render(
+        <TextButton onClick={spy}>Button Text</TextButton>,
+      );
 
-      const button = wrapper.find('button');
+      userEvent.click(getByRole('button'));
 
-      button.simulate('click');
       expect(spy).toHaveBeenCalled();
     });
 
     it('should not be clickable if disabled', () => {
       const spy = jest.fn();
-      const wrapper = mount(
+      const { getByRole } = render(
         <TextButton disabled onClick={spy}>
           Button Text
         </TextButton>,
       );
 
-      const button = wrapper.find('button');
+      userEvent.click(getByRole('button'));
 
-      button.simulate('click');
       expect(spy).not.toHaveBeenCalled();
     });
   });

@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 837958,
-    "minified": 768341,
-    "gzipped": 90340
+    "bundled": 838566,
+    "minified": 768893,
+    "gzipped": 90370
   },
   "bundle.umd.js": {
-    "bundled": 847782,
-    "minified": 744431,
-    "gzipped": 86322
+    "bundled": 848390,
+    "minified": 744983,
+    "gzipped": 86334
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -752,9 +752,9 @@
     }
   },
   "shared-components/selectorButton/index.js": {
-    "bundled": 9980,
-    "minified": 8990,
-    "gzipped": 2556,
+    "bundled": 10036,
+    "minified": 9046,
+    "gzipped": 2544,
     "treeshaked": {
       "rollup": {
         "code": 604,
@@ -1382,16 +1382,16 @@
     }
   },
   "shared-components/selectorButton/style.js": {
-    "bundled": 24389,
-    "minified": 23581,
-    "gzipped": 4282,
+    "bundled": 24941,
+    "minified": 24077,
+    "gzipped": 4262,
     "treeshaked": {
       "rollup": {
-        "code": 2200,
+        "code": 2216,
         "import_statements": 125
       },
       "webpack": {
-        "code": 3294
+        "code": 3310
       }
     }
   },
