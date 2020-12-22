@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import Typography from '../typography';
-import { MEDIA_QUERIES, SPACER, Z_SCALE, BOX_SHADOWS } from '../../constants';
+import { MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -38,9 +38,9 @@ export const ModalContainer = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  border-top-left-radius: 32px;
-  border-top-right-radius: 32px;
-  box-shadow: 0px -8px 24px rgba(51, 46, 84, 0.05);
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   padding: ${SPACER.x4large} ${SPACER.large} ${SPACER.xlarge};
   overflow-y: auto;
@@ -69,8 +69,7 @@ export const ModalContainer = styled.div`
   ${MEDIA_QUERIES.mdUp} {
     position: relative;
     width: 456px;
-    box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
-    border-radius: 8px;
+    border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     padding: ${SPACER.x4large};
 
     &.entering,
@@ -92,7 +91,7 @@ export const CrossIconContainer = styled.div`
   z-index: ${Z_SCALE.e2000};
   width: 40px;
   height: 40px;
-  border-radius: 40px;
+  border-radius: 50%;
   background: ${({ theme }) => theme.COLORS.white};
   display: flex;
   flex-flow: row nowrap;
@@ -107,6 +106,6 @@ export const CrossIconContainer = styled.div`
   }
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;

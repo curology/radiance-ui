@@ -1,19 +1,19 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, TYPOGRAPHY_CONSTANTS, ThemeType } from '../../constants';
+import { SPACER, ThemeType } from '../../constants';
 
 import { StatusType } from '.';
 
 export const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
-  font-weight: ${TYPOGRAPHY_CONSTANTS.fontWeight.bold};
+  font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
   position: relative;
   top: 1px;
 `;
 
 const defaultStyle = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.defaultBackground};
+  background-color: ${theme.COLORS.defaultLight};
   ${ChipText} {
     color: ${theme.COLORS.primary};
   }
@@ -42,7 +42,7 @@ const secondaryStyle = (theme: ThemeType) => `
 
 export const ChipStyles = styled.div<{ status: StatusType }>`
   align-items: center;
-  border-radius: ${SPACER.xsmall};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
   display: inline-flex;
   height: ${SPACER.large};
   flex-flow: row nowrap;

@@ -1,5 +1,5 @@
-import { SunblockGlyph } from './svgs';
+import { SunblockGlyph, SunblockGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(SunblockGlyph, SunblockGlyph, props);
+  useIcon(SunblockGlyph, SunblockGlyphSecondary, props);

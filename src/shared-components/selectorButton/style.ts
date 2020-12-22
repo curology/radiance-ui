@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACER, ANIMATION, BOX_SHADOWS, ThemeType } from '../../constants';
+import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
 import { SelectorType, SizeType, StyleType } from '.';
 
@@ -21,10 +21,12 @@ export const OuterContainer = styled.div<{ selector: SelectorType }>`
   :focus {
     outline: none;
     ${SelectorContainer} {
-      box-shadow: ${BOX_SHADOWS.focus};
+      box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
 
-      ${({ selector }) => `
-        border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+      ${({ selector, theme }) => `
+        border-radius: ${
+          selector === 'checkbox' ? theme.BORDER_RADIUS.small : '50%'
+        };
       `};
     }
   }
@@ -58,10 +60,10 @@ const disabledSelectorStyle = (theme: ThemeType) => `
 `;
 
 export const Selector = styled.div<{
-  size: SizeType;
   selector: SelectorType;
+  selectorSize: SizeType;
   type: StyleType;
-  checked: boolean;
+  selectorChecked: boolean;
   disabled: boolean;
 }>`
   align-items: center;
@@ -69,28 +71,30 @@ export const Selector = styled.div<{
   border: 1px solid;
   cursor: pointer;
   display: flex;
-  ${({ size }) => `
-    width: ${size === 'large' ? '3rem' : SPACER.xlarge};
-    height: ${size === 'large' ? '3rem' : SPACER.xlarge};
+  ${({ selectorSize }) => `
+    width: ${selectorSize === 'large' ? '3rem' : SPACER.xlarge};
+    height: ${selectorSize === 'large' ? '3rem' : SPACER.xlarge};
   `}
   justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
 
-  ${({ selector }) => `
-    border-radius: ${selector === 'checkbox' ? '4px' : '100%'};
+  ${({ selector, theme }) => `
+    border-radius: ${
+      selector === 'checkbox' ? theme.BORDER_RADIUS.small : '50%'
+    };
   `}
 
-  ${({ type, checked, disabled, theme }) => {
+  ${({ type, selectorChecked, disabled, theme }) => {
     if (disabled) {
       return disabledSelectorStyle(theme);
     }
     switch (type) {
       case 'primary':
-        return primarySelectorStyle(checked, theme);
+        return primarySelectorStyle(selectorChecked, theme);
       case 'secondary':
-        return secondarySelectorStyle(checked, theme);
+        return secondarySelectorStyle(selectorChecked, theme);
       default:
-        return primarySelectorStyle(checked, theme);
+        return primarySelectorStyle(selectorChecked, theme);
     }
   }}
 

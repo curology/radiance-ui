@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from 'emotion-theming';
 
 import { MobileDropdown } from './mobileDropdown';
 import { DesktopDropdown } from './desktopDropdown';
@@ -45,15 +46,17 @@ interface DropdownProps<T> {
  * This ships with a mobile implementation that will handle mobile devices automatically.
  */
 export const Dropdown = <T extends OptionType>({
-  borderRadius = '4px',
+  borderRadius,
   onChange,
   options,
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
 }: DropdownProps<T>) => {
+  const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
+  const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
 
   const toggleDropdown = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
@@ -105,7 +108,7 @@ export const Dropdown = <T extends OptionType>({
   if (touchSupported) {
     return (
       <MobileDropdown
-        borderRadius={borderRadius}
+        borderRadius={borderRadiusValue}
         onMobileSelectChange={onMobileSelectChange}
         options={options}
         textAlign={textAlign}
@@ -118,7 +121,7 @@ export const Dropdown = <T extends OptionType>({
 
   return (
     <DesktopDropdown
-      borderRadius={borderRadius}
+      borderRadius={borderRadiusValue}
       closeDropdown={closeDropdown}
       currentOption={currentOption}
       isOpen={isOpen}

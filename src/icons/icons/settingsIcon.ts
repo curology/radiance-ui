@@ -1,4 +1,5 @@
-import { SettingsIcon } from './svgs';
+import { SettingsIcon, SettingsIconSecondary } from './svgs';
 import { IconProps, useIcon } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(SettingsIcon, SettingsIcon, props);
+export default (props: IconProps) =>
+  useIcon(SettingsIcon, SettingsIconSecondary, props);

@@ -1,5 +1,5 @@
-import { NoMakeupGlyph } from './svgs';
+import { NoMakeupGlyph, NoMakeupGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(NoMakeupGlyph, NoMakeupGlyph, props);
+  useIcon(NoMakeupGlyph, NoMakeupGlyphSecondary, props);

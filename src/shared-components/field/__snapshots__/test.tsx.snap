@@ -43,9 +43,9 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #ffffff;
-  border: 1px solid #ededf0;
-  border-radius: 0.25rem;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
+  border-radius: 4px;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
@@ -58,8 +58,8 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
 .emotion-1:active,
 .emotion-1:focus {
   outline: none;
-  border-color: #332e54;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  border-color: #332E54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-1:active ~ .e1gqjikl0,
@@ -70,26 +70,26 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
 }
 
 .emotion-1::-webkit-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1::-moz-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1:-ms-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1::placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-1[disabled] {
-  background-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   box-shadow: none;
 }
 
@@ -99,32 +99,31 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
+  class="emotion-7 emotion-8"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <svg
-      className="radiance-field-input-icon emotion-0"
+      class="radiance-field-input-icon emotion-0"
       fill="#BD200F"
-      height={16}
+      height="16"
       viewBox="0 0 16 16"
-      width={16}
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        clipRule="evenodd"
+        clip-rule="evenodd"
         d="M14.6 6.79a6.747 6.747 0 00-7.9-5.36 6.7 6.7 0 00-4.31 2.84 6.71 6.71 0 00-1.04 5.06 6.747 6.747 0 007.9 5.36 6.7 6.7 0 004.31-2.84 6.71 6.71 0 001.04-5.06zM6.46.2C6.97.11 7.48.06 7.98.06a7.996 7.996 0 011.5 15.85c-.51.09-1.02.14-1.52.14-3.76 0-7.12-2.66-7.85-6.49A7.996 7.996 0 016.46.2zm.86 3.91h1.41v5.26H7.32V4.11zm-.17 6.83c0-.48.39-.84.88-.84s.88.36.88.84c0 .49-.39.86-.88.86s-.88-.37-.88-.86z"
         fill="currentColor"
-        fillRule="evenodd"
+        fill-rule="evenodd"
       />
     </svg>
     <input
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     />
     <ul
-      className="emotion-3 emotion-4"
+      class="emotion-3 emotion-4"
     />
   </div>
 </div>
@@ -149,9 +148,9 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #ffffff;
-  border: 1px solid #ededf0;
-  border-radius: 0.25rem;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
+  border-radius: 4px;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
@@ -164,8 +163,8 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 .emotion-0:active,
 .emotion-0:focus {
   outline: none;
-  border-color: #332e54;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  border-color: #332E54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-0:active ~ .emotion-3,
@@ -176,26 +175,26 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0::-moz-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0::placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-0[disabled] {
-  background-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   box-shadow: none;
 }
 
@@ -231,7 +230,7 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 .emotion-8 .e1gqjikl4:focus,
 .emotion-8 .emotion-1:focus {
   border-color: #BD200F;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-2 {
@@ -257,34 +256,25 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
 }
 
 <div
-  className="emotion-10 emotion-11"
+  class="emotion-10 emotion-11"
 >
   <div
-    className="emotion-8 emotion-9"
+    class="emotion-8 emotion-9"
   >
     <input
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      className="emotion-2 emotion-3"
+      class="emotion-2 emotion-3"
     >
       hint message
     </div>
     <ul
-      className="emotion-6 emotion-7"
+      class="emotion-6 emotion-7"
     >
       <li
-        className="emotion-4 emotion-5"
-        style={
-          Object {
-            "maxHeight": "48px",
-            "opacity": "1",
-            "transitionDuration": "350ms",
-            "transitionProperty": "max-height, opacity",
-            "transitionTimingFunction": "ease-in-out",
-          }
-        }
+        class="emotion-4 emotion-5"
+        style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
         type="error"
       >
         <strong>
@@ -340,9 +330,9 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #ffffff;
-  border: 1px solid #ededf0;
-  border-radius: 0.25rem;
+  background: #FFFFFF;
+  border: 1px solid #EDEDF0;
+  border-radius: 4px;
   color: #524D6E;
   -webkit-transition: border-color 350ms;
   transition: border-color 350ms;
@@ -355,8 +345,8 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
 .emotion-3:active,
 .emotion-3:focus {
   outline: none;
-  border-color: #332e54;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  border-color: #332E54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-3:active ~ .e1gqjikl0,
@@ -367,26 +357,26 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
 }
 
 .emotion-3::-webkit-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3::-moz-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3:-ms-input-placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3::placeholder {
-  color: #c3c0cd;
+  color: #C3C0CD;
 }
 
 .emotion-3[disabled] {
-  background-color: #ededf0;
-  color: #c3c0cd;
+  background-color: #EDEDF0;
+  color: #C3C0CD;
   cursor: not-allowed;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   box-shadow: none;
 }
 
@@ -402,39 +392,37 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
 }
 
 <div
-  className="emotion-9 emotion-10"
+  class="emotion-9 emotion-10"
 >
   <label
-    className="emotion-0 emotion-1"
-    disabled={false}
-    htmlFor="for-input-id"
+    class="emotion-0 emotion-1"
+    for="for-input-id"
   >
     Test Label
   </label>
   <div
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     <svg
-      className="radiance-field-input-icon emotion-2"
+      class="radiance-field-input-icon emotion-2"
       fill="#BD200F"
-      height={16}
+      height="16"
       viewBox="0 0 16 16"
-      width={16}
+      width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        clipRule="evenodd"
+        clip-rule="evenodd"
         d="M14.6 6.79a6.747 6.747 0 00-7.9-5.36 6.7 6.7 0 00-4.31 2.84 6.71 6.71 0 00-1.04 5.06 6.747 6.747 0 007.9 5.36 6.7 6.7 0 004.31-2.84 6.71 6.71 0 001.04-5.06zM6.46.2C6.97.11 7.48.06 7.98.06a7.996 7.996 0 011.5 15.85c-.51.09-1.02.14-1.52.14-3.76 0-7.12-2.66-7.85-6.49A7.996 7.996 0 016.46.2zm.86 3.91h1.41v5.26H7.32V4.11zm-.17 6.83c0-.48.39-.84.88-.84s.88.36.88.84c0 .49-.39.86-.88.86s-.88-.37-.88-.86z"
         fill="currentColor"
-        fillRule="evenodd"
+        fill-rule="evenodd"
       />
     </svg>
     <input
-      className="emotion-3 emotion-4"
-      disabled={false}
+      class="emotion-3 emotion-4"
     />
     <ul
-      className="emotion-5 emotion-6"
+      class="emotion-5 emotion-6"
     />
   </div>
 </div>

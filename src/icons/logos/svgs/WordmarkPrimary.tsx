@@ -3,7 +3,9 @@ import * as React from 'react';
 function SvgWordmarkPrimary(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 112 26"
+      width={112}
+      height={25}
+      viewBox="0 0 112 25"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

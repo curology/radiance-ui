@@ -3,8 +3,8 @@
 exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`] = `
 .emotion-9 {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
@@ -21,7 +21,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 
 .emotion-9:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-7 {
@@ -44,8 +44,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 
 .emotion-1 {
   border: 1px solid;
-  border-color: #332e54;
-  background: #ffffff;
+  border-color: #332E54;
+  background: #FFFFFF;
   width: 32px;
   height: 32px;
   display: -webkit-box;
@@ -69,8 +69,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   -webkit-transition: all 350ms;
   transition: all 350ms;
   border-radius: 4px;
-  background: #332e54;
-  border-color: #332e54;
+  background: #332E54;
+  border-color: #332E54;
 }
 
 .emotion-1 svg {
@@ -81,8 +81,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 
 .emotion-1 svg {
   opacity: 1;
-  color: #ffffff;
-  fill: #ffffff;
+  color: #FFFFFF;
+  fill: #FFFFFF;
 }
 
 .emotion-0 {
@@ -105,24 +105,22 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 }
 
 <button
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
+  class="emotion-9 emotion-10"
   role="checkbox"
   type="button"
 >
   <div
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     <div
-      className="emotion-1 emotion-2"
-      selected={true}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -132,10 +130,10 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
       </svg>
     </div>
     <div
-      className="emotion-5 emotion-6"
+      class="emotion-5 emotion-6"
     >
       <div
-        className="emotion-3 emotion-4"
+        class="emotion-3 emotion-4"
       >
         checkbox text
       </div>
@@ -147,8 +145,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`] = `
 .emotion-9 {
   border-radius: 4px;
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
@@ -165,7 +163,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-9:focus {
   outline: none;
-  box-shadow: 0px 0px 0px 2px #ffffff,0px 0px 0px 4px #332e54;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
 .emotion-7 {
@@ -207,8 +205,8 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-1 {
   border: 1px solid;
-  border-color: #332e54;
-  background: #ffffff;
+  border-color: #332E54;
+  background: #FFFFFF;
   width: 32px;
   height: 32px;
   display: -webkit-box;
@@ -244,44 +242,42 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
 
 .emotion-1 svg {
   opacity: 1;
-  color: #332e54;
-  fill: #332e54;
+  color: #332E54;
+  fill: #332E54;
 }
 
 <button
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
+  class="emotion-9 emotion-10"
   role="radio"
   type="button"
 >
   <div
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     <div
-      className="emotion-1 emotion-2"
-      selected={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="48"
         viewBox="0 0 48 48"
-        width={16}
+        width="48"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          clipRule="evenodd"
+          clip-rule="evenodd"
           d="M21.993 10.023c0 1.123.896 2.033 2.012 2.033s2.02-.92 2.02-2.033A2.03 2.03 0 0024.006 8c-1.107 0-2.012.9-2.012 2.023zm1.203 0a.81.81 0 01.809-.813c.452 0 .818.358.818.813a.826.826 0 01-.818.823.818.818 0 01-.809-.823zm-1.203 27.944c0 1.123.896 2.033 2.012 2.033s2.02-.92 2.02-2.033a2.03 2.03 0 00-2.02-2.023c-1.107 0-2.012.9-2.012 2.023zm1.203 0a.81.81 0 01.809-.813c.452 0 .818.368.818.813a.826.826 0 01-.818.823.818.818 0 01-.809-.823zm14.793-12.04a2.027 2.027 0 01-2.021-2.033 2.016 2.016 0 114.032 0c0 1.113-.895 2.032-2.011 2.032zm0-2.846a.818.818 0 100 1.635.812.812 0 00.808-.822.803.803 0 00-.808-.813zM8 23.893c0 1.122.905 2.032 2.021 2.032 1.116 0 2.021-.92 2.021-2.032a2.025 2.025 0 00-2.02-2.023c-1.117 0-2.022.9-2.022 2.023zm1.203 0a.818.818 0 111.635.009.818.818 0 01-1.635-.01z"
           fill="currentColor"
-          fillRule="evenodd"
+          fill-rule="evenodd"
         />
       </svg>
     </div>
     <div
-      className="emotion-5 emotion-6"
+      class="emotion-5 emotion-6"
     >
       <div
-        className="emotion-3 emotion-4"
+        class="emotion-3 emotion-4"
       >
         radio text
       </div>

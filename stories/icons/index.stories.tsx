@@ -22,8 +22,6 @@ import { Icon as IconComponent } from '../../src/shared-components/icon';
 import { CameraIcon } from '../../src/icons';
 import Style from './style';
 
-const WORDMARK_NAME = 'Wordmark';
-
 export const WithControls = () => {
   const theme = useTheme();
 
@@ -43,13 +41,22 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+/**
+ * Rough hack to determine if React function component returns null.
+ */
+const shouldRenderIcon = (Icon: valueof<typeof iconComponents>) => {
+  const renderedIcon = Icon({});
+
+  return renderedIcon !== null;
+};
+
 export const IconLibrary = () => (
   <React.Fragment>
     <Typography.Heading>Logos</Typography.Heading>
     <Style.Icons>
       {Object.entries(logoComponents).map(([name, Icon]) => (
         <Style.IconContainer key={name}>
-          <Icon width={name === WORDMARK_NAME ? 175 : 40} height={40} />
+          <Icon />
           <Style.IconLabel>{name}</Style.IconLabel>
         </Style.IconContainer>
       ))}
@@ -57,19 +64,23 @@ export const IconLibrary = () => (
 
     <Typography.Heading>Icons</Typography.Heading>
     <Style.Icons>
-      {Object.entries(iconComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon width={20} height={20} />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
+      {Object.entries(iconComponents).map(([name, Icon]) => {
+        if (!shouldRenderIcon(Icon)) return null;
+
+        return (
+          <Style.IconContainer key={name}>
+            <Icon />
+            <Style.IconLabel>{name}</Style.IconLabel>
+          </Style.IconContainer>
+        );
+      })}
     </Style.Icons>
 
     <Typography.Heading>Emojis</Typography.Heading>
     <Style.Icons>
       {Object.entries(emojiComponents).map(([name, Icon]) => (
         <Style.IconContainer key={name}>
-          <Icon width={48} height={48} />
+          <Icon />
           <Style.IconLabel>{name}</Style.IconLabel>
         </Style.IconContainer>
       ))}
@@ -77,19 +88,23 @@ export const IconLibrary = () => (
 
     <Typography.Heading>Glyphs</Typography.Heading>
     <Style.Icons>
-      {Object.entries(glyphComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon width={48} height={48} />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
+      {Object.entries(glyphComponents).map(([name, Icon]) => {
+        if (!shouldRenderIcon(Icon)) return null;
+
+        return (
+          <Style.IconContainer key={name}>
+            <Icon />
+            <Style.IconLabel>{name}</Style.IconLabel>
+          </Style.IconContainer>
+        );
+      })}
     </Style.Icons>
 
     <Typography.Heading>Nav Icons</Typography.Heading>
     <Style.Icons>
       {Object.entries(navIconComponents).map(([name, Icon]) => (
         <Style.IconContainer key={name}>
-          <Icon width={25} height={25} />
+          <Icon />
           <Style.IconLabel>{name}</Style.IconLabel>
         </Style.IconContainer>
       ))}
@@ -133,7 +148,7 @@ export default {
           <Source
             language="tsx"
             code={
-              "import { CameraIcon } from 'radiance-ui/lib/icons'\n\n<CameraIcon width={16} height={16} />"
+              "import { CameraIcon } from 'radiance-ui/lib/icons'\n\n<CameraIcon />"
             }
           />
           <Heading>Props:</Heading>

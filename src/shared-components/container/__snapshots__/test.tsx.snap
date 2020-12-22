@@ -2,12 +2,12 @@
 
 exports[`Container UI snapshots renders basic container 1`] = `
 .emotion-0 {
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
 >
   Container Content
 </div>
@@ -15,8 +15,8 @@ exports[`Container UI snapshots renders basic container 1`] = `
 
 exports[`Container UI snapshots renders clickable container 1`] = `
 .emotion-0 {
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
@@ -28,7 +28,7 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   type="clickable"
 >
   Container Content
@@ -37,8 +37,8 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 
 exports[`Container UI snapshots renders container helper components 1`] = `
 .emotion-8 {
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
 }
 
 .emotion-0 {
@@ -54,7 +54,7 @@ exports[`Container UI snapshots renders container helper components 1`] = `
 
 .emotion-2 {
   margin: 0 1.5rem;
-  border-bottom: 1px solid #ededf0;
+  border-bottom: 1px solid #EDEDF0;
 }
 
 @media (min-width:992px) {
@@ -70,22 +70,22 @@ exports[`Container UI snapshots renders container helper components 1`] = `
 }
 
 <div
-  className="emotion-8 emotion-9"
+  class="emotion-8 emotion-9"
 >
   <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     Section 1
   </div>
   <div
-    className="emotion-2 emotion-3"
+    class="emotion-2 emotion-3"
   />
   <img
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
     src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg"
   />
   <div
-    className="emotion-0 emotion-1"
+    class="emotion-0 emotion-1"
   >
     <div>
       Section 2
@@ -96,14 +96,14 @@ exports[`Container UI snapshots renders container helper components 1`] = `
 
 exports[`Container UI snapshots renders message type container 1`] = `
 .emotion-0 {
-  background-color: #ffffff;
-  border: 1px solid #ededf0;
-  border-radius: 16px;
-  box-shadow: 0 12px 20px 0 rgba(51,46,84,0.05);
+  background-color: #FFFFFF;
+  border: 1px solid #EDEDF0;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
 }
 
 <div
-  className="emotion-0 emotion-1"
+  class="emotion-0 emotion-1"
   type="message"
 >
   Container Content

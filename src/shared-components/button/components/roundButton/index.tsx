@@ -62,7 +62,7 @@ export const RoundButton = ({
   isLoading = false,
   loading = undefined,
   onClick = () => undefined,
-  textColor = '',
+  textColor,
   ...rest
 }: RoundButtonProps) => {
   const theme = useTheme();
@@ -93,7 +93,7 @@ export const RoundButton = ({
         />
       </RoundButtonBase>
       {children && (
-        <p css={roundButtonTextStyles(buttonColorWithTheme, textColor, theme)}>
+        <p css={roundButtonTextStyles(buttonColorWithTheme, theme, textColor)}>
           {children}
         </p>
       )}
