@@ -1,35 +1,30 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
-import { mount } from 'src/tests/enzymeHelpers';
-
-import { MessageItem } from '../verificationMessages/style';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Field } from './index';
 
 describe('<Field />', () => {
   describe('UI Snapshot', () => {
     it('renders with default props', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Field>
           <Field.Input />
         </Field>,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with label and labelFor props', () => {
       const labelText = 'Test Label';
       const labelFor = 'for-input-id';
-      const component = renderer.create(
+      const { container } = render(
         <Field label={labelText} labelFor={labelFor}>
           <Field.Input />
         </Field>,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with errorMessage, hintMessage and hideMessagesIcon props', () => {
@@ -38,7 +33,7 @@ describe('<Field />', () => {
           <strong>Uh Oh!</strong> Type again
         </React.Fragment>
       );
-      const component = renderer.create(
+      const { container } = render(
         <Field
           hideMessagesIcon
           hintMessage="hint message"
@@ -48,38 +43,35 @@ describe('<Field />', () => {
         </Field>,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 
   describe('when provided some messages', () => {
     it('renders the error message', () => {
-      const messages = { maxLength: 'Maximum 6 characteres' };
-      const wrapper = mount(
+      const maxLength = 'Maximum 6 characters';
+      const messages = { maxLength };
+      const { getAllByText } = render(
         <Field messages={messages} messagesType="error">
           <Field.Input />
         </Field>,
       );
 
-      const li = wrapper.find(MessageItem);
-
-      expect(li).toHaveLength(1);
-      expect(li.text()).toEqual(messages.maxLength);
+      const message = getAllByText(maxLength);
+      expect(message.length).toBe(1);
     });
 
     it('renders the success messages', () => {
+      const success = 'Thanks for completing';
       const messages = { success: 'Thanks for completing' };
-      const wrapper = mount(
+      const { getAllByText } = render(
         <Field messages={messages} messagesType="success">
           <Field.Input />
         </Field>,
       );
 
-      const li = wrapper.find(MessageItem);
-
-      expect(li).toHaveLength(1);
-      expect(li.text()).toEqual(messages.success);
+      const message = getAllByText(success);
+      expect(message.length).toBe(1);
     });
   });
 });

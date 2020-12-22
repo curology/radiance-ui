@@ -23,7 +23,7 @@ the appropriate places:
 
 ## Tests
 
-Tests can be run with `yarn run test`. Radiance uses Jest + Enzyme.
+Tests can be run with `yarn run test`. Radiance uses Jest + @testing-library.
 
 ## Local Development Setup
 

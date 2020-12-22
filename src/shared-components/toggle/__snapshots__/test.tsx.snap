@@ -47,150 +47,40 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5"
+  class="emotion-4 emotion-5"
 >
   <span
-    className="emotion-0 emotion-1"
-    onClick={[Function]}
+    class="emotion-0 emotion-1"
   >
     Label Text
   </span>
   <div
-    className="emotion-2 emotion-3"
+    class="emotion-2 emotion-3"
   >
     <div
-      onClick={[Function]}
-      onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      style={
-        Object {
-          "KhtmlUserSelect": "none",
-          "MozUserSelect": "none",
-          "WebkitTapHighlightColor": "transparent",
-          "WebkitTouchCallout": "none",
-          "WebkitUserSelect": "none",
-          "alignItems": "center",
-          "backgroundColor": "transparent",
-          "border": 0,
-          "cursor": "pointer",
-          "display": "flex",
-          "justifyContent": "flex-start",
-          "msUserSelect": "none",
-          "padding": 0,
-          "position": "relative",
-          "userSelect": "none",
-          "width": 52,
-        }
-      }
+      style="display: flex; width: 52px; align-items: center; justify-content: flex-start; position: relative; cursor: pointer; background-color: transparent; border: 0px; padding: 0px; user-select: none;"
     >
       <div
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "rgb(225,224,230)",
-            "borderRadius": 100,
-            "display": "flex",
-            "height": 24,
-            "justifyContent": "center",
-            "padding": 0,
-            "width": 40,
-          }
-        }
+        style="width: 40px; height: 24px; padding: 0px; border-radius: 100px; display: flex; align-items: center; justify-content: center; background-color: rgb(225, 224, 230);"
       >
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "color": "#FAFAFA",
-              "display": "flex",
-              "fontFamily": "'Helvetica Neue', Helvetica, sans-serif",
-              "fontSize": 11,
-              "height": 20,
-              "justifyContent": "center",
-              "left": 4,
-              "lineHeight": 0,
-              "marginBottom": "auto",
-              "marginTop": "auto",
-              "opacity": 0,
-              "position": "relative",
-              "width": 26,
-            }
-          }
-        >
-          
-        </div>
+          style="font-size: 11px; display: flex; align-items: center; justify-content: center; font-family: 'Helvetica Neue', Helvetica, sans-serif; position: relative; color: rgb(250, 250, 250); margin-top: auto; margin-bottom: auto; line-height: 0; opacity: 0; width: 26px; height: 20px; left: 4px;"
+        />
         <div
-          style={
-            Object {
-              "alignItems": "center",
-              "bottom": "0px",
-              "color": "rgba(255,255,255,0.6)",
-              "display": "flex",
-              "fontFamily": "'Helvetica Neue', Helvetica, sans-serif",
-              "fontSize": 11,
-              "height": 20,
-              "justifyContent": "center",
-              "lineHeight": 0,
-              "marginBottom": "auto",
-              "marginTop": "auto",
-              "opacity": 1,
-              "paddingRight": 5,
-              "position": "relative",
-              "width": 26,
-            }
-          }
-        >
-          
-        </div>
+          style="font-size: 11px; display: flex; align-items: center; justify-content: center; font-family: 'Helvetica Neue', Helvetica, sans-serif; position: relative; color: rgba(255, 255, 255, 0.6); bottom: 0px; margin-top: auto; margin-bottom: auto; padding-right: 5px; line-height: 0; width: 26px; height: 20px; opacity: 1;"
+        />
       </div>
       <div
-        style={
-          Object {
-            "alignItems": "center",
-            "alignSelf": "stretch",
-            "display": "flex",
-            "flex": 1,
-            "height": "100%",
-            "justifyContent": "flex-start",
-            "left": 0,
-            "position": "absolute",
-            "top": 0,
-          }
-        }
+        style="position: absolute; height: 100%; top: 0px; left: 0px; display: flex; flex: 1; align-self: stretch; align-items: center; justify-content: flex-start;"
       >
         <div
-          style={
-            Object {
-              "MozBoxSizing": "border-box",
-              "WebkitBoxSizing": "border-box",
-              "alignSelf": "center",
-              "background": "#FFFFFF",
-              "backgroundColor": "rgb(255,255,255)",
-              "border": "1px solid #EDEDF0",
-              "borderRadius": "50%",
-              "boxShadow": "none",
-              "boxSizing": "border-box",
-              "display": "flex",
-              "height": 22,
-              "left": 1,
-              "position": "relative",
-              "width": 22,
-            }
-          }
+          style="width: 22px; height: 22px; display: flex; align-self: center; box-shadow: none; border-radius: 50%; box-sizing: border-box; border: 1px solid #ededf0; background: rgb(255, 255, 255); background-color: rgb(255, 255, 255); position: relative; left: 1px;"
         />
       </div>
       <input
-        onClick={[Function]}
-        style={
-          Object {
-            "height": "24px",
-            "margin": "0",
-            "position": "absolute",
-            "width": "40px",
-          }
-        }
+        style="margin: 0px; height: 24px; width: 40px; position: absolute;"
         type="checkbox"
-        value={false}
+        value="false"
       />
     </div>
   </div>

@@ -105,26 +105,23 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="checkbox"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -134,15 +131,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -254,592 +248,42 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={8}
+        height="8"
         viewBox="0 0 16 16"
-        width={8}
+        width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={8}
-          cy={8}
+          cx="8"
+          cy="8"
           fill="currentColor"
-          r={7.4}
+          r="7.4"
           stroke="currentColor"
-          strokeWidth={1.2}
+          stroke-width="1.2"
         />
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
-  >
-    SelectorButton Text
-  </p>
-</div>
-`;
-
-exports[`<SelectorButton /> UI snapshots when Icon added displays icon for checkbox with size 'large' 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-1 {
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-
-.emotion-7 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.emotion-9:focus {
-  outline: none;
-}
-
-.emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 4px;
-}
-
-.emotion-0 {
-  display: block;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
-  transition: color 350ms,transform 350ms;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  border-radius: 4px;
-  background-color: transparent;
-  border-color: #332E54;
-}
-
-.emotion-3:active,
-.emotion-3:focus {
-  outline: none;
-}
-
-<div
-  aria-checked={false}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="checkbox"
-  tabIndex={0}
->
-  <div
-    className="emotion-5 emotion-6"
-  >
-    <div
-      className="emotion-1 emotion-2"
-      disabled={false}
-    >
-      <svg
-        className="emotion-0"
-        fill="none"
-        height={48}
-        viewBox="0 0 48 48"
-        width={48}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M23.995 26A1.996 1.996 0 0122 23.995c0-1.107.897-1.995 1.995-1.995S26 22.897 26 23.995A2.017 2.017 0 0123.995 26zm0-2.807a.8.8 0 00-.802.802c0 .449.363.812.802.812.44 0 .812-.363.812-.812a.821.821 0 00-.812-.802z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
-    <div
-      checked={false}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
-      type="primary"
-    />
-  </div>
-  <p
-    className="emotion-7 emotion-8"
-  >
-    SelectorButton Text
-  </p>
-</div>
-`;
-
-exports[`<SelectorButton /> UI snapshots when Icon added displays icon for radio button with size 'large' 1`] = `
-.emotion-9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.emotion-9:focus {
-  outline: none;
-}
-
-.emotion-9:focus .emotion-6 {
-  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 50%;
-}
-
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-1 {
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-
-.emotion-7 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-0 {
-  display: block;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
-  transition: color 350ms,transform 350ms;
-}
-
-.emotion-3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  border-radius: 50%;
-  background-color: transparent;
-  border-color: #332E54;
-}
-
-.emotion-3:active,
-.emotion-3:focus {
-  outline: none;
-}
-
-<div
-  aria-checked={false}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="radio"
-  tabIndex={0}
->
-  <div
-    className="emotion-5 emotion-6"
-  >
-    <div
-      className="emotion-1 emotion-2"
-      disabled={false}
-    >
-      <svg
-        className="emotion-0"
-        fill="none"
-        height={48}
-        viewBox="0 0 48 48"
-        width={48}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M23.995 26A1.996 1.996 0 0122 23.995c0-1.107.897-1.995 1.995-1.995S26 22.897 26 23.995A2.017 2.017 0 0123.995 26zm0-2.807a.8.8 0 00-.802.802c0 .449.363.812.802.812.44 0 .812-.363.812-.812a.821.821 0 00-.812-.802z"
-          fill="currentColor"
-        />
-      </svg>
-    </div>
-    <div
-      checked={false}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="large"
-      type="primary"
-    />
-  </div>
-  <p
-    className="emotion-7 emotion-8"
-  >
-    SelectorButton Text
-  </p>
-</div>
-`;
-
-exports[`<SelectorButton /> UI snapshots when Icon added hides icon for checkbox with size 'small' 1`] = `
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-0 {
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-
-.emotion-6 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.emotion-8:focus {
-  outline: none;
-}
-
-.emotion-8:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 4px;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  border-radius: 4px;
-  background-color: transparent;
-  border-color: #332E54;
-}
-
-.emotion-2:active,
-.emotion-2:focus {
-  outline: none;
-}
-
-<div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="checkbox"
-  tabIndex={0}
->
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <div
-      className="emotion-0 emotion-1"
-      disabled={false}
-    />
-    <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
-      type="primary"
-    />
-  </div>
-  <p
-    className="emotion-6 emotion-7"
-  >
-    SelectorButton Text
-  </p>
-</div>
-`;
-
-exports[`<SelectorButton /> UI snapshots when Icon added hides icon for radio button size 'small' 1`] = `
-.emotion-8 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.emotion-8:focus {
-  outline: none;
-}
-
-.emotion-8:focus .emotion-5 {
-  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-  border-radius: 50%;
-}
-
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-0 {
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-
-.emotion-2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 1px solid;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: background-color 350ms;
-  transition: background-color 350ms;
-  border-radius: 50%;
-  background-color: transparent;
-  border-color: #332E54;
-}
-
-.emotion-2:active,
-.emotion-2:focus {
-  outline: none;
-}
-
-.emotion-6 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-<div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="radio"
-  tabIndex={0}
->
-  <div
-    className="emotion-4 emotion-5"
-  >
-    <div
-      className="emotion-0 emotion-1"
-      disabled={false}
-    />
-    <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
-      type="primary"
-    />
-  </div>
-  <p
-    className="emotion-6 emotion-7"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -951,48 +395,42 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={8}
+        height="8"
         viewBox="0 0 16 16"
-        width={8}
+        width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={8}
-          cy={8}
+          cx="8"
+          cy="8"
           fill="currentColor"
-          r={7.4}
+          r="7.4"
           stroke="currentColor"
-          strokeWidth={1.2}
+          stroke-width="1.2"
         />
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="small"
+      class="emotion-3 emotion-4"
       type="primary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -1104,48 +542,42 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 <div
-  aria-checked={true}
-  className="emotion-9 emotion-10"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="true"
+  class="emotion-9 emotion-10"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <div
-      className="emotion-1 emotion-2"
-      disabled={false}
+      class="emotion-1 emotion-2"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={8}
+        height="8"
         viewBox="0 0 16 16"
-        width={8}
+        width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
         <circle
-          cx={8}
-          cy={8}
+          cx="8"
+          cy="8"
           fill="currentColor"
-          r={7.4}
+          r="7.4"
           stroke="currentColor"
-          strokeWidth={1.2}
+          stroke-width="1.2"
         />
       </svg>
     </div>
     <div
-      checked={true}
-      className="emotion-3 emotion-4"
-      disabled={false}
-      size="small"
+      class="emotion-3 emotion-4"
       type="secondary"
     />
   </div>
   <p
-    className="emotion-7 emotion-8"
+    class="emotion-7 emotion-8"
   >
     SelectorButton Text
   </p>
@@ -1246,30 +678,24 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 <div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-8 emotion-9"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>
@@ -1363,25 +789,19 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 }
 
 <div
-  aria-checked={false}
-  className="emotion-6 emotion-7"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-6 emotion-7"
   role="radio"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
@@ -1482,30 +902,24 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 <div
-  aria-checked={false}
-  className="emotion-8 emotion-9"
-  onClick={[Function]}
-  onKeyPress={[Function]}
+  aria-checked="false"
+  class="emotion-8 emotion-9"
   role="checkbox"
-  tabIndex={0}
+  tabindex="0"
 >
   <div
-    className="emotion-4 emotion-5"
+    class="emotion-4 emotion-5"
   >
     <div
-      className="emotion-0 emotion-1"
-      disabled={false}
+      class="emotion-0 emotion-1"
     />
     <div
-      checked={false}
-      className="emotion-2 emotion-3"
-      disabled={false}
-      size="small"
+      class="emotion-2 emotion-3"
       type="primary"
     />
   </div>
   <p
-    className="emotion-6 emotion-7"
+    class="emotion-6 emotion-7"
   >
     SelectorButton Text
   </p>

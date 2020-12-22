@@ -353,24 +353,23 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
-  disabled={true}
+  class="emotion-7 emotion-8"
+  disabled=""
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <button
-      className="emotion-3 emotion-4"
-      disabled={true}
-      onClick={[Function]}
+      class="emotion-3 emotion-4"
+      disabled=""
       type="button"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -379,8 +378,8 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
         />
       </svg>
       <div
-        className="emotion-1 emotion-2"
-        disabled={true}
+        class="emotion-1 emotion-2"
+        disabled=""
       >
         <div>
           <span />
@@ -648,24 +647,21 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  className="emotion-7 emotion-8"
-  disabled={false}
+  class="emotion-7 emotion-8"
 >
   <div
-    className="emotion-5 emotion-6"
+    class="emotion-5 emotion-6"
   >
     <button
-      className="emotion-3 emotion-4"
-      disabled={false}
-      onClick={[Function]}
+      class="emotion-3 emotion-4"
       type="button"
     >
       <svg
-        className="emotion-0"
+        class="emotion-0"
         fill="none"
-        height={16}
+        height="16"
         viewBox="0 0 16 16"
-        width={16}
+        width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -674,8 +670,7 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
         />
       </svg>
       <div
-        className="emotion-1 emotion-2"
-        disabled={false}
+        class="emotion-1 emotion-2"
       >
         <div>
           <span />
