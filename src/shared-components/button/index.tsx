@@ -72,7 +72,7 @@ export const Button = ({
   isLoading = false,
   loading = undefined,
   onClick,
-  textColor = '',
+  textColor,
   ...rest
 }: ButtonProps) => {
   const theme = useTheme();

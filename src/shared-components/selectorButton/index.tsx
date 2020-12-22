@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { css, useTheme } from '@emotion/react';
 
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import CircleSolidIcon from '../../svgs/icons/circle-solid-icon.svg';
+import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
 import {
   OuterContainer,
   Selector,
@@ -57,8 +56,6 @@ export const SelectorButton = ({
         css={css`
           color: ${theme.COLORS.white};
         `}
-        width={16}
-        height={16}
       />
     );
 
@@ -79,10 +76,10 @@ export const SelectorButton = ({
         </SelectorIcon>
         <Selector
           type={type}
-          checked={checked}
+          selectorChecked={checked}
           disabled={disabled}
           selector={selector}
-          size={size}
+          selectorSize={size}
         />
       </SelectorContainer>
 

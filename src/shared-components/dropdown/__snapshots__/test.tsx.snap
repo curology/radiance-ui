@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
-.emotion-3 {
+.emotion-4 {
   position: relative;
   width: 100%;
   text-align: left;
 }
 
-.emotion-3 > div:first-of-type:focus {
+.emotion-4 > div:first-of-type:focus {
   outline: none;
 }
 
@@ -16,12 +16,12 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   -moz-appearance: none;
   appearance: none;
   box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
-  background: #ffffff;
+  background: #FFFFFF;
   background-image: none;
   width: 100%;
   min-height: 3.5rem;
   max-height: 3.5rem;
-  border: 1px solid #ededf0;
+  border: 1px solid #EDEDF0;
   border-radius: 4px;
   color: #524D6E;
   line-height: 3.5rem;
@@ -53,7 +53,7 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   border: 0;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: absolute;
   right: 0;
   top: 0;
@@ -74,23 +74,31 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   justify-content: start;
 }
 
-.emotion-1:hover {
+.emotion-2:hover {
   cursor: pointer;
 }
 
-.emotion-1 svg {
+.emotion-2 svg {
   -webkit-transition: -webkit-transform 350ms ease-in-out;
   -webkit-transition: transform 350ms ease-in-out;
   transition: transform 350ms ease-in-out;
 }
 
+.emotion-1 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
 <div
-  className="emotion-3 emotion-4"
+  class="emotion-4 emotion-5"
 >
   <select
-    className="emotion-0"
-    onChange={[Function]}
-    value=""
+    class="emotion-0"
   >
     <option
       value="test1"
@@ -109,12 +117,21 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
     </option>
   </select>
   <div
-    className="emotion-1 emotion-2"
+    class="emotion-2 emotion-3"
   >
     <svg
-      height={10}
-      width={10}
-    />
+      class="emotion-1"
+      fill="none"
+      height="10"
+      viewBox="0 0 16 16"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+        fill="currentColor"
+      />
+    </svg>
   </div>
 </div>
 `;

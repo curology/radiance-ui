@@ -2,11 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
+import { CheckmarkIcon, ChevronIcon, ErrorIcon, InfoIcon } from '../../icons';
 import { Avatar } from '../avatar';
-import ChevronIcon from '../../svgs/icons/chevron-icon.svg';
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import InfoIcon from '../../svgs/icons/info-icon.svg';
 import {
   AlertsContainer,
   AlertContainer,

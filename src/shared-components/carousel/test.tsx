@@ -1,5 +1,5 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Carousel } from './index';
 
@@ -8,23 +8,21 @@ const cards = [<Carousel.Card key="card1">Card 1</Carousel.Card>];
 describe('<Carousel />', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
-      const tree = renderer
-        .create(<Carousel numCardsVisible={1}>{cards}</Carousel>)
-        .toJSON();
+      const { container } = render(
+        <Carousel numCardsVisible={1}>{cards}</Carousel>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with bottom right aligned arrows', () => {
-      const tree = renderer
-        .create(
-          <Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>
-            {cards}
-          </Carousel>,
-        )
-        .toJSON();
+      const { container } = render(
+        <Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>
+          {cards}
+        </Carousel>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

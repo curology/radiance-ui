@@ -1,14 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
-import {
-  BOX_SHADOWS,
-  MEDIA_QUERIES,
-  SPACER,
-  ANIMATION,
-  ThemeType,
-  TYPOGRAPHY_CONSTANTS,
-} from '../../constants';
+import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
 
 import { AlertType } from '.';
 
@@ -64,7 +57,7 @@ export const AlertContainer = styled.button<{
   margin: 0 auto ${SPACER.small};
   padding: 0;
   width: 327px;
-  border-radius: ${SPACER.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   opacity: ${({ exiting }) => (exiting ? '0' : '1')};
   animation: ${fadeInMobile} ${ANIMATION.defaultTiming} 1;
   transition: ${ANIMATION.defaultTiming};
@@ -73,7 +66,7 @@ export const AlertContainer = styled.button<{
 
   &:focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 
   ${({ alertType, theme }) => {
@@ -103,7 +96,7 @@ export const MainContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   color: ${({ theme }) => theme.COLORS.white};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   padding: ${SPACER.medium};
 `;
 
@@ -120,7 +113,7 @@ export const CtaContent = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${({ theme }) => theme.COLORS.white};
-  font-size: ${TYPOGRAPHY_CONSTANTS.fontSize.caption};
+  font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 

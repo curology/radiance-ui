@@ -3,17 +3,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
+import path from 'path';
 
 // eslint-disable-next-line import/extensions
 import pkg from './package.json';
-
-// eslint-disable-next-line import/no-extraneous-dependencies
-const path = require('path');
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const transformTemplateForUtilLocation = require('./src/utils/svgToIconTemplate/transformTemplateForUtilLocation.js');
-
-const UTIL_LOCATION = '../../utils/icons';
 
 const extensions = ['.js', '.ts', '.tsx'];
 
@@ -21,19 +14,17 @@ const defaultConfig = {
   input: 'src/index.ts',
   plugins: [
     svgr({
-      template: transformTemplateForUtilLocation(UTIL_LOCATION),
-      expandProps: false,
+      expandProps: 'end',
     }),
     resolve({
       extensions,
-      customResolveOptions: {
-        moduleDirectory: [path.resolve(__dirname, '.'), 'node_modules'],
-      },
+      moduleDirectories: [path.resolve(__dirname, '.'), 'node_modules'],
     }),
     commonjs({
       include: 'node_modules/**',
     }),
     babel({
+      babelHelpers: 'bundled', // TODO: Investigate 'runtime' option
       extensions,
       exclude: 'node_modules/**',
     }),
@@ -56,7 +47,7 @@ export default [
         format: 'umd',
         name: 'radianceUi',
         globals: {
-          '@emotion/core': '@emotion/core',
+          '@emotion/react': '@emotion/react',
           '@emotion/styled': 'styled',
           '@emotion/styled-base': '_styled',
           '@react-aria/focus': '@react-aria/focus',

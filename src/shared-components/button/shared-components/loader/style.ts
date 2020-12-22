@@ -4,6 +4,7 @@ import { keyframes } from '@emotion/react';
 
 import { ButtonTypeWithAction } from '../..';
 import { ThemeColors, ThemeType } from '../../../../constants';
+import { primaryButtonLoadingBackgroundColor } from '../../../../utils/themeStyles';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }
@@ -13,7 +14,7 @@ const statefulLoader = keyframes`
 `;
 
 const primaryLoadingStyles = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.white};
+  background-color: ${primaryButtonLoadingBackgroundColor(theme)};
 `;
 
 const accentLoadingStyles = (buttonColor: ThemeColors) => `
@@ -37,7 +38,7 @@ const ButtonLoader = styled.div<{
   disabled: boolean;
   isFullWidth: boolean;
   isLoading: boolean;
-  textColor: ThemeColors;
+  textColor?: ThemeColors;
 }>`
   display: flex;
   align-items: center;

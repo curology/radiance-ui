@@ -21,11 +21,8 @@
   },
   "settings": {
     "import/resolver": {
-      "webpack": {
-        "config": "./.storybook/webpack.config.js"
-      }
-    },
-    "import/extensions": [".js", ".md"]
+      "node": {}
+    }
   },
   "rules": {
     "@emotion/pkg-renaming": "error",
@@ -58,7 +55,7 @@
     "no-underscore-dangle": [
       "warn",
       {
-        "allow": ["__isProxy"]
+        "allow": ["__isProxy", "__type"]
       }
     ],
     "no-use-before-define": "off",
@@ -124,20 +121,20 @@
     {
       "files": ["*.tsx"],
       "rules": {
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "react/jsx-props-no-spreading": "off"
+      }
+    },
+    {
+      "files": ["src/icons/**/svgs/index.tsx"],
+      "rules": {
+        "prettier/prettier": "off"
       }
     },
     {
       "files": ["stories/**/*.{js,ts,tsx}"],
       "rules": {
         "no-alert": "off"
-      }
-    },
-    {
-      "files": ["src/icons/**"],
-      "rules": {
-        "import/extensions": "off",
-        "react/jsx-props-no-spreading": "off"
       }
     }
   ]

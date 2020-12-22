@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
-import ChevronIcon from 'src/svgs/icons/chevron-icon.svg';
 import { useTheme } from '@emotion/react';
 
+import { ThemeType } from '../../constants';
+import { ChevronIcon } from '../../icons';
 import Thumbnails from './thumbnails';
 import {
   AccordionBox,
@@ -14,9 +15,15 @@ import {
   Truncate,
 } from './style';
 
+export type BorderRadiusValues =
+  | valueof<ThemeType['BORDER_RADIUS']>
+  | '0.25rem'
+  | '0.5rem'
+  | '2rem';
+
 type AccordionProps = {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
-  borderRadius?: string;
+  borderRadius?: BorderRadiusValues;
   /** node(s) that will render only when expanded */
   children: React.ReactNode;
   /** when true, the accordion will be greyed out and the onClick prop will be disabled */
@@ -41,7 +48,7 @@ type AccordionProps = {
  * The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
  */
 export const Accordion = ({
-  borderRadius = '4px',
+  borderRadius,
   children,
   disabled = false,
   isOpen,
@@ -91,12 +98,7 @@ export const Accordion = ({
       >
         <Truncate>{title}</Truncate>
         <ArrowWrapper rightAlign={!!rightAlignArrow}>
-          <ChevronIcon
-            rotate={isOpen ? 90 : 0}
-            width={16}
-            height={16}
-            fill={theme.COLORS.primary}
-          />
+          <ChevronIcon rotate={isOpen ? 90 : 0} fill={theme.COLORS.primary} />
         </ArrowWrapper>
       </TitleWrapper>
       <ExpansionWrapper

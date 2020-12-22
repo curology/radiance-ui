@@ -13,14 +13,15 @@ import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
-import {
-  CheckmarkIcon,
-  ArrowRightIcon,
-  ArrowLeftIcon,
-  CrossIcon,
-} from 'src/svgs/icons';
 import { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from '@emotion/react';
+
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  CheckmarkIcon,
+  CrossIcon,
+} from '../../../src/icons';
 
 const ButtonsContainer = styled.div`
   display: flex;

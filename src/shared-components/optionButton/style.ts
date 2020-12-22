@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { ANIMATION, SPACER, BOX_SHADOWS, ThemeType } from '../../constants';
+import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 
 type BaseIconWrapperStylesProps = {
@@ -13,7 +13,11 @@ type BaseIconWrapperStylesProps = {
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
-) => (optionType === 'checkbox' ? 'border-radius: 4px' : 'border-radius: 50%');
+  theme: ThemeType,
+) =>
+  optionType === 'checkbox'
+    ? `border-radius: ${theme.BORDER_RADIUS.small};`
+    : 'border-radius: 50%';
 
 const getTypeColor = (
   buttonType: BaseIconWrapperStylesProps['buttonType'],
@@ -27,10 +31,11 @@ const getTypeColor = (
 };
 
 export const ClickableContainer = styled.button<{
-  borderRadius: string;
+  borderRadius?: string;
   containerType: ContainerType;
 }>`
-  border-radius: ${({ borderRadius }) => borderRadius};
+  border-radius: ${({ borderRadius, theme }) =>
+    borderRadius || theme.BORDER_RADIUS.small};
   ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
@@ -39,7 +44,7 @@ export const ClickableContainer = styled.button<{
 
   :focus {
     outline: none;
-    box-shadow: ${BOX_SHADOWS.focus};
+    box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -68,7 +73,7 @@ const getBaseIconWrapperStyles = ({
   align-items: center;
   transition: all ${ANIMATION.defaultTiming};
 
-  ${getOptionTypeStyles(optionType)};
+  ${getOptionTypeStyles(optionType, theme)};
 
   svg {
     opacity: 0;

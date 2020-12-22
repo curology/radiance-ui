@@ -6,7 +6,7 @@ import throttle from 'lodash.throttle';
 import { FocusScope } from '@react-aria/focus';
 
 import { OffClickWrapper } from '../offClickWrapper';
-import CrossIcon from '../../svgs/icons/cross-icon.svg';
+import { CrossIcon } from '../../icons';
 import {
   Overlay,
   MobileHeaderBar,

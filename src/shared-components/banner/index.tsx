@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-import CheckmarkIcon from '../../svgs/icons/checkmark-icon.svg';
-import ErrorIcon from '../../svgs/icons/error-icon.svg';
-import InfoIcon from '../../svgs/icons/info-icon.svg';
+import { CheckmarkIcon, ErrorIcon, InfoIcon } from '../../icons';
 import {
   BannerContainer,
   MainContainer,

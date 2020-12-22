@@ -1,0 +1,32 @@
+// @create-index
+
+export { default as AnxiousEmoji } from './anxiousEmoji';
+export { default as AnxiousSelectedEmoji } from './anxiousSelectedEmoji';
+export { default as ConfusedEmoji } from './confusedEmoji';
+export { default as ConfusedSelectedEmoji } from './confusedSelectedEmoji';
+export { default as ElatedEmoji } from './elatedEmoji';
+export { default as ElatedSelectedEmoji } from './elatedSelectedEmoji';
+export { default as FuriousEmoji } from './furiousEmoji';
+export { default as FuriousSelectedEmoji } from './furiousSelectedEmoji';
+export { default as HeartEmoji } from './heartEmoji';
+export { default as HeartSelectedEmoji } from './heartSelectedEmoji';
+export { default as HugEmoji } from './hugEmoji';
+export { default as HugSelectedEmoji } from './hugSelectedEmoji';
+export { default as MildIrritationEmoji } from './mildIrritationEmoji';
+export { default as MildIrritationSelectedEmoji } from './mildIrritationSelectedEmoji';
+export { default as NoticeableIrritationEmoji } from './noticeableIrritationEmoji';
+export { default as NoticeableIrritationSelectedEmoji } from './noticeableIrritationSelectedEmoji';
+export { default as OverwhelmedEmoji } from './overwhelmedEmoji';
+export { default as OverwhelmedSelectedEmoji } from './overwhelmedSelectedEmoji';
+export { default as PreparedEmoji } from './preparedEmoji';
+export { default as PreparedSelectedEmoji } from './preparedSelectedEmoji';
+export { default as SatisfiedEmoji } from './satisfiedEmoji';
+export { default as SatisfiedSelectedEmoji } from './satisfiedSelectedEmoji';
+export { default as SevereIrritationEmoji } from './severeIrritationEmoji';
+export { default as SevereIrritationSelectedEmoji } from './severeIrritationSelectedEmoji';
+export { default as SmileyEmoji } from './smileyEmoji';
+export { default as SmileySelectedEmoji } from './smileySelectedEmoji';
+export { default as SparkleEmoji } from './sparkleEmoji';
+export { default as SparkleSelectedEmoji } from './sparkleSelectedEmoji';
+export { default as UnsatisfiedEmoji } from './unsatisfiedEmoji';
+export { default as UnsatisfiedSelectedEmoji } from './unsatisfiedSelectedEmoji';

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
-.emotion-8 {
+.emotion-9 {
   position: relative;
   -webkit-align-items: left;
   -webkit-box-align: left;
@@ -16,13 +16,13 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-7 {
   max-width: none;
   top: 120%;
-  background: #332e54;
+  background: #332E54;
   box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
-  border-radius: 0.5rem;
-  color: #ffffff;
+  border-radius: 8px;
+  color: #FFFFFF;
   min-width: 100px;
   opacity: 0;
   padding: 1rem;
@@ -48,7 +48,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   z-index: 4;
   top: -8px;
@@ -59,35 +59,50 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   margin-left: -10px;
 }
 
+.emotion-4 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #332E54;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  -webkit-transition: color 350ms,transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
 <div>
   <div
-    className="emotion-8 emotion-9"
+    class="emotion-9 emotion-10"
   >
     <div
-      className="emotion-0 emotion-1"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      class="emotion-0 emotion-1"
     >
       Tooltip Trigger
     </div>
     <div
-      className="emotion-6 emotion-7"
-      open={false}
+      class="emotion-7 emotion-8"
     >
       <div
-        className="emotion-2 emotion-3"
+        class="emotion-2 emotion-3"
       >
         Tooltip Content
       </div>
       <div
-        className="emotion-4 emotion-5"
+        class="emotion-5 emotion-6"
       >
         <svg
-          fill="#332e54"
-          height={16}
-          width={16}
-        />
+          class="emotion-4"
+          fill="#332E54"
+          height="16"
+          viewBox="0 0 46.29 32.92"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M27.07 30.75a4.63 4.63 0 01-7.85 0L0 0h46.27z"
+            fill="currentColor"
+          />
+        </svg>
       </div>
     </div>
   </div>

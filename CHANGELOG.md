@@ -1,5 +1,56 @@
 # CHANGELOG
 
+# v16.1.0
+
+- [Theming] Adds theming logic for border radius. Changed Container type message border radius from 16px to 8px ([#642](https://github.com/curology/radiance-ui/pull/642))
+
+# v16.0.0
+
+- [Icons] **BREAKING CHANGE**: Renames a number of icon components:
+  - `Arrow` --> `ArrowIcon`
+  - `TimeAlwaysGlyph` --> `ClockAlwaysGlyph`
+  - `TimeMostOfTheTimeGlyph` --> `ClockMostOfTheTimeGlyph`
+  - `TimeSometimesGlyph` --> `ClockSometimesGlyph`
+  - `TimeNeverGlyph` --> `ClockNeverGlyph`
+  - `CalendarAlwaysGlyph` --> `TimeAlwaysGlyph`
+  - `CalendarMostOfTheTimeGlyph` --> `TimeMostOfTheTimeGlyph`
+  - `CalendarSometimesGlyph` --> `TimeSometimesGlyph`
+  - `CalendarNeverGlyph` --> `TimeNeverGlyph`
+  - `MildAcneEmoji` --> `MildIrritationEmoji`
+  - `MildAcneSelectedEmoji` --> `MildIrritationSelectedEmoji`
+  - `NoticeableAcneEmoji` --> `NoticeableIrritationEmoji`
+  - `NoticeableAcneSelectedEmoji` --> `NoticeableIrritationSelectedEmoji`
+  - `SevereAcneEmoji` --> `SevereIrritationEmoji`
+  - `SevereAcneSelectedEmoji` --> `SevereIrritationSelectedEmoji`
+- [Icons] **BREAKING CHANGE** Removes `height` and `width` default values of `16`, default values now supplied by `svg` files according to type (`16x16` for `Icons`, `20x20` for `NavIcons`, and `48x48` for both Emoji and Glyphs)
+- [Icons] Adds secondary icons for non-Logo icons.
+
+# v15.0.0
+
+- [Theming] **BREAKING** Adds theming logic to box shadows and remove it from constants ([#610](https://github.com/curology/radiance-ui/pull/610))
+- [Fonts/Typography] **BREAKING** Remove FONTS and TYPOGRAPHY_CONSTANTS from constants (access via theme now) ([#614](https://github.com/curology/radiance-ui/pull/614))
+
+# v14.0.1
+
+- [Hotfix] v14.0.0 re-release for CJS build correction
+
+# v14.0.0
+
+- [Theming] Adds theming logic to typography display, heading and title ([#589](https://github.com/curology/radiance-ui/pull/589))
+- [Colors] Complete refactor and cleanup of colors usage ([#584](https://github.com/curology/radiance-ui/pull/584))
+  - **BREAKING**: `COLORS` cannot be imported as a constant anymore. Colors must be accessed via the theme object
+
+# v13.3.0
+
+- [Tab] Update Secondary inactive Tab color ([#588](https://github.com/curology/radiance-ui/pull/588))
+- [Theming] Update Secondary button font-size and font-weight ([#585](https://github.com/curology/radiance-ui/pull/585))
+- [Theming] Update Secondary Colors and Fonts ([#524](https://github.com/curology/radiance-ui/pull/524))
+- [Theming] Updates generation of Icons to be theme-aware ([#529](https://github.com/curology/radiance-ui/pull/529))
+- [Field] Update Secondary placeholder color ([#582](https://github.com/curology/radiance-ui/pull/582))
+- [Icon] Remove hard-coded Arrow Icon fill color ([#580](https://github.com/curology/radiance-ui/pull/580))
+- [Internal] Streamlines multiple `babel.config.js` files into one ([#551](https://github.com/curology/radiance-ui/pull/551))
+- [Internal] Updates multiple dependencies
+
 # v13.2.0
 
 - [Theming] Add TYPOGRAPHY constants to theme object ([#520](https://github.com/curology/radiance-ui/pull/520))

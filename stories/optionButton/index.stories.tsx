@@ -1,8 +1,5 @@
 import React from 'react';
 import { text, select, boolean } from '@storybook/addon-knobs';
-import MinusIcon from 'src/svgs/icons/minus-icon.svg';
-import AcneGlyph from 'src/svgs/glyphs/acne-glyph.svg';
-import PlusIcon from 'src/svgs/icons/plus-icon.svg';
 import { OptionButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import {
@@ -14,6 +11,8 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+
+import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
 
 const noop = () => undefined;
 

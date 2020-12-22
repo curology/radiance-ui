@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-import { CalloutContainer, Text, Icon, ParentContainer } from './style';
+import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
 type CalloutProps = {
@@ -32,14 +32,14 @@ export const Callout = ({ children, color, icon = null }: CalloutProps) => {
   const colorWithTheme = color || theme.COLORS.primary;
 
   return (
-    <CalloutContainer>
-      <Text textColor={colorWithTheme}>{children}</Text>
-      {icon && <Icon iconColor={colorWithTheme}>{icon}</Icon>}
-    </CalloutContainer>
+    <Style.CalloutContainer>
+      <Style.Text textColor={colorWithTheme}>{children}</Style.Text>
+      {icon && <Style.Icon iconColor={colorWithTheme}>{icon}</Style.Icon>}
+    </Style.CalloutContainer>
   );
 };
 
-Callout.Container = ParentContainer;
+Callout.Container = Style.ParentContainer;
 
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
