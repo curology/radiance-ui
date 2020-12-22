@@ -19,19 +19,11 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
 }
 
 <ul
-  className="emotion-8 emotion-9"
+  class="emotion-8 emotion-9"
 >
   <li
-    className="emotion-0 emotion-1"
-    style={
-      Object {
-        "maxHeight": "48px",
-        "opacity": "1",
-        "transitionDuration": "350ms",
-        "transitionProperty": "max-height, opacity",
-        "transitionTimingFunction": "ease-in-out",
-      }
-    }
+    class="emotion-0 emotion-1"
+    style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
     <strong>
@@ -40,16 +32,8 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
      This field is required
   </li>
   <li
-    className="emotion-0 emotion-1"
-    style={
-      Object {
-        "maxHeight": "48px",
-        "opacity": "1",
-        "transitionDuration": "350ms",
-        "transitionProperty": "max-height, opacity",
-        "transitionTimingFunction": "ease-in-out",
-      }
-    }
+    class="emotion-0 emotion-1"
+    style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
     <strong>
@@ -58,16 +42,8 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
      Must be at least 3 characters
   </li>
   <li
-    className="emotion-0 emotion-1"
-    style={
-      Object {
-        "maxHeight": "48px",
-        "opacity": "1",
-        "transitionDuration": "350ms",
-        "transitionProperty": "max-height, opacity",
-        "transitionTimingFunction": "ease-in-out",
-      }
-    }
+    class="emotion-0 emotion-1"
+    style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
     Must contain 1 number
@@ -75,16 +51,8 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
     Must contain 1 symbol
   </li>
   <li
-    className="emotion-0 emotion-1"
-    style={
-      Object {
-        "maxHeight": "48px",
-        "opacity": "1",
-        "transitionDuration": "350ms",
-        "transitionProperty": "max-height, opacity",
-        "transitionTimingFunction": "ease-in-out",
-      }
-    }
+    class="emotion-0 emotion-1"
+    style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
     <strong>
@@ -120,19 +88,11 @@ exports[`<VerificationMessages /> UI snapshot renders with non-default props 1`]
 }
 
 <ul
-  className="emotion-2 emotion-3"
+  class="emotion-2 emotion-3"
 >
   <li
-    className="emotion-0 emotion-1"
-    style={
-      Object {
-        "maxHeight": "48px",
-        "opacity": "1",
-        "transitionDuration": "350ms",
-        "transitionProperty": "max-height, opacity",
-        "transitionTimingFunction": "ease-in-out",
-      }
-    }
+    class="emotion-0 emotion-1"
+    style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="success"
   >
     <strong>

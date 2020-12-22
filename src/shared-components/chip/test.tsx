@@ -1,17 +1,14 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Chip } from './index';
 
 describe('<Chip />', () => {
   describe('UI snapshots', () => {
     it('renders the correct css and text', () => {
-      const component = renderer.create(
-        <Chip status="success" text="Success" />,
-      );
+      const { container } = render(<Chip status="success" text="Success" />);
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

@@ -60,10 +60,10 @@ const disabledSelectorStyle = (theme: ThemeType) => `
 `;
 
 export const Selector = styled.div<{
-  size: SizeType;
   selector: SelectorType;
+  selectorSize: SizeType;
   type: StyleType;
-  checked: boolean;
+  selectorChecked: boolean;
   disabled: boolean;
 }>`
   align-items: center;
@@ -71,9 +71,9 @@ export const Selector = styled.div<{
   border: 1px solid;
   cursor: pointer;
   display: flex;
-  ${({ size }) => `
-    width: ${size === 'large' ? '3rem' : SPACER.xlarge};
-    height: ${size === 'large' ? '3rem' : SPACER.xlarge};
+  ${({ selectorSize }) => `
+    width: ${selectorSize === 'large' ? '3rem' : SPACER.xlarge};
+    height: ${selectorSize === 'large' ? '3rem' : SPACER.xlarge};
   `}
   justify-content: center;
   transition: background-color ${ANIMATION.defaultTiming};
@@ -84,17 +84,17 @@ export const Selector = styled.div<{
     };
   `}
 
-  ${({ type, checked, disabled, theme }) => {
+  ${({ type, selectorChecked, disabled, theme }) => {
     if (disabled) {
       return disabledSelectorStyle(theme);
     }
     switch (type) {
       case 'primary':
-        return primarySelectorStyle(checked, theme);
+        return primarySelectorStyle(selectorChecked, theme);
       case 'secondary':
-        return secondarySelectorStyle(checked, theme);
+        return secondarySelectorStyle(selectorChecked, theme);
       default:
-        return primarySelectorStyle(checked, theme);
+        return primarySelectorStyle(selectorChecked, theme);
     }
   }}
 
