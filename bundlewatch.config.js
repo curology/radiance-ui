@@ -6,7 +6,7 @@ module.exports = {
       compression: 'none',
     },
     {
-      path: `dist/bundle-es/shared-components/!(typography)/index.js`,
+      path: `dist/bundle-es/shared-components/!(typography)/**/index.js`,
       maxSize: '20kB',
       compression: 'none',
     },
