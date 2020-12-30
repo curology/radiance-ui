@@ -79,6 +79,7 @@ typings/
 dist/
 lib/
 .out
+.size-snapshot.json
 
 # JetBrains
 .idea/
