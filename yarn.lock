@@ -3721,6 +3721,13 @@ axios@0.19.0:
     follow-redirects "1.5.10"
     is-buffer "^2.0.2"
 
+axios@^0.19.0:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+  dependencies:
+    follow-redirects "1.5.10"
+
 axobject-query@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
@@ -4399,7 +4406,23 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bytes@3.1.0, bytes@^3.1.0:
+bundlewatch@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/bundlewatch/-/bundlewatch-0.3.1.tgz#1d367a9878c9306b5ec5f23cab2eb8178664f758"
+  integrity sha512-yVuOHljZCxRrDgujRn7GED+7Ms8G7hQJmP8vtQWIquDwDfocJH6RdRX42mqDWhMXGdsT3qhB1GYJ5q5zFZ0AEA==
+  dependencies:
+    axios "^0.19.0"
+    bytes "^3.0.0"
+    chalk "^4.0.0"
+    ci-env "^1.14.0"
+    commander "^5.0.0"
+    glob "^7.1.2"
+    gzip-size "^5.1.1"
+    jsonpack "^1.1.5"
+    lodash.merge "^4.6.1"
+    read-pkg-up "^7.0.1"
+
+bytes@3.1.0, bytes@^3.0.0, bytes@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz#f6cf7933a360e0588fa9fde85651cdc7f805d1f6"
   integrity sha512-zauLjrfCG+xvoyaqLoV8bLVXXNGC4JqlxFCutSDWA6fJrTo2ZuvLYTqZ7aHBLZSMOopbzwv8f+wZcVzfVTI2Dg==
@@ -4724,6 +4747,11 @@ chrome-trace-event@^1.0.2:
   integrity sha512-9e/zx1jw7B4CO+c/RXoCsfg/x1AfUBioy4owYH0bJprEYAx5hRFLRhWBqHAG57D0ZM4H7vxbP7bPe0VwhQRYDQ==
   dependencies:
     tslib "^1.9.0"
+
+ci-env@^1.14.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/ci-env/-/ci-env-1.16.0.tgz#e97f3b5001a8daf7da6e46f418bc6892a238704d"
+  integrity sha512-ucF9caQEX5wQlY449KZBIJPx91+kRg9tJ3tWSc4+KzrvC5KNiPm/3g1noP8VhdI3046+Vw3jLmKAD0fjCRJTmw==
 
 ci-info@^2.0.0:
   version "2.0.0"
@@ -8846,6 +8874,11 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+jsonpack@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/jsonpack/-/jsonpack-1.1.5.tgz#d42b0dcfd91ac58ef3110f96d2c599404c3dc27c"
+  integrity sha1-1CsNz9kaxY7zEQ+W0sWZQEw9wnw=
+
 jsprim@^1.2.2:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jsprim/-/jsprim-1.4.1.tgz#313e66bc1e5cc06e438bc1b7499c2e5c56acb6a2"
@@ -9124,6 +9157,11 @@ lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
+lodash.merge@^4.6.1:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
 lodash.round@^4.0.4:
   version "4.0.4"
