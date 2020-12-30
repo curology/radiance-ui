@@ -1,13 +1,13 @@
 {
   "bundle.js": {
-    "bundled": 838566,
-    "minified": 768893,
-    "gzipped": 90370
+    "bundled": 745130,
+    "minified": 676071,
+    "gzipped": 85753
   },
   "bundle.umd.js": {
-    "bundled": 848390,
-    "minified": 744983,
-    "gzipped": 86334
+    "bundled": 754776,
+    "minified": 652557,
+    "gzipped": 81938
   },
   "constants/zScale/index.js": {
     "bundled": 234,
@@ -542,16 +542,16 @@
     }
   },
   "shared-components/button/shared-components/container/index.js": {
-    "bundled": 7040,
-    "minified": 6805,
-    "gzipped": 2030,
+    "bundled": 3131,
+    "minified": 2946,
+    "gzipped": 1461,
     "treeshaked": {
       "rollup": {
-        "code": 887,
-        "import_statements": 190
+        "code": 877,
+        "import_statements": 154
       },
       "webpack": {
-        "code": 2071
+        "code": 2016
       }
     }
   },
@@ -1032,16 +1032,16 @@
     }
   },
   "shared-components/accordion/thumbnails/style.js": {
-    "bundled": 11587,
-    "minified": 11311,
-    "gzipped": 2350,
+    "bundled": 9463,
+    "minified": 9221,
+    "gzipped": 2265,
     "treeshaked": {
       "rollup": {
-        "code": 920,
-        "import_statements": 147
+        "code": 867,
+        "import_statements": 125
       },
       "webpack": {
-        "code": 2030
+        "code": 1944
       }
     }
   },
@@ -1298,16 +1298,16 @@
     }
   },
   "shared-components/field/style.js": {
-    "bundled": 35010,
-    "minified": 34257,
-    "gzipped": 4747,
+    "bundled": 30470,
+    "minified": 29756,
+    "gzipped": 4673,
     "treeshaked": {
       "rollup": {
-        "code": 2486,
-        "import_statements": 207
+        "code": 2753,
+        "import_statements": 171
       },
       "webpack": {
-        "code": 3663
+        "code": 3897
       }
     }
   },
@@ -1396,16 +1396,16 @@
     }
   },
   "shared-components/tooltip/style.js": {
-    "bundled": 114239,
-    "minified": 112312,
-    "gzipped": 8317,
+    "bundled": 31308,
+    "minified": 29892,
+    "gzipped": 4685,
     "treeshaked": {
       "rollup": {
-        "code": 3251,
-        "import_statements": 115
+        "code": 2879,
+        "import_statements": 79
       },
       "webpack": {
-        "code": 4393
+        "code": 3928
       }
     }
   },
