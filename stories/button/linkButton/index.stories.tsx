@@ -12,7 +12,7 @@ import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 export const Default = () => (
   <LinkButton.Container>

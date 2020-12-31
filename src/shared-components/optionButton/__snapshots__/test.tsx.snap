@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`] = `
-.emotion-9 {
+.emotion-0 {
   border-radius: 4px;
   background-color: #FFFFFF;
   border: 1px solid #EDEDF0;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
@@ -15,26 +15,27 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   text-align: left;
 }
 
-.emotion-9:hover {
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+.emotion-0:hover {
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.10);
 }
 
-.emotion-9:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-7 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -42,7 +43,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   align-items: center;
 }
 
-.emotion-1 {
+.emotion-4 {
   border: 1px solid;
   border-color: #332E54;
   background: #FFFFFF;
@@ -52,6 +53,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
@@ -59,8 +61,8 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -73,50 +75,51 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   border-color: #332E54;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   opacity: 0;
   -webkit-transition: all 350ms;
   transition: all 350ms;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   opacity: 1;
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+  color: ;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-5 {
+.emotion-7 {
   margin-left: 1rem;
 }
 
-.emotion-3 {
+.emotion-9 {
   color: #524D6E;
   line-height: 1.5;
 }
 
 <button
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   role="checkbox"
   type="button"
 >
   <div
-    class="emotion-7 emotion-8"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="none"
         height="16"
         viewBox="0 0 16 16"
@@ -130,10 +133,10 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
       </svg>
     </div>
     <div
-      class="emotion-5 emotion-6"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-3 emotion-4"
+        class="emotion-9 emotion-10"
       >
         checkbox text
       </div>
@@ -143,11 +146,11 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 `;
 
 exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`] = `
-.emotion-9 {
+.emotion-0 {
   border-radius: 4px;
   background-color: #FFFFFF;
   border: 1px solid #EDEDF0;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
@@ -157,26 +160,27 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   text-align: left;
 }
 
-.emotion-9:hover {
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+.emotion-0:hover {
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.10);
 }
 
-.emotion-9:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-7 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -184,26 +188,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   align-items: center;
 }
 
-.emotion-0 {
-  display: block;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
-  transition: color 350ms,transform 350ms;
-}
-
-.emotion-5 {
-  margin-left: 1rem;
-}
-
-.emotion-3 {
-  color: #524D6E;
-  line-height: 1.5;
-}
-
-.emotion-1 {
+.emotion-4 {
   border: 1px solid;
   border-color: #332E54;
   background: #FFFFFF;
@@ -213,6 +198,7 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
@@ -220,8 +206,8 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -234,31 +220,51 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   height: 48px;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   opacity: 0;
   -webkit-transition: all 350ms;
   transition: all 350ms;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   opacity: 1;
   color: #332E54;
   fill: #332E54;
 }
 
+.emotion-6 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: ;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
+  margin-left: 1rem;
+}
+
+.emotion-9 {
+  color: #524D6E;
+  line-height: 1.5;
+}
+
 <button
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   role="radio"
   type="button"
 >
   <div
-    class="emotion-7 emotion-8"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="none"
         height="48"
         viewBox="0 0 48 48"
@@ -274,10 +280,10 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
       </svg>
     </div>
     <div
-      class="emotion-5 emotion-6"
+      class="emotion-7 emotion-8"
     >
       <div
-        class="emotion-3 emotion-4"
+        class="emotion-9 emotion-10"
       >
         radio text
       </div>

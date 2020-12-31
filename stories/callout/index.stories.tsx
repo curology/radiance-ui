@@ -11,7 +11,7 @@ import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { NeckGlyph } from '../../src/icons';
 

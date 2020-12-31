@@ -13,7 +13,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 const SpinnerContainer = styled.div`
   position: relative;

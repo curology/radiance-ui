@@ -30,7 +30,13 @@ const defaultConfig = {
     }),
     sizeSnapshot(),
   ],
-  external: [...Object.keys(pkg.dependencies), '@emotion/styled-base'],
+  /**
+   * @emotion/styled/base needs to be adding explicitly because certain @emotion/styled usage,
+   * like in our Typography exports, seems to rely directly on @emotion/styled/base, and if we
+   * do not provide it our build includes a node_modules file that includes it, which upsets
+   * the hierarchy with which our build depends
+   */
+  external: [...Object.keys(pkg.dependencies), '@emotion/styled/base'],
 };
 
 export default [
@@ -47,11 +53,10 @@ export default [
         format: 'umd',
         name: 'radianceUi',
         globals: {
-          '@emotion/core': '@emotion/core',
+          '@emotion/react': '@emotion/react',
           '@emotion/styled': 'styled',
-          '@emotion/styled-base': '_styled',
+          '@emotion/styled/base': '_styled',
           '@react-aria/focus': '@react-aria/focus',
-          'emotion-theming': 'emotionTheming',
           'lodash.round': 'round',
           'lodash.throttle': 'throttle',
           'lodash.uniqueid': 'uniqueid',

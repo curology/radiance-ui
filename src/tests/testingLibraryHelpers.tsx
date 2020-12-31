@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import * as ReactTestingLibrary from '@testing-library/react';
 
 import { primaryTheme, ThemeType } from '../constants';

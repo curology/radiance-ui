@@ -18,8 +18,8 @@ exports[`<Indicator /> UI snapshots renders the correct css with a number 1`] = 
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -28,7 +28,7 @@ exports[`<Indicator /> UI snapshots renders the correct css with a number 1`] = 
   border-radius: 8px;
 }
 
-.emotion-0 > div {
+.emotion-0>div {
   position: relative;
   top: 1px;
   color: #524D6E;
@@ -65,8 +65,8 @@ exports[`<Indicator /> UI snapshots renders the correct css with a text 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -75,7 +75,7 @@ exports[`<Indicator /> UI snapshots renders the correct css with a text 1`] = `
   border-radius: 8px;
 }
 
-.emotion-0 > div {
+.emotion-0>div {
   position: relative;
   top: 1px;
   color: #524D6E;

@@ -71,9 +71,9 @@ export const Image = styled.img`
 type StyledContainer = StyledComponent<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   {
-    type?: 'clickable' | 'message';
+    type?: ContainerType;
   },
-  Record<string, unknown>
+  { theme?: ThemeType }
 >;
 
 type CompositeContainer = StyledContainer & {

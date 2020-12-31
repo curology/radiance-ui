@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { css, useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
 import {
@@ -59,6 +58,7 @@ export const SelectorButton = ({
         `}
       />
     );
+
   return (
     <OuterContainer
       onClick={onClick}

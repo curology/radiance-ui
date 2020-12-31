@@ -1,7 +1,6 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css, useTheme } from '@emotion/react';
 import useResetFocus from 'src/utils/accessibility/useResetFocus';
-import { useTheme } from 'emotion-theming';
 
 import { OffClickWrapper } from '../offClickWrapper';
 import { ChevronIcon } from '../../icons';

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Global } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { Global, useTheme } from '@emotion/react';
 
 import { ArrowIcon } from '../../icons';
 import { OffClickWrapper } from '../offClickWrapper';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import * as CONSTANTS from 'src/constants';
 import { Typography } from 'src/shared-components';
 
