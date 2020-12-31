@@ -4,6 +4,8 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const babelConfig = require('../babel.config');
 
+const toPath = (_path) => path.join(process.cwd(), _path);
+
 module.exports = {
   /**
    * Storybook convention is to include "stories" in the filename, but it is also
@@ -54,8 +56,21 @@ module.exports = {
       );
     }
 
+    const emotion11CompatibleConfig = {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          '@emotion/core': toPath('node_modules/@emotion/react'),
+          '@emotion/styled': toPath('node_modules/@emotion/styled'),
+          'emotion-theming': toPath('node_modules/@emotion/react'),
+        },
+      },
+    };
+
     // Return the altered config
-    return config;
+    return emotion11CompatibleConfig;
   },
   reactOptions: {
     fastRefresh: true,
