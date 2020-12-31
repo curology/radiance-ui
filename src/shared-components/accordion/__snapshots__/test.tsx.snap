@@ -2,13 +2,51 @@
 
 exports[`<Accordion /> renders disabled accordion 1`] = `
 .emotion-0 {
+  border: 1px solid #EDEDF0;
+  width: 100%;
+  opacity: 0.4;
+  background-color: #EDEDF0;
+  border-color: #C3C0CD;
+}
+
+.emotion-0:not(:last-child) {
+  border-bottom: none;
+}
+
+.emotion-1:last-of-type .css-sk7hsm-TitleWrapper:focus {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-1:last-of-type .emotion-2:focus {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  cursor: not-allowed;
+}
+
+.emotion-2:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 0px 2px #332E54;
+}
+
+.emotion-4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
 }
 
-.emotion-3 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,82 +58,48 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   color: #332E54;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-7 {
+.emotion-9 {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: max-height 350ms ease-in-out;
   transition: max-height 350ms ease-in-out;
 }
 
-.emotion-9 {
-  border: 1px solid #EDEDF0;
-  width: 100%;
-  opacity: 0.4;
-  background-color: #EDEDF0;
-  border-color: #C3C0CD;
-}
-
-.emotion-9:not(:last-child) {
-  border-bottom: none;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  cursor: not-allowed;
-}
-
-.emotion-5:focus {
-  outline: none;
-  box-shadow: inset 0px 0px 0px 2px #332E54;
-}
-
-.emotion-10:last-of-type .emotion-5:focus {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
 <div
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   disabled=""
 >
   <div
     aria-disabled="true"
     aria-expanded="false"
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
     disabled=""
     role="button"
     tabindex="-1"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     >
       <div>
         title
       </div>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-6 emotion-7"
     >
       <svg
-        class="emotion-2"
+        class="emotion-8"
         fill="#332E54"
         height="16"
         viewBox="0 0 16 16"
@@ -112,7 +116,7 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
   <div
     aria-disabled="true"
     aria-hidden="true"
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     <div>
       <div>
@@ -124,36 +128,43 @@ exports[`<Accordion /> renders disabled accordion 1`] = `
 `;
 
 exports[`<Accordion /> renders no border accordion 1`] = `
-.emotion-5 {
+.emotion-0 {
+  width: 100%;
+}
+
+.emotion-0:not(:last-child) {
+  border-bottom: none;
+}
+
+.emotion-1:last-of-type .emotion-2:focus {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
 }
 
-.emotion-5:focus {
+.emotion-2:focus {
   outline: none;
   box-shadow: inset 0px 0px 0px 2px #332E54;
 }
 
-.emotion-10:last-of-type .emotion-5:focus {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.emotion-0 {
+.emotion-4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
 }
 
-.emotion-3 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -165,54 +176,46 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   color: #332E54;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-7 {
+.emotion-9 {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: max-height 350ms ease-in-out;
   transition: max-height 350ms ease-in-out;
 }
 
-.emotion-9 {
-  width: 100%;
-}
-
-.emotion-9:not(:last-child) {
-  border-bottom: none;
-}
-
 <div
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
 >
   <div
     aria-disabled="false"
     aria-expanded="false"
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     >
       <div>
         title
       </div>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-6 emotion-7"
     >
       <svg
-        class="emotion-2"
+        class="emotion-8"
         fill="#332E54"
         height="16"
         viewBox="0 0 16 16"
@@ -229,7 +232,7 @@ exports[`<Accordion /> renders no border accordion 1`] = `
   <div
     aria-disabled="false"
     aria-hidden="true"
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     <div>
       <div>
@@ -241,45 +244,44 @@ exports[`<Accordion /> renders no border accordion 1`] = `
 `;
 
 exports[`<Accordion /> renders regular accordion 1`] = `
-.emotion-9 {
+.emotion-0 {
   border: 1px solid #EDEDF0;
   width: 100%;
 }
 
-.emotion-9:not(:last-child) {
+.emotion-0:not(:last-child) {
   border-bottom: none;
 }
 
-.emotion-5 {
+.emotion-1:last-of-type .emotion-2:focus {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
 }
 
-.emotion-5:focus {
+.emotion-2:focus {
   outline: none;
   box-shadow: inset 0px 0px 0px 2px #332E54;
 }
 
-.emotion-10:last-of-type .emotion-5:focus {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.emotion-0 {
+.emotion-4 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
 }
 
-.emotion-3 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -291,18 +293,18 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-2 {
+.emotion-8 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   color: #332E54;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-7 {
+.emotion-9 {
   max-height: 0px;
   overflow: hidden;
   -webkit-transition: max-height 350ms ease-in-out;
@@ -310,27 +312,27 @@ exports[`<Accordion /> renders regular accordion 1`] = `
 }
 
 <div
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
 >
   <div
     aria-disabled="false"
     aria-expanded="false"
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
     role="button"
     tabindex="0"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     >
       <div>
         title
       </div>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-6 emotion-7"
     >
       <svg
-        class="emotion-2"
+        class="emotion-8"
         fill="#332E54"
         height="16"
         viewBox="0 0 16 16"
@@ -347,7 +349,7 @@ exports[`<Accordion /> renders regular accordion 1`] = `
   <div
     aria-disabled="false"
     aria-hidden="true"
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     <div>
       <div>

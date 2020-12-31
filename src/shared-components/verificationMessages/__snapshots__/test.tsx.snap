@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerificationMessages /> UI snapshot renders with default props and some messages 1`] = `
-.emotion-8 {
+.emotion-0 {
   list-style-type: none;
   margin: 0;
 }
 
-.emotion-0 {
+.emotion-2 {
   color: #706D87;
   font-size: 0.875rem;
   line-height: 1.71;
@@ -14,15 +14,15 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
   line-height: 24px;
 }
 
-.emotion-0:last-of-type {
+.emotion-2:last-of-type {
   margin: 0 0 0.125rem 0;
 }
 
 <ul
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
 >
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
@@ -32,7 +32,7 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
      This field is required
   </li>
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
@@ -42,7 +42,7 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
      Must be at least 3 characters
   </li>
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
@@ -51,7 +51,7 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
     Must contain 1 symbol
   </li>
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
@@ -69,13 +69,13 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
 `;
 
 exports[`<VerificationMessages /> UI snapshot renders with non-default props 1`] = `
-.emotion-2 {
+.emotion-0 {
   list-style-type: none;
   margin: 0;
   text-align: center;
 }
 
-.emotion-0 {
+.emotion-2 {
   color: #706D87;
   font-size: 0.875rem;
   line-height: 1.71;
@@ -83,15 +83,15 @@ exports[`<VerificationMessages /> UI snapshot renders with non-default props 1`]
   line-height: 24px;
 }
 
-.emotion-0:last-of-type {
+.emotion-2:last-of-type {
   margin: 0 0 0.125rem 0;
 }
 
 <ul
-  class="emotion-2 emotion-3"
+  class="emotion-0 emotion-1"
 >
   <li
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="success"
   >

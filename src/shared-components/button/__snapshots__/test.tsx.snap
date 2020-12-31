@@ -4,105 +4,115 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
-.emotion-7 {
+.emotion-0 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border-radius: 4px;
   border-style: solid;
@@ -130,24 +140,24 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   width: max-content;
 }
 
-.emotion-7:hover {
+.emotion-0:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-7:active,
-.emotion-7:focus {
+.emotion-0:active,
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-7:visited,
-.emotion-7:hover {
+.emotion-0:visited,
+.emotion-0:hover {
   opacity: 1;
   color: #C3C0CD;
 }
 
-.emotion-3 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -158,20 +168,20 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 1rem 0;
   -webkit-transition: -webkit-transform 350ms;
-  -webkit-transition: transform 350ms;
   transition: transform 350ms;
   width: 100%;
   -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
-.emotion-3 > svg {
+.emotion-2>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
@@ -179,23 +189,24 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   margin-top: -5px;
 }
 
-.emotion-0 {
+.emotion-4 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
+  color: ;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-1 {
+.emotion-5 {
   line-height: 1.5;
   margin: 0;
   padding-top: 2px;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -205,8 +216,8 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
@@ -217,7 +228,7 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   opacity: 0;
 }
 
-.emotion-5 span {
+.emotion-7 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -225,31 +236,31 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-5 span:nth-of-type(1) {
+.emotion-7 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-5 span:nth-of-type(2) {
+.emotion-7 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-5 span:nth-of-type(3) {
+.emotion-7 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <button
-  class="emotion-7 emotion-8"
+  class="emotion-0 emotion-1"
   disabled=""
   type="button"
 >
   <div
-    class="emotion-3 emotion-4"
+    class="emotion-2 emotion-3"
   >
     <svg
-      class="emotion-0"
+      class="emotion-4"
       fill="none"
       height="16"
       viewBox="0 0 16 16"
@@ -266,13 +277,13 @@ exports[`<Button /> UI snapshots renders with props 1`] = `
       />
     </svg>
     <span
-      class="emotion-1 emotion-2"
+      class="emotion-5 emotion-6"
     >
       Button Text
     </span>
   </div>
   <div
-    class=" emotion-5 emotion-6"
+    class=" emotion-7 emotion-8"
     disabled=""
   >
     <div>
