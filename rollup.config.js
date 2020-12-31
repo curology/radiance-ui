@@ -30,7 +30,7 @@ const defaultConfig = {
     }),
     sizeSnapshot(),
   ],
-  external: [...Object.keys(pkg.dependencies), '@emotion/styled-base'],
+  external: [...Object.keys(pkg.dependencies)],
 };
 
 export default [
@@ -49,7 +49,6 @@ export default [
         globals: {
           '@emotion/react': '@emotion/react',
           '@emotion/styled': 'styled',
-          '@emotion/styled-base': '_styled',
           '@react-aria/focus': '@react-aria/focus',
           'lodash.round': 'round',
           'lodash.throttle': 'throttle',
