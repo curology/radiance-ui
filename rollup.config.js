@@ -30,6 +30,12 @@ const defaultConfig = {
     }),
     sizeSnapshot(),
   ],
+  /**
+   * @emotion/styled/base needs to be adding explicitly because certain @emotion/styled usage,
+   * like in our Typography exports, seems to rely directly on @emotion/styled/base, and if we
+   * do not provide it our build includes a node_modules file that includes it, which upsets
+   * the hierarchy with which our build depends
+   */
   external: [...Object.keys(pkg.dependencies), '@emotion/styled/base'],
 };
 
