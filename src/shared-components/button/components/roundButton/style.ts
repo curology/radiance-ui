@@ -6,8 +6,6 @@ import { ANIMATION, ThemeColors, ThemeType } from '../../../../constants';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
 
-export { BaseButtonStylesTypes } from '../../style';
-
 const multiStyles = `
   justify-content: space-between;
   max-width: 120px;
