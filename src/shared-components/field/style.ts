@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
@@ -25,7 +24,7 @@ export const Label = styled.label<{ disabled: boolean }>`
     disabled ? `color: ${theme.COLORS.primaryTint3};` : ''}
 `;
 
-const inputStyles = (theme: ThemeType) => css`
+const inputStyles = (theme: ThemeType) => `
   ${TYPOGRAPHY_STYLE.body(theme)}
   appearance: none;
   background: ${theme.COLORS.white};

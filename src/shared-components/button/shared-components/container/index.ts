@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 import { MEDIA_QUERIES, SPACER } from '../../../../constants';
 
-const reverseStyles = css`
+const reverseStyles = `
   flex-direction: column-reverse;
 
   & > :not(:last-child) {
@@ -13,7 +12,7 @@ const reverseStyles = css`
   }
 `;
 
-const flexMdUpStyles = css`
+const flexMdUpStyles = `
   & > :not(:last-child) {
     margin-bottom: 0;
     margin-top: ${SPACER.medium};

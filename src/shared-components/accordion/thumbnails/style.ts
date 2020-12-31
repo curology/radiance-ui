@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 import { style as TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
 import { SPACER } from 'src/constants';
 
@@ -9,7 +8,7 @@ export const Container = styled.div`
   margin-left: ${SPACER.large};
 `;
 
-const thumbnailBase = css`
+const thumbnailBase = `
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +17,8 @@ const thumbnailBase = css`
 `;
 
 export const ImageContainer = styled.div`
-  ${thumbnailBase} overflow: hidden;
+  ${thumbnailBase}
+  overflow: hidden;
   height: 1.5rem;
   width: 1rem;
 
