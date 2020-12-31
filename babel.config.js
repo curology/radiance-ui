@@ -12,15 +12,12 @@ const getPresets = (modules) => [
       modules,
     },
   ],
-  [
-    '@babel/preset-react',
-    { runtime: 'automatic', importSource: '@emotion/react' },
-  ],
+  '@babel/react',
   '@babel/preset-typescript',
+  '@emotion/babel-preset-css-prop',
 ];
 
 const plugins = [
-  '@emotion/babel-plugin',
   '@babel/plugin-proposal-export-namespace-from',
   '@babel/plugin-proposal-export-default-from',
   ['@babel/plugin-proposal-class-properties', { loose: true }],

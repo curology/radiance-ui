@@ -14,8 +14,8 @@ module.exports = {
       statements: 75,
     },
   },
-  moduleDirectories: ['node_modules', './'],
   moduleNameMapper: {
+    'src/(.*)': '<rootDir>/src/$1',
     '\\.svg': '<rootDir>/tests/__mocks__/svgrMock.ts',
   },
   setupFilesAfterEnv: ['<rootDir>tests/setupTests.ts'],
