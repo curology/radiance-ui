@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
 
 import { SPACER } from '../../constants';
 
@@ -35,11 +34,11 @@ export const TooltipBox = styled.div<{
   ${({ position }) => {
     switch (position) {
       case 'bottom':
-        return css`
+        return `
           top: 120%;
         `;
       case 'top':
-        return css`
+        return `
           bottom: 120%;
         `;
       default:
@@ -50,11 +49,11 @@ export const TooltipBox = styled.div<{
   ${({ arrowAlign }) => {
     switch (arrowAlign) {
       case 'left':
-        return css`
+        return `
           left: 0;
         `;
       case 'right':
-        return css`
+        return `
           right: 0;
         `;
       default:
@@ -64,40 +63,40 @@ export const TooltipBox = styled.div<{
 
   ${({ nudgeRight }) =>
     nudgeRight &&
-    css`
+    `
       right: ${nudgeRight * -1}px;
     `};
 
   ${({ nudgeLeft }) =>
     nudgeLeft &&
-    css`
+    `
       left: ${nudgeLeft * -1}px;
     `};
 
   ${({ nudgeTop }) =>
     nudgeTop &&
-    css`
+    `
       top: ${nudgeTop * -1}px;
       bottom: auto;
     `};
 
   ${({ nudgeBottom }) =>
     nudgeBottom &&
-    css`
+    `
       bottom: ${nudgeBottom * -1}px;
       top: auto;
     `};
 
   ${({ alignRightPercent }) =>
     alignRightPercent &&
-    css`
+    `
       right: ${alignRightPercent}%;
       margin-right: -69px;
     `};
 
   ${({ alignTopPercent }) =>
     alignTopPercent &&
-    css`
+    `
       top: ${alignTopPercent}%;
       bottom: auto;
     `};
@@ -138,12 +137,12 @@ export const ArrowImageContainer = styled.div<{
   ${({ position }) => {
     switch (position) {
       case 'bottom':
-        return css`
+        return `
           top: -8px;
           transform: rotate(180deg);
         `;
       case 'top':
-        return css`
+        return `
           bottom: -8px;
         `;
       default:
@@ -154,15 +153,15 @@ export const ArrowImageContainer = styled.div<{
   ${({ arrowAlign }) => {
     switch (arrowAlign) {
       case 'left':
-        return css`
+        return `
           left: 10.25%;
         `;
       case 'right':
-        return css`
+        return `
           right: 10.25%;
         `;
       case 'middle':
-        return css`
+        return `
           left: 50%;
           margin-left: -10px;
         `;

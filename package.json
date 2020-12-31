@@ -21,7 +21,7 @@
     "storybook:dev": "start-storybook --port 9001 --config-dir .storybook --static-dir ./public",
     "build-storybook": "build-storybook --config-dir .storybook --output-dir .out --static-dir ./public",
     "clean": "rimraf dist lib src/icons/**/svgs",
-    "build": "run-s clean && run-s build:icons:all && run-s tsc && run-p build:rollup build:babel",
+    "build": "run-s clean && run-s build:icons:all && run-s tsc && run-p build:rollup build:babel && run-p bundlewatch",
     "build:icons:all": "run-s clean && run-s build:icons build:icons:index",
     "build:icons": "run-p build:icons:emojis build:icons:glyphs build:icons:icons build:icons:logos build:icons:navicons",
     "build:icons:emojis": "svgr --typescript --svgo-config='{\"plugins\": {\"removeViewBox\": false}}' src/svgs/emojis --out-dir src/icons/emojis/svgs",
@@ -40,7 +40,8 @@
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build-storybook",
     "tsc": "tsc",
-    "chromatic": "chromatic --skip '@(dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/@testing-library/**|dependabot/npm_and_yarn/jest**|dependabot/npm_and_yarn/husky**)' --project-token"
+    "chromatic": "chromatic --skip '@(dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/@testing-library/**|dependabot/npm_and_yarn/jest**|dependabot/npm_and_yarn/husky**)' --project-token",
+    "bundlewatch": "bundlewatch --config bundlewatch.config.js"
   },
   "repository": {
     "type": "git",
@@ -98,11 +99,12 @@
     "@types/react-slick": "^0.23.4",
     "@types/react-transition-group": "^4.4.0",
     "@types/tinycolor2": "^1.4.2",
-    "@typescript-eslint/eslint-plugin": "^4.10.0",
-    "@typescript-eslint/parser": "^4.10.0",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-transform-svg-import-to-string": "^0.0.1",
+    "bundlewatch": "^0.3.1",
     "chromatic": "^5.2.0",
     "circular-dependency-plugin": "^5.0.2",
     "create-index": "https://github.com/curology/create-index.git#2020-updates",
