@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# v16.2.1
+
+- [Icons] Fix TruckIconSecondary ([#681](https://github.com/curology/radiance-ui/pull/681))
+- [Internal] Add Bundlewatch to replace .size-snapshot.json to track size regressions ([#667](https://github.com/curology/radiance-ui/pull/667))
+- [Internal] Remove extra `emotion` css functions to reduce bundle sie ([#666](https://github.com/curology/radiance-ui/pull/666))
+- [Internal] Replace `Enzyme` and `React Test Renderer` with `React Testing Library` ([#609](https://github.com/curology/radiance-ui/pull/609))
+
 # v16.2.0
 
 - [Theming] Change primary button styles for secondary theme ([#651](https://github.com/curology/radiance-ui/pull/651))
