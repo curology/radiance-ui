@@ -83,6 +83,23 @@ jobs:
                 command: yarn build
             - <<: *publish-to-chromatic
 
+    lint-js:
+        <<: *defaults
+        docker:
+            - image: circleci/node:10-stretch
+
+        steps:
+            - checkout
+            - <<: *prospective-merge
+            - attach_workspace:
+                at: *root
+            - <<: *prepare-environment
+            - run:
+                name: Run ESLint
+                command: yarn run eslint src/**/*.{ts,tsx} stories/**/*.{ts,tsx}
+            - store_test_results:
+                path: test-results
+
     test-js:
         <<: *defaults
         docker:
@@ -128,6 +145,9 @@ workflows:
     build-and-test:
         jobs:
             - build-js
+            - lint-js:
+                requires:
+                    - build-js
             - test-js:
                 requires:
                     - build-js
