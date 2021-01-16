@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
 
+import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
 import {
   Overlay,
@@ -27,7 +28,6 @@ type DialogModalProps = {
   [key: string]: unknown;
 };
 
-const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const getHtmlNode = () => document.querySelector('html') || document.body;
 const getDomNode = () =>
   (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||

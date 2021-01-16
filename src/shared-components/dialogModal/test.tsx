@@ -12,6 +12,7 @@ describe('<DialogModal />', () => {
       <DialogModal title={modalTitle}>
         <div>{modalBody}</div>
       </DialogModal>,
+      { withPortalContainer: true },
     );
 
     getAllByText(modalTitle);
