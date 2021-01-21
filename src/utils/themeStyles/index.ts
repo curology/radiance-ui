@@ -32,3 +32,8 @@ export const setButtonStyleFontWeight = (theme: ThemeType) =>
   theme.__type === 'primary'
     ? `font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};`
     : '';
+
+export const setThemeLineHeight = (
+  theme: ThemeType,
+  primaryLineHeight: string | number,
+) => (theme.__type === 'secondary' ? '1.4' : primaryLineHeight);

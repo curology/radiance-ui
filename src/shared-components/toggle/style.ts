@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { SPACER, ThemeType } from '../../constants';
+import { setThemeLineHeight } from '../../utils/themeStyles';
 
 export const Container = styled.div`
   position: relative;
@@ -20,7 +21,7 @@ export const Label = styled.span`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   margin: 0;
   font-size: ${SPACER.medium};
-  line-height: ${SPACER.large};
+  line-height: ${({ theme }) => setThemeLineHeight(theme, SPACER.large)};
   text-align: left;
   cursor: pointer;
   user-select: none;
