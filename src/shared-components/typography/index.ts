@@ -7,12 +7,13 @@ import {
   setSecondaryHeadingFont,
   setButtonStyleFontWeight,
   setThemeLineHeight,
+  setThemeFontWeight,
 } from '../../utils/themeStyles';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.display};
-  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  font-weight: ${setThemeFontWeight(theme)};
   line-height: ${setThemeLineHeight(theme, round(48 / 36, 2))};
   ${setSecondaryHeadingFont(theme)}
 `;
@@ -20,7 +21,7 @@ const displayStyle = (theme: ThemeType) => `
 const headingStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.heading};
-  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  font-weight: ${setThemeFontWeight(theme)};
   line-height: ${setThemeLineHeight(theme, round(40 / 24, 2))};
   ${setSecondaryHeadingFont(theme)}
 `;
@@ -29,7 +30,7 @@ const titleStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.title};
   line-height: ${setThemeLineHeight(theme, round(32 / 20, 2))};
-  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  font-weight: ${setThemeFontWeight(theme)};
   ${setSecondaryHeadingFont(theme)}
 `;
 

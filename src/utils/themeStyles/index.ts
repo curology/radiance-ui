@@ -37,3 +37,8 @@ export const setThemeLineHeight = (
   theme: ThemeType,
   primaryLineHeight: string | number,
 ) => (theme.__type === 'secondary' ? '1.4' : primaryLineHeight);
+
+export const setThemeFontWeight = (theme: ThemeType) =>
+  theme.__type === 'secondary'
+    ? theme.TYPOGRAPHY.fontWeight.normal
+    : theme.TYPOGRAPHY.fontWeight.bold;
