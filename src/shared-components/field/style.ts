@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
+import { setThemeLineHeight } from '../../utils/themeStyles';
 
 export const HintItem = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
@@ -72,7 +73,7 @@ export const Textarea = styled.textarea`
   color: ${({ theme }) => theme.COLORS.primary};
   display: block;
   height: 100%;
-  line-height: ${SPACER.large};
+  line-height: ${({ theme }) => setThemeLineHeight(theme, SPACER.large)};
   margin: 0 auto;
   max-width: 35rem;
   padding: ${SPACER.medium};

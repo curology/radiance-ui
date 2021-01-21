@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v16.2.2
+
+- [Theming] Set Secondary Theme `line-height` value across usage to `1.4` ([#704](https://github.com/curology/radiance-ui/pull/704))
+- [Theming] Set Secondary Theme heading elements (Display/h1, Heading/h2, Title/h3) `font-weight` to `400` ([#704](https://github.com/curology/radiance-ui/pull/704))
+
 # v16.2.1
 
 - [Icons] Fix TruckIconSecondary ([#681](https://github.com/curology/radiance-ui/pull/681))
