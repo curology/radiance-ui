@@ -1812,7 +1812,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-a11y@^6.1.15":
+"@storybook/addon-a11y@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-6.1.15.tgz#771438627cab24ab948bf7117af09da39a382241"
   integrity sha512-iD6aXdX4arhRPZVSP/6Tpl1Si7WKb0pISORpi1lt1BNwoRxIauxRCVypEZPGM4R5SDEthU0SiBAHluMmORtd+w==
@@ -1834,7 +1834,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-actions@6.1.15", "@storybook/addon-actions@^6.1.15":
+"@storybook/addon-actions@6.1.15", "@storybook/addon-actions@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.1.15.tgz#07f6770e419da2ca5398a346d150141951a744e8"
   integrity sha512-Mw0wlF3a2OHmI/HyHTbLxRWKCrdRIkKcLHTLptMi/9sOHcPRniwB2jTD1hdzwZrQCPbvvAkYBntVYH0XkNkGEA==
@@ -1889,7 +1889,7 @@
     core-js "^3.0.1"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-docs@6.1.15", "@storybook/addon-docs@^6.1.15":
+"@storybook/addon-docs@6.1.15", "@storybook/addon-docs@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-6.1.15.tgz#b2c08d0e9d058dc01a10ddd39266630551697ee5"
   integrity sha512-SYXqdTVxv2M0XzmB9ybgYrbqVTAu4FEj+0JL3EJUIS7usWlhZmZIBgU4DFBOd5Aojaq1SGd0QJksMS3L1ym/Bg==
@@ -1935,7 +1935,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@^6.1.15":
+"@storybook/addon-essentials@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.1.15.tgz#dd910cfac9496fe8e46927fa5a809f1b496074f4"
   integrity sha512-LiFIIMdjX1GUXkfERBtJKRpcMDKSdj0nuXy5LnROjQn41WreZXdW8u+PXkCduZQgftW9qYTboUn9+yXO2vBbKw==
@@ -1953,7 +1953,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-knobs@^6.1.15":
+"@storybook/addon-knobs@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-6.1.15.tgz#8f12fd5da15c0a00993dbe837b971a4867339de2"
   integrity sha512-eiwav0/9fGrChwAs7yTi13W1mR9g+vYtkQaCKQFF2VIarY9mFH0gKZvLDSs+SH2wyPMp1JOROu8ef39B8Cyj4A==
@@ -1978,7 +1978,7 @@
     react-select "^3.0.8"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-links@^6.1.15":
+"@storybook/addon-links@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.1.15.tgz#6f5d3c0526ce14a90bde031cf561f1c47249e2ca"
   integrity sha512-wlAVvcrKSii5pwcP9/OMUZ6zvRZnR1M86OHLVOQblNKoLgOrf8Xd8sDLFesr4HolRN1VKKFq/4VGRlqRqYDF/w==
@@ -1996,7 +1996,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-storysource@^6.1.15":
+"@storybook/addon-storysource@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-6.1.15.tgz#83db5b5153cf05a333e4357c8e623189bf5480a8"
   integrity sha512-Qs6eEO7l8bJX7rhd1FiGHtt0QENtSMbQZQlsVe/ALVgBdFzcWji2FTVIzSlFHut1iwqmLHF7UEkNKhXpB3Nfzw==
@@ -2350,7 +2350,7 @@
     core-js "^3.6.5"
     find-up "^4.1.0"
 
-"@storybook/source-loader@6.1.15", "@storybook/source-loader@^6.1.15":
+"@storybook/source-loader@6.1.15", "@storybook/source-loader@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-6.1.15.tgz#21b985ede0ec626c1a4916fc92a58cffca9d6c63"
   integrity sha512-ZFmbuvo4sq0jVeWj7Ur1zDq5SCfTxLYuQcV6mAOqUr89dyP778PX9AO1b1/BmipjsHL3JOHN6uHAn74ksB9ofg==
@@ -2367,7 +2367,7 @@
     regenerator-runtime "^0.13.7"
     source-map "^0.7.3"
 
-"@storybook/theming@6.1.15", "@storybook/theming@^6.1.15":
+"@storybook/theming@6.1.15", "@storybook/theming@^6.1.14":
   version "6.1.15"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.1.15.tgz#01083ab89904dd959429b0b3fd1c76bd0ecc59ef"
   integrity sha512-88IdYaPzp4NMKf/GKBrPggxD6/d/lkdQ4SNowXxN9g9eONd9M7HtTbjuJGRCbGMJ52xGcbpj2exEnAqKQ2iodA==
