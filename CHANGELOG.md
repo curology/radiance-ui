@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v16.4.0
+
+- Add `backgroundColor` prop to Indicator and change component `border-radius` to `50%` ([#718](https://github.com/curology/radiance-ui/pull/718))
+
 # v16.2.2
 
 - [Theming] Set Secondary Theme `line-height` value across usage to `1.4` ([#704](https://github.com/curology/radiance-ui/pull/704))
