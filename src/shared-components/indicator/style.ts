@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER } from '../../constants';
+import { SPACER, ThemeColors } from '../../constants';
 
-export const IndicatorContainer = styled.div<{ backgroundColor?: string }>`
+export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   background-color: ${(props) => props.backgroundColor};
   min-height: 16px;
   height: 16px;

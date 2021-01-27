@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeColors } from 'src/constants';
+import { COLORS_PROP_TYPES, ThemeColors } from 'src/constants';
 import { useTheme } from 'emotion-theming';
 
 import { IndicatorContainer } from './style';
@@ -28,5 +28,5 @@ export const Indicator = ({ text, backgroundColor }: IndicatorProps) => {
 
 Indicator.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  backgroundColor: PropTypes.string,
+  backgroundColor: COLORS_PROP_TYPES,
 };
