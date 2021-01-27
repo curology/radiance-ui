@@ -11,10 +11,7 @@ type IndicatorProps = {
 
 /**
  * Indicators are used in navigation to help with wayfinding for messages and notifications.
- *
- * By adding an optional `backgroundColor` prop, the component can be reused for other purposes
- * such as indicating the number of dormant formulas a patient has on a prescription plan in the
- * Provider timeline.
+ * It can also be used for non-navigational purposes for information-intensive pages.
  */
 export const Indicator = ({ text, backgroundColor }: IndicatorProps) => (
   <IndicatorContainer backgroundColor={backgroundColor}>
