@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER } from '../../constants';
+import { SPACER, ThemeColors } from '../../constants';
 
-export const IndicatorContainer = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.error};
+export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
+  background-color: ${(props) => props.backgroundColor};
   min-height: 16px;
   height: 16px;
   max-height: 16px;
@@ -16,7 +16,7 @@ export const IndicatorContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  border-radius: 50%;
 
   > div {
     position: relative;
