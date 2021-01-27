@@ -16,7 +16,7 @@ export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  border-radius: 50%;
 
   > div {
     position: relative;
