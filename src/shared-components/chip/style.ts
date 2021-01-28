@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeType } from '../../constants';
+import { applyVerticalAlignmentOffset } from '../../utils/themeStyles';
 
 import { StatusType } from '.';
 
@@ -10,6 +11,7 @@ export const ChipText = styled.span`
   font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
   position: relative;
   top: 1px;
+  ${({ theme }) => applyVerticalAlignmentOffset(theme)};
 `;
 
 const defaultStyle = (theme: ThemeType) => `

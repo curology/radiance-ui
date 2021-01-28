@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeColors } from '../../constants';
+import { applyVerticalAlignmentOffset } from '../../utils/themeStyles';
 
 export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   background-color: ${(props) => props.backgroundColor};
@@ -24,5 +25,6 @@ export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
     ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
     font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
     color: ${({ theme }) => theme.COLORS.white};
+    ${({ theme }) => applyVerticalAlignmentOffset(theme)};
   }
 `;
