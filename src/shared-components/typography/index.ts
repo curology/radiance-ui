@@ -63,7 +63,7 @@ const successStyle = (theme: ThemeType) => `
 const labelStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${theme.TYPOGRAPHY.fontSize.label};
-  line-height: ${setThemeLineHeight(theme, round(20 / 12, 2))};
+  line-height: ${round(20 / 12, 2)};
 `;
 
 const buttonStyle = (theme: ThemeType) => `
