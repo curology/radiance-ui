@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v16.5.0
+
+- Update `background-color` theme of `AvatarImage` from `secondary` to `secondaryTint1` ([#734](https://github.com/curology/radiance-ui/pull/734))
+
 # v16.4.0
 
 - Add `backgroundColor` prop to Indicator and change component `border-radius` to `50%` ([#718](https://github.com/curology/radiance-ui/pull/718))
