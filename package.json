@@ -138,7 +138,7 @@
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
-    "@emotion/core": "10.0.35",
+    "@emotion/core": "10.1.1",
     "@emotion/styled": "10.0.27",
     "@react-aria/focus": "^3.0.2",
     "emotion-theming": "10.0.27",
@@ -155,7 +155,7 @@
     "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
-    "@emotion/core": "10.0.35",
+    "@emotion/core": "10.1.1",
     "@emotion/styled": "10.0.27",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
