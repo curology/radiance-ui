@@ -9,8 +9,6 @@ import { StatusType } from '.';
 export const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
-  position: relative;
-  top: 1px;
   ${({ theme }) => applyVerticalAlignmentOffset(theme)};
 `;
 

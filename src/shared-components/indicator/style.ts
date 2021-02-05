@@ -20,8 +20,6 @@ export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   border-radius: 50%;
 
   > div {
-    position: relative;
-    top: 1px;
     ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
     font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
     color: ${({ theme }) => theme.COLORS.white};
