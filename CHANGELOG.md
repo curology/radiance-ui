@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v16.5.1
+
+- [Theming] Revert label `line-height` changes made in [#704](https://github.com/curology/radiance-ui/pull/704) ([#726](https://github.com/curology/radiance-ui/pull/726))
+
 # v16.5.0
 
 - Update `background-color` theme of `AvatarImage` from `secondary` to `secondaryTint1` ([#734](https://github.com/curology/radiance-ui/pull/734))
