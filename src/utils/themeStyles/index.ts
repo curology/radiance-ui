@@ -42,3 +42,8 @@ export const setThemeFontWeight = (theme: ThemeType) =>
   theme.__type === 'secondary'
     ? theme.TYPOGRAPHY.fontWeight.normal
     : theme.TYPOGRAPHY.fontWeight.bold;
+
+export const applyPrimaryThemeVerticalOffset = (
+  theme: ThemeType,
+  offset = '1',
+) => (theme.__type === 'primary' ? `transform: translateY(${offset}px);` : '');

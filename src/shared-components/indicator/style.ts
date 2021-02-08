@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeColors } from '../../constants';
+import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
 
 export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   background-color: ${(props) => props.backgroundColor};
@@ -19,10 +20,9 @@ export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   border-radius: 50%;
 
   > div {
-    position: relative;
-    top: 1px;
     ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
     font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
     color: ${({ theme }) => theme.COLORS.white};
+    ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
   }
 `;
