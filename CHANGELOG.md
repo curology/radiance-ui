@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v16.6.2
+
+- [Theming] Export `applyPrimaryThemeVerticalOffset` to be used in consumer apps
+
 # v16.6.1
 
 - [Theming] Create the util function `applyPrimaryThemeVerticalOffset` apply it to `Chip` and `Indicator` component [#720](https://github.com/curology/radiance-ui/pull/720)
