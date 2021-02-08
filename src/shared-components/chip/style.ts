@@ -2,14 +2,14 @@ import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeType } from '../../constants';
-import { applyVerticalAlignmentOffset } from '../../utils/themeStyles';
+import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
 
 import { StatusType } from '.';
 
 export const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
-  ${({ theme }) => applyVerticalAlignmentOffset(theme)};
+  ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
 `;
 
 const defaultStyle = (theme: ThemeType) => `
