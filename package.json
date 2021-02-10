@@ -121,7 +121,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.5",
+    "husky": "^5.0.9",
     "isobject": "^4.0.0",
     "jest": "^26.4.2",
     "jest-emotion": "^10.0.32",
