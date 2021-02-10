@@ -44,10 +44,10 @@ Documentation around usage, you can also see it with knobs at: [https://radiance
 ## Publishing to NPM
 
 You'll need access to publish to NPM so this part only applies to a few
-people (mostly within the Curology organization). Once approved, merge your PR(s) into master and follow these steps:
+people (mostly within the Curology organization). 
 
-1. Run `yarn build` and commit the `.size-snapshot.json` change either as part of your PR or as part of the CHANGELOG.md change below
-2. Pull latest master and check out the master branch.
+1. Once approved in Github and Chromatic (if applicable), merge your PR(s) into master.
+2. Check out the master branch, fetch and pull.
 3. Commit an update to the CHANGELOG.md file with details.
 4. Run `yarn run publish-package` to build the bundled files and publish
    to NPM.
