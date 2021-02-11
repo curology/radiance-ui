@@ -8,12 +8,12 @@ import {
   MultiplesText,
 } from './style';
 
-type ThumbnailsProps = {
+export interface ThumbnailsProps {
   /** An array of image src strings that Accordion.Thumbails will use to render */
   photoSrcs: Array<string>;
-};
+}
 
-const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
+export const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
   /**
    * Thumbnail images set with empty alt text because they are decorative.
    * Accessible Accordion functionality does not depend on these thumbnails.
@@ -55,5 +55,3 @@ const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
 
   return <Container>{renderThumbnails()}</Container>;
 };
-
-export default Thumbnails;

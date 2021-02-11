@@ -12,11 +12,11 @@ import {
   thumbStyle,
 } from './style';
 
-type ToggleProps = {
+export interface ToggleProps {
   checked?: boolean;
   label?: string;
   onChange: () => void;
-};
+}
 
 /**
  * react-toggle-button in-lines all of its styling.

@@ -16,7 +16,7 @@ export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
 export type PositionTypes = 'top' | 'bottom';
 
-type TooltipProps = {
+export interface TooltipProps {
   /**
    * Adjusts positioning, in percent
    */
@@ -67,7 +67,7 @@ type TooltipProps = {
    */
   nudgeTop?: number;
   position?: PositionTypes;
-};
+}
 
 /**
  * Tooltips provide additional context to elements or give patients hints about new features or updates.

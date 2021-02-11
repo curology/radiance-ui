@@ -7,7 +7,7 @@ import { DesktopDropdown } from './desktopDropdown';
 
 export type OptionValue = string | number;
 
-export type OptionType = {
+export interface OptionType {
   disabled?: boolean;
   /**
    * The text to be displayed for the option
@@ -21,9 +21,9 @@ export type OptionType = {
    * Any other data we want to pass from options
    */
   [key: string]: unknown;
-};
+}
 
-type DropdownProps<T> = {
+interface DropdownProps<T> {
   borderRadius?: string;
   /**
    * The handler to be invoked on option change
@@ -39,7 +39,7 @@ type DropdownProps<T> = {
    * The currently selected option
    */
   value?: OptionValue;
-};
+}
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.

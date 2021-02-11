@@ -24,7 +24,7 @@ const alertIconMapping = {
 
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
-type AlertProps = {
+export interface AlertProps {
   avatarSrc?: string;
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
@@ -33,7 +33,7 @@ type AlertProps = {
   truncateText?: boolean;
   type?: AlertType;
   [key: string]: unknown;
-};
+}
 
 /**
  * Alerts should be used to show notifications or messages from (providers, support, or system).

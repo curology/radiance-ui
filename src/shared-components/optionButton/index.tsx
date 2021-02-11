@@ -12,7 +12,7 @@ import {
 } from './style';
 import { CheckmarkIcon } from '../../icons';
 
-type OptionButtonProps = {
+export interface OptionButtonProps {
   borderRadius?: string;
   buttonType?: 'primary' | 'secondary';
   /**
@@ -28,7 +28,7 @@ type OptionButtonProps = {
   subtext?: React.ReactNode;
   text: string;
   [key: string]: unknown;
-};
+}
 
 export const OptionButton = ({
   borderRadius,

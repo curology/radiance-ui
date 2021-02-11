@@ -5,10 +5,10 @@ import { useTheme } from '@emotion/react';
 
 import { IndicatorContainer } from './style';
 
-type IndicatorProps = {
+export interface IndicatorProps {
   text: string | number;
   backgroundColor?: ThemeColors;
-};
+}
 
 /**
  * Indicators are used in navigation to help with wayfinding for messages and notifications.

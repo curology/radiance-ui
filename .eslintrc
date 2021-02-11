@@ -28,7 +28,6 @@
     "@emotion/pkg-renaming": "error",
     "@emotion/no-vanilla": "error",
     "@emotion/syntax-preference": ["error", "string"],
-    "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": [
       "error",
@@ -40,14 +39,30 @@
         "extendDefaults": true
       }
     ],
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/consistent-indexed-object-style": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-duplicate-imports": "error",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-use-before-define": "error",
-    "@typescript-eslint/consistent-indexed-object-style": "error",
     "arrow-parens": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "jpg": "always",
+        "png": "always",
+        "svg": "always"
+      }
+    ],
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-duplicate-imports": "off",
     "no-shadow": "off",
@@ -71,25 +86,11 @@
       }
     ],
     "react/state-in-constructor": "off",
-    "react/static-property-placement": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ],
-    "import/extensions": [
-      "error",
-      {
-        "jpg": "always",
-        "png": "always",
-        "svg": "always"
-      }
-    ]
+    "react/static-property-placement": "off"
   },
   "overrides": [
     {
-      "files": ["test.{js,ts,tsx}"],
+      "files": ["test.{ts,tsx}"],
       "rules": {
         "@typescript-eslint/no-unsafe-call": "off",
         "no-undef": "off",
@@ -97,23 +98,10 @@
       }
     },
     {
-      "files": ["**/style.{js,ts}"],
+      "files": ["**/style.ts"],
       "rules": {
         "@typescript-eslint/restrict-template-expressions": "off",
         "indent": "off"
-      }
-    },
-    {
-      "files": ["*.js"],
-      "rules": {
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-return": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/restrict-template-expressions": "off"
       }
     },
     {
@@ -130,7 +118,7 @@
       }
     },
     {
-      "files": ["stories/**/*.{js,ts,tsx}"],
+      "files": ["stories/**/*.{ts,tsx}"],
       "rules": {
         "no-alert": "off"
       }

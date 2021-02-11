@@ -13,7 +13,7 @@ import {
   CrossIconContainer,
 } from './style';
 
-type DialogModalProps = {
+export interface DialogModalProps {
   /**
    * Dialog Modal content.
    * Must contain at least 1 button and is responsible for closing the modal.
@@ -26,7 +26,7 @@ type DialogModalProps = {
   onCloseIconClick?: () => void;
   title?: string;
   [key: string]: unknown;
-};
+}
 
 const getHtmlNode = () => document.querySelector('html') || document.body;
 const getDomNode = () =>
