@@ -19,7 +19,7 @@ const AvatarImage = styled.img<{
   avatarSize: 'small' | 'medium' | 'large';
 }>`
   ${determineSize}
-  background-color: ${({ theme }) => theme.COLORS.secondary};
+  background-color: ${({ theme }) => theme.COLORS.secondaryTint1};
   border-radius: 50%;
   overflow: hidden;
 `;

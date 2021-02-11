@@ -1,5 +1,25 @@
 # CHANGELOG
 
+# v16.6.2
+
+- [Theming] Export `applyPrimaryThemeVerticalOffset` to be used in consumer apps
+
+# v16.6.1
+
+- [Theming] Create the util function `applyPrimaryThemeVerticalOffset` apply it to `Chip` and `Indicator` component [#720](https://github.com/curology/radiance-ui/pull/720)
+
+# v16.5.1
+
+- [Theming] Revert label `line-height` changes made in [#704](https://github.com/curology/radiance-ui/pull/704) ([#726](https://github.com/curology/radiance-ui/pull/726))
+
+# v16.5.0
+
+- Update `background-color` theme of `AvatarImage` from `secondary` to `secondaryTint1` ([#734](https://github.com/curology/radiance-ui/pull/734))
+
+# v16.4.0
+
+- Add `backgroundColor` prop to Indicator and change component `border-radius` to `50%` ([#718](https://github.com/curology/radiance-ui/pull/718))
+
 # v16.2.2
 
 - [Theming] Set Secondary Theme `line-height` value across usage to `1.4` ([#704](https://github.com/curology/radiance-ui/pull/704))

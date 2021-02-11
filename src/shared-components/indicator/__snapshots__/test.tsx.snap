@@ -1,5 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Indicator /> UI snapshots renders background color override 1`] = `
+.emotion-0 {
+  background-color: #332E54;
+  min-height: 16px;
+  height: 16px;
+  max-height: 16px;
+  text-align: center;
+  padding: 0 0.25rem;
+  min-width: 16px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.emotion-0>div {
+  color: #524D6E;
+  font-size: 0.75rem;
+  line-height: 1.67;
+  font-weight: bold;
+  color: #FFFFFF;
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <div>
+    3
+  </div>
+</div>
+`;
+
 exports[`<Indicator /> UI snapshots renders the correct css with a number 1`] = `
 .emotion-0 {
   background-color: #BD200F;
@@ -25,17 +74,19 @@ exports[`<Indicator /> UI snapshots renders the correct css with a number 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .emotion-0>div {
-  position: relative;
-  top: 1px;
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
   color: #FFFFFF;
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 <div
@@ -72,17 +123,19 @@ exports[`<Indicator /> UI snapshots renders the correct css with a text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .emotion-0>div {
-  position: relative;
-  top: 1px;
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
   color: #FFFFFF;
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 <div
