@@ -40,10 +40,13 @@ export const RoundButtonBase = styled(ButtonBase)`
     ${({ isLoading, disabled }) =>
       !isLoading && !disabled
         ? `
-            transition: all ${ANIMATION.defaultTiming} ease-in-out;
-            opacity: 1;
+        transition: all ${ANIMATION.defaultTiming} ease-in-out;
+        opacity: 1;
           `
-        : ''}
+        : `
+        transition: inherit;
+        opacity: inherit;
+          `}
   }
 
   & > svg {
