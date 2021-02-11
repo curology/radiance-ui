@@ -3,12 +3,12 @@ import { css } from '@emotion/core';
 
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
-type DropdownInputStyleProps = {
+export interface DropdownInputStyleProps {
   borderRadius: string;
   shouldBeFullyRounded: boolean;
   textAlign: 'left' | 'center';
   theme: ThemeType;
-};
+}
 
 export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   position: relative;

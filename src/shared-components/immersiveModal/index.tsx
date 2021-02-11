@@ -22,7 +22,7 @@ import {
   MainModalContentContainer,
 } from './style';
 
-type ImmersiveModalProps = {
+export interface ImmersiveModalProps {
   /**
    * Modal body
    */
@@ -44,7 +44,7 @@ type ImmersiveModalProps = {
    */
   title?: string | JSX.Element;
   [key: string]: unknown;
-};
+}
 
 const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';

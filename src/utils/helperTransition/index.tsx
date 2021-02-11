@@ -36,10 +36,10 @@ const getStyleForTransitionState = (transitionState: string) => {
   }
 };
 
-type HelperTransitionParamsType = {
+interface HelperTransitionParamsType {
   children: JSX.Element;
   [key: string]: unknown;
-};
+}
 
 const HelperTransition = ({
   children: child,
