@@ -7,6 +7,7 @@ import { textColorsAssociatedWithColors } from './constants';
 import {
   primaryButtonFontColor,
   primaryButtonBackgroundColor,
+  setThemeLineHeight,
 } from '../../utils/themeStyles';
 
 import { ButtonTypeWithAction } from '.';
@@ -286,7 +287,7 @@ export const ButtonText = styled.span<{
   hasIcon?: boolean;
   isLoading?: boolean;
 }>`
-  line-height: 1.5;
+  line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
   margin: 0;
   padding-top: 2px;
 

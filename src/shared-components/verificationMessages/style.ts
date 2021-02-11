@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER } from '../../constants';
+import { setThemeLineHeight } from '../../utils/themeStyles';
 
 import { MessagesTypes } from '.';
 
@@ -24,5 +25,5 @@ export const MessageItem = styled.li<{ type: MessagesTypes }>`
       ? TYPOGRAPHY_STYLE.success(theme)
       : TYPOGRAPHY_STYLE.error(theme)}
 
-  line-height: 24px;
+  line-height: ${({ theme }) => setThemeLineHeight(theme, '24px')};
 `;

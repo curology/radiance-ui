@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
+import { setThemeLineHeight } from '../../utils/themeStyles';
 
 type BaseIconWrapperStylesProps = {
   buttonType?: 'primary' | 'secondary';
@@ -143,10 +144,10 @@ export const TextContainer = styled.div`
 
 export const Text = styled.div`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
-  line-height: 1.5;
+  line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
 
 export const SubText = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
-  line-height: 1.5;
+  line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
