@@ -69,9 +69,9 @@
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.13",
     "@babel/register": "^7.12.13",
-    "@emotion/babel-preset-css-prop": "^11.0.0",
-    "@emotion/eslint-plugin": "^11.0.0",
-    "@emotion/jest": "^11.1.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/eslint-plugin": "^11.2.0",
+    "@emotion/jest": "^11.2.0",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
@@ -138,8 +138,8 @@
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.4",
-    "@emotion/styled": "^11.0.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "@react-aria/focus": "^3.0.2",
     "focus-visible": "^5.1.0",
     "lodash.round": "^4.0.4",
