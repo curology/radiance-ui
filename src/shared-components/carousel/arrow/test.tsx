@@ -11,7 +11,7 @@ describe('<Arrow />', () => {
         { withPortalContainer: true },
       );
 
-      expect(container.firstElementChild).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('renders with bottom right alignment', () => {
@@ -25,7 +25,7 @@ describe('<Arrow />', () => {
         { withPortalContainer: true },
       );
 
-      expect(container.firstElementChild).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });
