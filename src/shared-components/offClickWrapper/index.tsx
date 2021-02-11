@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-type OffClickWrapperProps = {
+export interface OffClickWrapperProps {
   /**
    * Content/container that ignores clicks inside it
    */
@@ -11,7 +11,7 @@ type OffClickWrapperProps = {
    * Function invoked when clicking outside of the children content
    */
   onOffClick: (event: KeyboardEvent | MouseEvent) => void;
-};
+}
 
 export const OffClickWrapper = ({
   children,

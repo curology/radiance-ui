@@ -1,14 +1,14 @@
 import { throwOnUndefinedProperty } from '../../utils';
 import BREAKPOINTS from '../breakpoints';
 
-type MediaQueriesType = {
+interface MediaQueriesType extends Record<string, unknown> {
   xsUp: string;
   smUp: string;
   mdUp: string;
   lgUp: string;
   xlUp: string;
   xxlUp: string;
-};
+}
 
 const mediaQueries = Object.entries(BREAKPOINTS).reduce(
   (accumulator, [label, px]) => ({

@@ -5,12 +5,12 @@ import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
-type BaseIconWrapperStylesProps = {
+export interface BaseIconWrapperStylesProps {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
   selected?: boolean;
   theme: ThemeType;
-};
+}
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],

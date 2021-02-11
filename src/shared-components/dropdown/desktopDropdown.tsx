@@ -16,7 +16,7 @@ import {
 
 import { OptionType, OptionValue } from './index';
 
-type DesktopDropdownProps<T> = {
+interface DesktopDropdownProps<T> {
   borderRadius: string;
   closeDropdown: () => void;
   currentOption?: T;
@@ -29,7 +29,7 @@ type DesktopDropdownProps<T> = {
   textAlign: 'left' | 'center';
   toggleDropdown: () => void;
   value?: OptionValue;
-};
+}
 
 export const DesktopDropdown = <T extends OptionType>({
   borderRadius,

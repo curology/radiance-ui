@@ -4,13 +4,13 @@ import { RoundButton } from '../../button';
 import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
 import { ArrowContainer, BottomRightAlignedArrowContainer } from './style';
 
-type ArrowProps = {
+export interface ArrowProps {
   bottomRightAlignedArrows?: boolean;
   disabled?: boolean;
   next?: boolean;
   onClick?: () => void;
   prev?: boolean;
-};
+}
 
 const Arrow = ({
   bottomRightAlignedArrows = false,

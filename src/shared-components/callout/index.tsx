@@ -5,7 +5,7 @@ import { useTheme } from 'emotion-theming';
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
-type CalloutProps = {
+export interface CalloutProps {
   /**
    * Content of the Callout element. It may contain `<strong>` tags
    */
@@ -18,7 +18,7 @@ type CalloutProps = {
    * Icon displayed inside the callout right aligned
    */
   icon?: React.ReactNode;
-};
+}
 
 /**
  * Callouts should be used to provide valuable information or additional context on a page. One of the best examples of a callout is for product recommendations.
