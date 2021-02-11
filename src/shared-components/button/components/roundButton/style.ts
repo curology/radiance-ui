@@ -43,10 +43,7 @@ export const RoundButtonBase = styled(ButtonBase)`
         transition: all ${ANIMATION.defaultTiming} ease-in-out;
         opacity: 1;
           `
-        : `
-        transition: inherit;
-        opacity: inherit;
-          `}
+        : ''}
   }
 
   & > svg {
