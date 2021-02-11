@@ -10,7 +10,8 @@ import {
   Story,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+import { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 import { ANIMATION } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';
 
@@ -82,6 +83,86 @@ export const DefaultOpened = () => {
     </React.Fragment>
   );
 };
+
+export const WithColor = () => {
+  const [withCloseIcon, setWithCloseIcon] = useState(false);
+  const theme = useTheme();
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setWithCloseIcon(true)}>open dialog modal</Button>
+
+      {withCloseIcon && (
+        <DialogModal
+          title="Heads up!"
+          backgroundColor={theme.COLORS.background}
+          onCloseIconClick={() => setWithCloseIcon(false)}
+        >
+          <p>
+            This will remove the cleanser and moisturizer from your free trial,
+            too. Just the custom bottle will be sent your way!
+          </p>
+          <Button.Container>
+            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+              Yes, remove
+            </Button>
+            <Button
+              isFullWidth
+              onClick={() => setWithCloseIcon(false)}
+              buttonType="tertiary"
+            >
+              never mind
+            </Button>
+          </Button.Container>
+        </DialogModal>
+      )}
+    </React.Fragment>
+  );
+};
+
+WithColor.id = `${DIALOG_MODAL_STORY_ID_PREFIX}with-color`;
+WithColor.parameters = {
+  chromatic: { disable: true },
+};
+
+export const WithColorOpened = () => {
+  const [withCloseIcon, setWithCloseIcon] = useState(true);
+  const theme = useTheme();
+
+  return (
+    <React.Fragment>
+      <Button onClick={() => setWithCloseIcon(true)}>open dialog modal</Button>
+
+      {withCloseIcon && (
+        <DialogModal
+          title="Heads up!"
+          backgroundColor={theme.COLORS.background}
+          onCloseIconClick={() => setWithCloseIcon(false)}
+        >
+          <p>
+            This will remove the cleanser and moisturizer from your free trial,
+            too. Just the custom bottle will be sent your way!
+          </p>
+          <Button.Container>
+            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+              Yes, remove
+            </Button>
+            <Button
+              isFullWidth
+              onClick={() => setWithCloseIcon(false)}
+              buttonType="tertiary"
+            >
+              never mind
+            </Button>
+          </Button.Container>
+        </DialogModal>
+      )}
+    </React.Fragment>
+  );
+};
+
+WithColorOpened.id = `${DIALOG_MODAL_STORY_ID_PREFIX}with-color`;
+WithColorOpened.decorators = [modalStoryDecoratorForChromatic];
 
 DefaultOpened.storyName = 'Default (Opened)';
 DefaultOpened.decorators = [modalStoryDecoratorForChromatic];
@@ -188,8 +269,13 @@ export default {
             <Story id={Default.id} />
           </Canvas>
           <Anchor storyId={Default.id} />
-          <Heading>With Close Icon</Heading>
+          <Heading>With Color</Heading>
+          <Anchor storyId={WithColor.id} />
+          <Canvas>
+            <Story id={WithColor.id} />
+          </Canvas>
           <Anchor storyId={WithCloseIcon.id} />
+          <Heading>With Close Icon</Heading>
           <Canvas>
             <Story id={WithCloseIcon.id} />
           </Canvas>

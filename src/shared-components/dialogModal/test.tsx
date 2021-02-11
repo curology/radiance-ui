@@ -1,4 +1,5 @@
 import React from 'react';
+import { primaryTheme } from 'src/constants/themes';
 import { render } from 'src/tests/testingLibraryHelpers';
 
 import { DialogModal } from './index';
@@ -16,5 +17,16 @@ describe('<DialogModal />', () => {
 
     getAllByText(modalTitle);
     getAllByText(modalBody);
+  });
+
+  it('renders dialog modal with custom color', () => {
+    const { container } = render(
+      <DialogModal backgroundColor={primaryTheme.COLORS.background}>
+        <div>{modalBody}</div>
+      </DialogModal>,
+      { withPortalContainer: true },
+    );
+
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 });
