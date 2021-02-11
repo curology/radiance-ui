@@ -12,7 +12,7 @@ import {
   CrossIconContainer,
 } from './style';
 
-interface DialogModalProps {
+export interface DialogModalProps {
   /**
    * Dialog Modal content.
    * Must contain at least 1 button and is responsible for closing the modal.

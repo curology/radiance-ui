@@ -5,7 +5,7 @@ import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
-interface BaseIconWrapperStylesProps {
+export interface BaseIconWrapperStylesProps {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
   selected?: boolean;

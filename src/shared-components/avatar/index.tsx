@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Style from './style';
 
-interface AvatarProps {
+export interface AvatarProps {
   alt: string;
   size?: 'small' | 'medium' | 'large';
   src: string;

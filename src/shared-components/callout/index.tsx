@@ -5,7 +5,7 @@ import { useTheme } from 'emotion-theming';
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
 
-interface CalloutProps {
+export interface CalloutProps {
   /**
    * Content of the Callout element. It may contain `<strong>` tags
    */

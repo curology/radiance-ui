@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-interface OffClickWrapperProps {
+export interface OffClickWrapperProps {
   /**
    * Content/container that ignores clicks inside it
    */

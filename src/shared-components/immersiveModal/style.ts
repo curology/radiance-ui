@@ -207,7 +207,7 @@ export const ModalContainer = styled.div`
   }
 `;
 
-interface HasHeaderImageProps {
+export interface HasHeaderImageProps {
   hasHeaderImage: boolean;
 }
 

@@ -24,7 +24,7 @@ const alertIconMapping = {
 
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
-interface AlertProps {
+export interface AlertProps {
   avatarSrc?: string;
   content: React.ReactNode;
   ctaContent?: React.ReactNode;

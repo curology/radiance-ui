@@ -9,7 +9,7 @@ interface TabType {
 }
 
 // Hardcoding TabType below to show the actual type in the docs
-interface TabsProps {
+export interface TabsProps {
   initialActiveTabId?: number;
   onClick?: (tab: TabType) => unknown;
   tabItems: Array<{

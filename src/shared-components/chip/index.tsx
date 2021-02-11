@@ -5,7 +5,7 @@ import { ChipStyles, ChipText } from './style';
 
 export type StatusType = 'default' | 'success' | 'error' | 'secondary';
 
-interface ChipProps {
+export interface ChipProps {
   status?: StatusType;
   text: string;
 }

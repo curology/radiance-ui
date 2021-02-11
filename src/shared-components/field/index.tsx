@@ -17,7 +17,7 @@ import {
   MessageType,
 } from '../verificationMessages';
 
-interface FieldProps {
+export interface FieldProps {
   /**
    * Must be either `Field.Input` or `Field.Textarea`
    */

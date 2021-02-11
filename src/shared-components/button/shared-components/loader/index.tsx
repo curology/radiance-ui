@@ -4,7 +4,7 @@ import ButtonLoader from './style';
 import { ButtonTypeWithAction } from '../..';
 import { ThemeColors } from '../../../../constants';
 
-interface LoaderProps {
+export interface LoaderProps {
   buttonColor: ThemeColors;
   buttonType: ButtonTypeWithAction;
   className?: string;

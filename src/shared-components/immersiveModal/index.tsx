@@ -22,7 +22,7 @@ import {
   MainModalContentContainer,
 } from './style';
 
-interface ImmersiveModalProps {
+export interface ImmersiveModalProps {
   /**
    * Modal body
    */

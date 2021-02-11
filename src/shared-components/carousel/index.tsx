@@ -15,7 +15,7 @@ const BASE_SLIDER_CONFIG = {
 
 export type CarouselType = 'primary' | 'secondary';
 
-interface CarouselProps {
+export interface CarouselProps {
   /**
    * Auto-advance the carousel cards
    */

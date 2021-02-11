@@ -4,7 +4,7 @@ import { RoundButton } from '../../button';
 import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
 import { ArrowContainer, BottomRightAlignedArrowContainer } from './style';
 
-interface ArrowProps {
+export interface ArrowProps {
   bottomRightAlignedArrows?: boolean;
   disabled?: boolean;
   next?: boolean;

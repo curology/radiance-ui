@@ -20,7 +20,8 @@ export type BorderRadiusValues =
   | '0.25rem'
   | '0.5rem'
   | '2rem';
-interface AccordionProps {
+
+export interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
   borderRadius?: BorderRadiusValues;
   /** node(s) that will render only when expanded */

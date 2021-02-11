@@ -5,7 +5,7 @@ import { useTheme } from 'emotion-theming';
 
 import { IndicatorContainer } from './style';
 
-interface IndicatorProps {
+export interface IndicatorProps {
   text: string | number;
   backgroundColor?: ThemeColors;
 }

@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
-interface DropdownInputStyleProps {
+export interface DropdownInputStyleProps {
   borderRadius: string;
   shouldBeFullyRounded: boolean;
   textAlign: 'left' | 'center';

@@ -5,7 +5,7 @@ import { useTheme } from 'emotion-theming';
 import { LoadingSpinnerContainer, Overlay, Dot } from './style';
 import { ThemeColors } from '../../constants';
 
-interface LoadingSpinnerProps {
+export interface LoadingSpinnerProps {
   /**
    * Background color of loading container
    */

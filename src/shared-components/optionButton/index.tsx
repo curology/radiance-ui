@@ -12,7 +12,7 @@ import {
 } from './style';
 import { CheckmarkIcon } from '../../icons';
 
-interface OptionButtonProps {
+export interface OptionButtonProps {
   borderRadius?: string;
   buttonType?: 'primary' | 'secondary';
   /**

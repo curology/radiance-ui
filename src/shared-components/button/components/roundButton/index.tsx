@@ -18,7 +18,7 @@ import {
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
-interface RoundButtonProps {
+export interface RoundButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme

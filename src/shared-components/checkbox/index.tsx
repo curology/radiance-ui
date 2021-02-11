@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
-interface CheckboxProps {
+export interface CheckboxProps {
   checked: boolean;
   /**
    * Text label displayed next to the checkbox

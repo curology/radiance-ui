@@ -21,7 +21,7 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
  */
 export type ButtonTypeWithAction = ButtonType | 'action';
 
-interface ButtonProps {
+export interface ButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme

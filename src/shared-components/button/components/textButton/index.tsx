@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { ButtonContents } from '../../style';
 import { BaseTextButton } from './style';
 
-interface TextButtonProps {
+export interface TextButtonProps {
   /**
    * Node/text to be rendered inside the button
    */

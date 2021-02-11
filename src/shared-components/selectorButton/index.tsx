@@ -16,7 +16,7 @@ export type SelectorType = 'radio' | 'checkbox';
 export type SizeType = 'large' | 'small';
 export type StyleType = 'primary' | 'secondary';
 
-interface SelectorButtonProps {
+export interface SelectorButtonProps {
   checked: boolean;
   children?: React.ReactNode;
   disabled?: boolean;

@@ -9,7 +9,7 @@ import formatMessage from './formatMessage';
 export type MessagesTypes = 'error' | 'success';
 export type MessageType = string | JSX.Element | Array<string | JSX.Element>;
 
-interface VerificationMessagesProps {
+export interface VerificationMessagesProps {
   /**
    * Centers the messages
    */

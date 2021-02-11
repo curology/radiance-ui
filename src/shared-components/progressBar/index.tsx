@@ -7,7 +7,7 @@ import { OuterContainer, InnerBar } from './style';
 
 export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 
-interface ProgressBarProps {
+export interface ProgressBarProps {
   backgroundColor?: ThemeColors;
   barColor?: ThemeColors;
   /**

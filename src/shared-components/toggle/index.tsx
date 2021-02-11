@@ -12,7 +12,7 @@ import {
   thumbStyle,
 } from './style';
 
-interface ToggleProps {
+export interface ToggleProps {
   checked?: boolean;
   label?: string;
   onChange: () => void;

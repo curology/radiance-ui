@@ -17,7 +17,7 @@ export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
 export type PositionTypes = 'top' | 'bottom';
 
-interface TooltipProps {
+export interface TooltipProps {
   /**
    * Adjusts positioning, in percent
    */

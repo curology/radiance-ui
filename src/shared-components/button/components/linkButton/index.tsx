@@ -8,7 +8,7 @@ import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
-interface LinkProps {
+export interface LinkProps {
   /**
    * Specifies the tag or element to be rendered
    */
