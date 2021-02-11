@@ -8,6 +8,7 @@ describe('<Arrow />', () => {
     it('renders with props', () => {
       const { container } = render(
         <Arrow prev disabled={false} onClick={() => undefined} />,
+        { withPortalContainer: true },
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
@@ -21,6 +22,7 @@ describe('<Arrow />', () => {
           disabled
           onClick={() => undefined}
         />,
+        { withPortalContainer: true },
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
