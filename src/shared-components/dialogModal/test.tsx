@@ -1,4 +1,5 @@
 import React from 'react';
+import { primaryTheme } from 'src/constants/themes';
 import { render } from 'src/tests/testingLibraryHelpers';
 
 import { DialogModal } from './index';
@@ -16,5 +17,16 @@ describe('<DialogModal />', () => {
 
     getAllByText(modalTitle);
     getAllByText(modalBody);
+  });
+
+  it('renders dialog modal with custom color', () => {
+    const { container } = render(
+      <DialogModal modalColor={primaryTheme.COLORS.background}>
+        <div>{modalBody}</div>
+      </DialogModal>,
+    );
+
+    // DOM Traversal necessary to find the React portal element
+    expect(container.parentNode?.lastChild).toMatchSnapshot();
   });
 });

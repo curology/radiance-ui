@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
+import { useTheme } from 'emotion-theming';
 
 import { CrossIcon } from '../../icons';
 import {
@@ -11,6 +12,7 @@ import {
   ModalTitle,
   CrossIconContainer,
 } from './style';
+import { Colors, primaryTheme, ThemeType } from '../../constants';
 
 export interface DialogModalProps {
   /**
@@ -18,6 +20,10 @@ export interface DialogModalProps {
    * Must contain at least 1 button and is responsible for closing the modal.
    */
   children: React.ReactNode;
+  /**
+   * DialogModal background color. Defaults to the current theme's `white` if not specified.
+   */
+  modalColor?: Colors['background'];
   /**
    * If provided, DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
@@ -42,10 +48,13 @@ const getDomNode = () =>
  */
 export const DialogModal = ({
   children,
+  modalColor,
   onCloseIconClick,
   title = '',
   ...rest
 }: DialogModalProps) => {
+  const theme: ThemeType = useTheme();
+  const modalColorWithTheme = modalColor || theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
 
   const domNode = useRef<HTMLElement>(getDomNode());
@@ -87,6 +96,7 @@ export const DialogModal = ({
         <Overlay className={transitionState} {...rest}>
           <FocusScope contain restoreFocus autoFocus>
             <ModalContainer
+              backgroundColor={modalColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
             >
@@ -113,6 +123,7 @@ export const DialogModal = ({
 
 DialogModal.propTypes = {
   children: PropTypes.node.isRequired,
+  modalColor: PropTypes.oneOf([primaryTheme.COLORS.background]),
   onCloseIconClick: PropTypes.func,
   title: PropTypes.string,
 };

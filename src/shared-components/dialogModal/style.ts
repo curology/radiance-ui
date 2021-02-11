@@ -31,7 +31,9 @@ export const Overlay = styled.div`
   }
 `;
 
-export const ModalContainer = styled.div`
+export const ModalContainer = styled.div<{
+  backgroundColor: string;
+}>`
   width: 100%;
   margin: 0 auto;
   position: absolute;
@@ -41,7 +43,7 @@ export const ModalContainer = styled.div`
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ backgroundColor }) => backgroundColor};
   padding: ${SPACER.x4large} ${SPACER.large} ${SPACER.xlarge};
   overflow-y: auto;
   max-height: 700px;
