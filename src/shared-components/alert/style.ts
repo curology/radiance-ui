@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
 
 import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
+import { applyPrimaryThemeVerticalOffset } from '../../utils';
 
 import { AlertType } from '.';
 
@@ -98,10 +99,11 @@ export const MainContainer = styled.div`
   color: ${({ theme }) => theme.COLORS.white};
   font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   padding: ${SPACER.medium};
+  ${({ theme }) => applyPrimaryThemeVerticalOffset(theme, '3')};
 `;
 
 export const ContentContainer = styled.div<{ truncateText: boolean }>`
-  margin: -3px 0 0 ${SPACER.medium};
+  margin: 0 0 0 ${SPACER.medium};
   max-height: ${({ truncateText }) => (truncateText ? '48px' : 'none')};
 `;
 
