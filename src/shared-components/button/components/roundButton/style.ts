@@ -36,15 +36,15 @@ export const RoundButtonBase = styled(ButtonBase)`
   width: 48px;
   padding: 0;
 
-  ${({ isLoading, disabled }) =>
-    !isLoading &&
-    !disabled &&
-    `
-      &:hover {
-        transition: all ${ANIMATION.defaultTiming} ease-in-out;
-        opacity: 1;
-      }
-    `}
+  &:hover {
+    ${({ isLoading, disabled }) =>
+      !isLoading && !disabled
+        ? `
+            transition: all ${ANIMATION.defaultTiming} ease-in-out;
+            opacity: 1;
+          `
+        : ''}
+  }
 
   & > svg {
     opacity: ${({ isLoading }) => (isLoading ? 0 : 1)};
