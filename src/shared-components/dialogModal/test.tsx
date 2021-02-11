@@ -21,7 +21,7 @@ describe('<DialogModal />', () => {
 
   it('renders dialog modal with custom color', () => {
     const { container } = render(
-      <DialogModal modalColor={primaryTheme.COLORS.background}>
+      <DialogModal backgroundColor={primaryTheme.COLORS.background}>
         <div>{modalBody}</div>
       </DialogModal>,
     );

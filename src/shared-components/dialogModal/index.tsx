@@ -12,18 +12,18 @@ import {
   ModalTitle,
   CrossIconContainer,
 } from './style';
-import { Colors, primaryTheme, ThemeType } from '../../constants';
+import { Colors, primaryTheme, secondaryTheme } from '../../constants';
 
 export interface DialogModalProps {
+  /**
+   * DialogModal background color. Defaults to the current theme's `white` if not specified.
+   */
+  backgroundColor?: Colors['background'];
   /**
    * Dialog Modal content.
    * Must contain at least 1 button and is responsible for closing the modal.
    */
   children: React.ReactNode;
-  /**
-   * DialogModal background color. Defaults to the current theme's `white` if not specified.
-   */
-  modalColor?: Colors['background'];
   /**
    * If provided, DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
@@ -47,14 +47,14 @@ const getDomNode = () =>
  * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
  */
 export const DialogModal = ({
+  backgroundColor,
   children,
-  modalColor,
   onCloseIconClick,
   title = '',
   ...rest
 }: DialogModalProps) => {
-  const theme: ThemeType = useTheme();
-  const modalColorWithTheme = modalColor || theme.COLORS.white;
+  const theme = useTheme();
+  const backgroundColorWithTheme = backgroundColor || theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
 
   const domNode = useRef<HTMLElement>(getDomNode());
@@ -96,7 +96,7 @@ export const DialogModal = ({
         <Overlay className={transitionState} {...rest}>
           <FocusScope contain restoreFocus autoFocus>
             <ModalContainer
-              backgroundColor={modalColorWithTheme}
+              backgroundColor={backgroundColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
             >
@@ -122,8 +122,11 @@ export const DialogModal = ({
 };
 
 DialogModal.propTypes = {
+  backgroundColor: PropTypes.oneOf([
+    primaryTheme.COLORS.background,
+    secondaryTheme.COLORS.background,
+  ]),
   children: PropTypes.node.isRequired,
-  modalColor: PropTypes.oneOf([primaryTheme.COLORS.background]),
   onCloseIconClick: PropTypes.func,
   title: PropTypes.string,
 };

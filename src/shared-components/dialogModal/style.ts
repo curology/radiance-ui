@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import Typography from '../typography';
-import { MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
+import { Colors, MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
 export const Overlay = styled.div`
   position: fixed;
@@ -32,7 +32,7 @@ export const Overlay = styled.div`
 `;
 
 export const ModalContainer = styled.div<{
-  backgroundColor: string;
+  backgroundColor: Colors['background'] | Colors['white'];
 }>`
   width: 100%;
   margin: 0 auto;

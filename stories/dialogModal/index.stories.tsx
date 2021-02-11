@@ -10,7 +10,8 @@ import {
   Story,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+import { Meta } from '@storybook/react';
+import { useTheme } from 'emotion-theming';
 import { ANIMATION, primaryTheme } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';
 
@@ -85,6 +86,7 @@ export const DefaultOpened = () => {
 
 export const WithColor = () => {
   const [openModal, setOpenModal] = useState(false);
+  const theme = useTheme();
 
   return (
     <React.Fragment>
@@ -93,7 +95,7 @@ export const WithColor = () => {
       {openModal && (
         <DialogModal
           title="Heads up!"
-          modalColor={primaryTheme.COLORS.background}
+          backgroundColor={theme.COLORS.background}
         >
           <p>
             This will remove the cleanser and moisturizer from your free trial,
@@ -118,7 +120,7 @@ export const WithColor = () => {
 };
 
 WithColor.id = `${DIALOG_MODAL_STORY_ID_PREFIX}with-color`;
-WithColor.paramters = {
+WithColor.parameters = {
   chromatic: { disable: true },
 };
 
@@ -132,7 +134,7 @@ export const WithColorOpened = () => {
       {openModal && (
         <DialogModal
           title="Heads up!"
-          modalColor={primaryTheme.COLORS.background}
+          backgroundColor={primaryTheme.COLORS.background}
         >
           <p>
             This will remove the cleanser and moisturizer from your free trial,
