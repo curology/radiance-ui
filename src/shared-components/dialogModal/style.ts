@@ -86,7 +86,9 @@ export const ModalTitle = styled(Typography.Title)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const CrossIconContainer = styled.div`
+export const CrossIconContainer = styled.div<{
+  backgroundColor: Colors['background'] | Colors['white'];
+}>`
   position: absolute;
   top: 8px;
   right: 12px;
@@ -94,7 +96,7 @@ export const CrossIconContainer = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ backgroundColor }) => backgroundColor};
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;

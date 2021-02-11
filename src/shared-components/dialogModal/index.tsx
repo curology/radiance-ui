@@ -102,6 +102,7 @@ export const DialogModal = ({
             >
               {onCloseIconClick && (
                 <CrossIconContainer
+                  backgroundColor={backgroundColorWithTheme}
                   onClick={handleCloseIntent}
                   role="button"
                   tabIndex={0}
