@@ -24,9 +24,9 @@ describe('<DialogModal />', () => {
       <DialogModal backgroundColor={primaryTheme.COLORS.background}>
         <div>{modalBody}</div>
       </DialogModal>,
+      { withPortalContainer: true },
     );
 
-    // DOM Traversal necessary to find the React portal element
-    expect(container.parentNode?.lastChild).toMatchSnapshot();
+    expect(container.firstElementChild).toMatchSnapshot();
   });
 });
