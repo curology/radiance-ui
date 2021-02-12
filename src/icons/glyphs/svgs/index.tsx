@@ -64,6 +64,7 @@ export { default as HydroquinoneCycleGlyphSecondary } from './HydroquinoneCycleG
 export { default as HydroquinoneGlyphSecondary } from './HydroquinoneGlyphSecondary'
 export { default as IntersexGlyphSecondary } from './IntersexGlyphSecondary'
 export { default as LightbulbGlyphSecondary } from './LightbulbGlyphSecondary'
+export { default as LightbulbGlyph } from './LightbulbGlyph'
 export { default as LipBalmGlyph } from './LipBalmGlyph'
 export { default as LockGlyphSecondary } from './LockGlyphSecondary'
 export { default as LockGlyph } from './LockGlyph'
