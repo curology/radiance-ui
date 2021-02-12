@@ -43,6 +43,7 @@ export { default as GlobeGlyph } from './globeGlyph';
 export { default as HandWithCreamGlyph } from './handWithCreamGlyph';
 export { default as HydratingMaskGlyph } from './hydratingMaskGlyph';
 export { default as HydrocolloidBandageGlyph } from './hydrocolloidBandageGlyph';
+export { default as HydrocortisoneGlyph } from './hydrocortisoneGlyph';
 export { default as HydroquinoneCycleGlyph } from './hydroquinoneCycleGlyph';
 export { default as HydroquinoneGlyph } from './hydroquinoneGlyph';
 export { default as IntersexGlyph } from './intersexGlyph';
