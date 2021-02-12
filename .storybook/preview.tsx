@@ -55,23 +55,23 @@ addParameters({
 
 addons.setConfig(ADDONS_CONFIG);
 
-export const globalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Global theme for components',
-    defaultValue: primaryTheme.__type,
-    toolbar: {
-      icon: 'switchalt',
-      items: [
-        { value: primaryTheme.__type, title: 'Primary Theme' },
-        {
-          value: secondaryTheme.__type,
-          title: 'Secondary Theme',
-        },
-      ],
-    },
-  },
-};
+// export const globalTypes = {
+//   theme: {
+//     name: 'Theme',
+//     description: 'Global theme for components',
+//     defaultValue: primaryTheme.__type,
+//     toolbar: {
+//       icon: 'switchalt',
+//       items: [
+//         { value: primaryTheme.__type, title: 'Primary Theme' },
+//         {
+//           value: secondaryTheme.__type,
+//           title: 'Secondary Theme',
+//         },
+//       ],
+//     },
+//   },
+// };
 
 const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
   const getTheme = (): ThemeType => {
@@ -79,7 +79,13 @@ const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
       globals: { theme: contextTheme },
     } = context;
 
-    return contextTheme === primaryTheme.__type ? primaryTheme : secondaryTheme;
+    console.log('what is contextTheme', { context, contextTheme });
+
+    return contextTheme === primaryTheme.__type
+      ? primaryTheme
+      : contextTheme === secondaryTheme.__type
+      ? secondaryTheme
+      : primaryTheme;
   };
 
   const theme = getTheme();
@@ -92,4 +98,14 @@ const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
     </ThemeProvider>
   );
 };
+
+export const parameters = {
+  MICHAELTEST: {
+    values: [
+      { name: 'red', value: '#f00' },
+      { name: 'green', value: '#0f0' },
+    ],
+  },
+};
+
 export const decorators = [withThemeProvider];
