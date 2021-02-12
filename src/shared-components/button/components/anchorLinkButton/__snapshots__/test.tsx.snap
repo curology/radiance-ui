@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnchorLinkButton/> UI snapshots to double-check regressions renders with props 1`] = `
+.emotion-0 {
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  background: transparent;
+  border: none;
+  padding: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+  font-size: 0.875rem;
+  border-radius: 4px;
+}
+
+.emotion-0:hover {
+  opacity: 0.6;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+}
+
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
+}
+
+<button
+  class="emotion-0"
+  type="button"
+>
+  Click me
+</button>
+`;
