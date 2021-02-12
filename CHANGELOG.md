@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v16.7.1
+
+- [Icons] Fix CalendarIconSecondary ([#772](https://github.com/curology/radiance-ui/pull/772))
+
+# v16.7.0
+
+- Add `backgroundColor` prop to `DialogModal` component [#767](https://github.com/curology/radiance-ui/pull/767)
+
 # v16.6.2
 
 - [Theming] Export `applyPrimaryThemeVerticalOffset` to be used in consumer apps

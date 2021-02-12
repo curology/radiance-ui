@@ -11,7 +11,9 @@ type BoxShadows =
   | typeof primaryTheme['BOX_SHADOWS']
   | typeof secondaryTheme['BOX_SHADOWS'];
 
-type Colors = typeof primaryTheme['COLORS'] | typeof secondaryTheme['COLORS'];
+export type Colors =
+  | typeof primaryTheme['COLORS']
+  | typeof secondaryTheme['COLORS'];
 
 type Fonts = typeof primaryTheme['FONTS'] | typeof secondaryTheme['FONTS'];
 
