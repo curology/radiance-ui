@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import Typography from '../typography';
+import { Typography } from '../typography';
 import {
   MEDIA_QUERIES,
   SPACER,

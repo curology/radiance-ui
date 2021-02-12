@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import { withDeprecationWarning } from '../../utils';
 import { ThemeType } from '../../constants';
 import {
   setSecondaryHeadingFont,
@@ -156,14 +155,3 @@ export const Typography = {
   SuccessText: Success,
   ErrorText: ErrorComponent,
 } as const;
-
-const deprecatedProperties = {
-  LinkTag: 'LinkTag is deprecated. Use Link instead',
-  ButtonText: 'ButtonText is deprecated. Use Button instead',
-  SuccessText: 'SuccessText is deprecated. Use Success instead',
-  ErrorText: 'ErrorText is deprecated. Use Error instead',
-};
-
-const TYPOGRAPHY = withDeprecationWarning(Typography, deprecatedProperties);
-
-export default TYPOGRAPHY;
