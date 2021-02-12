@@ -11,6 +11,15 @@ import { text } from '@storybook/addon-knobs';
 import { AnchorLinkButton } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 
+import { BREAKPOINTS, SPACER } from '../../../src/constants';
+
+/**
+ * Adds padding to Focused story to capture focus state in Chromatic
+ */
+const AnchorLinkContainer = ({ children }: { children: JSX.Element }) => (
+  <div style={{ padding: SPACER.medium }}>{children}</div>
+);
+
 export const Default = () => (
   <AnchorLinkButton onClick={() => undefined}>
     Tips for taking photos
@@ -25,9 +34,11 @@ export const Focused = () => {
   }, []);
 
   return (
-    <AnchorLinkButton ref={anchorLinkButtonRef} onClick={() => undefined}>
-      Tips for taking photos
-    </AnchorLinkButton>
+    <AnchorLinkContainer>
+      <AnchorLinkButton ref={anchorLinkButtonRef} onClick={() => undefined}>
+        Tips for taking photos
+      </AnchorLinkButton>
+    </AnchorLinkContainer>
   );
 };
 
@@ -45,6 +56,7 @@ export default {
   title: 'Components/Button/AnchorLinkButton',
   component: AnchorLinkButton,
   parameters: {
+    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
