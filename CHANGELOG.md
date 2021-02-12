@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v16.8.0
+
+- [Icons] Add BreakGlyph, CycleGlyph, CycleGlyphSecondary, FormulaChangeGlyph, HydrocortisoneGlyph, HydrocortisoneGlyphSecondary, HydroquinoneGlyph, LightbulbGlyph, MoonGlyph, MoonGlyphSecondary  ([#777](https://github.com/curology/radiance-ui/pull/777))
+
 # v16.7.1
 
 - [Icons] Fix CalendarIconSecondary ([#772](https://github.com/curology/radiance-ui/pull/772))
