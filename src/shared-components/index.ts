@@ -4,6 +4,7 @@ export { Avatar } from './avatar';
 export { Banner } from './banner';
 export {
   default as Button,
+  AnchorLinkButton,
   RoundButton,
   LinkButton,
   TextButton,

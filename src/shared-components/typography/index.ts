@@ -75,7 +75,10 @@ const buttonStyle = (theme: ThemeType) => `
   text-transform: uppercase;
 `;
 
-const linkStyle = () => `
+/**
+ * TODO-MA: Add theme.TYPOGRAPHY.fontSize.link to guarantee font-size compatibility
+ */
+const linkStyle = (theme: ThemeType) => `
   border-bottom: 1px solid currentColor;
   cursor: pointer;
   text-decoration: none;
@@ -87,6 +90,11 @@ const linkStyle = () => `
   &:hover {
     opacity: 0.6;
     transition: opacity 350ms;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -122,7 +130,7 @@ const Label = styled.label`
   ${({ theme }) => labelStyle(theme)}
 `;
 const Link = styled.a`
-  ${linkStyle()}
+  ${({ theme }) => linkStyle(theme)}
 `;
 const Success = styled.p`
   ${({ theme }) => successStyle(theme)}
