@@ -10,12 +10,12 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+import type { Meta, Story } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
 
 import { AcneGlyph } from '../../src/icons';
 
-export const Primary = () => {
+const BasePrimaryStory = () => {
   const [isActive, setIsActive] = React.useState(true);
 
   const toggleActive = (bool: boolean) => () => setIsActive(bool);
@@ -38,6 +38,16 @@ export const Primary = () => {
       </RadioButton>
     </React.Fragment>
   );
+};
+
+const PrimaryTemplate: Story = (args) => <BasePrimaryStory {...args} />;
+
+export const Primary = PrimaryTemplate.bind({});
+Primary.storyName = 'Primary/Nest';
+export const PrimarySecondary = PrimaryTemplate.bind({});
+PrimarySecondary.storyName = 'Primary/Nested';
+PrimarySecondary.parameters = {
+  theme: 'secondary',
 };
 
 export const Secondary = () => {

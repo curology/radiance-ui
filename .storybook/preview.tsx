@@ -19,6 +19,7 @@ const ADDONS_REQUIRED_IN_OPTIONS = {
   panelPosition: 'bottom',
   showNav: true,
   showPanel: true,
+  hierarchySeparator: '\\.',
 };
 
 /**
@@ -28,7 +29,10 @@ const ADDONS_CONFIG = {
   ...ADDONS_REQUIRED_IN_OPTIONS,
   enableShortcuts: true,
   sidebarAnimations: true,
-  theme: Theme,
+  theme: {
+    base: Theme.base,
+    brandTitle: 'TESTING',
+  },
 };
 
 addParameters({
@@ -76,16 +80,24 @@ export const globalTypes = {
 const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
   const getTheme = (): ThemeType => {
     const {
+      parameters: { theme },
       globals: { theme: contextTheme },
     } = context;
 
-    console.log('what is contextTheme', { context, contextTheme });
+    /**
+     * Theme override used for Chromatic visual regression tests
+     */
+    if (theme) {
+      if (theme === primaryTheme.__type) return primaryTheme;
+      if (theme === secondaryTheme.__type) return secondaryTheme;
 
-    return contextTheme === primaryTheme.__type
-      ? primaryTheme
-      : contextTheme === secondaryTheme.__type
-      ? secondaryTheme
-      : primaryTheme;
+      throw new Error('No Theme Found');
+    }
+
+    if (contextTheme === primaryTheme.__type) return primaryTheme;
+    if (contextTheme === secondaryTheme.__type) return secondaryTheme;
+
+    throw new Error('No Theme Found');
   };
 
   const theme = getTheme();

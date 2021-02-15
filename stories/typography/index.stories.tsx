@@ -7,12 +7,10 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Typography } from 'src/shared-components';
-import type { Meta } from '@storybook/react';
+import type { Meta, Story } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
 
-import { safeChromaticExcludeStories } from '../utils';
-
-export const Usage = () => (
+const BaseTypographyStory = () => (
   <React.Fragment>
     <Typography.Display>Display</Typography.Display>
     <Typography.Heading>Heading</Typography.Heading>
@@ -29,22 +27,13 @@ export const Usage = () => (
   </React.Fragment>
 );
 
-export const UsageSecondary = () => (
-  <React.Fragment>
-    <Typography.Display>Display</Typography.Display>
-    <Typography.Heading>Heading</Typography.Heading>
-    <Typography.Title>Title</Typography.Title>
-    <p>Body</p>
-    <Typography.Caption>Caption</Typography.Caption>
-    <Typography.Label>Label</Typography.Label>
-    <Typography.Error>Error</Typography.Error>
-    <Typography.Success>Success</Typography.Success>
-    <div>
-      <Typography.Link>Link</Typography.Link>
-    </div>
-    <Typography.Button>Button</Typography.Button>
-  </React.Fragment>
-);
+const Template: Story = (args) => <BaseTypographyStory {...args} />;
+
+export const Primary = Template.bind({});
+export const Secondary = Template.bind({});
+Secondary.parameters = {
+  theme: 'secondary',
+};
 
 const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
@@ -72,5 +61,4 @@ export default {
       ),
     },
   },
-  excludeStories: safeChromaticExcludeStories(['UsageSecondary']),
 } as Meta;
