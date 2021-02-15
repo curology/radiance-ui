@@ -19,7 +19,7 @@ type ButtonRefType =
   | undefined;
 
 /**
- * `AnchorLinkButton` will render an `anchor-link-like` button for triggering changes to the page, typically initiating modals.
+ * `AnchorLinkButton` will render an "anchor-link-like" button for triggering changes to the page, typically initiating modals.
  *
  * It should not be used for navigation: see `LinkButton` documentation for navigation functionality.
  *
