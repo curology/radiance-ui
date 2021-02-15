@@ -10,13 +10,28 @@ updates:
   reviewers:
   - michaeljaltamirano
   ignore:
-  - dependency-name: "@babel/core"
+  - dependency-name: "@babel/cli"
+    versions:
+    - "> 7.12.13"
+  - dependency-name: "@babel/plugin-proposal-class-properties"
+    versions:
+    - "> 7.12.13"
+  - dependency-name: "@babel/plugin-proposal-export-default-from"
+    versions:
+    - "> 7.12.13"
+  - dependency-name: "@babel/plugin-transform-parameters"
     versions:
     - "> 7.12.13"
   - dependency-name: "@babel/preset-env"
     versions:
     - "> 7.12.13"
+  - dependency-name: "@babel/preset-react"
+    versions:
+    - "> 7.12.13"
   - dependency-name: "@babel/preset-typescript"
+    versions:
+    - "> 7.12.13"
+  - dependency-name: "@babel/register"
     versions:
     - "> 7.12.13"
   - dependency-name: "@emotion/babel-preset-css-prop"
