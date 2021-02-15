@@ -9,31 +9,17 @@ updates:
     open-pull-requests-limit: 20
     reviewers:
       - michaeljaltamirano
+    assignees:
+      - michaeljaltamirano
     ignore:
       - dependency-name: '@babel/cli'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/plugin-proposal-class-properties'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/plugin-proposal-export-default-from'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/plugin-transform-parameters'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/preset-env'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/preset-react'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/preset-typescript'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@babel/register'
-        versions:
-          - '> 7.12.13'
       - dependency-name: '@emotion/babel-preset-css-prop'
         versions:
           - '> 10.0.27'
@@ -66,35 +52,15 @@ updates:
           - '>= 8.4.a'
           - '< 8.5'
       - dependency-name: '@storybook/addon-a11y'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/addon-actions'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/addon-docs'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/addon-essentials'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/addon-knobs'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/addon-links'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/addon-storysource'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/react'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/source-loader'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@storybook/theming'
-        versions:
-          - '> 6.1.17'
       - dependency-name: '@svgr/rollup'
         versions:
           - '> 4.0.3'
