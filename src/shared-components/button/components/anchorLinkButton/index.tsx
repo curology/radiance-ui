@@ -18,13 +18,6 @@ type ButtonRefType =
   | null
   | undefined;
 
-/**
- * `AnchorLinkButton` will render an `anchor-link-like' button for triggering changes to the page, typically initiating modals.
- *
- * It should not be used for navigation: see `LinkButton` documentation for navigation functionality.
- *
- * It is the only "Button" that does not extend the functionality/styling of our base Button component.
- */
 const AnchorLinkButton = (props: AnchorLinkButtonProps, ref: ButtonRefType) => {
   const { children, onClick } = props;
 
@@ -40,6 +33,13 @@ const AnchorLinkButton = (props: AnchorLinkButtonProps, ref: ButtonRefType) => {
   );
 };
 
+/**
+ * `AnchorLinkButton` will render an `anchor-link-like' button for triggering changes to the page, typically initiating modals.
+ *
+ * It should not be used for navigation: see `LinkButton` documentation for navigation functionality.
+ *
+ * It is the only "Button" that does not extend the functionality/styling of our base Button component.
+ */
 const AnchorLinkButtonWithRef = React.forwardRef(AnchorLinkButton);
 
 AnchorLinkButtonWithRef.propTypes = {
