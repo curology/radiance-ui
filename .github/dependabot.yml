@@ -77,6 +77,7 @@ updates:
       - dependency-name: '@types/react-test-renderer'
         versions:
           - '>= 17.0.0.a'
+      - dependency-name: '@typescript-eslint/eslint-plugin'
       - dependency-name: webpack
         versions:
           - '>= 5.a'
