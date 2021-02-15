@@ -32,15 +32,12 @@ const getCalloutStyles = (
   color?: ThemeColors,
   type?: CalloutProps['type'],
 ) => {
-  let backgroundColor;
-  let textColor;
+  let backgroundColor: ThemeColors = theme.COLORS.infoLight;
+  let textColor = color || theme.COLORS.primary;
 
   if (type === 'success') {
     backgroundColor = theme.COLORS.successLight;
     textColor = theme.COLORS.success;
-  } else {
-    backgroundColor = theme.COLORS.infoLight;
-    textColor = color || theme.COLORS.primary;
   }
 
   return {
@@ -63,7 +60,6 @@ export const Callout = ({
   type,
 }: CalloutProps) => {
   const theme = useTheme();
-
   const { backgroundColor, textColor } = getCalloutStyles(theme, color, type);
 
   return (
