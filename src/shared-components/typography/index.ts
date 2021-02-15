@@ -119,7 +119,7 @@ const Caption = styled.p`
 const Display = styled.h1`
   ${({ theme }) => displayStyle(theme)}
 `;
-const ErrorComponent = styled.p`
+const Error = styled.p`
   ${({ theme }) => errorStyle(theme)}
 `;
 const Heading = styled.h2`
@@ -142,16 +142,10 @@ export const Typography = {
   Button,
   Caption,
   Display,
-  Error: ErrorComponent,
+  Error,
   Heading,
   Label,
   Link,
   Success,
   Title,
-
-  // Deprecated legacy names
-  LinkTag: Link,
-  ButtonText: Button,
-  SuccessText: Success,
-  ErrorText: ErrorComponent,
 } as const;
