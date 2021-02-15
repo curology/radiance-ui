@@ -1,121 +1,117 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: "07:00"
-    timezone: America/Los_Angeles
-  open-pull-requests-limit: 10
-  reviewers:
-  - michaeljaltamirano
-  ignore:
-  - dependency-name: "@babel/cli"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/plugin-proposal-class-properties"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/plugin-proposal-export-default-from"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/plugin-transform-parameters"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/preset-env"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/preset-react"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/preset-typescript"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@babel/register"
-    versions:
-    - "> 7.12.13"
-  - dependency-name: "@emotion/babel-preset-css-prop"
-    versions:
-    - "> 10.0.27"
-  - dependency-name: emotion-theming
-    versions:
-    - "> 10.0.27"
-  - dependency-name: eslint-plugin-emotion
-    versions:
-    - "> 10.0.27"
-  - dependency-name: husky
-    versions:
-    - ">= 5.a"
-    - "< 6"
-  - dependency-name: jest-emotion
-    versions:
-    - "> 10.0.32"
-  - dependency-name: react-is
-    versions:
-    - "> 16.13.1"
-  - dependency-name: react-slick
-    versions:
-    - ">= 0.27.a"
-    - "< 0.28"
-  - dependency-name: regenerator-runtime
-    versions:
-    - ">= 0.13.6.a"
-    - "< 0.13.7"
-  - dependency-name: "@rollup/plugin-node-resolve"
-    versions:
-    - ">= 8.4.a"
-    - "< 8.5"
-  - dependency-name: "@storybook/addon-a11y"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/addon-actions"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/addon-docs"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/addon-essentials"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/addon-knobs"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/addon-links"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/addon-storysource"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/react"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/source-loader"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@storybook/theming"
-    versions:
-    - "> 6.1.17"
-  - dependency-name: "@svgr/rollup"
-    versions:
-    - "> 4.0.3"
-    - "< 5"
-  - dependency-name: "@types/react"
-    versions:
-    - ">= 17.0.0.a"
-    - "< 17.0.1"
-  - dependency-name: "@types/react"
-    versions:
-    - ">= 17.0.a"
-    - "< 17.1"
-  - dependency-name: "@types/react-dom"
-    versions:
-    - ">= 17.0.0.a"
-    - "< 17.0.1"
-  - dependency-name: "@types/react-test-renderer"
-    versions:
-    - ">= 17.0.0.a"
-    - "< 17.0.1"
-  - dependency-name: webpack
-    versions:
-    - ">= 5.a"
-    - "< 6"
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '07:00'
+      timezone: America/Los_Angeles
+    open-pull-requests-limit: 10
+    reviewers:
+      - michaeljaltamirano
+    ignore:
+      - dependency-name: '@babel/cli'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/plugin-proposal-class-properties'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/plugin-proposal-export-default-from'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/plugin-transform-parameters'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/preset-env'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/preset-react'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/preset-typescript'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@babel/register'
+        versions:
+          - '> 7.12.13'
+      - dependency-name: '@emotion/babel-preset-css-prop'
+        versions:
+          - '> 10.0.27'
+      - dependency-name: emotion-theming
+        versions:
+          - '> 10.0.27'
+      - dependency-name: eslint-plugin-emotion
+        versions:
+          - '> 10.0.27'
+      - dependency-name: husky
+        versions:
+          - '>= 5.a'
+          - '< 6'
+      - dependency-name: jest-emotion
+        versions:
+          - '> 10.0.32'
+      - dependency-name: react-is
+        versions:
+          - '> 16.13.1'
+      - dependency-name: react-slick
+        versions:
+          - '>= 0.27.a'
+          - '< 0.28'
+      - dependency-name: regenerator-runtime
+        versions:
+          - '>= 0.13.6.a'
+          - '< 0.13.7'
+      - dependency-name: '@rollup/plugin-node-resolve'
+        versions:
+          - '>= 8.4.a'
+          - '< 8.5'
+      - dependency-name: '@storybook/addon-a11y'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/addon-actions'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/addon-docs'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/addon-essentials'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/addon-knobs'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/addon-links'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/addon-storysource'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/react'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/source-loader'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@storybook/theming'
+        versions:
+          - '> 6.1.17'
+      - dependency-name: '@svgr/rollup'
+        versions:
+          - '> 4.0.3'
+          - '< 5'
+      - dependency-name: '@types/react'
+        versions:
+          - '>= 17.0.0.a'
+      - dependency-name: '@types/react'
+        versions:
+          - '>= 17.0.a'
+      - dependency-name: '@types/react-dom'
+        versions:
+          - '>= 17.0.0.a'
+      - dependency-name: '@types/react-test-renderer'
+        versions:
+          - '>= 17.0.0.a'
+      - dependency-name: webpack
+        versions:
+          - '>= 5.a'
+          - '< 6'

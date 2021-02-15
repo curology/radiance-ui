@@ -8,4 +8,5 @@ module.exports = {
     () => 'tsc -p stories/tsconfig.json --noEmit',
   ],
   '*.json': 'prettier --write',
+  '*.yml': 'prettier --write',
 };
