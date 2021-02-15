@@ -55,23 +55,23 @@ addParameters({
 
 addons.setConfig(ADDONS_CONFIG);
 
-// export const globalTypes = {
-//   theme: {
-//     name: 'Theme',
-//     description: 'Global theme for components',
-//     defaultValue: primaryTheme.__type,
-//     toolbar: {
-//       icon: 'switchalt',
-//       items: [
-//         { value: primaryTheme.__type, title: 'Primary Theme' },
-//         {
-//           value: secondaryTheme.__type,
-//           title: 'Secondary Theme',
-//         },
-//       ],
-//     },
-//   },
-// };
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: primaryTheme.__type,
+    toolbar: {
+      icon: 'switchalt',
+      items: [
+        { value: primaryTheme.__type, title: 'Primary Theme' },
+        {
+          value: secondaryTheme.__type,
+          title: 'Secondary Theme',
+        },
+      ],
+    },
+  },
+};
 
 const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
   const getTheme = (): ThemeType => {

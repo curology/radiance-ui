@@ -10,7 +10,26 @@ import { Typography } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
 
+import { safeChromaticExcludeStories } from '../utils';
+
 export const Usage = () => (
+  <React.Fragment>
+    <Typography.Display>Display</Typography.Display>
+    <Typography.Heading>Heading</Typography.Heading>
+    <Typography.Title>Title</Typography.Title>
+    <p>Body</p>
+    <Typography.Caption>Caption</Typography.Caption>
+    <Typography.Label>Label</Typography.Label>
+    <Typography.Error>Error</Typography.Error>
+    <Typography.Success>Success</Typography.Success>
+    <div>
+      <Typography.Link>Link</Typography.Link>
+    </div>
+    <Typography.Button>Button</Typography.Button>
+  </React.Fragment>
+);
+
+export const UsageSecondary = () => (
   <React.Fragment>
     <Typography.Display>Display</Typography.Display>
     <Typography.Heading>Heading</Typography.Heading>
@@ -53,4 +72,5 @@ export default {
       ),
     },
   },
+  excludeStories: safeChromaticExcludeStories(['UsageSecondary']),
 } as Meta;

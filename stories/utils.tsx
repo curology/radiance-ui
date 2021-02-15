@@ -1,5 +1,6 @@
 import React from 'react';
 import { StoryFnReactReturnType } from '@storybook/react/dist/client/preview/types';
+import isChromatic from 'chromatic/isChromatic';
 
 /**
  * Our DialogModal and ImmersiveModals are not fully captured by Chromatic
@@ -10,3 +11,6 @@ import { StoryFnReactReturnType } from '@storybook/react/dist/client/preview/typ
 export const modalStoryDecoratorForChromatic = (
   storyFn: () => StoryFnReactReturnType,
 ) => <div style={{ width: '1200px', height: '1000px' }}>{storyFn()}</div>;
+
+export const safeChromaticExcludeStories = (excludedStories: string[]) =>
+  isChromatic() ? [] : excludedStories;
