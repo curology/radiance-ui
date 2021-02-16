@@ -15,10 +15,6 @@ import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
-import {
-  chromaticAwareExcludeStories,
-  decorateStoriesWithTheme,
-} from 'stories/utils';
 
 import {
   ArrowLeftIcon,
@@ -168,13 +164,6 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export const {
-  DefaultSecondary,
-  DisabledSecondary,
-  LoadingSecondary,
-  WithColorSecondary,
-} = decorateStoriesWithTheme({ Default, Disabled, Loading, WithColor });
-
 export default {
   title: 'Components/Button/RoundButton',
   component: RoundButton,
@@ -196,10 +185,4 @@ export default {
       ),
     },
   },
-  excludeStories: chromaticAwareExcludeStories([
-    DefaultSecondary.storyName,
-    DisabledSecondary.storyName,
-    LoadingSecondary.storyName,
-    WithColorSecondary.storyName,
-  ]),
 } as Meta;

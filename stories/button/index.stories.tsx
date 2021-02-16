@@ -13,10 +13,6 @@ import { Button } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
-import {
-  chromaticAwareExcludeStories,
-  decorateStoriesWithTheme,
-} from 'stories/utils';
 
 import { CheckmarkIcon } from '../../src/icons';
 
@@ -212,12 +208,6 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export const {
-  DefaultSecondary,
-  WithIconSecondary,
-  WithColorSecondary,
-} = decorateStoriesWithTheme({ Default, WithIcon, WithColor });
-
 export default {
   title: 'Components/Button/Button',
   component: Button,
@@ -239,9 +229,4 @@ export default {
       ),
     },
   },
-  excludeStories: chromaticAwareExcludeStories([
-    DefaultSecondary.storyName,
-    WithIconSecondary.storyName,
-    WithColorSecondary.storyName,
-  ]),
 } as Meta;

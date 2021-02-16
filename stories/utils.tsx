@@ -14,13 +14,6 @@ export const modalStoryDecoratorForChromatic = (
   storyFn: () => StoryFnReactReturnType,
 ) => <div style={{ width: '1200px', height: '1000px' }}>{storyFn()}</div>;
 
-/**
- * To achieve visual regression testing for our non-primary themes, *without* adding
- * more overhead to our Storybook files, we use helper methods such that we export
- * additional, pre-themed stories **only** in the Chromatic environment.
- */
-export const chromaticAwareExcludeStories = (excludedStories: string[]) =>
-  isChromatic() ? [] : excludedStories;
 
 export const decorateStoryWithTheme = (
   StoryArg: Story,

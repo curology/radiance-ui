@@ -10,10 +10,6 @@ import {
 import { TextButton } from 'src/shared-components';
 import { action } from '@storybook/addon-actions';
 import type { Meta } from '@storybook/react';
-import {
-  chromaticAwareExcludeStories,
-  decorateStoriesWithTheme,
-} from 'stories/utils';
 
 export const Clickable = () => (
   <TextButton onClick={action('Button was clicked')}>
@@ -24,11 +20,6 @@ export const Clickable = () => (
 export const Disabled = () => (
   <TextButton disabled>This text button is disabled</TextButton>
 );
-
-export const {
-  ClickableSecondary,
-  DisabledSecondary,
-} = decorateStoriesWithTheme({ Clickable, Disabled });
 
 export default {
   title: 'Components/Button/TextButton',
@@ -51,8 +42,5 @@ export default {
       ),
     },
   },
-  excludeStories: chromaticAwareExcludeStories([
-    ClickableSecondary.storyName,
-    DisabledSecondary.storyName,
-  ]),
+
 } as Meta;
