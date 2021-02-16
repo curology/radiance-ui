@@ -10,6 +10,10 @@ import {
 import { Banner } from 'src/shared-components';
 import { select, text } from '@storybook/addon-knobs';
 import type { Meta } from '@storybook/react';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 export const Default = () => (
   <Banner
@@ -65,6 +69,13 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+export const {
+  DefaultSecondary,
+  ClickableSecondary,
+  SuccessSecondary,
+  ErrorSecondary,
+} = decorateStoriesWithTheme({ Default, Clickable, Success, Error });
+
 export default {
   title: 'Components/Banner',
   component: Banner,
@@ -86,4 +97,10 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([
+    DefaultSecondary.storyName,
+    ClickableSecondary.storyName,
+    SuccessSecondary.storyName,
+    ErrorSecondary.storyName,
+  ]),
 } as Meta;

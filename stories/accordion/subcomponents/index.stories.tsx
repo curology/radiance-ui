@@ -16,6 +16,11 @@ import personImage from 'shared/person.jpg';
 import { Accordion } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from '../../utils';
+
 const ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX =
   'components-accordion-subcomponents--';
 
@@ -206,6 +211,18 @@ export const Content = () => {
 
 Content.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}content`;
 
+export const {
+  ThumbnailsSecondary,
+  TruncateSecondary,
+  ContainerSecondary,
+  ContentSecondary,
+} = decorateStoriesWithTheme({
+  Thumbnails,
+  Truncate,
+  Container,
+  Content,
+});
+
 export default {
   title: 'Components/Accordion/Subcomponents',
   parameters: {
@@ -267,4 +284,10 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([
+    ThumbnailsSecondary.storyName,
+    TruncateSecondary.storyName,
+    ContainerSecondary.storyName,
+    ContentSecondary.storyName,
+  ]),
 } as Meta;

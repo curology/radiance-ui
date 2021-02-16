@@ -10,6 +10,10 @@ import {
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 export const Default = () => (
   <Alert content="Default Alert: it will disappear after 3 seconds" />
@@ -90,6 +94,22 @@ export const WithAlertContainer = () => (
   </Alert.Container>
 );
 
+export const {
+  StickySecondary,
+  ErrorSecondary,
+  SuccessSecondary,
+  WithCallToActionSecondary,
+  WithImageSecondary,
+  WithAlertContainerSecondary,
+} = decorateStoriesWithTheme({
+  Sticky,
+  Error,
+  Success,
+  WithCallToAction,
+  WithImage,
+  WithAlertContainer,
+});
+
 export default {
   title: 'Components/Alert',
   component: Alert,
@@ -119,4 +139,12 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([
+    StickySecondary.storyName,
+    ErrorSecondary.storyName,
+    SuccessSecondary.storyName,
+    WithCallToActionSecondary.storyName,
+    WithImageSecondary.storyName,
+    WithAlertContainerSecondary.storyName,
+  ]),
 } as Meta;

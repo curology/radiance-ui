@@ -13,6 +13,10 @@ import { LinkButton } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 export const Default = () => (
   <LinkButton.Container>
@@ -104,6 +108,12 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+export const {
+  DefaultSecondary,
+  ReactRouterLinkSecondary,
+  WithColorSecondary,
+} = decorateStoriesWithTheme({ Default, ReactRouterLink, WithColor });
+
 export default {
   title: 'Components/Button/LinkButton',
   component: LinkButton,
@@ -125,4 +135,10 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([
+    DefaultSecondary.storyName,
+    ClickableSecondary.storyName,
+    SuccessSecondary.storyName,
+    ErrorSecondary.storyName,
+  ]),
 } as Meta;

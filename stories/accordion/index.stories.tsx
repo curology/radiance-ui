@@ -13,6 +13,10 @@ import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Accordion } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 const ACCORDION_STORY_ID_PREFIX = 'components-accordion--';
 
@@ -140,6 +144,18 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+export const {
+  StandardSecondary,
+  NoBorderSecondary,
+  DisabledSecondary,
+  RightAlignedArrowSecondary,
+} = decorateStoriesWithTheme({
+  Standard,
+  NoBorder,
+  Disabled,
+  RightAlignedArrow,
+});
+
 export default {
   title: 'Components/Accordion',
   component: Accordion,
@@ -198,4 +214,10 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([
+    StandardSecondary.storyName,
+    NoBorderSecondary.storyName,
+    DisabledSecondary.storyName,
+    RightAlignedArrowSecondary.storyName,
+  ]),
 } as Meta;

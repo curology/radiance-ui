@@ -9,8 +9,10 @@ import {
 import { Typography } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
-
-import { chromaticAwareExcludeStories, decorateStoryWithTheme } from '../utils';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 export const Usage = () => (
   <React.Fragment>
@@ -29,7 +31,7 @@ export const Usage = () => (
   </React.Fragment>
 );
 
-export const Secondary = decorateStoryWithTheme(Usage);
+export const { UsageSecondary } = decorateStoriesWithTheme({ Usage });
 
 const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
@@ -57,5 +59,5 @@ export default {
       ),
     },
   },
-  excludeStories: chromaticAwareExcludeStories(['Secondary']),
+  excludeStories: chromaticAwareExcludeStories([UsageSecondary.storyName]),
 } as Meta;

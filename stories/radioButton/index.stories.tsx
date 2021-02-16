@@ -12,9 +12,12 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 import { AcneGlyph } from '../../src/icons';
-import { chromaticAwareExcludeStories, decorateStoryWithTheme } from '../utils';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
@@ -41,8 +44,6 @@ export const Primary = () => {
   );
 };
 
-export const PrimarySecondary = decorateStoryWithTheme(Primary);
-
 export const Secondary = () => {
   const [isActive, setIsActive] = React.useState(true);
 
@@ -68,8 +69,6 @@ export const Secondary = () => {
   );
 };
 
-export const SecondarySecondary = decorateStoryWithTheme(Primary);
-
 export const WithControls = () => {
   const theme = useTheme();
 
@@ -94,6 +93,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+export const {
+  PrimarySecondary,
+  SecondarySecondary,
+} = decorateStoriesWithTheme({ Primary, Secondary });
+
 export default {
   title: 'Components/RadioButton',
   component: RadioButton,
@@ -116,7 +120,7 @@ export default {
     },
   },
   excludeStories: chromaticAwareExcludeStories([
-    'PrimarySecondary',
-    'SecondarySecondary',
+    PrimarySecondary.storyName,
+    SecondarySecondary.storyName,
   ]),
 } as Meta;

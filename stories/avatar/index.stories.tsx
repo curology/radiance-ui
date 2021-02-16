@@ -12,6 +12,10 @@ import accountImg from 'shared/account.png';
 import personImg from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
+import {
+  chromaticAwareExcludeStories,
+  decorateStoriesWithTheme,
+} from 'stories/utils';
 
 export const Usage = () => (
   <React.Fragment>
@@ -23,6 +27,8 @@ export const Usage = () => (
     <Avatar src={accountImg} size="large" alt="" />
   </React.Fragment>
 );
+
+export const { UsageSecondary } = decorateStoriesWithTheme({ Usage });
 
 export default {
   title: 'Components/Avatar',
@@ -46,4 +52,5 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([UsageSecondary.storyName]),
 } as Meta;
