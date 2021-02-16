@@ -57,5 +57,5 @@ export default {
       ),
     },
   },
-  excludeStories: chromaticAwareExcludeStories(),
+  excludeStories: chromaticAwareExcludeStories(['Secondary']),
 } as Meta;

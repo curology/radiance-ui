@@ -10,12 +10,13 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta, Story } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
 
 import { AcneGlyph } from '../../src/icons';
+import { chromaticAwareExcludeStories, decorateStoryWithTheme } from '../utils';
 
-const BasePrimaryStory = () => {
+export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
 
   const toggleActive = (bool: boolean) => () => setIsActive(bool);
@@ -40,15 +41,7 @@ const BasePrimaryStory = () => {
   );
 };
 
-const PrimaryTemplate: Story = (args) => <BasePrimaryStory {...args} />;
-
-export const Primary = PrimaryTemplate.bind({});
-Primary.storyName = 'Primary/Nest';
-export const PrimarySecondary = PrimaryTemplate.bind({});
-PrimarySecondary.storyName = 'Primary/Nested';
-PrimarySecondary.parameters = {
-  theme: 'secondary',
-};
+export const PrimarySecondary = decorateStoryWithTheme(Primary);
 
 export const Secondary = () => {
   const [isActive, setIsActive] = React.useState(true);
@@ -74,6 +67,8 @@ export const Secondary = () => {
     </React.Fragment>
   );
 };
+
+export const SecondarySecondary = decorateStoryWithTheme(Primary);
 
 export const WithControls = () => {
   const theme = useTheme();
@@ -120,4 +115,8 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories([
+    'PrimarySecondary',
+    'SecondarySecondary',
+  ]),
 } as Meta;
