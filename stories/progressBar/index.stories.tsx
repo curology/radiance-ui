@@ -83,7 +83,7 @@ WithControls.parameters = {
 };
 
 export default {
-  title: 'Components/Progress Bar',
+  title: 'Components/ProgressBar',
   component: ProgressBar,
   parameters: {
     chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
