@@ -7,10 +7,12 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Typography } from 'src/shared-components';
-import type { Meta, Story } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
 
-const BaseTypographyStory = () => (
+import { chromaticAwareExcludeStories, decorateStoryWithTheme } from '../utils';
+
+export const Usage = () => (
   <React.Fragment>
     <Typography.Display>Display</Typography.Display>
     <Typography.Heading>Heading</Typography.Heading>
@@ -27,13 +29,7 @@ const BaseTypographyStory = () => (
   </React.Fragment>
 );
 
-const Template: Story = (args) => <BaseTypographyStory {...args} />;
-
-export const Primary = Template.bind({});
-export const Secondary = Template.bind({});
-Secondary.parameters = {
-  theme: 'secondary',
-};
+export const Secondary = decorateStoryWithTheme(Usage);
 
 const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
@@ -61,4 +57,5 @@ export default {
       ),
     },
   },
+  excludeStories: chromaticAwareExcludeStories(),
 } as Meta;

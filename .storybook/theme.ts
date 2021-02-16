@@ -4,7 +4,7 @@ import { primaryTheme, secondaryTheme } from '../src/constants/themes';
 console.log('in theme creation', primaryTheme);
 
 const Theme = create({
-  base: 'dark',
+  base: 'light',
 
   // colorPrimary: '#FF4785',
   colorPrimary: primaryTheme.COLORS.primary,
