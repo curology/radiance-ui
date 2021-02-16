@@ -73,9 +73,9 @@ export const globalTypes = {
   },
 };
 
-const getTheme = (theme: ThemeType) => {
-  if (theme.__type === primaryTheme.__type) return primaryTheme;
-  if (theme.__type === secondaryTheme.__type) return secondaryTheme;
+const getTheme = (theme: ThemeType['type']) => {
+  if (theme === primaryTheme.__type) return primaryTheme;
+  if (theme === secondaryTheme.__type) return secondaryTheme;
 
   throw new Error('No Theme Found');
 };
