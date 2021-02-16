@@ -28,6 +28,10 @@ export const Usage = () => (
   </ChipContainer>
 );
 
+Usage.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
 export const WithControls = () => (
   <Chip
     status={select(
@@ -47,7 +51,6 @@ export default {
   title: 'Components/Chip',
   component: Chip,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>

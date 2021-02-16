@@ -26,6 +26,10 @@ export const Default = () => (
   </AnchorLinkButton>
 );
 
+Default.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
 export const Focused = () => {
   const anchorLinkButtonRef = React.useRef<HTMLButtonElement | null>(null);
 
@@ -42,6 +46,10 @@ export const Focused = () => {
   );
 };
 
+Focused.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
 export const WithControls = () => (
   <AnchorLinkButton onClick={() => undefined}>
     {text('children', 'Edit me!')}
@@ -56,7 +64,6 @@ export default {
   title: 'Components/Button/AnchorLinkButton',
   component: AnchorLinkButton,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>

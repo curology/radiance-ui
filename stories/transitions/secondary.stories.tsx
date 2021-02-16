@@ -6,6 +6,7 @@ export * from './index.stories';
 export default {
   title: 'Components/Transitions/Secondary',
   parameters: {
+    chromatic: { disabled: true },
     theme: 'secondary',
   },
   excludeStories: excludeStoriesForNonChromaticEnvironments(),

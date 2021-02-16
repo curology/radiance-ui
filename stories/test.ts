@@ -22,22 +22,25 @@ describe('Stories', () => {
 
     directoryNames.forEach((directoryName) => {
       describe(`${directoryName}`, () => {
+        const componentPath = path.resolve(__dirname, directoryName);
+        const files = fs.readdirSync(componentPath);
+        const nestedFolders = getDirectories(componentPath);
+
         it('should have a corresponding secondary story for visual regression testing', () => {
-          const componentPath = path.resolve(__dirname, directoryName);
+          expect(files.some(hasPrimaryStory)).toBe(true);
+          expect(files.some(hasSecondaryStory)).toBe(true);
+        });
 
-          const files = fs.readdirSync(componentPath);
-          const nestedFolders = getDirectories(componentPath);
-
-          expect(files.some(hasPrimaryStory));
-          expect(files.some(hasSecondaryStory));
-
-          nestedFolders.forEach((folder) => {
+        nestedFolders.forEach((folder) => {
+          describe(`${directoryName} - ${folder}`, () => {
             const nestedFiles = fs.readdirSync(
               path.resolve(componentPath, folder),
             );
 
-            expect(nestedFiles.some(hasPrimaryStory));
-            expect(nestedFiles.some(hasSecondaryStory));
+            it('should also have corresponding stories for subcomponents', () => {
+              expect(nestedFiles.some(hasPrimaryStory)).toBe(true);
+              expect(nestedFiles.some(hasSecondaryStory)).toBe(true);
+            });
           });
         });
       });

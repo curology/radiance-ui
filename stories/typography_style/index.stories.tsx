@@ -27,10 +27,13 @@ export const Usage = () => (
   </React.Fragment>
 );
 
+Usage.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
 export default {
   title: 'Components/TYPOGRAPHY_STYLE',
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
