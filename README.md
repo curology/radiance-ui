@@ -33,13 +33,7 @@ or [yarn](https://yarnpkg.com/lang/en/docs/cli/link/).
 
 ## Documentation
 
-Documentation around usage, you can also see it with knobs at: [https://radiance-ui.curology.com](https://radiance-ui.curology.com)
-
-- [Alert](docs/alert.md)
-- [Constants](docs/constants.md)
-- [Icon](docs/icon.md)
-- [Typography](docs/typography.md)
-- [Typography Style](docs/typography-style.md)
+Documentation around usage can be found in the respective Docs pages of every component on [https://radiance-ui.curology.com](https://radiance-ui.curology.com)
 
 ## Publishing to NPM
 
