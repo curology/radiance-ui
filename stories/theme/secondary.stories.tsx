@@ -1,4 +1,5 @@
 import { Meta } from '@storybook/react';
+import isChromatic from 'chromatic/isChromatic';
 
 export * from './index.stories';
 
@@ -7,5 +8,5 @@ export default {
   parameters: {
     theme: 'secondary',
   },
-  excludeStories: /.*/,
+  excludeStories: isChromatic() ? [] : /.*/,
 } as Meta;
