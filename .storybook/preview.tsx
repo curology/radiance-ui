@@ -19,7 +19,6 @@ const ADDONS_REQUIRED_IN_OPTIONS = {
   panelPosition: 'bottom',
   showNav: true,
   showPanel: true,
-  hierarchySeparator: '\\.',
 };
 
 /**
@@ -29,10 +28,7 @@ const ADDONS_CONFIG = {
   ...ADDONS_REQUIRED_IN_OPTIONS,
   enableShortcuts: true,
   sidebarAnimations: true,
-  theme: {
-    base: Theme.base,
-    brandTitle: 'TESTING',
-  },
+  theme: Theme,
 };
 
 addParameters({
@@ -77,30 +73,32 @@ export const globalTypes = {
   },
 };
 
+const getTheme = (theme: ThemeType) => {
+  if (theme.__type === primaryTheme.__type) return primaryTheme;
+  if (theme.__type === secondaryTheme.__type) return secondaryTheme;
+
+  throw new Error('No Theme Found');
+};
+
 const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
-  const getTheme = (): ThemeType => {
+  const getStoryTheme = (): ThemeType => {
     const {
       parameters: { theme },
       globals: { theme: contextTheme },
     } = context;
 
     /**
-     * Theme override used for Chromatic visual regression tests
+     * Theme override used for Chromatic visual regression tests: we pass in `theme` (via `parameters`)
+     * in our `secondary.stories.tsx` stories that re-export our primary stories with secondary theming
      */
     if (theme) {
-      if (theme === primaryTheme.__type) return primaryTheme;
-      if (theme === secondaryTheme.__type) return secondaryTheme;
-
-      throw new Error('No Theme Found');
+      return getTheme(theme);
     }
 
-    if (contextTheme === primaryTheme.__type) return primaryTheme;
-    if (contextTheme === secondaryTheme.__type) return secondaryTheme;
-
-    throw new Error('No Theme Found');
+    return getTheme(contextTheme);
   };
 
-  const theme = getTheme();
+  const theme = getStoryTheme();
 
   return (
     <ThemeProvider theme={theme}>
@@ -109,15 +107,6 @@ const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
       <Story {...context} />
     </ThemeProvider>
   );
-};
-
-export const parameters = {
-  MICHAELTEST: {
-    values: [
-      { name: 'red', value: '#f00' },
-      { name: 'green', value: '#0f0' },
-    ],
-  },
 };
 
 export const decorators = [withThemeProvider];

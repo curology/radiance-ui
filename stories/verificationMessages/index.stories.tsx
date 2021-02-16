@@ -50,12 +50,6 @@ export const Success = () => (
   </FieldContainer>
 );
 
-export const SecondarySuccess = () => <Success />;
-
-SecondarySuccess.parameters = {
-  michaelThemeTest: 'secondary',
-};
-
 export const WithControls = () => (
   <FieldContainer>
     <Field.Input />
