@@ -13,7 +13,7 @@ import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { useTheme } from 'emotion-theming';
 
-import { NeckGlyph } from '../../src/icons';
+import { LockGlyph, NeckGlyph } from '../../src/icons';
 
 export const Default = () => (
   <Callout.Container>
@@ -40,6 +40,14 @@ export const WithIcon = () => (
     <Callout icon={<NeckGlyph />}>
       <strong>We recommend</strong> this bundle because you indicated concern
       about <strong>dry skin</strong> and <strong>body acne</strong>
+    </Callout>
+  </Callout.Container>
+);
+
+export const SuccessCallout = () => (
+  <Callout.Container>
+    <Callout type="success" icon={<LockGlyph />}>
+      Your photos are private and are used by your provider to treat your skin
     </Callout>
   </Callout.Container>
 );
