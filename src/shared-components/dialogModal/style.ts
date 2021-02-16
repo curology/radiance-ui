@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import Typography from '../typography';
+import { Typography } from '../typography';
 import { Colors, MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
 export const Overlay = styled.div`

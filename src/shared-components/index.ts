@@ -4,6 +4,7 @@ export { Avatar } from './avatar';
 export { Banner } from './banner';
 export {
   default as Button,
+  AnchorLinkButton,
   RoundButton,
   LinkButton,
   TextButton,
@@ -26,6 +27,6 @@ export { RadioButton } from './radioButton';
 export { Tabs } from './tabs';
 export { Toggle } from './toggle';
 export { Tooltip } from './tooltip';
-export { default as Typography, style as TYPOGRAPHY_STYLE } from './typography';
+export { Typography, style as TYPOGRAPHY_STYLE } from './typography';
 export { FadeInContainer, opacityInAnimationStyle } from './transitions';
 export { VerificationMessages } from './verificationMessages';
