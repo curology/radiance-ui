@@ -97,10 +97,10 @@ export const Alert = (alertProps: AlertProps) => {
          * Secondary Theme truncated content gets stuck in the while loop because
          * there are different dimensions at play.
          */
-        const ARBITRARY_AGENCY_OFFSET = 5;
+        const ARBITRARY_SECONDARY_OFFSET = 5;
         while (
           contentElement.scrollHeight >
-            contentElement.offsetHeight + ARBITRARY_AGENCY_OFFSET &&
+            contentElement.offsetHeight + ARBITRARY_SECONDARY_OFFSET &&
           wordsArray.length !== 0
         ) {
           wordsArray.pop();
@@ -108,8 +108,9 @@ export const Alert = (alertProps: AlertProps) => {
         }
 
         /**
-         * If while loop elements all words due to element dimensions,
-         * prefer resetting without truncating to broken functionality
+         * If while loop pops all words due to element dimensions,
+         * prefer resetting without truncating to potentially
+         * broken functionality
          */
         if (wordsArray.length === 0) {
           contentElement.innerHTML = initialWords;
