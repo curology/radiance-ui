@@ -6,7 +6,7 @@ import INDICATOR_STORIES from './index.stories';
 export * from './index.stories';
 
 export default {
-  title: 'Components/Indicator/Secondary',
+  title: `${INDICATOR_STORIES.title}/Secondary`,
   parameters: {
     chromatic: INDICATOR_STORIES.parameters.chromatic,
     theme: 'secondary',

@@ -90,6 +90,9 @@ export const WithAlertContainer = () => (
   </Alert.Container>
 );
 
+/**
+ * TODO: Figure out how to get Alerts to show up on Chromatic
+ */
 const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
 
 interface AlertStories extends Meta {
@@ -100,9 +103,6 @@ const ALERT_STORIES: AlertStories = {
   title: 'Components/Alert',
   component: Alert,
   parameters: {
-    /**
-     * TODO: Figure out how to get Alerts to show up on Chromatic
-     */
     ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (

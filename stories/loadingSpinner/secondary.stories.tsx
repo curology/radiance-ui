@@ -6,7 +6,7 @@ import LOADING_SPINNER_STORIES from './index.stories';
 export * from './index.stories';
 
 export default {
-  title: 'Components/LoadingSpinner/Secondary',
+  title: `${LOADING_SPINNER_STORIES.title}/Secondary`,
   parameters: {
     chromatic: LOADING_SPINNER_STORIES.parameters.chromatic,
     theme: 'secondary',

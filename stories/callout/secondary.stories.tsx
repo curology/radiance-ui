@@ -6,7 +6,7 @@ import CALLOUT_STORIES from './index.stories';
 export * from './index.stories';
 
 export default {
-  title: 'Components/Callout/Secondary',
+  title: `${CALLOUT_STORIES.title}/Secondary`,
   parameters: {
     chromatic: CALLOUT_STORIES.parameters.chromatic,
     theme: 'secondary',

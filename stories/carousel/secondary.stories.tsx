@@ -6,7 +6,7 @@ import CAROUSEL_STORIES from './index.stories';
 export * from './index.stories';
 
 export default {
-  title: 'Components/Carousel/Secondary',
+  title: `${CAROUSEL_STORIES.title}/Secondary`,
   parameters: {
     chromatic: CAROUSEL_STORIES.parameters.chromatic,
     theme: 'secondary',
