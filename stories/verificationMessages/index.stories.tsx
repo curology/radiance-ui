@@ -65,7 +65,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const VERIFICATION_MESSAGES_STORIES: Meta = {
   title: 'Components/VerificationMessages',
   component: VerificationMessages,
   parameters: {
@@ -86,4 +86,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default VERIFICATION_MESSAGES_STORIES;

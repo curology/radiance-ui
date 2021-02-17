@@ -104,7 +104,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const LINK_BUTTON_STORIES: Meta = {
   title: 'Components/Button/LinkButton',
   component: LinkButton,
   parameters: {
@@ -125,4 +125,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default LINK_BUTTON_STORIES;

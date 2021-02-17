@@ -57,7 +57,8 @@
       {
         "jpg": "always",
         "png": "always",
-        "svg": "always"
+        "svg": "always",
+        "stories": "always"
       }
     ],
     "no-console": ["error", { "allow": ["warn", "error"] }],

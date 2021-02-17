@@ -73,7 +73,7 @@ export const Mobile = () => {
   );
 };
 
-export default {
+const DROPDOWN_STORIES: Meta = {
   title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
@@ -97,4 +97,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default DROPDOWN_STORIES;

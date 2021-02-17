@@ -164,7 +164,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const ROUND_BUTTON_STORIES: Meta = {
   title: 'Components/Button/RoundButton',
   component: RoundButton,
   parameters: {
@@ -185,4 +185,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ROUND_BUTTON_STORIES;

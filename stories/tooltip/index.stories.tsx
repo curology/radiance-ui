@@ -142,7 +142,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const TOOLTIP_STORIES: Meta = {
   title: 'Components/Tooltip',
   component: Tooltip,
   parameters: {
@@ -163,4 +163,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TOOLTIP_STORIES;

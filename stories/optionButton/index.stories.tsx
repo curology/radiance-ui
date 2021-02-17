@@ -182,7 +182,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const OPTION_BUTTON_STORIES: Meta = {
   title: 'Components/OptionButton',
   component: OptionButton,
   parameters: {
@@ -203,4 +203,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default OPTION_BUTTON_STORIES;
