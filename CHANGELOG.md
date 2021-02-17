@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v17.0.0
+
+- [Theme] **BREAKING CHANGE**: Require `theme` argument to `TYPOGRAPHY_STYLE.link` ([#778](https://github.com/curology/radiance-ui/pull/778))
+- [Components] Add AnchorLinkButton ([#778](https://github.com/curology/radiance-ui/pull/778))
+- [Components] Add `'success'` Callout type ([#780](https://github.com/curology/radiance-ui/pull/780))
+- [Bugfix] Correct never-ending while loop in Alert ([#797](https://github.com/curology/radiance-ui/pull/797/files#diff-cd9d43540e34235173ce0796f0c9cec08f2a2335b2659523e48ac3d44ea28b55))
+- [Internal] Add Chromatic support for Secondary Theme ([#797](https://github.com/curology/radiance-ui/pull/797))
+
 # v16.8.0
 
 - [Icons] Add BreakGlyph, CycleGlyph, CycleGlyphSecondary, FormulaChangeGlyph, HydrocortisoneGlyph, HydrocortisoneGlyphSecondary, HydroquinoneGlyph, LightbulbGlyph, MoonGlyph, MoonGlyphSecondary  ([#777](https://github.com/curology/radiance-ui/pull/777))
