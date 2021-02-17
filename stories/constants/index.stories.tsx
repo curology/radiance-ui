@@ -10,7 +10,7 @@ import type { Meta } from '@storybook/react';
 
 export * from './availableConstants.stories';
 
-export default {
+const CONSTANTS_STORIES: Meta = {
   title: 'CONSTANTS/Constants',
   parameters: {
     docs: {
@@ -28,4 +28,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CONSTANTS_STORIES;

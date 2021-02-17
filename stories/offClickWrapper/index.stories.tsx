@@ -26,11 +26,17 @@ export const Usage = () => {
   );
 };
 
-export default {
+const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
+
+interface OffClickWrapperStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const OFF_CLICK_WRAPPER_STORIES: OffClickWrapperStories = {
   title: 'Components/OffClickWrapper',
   component: OffClickWrapper,
   parameters: {
-    chromatic: { disable: true },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -48,4 +54,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default OFF_CLICK_WRAPPER_STORIES;

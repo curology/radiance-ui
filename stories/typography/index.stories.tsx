@@ -33,7 +33,7 @@ Usage.parameters = {
 
 const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
-export default {
+const TYPOGRAPHY_STORIES: Meta = {
   title: 'Components/Typography',
   parameters: {
     docs: {
@@ -56,4 +56,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TYPOGRAPHY_STORIES;

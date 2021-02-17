@@ -1,10 +1,12 @@
 import { Meta } from '@storybook/react';
 import { excludeStoriesForNonChromaticEnvironments } from 'stories/utils';
 
+import TYPOGRAPHY_STYLE_STORIES from './index.stories';
+
 export * from './index.stories';
 
 export default {
-  title: 'Components/TYPOGRAPHY_STYLE/Secondary',
+  title: `${TYPOGRAPHY_STYLE_STORIES.title}/Secondary`,
   parameters: {
     theme: 'secondary',
   },

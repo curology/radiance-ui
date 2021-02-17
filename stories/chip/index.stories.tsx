@@ -47,7 +47,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHIP_STORIES: Meta = {
   title: 'Components/Chip',
   component: Chip,
   parameters: {
@@ -65,4 +65,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CHIP_STORIES;

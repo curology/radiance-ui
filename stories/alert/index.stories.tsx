@@ -90,14 +90,20 @@ export const WithAlertContainer = () => (
   </Alert.Container>
 );
 
-export default {
+const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
+
+interface AlertStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const ALERT_STORIES: AlertStories = {
   title: 'Components/Alert',
   component: Alert,
   parameters: {
     /**
      * TODO: Figure out how to get Alerts to show up on Chromatic
      */
-    chromatic: { disable: true },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -119,4 +125,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ALERT_STORIES;

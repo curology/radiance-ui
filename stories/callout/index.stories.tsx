@@ -75,11 +75,18 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+} as const;
+interface CalloutStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const CALLOUT_STORIES: CalloutStories = {
   title: 'Components/Callout',
   component: Callout,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -97,4 +104,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CALLOUT_STORIES;

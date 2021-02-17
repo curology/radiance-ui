@@ -60,7 +60,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const ANCHOR_LINK_BUTTON_STORIES: Meta = {
   title: 'Components/Button/AnchorLinkButton',
   component: AnchorLinkButton,
   parameters: {
@@ -81,4 +81,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ANCHOR_LINK_BUTTON_STORIES;

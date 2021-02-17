@@ -195,11 +195,19 @@ export const WithScrollingContentOpened = () => {
 WithScrollingContentOpened.storyName = 'With Scrolling Content (Opened)';
 WithScrollingContentOpened.decorators = [modalStoryDecoratorForChromatic];
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
+} as const;
+
+interface ImmersiveModalStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const IMMERSIVE_MODALS_STORIES: ImmersiveModalStories = {
   title: 'Components/ImmersiveModal',
   component: ImmersiveModal,
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -237,4 +245,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default IMMERSIVE_MODALS_STORIES;

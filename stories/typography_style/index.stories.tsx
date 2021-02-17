@@ -31,7 +31,7 @@ Usage.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
-export default {
+const TYPOGRAPHY_STYLE_STORIES: Meta = {
   title: 'Components/TYPOGRAPHY_STYLE',
   parameters: {
     docs: {
@@ -56,4 +56,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TYPOGRAPHY_STYLE_STORIES;

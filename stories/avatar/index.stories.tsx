@@ -28,7 +28,7 @@ Usage.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
-export default {
+const AVATAR_STORIES: Meta = {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
@@ -49,4 +49,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default AVATAR_STORIES;

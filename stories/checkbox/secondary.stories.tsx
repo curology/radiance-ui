@@ -1,10 +1,12 @@
 import { Meta } from '@storybook/react';
 import { excludeStoriesForNonChromaticEnvironments } from 'stories/utils';
 
+import CHECKBOX_STORIES from './index.stories';
+
 export * from './index.stories';
 
 export default {
-  title: 'Components/Checkbox/Secondary',
+  title: `${CHECKBOX_STORIES.title}/Secondary`,
   parameters: {
     theme: 'secondary',
   },

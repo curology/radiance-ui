@@ -58,11 +58,19 @@ export const WithControls = () => {
   );
 };
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { disable: true, viewports: [BREAKPOINTS.xs] },
+} as const;
+
+interface LoadingSpinnerStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const LOADING_SPINNER_STORIES: LoadingSpinnerStories = {
   title: 'Components/LoadingSpinner',
   component: LoadingSpinner,
   parameters: {
-    chromatic: { disable: true, viewports: [BREAKPOINTS.xs] },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -80,4 +88,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default LOADING_SPINNER_STORIES;

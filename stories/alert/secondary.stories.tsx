@@ -1,15 +1,14 @@
 import { Meta } from '@storybook/react';
 import { excludeStoriesForNonChromaticEnvironments } from 'stories/utils';
 
+import ALERT_STORIES from './index.stories';
+
 export * from './index.stories';
 
 export default {
-  title: 'Components/Alert/Secondary',
+  title: `${ALERT_STORIES.title}/Secondary`,
   parameters: {
-    /**
-     * TODO: Figure out how to get Alerts to show up on Chromatic
-     */
-    chromatic: { disable: true },
+    chromatic: ALERT_STORIES.parameters.chromatic,
     theme: 'secondary',
   },
   excludeStories: excludeStoriesForNonChromaticEnvironments(),

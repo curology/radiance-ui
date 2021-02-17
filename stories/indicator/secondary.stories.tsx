@@ -1,13 +1,14 @@
 import { Meta } from '@storybook/react';
-import { BREAKPOINTS } from 'src/constants';
 import { excludeStoriesForNonChromaticEnvironments } from 'stories/utils';
+
+import INDICATOR_STORIES from './index.stories';
 
 export * from './index.stories';
 
 export default {
   title: 'Components/Indicator/Secondary',
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
+    chromatic: INDICATOR_STORIES.parameters.chromatic,
     theme: 'secondary',
   },
   excludeStories: excludeStoriesForNonChromaticEnvironments(),
