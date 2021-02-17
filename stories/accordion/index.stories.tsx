@@ -140,7 +140,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const ACCORDION_STORIES: Meta = {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: {
@@ -198,4 +198,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ACCORDION_STORIES;

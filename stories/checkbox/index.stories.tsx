@@ -73,7 +73,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHECKBOX_STORIES: Meta = {
   title: 'Components/Checkbox',
   component: Checkbox,
   parameters: {
@@ -94,4 +94,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CHECKBOX_STORIES;

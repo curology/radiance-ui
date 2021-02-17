@@ -24,11 +24,14 @@ export const Usage = () => (
   </React.Fragment>
 );
 
-export default {
+Usage.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
+const AVATAR_STORIES: Meta = {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -46,4 +49,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default AVATAR_STORIES;

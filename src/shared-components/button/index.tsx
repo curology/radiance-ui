@@ -7,6 +7,7 @@ import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
 import { LinkButton } from './components/linkButton';
+import { AnchorLinkButton } from './components/anchorLinkButton';
 import RoundButton from './components/roundButton';
 import { TextButton } from './components/textButton';
 import {
@@ -136,5 +137,5 @@ Button.propTypes = {
   textColor: PropTypes.string,
 };
 
-export { LinkButton, RoundButton, TextButton };
+export { AnchorLinkButton, LinkButton, RoundButton, TextButton };
 export default withDeprecationWarning(Button, deprecatedProperties);
