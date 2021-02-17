@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v17.0.1
+
+- [Dependencies] Remove errantly added @storybook packages from dependencies ([#799](https://github.com/curology/radiance-ui/pull/799))
+
 # v17.0.0
 
 - [Theme] **BREAKING CHANGE**: Require `theme` argument to `TYPOGRAPHY_STYLE.link` ([#778](https://github.com/curology/radiance-ui/pull/778))
@@ -10,7 +14,7 @@
 
 # v16.8.0
 
-- [Icons] Add BreakGlyph, CycleGlyph, CycleGlyphSecondary, FormulaChangeGlyph, HydrocortisoneGlyph, HydrocortisoneGlyphSecondary, HydroquinoneGlyph, LightbulbGlyph, MoonGlyph, MoonGlyphSecondary  ([#777](https://github.com/curology/radiance-ui/pull/777))
+- [Icons] Add BreakGlyph, CycleGlyph, CycleGlyphSecondary, FormulaChangeGlyph, HydrocortisoneGlyph, HydrocortisoneGlyphSecondary, HydroquinoneGlyph, LightbulbGlyph, MoonGlyph, MoonGlyphSecondary ([#777](https://github.com/curology/radiance-ui/pull/777))
 
 # v16.7.1
 
