@@ -2786,7 +2786,7 @@
     react-syntax-highlighter "^13.5.0"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-toolbars@6.1.18", "@storybook/addon-toolbars@^6.1.18":
+"@storybook/addon-toolbars@6.1.18":
   version "6.1.18"
   resolved "https://registry.yarnpkg.com/@storybook/addon-toolbars/-/addon-toolbars-6.1.18.tgz#484c26d668b63f481e5c8439c4b7eb800824491d"
   integrity sha512-+a/H80OJ+2eCymGLlvMUmGh3AVpy5bGsw5b4AROvz1iYyYoMEJz0/Bi+VwU6bjHXn8I4Aqj727Al4XNYZtFU+A==
@@ -2797,7 +2797,7 @@
     "@storybook/components" "6.1.18"
     core-js "^3.0.1"
 
-"@storybook/addon-viewport@6.1.18", "@storybook/addon-viewport@^6.1.18":
+"@storybook/addon-viewport@6.1.18":
   version "6.1.18"
   resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.1.18.tgz#10fdbb0b3ff5ead84f2d4c10f91a80db1cb8de6e"
   integrity sha512-Sf3RhdAekmfkrcU8gFbgJFCEuo4uJmGIPaHIBuBUYxc/IT1Iz7b4k6WwPh+Dd0K6hro/2ZeWSiFTM4af17uNZw==
