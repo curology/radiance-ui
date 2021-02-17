@@ -110,8 +110,3 @@ const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
 };
 
 export const decorators = [withThemeProvider];
-
-export const parameters = {
-  // disables Chromatic on a global level
-  chromatic: { disable: true },
-};
