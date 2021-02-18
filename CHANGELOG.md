@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v17.2.0
+- [Icons] Add SunMoonGlyph and SunMoonGlyphSecondary ([#801](https://github.com/curology/radiance-ui/pull/801))
+
 # v17.1.0
 
 - [Icons] Add DexpanthenolGlyphSecondary, GreenTeaGlyphSecondary, KojicAcidGlyphSecondary, ResveratrolGlyphSecondary ([#800](https://github.com/curology/radiance-ui/pull/800))
