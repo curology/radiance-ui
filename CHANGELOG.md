@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v17.1.0
+
+- [Icons] Add DexpanthenolGlyphSecondary, GreenTeaGlyphSecondary, KojicAcidGlyphSecondary, ResveratrolGlyphSecondary ([#800](https://github.com/curology/radiance-ui/pull/800))
+
 # v17.0.1
 
 - [Dependencies] Remove errantly added @storybook packages from dependencies ([#799](https://github.com/curology/radiance-ui/pull/799))
