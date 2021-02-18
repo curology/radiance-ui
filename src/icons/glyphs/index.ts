@@ -77,6 +77,7 @@ export { default as SelfieGlyph } from './selfieGlyph';
 export { default as SleepGlyph } from './sleepGlyph';
 export { default as StressGlyph } from './stressGlyph';
 export { default as SunGlyph } from './sunGlyph';
+export { default as SunMoonGlyph } from './sunMoonGlyph';
 export { default as SunblockGlyph } from './sunblockGlyph';
 export { default as SunscreenGlyph } from './sunscreenGlyph';
 export { default as SuperbottleGlyph } from './superbottleGlyph';
