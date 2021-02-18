@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v17.2.1
+- [Components] Add media query to DialogModal for smaller devices ([#779](https://github.com/curology/radiance-ui/pull/779))
+
 # v17.2.0
 - [Icons] Add SunMoonGlyph and SunMoonGlyphSecondary ([#801](https://github.com/curology/radiance-ui/pull/801))
 
