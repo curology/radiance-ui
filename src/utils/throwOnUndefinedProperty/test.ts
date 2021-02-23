@@ -6,7 +6,7 @@ test('throws an error when trying to access undefined property', () => {
 
   expect(protectedObj.foo).toBe('bar');
   /* eslint-disable @typescript-eslint/no-unsafe-return */
-  // @ts-ignore TS is catching the error we want to throw for this test
+  // @ts-expect-error: TS is catching the error we want to throw for this test
   expect(() => protectedObj.baz).toThrow("Property 'baz' is not defined");
   /* eslint-enable @typescript-eslint/no-unsafe-return */
 });
