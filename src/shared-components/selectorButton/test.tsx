@@ -8,7 +8,7 @@ import { SelectorButton } from './index';
 
 describe('<SelectorButton />', () => {
   describe('UI snapshots', () => {
-    test('when children is undefined', () => {
+    it('when children is undefined', () => {
       const { container } = render(
         <SelectorButton checked={false} onClick={() => undefined} />,
       );
@@ -16,7 +16,7 @@ describe('<SelectorButton />', () => {
       expect(container.firstElementChild).toMatchSnapshot();
     });
 
-    test('when children is a node', () => {
+    it('when children is a node', () => {
       const { container } = render(
         <SelectorButton checked={false} onClick={() => undefined}>
           SelectorButton Text
@@ -26,7 +26,7 @@ describe('<SelectorButton />', () => {
       expect(container.firstElementChild).toMatchSnapshot();
     });
 
-    test('when checked type is primary', () => {
+    it('when checked type is primary', () => {
       const { container } = render(
         <SelectorButton checked onClick={() => undefined} type="primary">
           SelectorButton Text
@@ -36,7 +36,7 @@ describe('<SelectorButton />', () => {
       expect(container.firstElementChild).toMatchSnapshot();
     });
 
-    test('when checked type is secondary', () => {
+    it('when checked type is secondary', () => {
       const { container } = render(
         <SelectorButton checked onClick={() => undefined} type="secondary">
           SelectorButton Text
@@ -46,7 +46,7 @@ describe('<SelectorButton />', () => {
       expect(container.firstElementChild).toMatchSnapshot();
     });
 
-    test('when is checkbox', () => {
+    it('when is checkbox', () => {
       const { container } = render(
         <SelectorButton
           checked={false}
@@ -74,7 +74,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.querySelectorAll('svg').length).toBe(0);
+        expect(container.querySelectorAll('svg')).toHaveLength(0);
       });
 
       it("hides icon for radio button size 'small'", () => {
@@ -90,7 +90,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.querySelectorAll('svg').length).toBe(0);
+        expect(container.querySelectorAll('svg')).toHaveLength(0);
       });
 
       it("displays icon for checkbox with size 'large'", () => {
@@ -106,7 +106,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.querySelectorAll('svg').length).toBe(1);
+        expect(container.querySelectorAll('svg')).toHaveLength(1);
       });
 
       it("displays icon for radio button with size 'large'", () => {
@@ -122,7 +122,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(container.querySelectorAll('svg').length).toBe(1);
+        expect(container.querySelectorAll('svg')).toHaveLength(1);
       });
 
       it('displays check mark for checked checkbox', () => {
@@ -173,7 +173,7 @@ describe('<SelectorButton />', () => {
     });
 
     // eslint-disable-next-line jest/expect-expect
-    it('Does nothing when no onClick is set', () => {
+    it('does nothing when no onClick is set', () => {
       const { container } = render(<SelectorButton checked={false} />);
       assert(container.firstElementChild);
 
