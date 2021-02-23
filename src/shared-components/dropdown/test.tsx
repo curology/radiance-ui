@@ -22,8 +22,8 @@ describe('<Dropdown />', () => {
       delete window.document.documentElement.ontouchstart;
 
       getByRole('combobox');
-      expect(getAllByRole('option').length).toBe(3);
-      expect(queryAllByRole('button').length).toBe(0);
+      expect(getAllByRole('option')).toHaveLength(3);
+      expect(queryAllByRole('button')).toHaveLength(0);
     });
   });
 
@@ -34,7 +34,7 @@ describe('<Dropdown />', () => {
       );
 
       // button only used in Desktop implementation
-      getByRole('button');
+      expect(getByRole('button')).toBeTruthy();
     });
   });
 });
@@ -91,7 +91,7 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    getByRole('button', { name: 'Test1' });
+    expect(getByRole('button', { name: 'Test1' })).toBeTruthy();
   });
 
   describe('onSelectClick callback', () => {

@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v17.2.2
+- [Icons] Add DesonideGlyph, MetronidazoleGlyph and TranexamicAcidGlyph ([#815](https://github.com/curology/radiance-ui/pull/815))
+
 # v17.2.1
 - [Components] Add media query to DialogModal for smaller devices ([#779](https://github.com/curology/radiance-ui/pull/779))
 
