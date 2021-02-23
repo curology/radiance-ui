@@ -52,12 +52,11 @@ const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
 const getHtmlNode = () => document.querySelector('html') || document.body;
 const getDomNode = () =>
-  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
-  document.body;
+  document.getElementById(REACT_PORTAL_SECTION_ID) || document.body;
 const getModalMobileScrollingElement = () =>
-  document.getElementById(MODAL_MOBILE_SCROLLING_ID) as HTMLElement;
+  document.getElementById(MODAL_MOBILE_SCROLLING_ID);
 const getModalDesktopScrollingElement = () =>
-  document.getElementById(MODAL_DESKTOP_SCROLLING_ID) as HTMLElement;
+  document.getElementById(MODAL_DESKTOP_SCROLLING_ID);
 
 /**
  * It is used to provide a layer on top of a page when we need to present more content and actions to patients.

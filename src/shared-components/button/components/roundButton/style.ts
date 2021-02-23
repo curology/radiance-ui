@@ -109,7 +109,8 @@ const buttonTextColor = (
     return textColor;
   }
 
-  const tintedTextColor = textColorsAssociatedWithColors(theme)[buttonColor];
+  const tintedTextColors = textColorsAssociatedWithColors(theme);
+  const tintedTextColor = tintedTextColors.get(buttonColor);
 
   return tintedTextColor
     ? tintedTextColor.tint1

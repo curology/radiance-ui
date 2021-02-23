@@ -70,19 +70,20 @@ const tertiaryStyles = (buttonColor: ThemeColors) => `
   }
 `;
 
+const getQuarternaryColor = (buttonColor: ThemeColors, theme: ThemeType) => {
+  const textColors = textColorsAssociatedWithColors(theme);
+  const textButtonColor = textColors.get(buttonColor);
+
+  return textButtonColor
+    ? textButtonColor.tint2
+    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString();
+};
+
 const quaternaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   border-color: transparent;
   background-color: transparent;
-  color: ${
-    textColorsAssociatedWithColors(theme)[buttonColor]
-      ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
-      : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
-  };
-  fill: ${
-    textColorsAssociatedWithColors(theme)[buttonColor]
-      ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
-      : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
-  };
+  color: ${getQuarternaryColor(buttonColor, theme)};
+  fill: ${getQuarternaryColor(buttonColor, theme)};
 
   &:hover,
   &:focus,
@@ -90,11 +91,7 @@ const quaternaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${
-      textColorsAssociatedWithColors(theme)[buttonColor]
-        ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
-        : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
-    };
+    color: ${getQuarternaryColor(buttonColor, theme)};
   }
 `;
 

@@ -36,8 +36,7 @@ export interface DialogModalProps {
 const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const getHtmlNode = () => document.querySelector('html') || document.body;
 const getDomNode = () =>
-  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
-  document.body;
+  document.getElementById(REACT_PORTAL_SECTION_ID) || document.body;
 
 /**
  * Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.

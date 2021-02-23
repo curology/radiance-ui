@@ -54,7 +54,7 @@ export const Mobile = () => {
   const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value, selectedOptions } = event.target;
 
-    if (selectedOptions && selectedOptions.length) {
+    if (selectedOptions.length) {
       setSelectedOption(value);
     }
   };

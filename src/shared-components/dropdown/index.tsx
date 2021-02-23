@@ -70,7 +70,8 @@ export const Dropdown = <T extends OptionType>({
     const { target } = event;
     const { selectedIndex, selectedOptions } = target;
     const selectedOption = options[selectedIndex];
-    if (selectedOptions && selectedOptions.length) {
+
+    if (selectedOptions.length) {
       onChange(selectedOption);
     }
 
