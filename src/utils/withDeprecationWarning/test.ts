@@ -9,44 +9,46 @@ const deprecatedProperties = {
   deprecated: deprecatedMessage,
 };
 
-describe('property that is not in deprecatedProperties', () => {
-  test('does not warn in console', () => {
-    const warn = jest.spyOn(console, 'warn');
-    const subject = withDeprecationWarning(testObj, deprecatedProperties);
+describe('withDeprecationWarning', () => {
+  describe('property that is not in deprecatedProperties', () => {
+    it('does not warn in console', () => {
+      const warn = jest.spyOn(console, 'warn');
+      const subject = withDeprecationWarning(testObj, deprecatedProperties);
 
-    // eslint-disable-next-line no-unused-expressions
-    subject.notDeprecated;
+      // eslint-disable-next-line no-unused-expressions
+      subject.notDeprecated;
 
-    expect(warn).not.toHaveBeenCalled();
-    warn.mockRestore();
+      expect(warn).not.toHaveBeenCalled();
+      warn.mockRestore();
+    });
+
+    it('returns the property value', () => {
+      const subject = withDeprecationWarning(testObj, deprecatedProperties);
+      const value = subject.notDeprecated;
+
+      expect(value).toBe('foo');
+    });
   });
 
-  test('returns the property value', () => {
-    const subject = withDeprecationWarning(testObj, deprecatedProperties);
-    const value = subject.notDeprecated;
+  describe('property that is in deprecatedProperties', () => {
+    it('warns in console', () => {
+      const warn = jest.spyOn(console, 'warn');
+      const subject = withDeprecationWarning(testObj, deprecatedProperties);
 
-    expect(value).toBe('foo');
-  });
-});
+      // eslint-disable-next-line no-unused-expressions
+      subject.deprecated;
 
-describe('property that is in deprecatedProperties', () => {
-  test('warns in console', () => {
-    const warn = jest.spyOn(console, 'warn');
-    const subject = withDeprecationWarning(testObj, deprecatedProperties);
+      expect(warn).toHaveBeenCalledWith(
+        `[Deprecation Warning]: ${deprecatedMessage}`,
+      );
+      warn.mockRestore();
+    });
 
-    // eslint-disable-next-line no-unused-expressions
-    subject.deprecated;
+    it('returns the property value', () => {
+      const subject = withDeprecationWarning(testObj, deprecatedProperties);
+      const value = subject.deprecated;
 
-    expect(warn).toHaveBeenCalledWith(
-      `[Deprecation Warning]: ${deprecatedMessage}`,
-    );
-    warn.mockRestore();
-  });
-
-  test('returns the property value', () => {
-    const subject = withDeprecationWarning(testObj, deprecatedProperties);
-    const value = subject.deprecated;
-
-    expect(value).toBe('bar');
+      expect(value).toBe('bar');
+    });
   });
 });

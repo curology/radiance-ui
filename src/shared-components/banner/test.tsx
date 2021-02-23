@@ -4,7 +4,7 @@ import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 import { Banner } from './index';
 
 describe('Banner UI snapshots', () => {
-  test('renders success type and text', () => {
+  it('renders success type and text', () => {
     const { container } = render(
       <Banner content="Success Banner" type="success" />,
     );
@@ -12,7 +12,7 @@ describe('Banner UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders error type and text', () => {
+  it('renders error type and text', () => {
     const { container } = render(
       <Banner content="Error banner" type="error" />,
     );
@@ -20,13 +20,13 @@ describe('Banner UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders info type and text', () => {
+  it('renders info type and text', () => {
     const { container } = render(<Banner content="Default banner" />);
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('Banner with click handler', () => {
+  it('banner with click handler', () => {
     const spy = jest.fn();
     const { getByRole } = render(
       <Banner content="Banner with click handler" onClick={spy} />,

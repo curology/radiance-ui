@@ -37,7 +37,7 @@ describe('<Tabs />', () => {
   });
 
   describe('on click function', () => {
-    test('returns correct params', () => {
+    it('returns correct params', () => {
       const spy = jest.fn();
       const { getByRole } = render(
         <Tabs
