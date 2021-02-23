@@ -11,6 +11,7 @@ import {
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
+import { useTheme } from 'emotion-theming';
 
 export const NumbersAndText = () => (
   <React.Fragment>
@@ -20,17 +21,31 @@ export const NumbersAndText = () => (
   </React.Fragment>
 );
 
+export const WithColor = () => {
+  const theme = useTheme();
+
+  return <Indicator text="+2" backgroundColor={theme.COLORS.primary} />;
+};
+
 export const WithControls = () => <Indicator text={text('text', '10')} />;
 
 WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+} as const;
+
+interface IndicatoriStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const INDICATOR_STORIES: IndicatoriStories = {
   title: 'Components/Indicator',
   component: Indicator,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -48,4 +63,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default INDICATOR_STORIES;

@@ -1,20 +1,29 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
+import { primaryTheme } from 'src/constants/themes';
 
 import { Indicator } from './index';
 
 describe('<Indicator />', () => {
   describe('UI snapshots', () => {
     it('renders the correct css with a text', () => {
-      const component = renderer.create(<Indicator text="1" />);
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      const { container } = render(<Indicator text="1" />);
+
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders the correct css with a number', () => {
-      const component = renderer.create(<Indicator text={3} />);
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      const { container } = render(<Indicator text={3} />);
+
+      expect(container.firstElementChild).toMatchSnapshot();
+    });
+
+    it('renders background color override', () => {
+      const { container } = render(
+        <Indicator text={3} backgroundColor={primaryTheme.COLORS.primary} />,
+      );
+
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

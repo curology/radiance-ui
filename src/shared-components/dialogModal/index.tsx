@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
+import { useTheme } from 'emotion-theming';
 
 import { CrossIcon } from '../../icons';
 import {
@@ -11,8 +12,13 @@ import {
   ModalTitle,
   CrossIconContainer,
 } from './style';
+import { Colors, primaryTheme, secondaryTheme } from '../../constants';
 
-type DialogModalProps = {
+export interface DialogModalProps {
+  /**
+   * DialogModal background color. Defaults to the current theme's `white` if not specified.
+   */
+  backgroundColor?: Colors['background'];
   /**
    * Dialog Modal content.
    * Must contain at least 1 button and is responsible for closing the modal.
@@ -25,7 +31,7 @@ type DialogModalProps = {
   onCloseIconClick?: () => void;
   title?: string;
   [key: string]: unknown;
-};
+}
 
 const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const getHtmlNode = () => document.querySelector('html') || document.body;
@@ -41,11 +47,14 @@ const getDomNode = () =>
  * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
  */
 export const DialogModal = ({
+  backgroundColor,
   children,
   onCloseIconClick,
   title = '',
   ...rest
 }: DialogModalProps) => {
+  const theme = useTheme();
+  const backgroundColorWithTheme = backgroundColor || theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
 
   const domNode = useRef<HTMLElement>(getDomNode());
@@ -87,11 +96,13 @@ export const DialogModal = ({
         <Overlay className={transitionState} {...rest}>
           <FocusScope contain restoreFocus autoFocus>
             <ModalContainer
+              backgroundColor={backgroundColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
             >
               {onCloseIconClick && (
                 <CrossIconContainer
+                  backgroundColor={backgroundColorWithTheme}
                   onClick={handleCloseIntent}
                   role="button"
                   tabIndex={0}
@@ -112,6 +123,10 @@ export const DialogModal = ({
 };
 
 DialogModal.propTypes = {
+  backgroundColor: PropTypes.oneOf([
+    primaryTheme.COLORS.background,
+    secondaryTheme.COLORS.background,
+  ]),
   children: PropTypes.node.isRequired,
   onCloseIconClick: PropTypes.func,
   title: PropTypes.string,

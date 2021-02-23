@@ -1,6 +1,6 @@
 import React from 'react';
-import { mount } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { assert } from 'src/utils/assert';
 
 import { AcneOneGlyph } from '../../icons';
 
@@ -9,68 +9,60 @@ import { SelectorButton } from './index';
 describe('<SelectorButton />', () => {
   describe('UI snapshots', () => {
     test('when children is undefined', () => {
-      const tree = renderer
-        .create(<SelectorButton checked={false} onClick={() => undefined} />)
-        .toJSON();
+      const { container } = render(
+        <SelectorButton checked={false} onClick={() => undefined} />,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when children is a node', () => {
-      const tree = renderer
-        .create(
-          <SelectorButton checked={false} onClick={() => undefined}>
-            SelectorButton Text
-          </SelectorButton>,
-        )
-        .toJSON();
+      const { container } = render(
+        <SelectorButton checked={false} onClick={() => undefined}>
+          SelectorButton Text
+        </SelectorButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when checked type is primary', () => {
-      const tree = renderer
-        .create(
-          <SelectorButton checked onClick={() => undefined} type="primary">
-            SelectorButton Text
-          </SelectorButton>,
-        )
-        .toJSON();
+      const { container } = render(
+        <SelectorButton checked onClick={() => undefined} type="primary">
+          SelectorButton Text
+        </SelectorButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when checked type is secondary', () => {
-      const tree = renderer
-        .create(
-          <SelectorButton checked onClick={() => undefined} type="secondary">
-            SelectorButton Text
-          </SelectorButton>,
-        )
-        .toJSON();
+      const { container } = render(
+        <SelectorButton checked onClick={() => undefined} type="secondary">
+          SelectorButton Text
+        </SelectorButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     test('when is checkbox', () => {
-      const tree = renderer
-        .create(
-          <SelectorButton
-            checked={false}
-            onClick={() => undefined}
-            selector="checkbox"
-          >
-            SelectorButton Text
-          </SelectorButton>,
-        )
-        .toJSON();
+      const { container } = render(
+        <SelectorButton
+          checked={false}
+          onClick={() => undefined}
+          selector="checkbox"
+        >
+          SelectorButton Text
+        </SelectorButton>,
+      );
 
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     describe('when Icon added', () => {
       it("hides icon for checkbox with size 'small'", () => {
-        const tree = renderer.create(
+        const { container } = render(
           <SelectorButton
             checked={false}
             onClick={() => undefined}
@@ -82,11 +74,11 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(0);
       });
 
       it("hides icon for radio button size 'small'", () => {
-        const tree = renderer.create(
+        const { container } = render(
           <SelectorButton
             checked={false}
             onClick={() => undefined}
@@ -98,11 +90,11 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(0);
       });
 
       it("displays icon for checkbox with size 'large'", () => {
-        const tree = renderer.create(
+        const { container } = render(
           <SelectorButton
             checked={false}
             onClick={() => undefined}
@@ -114,11 +106,11 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(1);
       });
 
       it("displays icon for radio button with size 'large'", () => {
-        const tree = renderer.create(
+        const { container } = render(
           <SelectorButton
             checked={false}
             onClick={() => undefined}
@@ -130,11 +122,11 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(container.querySelectorAll('svg').length).toBe(1);
       });
 
       it('displays check mark for checked checkbox', () => {
-        const tree = renderer.create(
+        const { container } = render(
           <SelectorButton
             checked
             onClick={() => undefined}
@@ -146,11 +138,11 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
 
       it('displays check mark for checked radio button', () => {
-        const tree = renderer.create(
+        const { container } = render(
           <SelectorButton
             checked
             onClick={() => undefined}
@@ -162,7 +154,7 @@ describe('<SelectorButton />', () => {
           </SelectorButton>,
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(container.firstElementChild).toMatchSnapshot();
       });
     });
   });
@@ -170,25 +162,35 @@ describe('<SelectorButton />', () => {
   describe('onClick callback', () => {
     it('is invoked on click', () => {
       const spy = jest.fn();
-      const wrapper = mount(<SelectorButton checked={false} onClick={spy} />);
+      const { container } = render(
+        <SelectorButton checked={false} onClick={spy} />,
+      );
 
-      wrapper.simulate('click');
+      assert(container.firstElementChild);
+      userEvent.click(container.firstElementChild);
+
       expect(spy).toHaveBeenCalled();
     });
 
     // eslint-disable-next-line jest/expect-expect
     it('Does nothing when no onClick is set', () => {
-      const wrapper = mount(<SelectorButton checked={false} />);
+      const { container } = render(<SelectorButton checked={false} />);
+      assert(container.firstElementChild);
+
       // Just check that no exception is thrown
-      wrapper.simulate('click');
-      wrapper.simulate('keypress', { key: 'Enter' });
+      userEvent.click(container.firstElementChild);
+      userEvent.type(container.firstElementChild, '{enter}');
     });
 
     it('is invoked when enter is pressed', () => {
       const spy = jest.fn();
-      const wrapper = mount(<SelectorButton checked={false} onClick={spy} />);
+      const { container } = render(
+        <SelectorButton checked={false} onClick={spy} />,
+      );
 
-      wrapper.simulate('keypress', { key: 'Enter' });
+      assert(container.firstElementChild);
+      userEvent.type(container.firstElementChild, '{enter}');
+
       expect(spy).toHaveBeenCalled();
     });
   });

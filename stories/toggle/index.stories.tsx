@@ -44,7 +44,7 @@ export const Usage = () => {
   );
 };
 
-export default {
+const TOGGLE_STORIES: Meta = {
   title: 'Components/Toggle',
   component: Toggle,
   parameters: {
@@ -65,4 +65,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TOGGLE_STORIES;

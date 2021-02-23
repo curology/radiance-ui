@@ -1,6 +1,5 @@
 import React from 'react';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
-import { shallow } from 'src/tests/enzymeHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { VerificationMessages } from './index';
 
@@ -29,12 +28,11 @@ describe('<VerificationMessages />', () => {
         ],
       };
 
-      const component = renderer.create(
+      const { container } = render(
         <VerificationMessages messages={messages} />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with non-default props', () => {
@@ -46,12 +44,11 @@ describe('<VerificationMessages />', () => {
         ),
       };
 
-      const component = renderer.create(
+      const { container } = render(
         <VerificationMessages messages={messages} centered type="success" />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 
@@ -60,8 +57,13 @@ describe('<VerificationMessages />', () => {
       const messages = {
         required: [],
       };
-      const wrapper = shallow(<VerificationMessages messages={messages} />);
-      expect(wrapper.html().indexOf('li') === -1).toBe(true);
+
+      const { queryAllByRole } = render(
+        <VerificationMessages messages={messages} />,
+      );
+
+      expect(queryAllByRole('list').length).toBe(1);
+      expect(queryAllByRole('listitem').length).toBe(0);
     });
   });
 });

@@ -5,10 +5,10 @@ import { ChipStyles, ChipText } from './style';
 
 export type StatusType = 'default' | 'success' | 'error' | 'secondary';
 
-type ChipProps = {
+export interface ChipProps {
   status?: StatusType;
   text: string;
-};
+}
 
 /**
  * Chips should be used in small spaces to add value to the elements they're nested in. (i.e. "Recommended" on product cards or showing an error on an element in a list.)

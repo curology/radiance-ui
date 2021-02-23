@@ -17,7 +17,7 @@ import {
   MessageType,
 } from '../verificationMessages';
 
-type FieldProps = {
+export interface FieldProps {
   /**
    * Must be either `Field.Input` or `Field.Textarea`
    */
@@ -47,7 +47,7 @@ type FieldProps = {
    */
   messages?: Record<string, MessageType>;
   messagesType?: MessagesTypes;
-};
+}
 
 /**
  * Field component uses VerificationMessages component internally along with extra styling for the input.

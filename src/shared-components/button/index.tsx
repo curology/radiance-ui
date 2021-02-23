@@ -7,6 +7,7 @@ import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
 import { LinkButton } from './components/linkButton';
+import { AnchorLinkButton } from './components/anchorLinkButton';
 import RoundButton from './components/roundButton';
 import { TextButton } from './components/textButton';
 import {
@@ -21,7 +22,7 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
  */
 export type ButtonTypeWithAction = ButtonType | 'action';
 
-type ButtonProps = {
+export interface ButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
@@ -53,7 +54,7 @@ type ButtonProps = {
    */
   textColor?: ThemeColors;
   [key: string]: unknown;
-};
+}
 
 /**
  * Buttons can be used as a main call-to-action (CTA). Try to avoid using buttons of the same `buttonType` next to each other since we want to guide the user towards one option.
@@ -136,5 +137,5 @@ Button.propTypes = {
   textColor: PropTypes.string,
 };
 
-export { LinkButton, RoundButton, TextButton };
+export { AnchorLinkButton, LinkButton, RoundButton, TextButton };
 export default withDeprecationWarning(Button, deprecatedProperties);

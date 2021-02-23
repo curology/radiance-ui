@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import Typography from '../typography';
+import { Typography } from '../typography';
 import {
   MEDIA_QUERIES,
   SPACER,
@@ -207,9 +207,9 @@ export const ModalContainer = styled.div`
   }
 `;
 
-type HasHeaderImageProps = {
+export interface HasHeaderImageProps {
   hasHeaderImage: boolean;
-};
+}
 
 // 32px comes from top overlay
 // 272px comes from 32px top overlay + 240px image

@@ -1,5 +1,9 @@
 import { create } from '@storybook/theming';
+import { primaryTheme } from '../src/constants/themes';
 
+/**
+ * TODO-MA: Add theme support/toggling for Storybook Theme
+ */
 const Theme = create({
   base: 'light',
 
@@ -24,7 +28,9 @@ const Theme = create({
   barSelectedColor: '#1EA7FD',
 
   // Typography
-  fontBase: `"Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif`,
+  fontBase:
+    primaryTheme.FONTS.baseFont +
+    `"Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif`,
   fontCode: `"Operator Mono", "Fira Code Retina", "Fira Code", "FiraCode-Retina", "Andale Mono", "Lucida Console", Consolas, Monaco, monospace`,
 
   // Text colors
@@ -32,7 +38,7 @@ const Theme = create({
   textInverseColor: '#FFFFFF',
 
   brandTitle: 'Radiance UI',
-  brandUrl: '#',
+  brandUrl: 'https://www.curology.com',
 });
 
 export default Theme;

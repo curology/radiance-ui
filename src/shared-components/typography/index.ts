@@ -1,44 +1,42 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import { withDeprecationWarning } from '../../utils';
 import { ThemeType } from '../../constants';
-
-/**
- * We use theme.FONTS.baseFont for all primary styles, but use a
- * different secondary font for Display, Heading, and Title styles
- */
-const setSecondaryHeadingFont = (theme: ThemeType) =>
-  theme.__type === 'secondary' ? `font-family: ${theme.FONTS.headerFont};` : '';
+import {
+  setSecondaryHeadingFont,
+  setButtonStyleFontWeight,
+  setThemeLineHeight,
+  setThemeFontWeight,
+} from '../../utils/themeStyles';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.display};
-  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
-  line-height: ${round(48 / 36, 2)};
+  font-weight: ${setThemeFontWeight(theme)};
+  line-height: ${setThemeLineHeight(theme, round(48 / 36, 2))};
   ${setSecondaryHeadingFont(theme)}
 `;
 
 const headingStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.heading};
-  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
-  line-height: ${round(40 / 24, 2)};
+  font-weight: ${setThemeFontWeight(theme)};
+  line-height: ${setThemeLineHeight(theme, round(40 / 24, 2))};
   ${setSecondaryHeadingFont(theme)}
 `;
 
 const titleStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
   font-size: ${theme.TYPOGRAPHY.fontSize.title};
-  line-height: ${round(32 / 20, 2)};
-  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  line-height: ${setThemeLineHeight(theme, round(32 / 20, 2))};
+  font-weight: ${setThemeFontWeight(theme)};
   ${setSecondaryHeadingFont(theme)}
 `;
 
 export const baseBodyStyles = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${theme.TYPOGRAPHY.fontSize.body};
-  line-height: ${round(28 / 16, 2)};
+  line-height: ${setThemeLineHeight(theme, round(28 / 16, 2))};
 `;
 
 const bodyStyle = (theme: ThemeType) => `
@@ -48,7 +46,7 @@ const bodyStyle = (theme: ThemeType) => `
 const captionStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint2};
   font-size: ${theme.TYPOGRAPHY.fontSize.caption};
-  line-height: ${round(24 / 14, 2)};
+  line-height: ${setThemeLineHeight(theme, round(24 / 14, 2))};
 `;
 
 const errorStyle = (theme: ThemeType) => `
@@ -70,17 +68,16 @@ const labelStyle = (theme: ThemeType) => `
 const buttonStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${theme.TYPOGRAPHY.fontSize.button};
-  line-height: ${round(20 / 12, 2)};
-  ${
-    theme.__type === 'primary'
-      ? `font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};`
-      : ''
-  }
+  line-height: ${setThemeLineHeight(theme, round(20 / 12, 2))};
+  ${setButtonStyleFontWeight(theme)}
   letter-spacing: 1px;
   text-transform: uppercase;
 `;
 
-const linkStyle = () => `
+/**
+ * TODO-MA: Add theme.TYPOGRAPHY.fontSize.link to guarantee font-size compatibility
+ */
+const linkStyle = (theme: ThemeType) => `
   border-bottom: 1px solid currentColor;
   cursor: pointer;
   text-decoration: none;
@@ -92,6 +89,11 @@ const linkStyle = () => `
   &:hover {
     opacity: 0.6;
     transition: opacity 350ms;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -117,7 +119,7 @@ const Caption = styled.p`
 const Display = styled.h1`
   ${({ theme }) => displayStyle(theme)}
 `;
-const ErrorComponent = styled.p`
+const Error = styled.p`
   ${({ theme }) => errorStyle(theme)}
 `;
 const Heading = styled.h2`
@@ -127,7 +129,7 @@ const Label = styled.label`
   ${({ theme }) => labelStyle(theme)}
 `;
 const Link = styled.a`
-  ${linkStyle()}
+  ${({ theme }) => linkStyle(theme)}
 `;
 const Success = styled.p`
   ${({ theme }) => successStyle(theme)}
@@ -140,27 +142,10 @@ export const Typography = {
   Button,
   Caption,
   Display,
-  Error: ErrorComponent,
+  Error,
   Heading,
   Label,
   Link,
   Success,
   Title,
-
-  // Deprecated legacy names
-  LinkTag: Link,
-  ButtonText: Button,
-  SuccessText: Success,
-  ErrorText: ErrorComponent,
 } as const;
-
-const deprecatedProperties = {
-  LinkTag: 'LinkTag is deprecated. Use Link instead',
-  ButtonText: 'ButtonText is deprecated. Use Button instead',
-  SuccessText: 'SuccessText is deprecated. Use Success instead',
-  ErrorText: 'ErrorText is deprecated. Use Error instead',
-};
-
-const TYPOGRAPHY = withDeprecationWarning(Typography, deprecatedProperties);
-
-export default TYPOGRAPHY;

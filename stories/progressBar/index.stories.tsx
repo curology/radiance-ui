@@ -82,11 +82,19 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
-  title: 'Components/Progress Bar',
+const CHROMATIC_OPTIONS = {
+  chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
+} as const;
+
+interface ProgressBarStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const PROGRESS_BAR_STORIES: ProgressBarStories = {
+  title: 'Components/ProgressBar',
   component: ProgressBar,
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 15 },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -104,4 +112,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default PROGRESS_BAR_STORIES;

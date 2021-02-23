@@ -16,7 +16,7 @@ export type SelectorType = 'radio' | 'checkbox';
 export type SizeType = 'large' | 'small';
 export type StyleType = 'primary' | 'secondary';
 
-type SelectorButtonProps = {
+export interface SelectorButtonProps {
   checked: boolean;
   children?: React.ReactNode;
   disabled?: boolean;
@@ -28,7 +28,7 @@ type SelectorButtonProps = {
   size?: SizeType;
   type?: StyleType;
   [key: string]: unknown;
-};
+}
 
 export const SelectorButton = ({
   checked,
@@ -76,10 +76,10 @@ export const SelectorButton = ({
         </SelectorIcon>
         <Selector
           type={type}
-          checked={checked}
+          selectorChecked={checked}
           disabled={disabled}
           selector={selector}
-          size={size}
+          selectorSize={size}
         />
       </SelectorContainer>
 

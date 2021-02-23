@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'src/tests/enzymeHelpers';
-import { renderer } from 'src/tests/reactTestRendererHelpers';
+import { render, userEvent } from 'src/tests/testingLibraryHelpers';
 
 import { Toggle } from './index';
 
@@ -8,41 +7,41 @@ describe('<Toggle />', () => {
   const labelText = 'Label Text';
   describe('UI snapshot', () => {
     it('renders the component', () => {
-      const component = renderer.create(
+      const { container } = render(
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 
   describe('when label is undefined', () => {
     test('does not render a label component', () => {
-      const wrapper = shallow(
+      const { container } = render(
         <Toggle checked={false} onChange={() => undefined} />,
       );
-      expect(wrapper.html().indexOf('label') === -1).toBe(true);
+      // TODO: Make <Label /> an actual label element and use @testing-library/react selector
+      expect(container.querySelectorAll('span').length).toBe(0);
     });
   });
 
   describe('when label is a string', () => {
     test('renders a text component', () => {
-      const wrapper = shallow(
+      const { getByText } = render(
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      expect(wrapper.html().indexOf(labelText) > 0).toBe(true);
+      getByText(labelText);
     });
   });
 
   describe('when checkbox is clicked', () => {
     test('fires onChange function with correct argument when function exists', () => {
       const spy = jest.fn();
-      const wrapper = mount(<Toggle checked={false} onChange={spy} />);
+      const { getByRole } = render(<Toggle checked={false} onChange={spy} />);
 
-      wrapper.find('[type="checkbox"]').simulate('click');
-      expect(spy).toHaveBeenCalled();
+      userEvent.click(getByRole('checkbox'));
+      expect(spy).toHaveBeenCalledWith(false);
     });
   });
 });

@@ -177,58 +177,34 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 }
 
 <div
-  className="emotion-4 emotion-5"
+  class="emotion-4 emotion-5"
 >
   <div
-    className="emotion-2 emotion-3"
-    onClick={[Function]}
+    class="emotion-2 emotion-3"
   >
     <div
-      className="slick-slider slick-initialized"
+      class="slick-slider slick-initialized"
     >
       
       <div
-        className="slick-list"
+        class="slick-list"
       >
         <div
-          className="slick-track"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          style={
-            Object {
-              "WebkitTransform": "translate3d(0px, 0px, 0px)",
-              "WebkitTransition": "",
-              "msTransform": "translateX(0px)",
-              "opacity": 1,
-              "transform": "translate3d(0px, 0px, 0px)",
-              "transition": "",
-            }
-          }
+          class="slick-track"
+          style="opacity: 1; transform: translate3d(0px, 0px, 0px);"
         >
           <div
-            aria-hidden={false}
-            className="slick-slide slick-active slick-current"
-            data-index={0}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": null,
-              }
-            }
-            tabIndex="-1"
+            aria-hidden="false"
+            class="slick-slide slick-active slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
           >
             <div>
               <div
-                className="emotion-0 emotion-1"
-                style={
-                  Object {
-                    "display": "inline-block",
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
+                class="emotion-0 emotion-1"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
               >
                 Card 1
               </div>
@@ -420,59 +396,34 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  className="emotion-4 emotion-5"
+  class="emotion-4 emotion-5"
 >
   <div
-    className="emotion-2 emotion-3"
-    onClick={[Function]}
+    class="emotion-2 emotion-3"
   >
     <div
-      className="slick-slider slick-initialized"
+      class="slick-slider slick-initialized"
     >
       
       <div
-        className="slick-list"
+        class="slick-list"
       >
         <div
-          className="slick-track"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          style={
-            Object {
-              "WebkitTransform": "translate3d(0px, 0px, 0px)",
-              "WebkitTransition": "",
-              "msTransform": "translateX(0px)",
-              "opacity": 1,
-              "transform": "translate3d(0px, 0px, 0px)",
-              "transition": "",
-              "width": -100,
-            }
-          }
+          class="slick-track"
+          style="width: -100px; opacity: 1; transform: translate3d(0px, 0px, 0px);"
         >
           <div
-            aria-hidden={false}
-            className="slick-slide slick-active slick-center slick-current"
-            data-index={0}
-            onClick={[Function]}
-            style={
-              Object {
-                "outline": "none",
-                "width": null,
-              }
-            }
-            tabIndex="-1"
+            aria-hidden="false"
+            class="slick-slide slick-active slick-center slick-current"
+            data-index="0"
+            style="outline: none;"
+            tabindex="-1"
           >
             <div>
               <div
-                className="emotion-0 emotion-1"
-                style={
-                  Object {
-                    "display": "inline-block",
-                    "width": "100%",
-                  }
-                }
-                tabIndex={-1}
+                class="emotion-0 emotion-1"
+                style="width: 100%; display: inline-block;"
+                tabindex="-1"
               >
                 Card 1
               </div>
