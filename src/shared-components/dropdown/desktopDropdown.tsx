@@ -4,6 +4,7 @@ import { useTheme } from 'emotion-theming';
 
 import useResetFocus from '../../utils/accessibility/useResetFocus';
 import { isDefined } from '../../utils/isDefined';
+import { keyboardKeys } from '../../constants/keyboardKeys';
 import { OffClickWrapper } from '../offClickWrapper';
 import { ChevronIcon } from '../../icons';
 import {
@@ -49,14 +50,14 @@ export const DesktopDropdown = <T extends OptionType>({
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     // This key handler allows users to open the dropdown options via the keyboard
-    if (event.key === 'Enter') {
+    if (event.key === keyboardKeys.enter) {
       toggleDropdown();
     }
   };
 
   const handleOptionKeydown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     // This allows users to select an option via the enter key
-    if (event.key === 'Enter') {
+    if (event.key === keyboardKeys.enter) {
       onDesktopSelectChange(event);
       resetFocus();
     }

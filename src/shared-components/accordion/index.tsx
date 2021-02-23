@@ -14,6 +14,7 @@ import {
   TitleWrapper,
   Truncate,
 } from './style';
+import { keyboardKeys } from '../../constants/keyboardKeys';
 
 export type BorderRadiusValues =
   | valueof<ThemeType['BORDER_RADIUS']>
@@ -74,7 +75,7 @@ export const Accordion = ({
   });
 
   const handleKeyDown = (event: React.KeyboardEvent): void => {
-    if (!disabled && event.key === 'Enter') {
+    if (!disabled && event.key === keyboardKeys.enter) {
       onClick(event);
     }
   };
