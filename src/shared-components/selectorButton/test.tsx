@@ -172,14 +172,18 @@ describe('<SelectorButton />', () => {
       expect(spy).toHaveBeenCalled();
     });
 
-    // eslint-disable-next-line jest/expect-expect
     it('does nothing when no onClick is set', () => {
       const { container } = render(<SelectorButton checked={false} />);
-      assert(container.firstElementChild);
 
       // Just check that no exception is thrown
-      userEvent.click(container.firstElementChild);
-      userEvent.type(container.firstElementChild, '{enter}');
+      expect(() => {
+        assert(container.firstElementChild);
+        userEvent.click(container.firstElementChild);
+      }).not.toThrow();
+      expect(() => {
+        assert(container.firstElementChild);
+        userEvent.type(container.firstElementChild, '{enter}');
+      }).not.toThrow();
     });
 
     it('is invoked when enter is pressed', () => {
