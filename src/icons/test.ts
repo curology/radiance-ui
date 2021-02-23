@@ -18,7 +18,7 @@ const transformSvgFileNames = (fileName: string) =>
 const SVG_DIRECTORY_NAME = 'svgs';
 
 const testIconDirectory = (directory: string) => {
-  describe(`${directory}`, () => {
+  describe(directory, () => {
     /**
      * Pairings meaning the below scenarios are equally valid:
      * 1. someIcon.ts: `import { SomeIcon } from './svgs';
@@ -46,7 +46,7 @@ const testIconDirectory = (directory: string) => {
 };
 
 const testSvgDirectory = (directory: string) => {
-  describe(`${directory}`, () => {
+  describe(directory, () => {
     // There should be a 1:1 mapping of icons in `src/svgs/${directory}` and components in `src/icons/${directory}/svgs`
     it(`should have the same number of ${directory} svgs as svg-generated components, with complementary naming`, () => {
       const iconFilenames = fs

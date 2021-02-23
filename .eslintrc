@@ -15,7 +15,7 @@
     "prettier/react",
     "prettier/@typescript-eslint"
   ],
-  "plugins": ["jest", "emotion"],
+  "plugins": ["emotion"],
   "globals": {
     "document": false,
     "window": false
@@ -68,8 +68,10 @@
         "ignore": ["describe"]
       }
     ],
+    "jest/no-large-snapshots": "off",
     "jest/prefer-called-with": "off",
     "jest/prefer-expect-assertions": "off",
+    "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-duplicate-imports": "off",
     "no-shadow": "off",
