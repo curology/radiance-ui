@@ -10,12 +10,12 @@
     "curology",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:jest/recommended",
+    "plugin:jest/all",
     "prettier",
     "prettier/react",
     "prettier/@typescript-eslint"
   ],
-  "plugins": ["emotion"],
+  "plugins": ["jest", "emotion"],
   "globals": {
     "document": false,
     "window": false
@@ -62,6 +62,14 @@
         "stories": "always"
       }
     ],
+    "jest/lowercase-name": [
+      "error",
+      {
+        "ignore": ["describe"]
+      }
+    ],
+    "jest/prefer-called-with": "off",
+    "jest/prefer-expect-assertions": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-duplicate-imports": "off",
     "no-shadow": "off",
