@@ -1,5 +1,5 @@
-import { TranexamicAcidGlyphSecondary } from './svgs';
+import { TranexamicAcidGlyph, TranexamicAcidGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(null, TranexamicAcidGlyphSecondary, props);
+  useIcon(TranexamicAcidGlyph, TranexamicAcidGlyphSecondary, props);
