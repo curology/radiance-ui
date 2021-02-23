@@ -11,13 +11,13 @@ const testAccordionProps = {
 };
 
 describe('<Accordion />', () => {
-  test('renders regular accordion', () => {
+  it('renders regular accordion', () => {
     const { container } = render(<Accordion {...testAccordionProps} />);
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders no border accordion', () => {
+  it('renders no border accordion', () => {
     const { container } = render(
       <Accordion {...testAccordionProps} noBorder />,
     );
@@ -25,7 +25,7 @@ describe('<Accordion />', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders disabled accordion', () => {
+  it('renders disabled accordion', () => {
     const { container } = render(
       <Accordion {...testAccordionProps} disabled />,
     );
@@ -33,7 +33,7 @@ describe('<Accordion />', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('invokes onClick when title is clicked', () => {
+  it('invokes onClick when title is clicked', () => {
     const spy = jest.fn();
 
     const { getByRole } = render(

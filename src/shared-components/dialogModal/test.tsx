@@ -15,8 +15,8 @@ describe('<DialogModal />', () => {
       </DialogModal>,
     );
 
-    getAllByText(modalTitle);
-    getAllByText(modalBody);
+    expect(getAllByText(modalTitle).length > 0).toBe(true);
+    expect(getAllByText(modalBody).length > 0).toBe(true);
   });
 
   it('renders dialog modal with custom color', () => {
