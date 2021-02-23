@@ -18,9 +18,11 @@ export const linkButtonStyles = ({
   theme: ThemeType;
 }) => css`
   ${baseButtonStyles({
-    disabled,
-    buttonType,
     buttonColor,
+    buttonType,
+    disabled,
+    isFullWidth: false,
+    isLoading: false,
     textColor,
     theme,
   })}

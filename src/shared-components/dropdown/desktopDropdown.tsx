@@ -1,8 +1,9 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import useResetFocus from 'src/utils/accessibility/useResetFocus';
 import { useTheme } from 'emotion-theming';
 
+import useResetFocus from '../../utils/accessibility/useResetFocus';
+import { isDefined } from '../../utils/isDefined';
 import { OffClickWrapper } from '../offClickWrapper';
 import { ChevronIcon } from '../../icons';
 import {
@@ -97,13 +98,20 @@ export const DesktopDropdown = <T extends OptionType>({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={value ? `${value}` : undefined}
+          aria-activedescendant={isDefined(value) ? `${value}` : undefined}
           aria-hidden={!isOpen}
         >
           {options.map((option, index) => {
-            const { value: optionValue, disabled, label, ...rest } = option;
+            const {
+              value: optionValue,
+              disabled = false,
+              label,
+              ...rest
+            } = option;
 
-            const id = optionValue ? `${optionValue}` : `undefined-${index}`;
+            const id = isDefined(optionValue)
+              ? `${optionValue}`
+              : `undefined-${index}`;
 
             return (
               <DropdownOption
@@ -111,7 +119,7 @@ export const DesktopDropdown = <T extends OptionType>({
                 value={optionValue}
                 id={id}
                 selected={value === optionValue}
-                disabled={!!disabled}
+                disabled={disabled}
                 onClick={onDesktopSelectChange}
                 onKeyDown={handleOptionKeydown}
                 role="menuitemradio"

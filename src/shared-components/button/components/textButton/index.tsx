@@ -31,7 +31,9 @@ export const TextButton = ({
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
-    <ButtonContents hasIcon={false}>{children}</ButtonContents>
+    <ButtonContents hasIcon={false} isFullWidth={false} isLoading={false}>
+      {children}
+    </ButtonContents>
   </BaseTextButton>
 );
 

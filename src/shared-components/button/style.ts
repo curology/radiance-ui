@@ -9,6 +9,7 @@ import {
   primaryButtonBackgroundColor,
   setThemeLineHeight,
 } from '../../utils/themeStyles';
+import { isDefined } from '../../utils/isDefined';
 
 import { ButtonTypeWithAction } from '.';
 
@@ -163,8 +164,8 @@ export interface BaseButtonStylesTypes {
   buttonColor: ThemeColors;
   buttonType: ButtonTypeWithAction;
   disabled: boolean;
-  isFullWidth?: boolean;
-  isLoading?: boolean;
+  isFullWidth: boolean;
+  isLoading: boolean;
   textColor?: ThemeColors;
   theme: ThemeType;
 }
@@ -207,7 +208,7 @@ export const baseButtonStyles = ({
   ${isLoading ? loadingStyles : ''}
 
   ${
-    !!textColor && !disabled
+    isDefined(textColor) && !disabled
       ? `
     color: ${textColor};
     fill: ${textColor};
@@ -235,9 +236,9 @@ export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>`
 // align-items conditional fixes slight button height misalignment for truthy scenario
 // See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
 export const ButtonContents = styled.div<{
-  hasIcon?: boolean;
-  isFullWidth?: boolean;
-  isLoading?: boolean;
+  hasIcon: boolean;
+  isFullWidth: boolean;
+  isLoading: boolean;
 }>`
   align-items: ${({ hasIcon, isFullWidth, isLoading }) => {
     if (isFullWidth && isLoading && hasIcon) {
@@ -281,8 +282,8 @@ export const ButtonContents = styled.div<{
 `;
 
 export const ButtonText = styled.span<{
-  hasIcon?: boolean;
-  isLoading?: boolean;
+  hasIcon: boolean;
+  isLoading: boolean;
 }>`
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
   margin: 0;

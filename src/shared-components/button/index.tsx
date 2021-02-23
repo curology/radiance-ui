@@ -15,6 +15,7 @@ import {
   isLoadingPropFunction,
 } from './deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
+import { isDefined } from '../../utils/isDefined';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**
@@ -77,8 +78,9 @@ export const Button = ({
   ...rest
 }: ButtonProps) => {
   const theme = useTheme();
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
+  const hasIcon = isDefined(icon);
 
   return (
     <ButtonBase
@@ -96,12 +98,12 @@ export const Button = ({
       {...rest}
     >
       <ButtonContents
-        hasIcon={!!icon}
+        hasIcon={hasIcon}
         isFullWidth={isFullWidth}
         isLoading={loadingVal}
       >
         {icon}
-        <ButtonText hasIcon={!!icon} isLoading={loadingVal}>
+        <ButtonText hasIcon={hasIcon} isLoading={loadingVal}>
           {children}
         </ButtonText>
       </ButtonContents>

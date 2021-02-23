@@ -75,7 +75,7 @@ export const TitleWrapper = styled.div<{
     &:focus {
       ${({ borderRadius, isOpen, theme }) => {
         if (!isOpen) {
-          const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+          const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
           return `border-bottom-left-radius: ${borderRadiusValue}; 
                   border-bottom-right-radius: ${borderRadiusValue};`;
         }
@@ -104,7 +104,7 @@ export const Container = styled.div<{
   max-width: ${BREAKPOINTS.md}px;
 
   ${({ borderRadius, theme }) => {
-    const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+    const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
 
     return `
     > div:first-of-type {

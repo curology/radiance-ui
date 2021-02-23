@@ -21,6 +21,7 @@ import {
   ModalFooter,
   MainModalContentContainer,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 export interface ImmersiveModalProps {
   /**
@@ -50,9 +51,9 @@ const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
 const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
-const getHtmlNode = () => document.querySelector('html') || document.body;
+const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
-  document.getElementById(REACT_PORTAL_SECTION_ID) || document.body;
+  document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
 const getModalMobileScrollingElement = () =>
   document.getElementById(MODAL_MOBILE_SCROLLING_ID);
 const getModalDesktopScrollingElement = () =>
@@ -154,6 +155,8 @@ export const ImmersiveModal = ({
     };
   }, []);
 
+  const hasHeaderImage = isDefined(headerImage);
+
   return ReactDOM.createPortal(
     <Transition
       timeout={{
@@ -187,7 +190,7 @@ export const ImmersiveModal = ({
                 <FocusScope contain restoreFocus>
                   <MainModalContentContainer
                     id={MODAL_DESKTOP_SCROLLING_ID}
-                    hasHeaderImage={!!headerImage}
+                    hasHeaderImage={hasHeaderImage}
                   >
                     <CrossIconContainer
                       onClick={handleCloseIntent}
@@ -208,15 +211,15 @@ export const ImmersiveModal = ({
                       </CrossIconContainer>
                     </DesktopHeaderBar>
 
-                    {headerImage && (
+                    {hasHeaderImage && (
                       <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                     )}
-                    <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
+                    <ContentWithFooterContainer hasHeaderImage={hasHeaderImage}>
                       <ModalBody>
-                        {!!title && <ModalTitle>{title}</ModalTitle>}
+                        {isDefined(title) && <ModalTitle>{title}</ModalTitle>}
                         {children}
                       </ModalBody>
-                      {footerContent && (
+                      {isDefined(footerContent) && (
                         <ModalFooter>{footerContent}</ModalFooter>
                       )}
                     </ContentWithFooterContainer>

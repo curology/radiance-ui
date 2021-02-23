@@ -37,8 +37,8 @@ export const ProgressBar = ({
 }: ProgressBarProps) => {
   const theme = useTheme();
 
-  const backgroundColorWithTheme = backgroundColor || theme.COLORS.background;
-  const barColorWithTheme = barColor || theme.COLORS.primary;
+  const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.background;
+  const barColorWithTheme = barColor ?? theme.COLORS.primary;
 
   return (
     <OuterContainer

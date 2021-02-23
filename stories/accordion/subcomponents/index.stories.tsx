@@ -41,8 +41,9 @@ export const Thumbnails = () => {
     2: false,
   });
 
-  const toggleAccordion = (num: number) => () =>
+  const toggleAccordion = (num: keyof typeof isOpen) => () => {
     setIsOpen({ ...isOpen, [num]: !isOpen[num] });
+  };
 
   const srcs = [personImage, accountImage, personImage];
 

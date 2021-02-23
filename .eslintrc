@@ -76,6 +76,7 @@
     "@typescript-eslint/prefer-string-starts-ends-with": "error",
     "@typescript-eslint/prefer-ts-expect-error": "error",
     "@typescript-eslint/sort-type-union-intersection-members": "off",
+    "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "@typescript-eslint/unified-signatures": "error",
     "arrow-parens": "off",

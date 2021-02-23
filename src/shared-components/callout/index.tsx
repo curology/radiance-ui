@@ -4,6 +4,7 @@ import { useTheme } from 'emotion-theming';
 
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors, ThemeType } from '../../constants';
+import { isDefined } from '../../utils/isDefined';
 
 export interface CalloutProps {
   /**
@@ -33,7 +34,7 @@ const getCalloutStyles = (
   type?: CalloutProps['type'],
 ) => {
   let backgroundColor: ThemeColors = theme.COLORS.infoLight;
-  let textColor = color || theme.COLORS.primary;
+  let textColor = color ?? theme.COLORS.primary;
 
   if (type === 'success') {
     backgroundColor = theme.COLORS.successLight;
@@ -53,19 +54,14 @@ const getCalloutStyles = (
  *
  * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
  */
-export const Callout = ({
-  children,
-  color,
-  icon = null,
-  type,
-}: CalloutProps) => {
+export const Callout = ({ children, color, icon, type }: CalloutProps) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getCalloutStyles(theme, color, type);
 
   return (
     <Style.CalloutContainer backgroundColor={backgroundColor}>
       <Style.Text textColor={textColor}>{children}</Style.Text>
-      {icon && <Style.Icon iconColor={textColor}>{icon}</Style.Icon>}
+      {isDefined(icon) && <Style.Icon iconColor={textColor}>{icon}</Style.Icon>}
     </Style.CalloutContainer>
   );
 };

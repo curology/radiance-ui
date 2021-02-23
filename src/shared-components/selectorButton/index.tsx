@@ -11,6 +11,7 @@ import {
   TextContainer,
   SelectorIcon,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 export type SelectorType = 'radio' | 'checkbox';
 export type SizeType = 'large' | 'small';
@@ -83,7 +84,7 @@ export const SelectorButton = ({
         />
       </SelectorContainer>
 
-      {children && <TextContainer>{children}</TextContainer>}
+      {isDefined(children) && <TextContainer>{children}</TextContainer>}
     </OuterContainer>
   );
 };

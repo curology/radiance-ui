@@ -12,6 +12,7 @@ import {
   ContentContainer,
   CtaContent,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const ANIMATION_DELAY = 500;
 
@@ -134,7 +135,7 @@ export const Alert = (alertProps: AlertProps) => {
     );
 
     return () => {
-      if (timer) {
+      if (isDefined(timer)) {
         window.clearTimeout(timer);
       }
     };

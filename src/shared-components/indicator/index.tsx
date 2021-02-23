@@ -17,7 +17,7 @@ export interface IndicatorProps {
 export const Indicator = ({ text, backgroundColor }: IndicatorProps) => {
   const theme = useTheme();
 
-  const bgColorWithTheme = backgroundColor || theme.COLORS.error;
+  const bgColorWithTheme = backgroundColor ?? theme.COLORS.error;
 
   return (
     <IndicatorContainer backgroundColor={bgColorWithTheme}>

@@ -5,6 +5,7 @@ import tinycolor from 'tinycolor2';
 import { ANIMATION, ThemeColors, ThemeType } from '../../../../constants';
 import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
+import { isDefined } from '../../../../utils/isDefined';
 
 const multiStyles = `
   justify-content: space-between;
@@ -105,7 +106,7 @@ const buttonTextColor = (
   theme: ThemeType,
   textColor?: ThemeColors,
 ) => {
-  if (textColor) {
+  if (isDefined(textColor)) {
     return textColor;
   }
 
