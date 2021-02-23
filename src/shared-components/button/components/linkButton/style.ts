@@ -5,15 +5,15 @@ import { ThemeColors, ThemeType } from '../../../../constants';
 import { baseButtonStyles } from '../../style';
 
 export const linkButtonStyles = ({
-  disabled,
-  buttonType,
   buttonColor,
+  buttonType,
+  disabled,
   textColor,
   theme,
 }: {
-  disabled: boolean;
-  buttonType: ButtonType;
   buttonColor: ThemeColors;
+  buttonType: ButtonType;
+  disabled: boolean;
   textColor?: ThemeColors;
   theme: ThemeType;
 }) => css`

@@ -38,11 +38,24 @@
     ],
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/consistent-indexed-object-style": "error",
+    "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": {
+          "memberTypes": ["field", "constructor", "method", "signature"],
+          "order": "alphabetically"
+        }
+      }
+    ],
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-duplicate-imports": "error",
+    "@typescript-eslint/no-extraneous-class": "error",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-use-before-define": "error",
     "arrow-parens": "off",

@@ -21,12 +21,12 @@ export const TooltipBox = styled.div<{
   displayTooltip: boolean;
   hasRestrictedWidth: boolean;
   isSmall: boolean;
+  nudgeBottom: number;
   nudgeLeft: number;
   nudgeRight: number;
   nudgeTop: number;
-  nudgeBottom: number;
-  position: PositionTypes;
   open: boolean;
+  position: PositionTypes;
 }>`
   max-width: ${({ hasRestrictedWidth }) =>
     hasRestrictedWidth ? '327px' : 'none'};

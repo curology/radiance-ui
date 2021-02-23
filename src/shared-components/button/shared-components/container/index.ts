@@ -19,7 +19,7 @@ const flexMdUpStyles = `
   }
 `;
 
-const ButtonContainer = styled.div<{ reverse?: boolean; flex?: boolean }>`
+const ButtonContainer = styled.div<{ flex?: boolean; reverse?: boolean }>`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

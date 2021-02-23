@@ -29,6 +29,7 @@ export interface AlertProps {
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
+  // onExit?: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
   onExit?: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
   truncateText?: boolean;
   type?: AlertType;

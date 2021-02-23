@@ -163,12 +163,12 @@ function parseTheme(
 }
 
 export interface BaseButtonStylesTypes {
-  disabled: boolean;
-  buttonType: ButtonTypeWithAction;
   buttonColor: ThemeColors;
+  buttonType: ButtonTypeWithAction;
+  disabled: boolean;
+  isFullWidth?: boolean;
   isLoading?: boolean;
   textColor?: ThemeColors;
-  isFullWidth?: boolean;
   theme: ThemeType;
 }
 

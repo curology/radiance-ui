@@ -24,9 +24,9 @@ const getBorderStyle = (theme: ThemeType, isOpen: boolean) => `
 `;
 
 export const AccordionBox = styled.div<{
-  noBorder: boolean;
-  isOpen: boolean;
   disabled: boolean;
+  isOpen: boolean;
+  noBorder: boolean;
 }>`
   ${({ noBorder, isOpen, theme }) =>
     !noBorder ? getBorderStyle(theme, isOpen) : ''}

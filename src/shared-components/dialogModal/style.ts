@@ -70,7 +70,7 @@ export const ModalContainer = styled.div<{
 
   ${MEDIA_QUERIES.smUp} {
     max-height: 700px;
-  };
+  }
 
   ${MEDIA_QUERIES.mdUp} {
     position: relative;
