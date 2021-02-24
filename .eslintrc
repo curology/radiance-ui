@@ -40,6 +40,7 @@
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/dot-notation": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/naming-convention": "off",
@@ -47,6 +48,7 @@
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-use-before-define": "error",
     "arrow-parens": "off",
+    "dot-notation": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
