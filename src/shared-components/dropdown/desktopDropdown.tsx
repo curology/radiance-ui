@@ -87,7 +87,7 @@ export const DesktopDropdown = <T extends OptionType>({
               theme,
             })}
           >
-            {currentOption && currentOption.label}
+            {currentOption?.label}
           </div>
           <IconContainer>
             <ChevronIcon width={10} height={10} rotate={isOpen ? 90 : 0} />

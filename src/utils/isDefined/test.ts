@@ -1,20 +1,20 @@
 import { isDefined } from '.';
 
 describe('isDefined', () => {
-  test('it should return true for any argument that is neither null nor undefined', () => {
-    expect(isDefined('string')).toEqual(true);
-    expect(isDefined(1)).toEqual(true);
-    expect(isDefined([])).toEqual(true);
-    expect(isDefined({})).toEqual(true);
-    expect(isDefined(Symbol('Test'))).toEqual(true);
+  it('should return true for any argument that is neither null nor undefined', () => {
+    expect(isDefined('string')).toStrictEqual(true);
+    expect(isDefined(1)).toStrictEqual(true);
+    expect(isDefined([])).toStrictEqual(true);
+    expect(isDefined({})).toStrictEqual(true);
+    expect(isDefined(Symbol('Test'))).toStrictEqual(true);
   });
 
-  test('it should return false for null and undefined', () => {
-    expect(isDefined(undefined)).toEqual(false);
-    expect(isDefined(null)).toEqual(false);
+  it('should return false for null and undefined', () => {
+    expect(isDefined(undefined)).toStrictEqual(false);
+    expect(isDefined(null)).toStrictEqual(false);
   });
 
-  test('it should filter out null and undefined values when provided as an argument to Array.prototype.filter()', () => {
+  it('should filter out null and undefined values when provided as an argument to Array.prototype.filter()', () => {
     const nonNullArray = [1, 2, 3];
     const nullArray = [null, null, null];
     const mixedArray = [1, undefined, 3];
