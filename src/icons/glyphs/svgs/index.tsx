@@ -74,6 +74,7 @@ export { default as HydroquinoneGlyphSecondary } from './HydroquinoneGlyphSecond
 export { default as HydroquinoneGlyph } from './HydroquinoneGlyph'
 export { default as IntersexGlyphSecondary } from './IntersexGlyphSecondary'
 export { default as KojicAcidGlyphSecondary } from './KojicAcidGlyphSecondary'
+export { default as KojicAcidGlyph } from './KojicAcidGlyph'
 export { default as LightbulbGlyphSecondary } from './LightbulbGlyphSecondary'
 export { default as LightbulbGlyph } from './LightbulbGlyph'
 export { default as LipBalmGlyph } from './LipBalmGlyph'
