@@ -65,7 +65,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const BANNER_STORIES: Meta = {
   title: 'Components/Banner',
   component: Banner,
   parameters: {
@@ -86,4 +86,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default BANNER_STORIES;

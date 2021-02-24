@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import { withDeprecationWarning } from '../../utils';
 import { ThemeType } from '../../constants';
 import {
   setSecondaryHeadingFont,
@@ -75,7 +74,10 @@ const buttonStyle = (theme: ThemeType) => `
   text-transform: uppercase;
 `;
 
-const linkStyle = () => `
+/**
+ * TODO-MA: Add theme.TYPOGRAPHY.fontSize.link to guarantee font-size compatibility
+ */
+const linkStyle = (theme: ThemeType) => `
   border-bottom: 1px solid currentColor;
   cursor: pointer;
   text-decoration: none;
@@ -87,6 +89,11 @@ const linkStyle = () => `
   &:hover {
     opacity: 0.6;
     transition: opacity 350ms;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${theme.BOX_SHADOWS.focus};
   }
 `;
 
@@ -112,7 +119,7 @@ const Caption = styled.p`
 const Display = styled.h1`
   ${({ theme }) => displayStyle(theme)}
 `;
-const ErrorComponent = styled.p`
+const Error = styled.p`
   ${({ theme }) => errorStyle(theme)}
 `;
 const Heading = styled.h2`
@@ -122,7 +129,7 @@ const Label = styled.label`
   ${({ theme }) => labelStyle(theme)}
 `;
 const Link = styled.a`
-  ${linkStyle()}
+  ${({ theme }) => linkStyle(theme)}
 `;
 const Success = styled.p`
   ${({ theme }) => successStyle(theme)}
@@ -135,27 +142,10 @@ export const Typography = {
   Button,
   Caption,
   Display,
-  Error: ErrorComponent,
+  Error,
   Heading,
   Label,
   Link,
   Success,
   Title,
-
-  // Deprecated legacy names
-  LinkTag: Link,
-  ButtonText: Button,
-  SuccessText: Success,
-  ErrorText: ErrorComponent,
 } as const;
-
-const deprecatedProperties = {
-  LinkTag: 'LinkTag is deprecated. Use Link instead',
-  ButtonText: 'ButtonText is deprecated. Use Button instead',
-  SuccessText: 'SuccessText is deprecated. Use Success instead',
-  ErrorText: 'ErrorText is deprecated. Use Error instead',
-};
-
-const TYPOGRAPHY = withDeprecationWarning(Typography, deprecatedProperties);
-
-export default TYPOGRAPHY;

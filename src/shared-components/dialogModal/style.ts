@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import Typography from '../typography';
+import { Typography } from '../typography';
 import { Colors, MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
 export const Overlay = styled.div`
@@ -46,7 +46,7 @@ export const ModalContainer = styled.div<{
   background: ${({ backgroundColor }) => backgroundColor};
   padding: ${SPACER.x4large} ${SPACER.large} ${SPACER.xlarge};
   overflow-y: auto;
-  max-height: 700px;
+  max-height: 100%;
 
   transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -66,6 +66,10 @@ export const ModalContainer = styled.div<{
     &:last-of-type {
       margin-bottom: ${SPACER.xlarge};
     }
+  }
+
+  ${MEDIA_QUERIES.smUp} {
+    max-height: 700px;
   }
 
   ${MEDIA_QUERIES.mdUp} {

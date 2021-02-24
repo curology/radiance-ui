@@ -135,7 +135,7 @@ Examples include "sun", "selfie", "pills".
 \n\nAfter adding the SVG file, run \`yarn run storybook\` and confirm the icon looks correct, and then open a PR with the changes.
 `;
 
-export default {
+const ICONS_STORIES: Meta = {
   title: 'Icons/Icon',
   component: IconComponent,
   parameters: {
@@ -164,4 +164,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ICONS_STORIES;

@@ -11,7 +11,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 import { ANIMATION } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';
 
@@ -241,11 +241,19 @@ export const WithCloseIconOpened = () => {
 WithCloseIconOpened.storyName = 'With Close Icon (Opened)';
 WithCloseIconOpened.decorators = [modalStoryDecoratorForChromatic];
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 25 },
+} as const;
+
+interface DialogModalStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const DIALOG_MODAL_STORIES: DialogModalStories = {
   title: 'Components/DialogModal',
   component: DialogModal,
   parameters: {
-    chromatic: { delay: parseInt(ANIMATION.defaultTiming, 10) * 25 },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -283,4 +291,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default DIALOG_MODAL_STORIES;

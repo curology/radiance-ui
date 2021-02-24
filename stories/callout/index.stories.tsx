@@ -13,7 +13,7 @@ import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 import { useTheme } from '@emotion/react';
 
-import { NeckGlyph } from '../../src/icons';
+import { LockGlyph, NeckGlyph } from '../../src/icons';
 
 export const Default = () => (
   <Callout.Container>
@@ -44,6 +44,14 @@ export const WithIcon = () => (
   </Callout.Container>
 );
 
+export const SuccessCallout = () => (
+  <Callout.Container>
+    <Callout type="success" icon={<LockGlyph />}>
+      Your photos are private and are used by your provider to treat your skin
+    </Callout>
+  </Callout.Container>
+);
+
 export const WithoutContainer = () => (
   <Callout>
     This Callout will strech 100% the width of the parent container.
@@ -67,11 +75,18 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+} as const;
+interface CalloutStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const CALLOUT_STORIES: CalloutStories = {
   title: 'Components/Callout',
   component: Callout,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -89,4 +104,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CALLOUT_STORIES;

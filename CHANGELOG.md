@@ -1,5 +1,34 @@
 # CHANGELOG
 
+# v17.2.2
+- [Icons] Add DesonideGlyph, MetronidazoleGlyph and TranexamicAcidGlyph ([#815](https://github.com/curology/radiance-ui/pull/815))
+
+# v17.2.1
+- [Components] Add media query to DialogModal for smaller devices ([#779](https://github.com/curology/radiance-ui/pull/779))
+
+# v17.2.0
+- [Icons] Add SunMoonGlyph and SunMoonGlyphSecondary ([#801](https://github.com/curology/radiance-ui/pull/801))
+
+# v17.1.0
+
+- [Icons] Add DexpanthenolGlyphSecondary, GreenTeaGlyphSecondary, KojicAcidGlyphSecondary, ResveratrolGlyphSecondary ([#800](https://github.com/curology/radiance-ui/pull/800))
+
+# v17.0.1
+
+- [Dependencies] Remove errantly added @storybook packages from dependencies ([#799](https://github.com/curology/radiance-ui/pull/799))
+
+# v17.0.0
+
+- [Theme] **BREAKING CHANGE**: Require `theme` argument to `TYPOGRAPHY_STYLE.link` ([#778](https://github.com/curology/radiance-ui/pull/778))
+- [Components] Add AnchorLinkButton ([#778](https://github.com/curology/radiance-ui/pull/778))
+- [Components] Add `'success'` Callout type ([#780](https://github.com/curology/radiance-ui/pull/780))
+- [Bugfix] Correct never-ending while loop in Alert ([#797](https://github.com/curology/radiance-ui/pull/797/files#diff-cd9d43540e34235173ce0796f0c9cec08f2a2335b2659523e48ac3d44ea28b55))
+- [Internal] Add Chromatic support for Secondary Theme ([#797](https://github.com/curology/radiance-ui/pull/797))
+
+# v16.8.0
+
+- [Icons] Add BreakGlyph, CycleGlyph, CycleGlyphSecondary, FormulaChangeGlyph, HydrocortisoneGlyph, HydrocortisoneGlyphSecondary, HydroquinoneGlyph, LightbulbGlyph, MoonGlyph, MoonGlyphSecondary ([#777](https://github.com/curology/radiance-ui/pull/777))
+
 # v16.7.1
 
 - [Icons] Fix CalendarIconSecondary ([#772](https://github.com/curology/radiance-ui/pull/772))

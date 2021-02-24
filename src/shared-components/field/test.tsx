@@ -58,7 +58,7 @@ describe('<Field />', () => {
       );
 
       const message = getAllByText(maxLength);
-      expect(message.length).toBe(1);
+      expect(message).toHaveLength(1);
     });
 
     it('renders the success messages', () => {
@@ -71,7 +71,7 @@ describe('<Field />', () => {
       );
 
       const message = getAllByText(success);
-      expect(message.length).toBe(1);
+      expect(message).toHaveLength(1);
     });
   });
 });

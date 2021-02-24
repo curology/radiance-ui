@@ -43,3 +43,7 @@ export const AvailableConstants = () => (
     })}
   </div>
 );
+
+AvailableConstants.parameters = {
+  chromatic: { viewports: [CONSTANTS.BREAKPOINTS.xs] },
+};

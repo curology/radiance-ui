@@ -62,8 +62,8 @@ describe('<VerificationMessages />', () => {
         <VerificationMessages messages={messages} />,
       );
 
-      expect(queryAllByRole('list').length).toBe(1);
-      expect(queryAllByRole('listitem').length).toBe(0);
+      expect(queryAllByRole('list')).toHaveLength(1);
+      expect(queryAllByRole('listitem')).toHaveLength(0);
     });
   });
 });

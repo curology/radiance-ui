@@ -206,7 +206,7 @@ export const Content = () => {
 
 Content.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}content`;
 
-export default {
+const ACCORDION_SUBCOMPONENTS_STORIES: Meta = {
   title: 'Components/Accordion/Subcomponents',
   parameters: {
     docs: {
@@ -267,4 +267,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ACCORDION_SUBCOMPONENTS_STORIES;

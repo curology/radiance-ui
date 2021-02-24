@@ -89,7 +89,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const RADIO_BUTTON_STORIES: Meta = {
   title: 'Components/RadioButton',
   component: RadioButton,
   parameters: {
@@ -110,4 +110,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default RADIO_BUTTON_STORIES;
