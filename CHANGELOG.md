@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v17.2.3
+- [Icons] Add KojiAcidGlyph ([#818](https://github.com/curology/radiance-ui/pull/818))
+
 # v17.2.2
 - [Icons] Add DesonideGlyph, MetronidazoleGlyph and TranexamicAcidGlyph ([#815](https://github.com/curology/radiance-ui/pull/815))
 
