@@ -36,7 +36,9 @@ export const Tabs = ({
         <TabItem
           active={tab.id === activeTabId}
           key={tab.id}
-          onClick={() => onTabClick(tab)}
+          onClick={() => {
+            onTabClick(tab);
+          }}
         >
           {tab.text}
         </TabItem>

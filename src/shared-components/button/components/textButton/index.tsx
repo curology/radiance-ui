@@ -27,7 +27,13 @@ export const TextButton = ({
 }: TextButtonProps) => (
   <BaseTextButton
     disabled={disabled}
-    onClick={!disabled ? onClick : (event) => event.preventDefault()}
+    onClick={
+      !disabled
+        ? onClick
+        : (event) => {
+            event.preventDefault();
+          }
+    }
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >

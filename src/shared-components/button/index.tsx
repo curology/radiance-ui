@@ -88,7 +88,11 @@ export const Button = ({
       isFullWidth={isFullWidth}
       isLoading={loadingVal}
       onClick={
-        !disabled && !loadingVal ? onClick : (event) => event.preventDefault()
+        !disabled && !loadingVal
+          ? onClick
+          : (event) => {
+              event.preventDefault();
+            }
       }
       textColor={textColor}
       type="button"

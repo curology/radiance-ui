@@ -129,8 +129,12 @@ export const Tooltip = ({
       <MainContainer>
         <Trigger
           onClick={onClick}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          onMouseEnter={() => {
+            setHovered(true);
+          }}
+          onMouseLeave={() => {
+            setHovered(false);
+          }}
         >
           {children}
         </Trigger>

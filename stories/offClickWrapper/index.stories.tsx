@@ -15,7 +15,9 @@ export const Usage = () => {
     'Click outside this container to call the onOffClick handler...',
   );
 
-  const handleOffClick = () => setText('You clicked outside the container!!!');
+  const handleOffClick = () => {
+    setText('You clicked outside the container!!!');
+  };
 
   return (
     <OffClickWrapper onOffClick={handleOffClick}>

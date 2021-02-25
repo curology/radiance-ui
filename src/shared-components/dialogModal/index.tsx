@@ -63,7 +63,9 @@ export const DialogModal = ({
     domNode.current = getDomNode();
     htmlNode.current = getHtmlNode();
     htmlNode.current.classList.add('no-scroll');
-    return () => htmlNode.current.classList.remove('no-scroll');
+    return () => {
+      htmlNode.current.classList.remove('no-scroll');
+    };
   }, []);
 
   const handleCloseIntent = () => {

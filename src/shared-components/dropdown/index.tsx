@@ -63,7 +63,9 @@ export const Dropdown = <T extends OptionType>({
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
-  const closeDropdown = () => setIsOpen(false);
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
 
   const onMobileSelectChange = (
     event: React.ChangeEvent<HTMLSelectElement>,
