@@ -4,25 +4,31 @@ import { ButtonType } from '../..';
 import { ThemeColors, ThemeType } from '../../../../constants';
 import { baseButtonStyles } from '../../style';
 
+interface LinkButtonStylesProps {
+  buttonColor: ThemeColors;
+  buttonType: ButtonType;
+  disabled: boolean;
+  isFullWidth?: boolean;
+  isLoading?: boolean;
+  textColor?: ThemeColors;
+  theme: ThemeType;
+}
+
 export const linkButtonStyles = ({
   buttonColor,
   buttonType,
   disabled,
+  isFullWidth = false,
+  isLoading = false,
   textColor,
   theme,
-}: {
-  buttonColor: ThemeColors;
-  buttonType: ButtonType;
-  disabled: boolean;
-  textColor?: ThemeColors;
-  theme: ThemeType;
-}) => css`
+}: LinkButtonStylesProps) => css`
   ${baseButtonStyles({
     buttonColor,
     buttonType,
     disabled,
-    isFullWidth: false,
-    isLoading: false,
+    isFullWidth,
+    isLoading,
     textColor,
     theme,
   })}
