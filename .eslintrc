@@ -61,7 +61,7 @@
     "@typescript-eslint/no-extraneous-class": "error",
     "@typescript-eslint/no-implicit-any-catch": "error",
     "@typescript-eslint/no-invalid-void-type": "error",
-    "@typescript-eslint/non-nullable-type-assertion-style": "error",
+    "@typescript-eslint/non-nullable-type-assertion-style": "off",
     "@typescript-eslint/no-parameter-properties": "error",
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-shadow": "error",
