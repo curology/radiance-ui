@@ -98,9 +98,9 @@ export const Tooltip = ({
   const onClick = () => {
     if (clicked) {
       // if clicked is true, we're about to update to false so remove class
-      document?.querySelector('body')?.classList.remove('cursor-pointer');
+      document.querySelector('body')?.classList.remove('cursor-pointer');
     } else {
-      document?.querySelector('body')?.classList.add('cursor-pointer');
+      document.querySelector('body')?.classList.add('cursor-pointer');
     }
 
     setClicked(!clicked);
@@ -108,7 +108,7 @@ export const Tooltip = ({
 
   const closeTooltip = () => {
     if (clicked) {
-      document?.querySelector('body')?.classList.remove('cursor-pointer');
+      document.querySelector('body')?.classList.remove('cursor-pointer');
     }
 
     setClicked(false);
@@ -129,8 +129,12 @@ export const Tooltip = ({
       <MainContainer>
         <Trigger
           onClick={onClick}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          onMouseEnter={() => {
+            setHovered(true);
+          }}
+          onMouseLeave={() => {
+            setHovered(false);
+          }}
         >
           {children}
         </Trigger>

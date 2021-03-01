@@ -110,9 +110,9 @@ export const IconContainer = styled.div`
 `;
 
 export const DropdownOptionsContainer = styled.ul<{
+  borderRadius: string;
   isOpen: boolean;
   optionsContainerMaxHeight: string;
-  borderRadius: string;
 }>`
   position: absolute;
   top: 100%;
@@ -151,8 +151,8 @@ export const DropdownOptionsContainer = styled.ul<{
 `;
 
 export const DropdownOption = styled.li<{
-  selected: boolean;
   disabled: boolean;
+  selected: boolean;
 }>`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   min-height: ${SPACER.x4large};

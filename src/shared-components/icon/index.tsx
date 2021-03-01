@@ -7,12 +7,12 @@ import Style from './style';
 type SVGComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
-  fill?: string;
-  height?: string | number;
   /**
    * Displays svg `inline-block` instead of `block`
    */
   displayInline?: boolean;
+  fill?: string;
+  height?: string | number;
   /**
    * Clockwise rotation, in degrees.
    */

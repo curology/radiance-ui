@@ -1,5 +1,6 @@
 import React from 'react';
-import isObject from 'isobject';
+
+import isObject from '../../src/utils/isObject';
 
 interface ExpandedProxy extends ProxyConstructor {
   __isProxy: boolean;
@@ -12,7 +13,7 @@ const renderConstantsMap = (
 ) => {
   let sanitizedMap = constantMap;
 
-  if (constantMap.__isProxy) {
+  if ('__isProxy' in constantMap) {
     sanitizedMap = Object.assign({}, constantMap);
   }
 
@@ -21,7 +22,8 @@ const renderConstantsMap = (
 
     if (isObject(value)) {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const sanitizedValue = value.__isProxy ? Object.assign({}, value) : value;
+      const sanitizedValue =
+        '__isProxy' in value ? Object.assign({}, value) : value;
 
       Object.entries(sanitizedValue).forEach(([innerKey, innerValue]) => {
         newMemo[`${key}.${innerKey}`] = innerValue;

@@ -40,7 +40,9 @@ const OptionsContainer = styled.div`
 export const Interactive = () => {
   const [active, setActive] = React.useState('');
 
-  const onClick = (value: string) => () => setActive(value);
+  const onClick = (value: string) => () => {
+    setActive(value);
+  };
 
   return (
     <ExampleContainer>

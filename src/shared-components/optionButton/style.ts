@@ -8,7 +8,7 @@ import { setThemeLineHeight } from '../../utils/themeStyles';
 export interface BaseIconWrapperStylesProps {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
-  selected?: boolean;
+  selected: boolean;
   theme: ThemeType;
 }
 
@@ -36,7 +36,7 @@ export const ClickableContainer = styled.button<{
   containerType: ContainerType;
 }>`
   border-radius: ${({ borderRadius, theme }) =>
-    borderRadius || theme.BORDER_RADIUS.small};
+    borderRadius ?? theme.BORDER_RADIUS.small};
   ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};

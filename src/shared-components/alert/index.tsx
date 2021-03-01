@@ -12,6 +12,7 @@ import {
   ContentContainer,
   CtaContent,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const ANIMATION_DELAY = 500;
 
@@ -29,7 +30,7 @@ export interface AlertProps {
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
-  onExit?: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
+  onExit?: ((rest: Omit<AlertProps, 'onExit'>) => void) | (() => void);
   truncateText?: boolean;
   type?: AlertType;
   [key: string]: unknown;
@@ -133,7 +134,7 @@ export const Alert = (alertProps: AlertProps) => {
     );
 
     return () => {
-      if (timer) {
+      if (isDefined(timer)) {
         window.clearTimeout(timer);
       }
     };

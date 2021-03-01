@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 
 import Arrow from './arrow';
 import { OuterContainer, InnerContainer, Card } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const FIRST_INDEX = 0;
 const BASE_SLIDER_CONFIG = {
@@ -116,7 +117,7 @@ export const Carousel = ({
   };
 
   const onUserInteraction = () => {
-    if (timeoutIdRef.current) {
+    if (isDefined(timeoutIdRef.current)) {
       clearTimeout(timeoutIdRef.current);
     }
     hasUserInteractedRef.current = true;

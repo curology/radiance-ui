@@ -38,8 +38,12 @@ const LoremIpsumBlock = ({ repeat = 1 }) => (
 export const WithFooterButtons = () => {
   const [withButtons, setWithButtons] = useState(false);
 
-  const onClick = () => setWithButtons(true);
-  const onClose = () => setWithButtons(false);
+  const onClick = () => {
+    setWithButtons(true);
+  };
+  const onClose = () => {
+    setWithButtons(false);
+  };
 
   return (
     <React.Fragment>
@@ -71,8 +75,12 @@ WithFooterButtons.parameters = {
 export const WithFooterButtonsOpened = () => {
   const [withButtons, setWithButtons] = useState(true);
 
-  const onClick = () => setWithButtons(true);
-  const onClose = () => setWithButtons(false);
+  const onClick = () => {
+    setWithButtons(true);
+  };
+  const onClose = () => {
+    setWithButtons(false);
+  };
 
   return (
     <React.Fragment>
@@ -102,8 +110,12 @@ WithFooterButtonsOpened.decorators = [modalStoryDecoratorForChromatic];
 export const WithHeaderImage = () => {
   const [withImageHeader, setWithImageHeader] = useState(false);
 
-  const onClick = () => setWithImageHeader(true);
-  const onClose = () => setWithImageHeader(false);
+  const onClick = () => {
+    setWithImageHeader(true);
+  };
+  const onClose = () => {
+    setWithImageHeader(false);
+  };
 
   return (
     <React.Fragment>
@@ -129,8 +141,12 @@ WithHeaderImage.parameters = {
 export const WithHeaderImageOpened = () => {
   const [withImageHeader, setWithImageHeader] = useState(true);
 
-  const onClick = () => setWithImageHeader(true);
-  const onClose = () => setWithImageHeader(false);
+  const onClick = () => {
+    setWithImageHeader(true);
+  };
+  const onClose = () => {
+    setWithImageHeader(false);
+  };
 
   return (
     <React.Fragment>
@@ -154,8 +170,12 @@ WithHeaderImageOpened.decorators = [modalStoryDecoratorForChromatic];
 export const WithScrollingContent = () => {
   const [withScrolling, setWithScrolling] = useState(false);
 
-  const onClick = () => setWithScrolling(true);
-  const onClose = () => setWithScrolling(false);
+  const onClick = () => {
+    setWithScrolling(true);
+  };
+  const onClose = () => {
+    setWithScrolling(false);
+  };
 
   return (
     <React.Fragment>
@@ -177,8 +197,12 @@ WithScrollingContent.parameters = {
 export const WithScrollingContentOpened = () => {
   const [withScrolling, setWithScrolling] = useState(true);
 
-  const onClick = () => setWithScrolling(true);
-  const onClose = () => setWithScrolling(false);
+  const onClick = () => {
+    setWithScrolling(true);
+  };
+  const onClose = () => {
+    setWithScrolling(false);
+  };
 
   return (
     <React.Fragment>

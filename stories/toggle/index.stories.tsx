@@ -21,8 +21,12 @@ export const Usage = () => {
   const [checked, setChecked] = React.useState(false);
   const [secondChecked, setSecondChecked] = React.useState(true);
 
-  const onChange = () => setChecked(!checked);
-  const secondOnChange = () => setSecondChecked(!secondChecked);
+  const onChange = () => {
+    setChecked(!checked);
+  };
+  const secondOnChange = () => {
+    setSecondChecked(!secondChecked);
+  };
 
   return (
     <React.Fragment>

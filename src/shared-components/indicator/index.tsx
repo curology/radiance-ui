@@ -6,8 +6,8 @@ import { useTheme } from 'emotion-theming';
 import { IndicatorContainer } from './style';
 
 export interface IndicatorProps {
-  text: string | number;
   backgroundColor?: ThemeColors;
+  text: string | number;
 }
 
 /**
@@ -17,7 +17,7 @@ export interface IndicatorProps {
 export const Indicator = ({ text, backgroundColor }: IndicatorProps) => {
   const theme = useTheme();
 
-  const bgColorWithTheme = backgroundColor || theme.COLORS.error;
+  const bgColorWithTheme = backgroundColor ?? theme.COLORS.error;
 
   return (
     <IndicatorContainer backgroundColor={bgColorWithTheme}>

@@ -50,7 +50,7 @@ export const LinkButton = ({
 }: LinkProps) => {
   const theme = useTheme();
   const ContainerTag = as;
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
 
   return (
     <ContainerTag
@@ -66,8 +66,10 @@ export const LinkButton = ({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <ButtonContents hasIcon={false}>
-        <ButtonText>{children}</ButtonText>
+      <ButtonContents isLoading={false} isFullWidth={false} hasIcon={false}>
+        <ButtonText isLoading={false} hasIcon={false}>
+          {children}
+        </ButtonText>
       </ButtonContents>
     </ContainerTag>
   );

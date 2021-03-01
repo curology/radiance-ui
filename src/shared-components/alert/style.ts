@@ -47,8 +47,8 @@ const errorAlertStyles = (theme: ThemeType) => `
 `;
 
 export const AlertContainer = styled.button<{
-  exiting: boolean;
   alertType: AlertType;
+  exiting: boolean;
 }>`
   border: none;
   text-align: left;
