@@ -10,6 +10,7 @@
     "moduleResolution": "Node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {

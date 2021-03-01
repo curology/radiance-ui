@@ -41,6 +41,7 @@
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/dot-notation": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-ordering": [
@@ -85,6 +86,7 @@
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "@typescript-eslint/unified-signatures": "error",
     "arrow-parens": "off",
+    "dot-notation": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
