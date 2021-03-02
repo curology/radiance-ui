@@ -6,12 +6,12 @@ module.exports = {
       compression: 'none',
     },
     {
-      path: `dist/bundle-es/shared-components/!(typography)/**/index.js`,
+      path: `dist/esm/shared-components/!(typography)/**/index.js`,
       maxSize: '20kB',
       compression: 'none',
     },
     {
-      path: `dist/bundle-es/shared-components/typography/index.js`,
+      path: `dist/esm/shared-components/typography/index.js`,
       maxSize: '100kB',
       compression: 'none',
     },
