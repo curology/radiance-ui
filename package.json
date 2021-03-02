@@ -19,6 +19,11 @@
       "browser": "./dist/esm/lib/icons/index.js",
       "import": "./dist/esm/lib/icons/index.js",
       "require": "./dist/cjs/lib/icons/index.cjs"
+    },
+    "./lib/utils": {
+      "browser": "./dist/esm/lib/utils/index.js",
+      "import": "./dist/esm/lib/utils/index.js",
+      "require": "./dist/cjs/lib/utils/index.cjs"
     }
   },
   "files": [

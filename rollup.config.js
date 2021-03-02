@@ -15,6 +15,7 @@ const defaultConfig = {
     'index': 'src/index.ts',
     'lib/icons/index': 'src/icons/index.ts',
     'lib/constants/index': 'src/constants/index.ts',
+    'lib/utils/index': 'src/utils/index.ts',
   },
   plugins: [
     svgr({
