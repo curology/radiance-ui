@@ -11,7 +11,11 @@ import pkg from './package.json';
 const extensions = ['.js', '.ts', '.tsx'];
 
 const defaultConfig = {
-  input: 'src/index.ts',
+  input: {
+    'index': 'src/index.ts',
+    'lib/icons/index': 'src/icons/index.ts',
+    'lib/constants/index': 'src/constants/index.ts',
+  },
   plugins: [
     svgr({
       expandProps: 'end',
@@ -38,18 +42,18 @@ export default [
     ...defaultConfig,
     output: [
       {
-        file: 'dist/bundle.js',
+        dir: 'dist/cjs',
+        entryFileNames: '[name].cjs',
         format: 'cjs',
-        name: 'radianceUi',
       },
     ],
   },
   {
     ...defaultConfig,
-    preserveModules: true,
     output: [
       {
-        dir: 'dist/bundle-es',
+        dir: 'dist/esm',
+        entryFileNames: '[name].js',
         format: 'esm',
       },
     ],
