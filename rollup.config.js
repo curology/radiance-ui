@@ -55,7 +55,6 @@ export default [
     output: [
       {
         dir: 'dist/esm',
-        entryFileNames: '[name].js',
         format: 'esm',
       },
     ],
