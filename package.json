@@ -11,19 +11,19 @@
       "require": "./dist/cjs/index.cjs"
     },
     "./lib/constants": {
-      "browser": "./dist/esm/lib/constants/index.js",
-      "import": "./dist/esm/lib/constants/index.js",
-      "require": "./dist/cjs/lib/constants/index.cjs"
+      "browser": "./dist/esm/constants/index.js",
+      "import": "./dist/esm/constants/index.js",
+      "require": "./dist/cjs/constants/index.cjs"
     },
     "./lib/icons": {
-      "browser": "./dist/esm/lib/icons/index.js",
-      "import": "./dist/esm/lib/icons/index.js",
-      "require": "./dist/cjs/lib/icons/index.cjs"
+      "browser": "./dist/esm/icons/index.js",
+      "import": "./dist/esm/icons/index.js",
+      "require": "./dist/cjs/icons/index.cjs"
     },
     "./lib/utils": {
-      "browser": "./dist/esm/lib/utils/index.js",
-      "import": "./dist/esm/lib/utils/index.js",
-      "require": "./dist/cjs/lib/utils/index.cjs"
+      "browser": "./dist/esm/utils/index.js",
+      "import": "./dist/esm/utils/index.js",
+      "require": "./dist/cjs/utils/index.cjs"
     }
   },
   "files": [

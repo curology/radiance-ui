@@ -11,12 +11,13 @@ import pkg from './package.json';
 const extensions = ['.js', '.ts', '.tsx'];
 
 const defaultConfig = {
-  input: {
-    'index': 'src/index.ts',
-    'lib/icons/index': 'src/icons/index.ts',
-    'lib/constants/index': 'src/constants/index.ts',
-    'lib/utils/index': 'src/utils/index.ts',
-  },
+  preserveModules: true,
+  input: [
+    'src/index.ts',
+    'src/icons/index.ts',
+    'src/constants/index.ts',
+    'src/utils/index.ts',
+  ],
   plugins: [
     svgr({
       expandProps: 'end',
