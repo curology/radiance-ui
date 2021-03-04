@@ -76,14 +76,6 @@ exports[`<DialogModal /> renders dialog modal with custom color 1`] = `
   transform: translateY(100%);
 }
 
-.emotion-0 p {
-  margin-bottom: 1.5rem;
-}
-
-.emotion-0 p:last-of-type {
-  margin-bottom: 2rem;
-}
-
 @media (min-width:576px) {
   .emotion-0 {
     max-height: 700px;
