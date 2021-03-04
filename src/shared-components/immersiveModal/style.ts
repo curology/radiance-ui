@@ -96,13 +96,11 @@ export const ModalTitle = styled(Typography.Heading)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const ModalBody = styled.div`
-  p {
-    margin-bottom: ${SPACER.large};
+export const Paragraph = styled.p`
+  margin-bottom: ${SPACER.large};
 
-    &:last-of-type {
-      margin-bottom: ${SPACER.xlarge};
-    }
+  &:last-of-type {
+    margin-bottom: ${SPACER.xlarge};
   }
 `;
 

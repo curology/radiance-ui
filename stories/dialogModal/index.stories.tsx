@@ -32,10 +32,10 @@ export const Default = () => {
 
       {openModal && (
         <DialogModal title="Heads up!">
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
             <Button
               isFullWidth
@@ -81,10 +81,10 @@ export const DefaultOpened = () => {
 
       {openModal && (
         <DialogModal title="Heads up!">
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
             <Button
               isFullWidth
@@ -111,36 +111,33 @@ export const DefaultOpened = () => {
 };
 
 export const WithColor = () => {
-  const [withCloseIcon, setWithCloseIcon] = useState(false);
+  const [withColor, setWithColor] = useState(false);
   const theme = useTheme();
 
   return (
     <React.Fragment>
       <Button
         onClick={() => {
-          setWithCloseIcon(true);
+          setWithColor(true);
         }}
       >
         open dialog modal
       </Button>
 
-      {withCloseIcon && (
+      {withColor && (
         <DialogModal
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
-          onCloseIconClick={() => {
-            setWithCloseIcon(false);
-          }}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
             <Button
               isFullWidth
               onClick={() => {
-                setWithCloseIcon(false);
+                setWithColor(false);
               }}
             >
               Yes, remove
@@ -148,7 +145,7 @@ export const WithColor = () => {
             <Button
               isFullWidth
               onClick={() => {
-                setWithCloseIcon(false);
+                setWithColor(false);
               }}
               buttonType="tertiary"
             >
@@ -167,36 +164,33 @@ WithColor.parameters = {
 };
 
 export const WithColorOpened = () => {
-  const [withCloseIcon, setWithCloseIcon] = useState(true);
+  const [withColor, setWithColor] = useState(true);
   const theme = useTheme();
 
   return (
     <React.Fragment>
       <Button
         onClick={() => {
-          setWithCloseIcon(true);
+          setWithColor(true);
         }}
       >
         open dialog modal
       </Button>
 
-      {withCloseIcon && (
+      {withColor && (
         <DialogModal
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
-          onCloseIconClick={() => {
-            setWithCloseIcon(false);
-          }}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
             <Button
               isFullWidth
               onClick={() => {
-                setWithCloseIcon(false);
+                setWithColor(false);
               }}
             >
               Yes, remove
@@ -204,7 +198,7 @@ export const WithColorOpened = () => {
             <Button
               isFullWidth
               onClick={() => {
-                setWithCloseIcon(false);
+                setWithColor(false);
               }}
               buttonType="tertiary"
             >
@@ -242,10 +236,10 @@ export const WithCloseIcon = () => {
             setWithCloseIcon(false);
           }}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
             <Button
               isFullWidth
@@ -295,10 +289,10 @@ export const WithCloseIconOpened = () => {
             setWithCloseIcon(false);
           }}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
             <Button
               isFullWidth

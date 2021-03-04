@@ -4,17 +4,20 @@ import { render } from 'src/tests/testingLibraryHelpers';
 import { ImmersiveModal } from './index';
 
 const modalTitle = 'Immersive Modal Title';
-const modalBody = 'Immersive Modal Children Content';
+const bodyString = 'Immersive Modal Children Content';
+const modalBody = (
+  <ImmersiveModal.Paragraph>{bodyString}</ImmersiveModal.Paragraph>
+);
 
 describe('<ImmersiveModal />', () => {
   it('render children content correctly', () => {
-    const { getAllByText } = render(
+    const { getAllByText, getByText } = render(
       <ImmersiveModal onClose={() => undefined} title={modalTitle}>
         <div>{modalBody}</div>
       </ImmersiveModal>,
     );
 
     expect(getAllByText(modalTitle).length > 0).toBe(true);
-    expect(getAllByText(modalBody).length > 0).toBe(true);
+    expect(getByText(bodyString)).toBeInTheDocument();
   });
 });
