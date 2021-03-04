@@ -6,14 +6,10 @@
     "project": "./.eslint.tsconfig.json"
   },
   "extends": [
-    "plugin:prettier/recommended",
     "curology",
-    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/all",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "plugins": ["emotion"],
   "globals": {
