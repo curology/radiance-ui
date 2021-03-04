@@ -6263,9 +6263,10 @@ eslint-config-airbnb@18.2.1:
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-"eslint-config-curology@https://github.com/curology/eslint-config-curology.git#af37534caedf6feb8d027863bcff6c75e58872ea":
-  version "2.0.0"
-  resolved "https://github.com/curology/eslint-config-curology.git#af37534caedf6feb8d027863bcff6c75e58872ea"
+eslint-config-curology@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-curology/-/eslint-config-curology-2.2.0.tgz#e0fef02acef7e89a265b922577e075e9494c1ecb"
+  integrity sha512-aaBevyRnkjzs9ObFvGzYtz/Q6BMPSREq3rsQml7XngnmMeHJgrR5HxtyWXhFZglpJZZ8zuiVJpCV1KDJagAEzg==
 
 eslint-config-prettier@^8.1.0:
   version "8.1.0"

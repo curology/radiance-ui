@@ -109,7 +109,7 @@
     "create-index": "https://github.com/curology/create-index.git#2020-updates",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "18.2.1",
-    "eslint-config-curology": "https://github.com/curology/eslint-config-curology.git#af37534caedf6feb8d027863bcff6c75e58872ea",
+    "eslint-config-curology": "^2.2.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-webpack": "^0.13.0",
     "eslint-plugin-babel": "^5.3.1",
