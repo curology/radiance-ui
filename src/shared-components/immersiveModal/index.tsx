@@ -17,9 +17,9 @@ import {
   HeaderImageContainer,
   ContentWithFooterContainer,
   ModalTitle,
-  ModalBody,
   ModalFooter,
   MainModalContentContainer,
+  Paragraph,
 } from './style';
 import { isDefined } from '../../utils/isDefined';
 
@@ -69,6 +69,8 @@ const getModalDesktopScrollingElement = () =>
  * Immersive modals always include the close button.
  *
  * Modals can contain a header image that is 240px tall (264px on desktop). Images should not contain rounded corners.
+ *
+ * `ImmersiveModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
 export const ImmersiveModal = ({
   children,
@@ -215,10 +217,10 @@ export const ImmersiveModal = ({
                       <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                     )}
                     <ContentWithFooterContainer hasHeaderImage={hasHeaderImage}>
-                      <ModalBody>
+                      <div>
                         {isDefined(title) && <ModalTitle>{title}</ModalTitle>}
                         {children}
-                      </ModalBody>
+                      </div>
                       {isDefined(footerContent) && (
                         <ModalFooter>{footerContent}</ModalFooter>
                       )}
@@ -234,6 +236,8 @@ export const ImmersiveModal = ({
     domNode.current,
   );
 };
+
+ImmersiveModal.Paragraph = Paragraph;
 
 ImmersiveModal.propTypes = {
   children: PropTypes.node.isRequired,

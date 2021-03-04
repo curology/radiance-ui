@@ -11,6 +11,7 @@ import {
   ModalContainer,
   ModalTitle,
   CrossIconContainer,
+  Paragraph,
 } from './style';
 import { Colors, primaryTheme, secondaryTheme } from '../../constants';
 
@@ -44,6 +45,8 @@ const getDomNode = () =>
  * Dialog modals require a user to make a choice between options and are not closable on click/tap outside. They may contain a close button if a close function is provided.
  *
  * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
+ *
+ * `DialogModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
 export const DialogModal = ({
   backgroundColor,
@@ -122,6 +125,8 @@ export const DialogModal = ({
     domNode.current,
   );
 };
+
+DialogModal.Paragraph = Paragraph;
 
 DialogModal.propTypes = {
   backgroundColor: PropTypes.oneOf([

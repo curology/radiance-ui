@@ -31,6 +31,14 @@ export const Overlay = styled.div`
   }
 `;
 
+export const Paragraph = styled.p`
+  margin-bottom: ${SPACER.large};
+
+  &:last-of-type {
+    margin-bottom: ${SPACER.xlarge};
+  }
+`;
+
 export const ModalContainer = styled.div<{
   backgroundColor: Colors['background'] | Colors['white'];
 }>`
@@ -58,14 +66,6 @@ export const ModalContainer = styled.div<{
   &.exiting,
   &.exited {
     transform: translateY(100%);
-  }
-
-  p {
-    margin-bottom: ${SPACER.large};
-
-    &:last-of-type {
-      margin-bottom: ${SPACER.xlarge};
-    }
   }
 
   ${MEDIA_QUERIES.smUp} {

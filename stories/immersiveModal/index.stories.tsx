@@ -19,11 +19,11 @@ import headerImage from './headerImage.jpg';
 const IMMERSIVE_MODAL_STORY_ID_PREFIX = 'components-immersivemodal--';
 
 const LoremIpsumMarkup = () => (
-  <p>
+  <ImmersiveModal.Paragraph>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo
     magni, sequi similique nisi ab. Culpa, debitis? Quibusdam porro accusamus
     asperiores. Et ab nobis saepe optio hic eveniet consectetur error?
-  </p>
+  </ImmersiveModal.Paragraph>
 );
 
 const LoremIpsumBlock = ({ repeat = 1 }) => (
