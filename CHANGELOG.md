@@ -1,7 +1,7 @@
 # CHANGELOG
 
 # v18.0.0
-- [Modals] **BREAKING CHANGE**: Remove custom styling to `DialogModal` and `ImmersiveModal` paragraph tags in modals body, added as subcomponent as alternative ([#833](https://github.com/curology/radiance-ui/pull/833))
+- [Modals] **BREAKING CHANGE**: Remove custom styling to `DialogModal` and `ImmersiveModal` paragraph tags in modals body, added as subcomponent as an alternative ([#833](https://github.com/curology/radiance-ui/pull/833))
 
 # v17.2.3
 - [Icons] Add KojiAcidGlyph ([#818](https://github.com/curology/radiance-ui/pull/818))
