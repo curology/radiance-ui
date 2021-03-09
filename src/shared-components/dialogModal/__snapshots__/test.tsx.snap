@@ -8,7 +8,7 @@ exports[`<DialogModal /> renders dialog modal with custom color 1`] = `
   bottom: 0;
   left: 0;
   z-index: 999999;
-  background-color: rgba(58,55,75,0.7);
+  background-color: rgba(45,45,48,0.7);
   -webkit-transition: opacity 250ms cubic-bezier(0.075,0.82,0.165,1);
   transition: opacity 250ms cubic-bezier(0.075,0.82,0.165,1);
 }
