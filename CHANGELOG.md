@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v18.1.0
+- [Modals] Change overlay color in `DialogModal` and `ImmersiveModal` ([#846](https://github.com/curology/radiance-ui/pull/846))
+
 # v18.0.0
 - [Modals] **BREAKING CHANGE**: Remove custom styling to `DialogModal` and `ImmersiveModal` paragraph tags in modals body, added as subcomponent as an alternative ([#833](https://github.com/curology/radiance-ui/pull/833))
 
