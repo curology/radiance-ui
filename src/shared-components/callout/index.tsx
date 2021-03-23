@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Style from './style';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
+import { COLORS_PROP_TYPES, ThemeColors, ThemeType } from '../../constants';
+import { isDefined } from '../../utils/isDefined';
 
-type CalloutProps = {
+export interface CalloutProps {
   /**
    * Content of the Callout element. It may contain `<strong>` tags
    */
@@ -18,6 +19,32 @@ type CalloutProps = {
    * Icon displayed inside the callout right aligned
    */
   icon?: React.ReactNode;
+  /**
+   * Custom prop to draw on preset Callout styles
+   */
+  type?: 'success';
+}
+
+/**
+ * Pulls a specific styling preset based on available theme values and `type`
+ */
+const getCalloutStyles = (
+  theme: ThemeType,
+  color?: ThemeColors,
+  type?: CalloutProps['type'],
+) => {
+  let backgroundColor: ThemeColors = theme.COLORS.infoLight;
+  let textColor = color ?? theme.COLORS.primary;
+
+  if (type === 'success') {
+    backgroundColor = theme.COLORS.successLight;
+    textColor = theme.COLORS.success;
+  }
+
+  return {
+    backgroundColor,
+    textColor,
+  };
 };
 
 /**
@@ -27,14 +54,14 @@ type CalloutProps = {
  *
  * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
  */
-export const Callout = ({ children, color, icon = null }: CalloutProps) => {
+export const Callout = ({ children, color, icon, type }: CalloutProps) => {
   const theme = useTheme();
-  const colorWithTheme = color || theme.COLORS.primary;
+  const { backgroundColor, textColor } = getCalloutStyles(theme, color, type);
 
   return (
-    <Style.CalloutContainer>
-      <Style.Text textColor={colorWithTheme}>{children}</Style.Text>
-      {icon && <Style.Icon iconColor={colorWithTheme}>{icon}</Style.Icon>}
+    <Style.CalloutContainer backgroundColor={backgroundColor}>
+      <Style.Text textColor={textColor}>{children}</Style.Text>
+      {isDefined(icon) && <Style.Icon iconColor={textColor}>{icon}</Style.Icon>}
     </Style.CalloutContainer>
   );
 };

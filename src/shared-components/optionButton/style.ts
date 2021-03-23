@@ -5,12 +5,12 @@ import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { containerStyles, ContainerType } from '../container/style';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
-type BaseIconWrapperStylesProps = {
+export interface BaseIconWrapperStylesProps {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
-  selected?: boolean;
+  selected: boolean;
   theme: ThemeType;
-};
+}
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
@@ -36,7 +36,7 @@ export const ClickableContainer = styled.button<{
   containerType: ContainerType;
 }>`
   border-radius: ${({ borderRadius, theme }) =>
-    borderRadius || theme.BORDER_RADIUS.small};
+    borderRadius ?? theme.BORDER_RADIUS.small};
   ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};

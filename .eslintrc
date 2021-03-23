@@ -6,13 +6,9 @@
     "project": "./.eslint.tsconfig.json"
   },
   "extends": [
-    "plugin:prettier/recommended",
-    "curology",
-    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
+    "plugin:jest/all",
+    "curology"
   ],
   "plugins": ["emotion"],
   "globals": {
@@ -25,7 +21,6 @@
     }
   },
   "rules": {
-    "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": [
       "error",
@@ -37,14 +32,80 @@
         "extendDefaults": true
       }
     ],
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/consistent-indexed-object-style": "error",
+    "@typescript-eslint/consistent-type-assertions": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/dot-notation": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/member-ordering": [
+      "error",
+      {
+        "default": {
+          "memberTypes": ["field", "constructor", "method", "signature"],
+          "order": "alphabetically"
+        }
+      }
+    ],
     "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-base-to-string": "error",
+    "@typescript-eslint/no-confusing-non-null-assertion": "error",
+    "@typescript-eslint/no-confusing-void-expression": "error",
     "@typescript-eslint/no-duplicate-imports": "error",
+    "@typescript-eslint/no-dynamic-delete": "error",
+    "@typescript-eslint/no-extraneous-class": "error",
+    "@typescript-eslint/no-implicit-any-catch": "error",
+    "@typescript-eslint/no-invalid-void-type": "error",
+    "@typescript-eslint/non-nullable-type-assertion-style": "off",
+    "@typescript-eslint/no-parameter-properties": "error",
+    "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-unnecessary-qualifier": "off",
+    "@typescript-eslint/no-unnecessary-type-arguments": "off",
+    "@typescript-eslint/no-unnecessary-type-constraint": "error",
     "@typescript-eslint/no-use-before-define": "error",
-    "@typescript-eslint/consistent-indexed-object-style": "error",
+    "@typescript-eslint/prefer-includes": "error",
+    "@typescript-eslint/prefer-nullish-coalescing": "error",
+    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-readonly": "off",
+    "@typescript-eslint/prefer-readonly-parameter-types": "off",
+    "@typescript-eslint/prefer-reduce-type-parameter": "off",
+    "@typescript-eslint/prefer-string-starts-ends-with": "error",
+    "@typescript-eslint/promise-function-async": "error",
+    "@typescript-eslint/sort-type-union-intersection-members": "off",
+    "@typescript-eslint/strict-boolean-expressions": "error",
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "@typescript-eslint/unified-signatures": "error",
     "arrow-parens": "off",
+    "dot-notation": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "jpg": "always",
+        "png": "always",
+        "svg": "always",
+        "stories": "always"
+      }
+    ],
+    "jest/lowercase-name": [
+      "error",
+      {
+        "ignore": ["describe"]
+      }
+    ],
+    "jest/no-large-snapshots": "off",
+    "jest/prefer-called-with": "off",
+    "jest/prefer-expect-assertions": "off",
+    "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-duplicate-imports": "off",
     "no-shadow": "off",
@@ -68,25 +129,11 @@
       }
     ],
     "react/state-in-constructor": "off",
-    "react/static-property-placement": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ],
-    "import/extensions": [
-      "error",
-      {
-        "jpg": "always",
-        "png": "always",
-        "svg": "always"
-      }
-    ]
+    "react/static-property-placement": "off"
   },
   "overrides": [
     {
-      "files": ["test.{js,ts,tsx}"],
+      "files": ["test.{ts,tsx}"],
       "rules": {
         "@typescript-eslint/no-unsafe-call": "off",
         "no-undef": "off",
@@ -98,23 +145,10 @@
       }
     },
     {
-      "files": ["**/style.{js,ts}"],
+      "files": ["**/style.ts"],
       "rules": {
         "@typescript-eslint/restrict-template-expressions": "off",
         "indent": "off"
-      }
-    },
-    {
-      "files": ["*.js"],
-      "rules": {
-        "@typescript-eslint/no-var-requires": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-return": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/restrict-template-expressions": "off"
       }
     },
     {
@@ -131,7 +165,7 @@
       }
     },
     {
-      "files": ["stories/**/*.{js,ts,tsx}"],
+      "files": ["stories/**/*.{ts,tsx}"],
       "rules": {
         "no-alert": "off"
       }

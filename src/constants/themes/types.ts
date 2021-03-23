@@ -11,7 +11,9 @@ type BoxShadows =
   | typeof primaryTheme['BOX_SHADOWS']
   | typeof secondaryTheme['BOX_SHADOWS'];
 
-type Colors = typeof primaryTheme['COLORS'] | typeof secondaryTheme['COLORS'];
+export type Colors =
+  | typeof primaryTheme['COLORS']
+  | typeof secondaryTheme['COLORS'];
 
 type Fonts = typeof primaryTheme['FONTS'] | typeof secondaryTheme['FONTS'];
 
@@ -26,11 +28,11 @@ export const COLORS_PROP_TYPES = PropTypes.oneOf([
   ...Object.values(secondaryTheme.COLORS),
 ]);
 
-export type ThemeType = {
-  __type: 'primary' | 'secondary';
+export interface ThemeType {
   BORDER_RADIUS: BorderRadius;
   BOX_SHADOWS: BoxShadows;
   COLORS: Colors;
   FONTS: Fonts;
   TYPOGRAPHY: Typography;
-};
+  __type: 'primary' | 'secondary';
+}

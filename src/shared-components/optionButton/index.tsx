@@ -11,8 +11,9 @@ import {
   CheckmarkWrapper,
 } from './style';
 import { CheckmarkIcon } from '../../icons';
+import { isDefined } from '../../utils/isDefined';
 
-type OptionButtonProps = {
+export interface OptionButtonProps {
   borderRadius?: string;
   buttonType?: 'primary' | 'secondary';
   /**
@@ -28,7 +29,7 @@ type OptionButtonProps = {
   subtext?: React.ReactNode;
   text: string;
   [key: string]: unknown;
-};
+}
 
 export const OptionButton = ({
   borderRadius,
@@ -51,7 +52,7 @@ export const OptionButton = ({
     {...rest}
   >
     <FlexContainer>
-      {icon ? (
+      {isDefined(icon) ? (
         <IconWrapper
           selected={selected}
           optionType={optionType}
@@ -70,7 +71,7 @@ export const OptionButton = ({
       )}
       <TextContainer>
         <Text>{text}</Text>
-        {subtext && <SubText>{subtext}</SubText>}
+        {isDefined(subtext) && <SubText>{subtext}</SubText>}
       </TextContainer>
     </FlexContainer>
   </ClickableContainer>

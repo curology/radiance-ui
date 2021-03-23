@@ -3,12 +3,12 @@ import { css } from '@emotion/core';
 
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
-type DropdownInputStyleProps = {
+export interface DropdownInputStyleProps {
   borderRadius: string;
   shouldBeFullyRounded: boolean;
   textAlign: 'left' | 'center';
   theme: ThemeType;
-};
+}
 
 export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   position: relative;
@@ -110,9 +110,9 @@ export const IconContainer = styled.div`
 `;
 
 export const DropdownOptionsContainer = styled.ul<{
+  borderRadius: string;
   isOpen: boolean;
   optionsContainerMaxHeight: string;
-  borderRadius: string;
 }>`
   position: absolute;
   top: 100%;
@@ -151,8 +151,8 @@ export const DropdownOptionsContainer = styled.ul<{
 `;
 
 export const DropdownOption = styled.li<{
-  selected: boolean;
   disabled: boolean;
+  selected: boolean;
 }>`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   min-height: ${SPACER.x4large};

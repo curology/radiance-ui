@@ -191,7 +191,7 @@ export const WithControls = () => (
   <FieldsContainer>
     <Field
       disabled={boolean('disabled', false)}
-      // @ts-ignore
+      // @ts-expect-error: select + Field['message'] type compat issue
       messages={select('messages', messagesOptions, {})}
       messagesType={
         select('messagesType', messagesTypeOptions, 'error') as
@@ -212,7 +212,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const FIELD_STORIES: Meta = {
   title: 'Components/Field',
   component: Field,
   parameters: {
@@ -233,4 +233,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default FIELD_STORIES;

@@ -40,7 +40,9 @@ const OptionsContainer = styled.div`
 export const Interactive = () => {
   const [active, setActive] = React.useState('');
 
-  const onClick = (value: string) => () => setActive(value);
+  const onClick = (value: string) => () => {
+    setActive(value);
+  };
 
   return (
     <ExampleContainer>
@@ -182,7 +184,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const OPTION_BUTTON_STORIES: Meta = {
   title: 'Components/OptionButton',
   component: OptionButton,
   parameters: {
@@ -203,4 +205,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default OPTION_BUTTON_STORIES;

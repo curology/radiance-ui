@@ -1,7 +1,7 @@
 import { useTheme } from 'emotion-theming';
 import PropTypes from 'prop-types';
 import React from 'react';
-// @ts-ignore
+// @ts-expect-error: No @types, we should replace this dependency
 import ToggleButton from 'react-toggle-button';
 
 import {
@@ -12,11 +12,11 @@ import {
   thumbStyle,
 } from './style';
 
-type ToggleProps = {
+export interface ToggleProps {
   checked?: boolean;
   label?: string;
   onChange: () => void;
-};
+}
 
 /**
  * react-toggle-button in-lines all of its styling.

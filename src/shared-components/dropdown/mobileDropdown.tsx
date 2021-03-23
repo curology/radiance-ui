@@ -6,13 +6,13 @@ import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
 
 import { OptionType, OptionValue } from '.';
 
-type MobileDropdownProps<T> = {
+interface MobileDropdownProps<T> {
   borderRadius: string;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: T[];
   textAlign: 'left' | 'center';
   value?: OptionValue;
-};
+}
 
 /**
  * The mobile dropdown is built into the `<Dropdown />` component and cannot be used individually.
@@ -37,7 +37,7 @@ export const MobileDropdown = <T extends OptionType>({
           textAlign,
           theme,
         })}
-        value={value || ''}
+        value={value ?? ''}
         onChange={onMobileSelectChange}
       >
         {options.map((option, index) => {
@@ -51,7 +51,7 @@ export const MobileDropdown = <T extends OptionType>({
 
           return (
             <option
-              key={option.value || `undefined-${index}`}
+              key={option.value ?? `undefined-${index}`}
               value={option.value}
               disabled={isDisabled}
             >

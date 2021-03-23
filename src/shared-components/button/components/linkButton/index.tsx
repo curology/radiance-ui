@@ -8,7 +8,7 @@ import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
-type LinkProps = {
+export interface LinkProps {
   /**
    * Specifies the tag or element to be rendered
    */
@@ -29,7 +29,7 @@ type LinkProps = {
    */
   textColor?: ThemeColors;
   [key: string]: unknown;
-};
+}
 
 /**
  * `LinkButton` will render a 'button-like' link for directing/linking to the path specified. This component can work with React Router's `Link`/`NavLink` by passing in the router component as a prop ---> `<LinkButton to='/path' as={Link}> ....`.
@@ -50,7 +50,7 @@ export const LinkButton = ({
 }: LinkProps) => {
   const theme = useTheme();
   const ContainerTag = as;
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
 
   return (
     <ContainerTag
@@ -66,8 +66,10 @@ export const LinkButton = ({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <ButtonContents hasIcon={false}>
-        <ButtonText>{children}</ButtonText>
+      <ButtonContents isLoading={false} isFullWidth={false} hasIcon={false}>
+        <ButtonText isLoading={false} hasIcon={false}>
+          {children}
+        </ButtonText>
       </ButtonContents>
     </ContainerTag>
   );

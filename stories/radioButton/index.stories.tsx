@@ -18,7 +18,9 @@ import { AcneGlyph } from '../../src/icons';
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
 
-  const toggleActive = (bool: boolean) => () => setIsActive(bool);
+  const toggleActive = (bool: boolean) => () => {
+    setIsActive(bool);
+  };
 
   return (
     <React.Fragment>
@@ -43,7 +45,9 @@ export const Primary = () => {
 export const Secondary = () => {
   const [isActive, setIsActive] = React.useState(true);
 
-  const toggleActive = (bool: boolean) => () => setIsActive(bool);
+  const toggleActive = (bool: boolean) => () => {
+    setIsActive(bool);
+  };
 
   return (
     <React.Fragment>
@@ -89,7 +93,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const RADIO_BUTTON_STORIES: Meta = {
   title: 'Components/RadioButton',
   component: RadioButton,
   parameters: {
@@ -110,4 +114,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default RADIO_BUTTON_STORIES;

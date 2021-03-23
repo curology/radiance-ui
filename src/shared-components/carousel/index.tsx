@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 
 import Arrow from './arrow';
 import { OuterContainer, InnerContainer, Card } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const FIRST_INDEX = 0;
 const BASE_SLIDER_CONFIG = {
@@ -15,7 +16,7 @@ const BASE_SLIDER_CONFIG = {
 
 export type CarouselType = 'primary' | 'secondary';
 
-type CarouselProps = {
+export interface CarouselProps {
   /**
    * Auto-advance the carousel cards
    */
@@ -44,7 +45,7 @@ type CarouselProps = {
    */
   infinite?: boolean;
   numCardsVisible: 1 | 2 | 3;
-};
+}
 
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
@@ -116,7 +117,7 @@ export const Carousel = ({
   };
 
   const onUserInteraction = () => {
-    if (timeoutIdRef.current) {
+    if (isDefined(timeoutIdRef.current)) {
       clearTimeout(timeoutIdRef.current);
     }
     hasUserInteractedRef.current = true;

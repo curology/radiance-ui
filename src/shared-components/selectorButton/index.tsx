@@ -11,12 +11,13 @@ import {
   TextContainer,
   SelectorIcon,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 export type SelectorType = 'radio' | 'checkbox';
 export type SizeType = 'large' | 'small';
 export type StyleType = 'primary' | 'secondary';
 
-type SelectorButtonProps = {
+export interface SelectorButtonProps {
   checked: boolean;
   children?: React.ReactNode;
   disabled?: boolean;
@@ -28,7 +29,7 @@ type SelectorButtonProps = {
   size?: SizeType;
   type?: StyleType;
   [key: string]: unknown;
-};
+}
 
 export const SelectorButton = ({
   checked,
@@ -83,7 +84,7 @@ export const SelectorButton = ({
         />
       </SelectorContainer>
 
-      {children && <TextContainer>{children}</TextContainer>}
+      {isDefined(children) && <TextContainer>{children}</TextContainer>}
     </OuterContainer>
   );
 };

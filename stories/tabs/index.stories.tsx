@@ -29,7 +29,7 @@ export const Usage = () => {
   );
 };
 
-export default {
+const TABS_STORIES: Meta = {
   title: 'Components/Tabs',
   component: Tabs,
   parameters: {
@@ -47,4 +47,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TABS_STORIES;

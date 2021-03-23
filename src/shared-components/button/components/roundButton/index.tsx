@@ -17,8 +17,9 @@ import {
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { isDefined } from '../../../../utils/isDefined';
 
-type RoundButtonProps = {
+export interface RoundButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
@@ -44,7 +45,7 @@ type RoundButtonProps = {
    */
   textColor?: ThemeColors;
   [key: string]: unknown;
-};
+}
 
 /**
  * `<RoundButton />` behaves mostly the same as `<Button />` except that it requires an `icon` prop since that is the main content placed with in the round button. Any children of the component will be rendered immediately below the round button.
@@ -56,7 +57,7 @@ type RoundButtonProps = {
 export const RoundButton = ({
   buttonColor,
   buttonType = 'primary',
-  children = '',
+  children,
   disabled = false,
   icon,
   isLoading = false,
@@ -66,7 +67,7 @@ export const RoundButton = ({
   ...rest
 }: RoundButtonProps) => {
   const theme = useTheme();
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
@@ -78,6 +79,7 @@ export const RoundButton = ({
         buttonColor={buttonColorWithTheme}
         isLoading={loadingVal}
         type="button"
+        isFullWidth={false}
         textColor={textColor}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
@@ -92,7 +94,7 @@ export const RoundButton = ({
           textColor={textColor}
         />
       </RoundButtonBase>
-      {children && (
+      {isDefined(children) && (
         <p css={roundButtonTextStyles(buttonColorWithTheme, theme, textColor)}>
           {children}
         </p>

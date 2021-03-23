@@ -27,13 +27,16 @@ export const Usage = () => (
   </React.Fragment>
 );
 
+Usage.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
 const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
-export default {
+const TYPOGRAPHY_STORIES: Meta = {
   title: 'Components/Typography',
   parameters: {
     docs: {
-      chromatic: { viewports: [BREAKPOINTS.xs] },
       page: () => (
         <React.Fragment>
           <Title />
@@ -53,4 +56,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TYPOGRAPHY_STORIES;

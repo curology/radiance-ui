@@ -21,8 +21,12 @@ export const Usage = () => {
   const [checked, setChecked] = React.useState(false);
   const [secondChecked, setSecondChecked] = React.useState(true);
 
-  const onChange = () => setChecked(!checked);
-  const secondOnChange = () => setSecondChecked(!secondChecked);
+  const onChange = () => {
+    setChecked(!checked);
+  };
+  const secondOnChange = () => {
+    setSecondChecked(!secondChecked);
+  };
 
   return (
     <React.Fragment>
@@ -44,7 +48,7 @@ export const Usage = () => {
   );
 };
 
-export default {
+const TOGGLE_STORIES: Meta = {
   title: 'Components/Toggle',
   component: Toggle,
   parameters: {
@@ -65,4 +69,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TOGGLE_STORIES;

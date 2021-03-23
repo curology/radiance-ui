@@ -1,8 +1,10 @@
 import React from 'react';
 import { css } from '@emotion/core';
-import useResetFocus from 'src/utils/accessibility/useResetFocus';
 import { useTheme } from 'emotion-theming';
 
+import useResetFocus from '../../utils/accessibility/useResetFocus';
+import { isDefined } from '../../utils/isDefined';
+import { keyboardKeys } from '../../constants/keyboardKeys';
 import { OffClickWrapper } from '../offClickWrapper';
 import { ChevronIcon } from '../../icons';
 import {
@@ -16,7 +18,7 @@ import {
 
 import { OptionType, OptionValue } from './index';
 
-type DesktopDropdownProps<T> = {
+interface DesktopDropdownProps<T> {
   borderRadius: string;
   closeDropdown: () => void;
   currentOption?: T;
@@ -29,7 +31,7 @@ type DesktopDropdownProps<T> = {
   textAlign: 'left' | 'center';
   toggleDropdown: () => void;
   value?: OptionValue;
-};
+}
 
 export const DesktopDropdown = <T extends OptionType>({
   borderRadius,
@@ -48,14 +50,14 @@ export const DesktopDropdown = <T extends OptionType>({
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
     // This key handler allows users to open the dropdown options via the keyboard
-    if (event.key === 'Enter') {
+    if (event.key === keyboardKeys.enter) {
       toggleDropdown();
     }
   };
 
   const handleOptionKeydown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     // This allows users to select an option via the enter key
-    if (event.key === 'Enter') {
+    if (event.key === keyboardKeys.enter) {
       onDesktopSelectChange(event);
       resetFocus();
     }
@@ -85,7 +87,7 @@ export const DesktopDropdown = <T extends OptionType>({
               theme,
             })}
           >
-            {currentOption && currentOption.label}
+            {currentOption?.label}
           </div>
           <IconContainer>
             <ChevronIcon width={10} height={10} rotate={isOpen ? 90 : 0} />
@@ -97,13 +99,20 @@ export const DesktopDropdown = <T extends OptionType>({
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
-          aria-activedescendant={value ? `${value}` : undefined}
+          aria-activedescendant={isDefined(value) ? `${value}` : undefined}
           aria-hidden={!isOpen}
         >
           {options.map((option, index) => {
-            const { value: optionValue, disabled, label, ...rest } = option;
+            const {
+              value: optionValue,
+              disabled = false,
+              label,
+              ...rest
+            } = option;
 
-            const id = optionValue ? `${optionValue}` : `undefined-${index}`;
+            const id = isDefined(optionValue)
+              ? `${optionValue}`
+              : `undefined-${index}`;
 
             return (
               <DropdownOption
@@ -111,7 +120,7 @@ export const DesktopDropdown = <T extends OptionType>({
                 value={optionValue}
                 id={id}
                 selected={value === optionValue}
-                disabled={!!disabled}
+                disabled={disabled}
                 onClick={onDesktopSelectChange}
                 onKeyDown={handleOptionKeydown}
                 role="menuitemradio"

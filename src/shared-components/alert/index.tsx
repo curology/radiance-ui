@@ -12,6 +12,7 @@ import {
   ContentContainer,
   CtaContent,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const ANIMATION_DELAY = 500;
 
@@ -24,16 +25,16 @@ const alertIconMapping = {
 
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
-type AlertProps = {
+export interface AlertProps {
   avatarSrc?: string;
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
-  onExit?: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
+  onExit?: ((rest: Omit<AlertProps, 'onExit'>) => void) | (() => void);
   truncateText?: boolean;
   type?: AlertType;
   [key: string]: unknown;
-};
+}
 
 /**
  * Alerts should be used to show notifications or messages from (providers, support, or system).
@@ -87,19 +88,42 @@ export const Alert = (alertProps: AlertProps) => {
   };
 
   useEffect(() => {
-    // Truncate text logic
     if (truncateText) {
       const contentElement = contentText.current;
       if (contentElement) {
-        const wordsArray = contentElement.innerHTML.split(' ');
-        while (contentElement.scrollHeight > contentElement.offsetHeight) {
+        const initialWords = contentElement.innerHTML;
+        const wordsArray = initialWords.split(' ');
+        /**
+         * TODO: Find better contentValues values for the logic.
+         * Secondary Theme truncated content gets stuck in the while loop because
+         * there are different dimensions at play.
+         */
+        const ARBITRARY_SECONDARY_OFFSET = 5;
+        while (
+          contentElement.scrollHeight >
+            contentElement.offsetHeight + ARBITRARY_SECONDARY_OFFSET &&
+          wordsArray.length !== 0
+        ) {
           wordsArray.pop();
           contentElement.innerHTML = `${wordsArray.join(' ')}...`;
         }
+
+        /**
+         * If while loop pops all words due to element dimensions,
+         * prefer resetting without truncating to potentially
+         * broken functionality
+         */
+        if (wordsArray.length === 0) {
+          contentElement.innerHTML = initialWords;
+        }
       }
     }
+  });
 
-    // Duration logic
+  /**
+   * Duration logic effect
+   */
+  useEffect(() => {
     if (duration === 'sticky' || !!ctaContent) {
       return;
     }
@@ -110,7 +134,7 @@ export const Alert = (alertProps: AlertProps) => {
     );
 
     return () => {
-      if (timer) {
+      if (isDefined(timer)) {
         window.clearTimeout(timer);
       }
     };

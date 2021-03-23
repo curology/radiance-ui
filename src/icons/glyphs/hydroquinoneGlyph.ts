@@ -1,5 +1,5 @@
-import { HydroquinoneGlyphSecondary } from './svgs';
+import { HydroquinoneGlyph, HydroquinoneGlyphSecondary } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(null, HydroquinoneGlyphSecondary, props);
+  useIcon(HydroquinoneGlyph, HydroquinoneGlyphSecondary, props);

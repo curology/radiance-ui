@@ -4,7 +4,7 @@ import { useTheme } from 'emotion-theming';
 
 import { ThemeType } from '../../constants';
 import { ChevronIcon } from '../../icons';
-import Thumbnails from './thumbnails';
+import { Thumbnails } from './thumbnails';
 import {
   AccordionBox,
   ArrowWrapper,
@@ -14,6 +14,7 @@ import {
   TitleWrapper,
   Truncate,
 } from './style';
+import { keyboardKeys } from '../../constants/keyboardKeys';
 
 export type BorderRadiusValues =
   | valueof<ThemeType['BORDER_RADIUS']>
@@ -21,7 +22,7 @@ export type BorderRadiusValues =
   | '0.5rem'
   | '2rem';
 
-type AccordionProps = {
+export interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
   borderRadius?: BorderRadiusValues;
   /** node(s) that will render only when expanded */
@@ -40,7 +41,7 @@ type AccordionProps = {
   rightAlignArrow?: boolean;
   /** node that will render whether collapsed or expanded */
   title: React.ReactNode;
-};
+}
 
 /**
  * A list of items that allows each item's content to be expanded and collapsed by clicking its title bar.
@@ -74,7 +75,7 @@ export const Accordion = ({
   });
 
   const handleKeyDown = (event: React.KeyboardEvent): void => {
-    if (!disabled && event.key === 'Enter') {
+    if (!disabled && event.key === keyboardKeys.enter) {
       onClick(event);
     }
   };

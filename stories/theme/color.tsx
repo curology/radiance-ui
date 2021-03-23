@@ -27,10 +27,10 @@ const ColorHex = styled.div`
   font-size: 12px;
 `;
 
-type ColorProps = {
-  colorName: string;
+interface ColorProps {
   colorHex: string;
-};
+  colorName: string;
+}
 
 const Color = ({ colorName, colorHex }: ColorProps) => (
   <ColorContainer>

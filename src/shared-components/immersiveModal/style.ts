@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import Typography from '../typography';
+import { Typography } from '../typography';
 import {
   MEDIA_QUERIES,
   SPACER,
@@ -18,7 +18,7 @@ export const Overlay = styled.div`
   left: 0;
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
-  background-color: rgba(58, 55, 75, 0.7);
+  background-color: ${({ theme }) => theme.COLORS.overlay};
   transition: opacity ${ANIMATION.defaultTiming}
     cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -96,13 +96,11 @@ export const ModalTitle = styled(Typography.Heading)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const ModalBody = styled.div`
-  p {
-    margin-bottom: ${SPACER.large};
+export const Paragraph = styled.p`
+  margin-bottom: ${SPACER.large};
 
-    &:last-of-type {
-      margin-bottom: ${SPACER.xlarge};
-    }
+  &:last-of-type {
+    margin-bottom: ${SPACER.xlarge};
   }
 `;
 
@@ -207,9 +205,9 @@ export const ModalContainer = styled.div`
   }
 `;
 
-type HasHeaderImageProps = {
+export interface HasHeaderImageProps {
   hasHeaderImage: boolean;
-};
+}
 
 // 32px comes from top overlay
 // 272px comes from 32px top overlay + 240px image

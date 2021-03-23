@@ -16,27 +16,27 @@ describe('<Toggle />', () => {
   });
 
   describe('when label is undefined', () => {
-    test('does not render a label component', () => {
+    it('does not render a label component', () => {
       const { container } = render(
         <Toggle checked={false} onChange={() => undefined} />,
       );
       // TODO: Make <Label /> an actual label element and use @testing-library/react selector
-      expect(container.querySelectorAll('span').length).toBe(0);
+      expect(container.querySelectorAll('span')).toHaveLength(0);
     });
   });
 
   describe('when label is a string', () => {
-    test('renders a text component', () => {
+    it('renders a text component', () => {
       const { getByText } = render(
         <Toggle checked={false} label={labelText} onChange={() => undefined} />,
       );
 
-      getByText(labelText);
+      expect(getByText(labelText)).toBeTruthy();
     });
   });
 
   describe('when checkbox is clicked', () => {
-    test('fires onChange function with correct argument when function exists', () => {
+    it('fires onChange function with correct argument when function exists', () => {
       const spy = jest.fn();
       const { getByRole } = render(<Toggle checked={false} onChange={spy} />);
 

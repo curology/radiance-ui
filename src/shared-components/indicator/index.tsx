@@ -5,10 +5,10 @@ import { useTheme } from 'emotion-theming';
 
 import { IndicatorContainer } from './style';
 
-type IndicatorProps = {
-  text: string | number;
+export interface IndicatorProps {
   backgroundColor?: ThemeColors;
-};
+  text: string | number;
+}
 
 /**
  * Indicators are used in navigation to help with wayfinding for messages and notifications.
@@ -17,7 +17,7 @@ type IndicatorProps = {
 export const Indicator = ({ text, backgroundColor }: IndicatorProps) => {
   const theme = useTheme();
 
-  const bgColorWithTheme = backgroundColor || theme.COLORS.error;
+  const bgColorWithTheme = backgroundColor ?? theme.COLORS.error;
 
   return (
     <IndicatorContainer backgroundColor={bgColorWithTheme}>

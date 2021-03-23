@@ -7,7 +7,7 @@ import { OuterContainer, InnerBar } from './style';
 
 export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 
-type ProgressBarProps = {
+export interface ProgressBarProps {
   backgroundColor?: ThemeColors;
   barColor?: ThemeColors;
   /**
@@ -20,7 +20,7 @@ type ProgressBarProps = {
   loadingTime?: string;
   status: ProgressBarStatusType;
   [key: string]: unknown;
-};
+}
 
 /**
  * The component has `position: absolute` by default. You must provide a container with `position: relative` to contain the progress bar. To further refine the position, you may use custom styles.
@@ -37,8 +37,8 @@ export const ProgressBar = ({
 }: ProgressBarProps) => {
   const theme = useTheme();
 
-  const backgroundColorWithTheme = backgroundColor || theme.COLORS.background;
-  const barColorWithTheme = barColor || theme.COLORS.primary;
+  const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.background;
+  const barColorWithTheme = barColor ?? theme.COLORS.primary;
 
   return (
     <OuterContainer

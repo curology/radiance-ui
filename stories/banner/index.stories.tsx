@@ -23,7 +23,9 @@ export const Default = () => (
 
 export const Clickable = () => (
   <Banner
-    onClick={() => alert('clicked!')}
+    onClick={() => {
+      alert('clicked!');
+    }}
     content={
       <React.Fragment>
         <strong>Clickable banner</strong> This is a banner with an onClick prop
@@ -65,7 +67,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const BANNER_STORIES: Meta = {
   title: 'Components/Banner',
   component: Banner,
   parameters: {
@@ -86,4 +88,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default BANNER_STORIES;

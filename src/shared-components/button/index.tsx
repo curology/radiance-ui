@@ -7,6 +7,7 @@ import Container from './shared-components/container';
 import { ButtonBase, ButtonText, ButtonContents } from './style';
 import withDeprecationWarning from '../../utils/withDeprecationWarning';
 import { LinkButton } from './components/linkButton';
+import { AnchorLinkButton } from './components/anchorLinkButton';
 import RoundButton from './components/roundButton';
 import { TextButton } from './components/textButton';
 import {
@@ -14,6 +15,7 @@ import {
   isLoadingPropFunction,
 } from './deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
+import { isDefined } from '../../utils/isDefined';
 
 export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 /**
@@ -21,7 +23,7 @@ export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
  */
 export type ButtonTypeWithAction = ButtonType | 'action';
 
-type ButtonProps = {
+export interface ButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
@@ -45,15 +47,13 @@ type ButtonProps = {
    */
   isLoading?: boolean;
   loading?: boolean;
-  onClick?: (
-    event: React.SyntheticEvent<HTMLButtonElement>,
-  ) => void | Promise<void> | boolean;
+  onClick?: (event: React.SyntheticEvent<HTMLButtonElement>) => void;
   /**
    * Color that will override existing text, icon, and loading colors for the button (except when disabled is true)
    */
   textColor?: ThemeColors;
   [key: string]: unknown;
-};
+}
 
 /**
  * Buttons can be used as a main call-to-action (CTA). Try to avoid using buttons of the same `buttonType` next to each other since we want to guide the user towards one option.
@@ -76,8 +76,9 @@ export const Button = ({
   ...rest
 }: ButtonProps) => {
   const theme = useTheme();
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
+  const hasIcon = isDefined(icon);
 
   return (
     <ButtonBase
@@ -87,7 +88,11 @@ export const Button = ({
       isFullWidth={isFullWidth}
       isLoading={loadingVal}
       onClick={
-        !disabled && !loadingVal ? onClick : (event) => event.preventDefault()
+        !disabled && !loadingVal
+          ? onClick
+          : (event) => {
+              event.preventDefault();
+            }
       }
       textColor={textColor}
       type="button"
@@ -95,12 +100,12 @@ export const Button = ({
       {...rest}
     >
       <ButtonContents
-        hasIcon={!!icon}
+        hasIcon={hasIcon}
         isFullWidth={isFullWidth}
         isLoading={loadingVal}
       >
         {icon}
-        <ButtonText hasIcon={!!icon} isLoading={loadingVal}>
+        <ButtonText hasIcon={hasIcon} isLoading={loadingVal}>
           {children}
         </ButtonText>
       </ButtonContents>
@@ -136,5 +141,5 @@ Button.propTypes = {
   textColor: PropTypes.string,
 };
 
-export { LinkButton, RoundButton, TextButton };
+export { AnchorLinkButton, LinkButton, RoundButton, TextButton };
 export default withDeprecationWarning(Button, deprecatedProperties);

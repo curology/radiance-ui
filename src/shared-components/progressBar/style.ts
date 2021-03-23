@@ -52,8 +52,8 @@ const getStatusStyles = (status: ProgressBarStatusType, theme: ThemeType) => {
 };
 
 export const InnerBar = styled.div<{
-  barHeight: number;
   barColor: string;
+  barHeight: number;
   loadingTime: string;
   status: ProgressBarStatusType;
 }>`

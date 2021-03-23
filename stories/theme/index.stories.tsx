@@ -27,10 +27,16 @@ const theme = useTheme();
 
 const globalSource = '<Global styles={(theme) => {}} />';
 
-export default {
+const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
+
+interface ThemeStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const THEME_STORIES: ThemeStories = {
   title: 'Constants/Theme',
   parameters: {
-    chromatic: { disable: true },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -89,4 +95,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default THEME_STORIES;

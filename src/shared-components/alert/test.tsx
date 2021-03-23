@@ -16,25 +16,25 @@ const CustomContentComponent = () => (
 );
 
 describe('Alert UI snapshots', () => {
-  test('renders a default alert', () => {
+  it('renders a default alert', () => {
     const { container } = render(<Alert content={alertText} />);
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders success alert', () => {
+  it('renders success alert', () => {
     const { container } = render(<Alert content={alertText} type="success" />);
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders error alert', () => {
+  it('renders error alert', () => {
     const { container } = render(<Alert content={alertText} type="error" />);
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders a sticky alert', () => {
+  it('renders a sticky alert', () => {
     const { container } = render(
       <Alert content={alertText} duration="sticky" />,
     );
@@ -42,7 +42,7 @@ describe('Alert UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders custom component passed in content prop', () => {
+  it('renders custom component passed in content prop', () => {
     const { container } = render(
       <Alert content={<CustomContentComponent />} />,
     );
@@ -50,7 +50,7 @@ describe('Alert UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('Alert onExit is triggered on click', () => {
+  it('alert onExit is triggered on click', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
     const { container } = render(
@@ -71,7 +71,7 @@ describe('Alert UI snapshots', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  test('Alert with custom CTA', () => {
+  it('alert with custom CTA', () => {
     jest.useFakeTimers();
     const spy = jest.fn();
     const { container } = render(

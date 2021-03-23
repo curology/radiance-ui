@@ -5,7 +5,7 @@ import { useTheme } from 'emotion-theming';
 import { LoadingSpinnerContainer, Overlay, Dot } from './style';
 import { ThemeColors } from '../../constants';
 
-type LoadingSpinnerProps = {
+export interface LoadingSpinnerProps {
   /**
    * Background color of loading container
    */
@@ -26,7 +26,7 @@ type LoadingSpinnerProps = {
    * Distance dots will move horizontally
    */
   translateX?: string;
-};
+}
 
 /**
  * LoadingSpinner will cover the entirety of the container that holds it. The container should have `position: relative;` as part of its styling to prevent the LoadingSpinner from spilling outside the container.
@@ -40,8 +40,8 @@ export const LoadingSpinner = ({
 }: LoadingSpinnerProps) => {
   const theme = useTheme();
 
-  const bgColorWithTheme = bgColor || theme.COLORS.background;
-  const colorWithTheme = color || theme.COLORS.primary;
+  const bgColorWithTheme = bgColor ?? theme.COLORS.background;
+  const colorWithTheme = color ?? theme.COLORS.primary;
 
   return (
     <LoadingSpinnerContainer bgColor={bgColorWithTheme}>
