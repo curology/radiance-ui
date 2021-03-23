@@ -18,7 +18,7 @@ export const Overlay = styled.div`
   left: 0;
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
-  background-color: rgba(58, 55, 75, 0.7);
+  background-color: ${({ theme }) => theme.COLORS.overlay};
   transition: opacity ${ANIMATION.defaultTiming}
     cubic-bezier(0.075, 0.82, 0.165, 1);
 
