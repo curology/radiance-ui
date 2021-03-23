@@ -33,9 +33,9 @@ export const Overlay = styled.div`
 
 export const Dot = styled.span<{
   dotColor: ThemeColors;
-  translateX: string;
-  duration: number;
   dotSize: string;
+  duration: number;
+  translateX: string;
 }>`
   display: block;
   height: ${(props) => props.dotSize};

@@ -23,7 +23,9 @@ export const Default = () => (
 
 export const Clickable = () => (
   <Banner
-    onClick={() => alert('clicked!')}
+    onClick={() => {
+      alert('clicked!');
+    }}
     content={
       <React.Fragment>
         <strong>Clickable banner</strong> This is a banner with an onClick prop

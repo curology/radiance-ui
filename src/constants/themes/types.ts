@@ -29,10 +29,10 @@ export const COLORS_PROP_TYPES = PropTypes.oneOf([
 ]);
 
 export interface ThemeType {
-  __type: 'primary' | 'secondary';
   BORDER_RADIUS: BorderRadius;
   BOX_SHADOWS: BoxShadows;
   COLORS: Colors;
   FONTS: Fonts;
   TYPOGRAPHY: Typography;
+  __type: 'primary' | 'secondary';
 }

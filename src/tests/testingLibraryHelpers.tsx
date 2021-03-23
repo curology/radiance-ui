@@ -35,7 +35,7 @@ const customRender = (
   const {
     theme = primaryTheme,
     container,
-    withPortalContainer,
+    withPortalContainer = false,
     ...rest
   } = options;
 

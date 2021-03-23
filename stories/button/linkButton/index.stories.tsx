@@ -26,12 +26,12 @@ export const Default = () => (
 
 export const ReactRouterLink = () => {
   const MockLink = ({
-    to,
     children,
+    to,
     ...rest
   }: {
-    to: string;
     children: React.ReactNode;
+    to: string;
   }) => (
     // eslint-disable-next-line
     <a href={to} {...rest}>

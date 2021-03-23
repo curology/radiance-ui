@@ -88,7 +88,7 @@ const CarouselContainer = styled.div<{ bgColor?: string }>`
   width: 375px;
   align-items: center;
   background-color: ${({ bgColor, theme }) =>
-    bgColor || theme.COLORS.background};
+    bgColor ?? theme.COLORS.background};
 `;
 
 export const SecondaryStyle = () => {

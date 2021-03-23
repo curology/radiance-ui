@@ -10,7 +10,7 @@ export const Overlay = styled.div`
   bottom: 0;
   left: 0;
   z-index: ${Z_SCALE.modal};
-  background-color: rgba(58, 55, 75, 0.7);
+  background-color: ${({ theme }) => theme.COLORS.overlay};
   transition: opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &.entering,
@@ -28,6 +28,14 @@ export const Overlay = styled.div`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+  }
+`;
+
+export const Paragraph = styled.p`
+  margin-bottom: ${SPACER.large};
+
+  &:last-of-type {
+    margin-bottom: ${SPACER.xlarge};
   }
 `;
 
@@ -58,14 +66,6 @@ export const ModalContainer = styled.div<{
   &.exiting,
   &.exited {
     transform: translateY(100%);
-  }
-
-  p {
-    margin-bottom: ${SPACER.large};
-
-    &:last-of-type {
-      margin-bottom: ${SPACER.xlarge};
-    }
   }
 
   ${MEDIA_QUERIES.smUp} {

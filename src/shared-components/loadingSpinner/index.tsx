@@ -40,8 +40,8 @@ export const LoadingSpinner = ({
 }: LoadingSpinnerProps) => {
   const theme = useTheme();
 
-  const bgColorWithTheme = bgColor || theme.COLORS.background;
-  const colorWithTheme = color || theme.COLORS.primary;
+  const bgColorWithTheme = bgColor ?? theme.COLORS.background;
+  const colorWithTheme = color ?? theme.COLORS.primary;
 
   return (
     <LoadingSpinnerContainer bgColor={bgColorWithTheme}>

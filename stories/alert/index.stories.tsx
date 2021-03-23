@@ -63,7 +63,9 @@ export const WithCallToAction = () => (
     }
     type="error"
     ctaContent="Update Payment Method"
-    onExit={() => alert('cta alert clicked')}
+    onExit={() => {
+      alert('cta alert clicked');
+    }}
   />
 );
 

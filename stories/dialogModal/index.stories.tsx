@@ -22,21 +22,34 @@ export const Default = () => {
 
   return (
     <React.Fragment>
-      <Button onClick={() => setOpenModal(true)}>open dialog modal</Button>
+      <Button
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      >
+        open dialog modal
+      </Button>
 
       {openModal && (
         <DialogModal title="Heads up!">
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
-            <Button isFullWidth onClick={() => setOpenModal(false)}>
+            <Button
+              isFullWidth
+              onClick={() => {
+                setOpenModal(false);
+              }}
+            >
               Yes, remove
             </Button>
             <Button
               isFullWidth
-              onClick={() => setOpenModal(false)}
+              onClick={() => {
+                setOpenModal(false);
+              }}
               buttonType="tertiary"
             >
               never mind
@@ -58,21 +71,34 @@ export const DefaultOpened = () => {
 
   return (
     <React.Fragment>
-      <Button onClick={() => setOpenModal(true)}>open dialog modal</Button>
+      <Button
+        onClick={() => {
+          setOpenModal(true);
+        }}
+      >
+        open dialog modal
+      </Button>
 
       {openModal && (
         <DialogModal title="Heads up!">
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
-            <Button isFullWidth onClick={() => setOpenModal(false)}>
+            <Button
+              isFullWidth
+              onClick={() => {
+                setOpenModal(false);
+              }}
+            >
               Yes, remove
             </Button>
             <Button
               isFullWidth
-              onClick={() => setOpenModal(false)}
+              onClick={() => {
+                setOpenModal(false);
+              }}
               buttonType="tertiary"
             >
               never mind
@@ -85,30 +111,42 @@ export const DefaultOpened = () => {
 };
 
 export const WithColor = () => {
-  const [withCloseIcon, setWithCloseIcon] = useState(false);
+  const [withColor, setWithColor] = useState(false);
   const theme = useTheme();
 
   return (
     <React.Fragment>
-      <Button onClick={() => setWithCloseIcon(true)}>open dialog modal</Button>
+      <Button
+        onClick={() => {
+          setWithColor(true);
+        }}
+      >
+        open dialog modal
+      </Button>
 
-      {withCloseIcon && (
+      {withColor && (
         <DialogModal
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
-          onCloseIconClick={() => setWithCloseIcon(false)}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
-            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+            <Button
+              isFullWidth
+              onClick={() => {
+                setWithColor(false);
+              }}
+            >
               Yes, remove
             </Button>
             <Button
               isFullWidth
-              onClick={() => setWithCloseIcon(false)}
+              onClick={() => {
+                setWithColor(false);
+              }}
               buttonType="tertiary"
             >
               never mind
@@ -126,30 +164,42 @@ WithColor.parameters = {
 };
 
 export const WithColorOpened = () => {
-  const [withCloseIcon, setWithCloseIcon] = useState(true);
+  const [withColor, setWithColor] = useState(true);
   const theme = useTheme();
 
   return (
     <React.Fragment>
-      <Button onClick={() => setWithCloseIcon(true)}>open dialog modal</Button>
+      <Button
+        onClick={() => {
+          setWithColor(true);
+        }}
+      >
+        open dialog modal
+      </Button>
 
-      {withCloseIcon && (
+      {withColor && (
         <DialogModal
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
-          onCloseIconClick={() => setWithCloseIcon(false)}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
-            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+            <Button
+              isFullWidth
+              onClick={() => {
+                setWithColor(false);
+              }}
+            >
               Yes, remove
             </Button>
             <Button
               isFullWidth
-              onClick={() => setWithCloseIcon(false)}
+              onClick={() => {
+                setWithColor(false);
+              }}
               buttonType="tertiary"
             >
               never mind
@@ -172,23 +222,38 @@ export const WithCloseIcon = () => {
 
   return (
     <React.Fragment>
-      <Button onClick={() => setWithCloseIcon(true)}>with close icon</Button>
+      <Button
+        onClick={() => {
+          setWithCloseIcon(true);
+        }}
+      >
+        with close icon
+      </Button>
       {withCloseIcon && (
         <DialogModal
           title="Heads up!"
-          onCloseIconClick={() => setWithCloseIcon(false)}
+          onCloseIconClick={() => {
+            setWithCloseIcon(false);
+          }}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
-            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+            <Button
+              isFullWidth
+              onClick={() => {
+                setWithCloseIcon(false);
+              }}
+            >
               Yes, remove
             </Button>
             <Button
               isFullWidth
-              onClick={() => setWithCloseIcon(false)}
+              onClick={() => {
+                setWithCloseIcon(false);
+              }}
               buttonType="tertiary"
             >
               never mind
@@ -210,23 +275,38 @@ export const WithCloseIconOpened = () => {
 
   return (
     <React.Fragment>
-      <Button onClick={() => setWithCloseIcon(true)}>with close icon</Button>
+      <Button
+        onClick={() => {
+          setWithCloseIcon(true);
+        }}
+      >
+        with close icon
+      </Button>
       {withCloseIcon && (
         <DialogModal
           title="Heads up!"
-          onCloseIconClick={() => setWithCloseIcon(false)}
+          onCloseIconClick={() => {
+            setWithCloseIcon(false);
+          }}
         >
-          <p>
+          <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
-          </p>
+          </DialogModal.Paragraph>
           <Button.Container>
-            <Button isFullWidth onClick={() => setWithCloseIcon(false)}>
+            <Button
+              isFullWidth
+              onClick={() => {
+                setWithCloseIcon(false);
+              }}
+            >
               Yes, remove
             </Button>
             <Button
               isFullWidth
-              onClick={() => setWithCloseIcon(false)}
+              onClick={() => {
+                setWithCloseIcon(false);
+              }}
               buttonType="tertiary"
             >
               never mind

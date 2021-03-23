@@ -18,10 +18,11 @@ import {
   HeaderImageContainer,
   ContentWithFooterContainer,
   ModalTitle,
-  ModalBody,
   ModalFooter,
   MainModalContentContainer,
+  Paragraph,
 } from './style';
+import { isDefined } from '../../utils/isDefined';
 
 export interface ImmersiveModalProps {
   /**
@@ -50,14 +51,13 @@ export interface ImmersiveModalProps {
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
 const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
-const getHtmlNode = () => document.querySelector('html') || document.body;
+const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
-  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
-  document.body;
+  document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
 const getModalMobileScrollingElement = () =>
-  document.getElementById(MODAL_MOBILE_SCROLLING_ID) as HTMLElement;
+  document.getElementById(MODAL_MOBILE_SCROLLING_ID);
 const getModalDesktopScrollingElement = () =>
-  document.getElementById(MODAL_DESKTOP_SCROLLING_ID) as HTMLElement;
+  document.getElementById(MODAL_DESKTOP_SCROLLING_ID);
 
 /**
  * It is used to provide a layer on top of a page when we need to present more content and actions to patients.
@@ -69,6 +69,8 @@ const getModalDesktopScrollingElement = () =>
  * Immersive modals always include the close button.
  *
  * Modals can contain a header image that is 240px tall (264px on desktop). Images should not contain rounded corners.
+ *
+ * `ImmersiveModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
 export const ImmersiveModal = ({
   children,
@@ -155,6 +157,8 @@ export const ImmersiveModal = ({
     };
   }, []);
 
+  const hasHeaderImage = isDefined(headerImage);
+
   return ReactDOM.createPortal(
     <Transition
       timeout={{
@@ -188,7 +192,7 @@ export const ImmersiveModal = ({
                 <FocusScope contain restoreFocus>
                   <MainModalContentContainer
                     id={MODAL_DESKTOP_SCROLLING_ID}
-                    hasHeaderImage={!!headerImage}
+                    hasHeaderImage={hasHeaderImage}
                   >
                     <CrossIconContainer
                       onClick={handleCloseIntent}
@@ -209,15 +213,15 @@ export const ImmersiveModal = ({
                       </CrossIconContainer>
                     </DesktopHeaderBar>
 
-                    {headerImage && (
+                    {hasHeaderImage && (
                       <HeaderImageContainer>{headerImage}</HeaderImageContainer>
                     )}
-                    <ContentWithFooterContainer hasHeaderImage={!!headerImage}>
-                      <ModalBody>
-                        {!!title && <ModalTitle>{title}</ModalTitle>}
+                    <ContentWithFooterContainer hasHeaderImage={hasHeaderImage}>
+                      <div>
+                        {isDefined(title) && <ModalTitle>{title}</ModalTitle>}
                         {children}
-                      </ModalBody>
-                      {footerContent && (
+                      </div>
+                      {isDefined(footerContent) && (
                         <ModalFooter>{footerContent}</ModalFooter>
                       )}
                     </ContentWithFooterContainer>
@@ -232,6 +236,8 @@ export const ImmersiveModal = ({
     domNode.current,
   );
 };
+
+ImmersiveModal.Paragraph = Paragraph;
 
 ImmersiveModal.propTypes = {
   children: PropTypes.node.isRequired,

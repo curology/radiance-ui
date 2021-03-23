@@ -60,11 +60,11 @@ const disabledSelectorStyle = (theme: ThemeType) => `
 `;
 
 export const Selector = styled.div<{
+  disabled: boolean;
   selector: SelectorType;
+  selectorChecked: boolean;
   selectorSize: SizeType;
   type: StyleType;
-  selectorChecked: boolean;
-  disabled: boolean;
 }>`
   align-items: center;
   appearance: none;

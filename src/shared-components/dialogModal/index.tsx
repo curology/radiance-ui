@@ -12,6 +12,7 @@ import {
   ModalContainer,
   ModalTitle,
   CrossIconContainer,
+  Paragraph,
 } from './style';
 import { Colors, primaryTheme, secondaryTheme } from '../../constants';
 
@@ -34,10 +35,9 @@ export interface DialogModalProps {
   [key: string]: unknown;
 }
 
-const getHtmlNode = () => document.querySelector('html') || document.body;
+const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
-  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
-  document.body;
+  document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
 
 /**
  * Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.
@@ -45,6 +45,8 @@ const getDomNode = () =>
  * Dialog modals require a user to make a choice between options and are not closable on click/tap outside. They may contain a close button if a close function is provided.
  *
  * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
+ *
+ * `DialogModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
 export const DialogModal = ({
   backgroundColor,
@@ -54,7 +56,7 @@ export const DialogModal = ({
   ...rest
 }: DialogModalProps) => {
   const theme = useTheme();
-  const backgroundColorWithTheme = backgroundColor || theme.COLORS.white;
+  const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
 
   const domNode = useRef<HTMLElement>(getDomNode());
@@ -64,7 +66,9 @@ export const DialogModal = ({
     domNode.current = getDomNode();
     htmlNode.current = getHtmlNode();
     htmlNode.current.classList.add('no-scroll');
-    return () => htmlNode.current.classList.remove('no-scroll');
+    return () => {
+      htmlNode.current.classList.remove('no-scroll');
+    };
   }, []);
 
   const handleCloseIntent = () => {
@@ -121,6 +125,8 @@ export const DialogModal = ({
     domNode.current,
   );
 };
+
+DialogModal.Paragraph = Paragraph;
 
 DialogModal.propTypes = {
   backgroundColor: PropTypes.oneOf([

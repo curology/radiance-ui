@@ -77,9 +77,9 @@ type StyledContainer = StyledComponent<
 >;
 
 type CompositeContainer = StyledContainer & {
-  Section: typeof Section;
   Divider: typeof Divider;
   Image: typeof Image;
+  Section: typeof Section;
 };
 
 // Our reliance on setting dot.notation subcomponents directly on the
@@ -89,9 +89,9 @@ const Container = styled.div<{ type?: ContainerType }>`
   ${({ theme, type }) => containerStyles(theme, type)};
 ` as CompositeContainer;
 
-Container.Section = Section;
 Container.Divider = Divider;
 Container.Image = Image;
+Container.Section = Section;
 
 Container.propTypes = {
   type: PropTypes.oneOf(['message', 'clickable']),

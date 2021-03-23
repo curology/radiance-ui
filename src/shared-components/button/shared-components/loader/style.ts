@@ -5,6 +5,7 @@ import { keyframes } from '@emotion/react';
 import { ButtonTypeWithAction } from '../..';
 import { ThemeColors, ThemeType } from '../../../../constants';
 import { primaryButtonLoadingBackgroundColor } from '../../../../utils/themeStyles';
+import { isDefined } from '../../../../utils/isDefined';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }
@@ -72,7 +73,7 @@ const ButtonLoader = styled.div<{
     }};
 
     ${({ textColor, disabled }) =>
-      !!textColor &&
+      isDefined(textColor) &&
       !disabled &&
       `
       background-color: ${textColor};

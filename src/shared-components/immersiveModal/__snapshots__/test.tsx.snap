@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ImmersiveModal /> renders immersive modal correctly 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000000;
+  width: 100%;
+  background: #FFFFFF;
+  color: #332E54;
+  font-size: 0.875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid #EDEDF0;
+  pointer-events: none;
+  -webkit-transition: opacity 350ms ease-in;
+  transition: opacity 350ms ease-in;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .emotion-0 {
+    display: none;
+  }
+}
+
+.emotion-2 {
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 2000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .emotion-2 {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.emotion-2:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
+}
+
+.emotion-4 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: ;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  Immersive Modal Title
+  <button
+    class="emotion-2 emotion-3"
+  >
+    <svg
+      class="emotion-4"
+      fill="none"
+      height="16"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16.01.93l-.89-.88-7.11 7.1L.91.05.02.93l7.11 7.11-7.11 7.11.89.88 7.1-7.11 7.11 7.11.89-.88L8.9 8.04 16.01.93z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+</div>
+`;

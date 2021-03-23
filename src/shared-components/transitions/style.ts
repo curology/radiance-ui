@@ -42,8 +42,8 @@ const getAnimationStyle = (slide: boolean, speed: string) => {
 };
 
 export const FadeInContainer = styled.div<{
-  withSlide: boolean;
   animationSpeed: string;
+  withSlide: boolean;
 }>`
   ${({ withSlide, animationSpeed }) =>
     getAnimationStyle(withSlide, animationSpeed)};
