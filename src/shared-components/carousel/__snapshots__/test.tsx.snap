@@ -802,7 +802,6 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
               </div>
             </div>
           </button>
-          
         </div>
       </div>
       <div
@@ -898,7 +897,6 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
               </div>
             </div>
           </button>
-          
         </div>
       </div>
     </div>
@@ -1603,7 +1601,6 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
               </div>
             </div>
           </button>
-          
         </div>
       </div>
       <div
@@ -1700,7 +1697,6 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
               </div>
             </div>
           </button>
-          
         </div>
       </div>
       <ul
