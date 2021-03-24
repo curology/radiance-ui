@@ -1,21 +1,31 @@
 # CHANGELOG
 
+# v18.2.0
+
+- [Icons] Add Secondary Logo ([#879](https://github.com/curology/radiance-ui/pull/879))
+
 # v18.1.0
+
 - [Modals] Change overlay color in `DialogModal` and `ImmersiveModal` ([#846](https://github.com/curology/radiance-ui/pull/846))
 
 # v18.0.0
+
 - [Modals] **BREAKING CHANGE**: Remove custom styling to `DialogModal` and `ImmersiveModal` paragraph tags in modals body, added as subcomponent as an alternative ([#833](https://github.com/curology/radiance-ui/pull/833))
 
 # v17.2.3
+
 - [Icons] Add KojiAcidGlyph ([#818](https://github.com/curology/radiance-ui/pull/818))
 
 # v17.2.2
+
 - [Icons] Add DesonideGlyph, MetronidazoleGlyph and TranexamicAcidGlyph ([#815](https://github.com/curology/radiance-ui/pull/815))
 
 # v17.2.1
+
 - [Components] Add media query to DialogModal for smaller devices ([#779](https://github.com/curology/radiance-ui/pull/779))
 
 # v17.2.0
+
 - [Icons] Add SunMoonGlyph and SunMoonGlyphSecondary ([#801](https://github.com/curology/radiance-ui/pull/801))
 
 # v17.1.0
