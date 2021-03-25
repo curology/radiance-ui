@@ -24,7 +24,6 @@ export const Usage = () => (
     <Chip status="default" text="Default" />
     <Chip status="error" text="Error" />
     <Chip status="success" text="Success" />
-    <Chip status="secondary" text="Secondary" />
   </ChipContainer>
 );
 
@@ -32,13 +31,17 @@ Usage.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
+export const LowContrast = () => (
+  <ChipContainer>
+    <Chip isLowContrast status="default" text="Default" />
+    <Chip isLowContrast status="error" text="Error" />
+    <Chip isLowContrast status="success" text="Success" />
+  </ChipContainer>
+);
+
 export const WithControls = () => (
   <Chip
-    status={select(
-      'status',
-      ['default', 'success', 'error', 'secondary'],
-      'default',
-    )}
+    status={select('status', ['default', 'success', 'error'], 'default')}
     text={text('text', 'Chip')}
   />
 );

@@ -1,10 +1,8 @@
 import styled from '@emotion/styled';
 
 import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, ThemeType } from '../../constants';
+import { SPACER, ThemeColors } from '../../constants';
 import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
-
-import { StatusType } from '.';
 
 export const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
@@ -12,35 +10,12 @@ export const ChipText = styled.span`
   ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
 `;
 
-const defaultStyle = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.defaultLight};
-  ${ChipText} {
-    color: ${theme.COLORS.primary};
-  }
-`;
+interface ChipStylesProps {
+  backgroundColor: ThemeColors;
+  textColor: ThemeColors;
+}
 
-const successStyle = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.success};
-  ${ChipText} {
-    color: ${theme.COLORS.white};
-  }
-`;
-
-const errorStyle = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.error};
-  ${ChipText} {
-    color: ${theme.COLORS.white};
-  }
-`;
-
-const secondaryStyle = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.white};
-  ${ChipText} {
-    color: ${theme.COLORS.primary};
-  }
-`;
-
-export const ChipStyles = styled.div<{ status: StatusType }>`
+export const ChipStyles = styled.div<ChipStylesProps>`
   align-items: center;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
   display: inline-flex;
@@ -49,20 +24,9 @@ export const ChipStyles = styled.div<{ status: StatusType }>`
   justify-content: center;
   align-items: center;
   padding: 0 ${SPACER.small};
+  background-color: ${({ backgroundColor }) => backgroundColor};
 
-  ${({ status, theme }) => {
-    switch (status) {
-      case 'default':
-        return defaultStyle(theme);
-      case 'success':
-        return successStyle(theme);
-      case 'error':
-        return errorStyle(theme);
-      case 'secondary':
-        return secondaryStyle(theme);
-      // support for old pending and closed status will have default styles
-      default:
-        return defaultStyle(theme);
-    }
-  }};
+  ${ChipText} {
+    color: ${({ textColor }) => textColor};
+  }
 `;
