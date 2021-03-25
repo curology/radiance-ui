@@ -7,6 +7,9 @@ import { IndicatorContainer } from './style';
 
 export interface IndicatorProps {
   text: string | number;
+  /**
+   * Built-in intent styling presets. Type names correspond to Figma design file naming.
+   */
   type?: 'error' | 'success' | 'tertiary' | 'white';
 }
 
