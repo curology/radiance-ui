@@ -15,6 +15,7 @@ export const Usage = () => (
     <div css={(theme) => TYPOGRAPHY_STYLE.display(theme)}>display</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.heading(theme)}>heading</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.title(theme)}>title</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.bodyBold(theme)}>body bold</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.body(theme)}>body</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.caption(theme)}>caption</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.label(theme)}>label</div>
