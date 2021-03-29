@@ -10,7 +10,7 @@ export interface IndicatorProps {
   /**
    * Built-in intent styling presets. Type names correspond to Figma design file naming.
    */
-  type?: 'error' | 'success' | 'tertiary' | 'white';
+  type?: 'error' | 'success' | 'tertiary' | 'white' | 'primary';
 }
 
 interface GetStylesProps extends Required<Pick<IndicatorProps, 'type'>> {
@@ -21,6 +21,10 @@ const getStyles = ({ theme, type }: GetStylesProps) => {
   // Default properties correspond to 'error' type
   let backgroundColor: ThemeColors = theme.COLORS.error;
   let textColor: ThemeColors = theme.COLORS.white;
+
+  if (type === 'primary') {
+    backgroundColor = theme.COLORS.primary;
+  }
 
   if (type === 'success') {
     backgroundColor = theme.COLORS.success;
@@ -59,5 +63,5 @@ export const Indicator = ({ text, type = 'error' }: IndicatorProps) => {
 
 Indicator.propTypes = {
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  type: PropTypes.oneOf(['error', 'success', 'tertiary', 'white']),
+  type: PropTypes.oneOf(['error', 'primary', 'success', 'tertiary', 'white']),
 };

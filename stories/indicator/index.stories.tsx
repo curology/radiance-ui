@@ -16,9 +16,11 @@ export const Usage = () => (
   <React.Fragment>
     <Indicator type="error" text="1" />
     <br />
+    <Indicator type="primary" text="+4" />
+    <br />
     <Indicator type="success" text={999} />
     <br />
-    <Indicator type="tertiary" text="+4" />
+    <Indicator type="tertiary" text={4} />
     <br />
     <Indicator type="white" text="String" />
   </React.Fragment>
