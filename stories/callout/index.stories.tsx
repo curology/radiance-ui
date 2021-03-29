@@ -11,43 +11,38 @@ import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
 
-import { LockGlyph, NeckGlyph } from '../../src/icons';
+import { LockGlyph, NeckGlyph, NoneGlyph } from '../../src/icons';
 
-export const Default = () => (
-  <Callout.Container>
-    <Callout>
-      Simple callout with <strong>bolded text</strong>
-    </Callout>
-  </Callout.Container>
-);
-
-export const WithColor = () => {
-  const theme = useTheme();
-
-  return (
+export const Usage = () => (
+  <React.Fragment>
     <Callout.Container>
-      <Callout color={theme.COLORS.primaryTint2}>
-        Callout with a <strong>custom color</strong>
+      <Callout>
+        Simple callout with <strong>bolded text</strong>
       </Callout>
     </Callout.Container>
-  );
-};
+    <br />
+    <Callout.Container>
+      <Callout type="success" icon={<LockGlyph />}>
+        Your photos are private and are used by your provider to treat your skin
+      </Callout>
+    </Callout.Container>
+    <br />
+    <Callout.Container>
+      <Callout type="error" icon={<NoneGlyph />}>
+        <strong>Oops</strong>
+        <br />
+        Something is wrong with this page
+      </Callout>
+    </Callout.Container>
+  </React.Fragment>
+);
 
 export const WithIcon = () => (
   <Callout.Container>
     <Callout icon={<NeckGlyph />}>
       <strong>We recommend</strong> this bundle because you indicated concern
       about <strong>dry skin</strong> and <strong>body acne</strong>
-    </Callout>
-  </Callout.Container>
-);
-
-export const SuccessCallout = () => (
-  <Callout.Container>
-    <Callout type="success" icon={<LockGlyph />}>
-      Your photos are private and are used by your provider to treat your skin
     </Callout>
   </Callout.Container>
 );
