@@ -62,7 +62,7 @@ export interface ButtonProps {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const Button = ({
+const Button = ({
   buttonColor,
   buttonType = 'primary',
   children,
@@ -142,4 +142,6 @@ Button.propTypes = {
 };
 
 export { AnchorLinkButton, LinkButton, RoundButton, TextButton };
-export default withDeprecationWarning(Button, deprecatedProperties);
+const ButtonComponent = withDeprecationWarning(Button, deprecatedProperties);
+
+export { ButtonComponent as Button };
