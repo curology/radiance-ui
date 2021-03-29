@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
 export const TabsContainer = styled.div`
