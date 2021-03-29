@@ -4,8 +4,13 @@ import { style as TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeColors } from '../../constants';
 import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
 
-export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
-  background-color: ${(props) => props.backgroundColor};
+interface IndicatorContainerProps {
+  backgroundColor: ThemeColors;
+  textColor: ThemeColors;
+}
+
+export const IndicatorContainer = styled.div<IndicatorContainerProps>`
+  background-color: ${({ backgroundColor }) => backgroundColor};
   min-height: 16px;
   height: 16px;
   max-height: 16px;
@@ -22,7 +27,7 @@ export const IndicatorContainer = styled.div<{ backgroundColor: ThemeColors }>`
   > div {
     ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
     font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
-    color: ${({ theme }) => theme.COLORS.white};
+    color: ${({ textColor }) => textColor};
     ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
   }
 `;
