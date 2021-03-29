@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v19.0.1
+
+- [TypeScript] Update library exports to export TypeScript types ([#894](https://github.com/curology/radiance-ui/pull/894))
+
 # v19.0.0
 
 - [Components] **BREAKING CHANGE** Update `<Callout />` API, removing `color` prop and adding new `error` type ([#878](https://github.com/curology/radiance-ui/pull/878))
