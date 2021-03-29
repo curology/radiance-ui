@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# v19.0.0
+
+- [Components] **BREAKING CHANGE** Update `<Callout />` API, removing `color` prop and adding new `error` type ([#878](https://github.com/curology/radiance-ui/pull/878))
+- [Components] **BREAKING CHANGE** Update `<Chip />` API, add Low Contrast variations, and remove `secondary` type, and make `primary` type default ([#883](https://github.com/curology/radiance-ui/pull/883))
+- [Components] **BREAKING CHANGE** Update `<Indicator />` API, remove `backgroundColor` prop, add `type` presets ([#885](https://github.com/curology/radiance-ui/pull/885))
+
 # v18.2.0
 
 - [Icons] Add Secondary Logo ([#879](https://github.com/curology/radiance-ui/pull/879))
