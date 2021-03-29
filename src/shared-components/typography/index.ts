@@ -97,7 +97,7 @@ const linkStyle = (theme: ThemeType) => `
   }
 `;
 
-export const style = {
+export const TYPOGRAPHY_STYLE = {
   display: displayStyle,
   heading: headingStyle,
   title: titleStyle,

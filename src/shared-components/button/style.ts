@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 import {

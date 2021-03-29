@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { style as TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
+import { TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
 import { SPACER } from 'src/constants';
 
 export const Container = styled.div`

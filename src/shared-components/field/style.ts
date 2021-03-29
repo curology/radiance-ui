@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
 import { setThemeLineHeight } from '../../utils/themeStyles';
