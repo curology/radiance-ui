@@ -17,7 +17,7 @@ import { LockGlyph, NeckGlyph, NoneGlyph } from '../../src/icons';
 export const Usage = () => (
   <React.Fragment>
     <Callout.Container>
-      <Callout type="primary">
+      <Callout>
         Simple callout with <strong>bolded text</strong>
       </Callout>
     </Callout.Container>

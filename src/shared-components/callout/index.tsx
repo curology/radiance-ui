@@ -18,14 +18,14 @@ export interface CalloutProps {
   /**
    * Custom prop to draw on preset Callout styles
    */
-  type?: 'error' | 'primary' | 'success';
+  type?: 'error' | 'success';
 }
 
 /**
  * Pulls a specific styling preset based on available theme values and `type`
  */
 const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
-  // Default values correspond to primary type
+  // Default values if no type provided
   let backgroundColor: ThemeColors = theme.COLORS.infoLight;
   let textColor: ThemeColors = theme.COLORS.primary;
 
@@ -50,7 +50,7 @@ const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
  *
  * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs)
  */
-export const Callout = ({ children, icon, type = 'primary' }: CalloutProps) => {
+export const Callout = ({ children, icon, type }: CalloutProps) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getCalloutStyles(theme, type);
 
@@ -67,5 +67,5 @@ Callout.Container = Style.ParentContainer;
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node,
-  type: PropTypes.oneOf(['error', 'primary', 'success']),
+  type: PropTypes.oneOf(['error', 'success']),
 };
