@@ -5,7 +5,7 @@ import { useTheme } from 'emotion-theming';
 import { ChipStyles, ChipText } from './style';
 import { ThemeColors, ThemeType } from '../../constants';
 
-export type StatusType = 'default' | 'success' | 'error' | 'secondary';
+export type StatusType = 'primary' | 'success' | 'error' | 'white';
 
 export interface ChipProps {
   isLowContrast?: boolean;
@@ -13,37 +13,19 @@ export interface ChipProps {
   text: string;
 }
 
-interface GetStylesProps extends Omit<ChipProps, 'text'> {
+interface GetStylesProps extends Required<Omit<ChipProps, 'text'>> {
   theme: ThemeType;
 }
 
 const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
-  let backgroundColor: ThemeColors = theme.COLORS.white;
-  let textColor: ThemeColors = theme.COLORS.primary;
+  // Default colors are primary
+  let backgroundColor: ThemeColors = theme.COLORS.primary;
+  let textColor: ThemeColors = theme.COLORS.white;
 
-  if (status === 'default') {
-    if (isLowContrast === true) {
+  if (status === 'primary') {
+    if (isLowContrast) {
       backgroundColor = theme.COLORS.defaultLight;
-    }
-  }
-
-  if (status === 'secondary') {
-    backgroundColor = theme.COLORS.white;
-    textColor = theme.COLORS.primary;
-
-    if (isLowContrast === true) {
-      backgroundColor = theme.COLORS.primary;
-      textColor = theme.COLORS.white;
-    }
-  }
-
-  if (status === 'success') {
-    backgroundColor = theme.COLORS.success;
-    textColor = theme.COLORS.white;
-
-    if (isLowContrast === true) {
-      backgroundColor = theme.COLORS.successBorder;
-      textColor = theme.COLORS.success;
+      textColor = theme.COLORS.primary;
     }
   }
 
@@ -51,10 +33,28 @@ const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
     backgroundColor = theme.COLORS.error;
     textColor = theme.COLORS.white;
 
-    if (isLowContrast === true) {
+    if (isLowContrast) {
       backgroundColor = theme.COLORS.errorLight;
       textColor = theme.COLORS.error;
     }
+  }
+
+  if (status === 'success') {
+    backgroundColor = theme.COLORS.success;
+    textColor = theme.COLORS.white;
+
+    if (isLowContrast) {
+      backgroundColor = theme.COLORS.successBorder;
+      textColor = theme.COLORS.success;
+    }
+  }
+
+  if (status === 'white') {
+    /**
+     * No low-contrast version of white variation
+     */
+    backgroundColor = theme.COLORS.white;
+    textColor = theme.COLORS.primary;
   }
 
   return {
@@ -66,11 +66,11 @@ const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
 /**
  * Chips should be used in small spaces to add value to the elements they're nested in. (i.e. "Recommended" on product cards or showing an error on an element in a list.)
  *
- * These chips can be either Default, Success, or Error. The Secondary is an inverse of the primary chip and should be used on top of photos or illustrations.
+ * These chips can have a status value of Error, Primary, Success, or White. "White" does not have a low contrast version, and can be used on top of photos or illustrations.
  */
 export const Chip = ({
   isLowContrast = false,
-  status = 'default',
+  status = 'primary',
   text,
 }: ChipProps) => {
   const theme = useTheme();
@@ -90,6 +90,6 @@ export const Chip = ({
 
 Chip.propTypes = {
   isLowContrast: PropTypes.bool,
-  status: PropTypes.oneOf(['default', 'success', 'error', 'secondary']),
+  status: PropTypes.oneOf(['primary', 'success', 'error', 'white']),
   text: PropTypes.string.isRequired,
 };

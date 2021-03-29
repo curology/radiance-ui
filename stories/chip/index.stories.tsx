@@ -21,9 +21,21 @@ const ChipContainer = styled.div`
 
 export const Usage = () => (
   <ChipContainer>
-    <Chip status="default" text="Default" />
+    <div>
+      <h4>Default</h4>
+    </div>
+    <Chip status="primary" text="Primary" />
     <Chip status="error" text="Error" />
     <Chip status="success" text="Success" />
+    <Chip status="white" text="White" />
+    <br />
+    <div>
+      <h4>Low Contrast</h4>
+    </div>
+    <Chip status="primary" isLowContrast text="Primary" />
+    <Chip status="error" isLowContrast text="Error" />
+    <Chip status="success" isLowContrast text="Success" />
+    <Chip status="white" isLowContrast text="White" />
   </ChipContainer>
 );
 
@@ -31,17 +43,13 @@ Usage.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
-export const LowContrast = () => (
-  <ChipContainer>
-    <Chip isLowContrast status="default" text="Default" />
-    <Chip isLowContrast status="error" text="Error" />
-    <Chip isLowContrast status="success" text="Success" />
-  </ChipContainer>
-);
-
 export const WithControls = () => (
   <Chip
-    status={select('status', ['default', 'success', 'error'], 'default')}
+    status={select(
+      'status',
+      ['primary', 'success', 'error', 'white'],
+      'primary',
+    )}
     text={text('text', 'Chip')}
   />
 );
