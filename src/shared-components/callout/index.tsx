@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Style from './style';
-import { ThemeColors, ThemeType } from '../../constants';
+import type { ThemeColors, ThemeType } from '../../constants';
 import { isDefined } from '../../utils/isDefined';
 
 export interface CalloutProps {

@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/core';
 
 import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
 
-import { AlertType } from '.';
+import type { AlertType } from '.';
 
 const AlertsContainer = styled.div`
   display: flex;

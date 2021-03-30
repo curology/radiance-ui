@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Container from '../../shared-components/container';
-import { ButtonType } from '../..';
+import type { ButtonType } from '../..';
 import { ButtonContents, ButtonText } from '../../style';
 import { linkButtonStyles } from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';

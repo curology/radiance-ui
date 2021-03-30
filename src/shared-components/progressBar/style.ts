@@ -3,7 +3,7 @@ import { keyframes } from '@emotion/core';
 
 import { ANIMATION, PROGRESS_BAR_STATUS, ThemeType } from '../../constants';
 
-import { ProgressBarStatusType } from '.';
+import type { ProgressBarStatusType } from '.';
 
 const loadingProgression = keyframes`
   from { transform: translateX(-100%); }

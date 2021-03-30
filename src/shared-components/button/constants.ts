@@ -1,4 +1,4 @@
-import { ThemeType } from '../../constants';
+import type { ThemeType } from '../../constants';
 
 // TODO: potentially break out these pairings to the color constants file
 export const textColorsAssociatedWithColors = (theme: ThemeType) =>
