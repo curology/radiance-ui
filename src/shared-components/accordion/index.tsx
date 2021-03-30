@@ -5,15 +5,7 @@ import { useTheme } from 'emotion-theming';
 import { ThemeType } from '../../constants';
 import { ChevronIcon } from '../../icons';
 import { Thumbnails } from './thumbnails';
-import {
-  AccordionBox,
-  ArrowWrapper,
-  Container,
-  Content,
-  ExpansionWrapper,
-  TitleWrapper,
-  Truncate,
-} from './style';
+import Style from './style';
 import { keyboardKeys } from '../../constants/keyboardKeys';
 
 export type BorderRadiusValues =
@@ -23,7 +15,7 @@ export type BorderRadiusValues =
   | '2rem';
 
 export interface AccordionProps {
-  /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
+  /** Sets the border-radius of Accordion.Container, Style.AccordionBox, and Style.TitleWrapper */
   borderRadius?: BorderRadiusValues;
   /** node(s) that will render only when expanded */
   children: React.ReactNode;
@@ -81,8 +73,12 @@ export const Accordion = ({
   };
 
   return (
-    <AccordionBox isOpen={isOpen} noBorder={!!noBorder} disabled={!!disabled}>
-      <TitleWrapper
+    <Style.AccordionBox
+      isOpen={isOpen}
+      noBorder={!!noBorder}
+      disabled={!!disabled}
+    >
+      <Style.TitleWrapper
         onClick={(event): void => {
           if (!disabled) {
             onClick(event);
@@ -97,21 +93,23 @@ export const Accordion = ({
         aria-disabled={!!disabled}
         aria-expanded={isOpen}
       >
-        <Truncate>{title}</Truncate>
-        <ArrowWrapper rightAlign={!!rightAlignArrow}>
+        <Style.Truncate>{title}</Style.Truncate>
+        <Style.ArrowWrapper rightAlign={!!rightAlignArrow}>
           <ChevronIcon rotate={isOpen ? 90 : 0} fill={theme.COLORS.primary} />
-        </ArrowWrapper>
-      </TitleWrapper>
-      <ExpansionWrapper
+        </Style.ArrowWrapper>
+      </Style.TitleWrapper>
+      <Style.ExpansionWrapper
         contentHeight={contentHeight}
         aria-disabled={!!disabled}
         aria-hidden={!isOpen}
       >
         <div ref={contentRef}>{children}</div>
-      </ExpansionWrapper>
-    </AccordionBox>
+      </Style.ExpansionWrapper>
+    </Style.AccordionBox>
   );
 };
+
+const { Container, Content, Truncate } = Style;
 
 Accordion.Container = Container;
 
