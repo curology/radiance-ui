@@ -43,6 +43,12 @@ const bodyStyle = (theme: ThemeType) => `
   ${baseBodyStyles(theme)}
 `;
 
+const bodyBoldStyle = (theme: ThemeType) => `
+  ${bodyStyle(theme)}
+  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  color: ${theme.COLORS.primary};
+`;
+
 const captionStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint2};
   font-size: ${theme.TYPOGRAPHY.fontSize.caption};
@@ -102,6 +108,7 @@ export const TYPOGRAPHY_STYLE = {
   heading: headingStyle,
   title: titleStyle,
   body: bodyStyle,
+  bodyBold: bodyBoldStyle,
   caption: captionStyle,
   error: errorStyle,
   success: successStyle,
@@ -109,6 +116,10 @@ export const TYPOGRAPHY_STYLE = {
   button: buttonStyle,
   link: linkStyle,
 } as const;
+
+const Bold = styled.strong`
+  ${({ theme }) => bodyBoldStyle(theme)}
+`;
 
 const Button = styled.span`
   ${({ theme }) => buttonStyle(theme)}
@@ -139,6 +150,7 @@ const Title = styled.h3`
 `;
 
 export const Typography = {
+  Bold,
   Button,
   Caption,
   Display,

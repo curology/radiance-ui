@@ -15,6 +15,7 @@ export const Usage = () => (
     <Typography.Display>Display</Typography.Display>
     <Typography.Heading>Heading</Typography.Heading>
     <Typography.Title>Title</Typography.Title>
+    <Typography.Bold>Body Bold</Typography.Bold>
     <p>Body</p>
     <Typography.Caption>Caption</Typography.Caption>
     <Typography.Label>Label</Typography.Label>
