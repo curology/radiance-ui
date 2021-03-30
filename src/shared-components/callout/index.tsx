@@ -57,7 +57,9 @@ export const Callout = ({ children, icon, type }: CalloutProps) => {
   return (
     <Style.CalloutContainer backgroundColor={backgroundColor}>
       <Style.Text textColor={textColor}>{children}</Style.Text>
-      {isDefined(icon) && <Style.Icon iconColor={textColor}>{icon}</Style.Icon>}
+      {isDefined(icon) && icon !== false && (
+        <Style.Icon iconColor={textColor}>{icon}</Style.Icon>
+      )}
     </Style.CalloutContainer>
   );
 };
