@@ -69,7 +69,7 @@ const Button = ({
   const theme = useTheme();
   const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
-  const hasIcon = isDefined(icon);
+  const hasIcon = isDefined(icon) && icon !== false;
 
   return (
     <ButtonBase

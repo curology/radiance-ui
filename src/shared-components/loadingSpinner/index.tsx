@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Style from './style';
-import { ThemeColors } from '../../constants';
+import type { ThemeColors } from '../../constants';
 
 export interface LoadingSpinnerProps {
   /**

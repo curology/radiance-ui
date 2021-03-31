@@ -13,7 +13,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
+import type { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 const BarContainer = styled.div`

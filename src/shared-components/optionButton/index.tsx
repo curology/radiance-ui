@@ -44,7 +44,10 @@ export const OptionButton = ({
     {...rest}
   >
     <Style.FlexContainer>
-      {isDefined(icon) ? (
+      {/**
+       * We sometimes use && conditionals such that we are passing in `false` as a value
+       */}
+      {isDefined(icon) && icon !== false ? (
         <Style.IconWrapper
           selected={selected}
           optionType={optionType}

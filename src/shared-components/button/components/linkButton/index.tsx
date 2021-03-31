@@ -4,9 +4,9 @@ import { useTheme } from 'emotion-theming';
 
 import Container from '../../shared-components/container';
 import type { ButtonType } from '../../types';
+import { ButtonContents, ButtonText } from '../../style';
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
-import { ButtonContents, ButtonText } from '../../style';
 
 export interface LinkProps {
   /**

@@ -4,8 +4,8 @@ import { useTheme } from 'emotion-theming';
 
 import Loader from '../../shared-components/loader';
 import Style from './style';
-import type { ButtonTypeWithAction } from '../../types';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
+import type { ButtonTypeWithAction } from '../../types';
 import {
   deprecatedProperties,
   isLoadingPropFunction,

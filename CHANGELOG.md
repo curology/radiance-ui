@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v19.1.0
+
+- [Bugfix] Handle `false` icon props for logic like `<OptionButton icon={Icon && <Icon />} />` ([#900](https://github.com/curology/radiance-ui/pull/900))
+- [Typography] Add `Body Bold` style and component (`Typography.Bold`) ([#884](https://github.com/curology/radiance-ui/pull/884))
+
 # v19.0.1
 
 - [TypeScript] Update library exports to export TypeScript types ([#894](https://github.com/curology/radiance-ui/pull/894))
