@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import type { ThemeColors, ThemeType } from 'src/constants';
 import { useTheme } from 'emotion-theming';
 
-import { IndicatorContainer } from './style';
+import Style from './style';
 
 export interface IndicatorProps {
   text: string | number;
@@ -55,9 +55,12 @@ export const Indicator = ({ text, type = 'error' }: IndicatorProps) => {
   const { backgroundColor, textColor } = getStyles({ theme, type });
 
   return (
-    <IndicatorContainer backgroundColor={backgroundColor} textColor={textColor}>
+    <Style.IndicatorContainer
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+    >
       <div>{text}</div>
-    </IndicatorContainer>
+    </Style.IndicatorContainer>
   );
 };
 

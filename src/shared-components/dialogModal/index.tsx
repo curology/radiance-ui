@@ -6,13 +6,7 @@ import { FocusScope } from '@react-aria/focus';
 import { useTheme } from 'emotion-theming';
 
 import { CrossIcon } from '../../icons';
-import {
-  Overlay,
-  ModalContainer,
-  ModalTitle,
-  CrossIconContainer,
-  Paragraph,
-} from './style';
+import Style from './style';
 import { Colors, primaryTheme, secondaryTheme } from '../../constants';
 
 export interface DialogModalProps {
@@ -97,15 +91,15 @@ export const DialogModal = ({
     >
       {(transitionState): JSX.Element => (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <Overlay className={transitionState} {...rest}>
+        <Style.Overlay className={transitionState} {...rest}>
           <FocusScope contain restoreFocus autoFocus>
-            <ModalContainer
+            <Style.ModalContainer
               backgroundColor={backgroundColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
             >
               {onCloseIconClick && (
-                <CrossIconContainer
+                <Style.CrossIconContainer
                   backgroundColor={backgroundColorWithTheme}
                   onClick={handleCloseIntent}
                   role="button"
@@ -113,20 +107,20 @@ export const DialogModal = ({
                   aria-label="Close modal"
                 >
                   <CrossIcon />
-                </CrossIconContainer>
+                </Style.CrossIconContainer>
               )}
-              {!!title && <ModalTitle>{title}</ModalTitle>}
+              {!!title && <Style.ModalTitle>{title}</Style.ModalTitle>}
               {children}
-            </ModalContainer>
+            </Style.ModalContainer>
           </FocusScope>
-        </Overlay>
+        </Style.Overlay>
       )}
     </Transition>,
     domNode.current,
   );
 };
 
-DialogModal.Paragraph = Paragraph;
+DialogModal.Paragraph = Style.Paragraph;
 
 DialogModal.propTypes = {
   backgroundColor: PropTypes.oneOf([

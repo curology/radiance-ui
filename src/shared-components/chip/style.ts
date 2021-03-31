@@ -4,7 +4,7 @@ import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeColors } from '../../constants';
 import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
 
-export const ChipText = styled.span`
+const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
   ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
@@ -15,7 +15,7 @@ interface ChipStylesProps {
   textColor: ThemeColors;
 }
 
-export const ChipStyles = styled.div<ChipStylesProps>`
+const ChipStyles = styled.div<ChipStylesProps>`
   align-items: center;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
   display: inline-flex;
@@ -30,3 +30,5 @@ export const ChipStyles = styled.div<ChipStylesProps>`
     color: ${({ textColor }) => textColor};
   }
 `;
+
+export default { ChipStyles, ChipText };

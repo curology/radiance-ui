@@ -9,7 +9,7 @@ interface IndicatorContainerProps {
   textColor: ThemeColors;
 }
 
-export const IndicatorContainer = styled.div<IndicatorContainerProps>`
+const IndicatorContainer = styled.div<IndicatorContainerProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   min-height: 16px;
   height: 16px;
@@ -31,3 +31,5 @@ export const IndicatorContainer = styled.div<IndicatorContainerProps>`
     ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
   }
 `;
+
+export default { IndicatorContainer };

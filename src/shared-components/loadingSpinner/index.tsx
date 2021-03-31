@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
-import { LoadingSpinnerContainer, Overlay, Dot } from './style';
+import Style from './style';
 import { ThemeColors } from '../../constants';
 
 export interface LoadingSpinnerProps {
@@ -44,28 +44,28 @@ export const LoadingSpinner = ({
   const colorWithTheme = color ?? theme.COLORS.primary;
 
   return (
-    <LoadingSpinnerContainer bgColor={bgColorWithTheme}>
-      <Overlay>
-        <Dot
+    <Style.LoadingSpinnerContainer bgColor={bgColorWithTheme}>
+      <Style.Overlay>
+        <Style.Dot
           dotColor={colorWithTheme}
           translateX={translateX}
           duration={duration}
           dotSize={size}
         />
-        <Dot
+        <Style.Dot
           dotColor={colorWithTheme}
           translateX={translateX}
           duration={duration}
           dotSize={size}
         />
-        <Dot
+        <Style.Dot
           dotColor={colorWithTheme}
           translateX={translateX}
           duration={duration}
           dotSize={size}
         />
-      </Overlay>
-    </LoadingSpinnerContainer>
+      </Style.Overlay>
+    </Style.LoadingSpinnerContainer>
   );
 };
 

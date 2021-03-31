@@ -9,7 +9,7 @@ const appPreloader = (translateX: string) => keyframes`
   100% { opacity: 0; transform: translate3d(-${translateX}, 0, 0) }
 `;
 
-export const LoadingSpinnerContainer = styled.div<{ bgColor: string }>`
+const LoadingSpinnerContainer = styled.div<{ bgColor: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +23,7 @@ export const LoadingSpinnerContainer = styled.div<{ bgColor: string }>`
   background-color: ${(props) => props.bgColor};
 `;
 
-export const Overlay = styled.div`
+const Overlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ export const Overlay = styled.div`
   position: relative;
 `;
 
-export const Dot = styled.span<{
+const Dot = styled.span<{
   dotColor: ThemeColors;
   dotSize: string;
   duration: number;
@@ -62,3 +62,5 @@ export const Dot = styled.span<{
     animation-delay: ${(props) => -props.duration / 4}s;
   }
 `;
+
+export default { Dot, LoadingSpinnerContainer, Overlay };

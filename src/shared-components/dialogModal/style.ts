@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Typography } from '../typography';
 import { Colors, MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
-export const Overlay = styled.div`
+const Overlay = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -31,7 +31,7 @@ export const Overlay = styled.div`
   }
 `;
 
-export const Paragraph = styled.p`
+const Paragraph = styled.p`
   margin-bottom: ${SPACER.large};
 
   &:last-of-type {
@@ -39,7 +39,7 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const ModalContainer = styled.div<{
+const ModalContainer = styled.div<{
   backgroundColor: Colors['background'] | Colors['white'];
 }>`
   width: 100%;
@@ -86,11 +86,11 @@ export const ModalContainer = styled.div<{
   }
 `;
 
-export const ModalTitle = styled(Typography.Title)`
+const ModalTitle = styled(Typography.Title)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const CrossIconContainer = styled.div<{
+const CrossIconContainer = styled.div<{
   backgroundColor: Colors['background'] | Colors['white'];
 }>`
   position: absolute;
@@ -117,3 +117,11 @@ export const CrossIconContainer = styled.div<{
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
+
+export default {
+  CrossIconContainer,
+  ModalContainer,
+  ModalTitle,
+  Overlay,
+  Paragraph,
+};

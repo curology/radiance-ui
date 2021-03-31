@@ -10,7 +10,7 @@ import {
   ThemeType,
 } from '../../constants';
 
-export const Overlay = styled.div`
+const Overlay = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -37,7 +37,7 @@ export const Overlay = styled.div`
   }
 `;
 
-export const CrossIconContainer = styled.button`
+const CrossIconContainer = styled.button`
   ${buttonReset};
   padding: 0;
   position: absolute;
@@ -66,7 +66,7 @@ export const CrossIconContainer = styled.button`
   }
 `;
 
-export const HeaderImageContainer = styled.div`
+const HeaderImageContainer = styled.div`
   min-height: 240px;
   max-height: 240px;
   width: 100%;
@@ -92,11 +92,11 @@ export const HeaderImageContainer = styled.div`
   }
 `;
 
-export const ModalTitle = styled(Typography.Heading)`
+const ModalTitle = styled(Typography.Heading)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const Paragraph = styled.p`
+const Paragraph = styled.p`
   margin-bottom: ${SPACER.large};
 
   &:last-of-type {
@@ -104,7 +104,7 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const ModalFooter = styled.div`
+const ModalFooter = styled.div`
   margin-bottom: ${SPACER.xlarge};
 `;
 
@@ -126,7 +126,7 @@ const commonHeaderBarStyles = (theme: ThemeType) => `
   pointer-events: none;
 `;
 
-export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
+const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   ${({ theme }) => commonHeaderBarStyles(theme)}
 
   transition: opacity ${ANIMATION.defaultTiming}
@@ -140,7 +140,7 @@ export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   }
 `;
 
-export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
+const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   ${({ theme }) => commonHeaderBarStyles(theme)}
 
   top: 56px;
@@ -164,7 +164,7 @@ export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   }
 `;
 
-export const MobileTopOverlay = styled.div`
+const MobileTopOverlay = styled.div`
   width: 100%;
   background: transparent;
   height: 32px;
@@ -174,7 +174,7 @@ export const MobileTopOverlay = styled.div`
   }
 `;
 
-export const ModalContainer = styled.div`
+const ModalContainer = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -211,7 +211,7 @@ export interface HasHeaderImageProps {
 
 // 32px comes from top overlay
 // 272px comes from 32px top overlay + 240px image
-export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
+const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
@@ -228,7 +228,7 @@ export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   }
 `;
 
-export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
+const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -250,3 +250,18 @@ export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
       hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
   }
 `;
+
+export default {
+  ContentWithFooterContainer,
+  CrossIconContainer,
+  Overlay,
+  DesktopHeaderBar,
+  HeaderImageContainer,
+  MainModalContentContainer,
+  MobileHeaderBar,
+  MobileTopOverlay,
+  ModalContainer,
+  ModalFooter,
+  ModalTitle,
+  Paragraph,
+};
