@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
-import { SelectorType, SizeType, StyleType } from '.';
+import type { SelectorType, SizeType, StyleType } from '.';
 
 export const SelectorContainer = styled.div`
   align-items: center;
