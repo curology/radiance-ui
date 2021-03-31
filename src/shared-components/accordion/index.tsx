@@ -15,7 +15,7 @@ export type BorderRadiusValues =
   | '2rem';
 
 export interface AccordionProps {
-  /** Sets the border-radius of Accordion.Container, Style.AccordionBox, and Style.TitleWrapper */
+  /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
   borderRadius?: BorderRadiusValues;
   /** node(s) that will render only when expanded */
   children: React.ReactNode;
@@ -109,15 +109,13 @@ export const Accordion = ({
   );
 };
 
-const { Container, Content, Truncate } = Style;
+Accordion.Container = Style.Container;
 
-Accordion.Container = Container;
-
-Accordion.Content = Content;
+Accordion.Content = Style.Content;
 
 Accordion.Thumbnails = Thumbnails;
 
-Accordion.Truncate = Truncate;
+Accordion.Truncate = Style.Truncate;
 
 Accordion.propTypes = {
   borderRadius: PropTypes.string,
