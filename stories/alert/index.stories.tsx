@@ -120,7 +120,7 @@ const ALERT_STORIES: AlertStories = {
           <ArgsTable />
           <Stories includePrimary />
           <Description>
-            Alert.Container Absolutely positions the alerts by default. (As
+            Alert.Container absolutely positions the alerts by default. (As
             such, it escapes the canvas container.)
           </Description>
         </React.Fragment>
