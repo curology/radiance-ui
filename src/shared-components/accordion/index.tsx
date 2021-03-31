@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import { useTheme } from 'emotion-theming';
 
-import { ThemeType } from '../../constants';
+import type { ThemeType } from '../../constants';
 import { ChevronIcon } from '../../icons';
 import { Thumbnails } from './thumbnails';
 import {

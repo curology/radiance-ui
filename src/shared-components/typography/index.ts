@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import { ThemeType } from '../../constants';
+import type { ThemeType } from '../../constants';
 import {
   setSecondaryHeadingFont,
   setButtonStyleFontWeight,

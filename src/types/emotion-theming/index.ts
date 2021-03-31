@@ -1,4 +1,4 @@
-import { ThemeType } from '../../constants/themes/types';
+import type { ThemeType } from '../../constants/themes/types';
 /**
  * We rely on TypeScript path aliasing in order to decorate our `emotion-theming` imports
  * with built-in type information, so for this one import we need to use relative imports
