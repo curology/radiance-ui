@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const BaseTextButton = styled.button<{ disabled: boolean }>`
+const BaseTextButton = styled.button<{ disabled: boolean }>`
   border-color: transparent;
   background-color: transparent;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
@@ -20,3 +20,7 @@ export const BaseTextButton = styled.button<{ disabled: boolean }>`
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
+
+export default {
+  BaseTextButton,
+};

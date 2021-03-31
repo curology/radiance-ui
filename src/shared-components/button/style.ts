@@ -10,8 +10,7 @@ import {
   setThemeLineHeight,
 } from '../../utils/themeStyles';
 import { isDefined } from '../../utils/isDefined';
-
-import { ButtonTypeWithAction } from '.';
+import type { ButtonTypeWithAction } from './types';
 
 const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
   const backgroundColor = primaryButtonBackgroundColor(theme, buttonColor);

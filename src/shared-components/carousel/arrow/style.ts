@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { SPACER, Z_SCALE } from '../../../constants';
 
-export const ArrowContainer = styled.div<{
+const ArrowContainer = styled.div<{
   disabled: boolean;
   next: boolean;
   prev: boolean;
@@ -19,7 +19,7 @@ export const ArrowContainer = styled.div<{
   ${({ disabled }) => (disabled ? `display: none;` : '')}
 `;
 
-export const BottomRightAlignedArrowContainer = styled.div<{
+const BottomRightAlignedArrowContainer = styled.div<{
   disabled: boolean;
   next: boolean;
   prev: boolean;
@@ -46,3 +46,5 @@ export const BottomRightAlignedArrowContainer = styled.div<{
     `
       : ''};
 `;
+
+export default { ArrowContainer, BottomRightAlignedArrowContainer };
