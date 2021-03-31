@@ -1,8 +1,8 @@
 import React from 'react';
 
 import ButtonLoader from './style';
-import { ButtonTypeWithAction } from '../..';
-import { ThemeColors } from '../../../../constants';
+import type { ButtonTypeWithAction } from '../..';
+import type { ThemeColors } from '../../../../constants';
 
 export interface LoaderProps {
   buttonColor: ThemeColors;

@@ -11,7 +11,7 @@ import {
 } from '../../utils/themeStyles';
 import { isDefined } from '../../utils/isDefined';
 
-import { ButtonTypeWithAction } from '.';
+import type { ButtonTypeWithAction } from '.';
 
 const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
   const backgroundColor = primaryButtonBackgroundColor(theme, buttonColor);
