@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { SPACER, ThemeType } from '../../constants';
 
-import { CarouselType } from '.';
+import type { CarouselType } from '.';
 
 export const Card = styled.div`
   width: 311px !important;

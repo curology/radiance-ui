@@ -3,7 +3,7 @@ import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { MEDIA_QUERIES, SPACER, ThemeType } from '../../constants';
 
-import { BannerType } from '.';
+import type { BannerType } from '.';
 
 const defaultAlertStyles = (theme: ThemeType) => `
   background-color: ${theme.COLORS.primary};

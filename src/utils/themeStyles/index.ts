@@ -1,7 +1,7 @@
 /**
  *  Any conditional style based on theme.__type should be on this file
  */
-import { ThemeColors, ThemeType } from '../../constants';
+import type { ThemeColors, ThemeType } from '../../constants';
 
 export const primaryButtonFontColor = (theme: ThemeType) =>
   theme.__type === 'primary' ? theme.COLORS.white : theme.COLORS.primary;

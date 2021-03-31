@@ -11,7 +11,7 @@ import {
   roundButtonTextStyles,
 } from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { ButtonTypeWithAction } from '../..';
+import type { ButtonTypeWithAction } from '../..';
 import {
   deprecatedProperties,
   isLoadingPropFunction,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import { ChipStyles, ChipText } from './style';
-import { ThemeColors, ThemeType } from '../../constants';
+import type { ThemeColors, ThemeType } from '../../constants';
 
 export type StatusType = 'primary' | 'success' | 'error' | 'white';
 
