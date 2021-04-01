@@ -28,4 +28,4 @@ const MessageItem = styled.li<{ type: MessagesTypes }>`
   line-height: ${({ theme }) => setThemeLineHeight(theme, '24px')};
 `;
 
-export default { CenteredMessageList, MessageList, MessageItem };
+export default { CenteredMessageList, MessageItem, MessageList };

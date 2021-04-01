@@ -3,9 +3,9 @@ import { css } from '@emotion/core';
 import tinycolor from 'tinycolor2';
 
 import { ANIMATION, ThemeColors, ThemeType } from '../../../../constants';
+import { ButtonBase } from '../../style';
 import { textColorsAssociatedWithColors } from '../../constants';
 import { isDefined } from '../../../../utils/isDefined';
-import { ButtonBase } from '../../style';
 
 const multiStyles = `
   justify-content: space-between;
@@ -128,9 +128,9 @@ const roundButtonTextStyles = (
 `;
 
 export default {
-  RoundButtonWrapper,
   RoundButtonBase,
-  roundButtonLoader,
   RoundButtonContainer,
+  roundButtonLoader,
   roundButtonTextStyles,
+  RoundButtonWrapper,
 };

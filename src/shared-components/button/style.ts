@@ -1,3 +1,11 @@
+/**
+ * We do not use our pattern of anonymous default exports in this file because
+ * these styles are shared across all button components. To make the distinction
+ * between styles defined specifically for the components, and shared styles, we
+ * use named exports for the shared styles and anonymous default exports for the
+ * component-specific styles
+ */
+
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 
@@ -10,7 +18,7 @@ import {
   setThemeLineHeight,
 } from '../../utils/themeStyles';
 import { isDefined } from '../../utils/isDefined';
-import type { ButtonTypeWithAction } from './types';
+import type { BaseButtonStylesTypes, ButtonTypeWithAction } from './types';
 
 const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
   const backgroundColor = primaryButtonBackgroundColor(theme, buttonColor);
@@ -157,16 +165,6 @@ function parseTheme(
     default:
       return primaryStyles(buttonColor, theme);
   }
-}
-
-export interface BaseButtonStylesTypes {
-  buttonColor: ThemeColors;
-  buttonType: ButtonTypeWithAction;
-  disabled: boolean;
-  isFullWidth: boolean;
-  isLoading: boolean;
-  textColor?: ThemeColors;
-  theme: ThemeType;
 }
 
 export const baseButtonStyles = ({
