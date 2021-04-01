@@ -31,33 +31,37 @@ const getTypeColor = (
   return theme.COLORS.primary;
 };
 
-export const ClickableContainer = styled.button<{
-  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+const sharedContainerStyles = ({
+  containerType,
+  theme,
+}: {
   containerType: ContainerType;
-}>`
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
-  ${({ containerType, theme }) => containerStyles(theme, containerType)};
+  theme: ThemeType;
+}) => `
+  border-radius: ${theme.BORDER_RADIUS.small};
+  ${containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
+`;
+
+interface ContainerProps {
+  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+  containerType: ContainerType;
+}
+
+export const DisplayContainer = styled.div<ContainerProps>`
+  ${sharedContainerStyles}
+`;
+
+export const ClickableContainer = styled.button<ContainerProps>`
+  ${sharedContainerStyles}
 
   :focus {
     outline: none;
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
-`;
-
-export const DisplayContainer = styled.div<{
-  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
-  containerType: ContainerType;
-}>`
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
-  ${({ containerType, theme }) => containerStyles(theme, containerType)};
-  padding: ${SPACER.large};
-  margin-bottom: ${SPACER.medium};
-  width: 100%;
-  text-align: left;
 `;
 
 export const FlexContainer = styled.div`
