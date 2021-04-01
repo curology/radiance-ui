@@ -32,11 +32,10 @@ const getTypeColor = (
 };
 
 export const ClickableContainer = styled.button<{
-  borderRadius?: string;
+  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
   containerType: ContainerType;
 }>`
-  border-radius: ${({ borderRadius, theme }) =>
-    borderRadius ?? theme.BORDER_RADIUS.small};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
   ${({ containerType, theme }) => containerStyles(theme, containerType)};
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
@@ -47,6 +46,18 @@ export const ClickableContainer = styled.button<{
     outline: none;
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
+`;
+
+export const DisplayContainer = styled.div<{
+  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+  containerType: ContainerType;
+}>`
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.small};
+  ${({ containerType, theme }) => containerStyles(theme, containerType)};
+  padding: ${SPACER.large};
+  margin-bottom: ${SPACER.medium};
+  width: 100%;
+  text-align: left;
 `;
 
 export const FlexContainer = styled.div`

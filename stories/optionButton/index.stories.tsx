@@ -35,6 +35,10 @@ const OptionsContainer = styled.div`
   > button {
     width: 350px;
   }
+
+  > div {
+    width: 350px;
+  }
 `;
 
 export const Interactive = () => {
@@ -107,6 +111,21 @@ export const Checkboxes = () => (
         buttonType="primary"
         icon={<AcneGlyph width={32} height={32} />}
       />
+      <OptionButton
+        selected
+        text="Checkbox helper text"
+        onClick={noop}
+        optionType="checkbox"
+        buttonType="secondary"
+      />
+      <OptionButton
+        selected
+        text="Checkbox helper text"
+        onClick={noop}
+        optionType="checkbox"
+        buttonType="secondary"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
     </OptionsContainer>
   </FlexContainer>
 );
@@ -148,6 +167,39 @@ export const RadioButtons = () => (
         onClick={noop}
         optionType="radio"
         buttonType="primary"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
+      <OptionButton
+        selected
+        text="Radio helper text"
+        onClick={noop}
+        optionType="radio"
+        buttonType="secondary"
+      />
+      <OptionButton
+        selected
+        text="Radio helper text"
+        onClick={noop}
+        optionType="radio"
+        buttonType="secondary"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
+    </OptionsContainer>
+  </FlexContainer>
+);
+
+export const OptionButtonContainer = () => (
+  <FlexContainer>
+    <OptionsContainer>
+      <OptionButton.Container
+        text="Radio helper text"
+        optionType="radio"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
+      <OptionButton.Container
+        text="Checkbox helper text"
+        subtext="subtext"
+        optionType="checkbox"
         icon={<AcneGlyph width={32} height={32} />}
       />
     </OptionsContainer>

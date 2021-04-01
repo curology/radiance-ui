@@ -29,6 +29,12 @@ export const Clickable = () => (
   </Container>
 );
 
+export const Icon = () => (
+  <Container type="clickable">
+    <Container.Section>Clickable container</Container.Section>
+  </Container>
+);
+
 export const Message = () => (
   <Container type="message">
     <Container.Section>Message container</Container.Section>

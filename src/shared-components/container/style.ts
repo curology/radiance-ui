@@ -19,7 +19,7 @@ const messageStyle = (theme: ThemeType) => `
   box-shadow: ${theme.BOX_SHADOWS.clickable};
 `;
 
-export type ContainerType = 'clickable' | 'message';
+export type ContainerType = 'clickable' | 'message' | 'none';
 
 const getContainerTypeStyles = (theme: ThemeType, type?: ContainerType) => {
   switch (type) {
@@ -27,6 +27,8 @@ const getContainerTypeStyles = (theme: ThemeType, type?: ContainerType) => {
       return messageStyle(theme);
     case 'clickable':
       return clickableStyle(theme);
+    case 'none':
+      return ``;
     default:
       return ``;
   }
@@ -71,7 +73,7 @@ export const Image = styled.img`
 type StyledContainer = StyledComponent<
   DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
   {
-    type?: 'clickable' | 'message';
+    type?: ContainerType;
   },
   Record<string, unknown>
 >;
@@ -94,7 +96,7 @@ Container.Image = Image;
 Container.Section = Section;
 
 Container.propTypes = {
-  type: PropTypes.oneOf(['message', 'clickable']),
+  type: PropTypes.oneOf(['message', 'clickable', 'none']),
 };
 
 export { Container };
