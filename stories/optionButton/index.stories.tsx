@@ -13,6 +13,7 @@ import {
 import type { Meta } from '@storybook/react';
 
 import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
+import { BREAKPOINTS } from '../../src/constants';
 
 const noop = () => undefined;
 
@@ -70,6 +71,10 @@ export const Interactive = () => {
       />
     </ExampleContainer>
   );
+};
+
+Interactive.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
 export const Checkboxes = () => (
@@ -205,6 +210,10 @@ export const OptionButtonContainer = () => (
     </OptionsContainer>
   </FlexContainer>
 );
+
+OptionButtonContainer.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
 
 export const WithControls = () => (
   <FlexContainer>
