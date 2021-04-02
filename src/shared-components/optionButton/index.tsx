@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
-import { ThemeType } from '../../constants';
+import type { ThemeType } from '../../constants';
 
 export interface OptionButtonProps {
   borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
@@ -21,7 +21,7 @@ export interface OptionButtonProps {
   [key: string]: unknown;
 }
 
-interface OptionButtonContainerProps
+export interface OptionButtonContainerProps
   extends Pick<
     OptionButtonProps,
     'borderRadius' | 'icon' | 'optionType' | 'subtext' | 'text'
@@ -29,7 +29,7 @@ interface OptionButtonContainerProps
   icon: JSX.Element;
 }
 
-type OptionButtonContentProps = Pick<
+export type OptionButtonContentProps = Pick<
   OptionButtonProps,
   'buttonType' | 'icon' | 'optionType' | 'selected' | 'subtext' | 'text'
 >;
