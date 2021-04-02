@@ -70,6 +70,14 @@ const OptionButtonContent = ({
   </Style.FlexContainer>
 );
 
+/**
+ * The `OptionButton` is used within a focused flow (such as the signup page)
+ * to provide more context and attention to each selection option.
+ *
+ * There is also an OptionButton.Container sub-component to be used when we
+ * want to use the OptionButton as a purely presentational component rather
+ * than a functional button associated with form inputs
+ */
 export const OptionButton = ({
   borderRadius,
   buttonType,
