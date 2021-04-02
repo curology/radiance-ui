@@ -1,16 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  ClickableContainer,
-  DisplayContainer,
-  FlexContainer,
-  TextContainer,
-  Text,
-  SubText,
-  IconWrapper,
-  CheckmarkWrapper,
-} from './style';
+import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
 import { ThemeType } from '../../constants';
@@ -51,32 +42,32 @@ const OptionButtonContent = ({
   subtext,
   text,
 }: OptionButtonContentProps) => (
-  <FlexContainer>
+  <Style.FlexContainer>
     {/**
      * We sometimes use && conditionals such that we are passing in `false` as a value
      */}
     {isDefined(icon) && icon !== false ? (
-      <IconWrapper
+      <Style.IconWrapper
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
       >
         {selected ? <CheckmarkIcon /> : icon}
-      </IconWrapper>
+      </Style.IconWrapper>
     ) : (
-      <CheckmarkWrapper
+      <Style.CheckmarkWrapper
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
       >
         <CheckmarkIcon />
-      </CheckmarkWrapper>
+      </Style.CheckmarkWrapper>
     )}
-    <TextContainer>
-      <Text>{text}</Text>
-      {isDefined(subtext) && <SubText>{subtext}</SubText>}
-    </TextContainer>
-  </FlexContainer>
+    <Style.TextContainer>
+      <Style.Text>{text}</Style.Text>
+      {isDefined(subtext) && <Style.SubText>{subtext}</Style.SubText>}
+    </Style.TextContainer>
+  </Style.FlexContainer>
 );
 
 export const OptionButton = ({
@@ -90,7 +81,7 @@ export const OptionButton = ({
   text,
   ...rest
 }: OptionButtonProps) => (
-  <ClickableContainer
+  <Style.ClickableContainer
     borderRadius={borderRadius}
     onClick={onClick}
     type="button"
@@ -107,7 +98,7 @@ export const OptionButton = ({
       subtext={subtext}
       text={text}
     />
-  </ClickableContainer>
+  </Style.ClickableContainer>
 );
 
 /**
@@ -120,7 +111,7 @@ export const OptionButtonContainer = ({
   text,
   ...rest
 }: OptionButtonContainerProps) => (
-  <DisplayContainer
+  <Style.DisplayContainer
     containerType="none"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
@@ -134,7 +125,7 @@ export const OptionButtonContainer = ({
       subtext={subtext}
       text={text}
     />
-  </DisplayContainer>
+  </Style.DisplayContainer>
 );
 
 /**

@@ -6,16 +6,16 @@ import { setThemeLineHeight } from '../../utils/themeStyles';
 
 import { MessagesTypes } from '.';
 
-export const MessageList = styled.ul`
+const MessageList = styled.ul`
   list-style-type: none;
   margin: 0;
 `;
 
-export const CenteredMessageList = styled(MessageList)`
+const CenteredMessageList = styled(MessageList)`
   text-align: center;
 `;
 
-export const MessageItem = styled.li<{ type: MessagesTypes }>`
+const MessageItem = styled.li<{ type: MessagesTypes }>`
   &:last-of-type {
     margin: 0 0 ${SPACER.x2small} 0;
   }
@@ -27,3 +27,5 @@ export const MessageItem = styled.li<{ type: MessagesTypes }>`
 
   line-height: ${({ theme }) => setThemeLineHeight(theme, '24px')};
 `;
+
+export default { CenteredMessageList, MessageItem, MessageList };

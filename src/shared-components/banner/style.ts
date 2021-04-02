@@ -20,7 +20,7 @@ const errorAlertStyles = (theme: ThemeType) => `
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const BannerContainer = styled.button<{
+const BannerContainer = styled.button<{
   bannerType: BannerType;
   onClick?: () => void;
 }>`
@@ -55,7 +55,7 @@ export const BannerContainer = styled.button<{
   }
 `;
 
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -65,14 +65,21 @@ export const MainContainer = styled.div`
   font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
 `;
 
-export const ContentContainer = styled.div`
+const ContentContainer = styled.div`
   margin: -3px 0 0 ${SPACER.medium};
 `;
 
-export const IconContainer = styled.div`
+const IconContainer = styled.div`
   svg {
     height: ${SPACER.medium};
     width: ${SPACER.medium};
     fill: ${({ theme }) => theme.COLORS.white};
   }
 `;
+
+export default {
+  BannerContainer,
+  ContentContainer,
+  IconContainer,
+  MainContainer,
+};

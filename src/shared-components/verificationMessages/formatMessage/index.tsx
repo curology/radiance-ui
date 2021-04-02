@@ -1,7 +1,7 @@
 import React from 'react';
 import uniqueid from 'lodash.uniqueid';
 
-import { MessageType } from '..';
+import type { MessageType } from '..';
 
 const formatMessage = (message: MessageType) => {
   if (Array.isArray(message)) {

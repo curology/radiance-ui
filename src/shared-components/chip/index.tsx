@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
-import { ChipStyles, ChipText } from './style';
+import Style from './style';
 import type { ThemeColors, ThemeType } from '../../constants';
 
 export type StatusType = 'primary' | 'success' | 'error' | 'white';
@@ -82,9 +82,9 @@ export const Chip = ({
   });
 
   return (
-    <ChipStyles backgroundColor={backgroundColor} textColor={textColor}>
-      <ChipText>{text}</ChipText>
-    </ChipStyles>
+    <Style.ChipStyles backgroundColor={backgroundColor} textColor={textColor}>
+      <Style.ChipText>{text}</Style.ChipText>
+    </Style.ChipStyles>
   );
 };
 

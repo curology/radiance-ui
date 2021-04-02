@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ButtonContents } from '../../style';
-import { BaseTextButton } from './style';
+import Style from './style';
 
 export interface TextButtonProps {
   /**
@@ -25,7 +25,7 @@ export const TextButton = ({
   onClick = () => undefined,
   ...rest
 }: TextButtonProps) => (
-  <BaseTextButton
+  <Style.BaseTextButton
     disabled={disabled}
     onClick={
       !disabled
@@ -40,7 +40,7 @@ export const TextButton = ({
     <ButtonContents hasIcon={false} isFullWidth={false} isLoading={false}>
       {children}
     </ButtonContents>
-  </BaseTextButton>
+  </Style.BaseTextButton>
 );
 
 TextButton.propTypes = {

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Container from '../../shared-components/container';
-import type { ButtonType } from '../..';
+import type { ButtonType } from '../../types';
 import { ButtonContents, ButtonText } from '../../style';
-import { linkButtonStyles } from './style';
+import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
 export interface LinkProps {
@@ -54,7 +54,7 @@ export const LinkButton = ({
 
   return (
     <ContainerTag
-      css={linkButtonStyles({
+      css={Style.linkButtonStyles({
         disabled,
         buttonType,
         buttonColor: buttonColorWithTheme,
