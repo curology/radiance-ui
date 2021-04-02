@@ -31,25 +31,27 @@ const getTypeColor = (
   return theme.COLORS.primary;
 };
 
+interface ContainerProps {
+  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+  containerType: ContainerType;
+}
+
+interface SharedContainerStylesProps extends ContainerProps {
+  theme: ThemeType;
+}
+
 const sharedContainerStyles = ({
+  borderRadius,
   containerType,
   theme,
-}: {
-  containerType: ContainerType;
-  theme: ThemeType;
-}) => `
-  border-radius: ${theme.BORDER_RADIUS.small};
+}: SharedContainerStylesProps) => `
+  border-radius: ${borderRadius ?? theme.BORDER_RADIUS.small};
   ${containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
 `;
-
-interface ContainerProps {
-  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
-  containerType: ContainerType;
-}
 
 export const DisplayContainer = styled.div<ContainerProps>`
   ${sharedContainerStyles}
