@@ -4,12 +4,12 @@ import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
 import { BorderRadiusValues } from '.';
 
-export const Content = styled.div`
+const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
 `;
 
-export const ExpansionWrapper = styled.div<{ contentHeight: string }>`
+const ExpansionWrapper = styled.div<{ contentHeight: string }>`
   max-height: ${({ contentHeight }) => contentHeight};
   overflow: hidden;
   transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
@@ -23,7 +23,7 @@ const getBorderStyle = (theme: ThemeType, isOpen: boolean) => `
   }
 `;
 
-export const AccordionBox = styled.div<{
+const AccordionBox = styled.div<{
   disabled: boolean;
   isOpen: boolean;
   noBorder: boolean;
@@ -47,7 +47,7 @@ export const AccordionBox = styled.div<{
       : ''};
 `;
 
-export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
+const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
   display: flex;
   align-items: center;
 
@@ -57,7 +57,7 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
       : `padding: 0 ${SPACER.medium};`};
 `;
 
-export const TitleWrapper = styled.div<{
+const TitleWrapper = styled.div<{
   borderRadius?: BorderRadiusValues;
   disabled: boolean;
   isOpen: boolean;
@@ -85,7 +85,7 @@ export const TitleWrapper = styled.div<{
   }
 `;
 
-export const Truncate = styled.div`
+const Truncate = styled.div`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -96,7 +96,7 @@ export const Truncate = styled.div`
  * borderRadius must match borderRadius passed to main <Accordion />
  * component if opting out of default values.
  */
-export const Container = styled.div<{
+const Container = styled.div<{
   borderRadius?: BorderRadiusValues;
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
@@ -134,3 +134,13 @@ export const Container = styled.div<{
   `;
   }}
 `;
+
+export default {
+  AccordionBox,
+  ArrowWrapper,
+  Container,
+  Content,
+  ExpansionWrapper,
+  TitleWrapper,
+  Truncate,
+};

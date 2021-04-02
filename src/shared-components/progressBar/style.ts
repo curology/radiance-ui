@@ -10,7 +10,7 @@ const loadingProgression = keyframes`
   to { transform: translateX(-5%); }
 `;
 
-export const OuterContainer = styled.div<{
+const OuterContainer = styled.div<{
   backgroundColor: string;
   barHeight: number;
   status: ProgressBarStatusType;
@@ -51,7 +51,7 @@ const getStatusStyles = (status: ProgressBarStatusType, theme: ThemeType) => {
   return baseStyles;
 };
 
-export const InnerBar = styled.div<{
+const InnerBar = styled.div<{
   barColor: string;
   barHeight: number;
   loadingTime: string;
@@ -67,3 +67,5 @@ export const InnerBar = styled.div<{
 
   ${({ status, theme }) => getStatusStyles(status, theme)}
 `;
+
+export default { InnerBar, OuterContainer };

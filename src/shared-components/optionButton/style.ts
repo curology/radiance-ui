@@ -31,7 +31,7 @@ const getTypeColor = (
   return theme.COLORS.primary;
 };
 
-export const ClickableContainer = styled.button<{
+const ClickableContainer = styled.button<{
   borderRadius?: string;
   containerType: ContainerType;
 }>`
@@ -49,7 +49,7 @@ export const ClickableContainer = styled.button<{
   }
 `;
 
-export const FlexContainer = styled.div`
+const FlexContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -97,9 +97,7 @@ const getBaseIconWrapperStyles = ({
   }
 `;
 
-export const CheckmarkWrapper = styled.div<
-  Omit<BaseIconWrapperStylesProps, 'theme'>
->`
+const CheckmarkWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
   ${({ buttonType, optionType, selected, theme }) =>
     getBaseIconWrapperStyles({
       buttonType,
@@ -109,9 +107,7 @@ export const CheckmarkWrapper = styled.div<
     })}
 `;
 
-export const IconWrapper = styled.div<
-  Omit<BaseIconWrapperStylesProps, 'theme'>
->`
+const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
   ${({ buttonType, optionType, selected, theme }) =>
     getBaseIconWrapperStyles({
       buttonType,
@@ -138,16 +134,26 @@ export const IconWrapper = styled.div<
     `};
 `;
 
-export const TextContainer = styled.div`
+const TextContainer = styled.div`
   margin-left: ${SPACER.medium};
 `;
 
-export const Text = styled.div`
+const Text = styled.div`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
 
-export const SubText = styled.div`
+const SubText = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
+
+export default {
+  CheckmarkWrapper,
+  ClickableContainer,
+  FlexContainer,
+  IconWrapper,
+  SubText,
+  Text,
+  TextContainer,
+};

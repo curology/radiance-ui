@@ -4,14 +4,14 @@ import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
 import type { SelectorType, SizeType, StyleType } from '.';
 
-export const SelectorContainer = styled.div`
+const SelectorContainer = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
   position: relative;
 `;
 
-export const OuterContainer = styled.div<{ selector: SelectorType }>`
+const OuterContainer = styled.div<{ selector: SelectorType }>`
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -32,7 +32,7 @@ export const OuterContainer = styled.div<{ selector: SelectorType }>`
   }
 `;
 
-export const SelectorIcon = styled.div<{ disabled: boolean }>`
+const SelectorIcon = styled.div<{ disabled: boolean }>`
   fill: currentColor;
   left: 50%;
   position: absolute;
@@ -59,7 +59,7 @@ const disabledSelectorStyle = (theme: ThemeType) => `
   cursor: not-allowed;
 `;
 
-export const Selector = styled.div<{
+const Selector = styled.div<{
   disabled: boolean;
   selector: SelectorType;
   selectorChecked: boolean;
@@ -104,9 +104,17 @@ export const Selector = styled.div<{
   }
 `;
 
-export const TextContainer = styled.p`
+const TextContainer = styled.p`
   margin-left: ${SPACER.medium};
   margin-top: ${SPACER.xsmall};
   min-width: 125px;
   text-align: left;
 `;
+
+export default {
+  OuterContainer,
+  Selector,
+  SelectorContainer,
+  SelectorIcon,
+  TextContainer,
+};

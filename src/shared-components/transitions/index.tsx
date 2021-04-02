@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { FadeInContainer as StyledContainer } from './style';
-
-export { opacityInAnimationStyle } from './style';
+import Style from './style';
 
 export interface FadeInContainerProps {
   children: React.ReactNode;
@@ -22,9 +20,9 @@ export const FadeInContainer = ({
   slide = false,
   speed = '350ms',
 }: FadeInContainerProps) => (
-  <StyledContainer withSlide={slide} animationSpeed={speed}>
+  <Style.FadeInContainer withSlide={slide} animationSpeed={speed}>
     {children}
-  </StyledContainer>
+  </Style.FadeInContainer>
 );
 
 FadeInContainer.propTypes = {
@@ -32,3 +30,7 @@ FadeInContainer.propTypes = {
   slide: PropTypes.bool,
   speed: PropTypes.string,
 };
+
+const { opacityInAnimationStyle } = Style;
+
+export { opacityInAnimationStyle };

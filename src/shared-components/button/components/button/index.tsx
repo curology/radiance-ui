@@ -2,26 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
-import Loader from './shared-components/loader';
-import Container from './shared-components/container';
-import { ButtonBase, ButtonText, ButtonContents } from './style';
-import withDeprecationWarning from '../../utils/withDeprecationWarning';
-import { LinkButton } from './components/linkButton';
-import { AnchorLinkButton } from './components/anchorLinkButton';
-import RoundButton from './components/roundButton';
-import { TextButton } from './components/textButton';
+import Loader from '../../shared-components/loader';
+import Container from '../../shared-components/container';
+import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
-} from './deprecatedPropsHandler';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
-import { isDefined } from '../../utils/isDefined';
-
-export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-/**
- * RoundButton can also accept a buttonType prop of 'action'
- */
-export type ButtonTypeWithAction = ButtonType | 'action';
+} from '../../deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { isDefined } from '../../../../utils/isDefined';
+import type { ButtonType } from '../../types';
+import { ButtonBase, ButtonContents, ButtonText } from '../../style';
 
 export interface ButtonProps {
   buttonColor?: ThemeColors;
@@ -141,7 +132,6 @@ Button.propTypes = {
   textColor: PropTypes.string,
 };
 
-export { AnchorLinkButton, LinkButton, RoundButton, TextButton };
 const ButtonComponent = withDeprecationWarning(Button, deprecatedProperties);
 
 export { ButtonComponent as Button };

@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 
-import type { ButtonType } from '../..';
+import type { ButtonType } from '../../types';
 import type { ThemeColors, ThemeType } from '../../../../constants';
 import { baseButtonStyles } from '../../style';
 
@@ -14,7 +14,7 @@ interface LinkButtonStylesProps {
   theme: ThemeType;
 }
 
-export const linkButtonStyles = ({
+const linkButtonStyles = ({
   buttonColor,
   buttonType,
   disabled,
@@ -41,3 +41,7 @@ export const linkButtonStyles = ({
   `
     : ''}
 `;
+
+export default {
+  linkButtonStyles,
+};

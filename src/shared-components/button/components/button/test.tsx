@@ -2,7 +2,7 @@ import React from 'react';
 import { userEvent, render } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
 
-import { CameraIcon } from '../../icons';
+import { CameraIcon } from '../../../../icons';
 
 import { Button } from './index';
 

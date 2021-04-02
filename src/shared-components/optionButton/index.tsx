@@ -1,15 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  ClickableContainer,
-  FlexContainer,
-  TextContainer,
-  Text,
-  SubText,
-  IconWrapper,
-  CheckmarkWrapper,
-} from './style';
+import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
 
@@ -42,7 +34,7 @@ export const OptionButton = ({
   text,
   ...rest
 }: OptionButtonProps) => (
-  <ClickableContainer
+  <Style.ClickableContainer
     borderRadius={borderRadius}
     onClick={onClick}
     type="button"
@@ -51,33 +43,33 @@ export const OptionButton = ({
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
-    <FlexContainer>
+    <Style.FlexContainer>
       {/**
        * We sometimes use && conditionals such that we are passing in `false` as a value
        */}
       {isDefined(icon) && icon !== false ? (
-        <IconWrapper
+        <Style.IconWrapper
           selected={selected}
           optionType={optionType}
           buttonType={buttonType}
         >
           {selected ? <CheckmarkIcon /> : icon}
-        </IconWrapper>
+        </Style.IconWrapper>
       ) : (
-        <CheckmarkWrapper
+        <Style.CheckmarkWrapper
           selected={selected}
           optionType={optionType}
           buttonType={buttonType}
         >
           <CheckmarkIcon />
-        </CheckmarkWrapper>
+        </Style.CheckmarkWrapper>
       )}
-      <TextContainer>
-        <Text>{text}</Text>
-        {isDefined(subtext) && <SubText>{subtext}</SubText>}
-      </TextContainer>
-    </FlexContainer>
-  </ClickableContainer>
+      <Style.TextContainer>
+        <Style.Text>{text}</Style.Text>
+        {isDefined(subtext) && <Style.SubText>{subtext}</Style.SubText>}
+      </Style.TextContainer>
+    </Style.FlexContainer>
+  </Style.ClickableContainer>
 );
 
 OptionButton.propTypes = {
