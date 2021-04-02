@@ -2,14 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { useTheme } from '@emotion/react';
 
-import {
-  FieldContainer,
-  Label,
-  InputContainer,
-  Textarea,
-  Input,
-  HintItem,
-} from './style';
+import Style from './style';
 import { CheckmarkIcon, ErrorIcon } from '../../icons';
 import {
   VerificationMessages,
@@ -82,31 +75,34 @@ export const Field = ({
     );
 
   return (
-    <FieldContainer>
+    <Style.FieldContainer>
       {!!label && (
-        <Label htmlFor={htmlFor} disabled={disabled}>
+        <Style.Label htmlFor={htmlFor} disabled={disabled}>
           {label}
-        </Label>
+        </Style.Label>
       )}
 
-      <InputContainer showMessages={showMessages} messagesType={messagesType}>
+      <Style.InputContainer
+        showMessages={showMessages}
+        messagesType={messagesType}
+      >
         {hideMessagesIcon || MessageIcon}
 
         {React.cloneElement(inputChild, {
           disabled,
         })}
 
-        {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
+        {!!hintMessage && <Style.HintItem>{hintMessage}</Style.HintItem>}
 
         <VerificationMessages messages={messages} type={messagesType} />
-      </InputContainer>
-    </FieldContainer>
+      </Style.InputContainer>
+    </Style.FieldContainer>
   );
 };
 
-Field.Textarea = Textarea;
+Field.Textarea = Style.Textarea;
 
-Field.Input = Input;
+Field.Input = Style.Input;
 
 Field.propTypes = {
   children: PropTypes.element.isRequired,

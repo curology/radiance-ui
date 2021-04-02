@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup } from 'react-transition-group';
 
-import { CenteredMessageList, MessageList, MessageItem } from './style';
+import Style from './style';
 import HelperTransition from '../../utils/helperTransition';
 import formatMessage from './formatMessage';
 
@@ -39,7 +39,9 @@ export const VerificationMessages = ({
   const showMessages = messageKeys.length > 0;
 
   return (
-    <TransitionGroup component={centered ? CenteredMessageList : MessageList}>
+    <TransitionGroup
+      component={centered ? Style.CenteredMessageList : Style.MessageList}
+    >
       {showMessages ? (
         messageKeys
           .filter((key) => {
@@ -51,9 +53,9 @@ export const VerificationMessages = ({
           })
           .map((key) => (
             <HelperTransition key={key}>
-              <MessageItem type={type}>
+              <Style.MessageItem type={type}>
                 {formatMessage(messages[key])}
-              </MessageItem>
+              </Style.MessageItem>
             </HelperTransition>
           ))
       ) : (

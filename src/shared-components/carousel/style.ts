@@ -2,9 +2,9 @@ import styled from '@emotion/styled';
 
 import { SPACER, ThemeType } from '../../constants';
 
-import { CarouselType } from '.';
+import type { CarouselType } from '.';
 
-export const Card = styled.div`
+const Card = styled.div`
   width: 311px !important;
   min-height: 48px;
   margin: 0 ${SPACER.small};
@@ -178,11 +178,11 @@ const parseOuterStyle = (numCardsVisible: number) => {
   `;
 };
 
-export const OuterContainer = styled.div<{ numCardsVisible: number }>`
+const OuterContainer = styled.div<{ numCardsVisible: number }>`
   ${({ numCardsVisible }) => parseOuterStyle(numCardsVisible)};
 `;
 
-export const InnerContainer = styled.div<{
+const InnerContainer = styled.div<{
   carouselType: CarouselType;
 }>`
   overflow: hidden !important;
@@ -200,3 +200,5 @@ export const InnerContainer = styled.div<{
 
   ${({ carouselType, theme }) => parseStyle(carouselType, theme)}
 `;
+
+export default { Card, InnerContainer, OuterContainer };

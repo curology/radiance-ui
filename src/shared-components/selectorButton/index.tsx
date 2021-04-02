@@ -3,13 +3,7 @@ import PropTypes from 'prop-types';
 import { css, useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
-import {
-  OuterContainer,
-  Selector,
-  SelectorContainer,
-  TextContainer,
-  SelectorIcon,
-} from './style';
+import Style from './style';
 import { isDefined } from '../../utils/isDefined';
 
 export type SelectorType = 'radio' | 'checkbox';
@@ -61,7 +55,7 @@ export const SelectorButton = ({
     );
 
   return (
-    <OuterContainer
+    <Style.OuterContainer
       onClick={onClick}
       onKeyPress={onClick}
       tabIndex={0}
@@ -71,21 +65,23 @@ export const SelectorButton = ({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <SelectorContainer>
-        <SelectorIcon disabled={disabled}>
+      <Style.SelectorContainer>
+        <Style.SelectorIcon disabled={disabled}>
           {checked ? checkedIcon : size === 'large' && icon}
-        </SelectorIcon>
-        <Selector
+        </Style.SelectorIcon>
+        <Style.Selector
           type={type}
           selectorChecked={checked}
           disabled={disabled}
           selector={selector}
           selectorSize={size}
         />
-      </SelectorContainer>
+      </Style.SelectorContainer>
 
-      {isDefined(children) && <TextContainer>{children}</TextContainer>}
-    </OuterContainer>
+      {isDefined(children) && (
+        <Style.TextContainer>{children}</Style.TextContainer>
+      )}
+    </Style.OuterContainer>
   );
 };
 

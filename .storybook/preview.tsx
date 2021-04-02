@@ -9,7 +9,7 @@ import {
   brandStyles,
 } from '../src/utils/injectGlobalStyles/style';
 import { primaryTheme, secondaryTheme } from '../src/constants/themes';
-import { ThemeType } from '../src/constants/themes/types';
+import type { ThemeType } from '../src/constants/themes/types';
 import { BREAKPOINTS } from '../src/constants';
 
 const ADDONS_REQUIRED_IN_OPTIONS = {

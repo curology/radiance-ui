@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import { PROGRESS_BAR_STATUS, ThemeColors } from '../../constants';
-import { OuterContainer, InnerBar } from './style';
+import Style from './style';
 
 export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
 
@@ -41,20 +41,20 @@ export const ProgressBar = ({
   const barColorWithTheme = barColor ?? theme.COLORS.primary;
 
   return (
-    <OuterContainer
+    <Style.OuterContainer
       status={status}
       barHeight={height}
       backgroundColor={backgroundColorWithTheme}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <InnerBar
+      <Style.InnerBar
         status={status}
         barHeight={height}
         barColor={barColorWithTheme}
         loadingTime={loadingTime}
       />
-    </OuterContainer>
+    </Style.OuterContainer>
   );
 };
 

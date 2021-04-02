@@ -8,20 +8,7 @@ import { FocusScope } from '@react-aria/focus';
 import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { OffClickWrapper } from '../offClickWrapper';
 import { CrossIcon } from '../../icons';
-import {
-  Overlay,
-  MobileHeaderBar,
-  DesktopHeaderBar,
-  ModalContainer,
-  MobileTopOverlay,
-  CrossIconContainer,
-  HeaderImageContainer,
-  ContentWithFooterContainer,
-  ModalTitle,
-  ModalFooter,
-  MainModalContentContainer,
-  Paragraph,
-} from './style';
+import Style from './style';
 import { isDefined } from '../../utils/isDefined';
 
 export interface ImmersiveModalProps {
@@ -172,15 +159,15 @@ export const ImmersiveModal = ({
     >
       {(transitionState): JSX.Element => (
         <React.Fragment>
-          <MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
+          <Style.MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
             {title}
-            <CrossIconContainer onClick={handleCloseIntent}>
+            <Style.CrossIconContainer onClick={handleCloseIntent}>
               <CrossIcon />
-            </CrossIconContainer>
-          </MobileHeaderBar>
+            </Style.CrossIconContainer>
+          </Style.MobileHeaderBar>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Overlay className={transitionState} {...rest}>
-            <ModalContainer
+          <Style.Overlay className={transitionState} {...rest}>
+            <Style.ModalContainer
               className={transitionState}
               id={MODAL_MOBILE_SCROLLING_ID}
             >
@@ -188,48 +175,54 @@ export const ImmersiveModal = ({
                 onOffClick={handleCloseIntent}
                 className="modal-offclick-wrapper"
               >
-                <MobileTopOverlay onClick={handleCloseIntent} />
+                <Style.MobileTopOverlay onClick={handleCloseIntent} />
                 <FocusScope contain restoreFocus>
-                  <MainModalContentContainer
+                  <Style.MainModalContentContainer
                     id={MODAL_DESKTOP_SCROLLING_ID}
                     hasHeaderImage={hasHeaderImage}
                   >
-                    <CrossIconContainer
+                    <Style.CrossIconContainer
                       onClick={handleCloseIntent}
                       tabIndex={showDesktopHeaderBar ? -1 : 0}
                     >
                       <CrossIcon />
-                    </CrossIconContainer>
+                    </Style.CrossIconContainer>
 
-                    <DesktopHeaderBar
+                    <Style.DesktopHeaderBar
                       showDesktopHeaderBar={showDesktopHeaderBar}
                     >
                       {title}
-                      <CrossIconContainer
+                      <Style.CrossIconContainer
                         onClick={handleCloseIntent}
                         tabIndex={showDesktopHeaderBar ? 0 : -1}
                       >
                         <CrossIcon />
-                      </CrossIconContainer>
-                    </DesktopHeaderBar>
+                      </Style.CrossIconContainer>
+                    </Style.DesktopHeaderBar>
 
                     {hasHeaderImage && (
-                      <HeaderImageContainer>{headerImage}</HeaderImageContainer>
+                      <Style.HeaderImageContainer>
+                        {headerImage}
+                      </Style.HeaderImageContainer>
                     )}
-                    <ContentWithFooterContainer hasHeaderImage={hasHeaderImage}>
+                    <Style.ContentWithFooterContainer
+                      hasHeaderImage={hasHeaderImage}
+                    >
                       <div>
-                        {isDefined(title) && <ModalTitle>{title}</ModalTitle>}
+                        {isDefined(title) && (
+                          <Style.ModalTitle>{title}</Style.ModalTitle>
+                        )}
                         {children}
                       </div>
                       {isDefined(footerContent) && (
-                        <ModalFooter>{footerContent}</ModalFooter>
+                        <Style.ModalFooter>{footerContent}</Style.ModalFooter>
                       )}
-                    </ContentWithFooterContainer>
-                  </MainModalContentContainer>
+                    </Style.ContentWithFooterContainer>
+                  </Style.MainModalContentContainer>
                 </FocusScope>
               </OffClickWrapper>
-            </ModalContainer>
-          </Overlay>
+            </Style.ModalContainer>
+          </Style.Overlay>
         </React.Fragment>
       )}
     </Transition>,
@@ -237,7 +230,7 @@ export const ImmersiveModal = ({
   );
 };
 
-ImmersiveModal.Paragraph = Paragraph;
+ImmersiveModal.Paragraph = Style.Paragraph;
 
 ImmersiveModal.propTypes = {
   children: PropTypes.node.isRequired,

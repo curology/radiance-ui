@@ -2,26 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-import Loader from './shared-components/loader';
-import Container from './shared-components/container';
-import { ButtonBase, ButtonText, ButtonContents } from './style';
-import withDeprecationWarning from '../../utils/withDeprecationWarning';
-import { LinkButton } from './components/linkButton';
-import { AnchorLinkButton } from './components/anchorLinkButton';
-import RoundButton from './components/roundButton';
-import { TextButton } from './components/textButton';
+import Loader from '../../shared-components/loader';
+import Container from '../../shared-components/container';
+import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
-} from './deprecatedPropsHandler';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
-import { isDefined } from '../../utils/isDefined';
-
-export type ButtonType = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
-/**
- * RoundButton can also accept a buttonType prop of 'action'
- */
-export type ButtonTypeWithAction = ButtonType | 'action';
+} from '../../deprecatedPropsHandler';
+import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { isDefined } from '../../../../utils/isDefined';
+import type { ButtonType } from '../../types';
+import { ButtonBase, ButtonContents, ButtonText } from '../../style';
 
 export interface ButtonProps {
   buttonColor?: ThemeColors;
@@ -62,7 +53,7 @@ export interface ButtonProps {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const Button = ({
+const Button = ({
   buttonColor,
   buttonType = 'primary',
   children,
@@ -78,7 +69,7 @@ export const Button = ({
   const theme = useTheme();
   const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
-  const hasIcon = isDefined(icon);
+  const hasIcon = isDefined(icon) && icon !== false;
 
   return (
     <ButtonBase
@@ -141,5 +132,6 @@ Button.propTypes = {
   textColor: PropTypes.string,
 };
 
-export { AnchorLinkButton, LinkButton, RoundButton, TextButton };
-export default withDeprecationWarning(Button, deprecatedProperties);
+const ButtonComponent = withDeprecationWarning(Button, deprecatedProperties);
+
+export { ButtonComponent as Button };

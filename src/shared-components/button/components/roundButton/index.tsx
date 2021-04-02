@@ -3,15 +3,9 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Loader from '../../shared-components/loader';
-import {
-  RoundButtonWrapper,
-  RoundButtonBase,
-  roundButtonLoader,
-  RoundButtonContainer,
-  roundButtonTextStyles,
-} from './style';
+import Style from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { ButtonTypeWithAction } from '../..';
+import type { ButtonTypeWithAction } from '../../types';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
@@ -71,8 +65,8 @@ export const RoundButton = ({
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
-    <RoundButtonWrapper>
-      <RoundButtonBase
+    <Style.RoundButtonWrapper>
+      <Style.RoundButtonBase
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
@@ -89,21 +83,27 @@ export const RoundButton = ({
           buttonColor={buttonColorWithTheme}
           buttonType={buttonType}
           disabled={disabled}
-          css={roundButtonLoader(disabled, theme)}
+          css={Style.roundButtonLoader(disabled, theme)}
           isLoading={loadingVal}
           textColor={textColor}
         />
-      </RoundButtonBase>
+      </Style.RoundButtonBase>
       {isDefined(children) && (
-        <p css={roundButtonTextStyles(buttonColorWithTheme, theme, textColor)}>
+        <p
+          css={Style.roundButtonTextStyles(
+            buttonColorWithTheme,
+            theme,
+            textColor,
+          )}
+        >
           {children}
         </p>
       )}
-    </RoundButtonWrapper>
+    </Style.RoundButtonWrapper>
   );
 };
 
-RoundButton.Container = RoundButtonContainer;
+RoundButton.Container = Style.RoundButtonContainer;
 
 RoundButton.propTypes = {
   buttonColor: COLORS_PROP_TYPES,

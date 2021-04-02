@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import Arrow from './arrow';
-import { OuterContainer, InnerContainer, Card } from './style';
+import Style from './style';
 import { isDefined } from '../../utils/isDefined';
 
 const FIRST_INDEX = 0;
@@ -157,18 +157,21 @@ export const Carousel = ({
   };
 
   return (
-    <OuterContainer numCardsVisible={numCardsVisible}>
-      <InnerContainer carouselType={carouselType} onClick={onUserInteraction}>
+    <Style.OuterContainer numCardsVisible={numCardsVisible}>
+      <Style.InnerContainer
+        carouselType={carouselType}
+        onClick={onUserInteraction}
+      >
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Slider ref={slider} {...carouselSettings}>
           {children}
         </Slider>
-      </InnerContainer>
-    </OuterContainer>
+      </Style.InnerContainer>
+    </Style.OuterContainer>
   );
 };
 
-Carousel.Card = Card;
+Carousel.Card = Style.Card;
 
 Carousel.propTypes = {
   autoplay: PropTypes.bool,

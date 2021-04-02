@@ -4,13 +4,7 @@ import { Global, useTheme } from '@emotion/react';
 
 import { ArrowIcon } from '../../icons';
 import { OffClickWrapper } from '../offClickWrapper';
-import {
-  MainContainer,
-  Trigger,
-  TooltipBox,
-  TooltipContent,
-  ArrowImageContainer,
-} from './style';
+import Style from './style';
 
 export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
@@ -125,8 +119,8 @@ export const Tooltip = ({
           },
         }}
       />
-      <MainContainer>
-        <Trigger
+      <Style.MainContainer>
+        <Style.Trigger
           onClick={onClick}
           onMouseEnter={() => {
             setHovered(true);
@@ -136,8 +130,8 @@ export const Tooltip = ({
           }}
         >
           {children}
-        </Trigger>
-        <TooltipBox
+        </Style.Trigger>
+        <Style.TooltipBox
           alignRightPercent={alignRightPercent}
           alignTopPercent={alignTopPercent}
           arrowAlign={arrowAlign}
@@ -151,12 +145,15 @@ export const Tooltip = ({
           open={open}
           position={position}
         >
-          <TooltipContent>{content}</TooltipContent>
-          <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
+          <Style.TooltipContent>{content}</Style.TooltipContent>
+          <Style.ArrowImageContainer
+            arrowAlign={arrowAlign}
+            position={position}
+          >
             <ArrowIcon width={16} height={16} fill={theme.COLORS.primary} />
-          </ArrowImageContainer>
-        </TooltipBox>
-      </MainContainer>
+          </Style.ArrowImageContainer>
+        </Style.TooltipBox>
+      </Style.MainContainer>
     </OffClickWrapper>
   );
 };

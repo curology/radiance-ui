@@ -13,7 +13,7 @@ const multiStyles = `
   margin: 0 auto;
 `;
 
-export const RoundButtonContainer = styled.div<{ multi: boolean }>`
+const RoundButtonContainer = styled.div<{ multi: boolean }>`
   display: flex;
   justify-content: center;
   align-items: start;
@@ -21,14 +21,14 @@ export const RoundButtonContainer = styled.div<{ multi: boolean }>`
   ${({ multi }) => multi && multiStyles};
 `;
 
-export const RoundButtonWrapper = styled.div`
+const RoundButtonWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-export const RoundButtonBase = styled(ButtonBase)`
+const RoundButtonBase = styled(ButtonBase)`
   border-radius: 50%;
   max-width: unset;
   min-height: unset;
@@ -54,7 +54,7 @@ export const RoundButtonBase = styled(ButtonBase)`
   }
 `;
 
-export const roundButtonLoader = (disabled: boolean, theme: ThemeType) => css`
+const roundButtonLoader = (disabled: boolean, theme: ThemeType) => css`
   width: 36px;
   margin: -3px -3px 0 0;
 
@@ -118,7 +118,7 @@ const buttonTextColor = (
     : determineAlternateTextColor(buttonColor, theme);
 };
 
-export const roundButtonTextStyles = (
+const roundButtonTextStyles = (
   buttonColor: ThemeColors,
   theme: ThemeType,
   textColor?: ThemeColors,
@@ -126,3 +126,11 @@ export const roundButtonTextStyles = (
   color: ${buttonTextColor(buttonColor, theme, textColor)};
   margin: 10px 0;
 `;
+
+export default {
+  RoundButtonBase,
+  RoundButtonContainer,
+  roundButtonLoader,
+  roundButtonTextStyles,
+  RoundButtonWrapper,
+};

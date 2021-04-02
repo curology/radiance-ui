@@ -41,7 +41,7 @@ const getAnimationStyle = (slide: boolean, speed: string) => {
   `;
 };
 
-export const FadeInContainer = styled.div<{
+const FadeInContainer = styled.div<{
   animationSpeed: string;
   withSlide: boolean;
 }>`
@@ -49,6 +49,11 @@ export const FadeInContainer = styled.div<{
     getAnimationStyle(withSlide, animationSpeed)};
 `;
 
-export const opacityInAnimationStyle = css`
+const opacityInAnimationStyle = css`
   animation: ${opacityInAnimation} ${ANIMATION.defaultTiming} ease-in-out;
 `;
+
+export default {
+  FadeInContainer,
+  opacityInAnimationStyle,
+};

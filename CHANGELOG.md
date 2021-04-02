@@ -1,21 +1,46 @@
 # CHANGELOG
 
+# v19.1.0
+
+- [Bugfix] Handle `false` icon props for logic like `<OptionButton icon={Icon && <Icon />} />` ([#900](https://github.com/curology/radiance-ui/pull/900))
+- [Typography] Add `Body Bold` style and component (`Typography.Bold`) ([#884](https://github.com/curology/radiance-ui/pull/884))
+
+# v19.0.1
+
+- [TypeScript] Update library exports to export TypeScript types ([#894](https://github.com/curology/radiance-ui/pull/894))
+
+# v19.0.0
+
+- [Components] **BREAKING CHANGE** Update `<Callout />` API, removing `color` prop and adding new `error` type ([#878](https://github.com/curology/radiance-ui/pull/878))
+- [Components] **BREAKING CHANGE** Update `<Chip />` API, add Low Contrast variations, and remove `secondary` type, and make `primary` type default ([#883](https://github.com/curology/radiance-ui/pull/883))
+- [Components] **BREAKING CHANGE** Update `<Indicator />` API, remove `backgroundColor` prop, add `type` presets ([#885](https://github.com/curology/radiance-ui/pull/885))
+
+# v18.2.0
+
+- [Icons] Add Secondary Logo ([#879](https://github.com/curology/radiance-ui/pull/879))
+
 # v18.1.0
+
 - [Modals] Change overlay color in `DialogModal` and `ImmersiveModal` ([#846](https://github.com/curology/radiance-ui/pull/846))
 
 # v18.0.0
+
 - [Modals] **BREAKING CHANGE**: Remove custom styling to `DialogModal` and `ImmersiveModal` paragraph tags in modals body, added as subcomponent as an alternative ([#833](https://github.com/curology/radiance-ui/pull/833))
 
 # v17.2.3
+
 - [Icons] Add KojiAcidGlyph ([#818](https://github.com/curology/radiance-ui/pull/818))
 
 # v17.2.2
+
 - [Icons] Add DesonideGlyph, MetronidazoleGlyph and TranexamicAcidGlyph ([#815](https://github.com/curology/radiance-ui/pull/815))
 
 # v17.2.1
+
 - [Components] Add media query to DialogModal for smaller devices ([#779](https://github.com/curology/radiance-ui/pull/779))
 
 # v17.2.0
+
 - [Icons] Add SunMoonGlyph and SunMoonGlyphSecondary ([#801](https://github.com/curology/radiance-ui/pull/801))
 
 # v17.1.0
