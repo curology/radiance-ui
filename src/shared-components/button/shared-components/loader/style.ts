@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 import { keyframes } from '@emotion/core';
 
-import { ButtonTypeWithAction } from '../..';
-import { ThemeColors, ThemeType } from '../../../../constants';
+import type { ButtonTypeWithAction } from '../../types';
+import type { ThemeColors, ThemeType } from '../../../../constants';
 import { primaryButtonLoadingBackgroundColor } from '../../../../utils/themeStyles';
 import { isDefined } from '../../../../utils/isDefined';
 

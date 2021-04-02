@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 
-import { style as TYPOGRAPHY_STYLE } from '../../../typography';
-import { ThemeType } from '../../../../constants';
+import { TYPOGRAPHY_STYLE } from '../../../typography';
+import type { ThemeType } from '../../../../constants';
 
 /**
  * TODO: Consolidate, fully, this specific link style with TYPOGRAPHY_STYLE.link,

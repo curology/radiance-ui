@@ -2,7 +2,7 @@ import React from 'react';
 import { useTheme } from 'emotion-theming';
 
 import { ChevronIcon } from '../../icons';
-import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
+import Style from './style';
 
 import { OptionType, OptionValue } from '.';
 
@@ -29,9 +29,9 @@ export const MobileDropdown = <T extends OptionType>({
   const theme = useTheme();
 
   return (
-    <DropdownContainer textAlign={textAlign}>
+    <Style.DropdownContainer textAlign={textAlign}>
       <select
-        css={dropdownInputStyle({
+        css={Style.dropdownInputStyle({
           borderRadius,
           shouldBeFullyRounded: true,
           textAlign,
@@ -60,9 +60,9 @@ export const MobileDropdown = <T extends OptionType>({
           );
         })}
       </select>
-      <IconContainer>
+      <Style.IconContainer>
         <ChevronIcon width={10} height={10} />
-      </IconContainer>
-    </DropdownContainer>
+      </Style.IconContainer>
+    </Style.DropdownContainer>
   );
 };

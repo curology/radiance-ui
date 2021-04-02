@@ -4,14 +4,7 @@ import { useTheme } from 'emotion-theming';
 
 import { CheckmarkIcon, ChevronIcon, ErrorIcon, InfoIcon } from '../../icons';
 import { Avatar } from '../avatar';
-import {
-  AlertsContainer,
-  AlertContainer,
-  MainContainer,
-  IconContainer,
-  ContentContainer,
-  CtaContent,
-} from './style';
+import Style from './style';
 import { isDefined } from '../../utils/isDefined';
 
 const ANIMATION_DELAY = 500;
@@ -147,37 +140,37 @@ export const Alert = (alertProps: AlertProps) => {
   const Icon = alertIconMapping[type];
 
   return (
-    <AlertContainer
+    <Style.AlertContainer
       alertType={type}
       exiting={exiting}
       onClick={alertExitHandler}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <MainContainer>
-        <IconContainer hasAvatar={!!avatarSrc}>
+      <Style.MainContainer>
+        <Style.IconContainer hasAvatar={!!avatarSrc}>
           {avatarSrc ? (
             <Avatar size="small" src={avatarSrc} alt="avatar" />
           ) : (
             <Icon fill={theme.COLORS.white} />
           )}
-        </IconContainer>
-        <ContentContainer truncateText={truncateText} ref={contentText}>
+        </Style.IconContainer>
+        <Style.ContentContainer truncateText={truncateText} ref={contentText}>
           {content}
-        </ContentContainer>
-      </MainContainer>
+        </Style.ContentContainer>
+      </Style.MainContainer>
       {ctaContent && (
-        <CtaContent>
+        <Style.CtaContent>
           <div>{ctaContent}</div>
           <ChevronIcon fill={theme.COLORS.white} width={14} height={14} />
-        </CtaContent>
+        </Style.CtaContent>
       )}
-    </AlertContainer>
+    </Style.AlertContainer>
   );
 };
 
 Alert.Container = ({ children }: { children: React.ReactNode }) => (
-  <AlertsContainer>{children}</AlertsContainer>
+  <Style.AlertsContainer>{children}</Style.AlertsContainer>
 );
 
 Alert.propTypes = {

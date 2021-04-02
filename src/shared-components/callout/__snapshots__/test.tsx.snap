@@ -41,7 +41,7 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
 </div>
 `;
 
-exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`] = `
+exports[`<Callout /> UI snapshots renders callout with icon 1`] = `
 .emotion-5 {
   background-color: #EEEDF7;
   padding: 1rem;
@@ -64,7 +64,7 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
 }
 
 .emotion-0 {
-  color: #706D87;
+  color: #332E54;
   font-size: 0.875rem;
 }
 
@@ -73,11 +73,11 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
 }
 
 .emotion-3 svg {
-  fill: #706D87;
+  fill: #332E54;
 }
 
 .emotion-3 svg path {
-  fill: #706D87;
+  fill: #332E54;
 }
 
 .emotion-2 {

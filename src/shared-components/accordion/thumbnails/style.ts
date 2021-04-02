@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { style as TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
+import { TYPOGRAPHY_STYLE } from 'src/shared-components/typography';
 import { SPACER } from 'src/constants';
 
-export const Container = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin-left: ${SPACER.large};
@@ -16,7 +16,7 @@ const thumbnailBase = `
   width: 1rem;
 `;
 
-export const ImageContainer = styled.div`
+const ImageContainer = styled.div`
   ${thumbnailBase}
   overflow: hidden;
   height: 1.5rem;
@@ -27,18 +27,27 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const ThumbnailImage = styled.img`
+const ThumbnailImage = styled.img`
   min-height: 1.5rem;
   min-width: 1rem;
   object-fit: cover;
 `;
 
-export const MultiplesContainer = styled.div`
+const MultiplesContainer = styled.div`
   ${thumbnailBase}
   background-color: ${({ theme }) => theme.COLORS.defaultBorder};
 `;
 
-export const MultiplesText = styled.div`
+const MultiplesText = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
   font-size: 10px;
 `;
+
+export default {
+  Container,
+  ImageContainer,
+  MultiplesContainer,
+  MultiplesText,
+  thumbnailBase,
+  ThumbnailImage,
+};

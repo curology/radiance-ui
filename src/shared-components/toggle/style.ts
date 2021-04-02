@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { SPACER, ThemeType } from '../../constants';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
-export const Container = styled.div`
+const Container = styled.div`
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -17,7 +17,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Label = styled.span`
+const Label = styled.span`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   margin: 0;
   font-size: ${SPACER.medium};
@@ -28,13 +28,13 @@ export const Label = styled.span`
   margin-right: ${SPACER.small};
 `;
 
-export const trackStyle = {
+const trackStyle = {
   borderRadius: 100,
   height: 24,
   width: 40,
 };
 
-export const thumbStyle = (theme: ThemeType) => ({
+const thumbStyle = (theme: ThemeType) => ({
   height: 22,
   width: 22,
   border: `1px solid ${theme.COLORS.border}`,
@@ -43,7 +43,7 @@ export const thumbStyle = (theme: ThemeType) => ({
   backgroundColor: theme.COLORS.white,
 });
 
-export const ReactToggleButtonContainer = styled.div`
+const ReactToggleButtonContainer = styled.div`
   > div:first-of-type {
     > input {
       &:focus {
@@ -54,3 +54,11 @@ export const ReactToggleButtonContainer = styled.div`
     }
   }
 `;
+
+export default {
+  Container,
+  Label,
+  ReactToggleButtonContainer,
+  thumbStyle,
+  trackStyle,
+};

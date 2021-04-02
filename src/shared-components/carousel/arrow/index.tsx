@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { RoundButton } from '../../button';
+import { RoundButton } from '../../button/components/roundButton';
 import { ArrowLeftIcon, ArrowRightIcon } from '../../../icons';
-import { ArrowContainer, BottomRightAlignedArrowContainer } from './style';
+import Style from './style';
 
 export interface ArrowProps {
   bottomRightAlignedArrows?: boolean;
@@ -20,8 +20,8 @@ const Arrow = ({
   prev = false,
 }: ArrowProps) => {
   const ArrowContainerComponent = bottomRightAlignedArrows
-    ? BottomRightAlignedArrowContainer
-    : ArrowContainer;
+    ? Style.BottomRightAlignedArrowContainer
+    : Style.ArrowContainer;
 
   return (
     <ArrowContainerComponent prev={prev} next={next} disabled={disabled}>
