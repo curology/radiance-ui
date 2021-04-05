@@ -12,19 +12,19 @@ import { BREAKPOINTS } from 'src/constants';
 
 export const Usage = () => (
   <React.Fragment>
-    <div css={(theme) => TYPOGRAPHY_STYLE.display(theme)}>display</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.heading(theme)}>heading</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.title(theme)}>title</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.bodyBold(theme)}>body bold</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.body(theme)}>body</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.caption(theme)}>caption</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.label(theme)}>label</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.error(theme)}>error</div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.success(theme)}>success</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.display(cssTheme)}>display</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.heading(cssTheme)}>heading</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.title(cssTheme)}>title</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.bodyBold(cssTheme)}>body bold</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.body(cssTheme)}>body</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.caption(cssTheme)}>caption</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.label(cssTheme)}>label</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.error(cssTheme)}>error</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.success(cssTheme)}>success</div>
     <div>
       <span css={TYPOGRAPHY_STYLE.link}>link</span>
     </div>
-    <div css={(theme) => TYPOGRAPHY_STYLE.button(theme)}>button</div>
+    <div css={(cssTheme) => TYPOGRAPHY_STYLE.button(cssTheme)}>button</div>
   </React.Fragment>
 );
 
