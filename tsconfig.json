@@ -11,5 +11,5 @@
     // Setting the `rootDir` to `src` will guarantee this behavior, and raise compilation errors if violated.
     "rootDir": "src"
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.tsx"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
