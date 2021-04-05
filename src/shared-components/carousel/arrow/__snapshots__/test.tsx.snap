@@ -300,8 +300,8 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-4:hover,
-.emotion-4:visited {
+.emotion-4:visited,
+.emotion-4:hover {
   opacity: 1;
   color: #C3C0CD;
 }

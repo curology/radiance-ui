@@ -30,8 +30,8 @@ const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
   color: ${fontColor};
   fill: ${fontColor};
 
-  &:hover,
-  &:visited {
+  &:visited,
+  &:hover {
     opacity: 0.8;
   }
   
@@ -135,8 +135,8 @@ const disabledStyles = (theme: ThemeType) => `
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
 
-  &:hover,
-  &:visited {
+  &:visited,
+  &:hover {
     opacity: 1;
     color: ${theme.COLORS.textDisabled};
   }
