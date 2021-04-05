@@ -9,24 +9,28 @@ const bodyString = 'Dialog Modal Children Content';
 const modalBody = <DialogModal.Paragraph>{bodyString}</DialogModal.Paragraph>;
 
 describe('<DialogModal />', () => {
-  it('render children content correctly', () => {
-    const { getAllByText, getByText } = render(
+  it('render children content correctly', async () => {
+    const { getAllByText, findByText } = render(
       <DialogModal title={modalTitle}>{modalBody}</DialogModal>,
       { withPortalContainer: true },
     );
 
+    const body = await findByText(bodyString);
+
     expect(getAllByText(modalTitle).length > 0).toBe(true);
-    expect(getByText(bodyString)).toBeInTheDocument();
+    expect(body).toBeInTheDocument();
   });
 
-  it('renders dialog modal with custom color', () => {
-    const { container } = render(
+  it('renders dialog modal with custom color', async () => {
+    const { container, findByText } = render(
       <DialogModal backgroundColor={primaryTheme.COLORS.background}>
         <div>{modalBody}</div>
       </DialogModal>,
       { withPortalContainer: true },
     );
 
-    expect(container.firstElementChild).toMatchSnapshot();
+    await findByText(bodyString);
+
+    expect(container).toMatchSnapshot();
   });
 });
