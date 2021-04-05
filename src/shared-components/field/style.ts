@@ -108,7 +108,7 @@ const InputContainer = styled.div<{
 }>`
   position: relative;
 
-  svg.radiance-field-input-icon {
+  & > svg.radiance-field-input-icon {
     opacity: 0;
     position: absolute;
     top: 20px;

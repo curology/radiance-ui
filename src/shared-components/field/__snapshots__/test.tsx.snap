@@ -16,7 +16,7 @@ exports[`<Field /> UI Snapshot renders with default props 1`] = `
   position: relative;
 }
 
-.emotion-2 svg.radiance-field-input-icon {
+.emotion-2>svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
@@ -146,7 +146,7 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
   position: relative;
 }
 
-.emotion-2 svg.radiance-field-input-icon {
+.emotion-2>svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;
@@ -311,7 +311,7 @@ exports[`<Field /> UI Snapshot renders with label and labelFor props 1`] = `
   position: relative;
 }
 
-.emotion-4 svg.radiance-field-input-icon {
+.emotion-4>svg.radiance-field-input-icon {
   opacity: 0;
   position: absolute;
   top: 20px;

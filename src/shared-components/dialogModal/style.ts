@@ -112,6 +112,7 @@ const CrossIconContainer = styled.div<{
     top: 16px;
     right: 16px;
   }
+
   &:focus {
     outline: none;
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
