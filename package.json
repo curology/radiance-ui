@@ -154,8 +154,8 @@
     "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
-    "@emotion/react": "^11.1.4",
-    "@emotion/styled": "^11.0.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },

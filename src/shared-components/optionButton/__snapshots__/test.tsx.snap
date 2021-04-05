@@ -93,7 +93,6 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: ;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   transition: color 350ms,transform 350ms;
 }
@@ -238,7 +237,6 @@ exports[`<OptionButton /> UI snapshots radio unselected, with icon node prop 1`]
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  color: ;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
   transition: color 350ms,transform 350ms;
 }
