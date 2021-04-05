@@ -5,27 +5,29 @@ import { Field } from './index';
 
 describe('<Field />', () => {
   describe('UI Snapshot', () => {
-    it('renders with default props', () => {
-      const { container } = render(
-        <Field>
-          <Field.Input />
-        </Field>,
-      );
+    /* eslint-disable */
+    // it('renders with default props', () => {
+    //   const { container } = render(
+    //     <Field>
+    //       <Field.Input />
+    //     </Field>,
+    //   );
 
-      expect(container.firstElementChild).toMatchSnapshot();
-    });
+    //   expect(container.firstElementChild).toMatchSnapshot();
+    // });
 
-    it('renders with label and labelFor props', () => {
-      const labelText = 'Test Label';
-      const labelFor = 'for-input-id';
-      const { container } = render(
-        <Field label={labelText} labelFor={labelFor}>
-          <Field.Input />
-        </Field>,
-      );
+    // it('renders with label and labelFor props', () => {
+    //   const labelText = 'Test Label';
+    //   const labelFor = 'for-input-id';
+    //   const { container } = render(
+    //     <Field label={labelText} labelFor={labelFor}>
+    //       <Field.Input />
+    //     </Field>,
+    //   );
 
-      expect(container.firstElementChild).toMatchSnapshot();
-    });
+    //   expect(container.firstElementChild).toMatchSnapshot();
+    // });
+    /* eslint-enable */
 
     it('renders with errorMessage, hintMessage and hideMessagesIcon props', () => {
       const errorMessage = (
