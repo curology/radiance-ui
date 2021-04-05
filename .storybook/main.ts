@@ -1,10 +1,11 @@
 import type { StorybookConfig } from '@storybook/core/types';
+
 const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const babelConfig = require('../babel.config');
 
-const toPath = (_path) => path.join(process.cwd(), _path);
+const toPath = (_path: string) => path.join(process.cwd(), _path);
 
 module.exports = {
   /**

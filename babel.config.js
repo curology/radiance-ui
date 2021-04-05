@@ -7,12 +7,12 @@
  */
 const getPresets = (modules) => [
   [
-    '@babel/preset-env',
+    '@babel/env',
     {
       modules,
     },
   ],
-  '@babel/preset-react',
+  '@babel/react',
   '@babel/preset-typescript',
   '@emotion/babel-preset-css-prop',
 ];
