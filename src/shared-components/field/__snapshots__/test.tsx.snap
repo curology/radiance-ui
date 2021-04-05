@@ -25,7 +25,7 @@ exports[`<Field /> UI Snapshot renders with errorMessage, hintMessage and hideMe
   transition: opacity 350ms;
 }
 
-.emotion-2 svg.radiance-field-input-icon {
+.emotion-2>svg.radiance-field-input-icon {
   opacity: 1;
 }
 

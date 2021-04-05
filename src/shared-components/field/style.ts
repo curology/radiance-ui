@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
-import { MessagesTypes } from '../verificationMessages';
+import type { MessagesTypes } from '../verificationMessages';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
 const HintItem = styled.div`
@@ -25,7 +26,7 @@ const Label = styled.label<{ disabled: boolean }>`
     disabled ? `color: ${theme.COLORS.primaryTint3};` : ''}
 `;
 
-const inputStyles = (theme: ThemeType) => `
+const inputStyles = (theme: ThemeType) => css`
   ${TYPOGRAPHY_STYLE.body(theme)}
   appearance: none;
   background: ${theme.COLORS.white};
@@ -82,24 +83,34 @@ const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
-  svg.radiance-field-input-icon {
+const applyMessagesStyles = (
+  messagesType: MessagesTypes,
+  theme: ThemeType,
+) => css`
+  & > svg.radiance-field-input-icon {
     opacity: 1;
   }
 
   ${Textarea}, ${Input} {
-    border-color: ${
-      messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
-    };
+    border-color: ${messagesType === 'success'
+      ? theme.COLORS.success
+      : theme.COLORS.error};
 
     &:active,
     &:focus {
-      border-color: ${
-        messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
-      };
+      border-color: ${messagesType === 'success'
+        ? theme.COLORS.success
+        : theme.COLORS.error};
       box-shadow: ${theme.BOX_SHADOWS.focus};
     }
   }
+`;
+
+const svgCss = css`
+  position: absolute;
+  top: 20px;
+  right: ${SPACER.medium};
+  transition: opacity ${ANIMATION.defaultTiming};
 `;
 
 const InputContainer = styled.div<{
@@ -110,10 +121,7 @@ const InputContainer = styled.div<{
 
   & > svg.radiance-field-input-icon {
     opacity: 0;
-    position: absolute;
-    top: 20px;
-    right: ${SPACER.medium};
-    transition: opacity ${ANIMATION.defaultTiming};
+    ${svgCss}
   }
 
   ${({ showMessages, messagesType, theme }) =>
