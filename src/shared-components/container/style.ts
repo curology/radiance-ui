@@ -34,14 +34,14 @@ const getContainerTypeStyles = (theme: ThemeType, type?: ContainerType) => {
   }
 };
 
-export const containerStyles = (theme: ThemeType, type?: ContainerType) => `
+const containerStyles = (theme: ThemeType, type?: ContainerType) => `
   background-color: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};
 
   ${getContainerTypeStyles(theme, type)}
 `;
 
-export const Section = styled.div`
+const Section = styled.div`
   padding: ${SPACER.large};
 
   ${MEDIA_QUERIES.lgUp} {
@@ -50,7 +50,7 @@ export const Section = styled.div`
   }
 `;
 
-export const Divider = styled.div`
+const Divider = styled.div`
   margin: 0 ${SPACER.large};
   border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.border}`};
 
@@ -59,7 +59,7 @@ export const Divider = styled.div`
   }
 `;
 
-export const Image = styled.img`
+const Image = styled.img`
   width: 100%;
   overflow: hidden;
   object-fit: cover;
@@ -99,4 +99,4 @@ Container.propTypes = {
   type: PropTypes.oneOf(['message', 'clickable', 'none']),
 };
 
-export { Container };
+export default { containerStyles, Container };

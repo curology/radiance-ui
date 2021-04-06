@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeType } from '../../constants';
-import { containerStyles, ContainerType } from '../container/style';
+import ContainerStyle, { ContainerType } from '../container/style';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
 export interface BaseIconWrapperStylesProps {
@@ -46,18 +46,18 @@ const sharedContainerStyles = ({
   theme,
 }: SharedContainerStylesProps) => `
   border-radius: ${borderRadius ?? theme.BORDER_RADIUS.small};
-  ${containerStyles(theme, containerType)}
+  ${ContainerStyle.containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
 `;
 
-export const DisplayContainer = styled.div<ContainerProps>`
+const DisplayContainer = styled.div<ContainerProps>`
   ${sharedContainerStyles}
 `;
 
-export const ClickableContainer = styled.button<ContainerProps>`
+const ClickableContainer = styled.button<ContainerProps>`
   ${sharedContainerStyles}
 
   :focus {
