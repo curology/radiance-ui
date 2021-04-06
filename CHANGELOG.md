@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v20.0.1
+
+- [Hotfix] [#903](https://github.com/curology/radiance-ui/pull/903) follow-up ([#915](https://github.com/curology/radiance-ui/pull/915))
+
 # v20.0.0
 
 - [Components] **BREAKING CHANGE** Update `style` export pattern, breaking existing `radiance-ui/lib/shared-components/**/style` imports in userland ([#903](https://github.com/curology/radiance-ui/pull/903))
