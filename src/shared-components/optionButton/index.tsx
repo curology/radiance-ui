@@ -21,7 +21,7 @@ export interface OptionButtonProps {
   [key: string]: unknown;
 }
 
-export interface OptionButtonContainerProps
+export interface OptionButtonNotClickableProps
   extends Pick<
     OptionButtonProps,
     'borderRadius' | 'icon' | 'optionType' | 'subtext' | 'text'
@@ -112,13 +112,13 @@ export const OptionButton = ({
 /**
  * A presentational component to match the display of an OptionButton with an icon
  */
-export const OptionButtonContainer = ({
+export const OptionButtonNotClickable = ({
   icon,
   optionType,
   subtext,
   text,
   ...rest
-}: OptionButtonContainerProps) => (
+}: OptionButtonNotClickableProps) => (
   <Style.DisplayContainer
     containerType="none"
     // eslint-disable-next-line react/jsx-props-no-spreading
@@ -139,7 +139,7 @@ export const OptionButtonContainer = ({
 /**
  * Similar OptionButton styling without click elements
  */
-OptionButton.Container = OptionButtonContainer;
+OptionButton.NotClickable = OptionButtonNotClickable;
 
 OptionButton.propTypes = {
   borderRadius: PropTypes.string,

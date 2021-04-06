@@ -193,15 +193,15 @@ export const RadioButtons = () => (
   </FlexContainer>
 );
 
-export const OptionButtonContainer = () => (
+export const OptionButtonNotClickable = () => (
   <FlexContainer>
     <OptionsContainer>
-      <OptionButton.Container
+      <OptionButton.NotClickable
         text="Radio helper text"
         optionType="radio"
         icon={<AcneGlyph width={32} height={32} />}
       />
-      <OptionButton.Container
+      <OptionButton.NotClickable
         text="Checkbox helper text"
         subtext="subtext"
         optionType="checkbox"
@@ -211,7 +211,7 @@ export const OptionButtonContainer = () => (
   </FlexContainer>
 );
 
-OptionButtonContainer.parameters = {
+OptionButtonNotClickable.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
