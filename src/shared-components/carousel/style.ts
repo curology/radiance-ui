@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 import { SPACER, ThemeType } from '../../constants';
 
@@ -10,63 +11,8 @@ const Card = styled.div`
   margin: 0 ${SPACER.small};
 `;
 
-const primaryStyles = (theme: ThemeType) => `
-  .slick-dots {
-    li {
-      background-color: ${theme.COLORS.primary};
-    }
-  }
-`;
-
-const secondaryStyles = (theme: ThemeType) => `
-  .slick-dots {
-    li {
-      background-color: ${theme.COLORS.white};
-    }
-  }
-`;
-
-const parseStyle = (carouselType: CarouselType, theme: ThemeType) => {
-  switch (carouselType) {
-    case 'primary':
-      return primaryStyles(theme);
-    case 'secondary':
-      return secondaryStyles(theme);
-    default:
-      return primaryStyles(theme);
-  }
-};
-
-const dotStyles = `
-  display: flex !important;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: -32px;
-
-  li {
-    border-radius: 50%;
-    height: ${SPACER.xsmall};
-    width: ${SPACER.xsmall};
-    margin-right: ${SPACER.xsmall};
-    opacity: 0.25;
-
-    &:first-of-type {
-      margin-left: ${SPACER.xsmall};
-    }
-
-    button {
-      display: none;
-    }
-  }
-
-  li.slick-active {
-    opacity: 1;
-  }
-`;
-
-// styles from the react-slick library
-const reactSlickStyles = `
+// styles mostly from the react-slick library
+const reactSlickStyles = css`
   .slick-slider {
     position: relative;
     display: flex;
@@ -74,9 +20,6 @@ const reactSlickStyles = `
     justify-content: center;
     padding: 0 ${SPACER.large};
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 
     -webkit-touch-callout: none;
@@ -84,6 +27,8 @@ const reactSlickStyles = `
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+
+    flex-wrap: wrap;
   }
 
   .slick-list {
@@ -105,10 +50,6 @@ const reactSlickStyles = `
 
   .slick-slider .slick-track,
   .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 
@@ -182,6 +123,23 @@ const OuterContainer = styled.div<{ numCardsVisible: number }>`
   ${({ numCardsVisible }) => parseOuterStyle(numCardsVisible)};
 `;
 
+const getBackgroundColor = ({
+  carouselType,
+  theme,
+}: {
+  carouselType: CarouselType;
+  theme: ThemeType;
+}) => {
+  switch (carouselType) {
+    case 'primary':
+      return theme.COLORS.primary;
+    case 'secondary':
+      return theme.COLORS.white;
+    default:
+      return theme.COLORS.primary;
+  }
+};
+
 const InnerContainer = styled.div<{
   carouselType: CarouselType;
 }>`
@@ -190,15 +148,34 @@ const InnerContainer = styled.div<{
 
   ${reactSlickStyles}
 
-  .slick-slider {
-    flex-wrap: wrap;
-  }
-
   .slick-dots {
-    ${dotStyles}
-  }
+    display: flex !important;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -32px;
 
-  ${({ carouselType, theme }) => parseStyle(carouselType, theme)}
+    li {
+      border-radius: 50%;
+      height: ${SPACER.xsmall};
+      width: ${SPACER.xsmall};
+      margin-right: ${SPACER.xsmall};
+      opacity: 0.25;
+      background-color: ${getBackgroundColor};
+
+      &:first-of-type {
+        margin-left: ${SPACER.xsmall};
+      }
+
+      button {
+        display: none;
+      }
+    }
+
+    li.slick-active {
+      opacity: 1;
+    }
+  }
 `;
 
 export default { Card, InnerContainer, OuterContainer };
