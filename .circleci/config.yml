@@ -113,7 +113,7 @@ jobs:
       - <<: *prepare-environment
       - run:
           name: Run Jest Tests
-          command: yarn run test --ci --colors --reporters=default --reporters=jest-junit
+          command: yarn run test --ci --runInBand --colors --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
       - store_test_results:
