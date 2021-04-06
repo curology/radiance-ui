@@ -66,11 +66,13 @@ export const Field = ({
       <CheckmarkIcon
         fill={theme.COLORS.success}
         className="radiance-field-input-icon"
+        css={Style.applyIconStyles(showMessages)}
       />
     ) : (
       <ErrorIcon
         fill={theme.COLORS.error}
         className="radiance-field-input-icon"
+        css={Style.applyIconStyles(showMessages)}
       />
     );
 

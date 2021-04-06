@@ -26,7 +26,7 @@ const Label = styled.label<{ disabled: boolean }>`
     disabled ? `color: ${theme.COLORS.primaryTint3};` : ''}
 `;
 
-const inputStyles = (theme: ThemeType) => css`
+const inputStyles = (theme: ThemeType) => `
   ${TYPOGRAPHY_STYLE.body(theme)}
   appearance: none;
   background: ${theme.COLORS.white};
@@ -83,30 +83,24 @@ const Textarea = styled.textarea`
   width: 100%;
 `;
 
-const applyMessagesStyles = (
-  messagesType: MessagesTypes,
-  theme: ThemeType,
-) => css`
-  & > svg.radiance-field-input-icon {
-    opacity: 1;
-  }
-
+const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
   ${Textarea}, ${Input} {
-    border-color: ${messagesType === 'success'
-      ? theme.COLORS.success
-      : theme.COLORS.error};
+    border-color: ${
+      messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
+    };
 
     &:active,
     &:focus {
-      border-color: ${messagesType === 'success'
-        ? theme.COLORS.success
-        : theme.COLORS.error};
+      border-color: ${
+        messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
+      };
       box-shadow: ${theme.BOX_SHADOWS.focus};
     }
   }
 `;
 
-const svgCss = css`
+export const applyIconStyles = (showMessages: boolean) => css`
+  opacity: ${showMessages ? '1' : '0'};
   position: absolute;
   top: 20px;
   right: ${SPACER.medium};
@@ -119,16 +113,12 @@ const InputContainer = styled.div<{
 }>`
   position: relative;
 
-  & > svg.radiance-field-input-icon {
-    opacity: 0;
-    ${svgCss}
-  }
-
   ${({ showMessages, messagesType, theme }) =>
     showMessages && applyMessagesStyles(messagesType, theme)}
 `;
 
 export default {
+  applyIconStyles,
   FieldContainer,
   HintItem,
   Input,
