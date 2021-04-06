@@ -8,7 +8,7 @@ import { ButtonContents, ButtonText } from '../../style';
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 
-export interface LinkProps {
+export interface LinkButtonProps {
   /**
    * Specifies the tag or element to be rendered
    */
@@ -47,7 +47,7 @@ export const LinkButton = ({
   onClick = () => undefined,
   textColor,
   ...rest
-}: LinkProps) => {
+}: LinkButtonProps) => {
   const theme = useTheme();
   const ContainerTag = as;
   const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;

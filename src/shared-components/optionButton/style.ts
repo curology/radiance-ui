@@ -31,17 +31,34 @@ const getTypeColor = (
   return theme.COLORS.primary;
 };
 
-const ClickableContainer = styled.button<{
-  borderRadius?: string;
+interface ContainerProps {
+  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
   containerType: ContainerType;
-}>`
-  border-radius: ${({ borderRadius, theme }) =>
-    borderRadius ?? theme.BORDER_RADIUS.small};
-  ${({ containerType, theme }) => containerStyles(theme, containerType)};
+}
+
+interface SharedContainerStylesProps extends ContainerProps {
+  theme: ThemeType;
+}
+
+const sharedContainerStyles = ({
+  borderRadius,
+  containerType,
+  theme,
+}: SharedContainerStylesProps) => `
+  border-radius: ${borderRadius ?? theme.BORDER_RADIUS.small};
+  ${containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
+`;
+
+export const DisplayContainer = styled.div<ContainerProps>`
+  ${sharedContainerStyles}
+`;
+
+export const ClickableContainer = styled.button<ContainerProps>`
+  ${sharedContainerStyles}
 
   :focus {
     outline: none;
@@ -150,6 +167,7 @@ const SubText = styled.div`
 
 export default {
   CheckmarkWrapper,
+  DisplayContainer,
   ClickableContainer,
   FlexContainer,
   IconWrapper,
