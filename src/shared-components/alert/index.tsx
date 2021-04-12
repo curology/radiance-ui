@@ -72,7 +72,6 @@ export const Alert = (alertProps: AlertProps) => {
     setExiting(true);
     window.clearTimeout(timer);
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { onExit: _onExit, ...otherProps } = alertProps;
 
     window.setTimeout(() => {

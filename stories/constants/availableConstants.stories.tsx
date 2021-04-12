@@ -5,16 +5,14 @@ import { Typography } from 'src/shared-components';
 
 import renderConstantsMap from './renderConstantsMap';
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 const {
-  COLORS_PROP_TYPES,
+  COLORS_PROP_TYPES: _COLORS_PROP_TYPES,
   // TODO-theming: Add to story once finalized,
   // otherwise visual tests will fail with every change
-  primaryTheme,
-  secondaryTheme,
+  primaryTheme: _primaryTheme,
+  secondaryTheme: _secondaryTheme,
   ...VALID_CONSTANTS
 } = CONSTANTS;
-/* eslint-enable @typescript-eslint/no-unused-vars */
 
 type CategoryConstant =
   | Record<string, unknown>
