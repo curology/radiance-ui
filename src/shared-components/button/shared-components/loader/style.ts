@@ -29,6 +29,7 @@ const quaternaryLoadingStyles = (buttonColor: ThemeColors) => `
     .toHexString()};
 `;
 
+// eslint-disable-next-line sonarjs/no-identical-functions
 const actionLoadingStyles = (buttonColor: ThemeColors) => `
   background-color: ${buttonColor};
 `;
