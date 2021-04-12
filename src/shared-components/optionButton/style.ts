@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeType } from '../../constants';
-import { containerStyles, ContainerType } from '../container/style';
+import ContainerStyle, { ContainerType } from '../container/style';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 
 export interface BaseIconWrapperStylesProps {
@@ -31,17 +31,34 @@ const getTypeColor = (
   return theme.COLORS.primary;
 };
 
-const ClickableContainer = styled.button<{
-  borderRadius?: string;
+interface ContainerProps {
+  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
   containerType: ContainerType;
-}>`
-  border-radius: ${({ borderRadius, theme }) =>
-    borderRadius ?? theme.BORDER_RADIUS.small};
-  ${({ containerType, theme }) => containerStyles(theme, containerType)};
+}
+
+interface SharedContainerStylesProps extends ContainerProps {
+  theme: ThemeType;
+}
+
+const sharedContainerStyles = ({
+  borderRadius,
+  containerType,
+  theme,
+}: SharedContainerStylesProps) => `
+  border-radius: ${borderRadius ?? theme.BORDER_RADIUS.small};
+  ${ContainerStyle.containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
+`;
+
+const DisplayContainer = styled.div<ContainerProps>`
+  ${sharedContainerStyles}
+`;
+
+const ClickableContainer = styled.button<ContainerProps>`
+  ${sharedContainerStyles}
 
   :focus {
     outline: none;
@@ -150,6 +167,7 @@ const SubText = styled.div`
 
 export default {
   CheckmarkWrapper,
+  DisplayContainer,
   ClickableContainer,
   FlexContainer,
   IconWrapper,

@@ -4,7 +4,7 @@ describe('isObject', () => {
   it('returns true for objects', () => {
     expect(isObject({ foo: 'bar' })).toBe(true);
     expect(isObject({})).toBe(true);
-    expect(isObject(Object.create(null))).toBe(true);
+    expect(isObject(Object.create(null) as unknown)).toBe(true);
   });
 
   it('returns false for non-objects', () => {
