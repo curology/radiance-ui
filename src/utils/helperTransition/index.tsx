@@ -3,13 +3,15 @@ import { Transition } from 'react-transition-group';
 
 import { ANIMATION } from '../../constants';
 
+const START_STATE = {
+  opacity: '0',
+  maxHeight: '0',
+};
+
 const getStyleForTransitionState = (transitionState: string) => {
   switch (transitionState) {
     case 'entering':
-      return {
-        opacity: '0',
-        maxHeight: '0',
-      };
+      return START_STATE;
     case 'entered':
       return {
         opacity: '1',
@@ -27,10 +29,7 @@ const getStyleForTransitionState = (transitionState: string) => {
         transitionTimingFunction: 'ease-in-out',
       };
     case 'exited':
-      return {
-        opacity: '0',
-        maxHeight: '0',
-      };
+      return START_STATE;
     default:
       return {};
   }

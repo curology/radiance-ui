@@ -12,6 +12,8 @@ const options = [
   { value: 'test3', label: 'Test3' },
 ];
 
+const ON_CLICK_TEST = 'should be invoked onClick';
+
 describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
@@ -55,7 +57,7 @@ describe('<MobileDropdown />', () => {
   });
 
   describe('onSelectChange callback', () => {
-    it('should be invoked onClick', () => {
+    it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getByRole } = render(
         <MobileDropdown
@@ -95,7 +97,7 @@ describe('<DesktopDropdown />', () => {
   });
 
   describe('onSelectClick callback', () => {
-    it('should be invoked onClick', () => {
+    it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getByRole } = render(
         <DesktopDropdown
@@ -117,7 +119,7 @@ describe('<DesktopDropdown />', () => {
   });
 
   describe('onOptionClick callback', () => {
-    it('should be invoked onClick', () => {
+    it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getAllByRole } = render(
         <DesktopDropdown
