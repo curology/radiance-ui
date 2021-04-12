@@ -100,8 +100,7 @@ export const FieldInputWithValidations = () => {
       ? {}
       : numberRequiredRule;
 
-    const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
-    return val;
+    return { ...requiredError, ...maxLengthError, ...numberRequiredError };
   };
 
   const [state, setState] = React.useState({
