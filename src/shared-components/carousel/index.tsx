@@ -47,6 +47,8 @@ export interface CarouselProps {
   numCardsVisible: 1 | 2 | 3;
 }
 
+// TODO-eslint: Reduce cognitive complexity of component
+/* eslint-disable sonarjs/cognitive-complexity */
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
  *
@@ -170,6 +172,7 @@ export const Carousel = ({
     </Style.OuterContainer>
   );
 };
+/* eslint-enable sonarjs/cognitive-complexity */
 
 Carousel.Card = Style.Card;
 
