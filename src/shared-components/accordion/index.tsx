@@ -8,15 +8,9 @@ import { Thumbnails } from './thumbnails';
 import Style from './style';
 import { keyboardKeys } from '../../constants/keyboardKeys';
 
-export type BorderRadiusValues =
-  | valueof<ThemeType['BORDER_RADIUS']>
-  | '0.25rem'
-  | '0.5rem'
-  | '2rem';
-
 export interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
-  borderRadius?: BorderRadiusValues;
+  borderRadius?: keyof ThemeType['BORDER_RADIUS'];
   /** node(s) that will render only when expanded */
   children: React.ReactNode;
   /** when true, the accordion will be greyed out and the onClick prop will be disabled */
@@ -41,7 +35,7 @@ export interface AccordionProps {
  * The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
  */
 export const Accordion = ({
-  borderRadius,
+  borderRadius = 'small',
   children,
   disabled = false,
   isOpen,

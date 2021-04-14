@@ -7,7 +7,7 @@ import { isDefined } from '../../utils/isDefined';
 import type { ThemeType } from '../../constants';
 
 export interface OptionButtonProps {
-  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+  borderRadius?: keyof ThemeType['BORDER_RADIUS'];
   buttonType?: 'primary' | 'secondary';
   /**
    * Show custom icon in the unselected state

@@ -2,8 +2,6 @@ import styled from '@emotion/styled';
 
 import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
-import { BorderRadiusValues } from '.';
-
 const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
@@ -58,7 +56,7 @@ const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
 `;
 
 const TitleWrapper = styled.div<{
-  borderRadius?: BorderRadiusValues;
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
   disabled: boolean;
   isOpen: boolean;
 }>`
@@ -75,9 +73,8 @@ const TitleWrapper = styled.div<{
     &:focus {
       ${({ borderRadius, isOpen, theme }) => {
         if (!isOpen) {
-          const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
-          return `border-bottom-left-radius: ${borderRadiusValue}; 
-                  border-bottom-right-radius: ${borderRadiusValue};`;
+          return `border-bottom-left-radius: ${theme.BORDER_RADIUS[borderRadius]}; 
+                  border-bottom-right-radius: ${theme.BORDER_RADIUS[borderRadius]};`;
         }
         return '';
       }}}
@@ -97,14 +94,14 @@ const Truncate = styled.div`
  * component if opting out of default values.
  */
 const Container = styled.div<{
-  borderRadius?: BorderRadiusValues;
+  borderRadius: BorderRadiusValues;
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
   ${({ borderRadius, theme }) => {
-    const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
+    const borderRadiusValue = theme.BORDER_RADIUS[borderRadius];
 
     return `
     > div:first-of-type {
