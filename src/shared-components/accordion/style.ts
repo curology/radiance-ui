@@ -73,8 +73,10 @@ const TitleWrapper = styled.div<{
     &:focus {
       ${({ borderRadius, isOpen, theme }) => {
         if (!isOpen) {
-          return `border-bottom-left-radius: ${theme.BORDER_RADIUS[borderRadius]}; 
-                  border-bottom-right-radius: ${theme.BORDER_RADIUS[borderRadius]};`;
+          const borderRadiusValue = theme.BORDER_RADIUS[borderRadius];
+
+          return `border-bottom-left-radius: ${borderRadiusValue}; 
+                  border-bottom-right-radius: ${borderRadiusValue};`;
         }
         return '';
       }}}
@@ -94,13 +96,13 @@ const Truncate = styled.div`
  * component if opting out of default values.
  */
 const Container = styled.div<{
-  borderRadius: keyof ThemeType['BORDER_RADIUS'];
+  borderRadius?: keyof ThemeType['BORDER_RADIUS'];
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
-  ${({ borderRadius, theme }) => {
+  ${({ borderRadius = 'small', theme }) => {
     const borderRadiusValue = theme.BORDER_RADIUS[borderRadius];
 
     return `
