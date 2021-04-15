@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { text, select, boolean } from '@storybook/addon-knobs';
-import { Field } from 'src/shared-components';
+import { Field, MessageType } from 'src/shared-components';
 import {
   ArgsTable,
   Description,
@@ -29,13 +29,10 @@ const messagesTypeOptions = {
   success: 'success',
 };
 
-export const FieldInputWithSuccessMessage = () => {
+const useField = (
+  validate: (value: string) => Record<string, MessageType> | undefined,
+) => {
   const defaultValue = 'Placeholder';
-
-  const validate = (value: string) =>
-    value.length > 0
-      ? { successMessage: 'Thanks for completing this field' }
-      : undefined;
 
   const [state, setState] = React.useState({
     messages: validate(defaultValue),
@@ -50,6 +47,17 @@ export const FieldInputWithSuccessMessage = () => {
       value,
     });
   };
+
+  return { onChange, state };
+};
+
+export const FieldInputWithSuccessMessage = () => {
+  const validate = (value: string) =>
+    value.length > 0
+      ? { successMessage: 'Thanks for completing this field' }
+      : undefined;
+
+  const { state, onChange } = useField(validate);
 
   const { value, messages } = state;
 
@@ -71,8 +79,6 @@ export const FieldInputWithSuccessMessage = () => {
 };
 
 export const FieldInputWithValidations = () => {
-  const defaultValue = 'Placeholder';
-
   const validate = (value: string) => {
     const requiredError =
       value.length === 0 ? { required: 'This field is required' } : undefined;
@@ -100,22 +106,10 @@ export const FieldInputWithValidations = () => {
       ? {}
       : numberRequiredRule;
 
-    const val = { ...requiredError, ...maxLengthError, ...numberRequiredError };
-    return val;
+    return { ...requiredError, ...maxLengthError, ...numberRequiredError };
   };
 
-  const [state, setState] = React.useState({
-    messages: validate(defaultValue),
-    value: defaultValue,
-  });
-
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = event.target;
-    setState({
-      messages: validate(value),
-      value,
-    });
-  };
+  const { state, onChange } = useField(validate);
 
   const { value, messages } = state;
 

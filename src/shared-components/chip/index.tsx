@@ -22,11 +22,9 @@ const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
   let backgroundColor: ThemeColors = theme.COLORS.primary;
   let textColor: ThemeColors = theme.COLORS.white;
 
-  if (status === 'primary') {
-    if (isLowContrast) {
-      backgroundColor = theme.COLORS.defaultLight;
-      textColor = theme.COLORS.primary;
-    }
+  if (status === 'primary' && isLowContrast) {
+    backgroundColor = theme.COLORS.defaultLight;
+    textColor = theme.COLORS.primary;
   }
 
   if (status === 'error') {

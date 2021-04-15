@@ -5,7 +5,8 @@ function isObject(
     | Record<string, unknown>
     | Array<unknown>
     | null
-    | undefined,
+    | undefined
+    | unknown,
 ): val is Record<string, unknown> {
   return val != null && typeof val === 'object' && !Array.isArray(val);
 }

@@ -10,6 +10,8 @@ export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
 export type PositionTypes = 'top' | 'bottom';
 
+const CURSOR_POINTER = 'cursor-pointer';
+
 export interface TooltipProps {
   /**
    * Adjusts positioning, in percent
@@ -91,9 +93,9 @@ export const Tooltip = ({
   const onClick = () => {
     if (clicked) {
       // if clicked is true, we're about to update to false so remove class
-      document.querySelector('body')?.classList.remove('cursor-pointer');
+      document.querySelector('body')?.classList.remove(CURSOR_POINTER);
     } else {
-      document.querySelector('body')?.classList.add('cursor-pointer');
+      document.querySelector('body')?.classList.add(CURSOR_POINTER);
     }
 
     setClicked(!clicked);
@@ -101,7 +103,7 @@ export const Tooltip = ({
 
   const closeTooltip = () => {
     if (clicked) {
-      document.querySelector('body')?.classList.remove('cursor-pointer');
+      document.querySelector('body')?.classList.remove(CURSOR_POINTER);
     }
 
     setClicked(false);
