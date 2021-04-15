@@ -94,7 +94,7 @@ const Truncate = styled.div`
  * component if opting out of default values.
  */
 const Container = styled.div<{
-  borderRadius: BorderRadiusValues;
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
