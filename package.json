@@ -140,7 +140,7 @@
   },
   "dependencies": {
     "@emotion/core": "10.0.35",
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.3.0",
     "@react-aria/focus": "^3.0.2",
     "emotion-theming": "10.0.27",
     "focus-visible": "^5.1.0",
@@ -157,7 +157,7 @@
   },
   "peerDependencies": {
     "@emotion/core": "10.0.35",
-    "@emotion/styled": "10.0.27",
+    "@emotion/styled": "11.3.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
