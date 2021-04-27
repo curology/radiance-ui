@@ -121,7 +121,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-sonarjs": "^0.6.0",
+    "eslint-plugin-sonarjs": "^0.7.0",
     "husky": "^4.3.5",
     "isobject": "^4.0.0",
     "jest": "^26.4.2",
