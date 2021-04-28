@@ -167,5 +167,13 @@
       "pre-push": "yarn run test"
     }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "browserslist": [
+    "> 0.25% in US and not ios_saf < 10 and not Android < 5 and not ie > 1",
+    "ios >= 10",
+    "safari >= 10",
+    "chrome >= 60",
+    "edge >= 15",
+    "firefox >= 55"
+  ]
 }
