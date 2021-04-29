@@ -6,8 +6,10 @@ import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
 import type { ThemeType } from '../../constants';
 
+const DEFAULT_BORDER_RADIUS = 'small';
+
 export interface OptionButtonProps {
-  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+  borderRadius?: keyof ThemeType['BORDER_RADIUS'];
   buttonType?: 'primary' | 'secondary';
   /**
    * Show custom icon in the unselected state
@@ -79,7 +81,7 @@ const OptionButtonContent = ({
  * than a functional button associated with form inputs
  */
 export const OptionButton = ({
-  borderRadius,
+  borderRadius = DEFAULT_BORDER_RADIUS,
   buttonType,
   icon,
   onClick,
@@ -113,6 +115,7 @@ export const OptionButton = ({
  * A presentational component to match the display of an OptionButton with an icon
  */
 export const OptionButtonNotClickable = ({
+  borderRadius = DEFAULT_BORDER_RADIUS,
   icon,
   optionType,
   subtext,
@@ -120,6 +123,7 @@ export const OptionButtonNotClickable = ({
   ...rest
 }: OptionButtonNotClickableProps) => (
   <Style.DisplayContainer
+    borderRadius={borderRadius}
     containerType="none"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
