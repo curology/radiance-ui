@@ -53,7 +53,7 @@ export const ThreeItems = () => {
 };
 /* eslint-enable no-console */
 
-export default {
+const THEME_STORIES: Meta = {
   title: 'Components/SegmentedControl',
   component: SegmentedControl,
   parameters: {
@@ -74,4 +74,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default THEME_STORIES;
