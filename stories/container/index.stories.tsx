@@ -8,7 +8,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Container } from 'src/shared-components';
-import { ContainerType } from 'src/shared-components/container/style';
+import type { ContainerType } from 'src/shared-components/container/style';
 import type { Meta } from '@storybook/react';
 
 export const Default = () => (
@@ -57,7 +57,11 @@ export const MockContainer = ({
   type?: ContainerType;
 }) => <Container type={type}>{children}</Container>;
 
-export default {
+MockContainer.parameters = {
+  chromatic: { disable: true },
+};
+
+const CONTAINER_STORIES: Meta = {
   title: 'Components/Container',
   component: MockContainer,
   parameters: {
@@ -78,5 +82,7 @@ export default {
       ),
     },
   },
-  excludeStories: ['MockContainer'],
-} as Meta;
+  excludeStories: [MockContainer.name],
+};
+
+export default CONTAINER_STORIES;

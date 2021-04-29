@@ -11,7 +11,7 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Button } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
+import type { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 import { CheckmarkIcon } from '../../src/icons';
@@ -208,7 +208,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const BUTTON_STORIES: Meta = {
   title: 'Components/Button/Button',
   component: Button,
   parameters: {
@@ -229,4 +229,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default BUTTON_STORIES;

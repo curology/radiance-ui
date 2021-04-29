@@ -21,7 +21,7 @@ export const Disabled = () => (
   <TextButton disabled>This text button is disabled</TextButton>
 );
 
-export default {
+const TEXT_BUTTON_STORIES: Meta = {
   title: 'Components/Button/TextButton',
   component: TextButton,
   parameters: {
@@ -42,4 +42,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TEXT_BUTTON_STORIES;

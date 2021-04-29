@@ -1,5 +1,121 @@
 # CHANGELOG
 
+# v21.0.0
+
+- [Components] **BREAKING CHANGE** Update `borderRadius` prop in `<Accordion />` and `<OptionButton />` to be theme key rather than values ([#930](https://github.com/curology/radiance-ui/pull/930))
+
+# v20.0.1
+
+- [Hotfix] [#903](https://github.com/curology/radiance-ui/pull/903) follow-up ([#915](https://github.com/curology/radiance-ui/pull/915))
+
+# v20.0.0
+
+- [Components] **BREAKING CHANGE** Update `style` export pattern, breaking existing `radiance-ui/lib/shared-components/**/style` imports in userland ([#903](https://github.com/curology/radiance-ui/pull/903))
+- [Components] Add `OptionButton.NotClickable` presentation component ([#905](https://github.com/curology/radiance-ui/pull/905))
+
+# v19.1.0
+
+- [Bugfix] Handle `false` icon props for logic like `<OptionButton icon={Icon && <Icon />} />` ([#900](https://github.com/curology/radiance-ui/pull/900))
+- [Typography] Add `Body Bold` style and component (`Typography.Bold`) ([#884](https://github.com/curology/radiance-ui/pull/884))
+
+# v19.0.1
+
+- [TypeScript] Update library exports to export TypeScript types ([#894](https://github.com/curology/radiance-ui/pull/894))
+
+# v19.0.0
+
+- [Components] **BREAKING CHANGE** Update `<Callout />` API, removing `color` prop and adding new `error` type ([#878](https://github.com/curology/radiance-ui/pull/878))
+- [Components] **BREAKING CHANGE** Update `<Chip />` API, add Low Contrast variations, and remove `secondary` type, and make `primary` type default ([#883](https://github.com/curology/radiance-ui/pull/883))
+- [Components] **BREAKING CHANGE** Update `<Indicator />` API, remove `backgroundColor` prop, add `type` presets ([#885](https://github.com/curology/radiance-ui/pull/885))
+
+# v18.2.0
+
+- [Icons] Add Secondary Logo ([#879](https://github.com/curology/radiance-ui/pull/879))
+
+# v18.1.0
+
+- [Modals] Change overlay color in `DialogModal` and `ImmersiveModal` ([#846](https://github.com/curology/radiance-ui/pull/846))
+
+# v18.0.0
+
+- [Modals] **BREAKING CHANGE**: Remove custom styling to `DialogModal` and `ImmersiveModal` paragraph tags in modals body, added as subcomponent as an alternative ([#833](https://github.com/curology/radiance-ui/pull/833))
+
+# v17.2.3
+
+- [Icons] Add KojiAcidGlyph ([#818](https://github.com/curology/radiance-ui/pull/818))
+
+# v17.2.2
+
+- [Icons] Add DesonideGlyph, MetronidazoleGlyph and TranexamicAcidGlyph ([#815](https://github.com/curology/radiance-ui/pull/815))
+
+# v17.2.1
+
+- [Components] Add media query to DialogModal for smaller devices ([#779](https://github.com/curology/radiance-ui/pull/779))
+
+# v17.2.0
+
+- [Icons] Add SunMoonGlyph and SunMoonGlyphSecondary ([#801](https://github.com/curology/radiance-ui/pull/801))
+
+# v17.1.0
+
+- [Icons] Add DexpanthenolGlyphSecondary, GreenTeaGlyphSecondary, KojicAcidGlyphSecondary, ResveratrolGlyphSecondary ([#800](https://github.com/curology/radiance-ui/pull/800))
+
+# v17.0.1
+
+- [Dependencies] Remove errantly added @storybook packages from dependencies ([#799](https://github.com/curology/radiance-ui/pull/799))
+
+# v17.0.0
+
+- [Theme] **BREAKING CHANGE**: Require `theme` argument to `TYPOGRAPHY_STYLE.link` ([#778](https://github.com/curology/radiance-ui/pull/778))
+- [Components] Add AnchorLinkButton ([#778](https://github.com/curology/radiance-ui/pull/778))
+- [Components] Add `'success'` Callout type ([#780](https://github.com/curology/radiance-ui/pull/780))
+- [Bugfix] Correct never-ending while loop in Alert ([#797](https://github.com/curology/radiance-ui/pull/797/files#diff-cd9d43540e34235173ce0796f0c9cec08f2a2335b2659523e48ac3d44ea28b55))
+- [Internal] Add Chromatic support for Secondary Theme ([#797](https://github.com/curology/radiance-ui/pull/797))
+
+# v16.8.0
+
+- [Icons] Add BreakGlyph, CycleGlyph, CycleGlyphSecondary, FormulaChangeGlyph, HydrocortisoneGlyph, HydrocortisoneGlyphSecondary, HydroquinoneGlyph, LightbulbGlyph, MoonGlyph, MoonGlyphSecondary ([#777](https://github.com/curology/radiance-ui/pull/777))
+
+# v16.7.1
+
+- [Icons] Fix CalendarIconSecondary ([#772](https://github.com/curology/radiance-ui/pull/772))
+
+# v16.7.0
+
+- Add `backgroundColor` prop to `DialogModal` component [#767](https://github.com/curology/radiance-ui/pull/767)
+
+# v16.6.2
+
+- [Theming] Export `applyPrimaryThemeVerticalOffset` to be used in consumer apps
+
+# v16.6.1
+
+- [Theming] Create the util function `applyPrimaryThemeVerticalOffset` apply it to `Chip` and `Indicator` component [#720](https://github.com/curology/radiance-ui/pull/720)
+
+# v16.5.1
+
+- [Theming] Revert label `line-height` changes made in [#704](https://github.com/curology/radiance-ui/pull/704) ([#726](https://github.com/curology/radiance-ui/pull/726))
+
+# v16.5.0
+
+- Update `background-color` theme of `AvatarImage` from `secondary` to `secondaryTint1` ([#734](https://github.com/curology/radiance-ui/pull/734))
+
+# v16.4.0
+
+- Add `backgroundColor` prop to Indicator and change component `border-radius` to `50%` ([#718](https://github.com/curology/radiance-ui/pull/718))
+
+# v16.2.2
+
+- [Theming] Set Secondary Theme `line-height` value across usage to `1.4` ([#704](https://github.com/curology/radiance-ui/pull/704))
+- [Theming] Set Secondary Theme heading elements (Display/h1, Heading/h2, Title/h3) `font-weight` to `400` ([#704](https://github.com/curology/radiance-ui/pull/704))
+
+# v16.2.1
+
+- [Icons] Fix TruckIconSecondary ([#681](https://github.com/curology/radiance-ui/pull/681))
+- [Internal] Add Bundlewatch to replace .size-snapshot.json to track size regressions ([#667](https://github.com/curology/radiance-ui/pull/667))
+- [Internal] Remove extra `emotion` css functions to reduce bundle sie ([#666](https://github.com/curology/radiance-ui/pull/666))
+- [Internal] Replace `Enzyme` and `React Test Renderer` with `React Testing Library` ([#609](https://github.com/curology/radiance-ui/pull/609))
+
 # v16.2.0
 
 - [Theming] Change primary button styles for secondary theme ([#651](https://github.com/curology/radiance-ui/pull/651))

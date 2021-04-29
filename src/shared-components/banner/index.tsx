@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import { CheckmarkIcon, ErrorIcon, InfoIcon } from '../../icons';
-import {
-  BannerContainer,
-  MainContainer,
-  ContentContainer,
-  IconContainer,
-} from './style';
+import Style from './style';
 
 const bannerIconMapping = {
   success: CheckmarkIcon,
@@ -19,11 +14,11 @@ const bannerIconMapping = {
 
 export type BannerType = 'default' | 'success' | 'error' | 'danger';
 
-type BannerProps = {
+export interface BannerProps {
   content: React.ReactNode;
   onClick?: () => void;
   type?: BannerType;
-};
+}
 
 /**
  * The `<Banner />` component provides only the styling and onClick behavior of banners.
@@ -37,18 +32,18 @@ export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
   const Icon = bannerIconMapping[type];
 
   return (
-    <BannerContainer
+    <Style.BannerContainer
       bannerType={type}
       onClick={onClick}
       tabIndex={onClick ? 0 : -1}
     >
-      <MainContainer>
-        <IconContainer>
+      <Style.MainContainer>
+        <Style.IconContainer>
           <Icon fill={theme.COLORS.white} />
-        </IconContainer>
-        <ContentContainer>{content}</ContentContainer>
-      </MainContainer>
-    </BannerContainer>
+        </Style.IconContainer>
+        <Style.ContentContainer>{content}</Style.ContentContainer>
+      </Style.MainContainer>
+    </Style.BannerContainer>
   );
 };
 

@@ -1,7 +1,7 @@
 /**
  *  Any conditional style based on theme.__type should be on this file
  */
-import { ThemeColors, ThemeType } from '../../constants';
+import type { ThemeColors, ThemeType } from '../../constants';
 
 export const primaryButtonFontColor = (theme: ThemeType) =>
   theme.__type === 'primary' ? theme.COLORS.white : theme.COLORS.primary;
@@ -32,3 +32,18 @@ export const setButtonStyleFontWeight = (theme: ThemeType) =>
   theme.__type === 'primary'
     ? `font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};`
     : '';
+
+export const setThemeLineHeight = (
+  theme: ThemeType,
+  primaryLineHeight: string | number,
+) => (theme.__type === 'secondary' ? '1.4' : primaryLineHeight);
+
+export const setThemeFontWeight = (theme: ThemeType) =>
+  theme.__type === 'secondary'
+    ? theme.TYPOGRAPHY.fontWeight.normal
+    : theme.TYPOGRAPHY.fontWeight.bold;
+
+export const applyPrimaryThemeVerticalOffset = (
+  theme: ThemeType,
+  offset = '1',
+) => (theme.__type === 'primary' ? `transform: translateY(${offset}px);` : '');

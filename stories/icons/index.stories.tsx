@@ -50,55 +50,42 @@ const shouldRenderIcon = (Icon: valueof<typeof iconComponents>) => {
   return renderedIcon !== null;
 };
 
+interface IconsProps {
+  icons:
+    | typeof logoComponents
+    | typeof iconComponents
+    | typeof emojiComponents
+    | typeof glyphComponents;
+}
+
+const Icons = ({ icons }: IconsProps) => {
+  const iconList = Object.entries(icons).map(([name, Icon]) => {
+    if (!shouldRenderIcon(Icon)) return null;
+
+    return (
+      <Style.IconContainer key={name}>
+        <Icon />
+        <Style.IconLabel>{name}</Style.IconLabel>
+      </Style.IconContainer>
+    );
+  });
+
+  return <Style.Icons>{iconList}</Style.Icons>;
+};
+
 export const IconLibrary = () => (
   <React.Fragment>
     <Typography.Heading>Logos</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(logoComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
-    </Style.Icons>
+    <Icons icons={logoComponents} />
 
     <Typography.Heading>Icons</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(iconComponents).map(([name, Icon]) => {
-        if (!shouldRenderIcon(Icon)) return null;
-
-        return (
-          <Style.IconContainer key={name}>
-            <Icon />
-            <Style.IconLabel>{name}</Style.IconLabel>
-          </Style.IconContainer>
-        );
-      })}
-    </Style.Icons>
+    <Icons icons={iconComponents} />
 
     <Typography.Heading>Emojis</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(emojiComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
-    </Style.Icons>
+    <Icons icons={emojiComponents} />
 
     <Typography.Heading>Glyphs</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(glyphComponents).map(([name, Icon]) => {
-        if (!shouldRenderIcon(Icon)) return null;
-
-        return (
-          <Style.IconContainer key={name}>
-            <Icon />
-            <Style.IconLabel>{name}</Style.IconLabel>
-          </Style.IconContainer>
-        );
-      })}
-    </Style.Icons>
+    <Icons icons={glyphComponents} />
 
     <Typography.Heading>Nav Icons</Typography.Heading>
     <Style.Icons>
@@ -135,7 +122,7 @@ Examples include "sun", "selfie", "pills".
 \n\nAfter adding the SVG file, run \`yarn run storybook\` and confirm the icon looks correct, and then open a PR with the changes.
 `;
 
-export default {
+const ICONS_STORIES: Meta = {
   title: 'Icons/Icon',
   component: IconComponent,
   parameters: {
@@ -164,4 +151,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ICONS_STORIES;

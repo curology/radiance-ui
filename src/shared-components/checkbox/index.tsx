@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
-type CheckboxProps = {
+export interface CheckboxProps {
   checked: boolean;
   /**
    * Text label displayed next to the checkbox
@@ -20,7 +20,7 @@ type CheckboxProps = {
   size?: SizeType;
   type?: StyleType;
   [key: string]: unknown;
-};
+}
 
 /**
  * Checkboxes should be used to provide valuable information or additional context on a page. One of the best examples of a Checkbox is for product recommendations.
@@ -47,7 +47,9 @@ export const Checkbox = ({
             event:
               | React.MouseEvent<HTMLDivElement, MouseEvent>
               | React.KeyboardEvent,
-          ) => event.preventDefault()
+          ) => {
+            event.preventDefault();
+          }
         : onClick
     }
     selector="checkbox"

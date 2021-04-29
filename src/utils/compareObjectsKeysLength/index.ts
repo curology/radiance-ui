@@ -1,6 +1,8 @@
+import isObject from '../isObject';
+
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface RecursiveObjectType {
-  [key: string]: string | number | this;
+  [key: string]: string | number | this | null;
 }
 
 const stringifyObjects = (
@@ -22,7 +24,7 @@ const compareObjectsKeysLength = (
     const obj2Val = obj2[key];
 
     // Test deep key equality recursively
-    if (typeof obj1Val === 'object' && typeof obj2Val === 'object') {
+    if (isObject(obj1Val) && isObject(obj2Val)) {
       return compareObjectsKeysLength(obj1Val, obj2Val);
     }
 

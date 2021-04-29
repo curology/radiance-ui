@@ -1,17 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import { CheckmarkIcon, ChevronIcon, ErrorIcon, InfoIcon } from '../../icons';
 import { Avatar } from '../avatar';
-import {
-  AlertsContainer,
-  AlertContainer,
-  MainContainer,
-  IconContainer,
-  ContentContainer,
-  CtaContent,
-} from './style';
+import Style from './style';
+import { isDefined } from '../../utils/isDefined';
+import { useTruncateText } from './hooks';
 
 const ANIMATION_DELAY = 500;
 
@@ -24,16 +19,16 @@ const alertIconMapping = {
 
 export type AlertType = 'success' | 'error' | 'default' | 'danger';
 
-type AlertProps = {
+export interface AlertProps {
   avatarSrc?: string;
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
-  onExit?: (rest: Omit<AlertProps, 'onExit'>) => void | (() => void);
+  onExit?: ((rest: Omit<AlertProps, 'onExit'>) => void) | (() => void);
   truncateText?: boolean;
   type?: AlertType;
   [key: string]: unknown;
-};
+}
 
 /**
  * Alerts should be used to show notifications or messages from (providers, support, or system).
@@ -69,7 +64,7 @@ export const Alert = (alertProps: AlertProps) => {
   const [exiting, setExiting] = useState(false);
   const [exited, setExited] = useState(false);
 
-  const contentText = useRef<HTMLDivElement>(null);
+  const { contentText } = useTruncateText(truncateText);
 
   let timer: number | undefined;
 
@@ -77,7 +72,6 @@ export const Alert = (alertProps: AlertProps) => {
     setExiting(true);
     window.clearTimeout(timer);
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { onExit: _onExit, ...otherProps } = alertProps;
 
     window.setTimeout(() => {
@@ -86,20 +80,10 @@ export const Alert = (alertProps: AlertProps) => {
     }, ANIMATION_DELAY);
   };
 
+  /**
+   * Duration logic effect
+   */
   useEffect(() => {
-    // Truncate text logic
-    if (truncateText) {
-      const contentElement = contentText.current;
-      if (contentElement) {
-        const wordsArray = contentElement.innerHTML.split(' ');
-        while (contentElement.scrollHeight > contentElement.offsetHeight) {
-          wordsArray.pop();
-          contentElement.innerHTML = `${wordsArray.join(' ')}...`;
-        }
-      }
-    }
-
-    // Duration logic
     if (duration === 'sticky' || !!ctaContent) {
       return;
     }
@@ -110,7 +94,7 @@ export const Alert = (alertProps: AlertProps) => {
     );
 
     return () => {
-      if (timer) {
+      if (isDefined(timer)) {
         window.clearTimeout(timer);
       }
     };
@@ -123,37 +107,37 @@ export const Alert = (alertProps: AlertProps) => {
   const Icon = alertIconMapping[type];
 
   return (
-    <AlertContainer
+    <Style.AlertContainer
       alertType={type}
       exiting={exiting}
       onClick={alertExitHandler}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <MainContainer>
-        <IconContainer hasAvatar={!!avatarSrc}>
+      <Style.MainContainer>
+        <Style.IconContainer hasAvatar={!!avatarSrc}>
           {avatarSrc ? (
             <Avatar size="small" src={avatarSrc} alt="avatar" />
           ) : (
             <Icon fill={theme.COLORS.white} />
           )}
-        </IconContainer>
-        <ContentContainer truncateText={truncateText} ref={contentText}>
+        </Style.IconContainer>
+        <Style.ContentContainer truncateText={truncateText} ref={contentText}>
           {content}
-        </ContentContainer>
-      </MainContainer>
+        </Style.ContentContainer>
+      </Style.MainContainer>
       {ctaContent && (
-        <CtaContent>
+        <Style.CtaContent>
           <div>{ctaContent}</div>
           <ChevronIcon fill={theme.COLORS.white} width={14} height={14} />
-        </CtaContent>
+        </Style.CtaContent>
       )}
-    </AlertContainer>
+    </Style.AlertContainer>
   );
 };
 
 Alert.Container = ({ children }: { children: React.ReactNode }) => (
-  <AlertsContainer>{children}</AlertsContainer>
+  <Style.AlertsContainer>{children}</Style.AlertsContainer>
 );
 
 Alert.propTypes = {

@@ -3,9 +3,9 @@ import { keyframes } from '@emotion/core';
 
 import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
 
-import { AlertType } from '.';
+import type { AlertType } from '.';
 
-export const AlertsContainer = styled.div`
+const AlertsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -46,9 +46,9 @@ const errorAlertStyles = (theme: ThemeType) => `
   box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 `;
 
-export const AlertContainer = styled.button<{
-  exiting: boolean;
+const AlertContainer = styled.button<{
   alertType: AlertType;
+  exiting: boolean;
 }>`
   border: none;
   text-align: left;
@@ -90,7 +90,7 @@ export const AlertContainer = styled.button<{
   }
 `;
 
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -100,12 +100,12 @@ export const MainContainer = styled.div`
   padding: ${SPACER.medium};
 `;
 
-export const ContentContainer = styled.div<{ truncateText: boolean }>`
+const ContentContainer = styled.div<{ truncateText: boolean }>`
   margin: -3px 0 0 ${SPACER.medium};
   max-height: ${({ truncateText }) => (truncateText ? '48px' : 'none')};
 `;
 
-export const CtaContent = styled.div`
+const CtaContent = styled.div`
   padding: ${SPACER.medium};
 
   display: flex;
@@ -117,7 +117,7 @@ export const CtaContent = styled.div`
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
-export const IconContainer = styled.div<{ hasAvatar: boolean }>`
+const IconContainer = styled.div<{ hasAvatar: boolean }>`
   ${({ hasAvatar }) =>
     hasAvatar &&
     `
@@ -130,3 +130,12 @@ export const IconContainer = styled.div<{ hasAvatar: boolean }>`
     fill: ${({ theme }) => theme.COLORS.white};
   }
 `;
+
+export default {
+  AlertsContainer,
+  AlertContainer,
+  ContentContainer,
+  CtaContent,
+  MainContainer,
+  IconContainer,
+};

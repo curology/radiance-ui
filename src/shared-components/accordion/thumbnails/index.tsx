@@ -1,19 +1,13 @@
 import React from 'react';
 
-import {
-  Container,
-  ImageContainer,
-  ThumbnailImage,
-  MultiplesContainer,
-  MultiplesText,
-} from './style';
+import Style from './style';
 
-type ThumbnailsProps = {
+export interface ThumbnailsProps {
   /** An array of image src strings that Accordion.Thumbails will use to render */
   photoSrcs: Array<string>;
-};
+}
 
-const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
+export const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
   /**
    * Thumbnail images set with empty alt text because they are decorative.
    * Accessible Accordion functionality does not depend on these thumbnails.
@@ -24,24 +18,24 @@ const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
     }
 
     const firstThumbnail = (
-      <ImageContainer>
-        <ThumbnailImage alt="" src={photoSrcs[0]} />
-      </ImageContainer>
+      <Style.ImageContainer>
+        <Style.ThumbnailImage alt="" src={photoSrcs[0]} />
+      </Style.ImageContainer>
     );
 
     let secondThumbnail = null;
 
     if (photoSrcs.length === 2) {
       secondThumbnail = (
-        <ImageContainer>
-          <ThumbnailImage alt="" src={photoSrcs[1]} />
-        </ImageContainer>
+        <Style.ImageContainer>
+          <Style.ThumbnailImage alt="" src={photoSrcs[1]} />
+        </Style.ImageContainer>
       );
     } else if (photoSrcs.length > 2) {
       secondThumbnail = (
-        <MultiplesContainer>
-          <MultiplesText>+{photoSrcs.length - 1}</MultiplesText>
-        </MultiplesContainer>
+        <Style.MultiplesContainer>
+          <Style.MultiplesText>+{photoSrcs.length - 1}</Style.MultiplesText>
+        </Style.MultiplesContainer>
       );
     }
 
@@ -53,7 +47,5 @@ const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
     );
   };
 
-  return <Container>{renderThumbnails()}</Container>;
+  return <Style.Container>{renderThumbnails()}</Style.Container>;
 };
-
-export default Thumbnails;

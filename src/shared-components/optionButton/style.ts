@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeType } from '../../constants';
-import { containerStyles, ContainerType } from '../container/style';
+import ContainerStyle, { ContainerType } from '../container/style';
+import { setThemeLineHeight } from '../../utils/themeStyles';
 
-type BaseIconWrapperStylesProps = {
+export interface BaseIconWrapperStylesProps {
   buttonType?: 'primary' | 'secondary';
   optionType?: 'radio' | 'checkbox';
-  selected?: boolean;
+  selected: boolean;
   theme: ThemeType;
-};
+}
 
 const getOptionTypeStyles = (
   optionType: BaseIconWrapperStylesProps['optionType'],
@@ -30,17 +31,34 @@ const getTypeColor = (
   return theme.COLORS.primary;
 };
 
-export const ClickableContainer = styled.button<{
-  borderRadius?: string;
+interface ContainerProps {
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
   containerType: ContainerType;
-}>`
-  border-radius: ${({ borderRadius, theme }) =>
-    borderRadius || theme.BORDER_RADIUS.small};
-  ${({ containerType, theme }) => containerStyles(theme, containerType)};
+}
+
+interface SharedContainerStylesProps extends ContainerProps {
+  theme: ThemeType;
+}
+
+const sharedContainerStyles = ({
+  borderRadius,
+  containerType,
+  theme,
+}: SharedContainerStylesProps) => `
+  border-radius: ${theme.BORDER_RADIUS[borderRadius]};
+  ${ContainerStyle.containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
+`;
+
+const DisplayContainer = styled.div<ContainerProps>`
+  ${sharedContainerStyles}
+`;
+
+const ClickableContainer = styled.button<ContainerProps>`
+  ${sharedContainerStyles}
 
   :focus {
     outline: none;
@@ -48,7 +66,7 @@ export const ClickableContainer = styled.button<{
   }
 `;
 
-export const FlexContainer = styled.div`
+const FlexContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
@@ -96,28 +114,12 @@ const getBaseIconWrapperStyles = ({
   }
 `;
 
-export const CheckmarkWrapper = styled.div<
-  Omit<BaseIconWrapperStylesProps, 'theme'>
->`
-  ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({
-      buttonType,
-      optionType,
-      selected,
-      theme,
-    })}
+const CheckmarkWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
+  ${getBaseIconWrapperStyles}
 `;
 
-export const IconWrapper = styled.div<
-  Omit<BaseIconWrapperStylesProps, 'theme'>
->`
-  ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({
-      buttonType,
-      optionType,
-      selected,
-      theme,
-    })}
+const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
+  ${getBaseIconWrapperStyles}
   width: 48px;
   height: 48px;
 
@@ -137,16 +139,27 @@ export const IconWrapper = styled.div<
     `};
 `;
 
-export const TextContainer = styled.div`
+const TextContainer = styled.div`
   margin-left: ${SPACER.medium};
 `;
 
-export const Text = styled.div`
+const Text = styled.div`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
-  line-height: 1.5;
+  line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
 
-export const SubText = styled.div`
+const SubText = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
-  line-height: 1.5;
+  line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
+
+export default {
+  CheckmarkWrapper,
+  DisplayContainer,
+  ClickableContainer,
+  FlexContainer,
+  IconWrapper,
+  SubText,
+  Text,
+  TextContainer,
+};

@@ -1,22 +1,16 @@
 import { useTheme } from 'emotion-theming';
 import PropTypes from 'prop-types';
 import React from 'react';
-// @ts-ignore
+// @ts-expect-error: No @types, we should replace this dependency
 import ToggleButton from 'react-toggle-button';
 
-import {
-  Container,
-  Label,
-  ReactToggleButtonContainer,
-  trackStyle,
-  thumbStyle,
-} from './style';
+import Style from './style';
 
-type ToggleProps = {
+export interface ToggleProps {
   checked?: boolean;
   label?: string;
   onChange: () => void;
-};
+}
 
 /**
  * react-toggle-button in-lines all of its styling.
@@ -40,16 +34,16 @@ export const Toggle = ({
   const theme = useTheme();
 
   return (
-    <Container>
-      {label && <Label onClick={onChange}>{label}</Label>}
-      <ReactToggleButtonContainer>
+    <Style.Container>
+      {label && <Style.Label onClick={onChange}>{label}</Style.Label>}
+      <Style.ReactToggleButtonContainer>
         <ToggleButton
           value={checked || false}
           onToggle={onChange}
           inactiveLabel=""
           activeLabel=""
-          thumbStyle={thumbStyle(theme)}
-          trackStyle={trackStyle}
+          thumbStyle={Style.thumbStyle(theme)}
+          trackStyle={Style.trackStyle}
           thumbAnimateRange={[1, 17]}
           colors={{
             active: {
@@ -67,8 +61,8 @@ export const Toggle = ({
           }}
           passThroughInputProps={{ style: toggleInputStyles }}
         />
-      </ReactToggleButtonContainer>
-    </Container>
+      </Style.ReactToggleButtonContainer>
+    </Style.Container>
   );
 };
 

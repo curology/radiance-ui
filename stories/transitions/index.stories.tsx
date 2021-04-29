@@ -51,10 +51,18 @@ export const OpacityInAnimation = () => (
   </InnerContainer>
 );
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { disable: true },
+} as const;
+
+interface TransitionsStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const TRANSITIONS_STORIES: TransitionsStories = {
   title: 'Components/Transitions',
   parameters: {
-    chromatic: { disable: true },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -73,4 +81,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TRANSITIONS_STORIES;

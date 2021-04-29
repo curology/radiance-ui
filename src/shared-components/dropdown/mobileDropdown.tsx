@@ -2,17 +2,17 @@ import React from 'react';
 import { useTheme } from 'emotion-theming';
 
 import { ChevronIcon } from '../../icons';
-import { DropdownContainer, dropdownInputStyle, IconContainer } from './style';
+import Style from './style';
 
 import { OptionType, OptionValue } from '.';
 
-type MobileDropdownProps<T> = {
+interface MobileDropdownProps<T> {
   borderRadius: string;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: T[];
   textAlign: 'left' | 'center';
   value?: OptionValue;
-};
+}
 
 /**
  * The mobile dropdown is built into the `<Dropdown />` component and cannot be used individually.
@@ -29,15 +29,15 @@ export const MobileDropdown = <T extends OptionType>({
   const theme = useTheme();
 
   return (
-    <DropdownContainer textAlign={textAlign}>
+    <Style.DropdownContainer textAlign={textAlign}>
       <select
-        css={dropdownInputStyle({
+        css={Style.dropdownInputStyle({
           borderRadius,
           shouldBeFullyRounded: true,
           textAlign,
           theme,
         })}
-        value={value || ''}
+        value={value ?? ''}
         onChange={onMobileSelectChange}
       >
         {options.map((option, index) => {
@@ -51,7 +51,7 @@ export const MobileDropdown = <T extends OptionType>({
 
           return (
             <option
-              key={option.value || `undefined-${index}`}
+              key={option.value ?? `undefined-${index}`}
               value={option.value}
               disabled={isDisabled}
             >
@@ -60,9 +60,9 @@ export const MobileDropdown = <T extends OptionType>({
           );
         })}
       </select>
-      <IconContainer>
+      <Style.IconContainer>
         <ChevronIcon width={10} height={10} />
-      </IconContainer>
-    </DropdownContainer>
+      </Style.IconContainer>
+    </Style.DropdownContainer>
   );
 };

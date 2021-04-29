@@ -54,7 +54,7 @@ export const Mobile = () => {
   const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value, selectedOptions } = event.target;
 
-    if (selectedOptions && selectedOptions.length) {
+    if (selectedOptions.length) {
       setSelectedOption(value);
     }
   };
@@ -73,7 +73,7 @@ export const Mobile = () => {
   );
 };
 
-export default {
+const DROPDOWN_STORIES: Meta = {
   title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
@@ -97,4 +97,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default DROPDOWN_STORIES;

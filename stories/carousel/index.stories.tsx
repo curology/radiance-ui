@@ -88,7 +88,7 @@ const CarouselContainer = styled.div<{ bgColor?: string }>`
   width: 375px;
   align-items: center;
   background-color: ${({ bgColor, theme }) =>
-    bgColor || theme.COLORS.background};
+    bgColor ?? theme.COLORS.background};
 `;
 
 export const SecondaryStyle = () => {
@@ -137,14 +137,20 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+/*
+ * There is visual jank when this component loads--this reduces brittleness in Chromatic
+ */
+const CHROMATIC_OPTIONS = { chromatic: { delay: 2000 } } as const;
+
+interface CarouselStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const CAROUSEL_STORIES: CarouselStories = {
   title: 'Components/Carousel',
   component: Carousel,
   parameters: {
-    /**
-     * There is visual jank when this component loads--this reduces brittleness in Chromatic
-     */
-    chromatic: { delay: 2000 },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -162,4 +168,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CAROUSEL_STORIES;

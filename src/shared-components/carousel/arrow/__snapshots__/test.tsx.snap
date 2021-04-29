@@ -388,7 +388,6 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
         </div>
       </div>
     </button>
-    
   </div>
 </div>
 `;
@@ -679,7 +678,6 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
         </div>
       </div>
     </button>
-    
   </div>
 </div>
 `;

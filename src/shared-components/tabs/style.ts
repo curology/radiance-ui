@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, MEDIA_QUERIES } from '../../constants';
 
-export const TabsContainer = styled.div`
+const TabsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -19,7 +19,7 @@ export const TabsContainer = styled.div`
   }
 `;
 
-export const TabItem = styled.button<{ active: boolean }>`
+const TabItem = styled.button<{ active: boolean }>`
   ${buttonReset}
   ${({ theme }) => TYPOGRAPHY_STYLE.button(theme)}
   display: flex;
@@ -44,3 +44,5 @@ export const TabItem = styled.button<{ active: boolean }>`
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focus};
   }
 `;
+
+export default { TabsContainer, TabItem };

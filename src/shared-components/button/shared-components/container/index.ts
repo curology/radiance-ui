@@ -19,7 +19,7 @@ const flexMdUpStyles = `
   }
 `;
 
-const ButtonContainer = styled.div<{ reverse?: boolean; flex?: boolean }>`
+const ButtonContainer = styled.div<{ flex?: boolean; reverse?: boolean }>`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -35,7 +35,7 @@ const ButtonContainer = styled.div<{ reverse?: boolean; flex?: boolean }>`
     margin-top: 0;
   }
 
-  ${({ reverse }) => reverse && reverseStyles};
+  ${({ reverse = false }) => reverse && reverseStyles};
 
   ${MEDIA_QUERIES.mdUp} {
     & > :not(:last-child) {
@@ -44,8 +44,8 @@ const ButtonContainer = styled.div<{ reverse?: boolean; flex?: boolean }>`
       margin-right: 0;
     }
 
-    ${({ reverse }) => reverse && reverseStyles};
-    ${({ flex }) => flex && flexMdUpStyles};
+    ${({ reverse = false }) => reverse && reverseStyles};
+    ${({ flex = false }) => flex && flexMdUpStyles};
   }
 `;
 

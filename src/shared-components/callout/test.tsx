@@ -1,5 +1,4 @@
 import React from 'react';
-import { primaryTheme } from 'src/constants/themes';
 import { render } from 'src/tests/testingLibraryHelpers';
 
 import { NeckGlyph } from '../../icons';
@@ -17,9 +16,9 @@ describe('<Callout />', () => {
 
       expect(container.firstElementChild).toMatchSnapshot();
     });
-    it('renders callout with custom color and icon', () => {
+    it('renders callout with icon', () => {
       const { container } = render(
-        <Callout icon={<NeckGlyph />} color={primaryTheme.COLORS.primaryTint2}>
+        <Callout icon={<NeckGlyph />}>
           Callout text with <strong>custom color</strong> and icon.
         </Callout>,
       );

@@ -21,19 +21,34 @@ const ChipContainer = styled.div`
 
 export const Usage = () => (
   <ChipContainer>
-    <Chip status="default" text="Default" />
+    <div>
+      <h4>Default</h4>
+    </div>
+    <Chip status="primary" text="Primary" />
     <Chip status="error" text="Error" />
     <Chip status="success" text="Success" />
-    <Chip status="secondary" text="Secondary" />
+    <Chip status="white" text="White" />
+    <br />
+    <div>
+      <h4>Low Contrast</h4>
+    </div>
+    <Chip status="primary" isLowContrast text="Primary" />
+    <Chip status="error" isLowContrast text="Error" />
+    <Chip status="success" isLowContrast text="Success" />
+    <Chip status="white" isLowContrast text="White" />
   </ChipContainer>
 );
+
+Usage.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
 
 export const WithControls = () => (
   <Chip
     status={select(
       'status',
-      ['default', 'success', 'error', 'secondary'],
-      'default',
+      ['primary', 'success', 'error', 'white'],
+      'primary',
     )}
     text={text('text', 'Chip')}
   />
@@ -43,11 +58,10 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHIP_STORIES: Meta = {
   title: 'Components/Chip',
   component: Chip,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -62,4 +76,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default CHIP_STORIES;

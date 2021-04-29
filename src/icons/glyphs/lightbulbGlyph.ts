@@ -1,5 +1,5 @@
-import { LightbulbGlyphSecondary } from './svgs';
+import { LightbulbGlyphSecondary, LightbulbGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
-  useIcon(null, LightbulbGlyphSecondary, props);
+  useIcon(LightbulbGlyph, LightbulbGlyphSecondary, props);

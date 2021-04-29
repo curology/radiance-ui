@@ -1,23 +1,24 @@
 import styled from '@emotion/styled';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 import { MessagesTypes } from '../verificationMessages';
+import { setThemeLineHeight } from '../../utils/themeStyles';
 
-export const HintItem = styled.div`
+const HintItem = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   transition: all ${ANIMATION.defaultTiming} ease-in-out;
   opacity: 0;
   max-height: 0;
 `;
 
-export const FieldContainer = styled.div`
+const FieldContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 22px;
 `;
 
-export const Label = styled.label<{ disabled: boolean }>`
+const Label = styled.label<{ disabled: boolean }>`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
 
   ${({ disabled, theme }) =>
@@ -62,17 +63,17 @@ const inputStyles = (theme: ThemeType) => `
   }
 `;
 
-export const Input = styled.input`
+const Input = styled.input`
   ${({ theme }) => inputStyles(theme)}
   padding: 13px ${SPACER.xlarge} 13px ${SPACER.medium};
 `;
 
-export const Textarea = styled.textarea`
+const Textarea = styled.textarea`
   ${({ theme }) => inputStyles(theme)}
   color: ${({ theme }) => theme.COLORS.primary};
   display: block;
   height: 100%;
-  line-height: ${SPACER.large};
+  line-height: ${({ theme }) => setThemeLineHeight(theme, SPACER.large)};
   margin: 0 auto;
   max-width: 35rem;
   padding: ${SPACER.medium};
@@ -101,7 +102,7 @@ const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
   }
 `;
 
-export const InputContainer = styled.div<{
+const InputContainer = styled.div<{
   messagesType: MessagesTypes;
   showMessages: boolean;
 }>`
@@ -118,3 +119,12 @@ export const InputContainer = styled.div<{
   ${({ showMessages, messagesType, theme }) =>
     showMessages && applyMessagesStyles(messagesType, theme)}
 `;
+
+export default {
+  FieldContainer,
+  HintItem,
+  Input,
+  InputContainer,
+  Label,
+  Textarea,
+};

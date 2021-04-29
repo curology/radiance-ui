@@ -11,7 +11,7 @@ import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
+import type { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 export const Default = () => (
@@ -26,12 +26,12 @@ export const Default = () => (
 
 export const ReactRouterLink = () => {
   const MockLink = ({
-    to,
     children,
+    to,
     ...rest
   }: {
-    to: string;
     children: React.ReactNode;
+    to: string;
   }) => (
     // eslint-disable-next-line
     <a href={to} {...rest}>
@@ -104,7 +104,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const LINK_BUTTON_STORIES: Meta = {
   title: 'Components/Button/LinkButton',
   component: LinkButton,
   parameters: {
@@ -125,4 +125,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default LINK_BUTTON_STORIES;

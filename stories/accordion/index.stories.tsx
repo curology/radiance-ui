@@ -18,7 +18,9 @@ const ACCORDION_STORY_ID_PREFIX = 'components-accordion--';
 
 export const Standard = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleAccordion = () => setIsOpen(!isOpen);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -43,7 +45,9 @@ Standard.id = `${ACCORDION_STORY_ID_PREFIX}standard`;
 
 export const NoBorder = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const onClick = () => setIsOpen(!isOpen);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -67,7 +71,9 @@ NoBorder.id = `${ACCORDION_STORY_ID_PREFIX}no-border`;
 
 export const Disabled = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const onClick = () => setIsOpen(!isOpen);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -89,7 +95,9 @@ Disabled.id = `${ACCORDION_STORY_ID_PREFIX}disabled`;
 
 export const RightAlignedArrow = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleAccordion = () => setIsOpen(!isOpen);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -140,7 +148,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const ACCORDION_STORIES: Meta = {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: {
@@ -198,4 +206,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ACCORDION_STORIES;

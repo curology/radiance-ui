@@ -1,10 +1,16 @@
 import styled from '@emotion/styled';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER } from '../../constants';
+import { TYPOGRAPHY_STYLE } from '../typography';
+import { SPACER, ThemeColors } from '../../constants';
+import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
 
-export const IndicatorContainer = styled.div`
-  background-color: ${({ theme }) => theme.COLORS.error};
+interface IndicatorContainerProps {
+  backgroundColor: ThemeColors;
+  textColor: ThemeColors;
+}
+
+const IndicatorContainer = styled.div<IndicatorContainerProps>`
+  background-color: ${({ backgroundColor }) => backgroundColor};
   min-height: 16px;
   height: 16px;
   max-height: 16px;
@@ -16,13 +22,14 @@ export const IndicatorContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  border-radius: 50%;
 
   > div {
-    position: relative;
-    top: 1px;
     ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
     font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
-    color: ${({ theme }) => theme.COLORS.white};
+    color: ${({ textColor }) => textColor};
+    ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
   }
 `;
+
+export default { IndicatorContainer };

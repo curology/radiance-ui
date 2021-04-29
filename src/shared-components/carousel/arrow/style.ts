@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 
 import { SPACER, Z_SCALE } from '../../../constants';
 
-export const ArrowContainer = styled.div<{
-  prev: boolean;
-  next: boolean;
+const ArrowContainer = styled.div<{
   disabled: boolean;
+  next: boolean;
+  prev: boolean;
 }>`
   position: absolute;
   top: 50%;
@@ -19,10 +19,10 @@ export const ArrowContainer = styled.div<{
   ${({ disabled }) => (disabled ? `display: none;` : '')}
 `;
 
-export const BottomRightAlignedArrowContainer = styled.div<{
-  prev: boolean;
-  next: boolean;
+const BottomRightAlignedArrowContainer = styled.div<{
   disabled: boolean;
+  next: boolean;
+  prev: boolean;
 }>`
   display: block;
   align-self: flex-end;
@@ -46,3 +46,5 @@ export const BottomRightAlignedArrowContainer = styled.div<{
     `
       : ''};
 `;
+
+export default { ArrowContainer, BottomRightAlignedArrowContainer };

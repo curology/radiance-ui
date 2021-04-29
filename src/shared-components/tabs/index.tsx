@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import { TabsContainer, TabItem } from './style';
+import Style from './style';
 
-type TabType = {
+interface TabType {
   id: number;
   text: string;
-};
+}
 
 // Hardcoding TabType below to show the actual type in the docs
-type TabsProps = {
+export interface TabsProps {
   initialActiveTabId?: number;
   onClick?: (tab: TabType) => unknown;
   tabItems: Array<{
     id: number;
     text: string;
   }>;
-};
+}
 
 export const Tabs = ({
   initialActiveTabId = 1,
@@ -31,17 +31,19 @@ export const Tabs = ({
   };
 
   return (
-    <TabsContainer>
+    <Style.TabsContainer>
       {tabItems.map((tab) => (
-        <TabItem
+        <Style.TabItem
           active={tab.id === activeTabId}
           key={tab.id}
-          onClick={() => onTabClick(tab)}
+          onClick={() => {
+            onTabClick(tab);
+          }}
         >
           {tab.text}
-        </TabItem>
+        </Style.TabItem>
       ))}
-    </TabsContainer>
+    </Style.TabsContainer>
   );
 };
 

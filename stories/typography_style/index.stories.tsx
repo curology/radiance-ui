@@ -10,11 +10,15 @@ import { TYPOGRAPHY_STYLE } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
 
+// Rule will be fixed with emotion 11 upgrade that has better typing,
+// but right now the css theme arg is any in `/stories` directory
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 export const Usage = () => (
   <React.Fragment>
     <div css={(theme) => TYPOGRAPHY_STYLE.display(theme)}>display</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.heading(theme)}>heading</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.title(theme)}>title</div>
+    <div css={(theme) => TYPOGRAPHY_STYLE.bodyBold(theme)}>body bold</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.body(theme)}>body</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.caption(theme)}>caption</div>
     <div css={(theme) => TYPOGRAPHY_STYLE.label(theme)}>label</div>
@@ -26,11 +30,15 @@ export const Usage = () => (
     <div css={(theme) => TYPOGRAPHY_STYLE.button(theme)}>button</div>
   </React.Fragment>
 );
+/* eslint-enable @typescript-eslint/no-unsafe-argument */
 
-export default {
+Usage.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
+
+const TYPOGRAPHY_STYLE_STORIES: Meta = {
   title: 'Components/TYPOGRAPHY_STYLE',
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
     docs: {
       page: () => (
         <React.Fragment>
@@ -53,4 +61,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default TYPOGRAPHY_STYLE_STORIES;

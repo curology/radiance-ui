@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import Arrow from './arrow';
-import { OuterContainer, InnerContainer, Card } from './style';
+import Style from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const FIRST_INDEX = 0;
 const BASE_SLIDER_CONFIG = {
@@ -15,7 +16,7 @@ const BASE_SLIDER_CONFIG = {
 
 export type CarouselType = 'primary' | 'secondary';
 
-type CarouselProps = {
+export interface CarouselProps {
   /**
    * Auto-advance the carousel cards
    */
@@ -44,8 +45,10 @@ type CarouselProps = {
    */
   infinite?: boolean;
   numCardsVisible: 1 | 2 | 3;
-};
+}
 
+// TODO-eslint: Reduce cognitive complexity of component
+/* eslint-disable sonarjs/cognitive-complexity */
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
  *
@@ -116,7 +119,7 @@ export const Carousel = ({
   };
 
   const onUserInteraction = () => {
-    if (timeoutIdRef.current) {
+    if (isDefined(timeoutIdRef.current)) {
       clearTimeout(timeoutIdRef.current);
     }
     hasUserInteractedRef.current = true;
@@ -156,18 +159,22 @@ export const Carousel = ({
   };
 
   return (
-    <OuterContainer numCardsVisible={numCardsVisible}>
-      <InnerContainer carouselType={carouselType} onClick={onUserInteraction}>
+    <Style.OuterContainer numCardsVisible={numCardsVisible}>
+      <Style.InnerContainer
+        carouselType={carouselType}
+        onClick={onUserInteraction}
+      >
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Slider ref={slider} {...carouselSettings}>
           {children}
         </Slider>
-      </InnerContainer>
-    </OuterContainer>
+      </Style.InnerContainer>
+    </Style.OuterContainer>
   );
 };
+/* eslint-enable sonarjs/cognitive-complexity */
 
-Carousel.Card = Card;
+Carousel.Card = Style.Card;
 
 Carousel.propTypes = {
   autoplay: PropTypes.bool,

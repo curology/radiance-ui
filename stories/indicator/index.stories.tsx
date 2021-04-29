@@ -12,11 +12,17 @@ import {
 import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
 
-export const NumbersAndText = () => (
+export const Usage = () => (
   <React.Fragment>
-    <Indicator text="1" />
+    <Indicator type="error" text="1" />
     <br />
-    <Indicator text={999} />
+    <Indicator type="primary" text="+4" />
+    <br />
+    <Indicator type="success" text={999} />
+    <br />
+    <Indicator type="tertiary" text={4} />
+    <br />
+    <Indicator type="white" text="String" />
   </React.Fragment>
 );
 
@@ -26,11 +32,19 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const CHROMATIC_OPTIONS = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+} as const;
+
+interface IndicatoriStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const INDICATOR_STORIES: IndicatoriStories = {
   title: 'Components/Indicator',
   component: Indicator,
   parameters: {
-    chromatic: { viewports: [BREAKPOINTS.xs] },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -48,4 +62,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default INDICATOR_STORIES;

@@ -10,7 +10,7 @@ import {
   brandStyles,
 } from '../src/utils/injectGlobalStyles/style';
 import { primaryTheme, secondaryTheme } from '../src/constants/themes';
-import { ThemeType } from '../src/constants/themes/types';
+import type { ThemeType } from '../src/constants/themes/types';
 import { BREAKPOINTS } from '../src/constants';
 
 const ADDONS_REQUIRED_IN_OPTIONS = {
@@ -73,16 +73,32 @@ export const globalTypes = {
   },
 };
 
+const getTheme = (theme: ThemeType['type']) => {
+  if (theme === primaryTheme.__type) return primaryTheme;
+  if (theme === secondaryTheme.__type) return secondaryTheme;
+
+  throw new Error('No Theme Found');
+};
+
 const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
-  const getTheme = (): ThemeType => {
+  const getStoryTheme = (): ThemeType => {
     const {
+      parameters: { theme },
       globals: { theme: contextTheme },
     } = context;
 
-    return contextTheme === primaryTheme.__type ? primaryTheme : secondaryTheme;
+    /**
+     * Theme override used for Chromatic visual regression tests: we pass in `theme` (via `parameters`)
+     * in our `secondary.stories.tsx` stories that re-export our primary stories with secondary theming
+     */
+    if (theme) {
+      return getTheme(theme);
+    }
+
+    return getTheme(contextTheme);
   };
 
-  const theme = getTheme();
+  const theme = getStoryTheme();
 
   return (
     <ThemeProvider theme={theme}>
@@ -92,4 +108,5 @@ const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
     </ThemeProvider>
   );
 };
+
 export const decorators = [withThemeProvider];

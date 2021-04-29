@@ -3,21 +3,44 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Style from './style';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
+import type { ThemeColors, ThemeType } from '../../constants';
+import { isDefined } from '../../utils/isDefined';
 
-type CalloutProps = {
+export interface CalloutProps {
   /**
    * Content of the Callout element. It may contain `<strong>` tags
    */
   children: React.ReactNode;
   /**
-   * Color of the text and icon
-   */
-  color?: ThemeColors;
-  /**
    * Icon displayed inside the callout right aligned
    */
   icon?: React.ReactNode;
+  /**
+   * Custom prop to draw on preset Callout styles
+   */
+  type?: 'error' | 'success';
+}
+
+/**
+ * Pulls a specific styling preset based on available theme values and `type`
+ */
+const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
+  // Default values if no type provided
+  let backgroundColor: ThemeColors = theme.COLORS.infoLight;
+  let textColor: ThemeColors = theme.COLORS.primary;
+
+  if (type === 'success') {
+    backgroundColor = theme.COLORS.successLight;
+    textColor = theme.COLORS.success;
+  } else if (type === 'error') {
+    backgroundColor = theme.COLORS.errorLight;
+    textColor = theme.COLORS.error;
+  }
+
+  return {
+    backgroundColor,
+    textColor,
+  };
 };
 
 /**
@@ -25,16 +48,18 @@ type CalloutProps = {
  *
  * `Callout` will cover the entirety of the container that holds it. You may optionally wrap it with `Callout.Container` which will set the `max-width` to `327px`.
  *
- * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
+ * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs)
  */
-export const Callout = ({ children, color, icon = null }: CalloutProps) => {
+export const Callout = ({ children, icon, type }: CalloutProps) => {
   const theme = useTheme();
-  const colorWithTheme = color || theme.COLORS.primary;
+  const { backgroundColor, textColor } = getCalloutStyles(theme, type);
 
   return (
-    <Style.CalloutContainer>
-      <Style.Text textColor={colorWithTheme}>{children}</Style.Text>
-      {icon && <Style.Icon iconColor={colorWithTheme}>{icon}</Style.Icon>}
+    <Style.CalloutContainer backgroundColor={backgroundColor}>
+      <Style.Text textColor={textColor}>{children}</Style.Text>
+      {isDefined(icon) && icon !== false && (
+        <Style.Icon iconColor={textColor}>{icon}</Style.Icon>
+      )}
     </Style.CalloutContainer>
   );
 };
@@ -43,6 +68,6 @@ Callout.Container = Style.ParentContainer;
 
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
-  color: COLORS_PROP_TYPES,
   icon: PropTypes.node,
+  type: PropTypes.oneOf(['error', 'success']),
 };

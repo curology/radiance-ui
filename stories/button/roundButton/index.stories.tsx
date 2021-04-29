@@ -13,7 +13,7 @@ import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
+import type { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from 'emotion-theming';
 
 import {
@@ -164,7 +164,7 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-export default {
+const ROUND_BUTTON_STORIES: Meta = {
   title: 'Components/Button/RoundButton',
   component: RoundButton,
   parameters: {
@@ -185,4 +185,6 @@ export default {
       ),
     },
   },
-} as Meta;
+};
+
+export default ROUND_BUTTON_STORIES;

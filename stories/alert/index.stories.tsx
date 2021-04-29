@@ -63,7 +63,9 @@ export const WithCallToAction = () => (
     }
     type="error"
     ctaContent="Update Payment Method"
-    onExit={() => alert('cta alert clicked')}
+    onExit={() => {
+      alert('cta alert clicked');
+    }}
   />
 );
 
@@ -90,14 +92,20 @@ export const WithAlertContainer = () => (
   </Alert.Container>
 );
 
-export default {
+/**
+ * TODO: Figure out how to get Alerts to show up on Chromatic
+ */
+const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
+
+interface AlertStories extends Meta {
+  parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+}
+
+const ALERT_STORIES: AlertStories = {
   title: 'Components/Alert',
   component: Alert,
   parameters: {
-    /**
-     * TODO: Figure out how to get Alerts to show up on Chromatic
-     */
-    chromatic: { disable: true },
+    ...CHROMATIC_OPTIONS,
     docs: {
       page: () => (
         <React.Fragment>
@@ -112,11 +120,13 @@ export default {
           <ArgsTable />
           <Stories includePrimary />
           <Description>
-            Alert.Container Absolutely positions the alerts by default. (As
+            Alert.Container absolutely positions the alerts by default. (As
             such, it escapes the canvas container.)
           </Description>
         </React.Fragment>
       ),
     },
   },
-} as Meta;
+};
+
+export default ALERT_STORIES;

@@ -3,22 +3,17 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Loader from '../../shared-components/loader';
-import {
-  RoundButtonWrapper,
-  RoundButtonBase,
-  roundButtonLoader,
-  RoundButtonContainer,
-  roundButtonTextStyles,
-} from './style';
+import Style from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { ButtonTypeWithAction } from '../..';
+import type { ButtonTypeWithAction } from '../../types';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { isDefined } from '../../../../utils/isDefined';
 
-type RoundButtonProps = {
+export interface RoundButtonProps {
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
@@ -44,7 +39,7 @@ type RoundButtonProps = {
    */
   textColor?: ThemeColors;
   [key: string]: unknown;
-};
+}
 
 /**
  * `<RoundButton />` behaves mostly the same as `<Button />` except that it requires an `icon` prop since that is the main content placed with in the round button. Any children of the component will be rendered immediately below the round button.
@@ -56,7 +51,7 @@ type RoundButtonProps = {
 export const RoundButton = ({
   buttonColor,
   buttonType = 'primary',
-  children = '',
+  children,
   disabled = false,
   icon,
   isLoading = false,
@@ -66,18 +61,19 @@ export const RoundButton = ({
   ...rest
 }: RoundButtonProps) => {
   const theme = useTheme();
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
-    <RoundButtonWrapper>
-      <RoundButtonBase
+    <Style.RoundButtonWrapper>
+      <Style.RoundButtonBase
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
         buttonColor={buttonColorWithTheme}
         isLoading={loadingVal}
         type="button"
+        isFullWidth={false}
         textColor={textColor}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
@@ -87,21 +83,27 @@ export const RoundButton = ({
           buttonColor={buttonColorWithTheme}
           buttonType={buttonType}
           disabled={disabled}
-          css={roundButtonLoader(disabled, theme)}
+          css={Style.roundButtonLoader(disabled, theme)}
           isLoading={loadingVal}
           textColor={textColor}
         />
-      </RoundButtonBase>
-      {children && (
-        <p css={roundButtonTextStyles(buttonColorWithTheme, theme, textColor)}>
+      </Style.RoundButtonBase>
+      {isDefined(children) && (
+        <p
+          css={Style.roundButtonTextStyles(
+            buttonColorWithTheme,
+            theme,
+            textColor,
+          )}
+        >
           {children}
         </p>
       )}
-    </RoundButtonWrapper>
+    </Style.RoundButtonWrapper>
   );
 };
 
-RoundButton.Container = RoundButtonContainer;
+RoundButton.Container = Style.RoundButtonContainer;
 
 RoundButton.propTypes = {
   buttonColor: COLORS_PROP_TYPES,

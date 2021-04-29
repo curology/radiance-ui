@@ -4,10 +4,11 @@ import { useTheme } from 'emotion-theming';
 
 import { MobileDropdown } from './mobileDropdown';
 import { DesktopDropdown } from './desktopDropdown';
+import { isDefined } from '../../utils/isDefined';
 
 export type OptionValue = string | number;
 
-export type OptionType = {
+export interface OptionType {
   disabled?: boolean;
   /**
    * The text to be displayed for the option
@@ -21,9 +22,9 @@ export type OptionType = {
    * Any other data we want to pass from options
    */
   [key: string]: unknown;
-};
+}
 
-type DropdownProps<T> = {
+interface DropdownProps<T> {
   borderRadius?: string;
   /**
    * The handler to be invoked on option change
@@ -39,7 +40,7 @@ type DropdownProps<T> = {
    * The currently selected option
    */
   value?: OptionValue;
-};
+}
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
@@ -56,13 +57,15 @@ export const Dropdown = <T extends OptionType>({
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
-  const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+  const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
 
   const toggleDropdown = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
-  const closeDropdown = () => setIsOpen(false);
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
 
   const onMobileSelectChange = (
     event: React.ChangeEvent<HTMLSelectElement>,
@@ -70,7 +73,8 @@ export const Dropdown = <T extends OptionType>({
     const { target } = event;
     const { selectedIndex, selectedOptions } = target;
     const selectedOption = options[selectedIndex];
-    if (selectedOptions && selectedOptions.length) {
+
+    if (selectedOptions.length) {
       onChange(selectedOption);
     }
 
@@ -87,13 +91,13 @@ export const Dropdown = <T extends OptionType>({
     }
 
     // Next Value may be returned as null if the value of <li> is undefined. We want to cast to the real value of undefined
-    const nextValue = currentTarget.getAttribute('value') || undefined;
+    const nextValue = currentTarget.getAttribute('value') ?? undefined;
 
     const selectedOption = options.find((option) => {
       const { value: optionValue } = option;
 
       // This covers numbers and strings. <li> value is always returned as string. Falsy case covers undefined.
-      return optionValue
+      return isDefined(optionValue)
         ? `${optionValue}` === nextValue
         : optionValue === nextValue;
     });

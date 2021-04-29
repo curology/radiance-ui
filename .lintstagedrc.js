@@ -1,5 +1,5 @@
 module.exports = {
-  'src/**/*.{js,ts,tsx}': [
+  'src/**/*.{ts,tsx}': [
     'eslint --fix',
     () => 'tsc -p tsconfig.json --noEmit --emitDeclarationOnly false',
   ],
@@ -8,4 +8,5 @@ module.exports = {
     () => 'tsc -p stories/tsconfig.json --noEmit',
   ],
   '*.json': 'prettier --write',
+  '*.yml': 'prettier --write',
 };

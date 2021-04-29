@@ -4,29 +4,29 @@ import { SPACER } from '../../constants';
 
 import { ArrowAlignTypes, PositionTypes } from '.';
 
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
   position: relative;
   align-items: left;
   flex-direction: column-reverse;
 `;
 
-export const Trigger = styled.div`
+const Trigger = styled.div`
   cursor: pointer;
 `;
 
-export const TooltipBox = styled.div<{
+const TooltipBox = styled.div<{
   alignRightPercent: number;
   alignTopPercent: number;
   arrowAlign: ArrowAlignTypes;
   displayTooltip: boolean;
   hasRestrictedWidth: boolean;
   isSmall: boolean;
+  nudgeBottom: number;
   nudgeLeft: number;
   nudgeRight: number;
   nudgeTop: number;
-  nudgeBottom: number;
-  position: PositionTypes;
   open: boolean;
+  position: PositionTypes;
 }>`
   max-width: ${({ hasRestrictedWidth }) =>
     hasRestrictedWidth ? '327px' : 'none'};
@@ -122,12 +122,12 @@ export const TooltipBox = styled.div<{
   display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'none')};
 `;
 
-export const TooltipContent = styled.div`
+const TooltipContent = styled.div`
   z-index: 5;
   position: relative;
 `;
 
-export const ArrowImageContainer = styled.div<{
+const ArrowImageContainer = styled.div<{
   arrowAlign: ArrowAlignTypes;
   position: PositionTypes;
 }>`
@@ -170,3 +170,11 @@ export const ArrowImageContainer = styled.div<{
     }
   }};
 `;
+
+export default {
+  ArrowImageContainer,
+  MainContainer,
+  TooltipBox,
+  TooltipContent,
+  Trigger,
+};

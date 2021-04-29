@@ -2,19 +2,19 @@ import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
 import { SPACER } from '../../constants';
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 
-type SegmentItemProps = {
+interface SegmentItemProps {
   active: boolean;
   key: number;
   onClick: () => void;
   width: number;
-};
+}
 
-type IndicatorProps = {
-  width: number;
+interface IndicatorProps {
   transform: string;
-};
+  width: number;
+}
 
 export const SegmentsContainer = styled.div`
   width: 100%;

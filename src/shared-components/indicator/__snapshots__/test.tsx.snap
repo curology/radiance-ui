@@ -25,17 +25,18 @@ exports[`<Indicator /> UI snapshots renders the correct css with a number 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .emotion-0 > div {
-  position: relative;
-  top: 1px;
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
   color: #FFFFFF;
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 <div
@@ -72,17 +73,18 @@ exports[`<Indicator /> UI snapshots renders the correct css with a text 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .emotion-0 > div {
-  position: relative;
-  top: 1px;
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
   color: #FFFFFF;
+  -webkit-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  transform: translateY(1px);
 }
 
 <div
