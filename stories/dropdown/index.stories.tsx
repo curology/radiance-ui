@@ -30,9 +30,8 @@ const options = [
 ];
 
 export const Desktop = () => {
-  const [selectedOption, setSelectedOption] = useState<OptionType['value']>(
-    undefined,
-  );
+  const [selectedOption, setSelectedOption] =
+    useState<OptionType['value']>(undefined);
 
   const onChange = ({ value }: OptionType) => {
     setSelectedOption(value);
@@ -47,9 +46,8 @@ export const Desktop = () => {
 };
 
 export const Mobile = () => {
-  const [selectedOption, setSelectedOption] = useState<OptionType['value']>(
-    undefined,
-  );
+  const [selectedOption, setSelectedOption] =
+    useState<OptionType['value']>(undefined);
 
   const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { value, selectedOptions } = event.target;
