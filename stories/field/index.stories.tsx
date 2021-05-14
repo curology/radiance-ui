@@ -10,8 +10,9 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
 import { FocusScope } from '@react-aria/focus';
+
+import type { Meta } from '@storybook/react';
 
 const FieldsContainer = styled.div`
   margin: 1rem 0.5rem 2rem 0.5rem;
