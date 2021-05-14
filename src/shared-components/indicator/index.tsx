@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import type { ThemeColors, ThemeType } from 'src/constants';
 import { useTheme } from 'emotion-theming';
 
 import Style from './style';
+
+import type { ThemeColors, ThemeType } from 'src/constants';
 
 export interface IndicatorProps {
   text: string | number;

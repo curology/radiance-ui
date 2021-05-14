@@ -1,3 +1,8 @@
+import styled, {
+  CreateStyled,
+  StyledComponent,
+} from '../../../../node_modules/@emotion/styled';
+
 import type { ThemeType } from '../../../constants/themes/types';
 /**
  * We rely on TypeScript path aliasing in order to decorate our `@emotion/styled` import
@@ -5,10 +10,6 @@ import type { ThemeType } from '../../../constants/themes/types';
  *
  * @see: https://emotion.sh/docs/typescript#define-a-theme
  */
-import styled, {
-  CreateStyled,
-  StyledComponent,
-} from '../../../../node_modules/@emotion/styled';
 
 export default styled as CreateStyled<ThemeType>;
 

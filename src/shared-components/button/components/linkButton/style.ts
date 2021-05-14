@@ -1,8 +1,9 @@
 import { css } from '@emotion/core';
 
+import { baseButtonStyles } from '../../style';
+
 import type { ButtonType } from '../../types';
 import type { ThemeColors, ThemeType } from '../../../../constants';
-import { baseButtonStyles } from '../../style';
 
 interface LinkButtonStylesProps {
   buttonColor: ThemeColors;
