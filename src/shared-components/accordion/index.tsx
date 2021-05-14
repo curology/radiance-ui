@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
 import { useTheme } from 'emotion-theming';
 
-import type { ThemeType } from '../../constants';
 import { ChevronIcon } from '../../icons';
 import { Thumbnails } from './thumbnails';
 import Style from './style';
 import { keyboardKeys } from '../../constants/keyboardKeys';
+
+import type { ThemeType } from '../../constants';
 
 export interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
