@@ -5,13 +5,14 @@ import { useTheme } from '@emotion/react';
 import Loader from '../../shared-components/loader';
 import Style from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import type { ButtonTypeWithAction } from '../../types';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 import { isDefined } from '../../../../utils/isDefined';
+
+import type { ButtonTypeWithAction } from '../../types';
 
 export interface RoundButtonProps {
   buttonColor?: ThemeColors;

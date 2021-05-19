@@ -2,10 +2,11 @@ import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 import { keyframes } from '@emotion/react';
 
-import type { ButtonTypeWithAction } from '../../types';
-import type { ThemeColors, ThemeType } from '../../../../constants';
 import { primaryButtonLoadingBackgroundColor } from '../../../../utils/themeStyles';
 import { isDefined } from '../../../../utils/isDefined';
+
+import type { ButtonTypeWithAction } from '../../types';
+import type { ThemeColors, ThemeType } from '../../../../constants';
 
 const statefulLoader = keyframes`
   0% { opacity: 1; transform: translate3d(0, 0, 0) scale(1, 1); }

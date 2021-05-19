@@ -11,8 +11,9 @@ import {
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 import { isDefined } from '../../../../utils/isDefined';
-import type { ButtonType } from '../../types';
 import { ButtonBase, ButtonContents, ButtonText } from '../../style';
+
+import type { ButtonType } from '../../types';
 
 export interface ButtonProps {
   buttonColor?: ThemeColors;

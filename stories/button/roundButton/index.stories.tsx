@@ -12,8 +12,6 @@ import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
-import type { Meta } from '@storybook/react';
-import type { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from '@emotion/react';
 
 import {
@@ -22,6 +20,9 @@ import {
   CheckmarkIcon,
   CrossIcon,
 } from '../../../src/icons';
+
+import type { Meta } from '@storybook/react';
+import type { ThemeColors } from 'src/constants/themes/types';
 
 const ButtonsContainer = styled.div`
   display: flex;

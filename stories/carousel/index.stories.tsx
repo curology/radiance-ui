@@ -11,8 +11,9 @@ import {
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';
-import type { Meta } from '@storybook/react';
 import { useTheme } from '@emotion/react';
+
+import type { Meta } from '@storybook/react';
 
 const Card = styled(Carousel.Card)`
   background-color: ${({ theme }) => theme.COLORS.border};

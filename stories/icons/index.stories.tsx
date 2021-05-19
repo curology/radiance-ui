@@ -7,7 +7,6 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
 import { text, number, boolean } from '@storybook/addon-knobs';
 import * as iconComponents from 'src/icons/icons';
 import * as emojiComponents from 'src/icons/emojis';
@@ -21,6 +20,8 @@ import { useTheme } from '@emotion/react';
 import { Icon as IconComponent } from '../../src/shared-components/icon';
 import { CameraIcon } from '../../src/icons';
 import Style from './style';
+
+import type { Meta } from '@storybook/react';
 
 export const WithControls = () => {
   const theme = useTheme();

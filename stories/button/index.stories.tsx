@@ -10,11 +10,12 @@ import {
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Button } from 'src/shared-components';
-import type { Meta } from '@storybook/react';
-import type { ThemeColors } from 'src/constants/themes/types';
 import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon } from '../../src/icons';
+
+import type { Meta } from '@storybook/react';
+import type { ThemeColors } from 'src/constants/themes/types';
 
 const noop = () => undefined;
 

@@ -16,6 +16,7 @@ updates:
       - dependency-name: '@babel/plugin-proposal-class-properties'
       - dependency-name: '@babel/plugin-proposal-export-default-from'
       - dependency-name: '@babel/plugin-transform-parameters'
+      - dependency-name: '@babel/plugin-proposal-export-namespace-from from'
       - dependency-name: '@babel/preset-env'
       - dependency-name: '@babel/preset-react'
       - dependency-name: '@babel/preset-typescript'

@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Container from '../../shared-components/container';
-import type { ButtonType } from '../../types';
 import { ButtonContents, ButtonText } from '../../style';
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+
+import type { ButtonType } from '../../types';
 
 export interface LinkButtonProps {
   /**

@@ -14,6 +14,7 @@ import { SPACER } from 'src/constants';
 import accountImage from 'shared/account.png';
 import personImage from 'shared/person.jpg';
 import { Accordion } from 'src/shared-components';
+
 import type { Meta } from '@storybook/react';
 
 const ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX =

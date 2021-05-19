@@ -10,10 +10,11 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
 
 import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
 import { BREAKPOINTS } from '../../src/constants';
+
+import type { Meta } from '@storybook/react';
 
 const noop = () => undefined;
 
