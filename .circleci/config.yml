@@ -11,8 +11,8 @@ aliases:
       name: Prepare Environment
       command: mkdir test-results
 
-  - &cache-yarn-key-base yarn-packages-v2-{{ arch }}-
-  - &cache-yarn-key yarn-packages-v2-{{ arch }}-{{ checksum "yarn.lock" }}
+  - &cache-yarn-key-base yarn-packages-v3-{{ arch }}-
+  - &cache-yarn-key yarn-packages-v3-{{ arch }}-{{ checksum "yarn.lock" }}
 
   - &yarn-cache-restore
     restore_cache:
