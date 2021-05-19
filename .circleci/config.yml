@@ -11,8 +11,8 @@ aliases:
       name: Prepare Environment
       command: mkdir test-results
 
-  - &cache-yarn-key-base yarn-packages-v3-{{ arch }}-
-  - &cache-yarn-key yarn-packages-v3-{{ arch }}-{{ checksum "yarn.lock" }}
+  - &cache-yarn-key-base yarn-packages-v2-{{ arch }}-
+  - &cache-yarn-key yarn-packages-v2-{{ arch }}-{{ checksum "yarn.lock" }}
 
   - &yarn-cache-restore
     restore_cache:
@@ -113,7 +113,7 @@ jobs:
       - <<: *prepare-environment
       - run:
           name: Run Jest Tests
-          command: yarn run test --ci --runInBand --colors --no-cache --reporters=default --reporters=jest-junit
+          command: yarn run jest --ci --runInBand --colors --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
       - store_test_results:
