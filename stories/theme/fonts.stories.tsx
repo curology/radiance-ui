@@ -19,7 +19,19 @@ export const FONTS = () => {
         const fontsValue = theme.FONTS[fontsKey];
         return (
           <p key={fontsKey}>
-            <strong>{fontsKey}</strong>: {fontsValue}
+            <span style={{ fontFamily: fontsValue }}>
+              {fontsKey}: {fontsValue}
+            </span>
+            <br />
+            <span style={{ fontFamily: fontsValue, fontWeight: 'bold' }}>
+              {fontsKey} bold: {fontsValue}
+            </span>
+            <br />
+            <span style={{ fontFamily: fontsValue, fontStyle: 'italic' }}>
+              {fontsKey} italic: {fontsValue}
+            </span>
+            <br />
+            <br />
           </p>
         );
       })}

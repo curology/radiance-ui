@@ -10,9 +10,10 @@ import {
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
+import { useTheme } from 'emotion-theming';
+
 import type { Meta } from '@storybook/react';
 import type { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
 
 export const Default = () => (
   <LinkButton.Container>

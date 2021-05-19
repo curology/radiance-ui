@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v21.0.0
+
+- [Components] **BREAKING CHANGE** Update `borderRadius` prop in `<Accordion />` and `<OptionButton />` to be theme key rather than values ([#930](https://github.com/curology/radiance-ui/pull/930))
+
 # v20.0.1
 
 - [Hotfix] [#903](https://github.com/curology/radiance-ui/pull/903) follow-up ([#915](https://github.com/curology/radiance-ui/pull/915))

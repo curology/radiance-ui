@@ -1,13 +1,14 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import type { ThemeType } from '../../constants';
 import {
   setSecondaryHeadingFont,
   setButtonStyleFontWeight,
   setThemeLineHeight,
   setThemeFontWeight,
 } from '../../utils/themeStyles';
+
+import type { ThemeType } from '../../constants';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
