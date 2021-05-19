@@ -65,6 +65,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.12.13",
     "@babel/plugin-proposal-export-namespace-from": "^7.14.2",
     "@babel/plugin-proposal-private-methods": "^7.13.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.0",
     "@babel/plugin-transform-parameters": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
@@ -141,7 +142,7 @@
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.5",
+    "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@react-aria/focus": "^3.0.2",
     "focus-visible": "^5.1.0",
