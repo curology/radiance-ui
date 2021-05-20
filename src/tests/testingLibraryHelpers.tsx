@@ -3,7 +3,7 @@ import { ThemeProvider } from '@emotion/react';
 import * as ReactTestingLibrary from '@testing-library/react';
 import { REACT_PORTAL_SECTION_ID } from 'src/constants/portals';
 
-import { primaryTheme, ThemeType } from '../constants';
+import { REACT_PORTAL_SECTION_ID, primaryTheme, ThemeType } from '../constants';
 
 interface RenderOptions extends ReactTestingLibrary.RenderOptions {
   theme?: ThemeType;
