@@ -35,7 +35,6 @@ export interface ImmersiveModalProps {
   [key: string]: unknown;
 }
 
-
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
 const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
