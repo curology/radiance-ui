@@ -1,7 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import * as ReactTestingLibrary from '@testing-library/react';
-import { REACT_PORTAL_SECTION_ID } from 'src/constants/portals';
 
 import { REACT_PORTAL_SECTION_ID, primaryTheme, ThemeType } from '../constants';
 
