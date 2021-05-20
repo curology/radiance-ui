@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
-import type { MessagesTypes } from '../verificationMessages';
 import { setThemeLineHeight } from '../../utils/themeStyles';
+
+import type { MessagesTypes } from '../verificationMessages';
 
 const HintItem = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
@@ -84,6 +84,10 @@ const Textarea = styled.textarea`
 `;
 
 const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
+  svg.radiance-field-input-icon {
+    opacity: 1;
+  }
+
   ${Textarea}, ${Input} {
     border-color: ${
       messagesType === 'success' ? theme.COLORS.success : theme.COLORS.error
@@ -99,26 +103,25 @@ const applyMessagesStyles = (messagesType: MessagesTypes, theme: ThemeType) => `
   }
 `;
 
-export const applyIconStyles = (showMessages: boolean) => css`
-  opacity: ${showMessages ? '1' : '0'};
-  position: absolute;
-  top: 20px;
-  right: ${SPACER.medium};
-  transition: opacity ${ANIMATION.defaultTiming};
-`;
-
 const InputContainer = styled.div<{
   messagesType: MessagesTypes;
   showMessages: boolean;
 }>`
   position: relative;
 
+  svg.radiance-field-input-icon {
+    opacity: 0;
+    position: absolute;
+    top: 20px;
+    right: ${SPACER.medium};
+    transition: opacity ${ANIMATION.defaultTiming};
+  }
+
   ${({ showMessages, messagesType, theme }) =>
     showMessages && applyMessagesStyles(messagesType, theme)}
 `;
 
 export default {
-  applyIconStyles,
   FieldContainer,
   HintItem,
   Input,

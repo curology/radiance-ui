@@ -135,6 +135,12 @@ const disabledStyles = (theme: ThemeType) => `
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
+
+  &:visited,
+  &:hover {
+    opacity: 1;
+    color: ${theme.COLORS.textDisabled};
+  }
 `;
 
 function parseTheme(
