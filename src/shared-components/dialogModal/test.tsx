@@ -8,11 +8,26 @@ const modalTitle = 'Dialog Modal Title';
 const bodyString = 'Dialog Modal Children Content';
 const modalBody = <DialogModal.Paragraph>{bodyString}</DialogModal.Paragraph>;
 
-/**
- * TODO: Fix Emotion 11 CI snapshot serializer order issue
- */
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('<DialogModal />', () => {
+describe('<DialogModal />', () => {
+  /**
+   * TODO: Fix Emotion 11 CI snapshot serializer order issue
+   */
+  // eslint-disable-next-line jest/no-disabled-tests
+  describe.skip('UI snapshots', () => {
+    it('renders dialog modal with custom color', async () => {
+      const { container, findByText } = render(
+        <DialogModal backgroundColor={primaryTheme.COLORS.background}>
+          <div>{modalBody}</div>
+        </DialogModal>,
+        { withPortalContainer: true },
+      );
+
+      await findByText(bodyString);
+
+      expect(container).toMatchSnapshot();
+    });
+  });
+
   it('render children content correctly', async () => {
     const { getAllByText, findByText } = render(
       <DialogModal title={modalTitle}>{modalBody}</DialogModal>,
@@ -23,18 +38,5 @@ describe.skip('<DialogModal />', () => {
 
     expect(getAllByText(modalTitle).length > 0).toBe(true);
     expect(body).toBeInTheDocument();
-  });
-
-  it('renders dialog modal with custom color', async () => {
-    const { container, findByText } = render(
-      <DialogModal backgroundColor={primaryTheme.COLORS.background}>
-        <div>{modalBody}</div>
-      </DialogModal>,
-      { withPortalContainer: true },
-    );
-
-    await findByText(bodyString);
-
-    expect(container).toMatchSnapshot();
   });
 });

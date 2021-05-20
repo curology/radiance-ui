@@ -6,12 +6,12 @@ import { CameraIcon } from '../../../../icons';
 
 import { Button } from './index';
 
-/**
- * TODO: Fix Emotion 11 CI snapshot serializer order issue
- */
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('<Button />', () => {
-  describe('UI snapshots', () => {
+describe('<Button />', () => {
+  /**
+   * TODO: Fix Emotion 11 CI snapshot serializer order issue
+   */
+  // eslint-disable-next-line jest/no-disabled-tests
+  describe.skip('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
         <Button disabled onClick={() => undefined} icon={<CameraIcon />}>

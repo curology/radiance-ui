@@ -56,6 +56,10 @@ module.exports = {
       );
     }
 
+    /**
+     * Until Storybook migrates its own internal @emotion usage from
+     * v10 to v11, this allows us to maintain compatibility
+     */
     const emotion11CompatibleConfig = {
       ...config,
       resolve: {

@@ -5,12 +5,12 @@ import { CameraIcon } from '../../../../icons';
 
 import { RoundButton } from './index';
 
-/**
- * TODO: Fix Emotion 11 CI snapshot serializer order issue
- */
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('<RoundButton />', () => {
-  describe('UI snapshots', () => {
+describe('<RoundButton />', () => {
+  /**
+   * TODO: Fix Emotion 11 CI snapshot serializer order issue
+   */
+  // eslint-disable-next-line jest/no-disabled-tests
+  describe.skip('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
         <RoundButton disabled onClick={() => undefined} icon={<CameraIcon />}>
