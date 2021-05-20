@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import * as ReactTestingLibrary from '@testing-library/react';
 
-import { primaryTheme, ThemeType } from '../constants';
+import { REACT_PORTAL_SECTION_ID, primaryTheme, ThemeType } from '../constants';
 
 interface RenderOptions extends ReactTestingLibrary.RenderOptions {
   theme?: ThemeType;
@@ -18,7 +18,7 @@ interface RenderOptions extends ReactTestingLibrary.RenderOptions {
  */
 const usePortalContainer = () => {
   const portalContainer = document.createElement('div');
-  portalContainer.setAttribute('id', 'reactPortalSection');
+  portalContainer.setAttribute('id', REACT_PORTAL_SECTION_ID);
   document.body.appendChild(portalContainer);
 
   return portalContainer;

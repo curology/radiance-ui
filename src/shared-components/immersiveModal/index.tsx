@@ -5,6 +5,7 @@ import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
 import { FocusScope } from '@react-aria/focus';
 
+import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { OffClickWrapper } from '../offClickWrapper';
 import { CrossIcon } from '../../icons';
 import Style from './style';
@@ -34,7 +35,6 @@ export interface ImmersiveModalProps {
   [key: string]: unknown;
 }
 
-const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
 const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
