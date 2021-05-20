@@ -369,41 +369,45 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1"
-  disabled=""
+  id="reactPortalSection"
 >
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
+    disabled=""
   >
-    <button
-      class="emotion-4 emotion-5"
-      disabled=""
-      type="button"
+    <div
+      class="emotion-2 emotion-3"
     >
-      <svg
-        class="emotion-6"
-        fill="none"
-        height="16"
-        viewBox="0 0 16 16"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
-          fill="currentColor"
-        />
-      </svg>
-      <div
-        class="emotion-7 emotion-8"
+      <button
+        class="emotion-4 emotion-5"
         disabled=""
+        type="button"
       >
-        <div>
-          <span />
-          <span />
-          <span />
+        <svg
+          class="emotion-6"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+            fill="currentColor"
+          />
+        </svg>
+        <div
+          class="emotion-7 emotion-8"
+          disabled=""
+        >
+          <div>
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -673,38 +677,42 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  class="emotion-0 emotion-1"
+  id="reactPortalSection"
 >
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-0 emotion-1"
   >
-    <button
-      class="emotion-4 emotion-5"
-      type="button"
+    <div
+      class="emotion-2 emotion-3"
     >
-      <svg
-        class="emotion-6"
-        fill="none"
-        height="16"
-        viewBox="0 0 16 16"
-        width="16"
-        xmlns="http://www.w3.org/2000/svg"
+      <button
+        class="emotion-4 emotion-5"
+        type="button"
       >
-        <path
-          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
-          fill="currentColor"
-        />
-      </svg>
-      <div
-        class="emotion-7 emotion-8"
-      >
-        <div>
-          <span />
-          <span />
-          <span />
+        <svg
+          class="emotion-6"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+            fill="currentColor"
+          />
+        </svg>
+        <div
+          class="emotion-7 emotion-8"
+        >
+          <div>
+            <span />
+            <span />
+            <span />
+          </div>
         </div>
-      </div>
-    </button>
+      </button>
+    </div>
   </div>
 </div>
 `;
