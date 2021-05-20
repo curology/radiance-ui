@@ -8,10 +8,9 @@ describe('<Arrow />', () => {
     it('renders with props', () => {
       const { container } = render(
         <Arrow prev disabled={false} onClick={() => undefined} />,
-        { withPortalContainer: true },
       );
 
-      expect(container).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('renders with bottom right alignment', () => {
@@ -22,10 +21,9 @@ describe('<Arrow />', () => {
           disabled
           onClick={() => undefined}
         />,
-        { withPortalContainer: true },
       );
 
-      expect(container).toMatchSnapshot();
+      expect(container.firstElementChild).toMatchSnapshot();
     });
   });
 });

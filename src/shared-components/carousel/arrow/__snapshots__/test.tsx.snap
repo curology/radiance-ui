@@ -300,6 +300,12 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
+.emotion-4:visited,
+.emotion-4:hover {
+  opacity: 1;
+  color: #C3C0CD;
+}
+
 .emotion-4>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
@@ -369,45 +375,41 @@ exports[`<Arrow /> UI snapshots renders with bottom right alignment 1`] = `
 }
 
 <div
-  id="reactPortalSection"
+  class="emotion-0 emotion-1"
+  disabled=""
 >
   <div
-    class="emotion-0 emotion-1"
-    disabled=""
+    class="emotion-2 emotion-3"
   >
-    <div
-      class="emotion-2 emotion-3"
+    <button
+      class="emotion-4 emotion-5"
+      disabled=""
+      type="button"
     >
-      <button
-        class="emotion-4 emotion-5"
-        disabled=""
-        type="button"
+      <svg
+        class="emotion-6"
+        fill="none"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          class="emotion-6"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
-            fill="currentColor"
-          />
-        </svg>
-        <div
-          class="emotion-7 emotion-8"
-          disabled=""
-        >
-          <div>
-            <span />
-            <span />
-            <span />
-          </div>
+        <path
+          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+          fill="currentColor"
+        />
+      </svg>
+      <div
+        class="emotion-7 emotion-8"
+        disabled=""
+      >
+        <div>
+          <span />
+          <span />
+          <span />
         </div>
-      </button>
-    </div>
+      </div>
+    </button>
   </div>
 </div>
 `;
@@ -677,42 +679,38 @@ exports[`<Arrow /> UI snapshots renders with props 1`] = `
 }
 
 <div
-  id="reactPortalSection"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
   >
-    <div
-      class="emotion-2 emotion-3"
+    <button
+      class="emotion-4 emotion-5"
+      type="button"
     >
-      <button
-        class="emotion-4 emotion-5"
-        type="button"
+      <svg
+        class="emotion-6"
+        fill="none"
+        height="16"
+        viewBox="0 0 16 16"
+        width="16"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <svg
-          class="emotion-6"
-          fill="none"
-          height="16"
-          viewBox="0 0 16 16"
-          width="16"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
-            fill="currentColor"
-          />
-        </svg>
-        <div
-          class="emotion-7 emotion-8"
-        >
-          <div>
-            <span />
-            <span />
-            <span />
-          </div>
+        <path
+          d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21z"
+          fill="currentColor"
+        />
+      </svg>
+      <div
+        class="emotion-7 emotion-8"
+      >
+        <div>
+          <span />
+          <span />
+          <span />
         </div>
-      </button>
-    </div>
+      </div>
+    </button>
   </div>
 </div>
 `;
