@@ -5,6 +5,7 @@ import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
 import { useTheme } from 'emotion-theming';
 
+import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
 import Style from './style';
 import { Colors, primaryTheme, secondaryTheme } from '../../constants';
@@ -28,7 +29,6 @@ export interface DialogModalProps {
   [key: string]: unknown;
 }
 
-const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
 const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
   document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
