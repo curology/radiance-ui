@@ -43,27 +43,29 @@ const dotStyles = `
   left: 50%;
   transform: translate(-50%);
   bottom: -32px;
+
   li {
     border-radius: 50%;
     height: ${SPACER.xsmall};
     width: ${SPACER.xsmall};
     margin-right: ${SPACER.xsmall};
     opacity: 0.25;
+
     &:first-of-type {
       margin-left: ${SPACER.xsmall};
     }
+
     button {
       display: none;
     }
   }
+
   li.slick-active {
     opacity: 1;
   }
 `;
 
-/**
- * Styles mostly from react-slick library
- */
+// styles from the react-slick library
 const reactSlickStyles = `
   .slick-slider {
     position: relative;
@@ -82,8 +84,6 @@ const reactSlickStyles = `
     -ms-touch-action: pan-y;
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
-
-    flex-wrap: wrap;
   }
 
   .slick-list {
@@ -104,7 +104,7 @@ const reactSlickStyles = `
   }
 
   .slick-slider .slick-track,
-  .slick-slider .
+  .slick-slider .slick-list {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
