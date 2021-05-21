@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';

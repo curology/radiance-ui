@@ -17,14 +17,14 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 .emotion-0 {
   background-color: #FFFFFF;
   border: 1px solid #EDEDF0;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.05);
   cursor: pointer;
   -webkit-transition: box-shadow 200ms;
   transition: box-shadow 200ms;
 }
 
 .emotion-0:hover {
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.10);
 }
 
 <div
@@ -36,56 +36,56 @@ exports[`Container UI snapshots renders clickable container 1`] = `
 `;
 
 exports[`Container UI snapshots renders container helper components 1`] = `
-.emotion-8 {
+.emotion-0 {
   background-color: #FFFFFF;
   border: 1px solid #EDEDF0;
 }
 
-.emotion-0 {
+.emotion-2 {
   padding: 1.5rem;
 }
 
-@media (min-width:992px) {
-  .emotion-0 {
+@media (min-width: 992px) {
+  .emotion-2 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 }
 
-.emotion-2 {
+.emotion-4 {
   margin: 0 1.5rem;
   border-bottom: 1px solid #EDEDF0;
 }
 
-@media (min-width:992px) {
-  .emotion-2 {
+@media (min-width: 992px) {
+  .emotion-4 {
     margin: 0 2.5rem;
   }
 }
 
-.emotion-4 {
+.emotion-6 {
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
 
 <div
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
   >
     Section 1
   </div>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-4 emotion-5"
   />
   <img
-    class="emotion-4 emotion-5"
+    class="emotion-6 emotion-7"
     src="https://images-na.ssl-images-amazon.com/images/I/61E0pFPOl7L._SL1500_.jpg"
   />
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
   >
     <div>
       Section 2
@@ -99,7 +99,7 @@ exports[`Container UI snapshots renders message type container 1`] = `
   background-color: #FFFFFF;
   border: 1px solid #EDEDF0;
   border-radius: 8px;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.05);
 }
 
 <div

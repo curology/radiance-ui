@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Style from './style';
 import { CheckmarkIcon, ErrorIcon } from '../../icons';

@@ -12,7 +12,7 @@ import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import {
   ArrowLeftIcon,

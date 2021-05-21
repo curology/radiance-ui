@@ -75,7 +75,7 @@ type StyledContainer = StyledComponent<
   {
     type?: ContainerType;
   },
-  Record<string, unknown>
+  { theme?: ThemeType }
 >;
 
 type CompositeContainer = StyledContainer & {

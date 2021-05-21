@@ -2,8 +2,7 @@ import React from 'react';
 import { addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import addons, { StoryContext, StoryGetter } from '@storybook/addons';
-import { Global } from '@emotion/core';
-import { ThemeProvider } from 'emotion-theming';
+import { Global, ThemeProvider } from '@emotion/react';
 import Theme from './theme';
 import {
   resetStyles,

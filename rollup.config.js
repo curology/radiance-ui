@@ -30,7 +30,12 @@ const defaultConfig = {
     }),
     sizeSnapshot(),
   ],
-  external: [...Object.keys(pkg.dependencies), '@emotion/styled-base'],
+  /**
+   * @emotion/styled/base needs to be added explicitly because our
+   * @emotion/styled imports transpile specifically to @emotion/styled/base,
+   * which results in build errors if we do not include it.
+   */
+  external: [...Object.keys(pkg.dependencies), '@emotion/styled/base'],
 };
 
 export default [
@@ -47,11 +52,10 @@ export default [
         format: 'umd',
         name: 'radianceUi',
         globals: {
-          '@emotion/core': '@emotion/core',
+          '@emotion/react': '@emotion/react',
           '@emotion/styled': 'styled',
-          '@emotion/styled-base': '_styled',
+          '@emotion/styled/base': '_styled',
           '@react-aria/focus': '@react-aria/focus',
-          'emotion-theming': 'emotionTheming',
           'lodash.round': 'round',
           'lodash.throttle': 'throttle',
           'lodash.uniqueid': 'uniqueid',

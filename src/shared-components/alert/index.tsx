@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, ChevronIcon, ErrorIcon, InfoIcon } from '../../icons';
 import { Avatar } from '../avatar';

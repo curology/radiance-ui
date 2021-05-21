@@ -11,7 +11,7 @@
     "plugin:sonarjs/recommended",
     "curology"
   ],
-  "plugins": ["emotion"],
+  "plugins": ["@emotion"],
   "globals": {
     "document": false,
     "window": false
@@ -22,6 +22,9 @@
     }
   },
   "rules": {
+    "@emotion/pkg-renaming": "error",
+    "@emotion/no-vanilla": "error",
+    "@emotion/syntax-preference": ["error", "string"],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": [
       "error",
@@ -144,10 +147,6 @@
       "rules": {
         "@typescript-eslint/no-unsafe-call": "off",
         "no-undef": "off",
-        "emotion/jsx-import": "error",
-        "emotion/no-vanilla": "error",
-        "emotion/import-from-emotion": "error",
-        "emotion/styled-import": "error",
         "react/jsx-props-no-spreading": "off"
       }
     },

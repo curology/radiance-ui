@@ -1,8 +1,11 @@
 import type { StorybookConfig } from '@storybook/core/types';
+
 const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const babelConfig = require('../babel.config');
+
+const toPath = (_path: string) => path.join(process.cwd(), _path);
 
 module.exports = {
   /**
@@ -53,8 +56,25 @@ module.exports = {
       );
     }
 
+    /**
+     * Until Storybook migrates its own internal @emotion usage from
+     * v10 to v11, this allows us to maintain compatibility
+     */
+    const emotion11CompatibleConfig = {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          '@emotion/core': toPath('node_modules/@emotion/react'),
+          '@emotion/styled': toPath('node_modules/@emotion/styled'),
+          'emotion-theming': toPath('node_modules/@emotion/react'),
+        },
+      },
+    };
+
     // Return the altered config
-    return config;
+    return emotion11CompatibleConfig;
   },
   reactOptions: {
     fastRefresh: true,

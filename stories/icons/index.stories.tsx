@@ -15,7 +15,7 @@ import * as logoComponents from 'src/icons/logos';
 import * as navIconComponents from 'src/icons/navIcons';
 import { Typography } from 'src/shared-components';
 import { BREAKPOINTS } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { Icon as IconComponent } from '../../src/shared-components/icon';
 import { CameraIcon } from '../../src/icons';

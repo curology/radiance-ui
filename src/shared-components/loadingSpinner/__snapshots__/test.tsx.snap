@@ -4,27 +4,30 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
 @keyframes animation-0 {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(150px,0,0);
-    -ms-transform: translate3d(150px,0,0);
-    transform: translate3d(150px,0,0);
+    -webkit-transform: translate3d(150px, 0, 0);
+    -moz-transform: translate3d(150px, 0, 0);
+    -ms-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0);
   }
 
   50% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(-150px,0,0);
-    -ms-transform: translate3d(-150px,0,0);
-    transform: translate3d(-150px,0,0);
+    -webkit-transform: translate3d(-150px, 0, 0);
+    -moz-transform: translate3d(-150px, 0, 0);
+    -ms-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
   }
 }
 
-.emotion-6 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,24 +37,8 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
   -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
   top: 0;
@@ -61,7 +48,23 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
   background-color: #000000;
 }
 
-.emotion-0 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emotion-4 {
   display: block;
   height: 20px;
   width: 20px;
@@ -78,35 +81,35 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with custom pro
   animation-timing-function: ease-in-out;
 }
 
-.emotion-0:nth-of-type(1) {
+.emotion-4:nth-of-type(1) {
   -webkit-animation-delay: -3s;
   animation-delay: -3s;
 }
 
-.emotion-0:nth-of-type(2) {
+.emotion-4:nth-of-type(2) {
   -webkit-animation-delay: -2s;
   animation-delay: -2s;
 }
 
-.emotion-0:nth-of-type(3) {
+.emotion-4:nth-of-type(3) {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
 
 <div
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-6 emotion-7"
+    class="emotion-2 emotion-3"
   >
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
   </div>
 </div>
@@ -116,27 +119,30 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
 @keyframes animation-0 {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(100px,0,0);
-    -ms-transform: translate3d(100px,0,0);
-    transform: translate3d(100px,0,0);
+    -webkit-transform: translate3d(100px, 0, 0);
+    -moz-transform: translate3d(100px, 0, 0);
+    -ms-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
   }
 
   50% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(-100px,0,0);
-    -ms-transform: translate3d(-100px,0,0);
-    transform: translate3d(-100px,0,0);
+    -webkit-transform: translate3d(-100px, 0, 0);
+    -moz-transform: translate3d(-100px, 0, 0);
+    -ms-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
   }
 }
 
-.emotion-8 {
+.emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -146,8 +152,8 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: absolute;
   top: 0;
@@ -157,7 +163,7 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
   background-color: #F8F8FA;
 }
 
-.emotion-6 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -167,13 +173,13 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-4 {
   display: block;
   height: 14px;
   width: 14px;
@@ -190,35 +196,35 @@ exports[`<LoadingSpinner /> UI snapshots renders the correct css with default pr
   animation-timing-function: ease-in-out;
 }
 
-.emotion-0:nth-of-type(1) {
+.emotion-4:nth-of-type(1) {
   -webkit-animation-delay: -1.5s;
   animation-delay: -1.5s;
 }
 
-.emotion-0:nth-of-type(2) {
+.emotion-4:nth-of-type(2) {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
 }
 
-.emotion-0:nth-of-type(3) {
+.emotion-4:nth-of-type(3) {
   -webkit-animation-delay: -0.5s;
   animation-delay: -0.5s;
 }
 
 <div
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-6 emotion-7"
+    class="emotion-2 emotion-3"
   >
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <span
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
   </div>
 </div>

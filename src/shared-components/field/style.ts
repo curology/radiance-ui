@@ -2,8 +2,9 @@ import styled from '@emotion/styled';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
-import { MessagesTypes } from '../verificationMessages';
 import { setThemeLineHeight } from '../../utils/themeStyles';
+
+import type { MessagesTypes } from '../verificationMessages';
 
 const HintItem = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}

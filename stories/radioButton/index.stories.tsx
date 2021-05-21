@@ -10,7 +10,7 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { AcneGlyph } from '../../src/icons';
 
