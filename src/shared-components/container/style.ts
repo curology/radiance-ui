@@ -64,6 +64,12 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
+/**
+ * Variable defined solely for type definitions.
+ *
+ * Our pattern for setting subcomponents via dot notion is easy within a proper component
+ * but not when setting it directly on the return value of a `styled` call.
+ */
 const ContainerComponentForTypesOnly = styled.div<{
   type?: ContainerType;
 }>``;
@@ -74,9 +80,6 @@ type CompositeContainer = typeof ContainerComponentForTypesOnly & {
   Section: typeof Section;
 };
 
-// Our reliance on setting dot.notation subcomponents directly on the
-// styled component is not well supported. CompositeContainer defines those
-// subcomponents ahead of time to account for styled.div limitations.
 const Container = styled.div<{ type?: ContainerType }>`
   ${({ theme, type }) => containerStyles(theme, type)};
 ` as CompositeContainer;
