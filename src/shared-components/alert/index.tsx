@@ -53,7 +53,7 @@ interface Alert extends React.FC<AlertProps> {
  *
  * All alerts are dimissable by clicking on them. However, you can use the `duration` prop to determine if the alert is sticky or dismissed on a timer (in units of seconds).
  */
-export const Alert: React.FC<AlertProps> = (alertProps) => {
+export const Alert: Alert = (alertProps) => {
   const {
     avatarSrc = '',
     content,
@@ -139,6 +139,8 @@ export const Alert: React.FC<AlertProps> = (alertProps) => {
     </Style.AlertContainer>
   );
 };
+
+Alert.Container = Style.AlertsContainer;
 
 Alert.propTypes = {
   avatarSrc: PropTypes.string,
