@@ -1,5 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
@@ -65,20 +64,11 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-/**
- * This is the type returned by `styled.div`
- *
- * @see `node_modules/@emotion/styled-base/types/index.d.ts`
- */
-type StyledContainer = StyledComponent<
-  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  {
-    type?: ContainerType;
-  },
-  { theme?: ThemeType }
->;
+const ContainerComponentForTypesOnly = styled.div<{
+  type?: ContainerType;
+}>``;
 
-type CompositeContainer = StyledContainer & {
+type CompositeContainer = typeof ContainerComponentForTypesOnly & {
   Divider: typeof Divider;
   Image: typeof Image;
   Section: typeof Section;

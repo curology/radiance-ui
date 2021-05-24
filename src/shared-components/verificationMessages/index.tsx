@@ -30,11 +30,11 @@ export interface VerificationMessagesProps {
  *
  * While it can be used as a standalone component, it is intended for use within the Field component.
  */
-export const VerificationMessages = ({
+export const VerificationMessages: React.FC<VerificationMessagesProps> = ({
   centered = false,
   messages = {},
   type = 'error',
-}: VerificationMessagesProps) => {
+}) => {
   const messageKeys = Object.keys(messages);
   const showMessages = messageKeys.length > 0;
 
@@ -67,6 +67,13 @@ export const VerificationMessages = ({
 
 VerificationMessages.propTypes = {
   centered: PropTypes.bool,
-  messages: PropTypes.objectOf(PropTypes.node),
+  messages: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string.isRequired),
+      PropTypes.arrayOf(PropTypes.element.isRequired),
+    ]).isRequired,
+  ),
   type: PropTypes.oneOf(['error', 'success']),
 };

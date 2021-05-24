@@ -51,7 +51,10 @@ const getStyles = ({ theme, type }: GetStylesProps) => {
  * Indicators are used in navigation to help with wayfinding for messages and notifications.
  * It can also be used for non-navigational purposes for information-intensive pages.
  */
-export const Indicator = ({ text, type = 'error' }: IndicatorProps) => {
+export const Indicator: React.FC<IndicatorProps> = ({
+  text,
+  type = 'error',
+}) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getStyles({ theme, type });
 

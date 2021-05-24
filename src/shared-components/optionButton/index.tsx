@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
-
-import type { ThemeType } from '../../constants';
+import { BORDER_RADIUS_PROP_TYPES, ThemeType } from '../../constants';
 
 const DEFAULT_BORDER_RADIUS = 'small';
 
@@ -37,14 +36,14 @@ export type OptionButtonContentProps = Pick<
   'buttonType' | 'icon' | 'optionType' | 'selected' | 'subtext' | 'text'
 >;
 
-const OptionButtonContent = ({
+const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   buttonType = 'primary',
   icon,
   optionType,
   selected = false,
   subtext,
   text,
-}: OptionButtonContentProps) => (
+}) => (
   <Style.FlexContainer>
     {/**
      * We sometimes use && conditionals such that we are passing in `false` as a value
@@ -73,6 +72,10 @@ const OptionButtonContent = ({
   </Style.FlexContainer>
 );
 
+interface OptionButton extends React.FC<OptionButtonProps> {
+  NotClickable: typeof OptionButtonNotClickable;
+}
+
 /**
  * The `OptionButton` is used within a focused flow (such as the signup page)
  * to provide more context and attention to each selection option.
@@ -81,7 +84,7 @@ const OptionButtonContent = ({
  * want to use the OptionButton as a purely presentational component rather
  * than a functional button associated with form inputs
  */
-export const OptionButton = ({
+export const OptionButton: OptionButton = ({
   borderRadius = DEFAULT_BORDER_RADIUS,
   buttonType,
   icon,
@@ -91,7 +94,7 @@ export const OptionButton = ({
   subtext,
   text,
   ...rest
-}: OptionButtonProps) => (
+}) => (
   <Style.ClickableContainer
     borderRadius={borderRadius}
     onClick={onClick}
@@ -115,31 +118,32 @@ export const OptionButton = ({
 /**
  * A presentational component to match the display of an OptionButton with an icon
  */
-export const OptionButtonNotClickable = ({
-  borderRadius = DEFAULT_BORDER_RADIUS,
-  icon,
-  optionType,
-  subtext,
-  text,
-  ...rest
-}: OptionButtonNotClickableProps) => (
-  <Style.DisplayContainer
-    borderRadius={borderRadius}
-    containerType="none"
-    // eslint-disable-next-line react/jsx-props-no-spreading
-    {...rest}
-  >
-    <OptionButtonContent
-      // The buttonType does not matter for this component
-      buttonType="primary"
-      icon={icon}
-      optionType={optionType}
-      selected={false}
-      subtext={subtext}
-      text={text}
-    />
-  </Style.DisplayContainer>
-);
+export const OptionButtonNotClickable: React.FC<OptionButtonNotClickableProps> =
+  ({
+    borderRadius = DEFAULT_BORDER_RADIUS,
+    icon,
+    optionType,
+    subtext,
+    text,
+    ...rest
+  }) => (
+    <Style.DisplayContainer
+      borderRadius={borderRadius}
+      containerType="none"
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...rest}
+    >
+      <OptionButtonContent
+        // The buttonType does not matter for this component
+        buttonType="primary"
+        icon={icon}
+        optionType={optionType}
+        selected={false}
+        subtext={subtext}
+        text={text}
+      />
+    </Style.DisplayContainer>
+  );
 
 /**
  * Similar OptionButton styling without click elements
@@ -147,11 +151,11 @@ export const OptionButtonNotClickable = ({
 OptionButton.NotClickable = OptionButtonNotClickable;
 
 OptionButton.propTypes = {
-  borderRadius: PropTypes.string,
+  borderRadius: BORDER_RADIUS_PROP_TYPES,
   buttonType: PropTypes.oneOf(['primary', 'secondary']),
   icon: PropTypes.node,
   onClick: PropTypes.func.isRequired,
-  optionType: PropTypes.oneOf(['radio', 'checkbox']).isRequired,
+  optionType: PropTypes.oneOf(['radio', 'checkbox'] as const).isRequired,
   selected: PropTypes.bool,
   subtext: PropTypes.node,
   text: PropTypes.string.isRequired,

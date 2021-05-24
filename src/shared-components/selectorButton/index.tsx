@@ -24,7 +24,7 @@ export interface SelectorButtonProps {
   [key: string]: unknown;
 }
 
-export const SelectorButton = ({
+export const SelectorButton: React.FC<SelectorButtonProps> = ({
   checked,
   children = null,
   disabled = false,
@@ -34,7 +34,7 @@ export const SelectorButton = ({
   size = 'small',
   type = 'primary',
   ...rest
-}: SelectorButtonProps) => {
+}) => {
   const theme = useTheme();
 
   const checkedIcon =

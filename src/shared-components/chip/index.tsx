@@ -67,11 +67,11 @@ const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
  *
  * These chips can have a status value of Error, Primary, Success, or White. "White" does not have a low contrast version, and can be used on top of photos or illustrations.
  */
-export const Chip = ({
+export const Chip: React.FC<ChipProps> = ({
   isLowContrast = false,
   status = 'primary',
   text,
-}: ChipProps) => {
+}) => {
   const theme = useTheme();
 
   const { backgroundColor, textColor } = getStyles({

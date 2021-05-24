@@ -15,7 +15,7 @@ export interface LoaderProps {
   textColor?: ThemeColors;
 }
 
-const Loader = ({
+const Loader: React.FC<LoaderProps> = ({
   buttonColor,
   buttonType,
   className = '',
@@ -23,7 +23,7 @@ const Loader = ({
   isFullWidth = false,
   isLoading,
   textColor,
-}: LoaderProps) => (
+}) => (
   <ButtonLoader
     buttonColor={buttonColor}
     buttonType={buttonType}

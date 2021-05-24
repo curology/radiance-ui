@@ -22,6 +22,10 @@ export interface CalloutProps {
   type?: 'error' | 'success';
 }
 
+interface Callout extends React.FC<CalloutProps> {
+  Container: typeof Style.ParentContainer;
+}
+
 /**
  * Pulls a specific styling preset based on available theme values and `type`
  */
@@ -51,7 +55,7 @@ const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
  *
  * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs)
  */
-export const Callout = ({ children, icon, type }: CalloutProps) => {
+export const Callout: Callout = ({ children, icon, type }) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getCalloutStyles(theme, type);
 

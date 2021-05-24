@@ -21,17 +21,21 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
   [key: string]: unknown;
 }
 
+export type RadianceIconComponent = (
+  props: IconProps,
+) => ReturnType<typeof useIcon>;
+
 /**
  * Helper component to pass the necessary props down to direct SVG imports, supported by @svgr (cli and rollup).
  *
  * **This component should not be used directly**, and so is not included in the `shared-components` export.
  */
-export const Icon = ({
+export const Icon: React.FC<IconProps & { IconComponent: SVGComponent }> = ({
   displayInline = false,
   IconComponent,
   rotate = 0,
   ...rest
-}: IconProps & { IconComponent: SVGComponent }) => (
+}) => (
   <IconComponent
     css={Style.iconStyles({ displayInline, fill: rest.fill, rotate })}
     {...rest}
@@ -43,7 +47,8 @@ Icon.propTypes = {
   displayInline: PropTypes.bool,
   fill: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  IconComponent: PropTypes.elementType.isRequired,
+  // @ts-expect-error -- TypeScript type is too specific for PropTypes types
+  IconComponent: PropTypes.element.isRequired,
   rotate: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
