@@ -197,7 +197,13 @@ export const WithControls = () => {
         isLoading={boolean('isLoading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
-        textColor={text('textColor', '') as ThemeColors}
+        textColor={
+          text(
+            'textColor',
+            // @ts-expect-error -- Rely on component fallback
+            undefined,
+          ) as ThemeColors
+        }
       >
         {text('children', 'Click me!')}
       </Button>

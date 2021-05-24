@@ -163,7 +163,11 @@ export const TextareaWithASuccessMessageAndHiddenIcon = () => (
       messagesType="success"
       hideMessagesIcon
     >
-      <Field.Textarea id="textarea-id" value="some answer" />
+      <Field.Textarea
+        id="textarea-id"
+        value="some answer"
+        onChange={() => undefined}
+      />
     </Field>
   </FieldsContainer>
 );

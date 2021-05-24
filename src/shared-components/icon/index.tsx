@@ -47,8 +47,7 @@ Icon.propTypes = {
   displayInline: PropTypes.bool,
   fill: PropTypes.string,
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  // @ts-expect-error -- TypeScript type is too specific for PropTypes types
-  IconComponent: PropTypes.element.isRequired,
+  IconComponent: PropTypes.func.isRequired,
   rotate: PropTypes.number,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
