@@ -7,7 +7,7 @@ export interface ThumbnailsProps {
   photoSrcs: Array<string>;
 }
 
-export const Thumbnails = ({ photoSrcs }: ThumbnailsProps) => {
+export const Thumbnails: React.FC<ThumbnailsProps> = ({ photoSrcs }) => {
   /**
    * Thumbnail images set with empty alt text because they are decorative.
    * Accessible Accordion functionality does not depend on these thumbnails.

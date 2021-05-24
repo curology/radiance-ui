@@ -30,6 +30,10 @@ export interface AlertProps {
   [key: string]: unknown;
 }
 
+interface Alert extends React.FC<AlertProps> {
+  Container: typeof Style.AlertsContainer;
+}
+
 /**
  * Alerts should be used to show notifications or messages from (providers, support, or system).
  *
@@ -49,7 +53,7 @@ export interface AlertProps {
  *
  * All alerts are dimissable by clicking on them. However, you can use the `duration` prop to determine if the alert is sticky or dismissed on a timer (in units of seconds).
  */
-export const Alert = (alertProps: AlertProps) => {
+export const Alert: Alert = (alertProps) => {
   const {
     avatarSrc = '',
     content,
@@ -136,9 +140,7 @@ export const Alert = (alertProps: AlertProps) => {
   );
 };
 
-Alert.Container = ({ children }: { children: React.ReactNode }) => (
-  <Style.AlertsContainer>{children}</Style.AlertsContainer>
-);
+Alert.Container = Style.AlertsContainer;
 
 Alert.propTypes = {
   avatarSrc: PropTypes.string,

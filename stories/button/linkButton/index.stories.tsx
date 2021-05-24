@@ -93,7 +93,13 @@ export const WithControls = () => {
         buttonColor={select('buttonColor', theme.COLORS, theme.COLORS.primary)}
         disabled={boolean('disabled', false)}
         onClick={action('You clicked a button')}
-        textColor={text('textColor', '') as ThemeColors}
+        textColor={
+          text(
+            'textColor',
+            // @ts-expect-error -- Rely on component fallback
+            undefined,
+          ) as ThemeColors
+        }
       >
         {text('children', 'Click it!')}
       </LinkButton>

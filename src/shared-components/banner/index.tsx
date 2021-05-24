@@ -27,7 +27,11 @@ export interface BannerProps {
  *
  * Banners are not dismissable.
  */
-export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
+export const Banner: React.FC<BannerProps> = ({
+  content,
+  onClick,
+  type = 'default',
+}) => {
   const theme = useTheme();
   const Icon = bannerIconMapping[type];
 

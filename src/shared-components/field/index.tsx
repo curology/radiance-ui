@@ -42,12 +42,17 @@ export interface FieldProps {
   messagesType?: MessagesTypes;
 }
 
+interface Field extends React.FC<FieldProps> {
+  Input: typeof Style.Input;
+  Textarea: typeof Style.Textarea;
+}
+
 /**
  * Field component uses VerificationMessages component internally along with extra styling for the input.
  *
  * If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly without the `Field` wrapper.
  */
-export const Field = ({
+export const Field: Field = ({
   children: inputChild,
   disabled = false,
   hideMessagesIcon = false,
@@ -56,7 +61,7 @@ export const Field = ({
   labelFor = '',
   messages = {},
   messagesType = 'error',
-}: FieldProps) => {
+}) => {
   const theme = useTheme();
   const htmlFor = labelFor || label;
   const messagesKeys = Object.keys(messages);
@@ -111,6 +116,13 @@ Field.propTypes = {
   hintMessage: PropTypes.string,
   label: PropTypes.string,
   labelFor: PropTypes.string,
-  messages: PropTypes.objectOf(PropTypes.node),
+  messages: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string.isRequired),
+      PropTypes.arrayOf(PropTypes.element.isRequired),
+    ]).isRequired,
+  ),
   messagesType: PropTypes.oneOf(['error', 'success']),
 };

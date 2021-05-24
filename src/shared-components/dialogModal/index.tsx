@@ -29,6 +29,10 @@ export interface DialogModalProps {
   [key: string]: unknown;
 }
 
+interface DialogModal extends React.FC<DialogModalProps> {
+  Paragraph: typeof Style.Paragraph;
+}
+
 const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
   document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
@@ -42,13 +46,13 @@ const getDomNode = () =>
  *
  * `DialogModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
-export const DialogModal = ({
+export const DialogModal: DialogModal = ({
   backgroundColor,
   children,
   onCloseIconClick,
   title = '',
   ...rest
-}: DialogModalProps) => {
+}) => {
   const theme = useTheme();
   const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);

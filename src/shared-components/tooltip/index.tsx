@@ -70,7 +70,7 @@ export interface TooltipProps {
  *
  * They can be triggered from an icon or another component (such as a navigation link)
  */
-export const Tooltip = ({
+export const Tooltip: React.FC<TooltipProps> = ({
   alignRightPercent = 0,
   alignTopPercent = 0,
   arrowAlign = 'middle',
@@ -85,7 +85,7 @@ export const Tooltip = ({
   nudgeRight = 0,
   nudgeTop = 0,
   position = 'top',
-}: TooltipProps) => {
+}) => {
   const theme = useTheme();
   const [clicked, setClicked] = useState(false);
   const [hovered, setHovered] = useState(false);

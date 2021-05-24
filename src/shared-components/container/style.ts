@@ -1,5 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
@@ -66,27 +65,21 @@ const Image = styled.img`
 `;
 
 /**
- * This is the type returned by `styled.div`
+ * Variable defined solely for type definitions.
  *
- * @see `node_modules/@emotion/styled-base/types/index.d.ts`
+ * Our pattern for setting subcomponents via dot notion is easy within a proper component
+ * but not when setting it directly on the return value of a `styled` call.
  */
-type StyledContainer = StyledComponent<
-  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  {
-    type?: ContainerType;
-  },
-  { theme?: ThemeType }
->;
+const ContainerComponentForTypesOnly = styled.div<{
+  type?: ContainerType;
+}>``;
 
-type CompositeContainer = StyledContainer & {
+type CompositeContainer = typeof ContainerComponentForTypesOnly & {
   Divider: typeof Divider;
   Image: typeof Image;
   Section: typeof Section;
 };
 
-// Our reliance on setting dot.notation subcomponents directly on the
-// styled component is not well supported. CompositeContainer defines those
-// subcomponents ahead of time to account for styled.div limitations.
 const Container = styled.div<{ type?: ContainerType }>`
   ${({ theme, type }) => containerStyles(theme, type)};
 ` as CompositeContainer;
