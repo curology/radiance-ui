@@ -24,7 +24,7 @@ export interface DialogModalProps {
    * If provided, DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
    */
-  onCloseIconClick?: () => void;
+  onCloseIconClick?: (() => void) | null;
   title?: string;
   [key: string]: unknown;
 }
