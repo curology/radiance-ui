@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react';
 import { primaryTheme } from 'src/constants/themes';
 import { render } from 'src/tests/testingLibraryHelpers';

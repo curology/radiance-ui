@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react';
 import { fireEvent, render, userEvent } from 'src/tests/testingLibraryHelpers';
 

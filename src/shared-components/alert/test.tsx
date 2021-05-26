@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react';
 import { act, userEvent, render } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
