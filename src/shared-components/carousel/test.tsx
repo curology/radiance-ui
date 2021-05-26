@@ -1,11 +1,6 @@
-/**
- * @jest-environment jsdom
- */
-
 import React from 'react';
 import { render } from 'src/tests/testingLibraryHelpers';
 
-import 'matchMedia.mock';
 import { Carousel } from './index';
 
 const cards = [<Carousel.Card key="card1">Card 1</Carousel.Card>];
