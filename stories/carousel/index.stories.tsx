@@ -12,7 +12,6 @@ import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';
 import { useTheme } from 'emotion-theming';
-
 import type { Meta } from '@storybook/react';
 
 const Card = styled(Carousel.Card)`

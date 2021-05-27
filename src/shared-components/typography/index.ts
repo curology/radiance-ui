@@ -7,7 +7,6 @@ import {
   setThemeLineHeight,
   setThemeFontWeight,
 } from '../../utils/themeStyles';
-
 import type { ThemeType } from '../../constants';
 
 const displayStyle = (theme: ThemeType) => `

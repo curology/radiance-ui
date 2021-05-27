@@ -12,7 +12,6 @@ import {
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 import { isDefined } from '../../../../utils/isDefined';
 import { ButtonBase, ButtonContents, ButtonText } from '../../style';
-
 import type { ButtonType } from '../../types';
 
 export interface ButtonProps {

@@ -8,7 +8,6 @@ import {
   useTheme as useEmotionTheme,
   ThemeProvider,
 } from '../../../node_modules/emotion-theming';
-
 import type { ThemeType } from '../../constants/themes/types';
 
 export const useTheme = () => useEmotionTheme<ThemeType>();
