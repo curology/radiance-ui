@@ -9,10 +9,9 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { text } from '@storybook/addon-knobs';
 import { AnchorLinkButton } from 'src/shared-components';
+import type { Meta } from '@storybook/react';
 
 import { BREAKPOINTS, SPACER } from '../../../src/constants';
-
-import type { Meta } from '@storybook/react';
 
 /**
  * Adds padding to Focused story to capture focus state in Chromatic

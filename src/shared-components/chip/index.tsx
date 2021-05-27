@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useTheme } from 'emotion-theming';
 
 import Style from './style';
-
 import type { ThemeColors, ThemeType } from '../../constants';
 
 export type StatusType = 'primary' | 'success' | 'error' | 'white';

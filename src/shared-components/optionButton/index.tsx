@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
-
 import type { ThemeType } from '../../constants';
 
 const DEFAULT_BORDER_RADIUS = 'small';

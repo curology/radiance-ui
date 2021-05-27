@@ -4,7 +4,6 @@ import { keyframes } from '@emotion/core';
 
 import { primaryButtonLoadingBackgroundColor } from '../../../../utils/themeStyles';
 import { isDefined } from '../../../../utils/isDefined';
-
 import type { ButtonTypeWithAction } from '../../types';
 import type { ThemeColors, ThemeType } from '../../../../constants';
 

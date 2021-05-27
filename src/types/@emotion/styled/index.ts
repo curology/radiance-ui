@@ -8,7 +8,6 @@ import styled, {
   CreateStyled,
   StyledComponent,
 } from '../../../../node_modules/@emotion/styled';
-
 import type { ThemeType } from '../../../constants/themes/types';
 
 export default styled as CreateStyled<ThemeType>;
