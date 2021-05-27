@@ -11,7 +11,6 @@ import { Avatar } from 'src/shared-components';
 import accountImg from 'shared/account.png';
 import personImg from 'shared/person.jpg';
 import { BREAKPOINTS } from 'src/constants';
-
 import type { Meta } from '@storybook/react';
 
 export const Usage = () => (

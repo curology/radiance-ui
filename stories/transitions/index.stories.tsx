@@ -13,7 +13,6 @@ import {
   opacityInAnimationStyle,
   Container,
 } from 'src/shared-components';
-
 import type { Meta } from '@storybook/react';
 
 const InnerContainer = styled.div<{ shouldShow: boolean }>`

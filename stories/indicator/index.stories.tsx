@@ -10,7 +10,6 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { BREAKPOINTS } from 'src/constants';
-
 import type { Meta } from '@storybook/react';
 
 export const Usage = () => (

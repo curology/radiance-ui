@@ -12,7 +12,6 @@ import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER } from 'src/constants';
 import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
-
 import type { Meta } from '@storybook/react';
 
 const TooltipContainer = styled.div<{ height?: string }>`

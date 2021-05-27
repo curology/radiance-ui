@@ -6,7 +6,6 @@ import { ChevronIcon } from '../../icons';
 import { Thumbnails } from './thumbnails';
 import Style from './style';
 import { keyboardKeys } from '../../constants/keyboardKeys';
-
 import type { ThemeType } from '../../constants';
 
 export interface AccordionProps {

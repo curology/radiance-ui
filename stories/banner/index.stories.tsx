@@ -9,7 +9,6 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Banner } from 'src/shared-components';
 import { select, text } from '@storybook/addon-knobs';
-
 import type { Meta } from '@storybook/react';
 
 export const Default = () => (
