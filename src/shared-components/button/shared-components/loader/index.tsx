@@ -1,7 +1,6 @@
 import React from 'react';
 
 import ButtonLoader from './style';
-
 import type { ButtonTypeWithAction } from '../../types';
 import type { ThemeColors } from '../../../../constants';
 

@@ -11,7 +11,6 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { FocusScope } from '@react-aria/focus';
-
 import type { Meta } from '@storybook/react';
 
 const FieldsContainer = styled.div`

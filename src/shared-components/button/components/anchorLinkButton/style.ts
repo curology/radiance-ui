@@ -1,7 +1,6 @@
 import { css } from '@emotion/react';
 
 import { TYPOGRAPHY_STYLE } from '../../../typography';
-
 import type { ThemeType } from '../../../../constants';
 
 /**

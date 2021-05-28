@@ -4,7 +4,6 @@ import { useTheme } from '@emotion/react';
 
 import Style from './style';
 import { isDefined } from '../../utils/isDefined';
-
 import type { ThemeColors, ThemeType } from '../../constants';
 
 export interface CalloutProps {
