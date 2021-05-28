@@ -12,10 +12,9 @@ import {
 import { Button, ImmersiveModal } from 'src/shared-components';
 import { ANIMATION } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';
+import type { Meta } from '@storybook/react';
 
 import headerImage from './headerImage.jpg';
-
-import type { Meta } from '@storybook/react';
 
 const IMMERSIVE_MODAL_STORY_ID_PREFIX = 'components-immersivemodal--';
 

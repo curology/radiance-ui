@@ -8,7 +8,6 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Typography } from 'src/shared-components';
 import { BREAKPOINTS } from 'src/constants';
-
 import type { Meta } from '@storybook/react';
 
 export const Usage = () => (

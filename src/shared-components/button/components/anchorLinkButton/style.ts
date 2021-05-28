@@ -1,7 +1,6 @@
 import { css } from '@emotion/core';
 
 import { TYPOGRAPHY_STYLE } from '../../../typography';
-
 import type { ThemeType } from '../../../../constants';
 
 /**

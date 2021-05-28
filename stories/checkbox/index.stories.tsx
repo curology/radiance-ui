@@ -11,10 +11,9 @@ import { Checkbox } from 'src/shared-components';
 import { text, boolean, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { useTheme } from 'emotion-theming';
+import type { Meta } from '@storybook/react';
 
 import { AcneGlyph } from '../../src/icons';
-
-import type { Meta } from '@storybook/react';
 
 export const Primary = () => (
   <React.Fragment>

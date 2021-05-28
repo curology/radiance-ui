@@ -8,7 +8,6 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Container } from 'src/shared-components';
-
 import type { ContainerType } from 'src/shared-components/container/style';
 import type { Meta } from '@storybook/react';
 

@@ -11,7 +11,6 @@ import {
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
 import { isDefined } from '../../../../utils/isDefined';
-
 import type { ButtonTypeWithAction } from '../../types';
 
 export interface RoundButtonProps {
