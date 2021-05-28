@@ -106,7 +106,8 @@
         "jpg": "always",
         "png": "always",
         "svg": "always",
-        "stories": "always"
+        "stories": "always",
+        "mock": "always"
       }
     ],
     "jest/lowercase-name": [

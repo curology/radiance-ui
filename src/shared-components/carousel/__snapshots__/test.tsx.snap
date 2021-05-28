@@ -28,16 +28,15 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .emotion-2 .slick-list {
@@ -67,6 +66,10 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 
 .emotion-2 .slick-slider .slick-track,
 .emotion-2 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -125,6 +128,13 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   display: none;
 }
 
+.emotion-2 .slick-slider {
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .emotion-2 .slick-dots {
   display: -webkit-box!important;
   display: -webkit-flex!important;
@@ -145,7 +155,6 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   width: 0.25rem;
   margin-right: 0.25rem;
   opacity: 0.25;
-  background-color: #332E54;
 }
 
 .emotion-2 .slick-dots li:first-of-type {
@@ -158,6 +167,10 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 
 .emotion-2 .slick-dots li.slick-active {
   opacity: 1;
+}
+
+.emotion-2 .slick-dots li {
+  background-color: #332E54;
 }
 
 .emotion-4 {
@@ -237,16 +250,15 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .emotion-2 .slick-list {
@@ -276,6 +288,10 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 
 .emotion-2 .slick-slider .slick-track,
 .emotion-2 .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -334,6 +350,13 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   display: none;
 }
 
+.emotion-2 .slick-slider {
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .emotion-2 .slick-dots {
   display: -webkit-box!important;
   display: -webkit-flex!important;
@@ -354,7 +377,6 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   width: 0.25rem;
   margin-right: 0.25rem;
   opacity: 0.25;
-  background-color: #332E54;
 }
 
 .emotion-2 .slick-dots li:first-of-type {
@@ -367,6 +389,10 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 
 .emotion-2 .slick-dots li.slick-active {
   opacity: 1;
+}
+
+.emotion-2 .slick-dots li {
+  background-color: #332E54;
 }
 
 .emotion-4 {
