@@ -14,7 +14,15 @@ const getPresets = (modules) => [
   ],
   '@babel/react',
   '@babel/preset-typescript',
-  '@emotion/babel-preset-css-prop',
+  [
+    '@emotion/babel-preset-css-prop',
+    {
+      autoLabel: 'always',
+      labelFormat: '[local]',
+      useBuiltIns: false,
+      throwIfNamespace: true,
+    },
+  ],
 ];
 
 const plugins = [
