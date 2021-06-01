@@ -9,8 +9,8 @@ module.exports = {
     global: {
       branches: 50,
       functions: 66,
-      lines: 75,
-      statements: 75,
+      lines: 74,
+      statements: 74,
     },
   },
   moduleNameMapper: {
