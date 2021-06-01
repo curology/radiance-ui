@@ -20,5 +20,10 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>tests/setupTests.ts'],
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/', '/lib/', '/__snapshots__'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/lib*',
+    '/__snapshots__',
+    '/dist*',
+  ],
 };

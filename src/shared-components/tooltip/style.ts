@@ -110,6 +110,8 @@ const TooltipBox = styled.div<{
   opacity: ${({ open }) => (open ? '1' : '0')};
   padding: ${({ isSmall }) =>
     isSmall ? `${SPACER.x2small} ${SPACER.small}` : SPACER.medium};
+  cursor: ${({ open }) => (open ? 'pointer' : 'none')};
+  pointer-events: ${({ open }) => (open ? 'auto' : 'none')};
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};
   transition-delay: 30ms;
@@ -119,9 +121,6 @@ const TooltipBox = styled.div<{
   text-align: left;
   font-size: ${({ theme }) => theme.TYPOGRAPHY.fontSize.caption};
   display: ${({ displayTooltip }) => (displayTooltip ? 'block' : 'none')};
-
-  cursor: ${({ open }) => (open ? 'pointer' : 'none')};
-  pointer-events: ${({ open }) => (open ? 'auto' : 'none')};
 `;
 
 const TooltipContent = styled.div`
