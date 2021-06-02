@@ -100,6 +100,10 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-9 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -137,11 +141,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
       type="primary"
     />
   </div>
-  <p
+  <div
     class="emotion-9 emotion-10"
   >
     SelectorButton Text
-  </p>
+  </div>
 </div>
 `;
 
@@ -245,6 +249,10 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 }
 
 .emotion-9 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -286,11 +294,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
       type="primary"
     />
   </div>
-  <p
+  <div
     class="emotion-9 emotion-10"
   >
     SelectorButton Text
-  </p>
+  </div>
 </div>
 `;
 
@@ -394,6 +402,10 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 }
 
 .emotion-9 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -435,11 +447,11 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
       type="primary"
     />
   </div>
-  <p
+  <div
     class="emotion-9 emotion-10"
   >
     SelectorButton Text
-  </p>
+  </div>
 </div>
 `;
 
@@ -543,6 +555,10 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 }
 
 .emotion-9 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -584,11 +600,11 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
       type="secondary"
     />
   </div>
-  <p
+  <div
     class="emotion-9 emotion-10"
   >
     SelectorButton Text
-  </p>
+  </div>
 </div>
 `;
 
@@ -681,6 +697,10 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 }
 
 .emotion-8 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -704,11 +724,11 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
       type="primary"
     />
   </div>
-  <p
+  <div
     class="emotion-8 emotion-9"
   >
     SelectorButton Text
-  </p>
+  </div>
 </div>
 `;
 
@@ -909,6 +929,10 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
 }
 
 .emotion-8 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -932,10 +956,10 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
       type="primary"
     />
   </div>
-  <p
+  <div
     class="emotion-8 emotion-9"
   >
     SelectorButton Text
-  </p>
+  </div>
 </div>
 `;
