@@ -110,7 +110,8 @@ const TooltipBox = styled.div<{
   opacity: ${({ open }) => (open ? '1' : '0')};
   padding: ${({ isSmall }) =>
     isSmall ? `${SPACER.x2small} ${SPACER.small}` : SPACER.medium};
-  pointer-events: none;
+  cursor: ${({ open }) => (open ? 'pointer' : 'none')};
+  pointer-events: ${({ open }) => (open ? 'auto' : 'none')};
   position: absolute;
   transform: ${({ open }) => (open ? 'translateY(0)' : 'translateY(-8px)')};
   transition-delay: 30ms;

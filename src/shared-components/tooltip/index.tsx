@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Global, useTheme } from '@emotion/react';
+import { useTheme } from '@emotion/react';
 
 import { ArrowIcon } from '../../icons';
 import { OffClickWrapper } from '../offClickWrapper';
@@ -9,8 +9,6 @@ import Style from './style';
 export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
 export type PositionTypes = 'top' | 'bottom';
-
-const CURSOR_POINTER = 'cursor-pointer';
 
 export interface TooltipProps {
   /**
@@ -91,21 +89,10 @@ export const Tooltip: React.FC<TooltipProps> = ({
   const [hovered, setHovered] = useState(false);
 
   const onClick = () => {
-    if (clicked) {
-      // if clicked is true, we're about to update to false so remove class
-      document.querySelector('body')?.classList.remove(CURSOR_POINTER);
-    } else {
-      document.querySelector('body')?.classList.add(CURSOR_POINTER);
-    }
-
     setClicked(!clicked);
   };
 
   const closeTooltip = () => {
-    if (clicked) {
-      document.querySelector('body')?.classList.remove(CURSOR_POINTER);
-    }
-
     setClicked(false);
     setHovered(false);
   };
@@ -114,13 +101,6 @@ export const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <OffClickWrapper onOffClick={closeTooltip}>
-      <Global
-        styles={{
-          'body.cursor-pointer': {
-            cursor: 'pointer',
-          },
-        }}
-      />
       <Style.MainContainer>
         <Style.Trigger
           onClick={onClick}
@@ -137,6 +117,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
           alignRightPercent={alignRightPercent}
           alignTopPercent={alignTopPercent}
           arrowAlign={arrowAlign}
+          onClick={open ? onClick : undefined}
           displayTooltip={display}
           hasRestrictedWidth={hasRestrictedWidth}
           isSmall={isSmall}

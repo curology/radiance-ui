@@ -26,6 +26,7 @@ exports[`<Tooltip /> UI snapshot renders content and children 1`] = `
   min-width: 100px;
   opacity: 0;
   padding: 1rem;
+  cursor: none;
   pointer-events: none;
   position: absolute;
   -webkit-transform: translateY(-8px);
