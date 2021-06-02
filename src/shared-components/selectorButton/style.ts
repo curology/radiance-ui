@@ -105,7 +105,6 @@ const Selector = styled.div<{
 `;
 
 const TextContainer = styled.div`
-  flex-grow: 1;
   margin-left: ${SPACER.medium};
   margin-top: ${SPACER.xsmall};
   min-width: 125px;
