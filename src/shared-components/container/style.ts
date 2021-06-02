@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
+import type { ContainerComponentType } from './types';
 
 const clickableStyle = (theme: ThemeType) => `
   box-shadow: ${theme.BOX_SHADOWS.clickable};
@@ -64,17 +65,7 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-/**
- * Variable defined solely for type definitions.
- *
- * Our pattern for setting subcomponents via dot notion is easy within a proper component
- * but not when setting it directly on the return value of a `styled` call.
- */
-const ContainerComponentForTypesOnly = styled.div<{
-  type?: ContainerType;
-}>``;
-
-type CompositeContainer = typeof ContainerComponentForTypesOnly & {
+type CompositeContainer = ContainerComponentType & {
   Divider: typeof Divider;
   Image: typeof Image;
   Section: typeof Section;
