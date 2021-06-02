@@ -2,38 +2,6 @@
 
 exports[`<TextButton /> UI snapshots renders with disabled prop 1`] = `
 .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 1rem 0;
-  -webkit-transition: -webkit-transform 350ms;
-  -webkit-transition: transform 350ms;
-  transition: transform 350ms;
-  width: 100%;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}
-
-.emotion-0 > svg {
-  opacity: 1;
-  -webkit-transition: opacity 350ms;
-  transition: opacity 350ms;
-  margin-right: 1rem;
-  margin-top: -5px;
-}
-
-.emotion-2 {
   border-color: transparent;
   background-color: transparent;
   border-radius: 4px;
@@ -41,50 +9,18 @@ exports[`<TextButton /> UI snapshots renders with disabled prop 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2:hover {
+.emotion-0:hover {
   opacity: 0.8;
   background-color: transparent;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-0:active,
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-<button
-  class="emotion-2 emotion-3"
-  disabled=""
->
-  <div
-    class="emotion-0 emotion-1"
-  >
-    Disabled Button Text
-  </div>
-</button>
-`;
-
-exports[`<TextButton /> UI snapshots renders without any props 1`] = `
 .emotion-2 {
-  border-color: transparent;
-  background-color: transparent;
-  border-radius: 4px;
-  color: #332E54;
-  cursor: pointer;
-}
-
-.emotion-2:hover {
-  opacity: 0.8;
-  background-color: transparent;
-}
-
-.emotion-2:active,
-.emotion-2:focus {
-  outline: none;
-  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
-}
-
-.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -95,20 +31,20 @@ exports[`<TextButton /> UI snapshots renders without any props 1`] = `
   display: flex;
   height: 100%;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 1rem 0;
   -webkit-transition: -webkit-transform 350ms;
-  -webkit-transition: transform 350ms;
   transition: transform 350ms;
   width: 100%;
   -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
 }
 
-.emotion-0 > svg {
+.emotion-2>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
@@ -117,10 +53,74 @@ exports[`<TextButton /> UI snapshots renders without any props 1`] = `
 }
 
 <button
-  class="emotion-2 emotion-3"
+  class="emotion-0 emotion-1"
+  disabled=""
 >
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
+  >
+    Disabled Button Text
+  </div>
+</button>
+`;
+
+exports[`<TextButton /> UI snapshots renders without any props 1`] = `
+.emotion-0 {
+  border-color: transparent;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #332E54;
+  cursor: pointer;
+}
+
+.emotion-0:hover {
+  opacity: 0.8;
+  background-color: transparent;
+}
+
+.emotion-0:active,
+.emotion-0:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 1rem 0;
+  -webkit-transition: -webkit-transform 350ms;
+  transition: transform 350ms;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.emotion-2>svg {
+  opacity: 1;
+  -webkit-transition: opacity 350ms;
+  transition: opacity 350ms;
+  margin-right: 1rem;
+  margin-top: -5px;
+}
+
+<button
+  class="emotion-0 emotion-1"
+>
+  <div
+    class="emotion-2 emotion-3"
   >
     Button Text
   </div>

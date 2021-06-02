@@ -27,6 +27,7 @@ exports[`<FadeInContainer /> UI snapshot renders with slide and speed props set 
 @keyframes animation-0 {
   0% {
     -webkit-transform: translateY(-10%);
+    -moz-transform: translateY(-10%);
     -ms-transform: translateY(-10%);
     transform: translateY(-10%);
     opacity: 0;
@@ -38,6 +39,7 @@ exports[`<FadeInContainer /> UI snapshot renders with slide and speed props set 
 
   100% {
     -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
     -ms-transform: translateY(0%);
     transform: translateY(0%);
     opacity: 1;

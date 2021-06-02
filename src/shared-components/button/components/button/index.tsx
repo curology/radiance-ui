@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Loader from '../../shared-components/loader';
 import Container from '../../shared-components/container';
@@ -46,6 +46,10 @@ export interface ButtonProps {
   [key: string]: unknown;
 }
 
+interface Button extends React.FC<ButtonProps> {
+  Container: typeof Container;
+}
+
 /**
  * Buttons can be used as a main call-to-action (CTA). Try to avoid using buttons of the same `buttonType` next to each other since we want to guide the user towards one option.
  *
@@ -53,7 +57,7 @@ export interface ButtonProps {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-const Button = ({
+const Button: Button = ({
   buttonColor,
   buttonType = 'primary',
   children,
@@ -65,7 +69,7 @@ const Button = ({
   onClick,
   textColor,
   ...rest
-}: ButtonProps) => {
+}) => {
   const theme = useTheme();
   const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
@@ -129,7 +133,7 @@ Button.propTypes = {
   isLoading: PropTypes.bool,
   loading: isLoadingPropFunction,
   onClick: PropTypes.func,
-  textColor: PropTypes.string,
+  textColor: COLORS_PROP_TYPES,
 };
 
 const ButtonComponent = withDeprecationWarning(Button, deprecatedProperties);

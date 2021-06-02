@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Toggle /> UI snapshot renders the component 1`] = `
-.emotion-4 {
+.emotion-0 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -22,11 +22,11 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
   padding: 1rem 0;
 }
 
-.emotion-4 > input {
+.emotion-0>input {
   display: none;
 }
 
-.emotion-0 {
+.emotion-2 {
   color: #524D6E;
   margin: 0;
   font-size: 1rem;
@@ -40,22 +40,22 @@ exports[`<Toggle /> UI snapshot renders the component 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-2 > div:first-of-type > input:focus {
+.emotion-4>div:first-of-type>input:focus {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   outline: none;
   border-radius: 12px;
 }
 
 <div
-  class="emotion-4 emotion-5"
+  class="emotion-0 emotion-1"
 >
   <span
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
   >
     Label Text
   </span>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-4 emotion-5"
   >
     <div
       style="display: flex; width: 52px; align-items: center; justify-content: flex-start; position: relative; cursor: pointer; background-color: transparent; border: 0px; padding: 0px; user-select: none;"
