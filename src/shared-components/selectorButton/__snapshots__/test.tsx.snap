@@ -1,52 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for checked checkbox 1`] = `
-.emotion-5 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
-.emotion-1 {
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-
-.emotion-7 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
 .emotion-0 {
-  display: block;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
-  transition: color 350ms,transform 350ms;
-  color: #FFFFFF;
-}
-
-.emotion-9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -57,28 +12,68 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-9:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-9:focus .emotion-6 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 4px;
 }
 
-.emotion-3 {
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emotion-4 {
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+  color: #FFFFFF;
+}
+
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -89,8 +84,8 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   width: 3rem;
   height: 3rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -99,25 +94,32 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   border-color: #332E54;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-7:active,
+.emotion-7:focus {
   outline: none;
+}
+
+.emotion-9 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
 }
 
 <div
   aria-checked="true"
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   role="checkbox"
   tabindex="0"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="none"
         height="16"
         viewBox="0 0 16 16"
@@ -131,12 +133,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
       type="primary"
     />
   </div>
   <p
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     SelectorButton Text
   </p>
@@ -144,7 +146,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 `;
 
 exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for checked radio button 1`] = `
-.emotion-9 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -155,22 +157,22 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-9:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-9:focus .emotion-6 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 50%;
 }
 
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -180,48 +182,43 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: currentColor;
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
-.emotion-7 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
   color: #FFFFFF;
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -232,8 +229,8 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   width: 3rem;
   height: 3rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -242,25 +239,32 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
   border-color: #332E54;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-7:active,
+.emotion-7:focus {
   outline: none;
+}
+
+.emotion-9 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
 }
 
 <div
   aria-checked="true"
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   role="radio"
   tabindex="0"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="none"
         height="8"
         viewBox="0 0 16 16"
@@ -278,12 +282,12 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
       type="primary"
     />
   </div>
   <p
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     SelectorButton Text
   </p>
@@ -291,7 +295,7 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
 `;
 
 exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
-.emotion-9 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -302,22 +306,22 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-9:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-9:focus .emotion-6 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 50%;
 }
 
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -327,48 +331,43 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: currentColor;
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
-.emotion-7 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
   color: #FFFFFF;
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -379,8 +378,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   width: 2rem;
   height: 2rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -389,25 +388,32 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
   border-color: #332E54;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-7:active,
+.emotion-7:focus {
   outline: none;
+}
+
+.emotion-9 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
 }
 
 <div
   aria-checked="true"
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   role="radio"
   tabindex="0"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="none"
         height="8"
         viewBox="0 0 16 16"
@@ -425,12 +431,12 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
       type="primary"
     />
   </div>
   <p
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     SelectorButton Text
   </p>
@@ -438,7 +444,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
-.emotion-9 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -449,22 +455,22 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-9:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-9:focus .emotion-6 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 50%;
 }
 
-.emotion-5 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -474,48 +480,43 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: currentColor;
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
-.emotion-7 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
   color: #FFFFFF;
 }
 
-.emotion-3 {
+.emotion-7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -526,8 +527,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   width: 2rem;
   height: 2rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -536,25 +537,32 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   border-color: #A6A1E2;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-7:active,
+.emotion-7:focus {
   outline: none;
+}
+
+.emotion-9 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
 }
 
 <div
   aria-checked="true"
-  class="emotion-9 emotion-10"
+  class="emotion-0 emotion-1"
   role="radio"
   tabindex="0"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="none"
         height="8"
         viewBox="0 0 16 16"
@@ -572,12 +580,12 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
       type="secondary"
     />
   </div>
   <p
-    class="emotion-7 emotion-8"
+    class="emotion-9 emotion-10"
   >
     SelectorButton Text
   </p>
@@ -585,7 +593,7 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
-.emotion-8 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -596,22 +604,22 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-8:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-8:focus .emotion-5 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 50%;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -621,30 +629,32 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-4 {
   fill: currentColor;
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
-.emotion-2 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -655,8 +665,8 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   width: 2rem;
   height: 2rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -665,12 +675,12 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
   border-color: #332E54;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-6:active,
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-6 {
+.emotion-8 {
   margin-left: 1rem;
   margin-top: 0.25rem;
   min-width: 125px;
@@ -679,23 +689,23 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 
 <div
   aria-checked="false"
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
   role="radio"
   tabindex="0"
 >
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-6 emotion-7"
       type="primary"
     />
   </div>
   <p
-    class="emotion-6 emotion-7"
+    class="emotion-8 emotion-9"
   >
     SelectorButton Text
   </p>
@@ -703,7 +713,7 @@ exports[`<SelectorButton /> UI snapshots when children is a node 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
-.emotion-6 {
+.emotion-0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -714,22 +724,22 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-6:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-6:focus .emotion-5 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 50%;
 }
 
-.emotion-4 {
+.emotion-2 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -739,30 +749,32 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
 }
 
-.emotion-0 {
+.emotion-4 {
   fill: currentColor;
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
-.emotion-2 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -773,8 +785,8 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   width: 2rem;
   height: 2rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -783,25 +795,25 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
   border-color: #332E54;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-6:active,
+.emotion-6:focus {
   outline: none;
 }
 
 <div
   aria-checked="false"
-  class="emotion-6 emotion-7"
+  class="emotion-0 emotion-1"
   role="radio"
   tabindex="0"
 >
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-6 emotion-7"
       type="primary"
     />
   </div>
@@ -809,41 +821,7 @@ exports[`<SelectorButton /> UI snapshots when children is undefined 1`] = `
 `;
 
 exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
-.emotion-4 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-}
-
 .emotion-0 {
-  fill: currentColor;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  cursor: pointer;
-}
-
-.emotion-6 {
-  margin-left: 1rem;
-  margin-top: 0.25rem;
-  min-width: 125px;
-  text-align: left;
-}
-
-.emotion-8 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -854,17 +832,17 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   margin-bottom: 20px;
 }
 
-.emotion-8:focus {
+.emotion-0:focus {
   outline: none;
 }
 
-.emotion-8:focus .emotion-5 {
+.emotion-0:focus .emotion-3 {
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
   border-radius: 4px;
 }
@@ -874,8 +852,37 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+}
+
+.emotion-4 {
+  fill: currentColor;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.emotion-6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border: 1px solid;
   cursor: pointer;
@@ -886,8 +893,8 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   width: 2rem;
   height: 2rem;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
@@ -896,30 +903,37 @@ exports[`<SelectorButton /> UI snapshots when is checkbox 1`] = `
   border-color: #332E54;
 }
 
-.emotion-2:active,
-.emotion-2:focus {
+.emotion-6:active,
+.emotion-6:focus {
   outline: none;
+}
+
+.emotion-8 {
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  min-width: 125px;
+  text-align: left;
 }
 
 <div
   aria-checked="false"
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
   role="checkbox"
   tabindex="0"
 >
   <div
-    class="emotion-4 emotion-5"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-0 emotion-1"
+      class="emotion-4 emotion-5"
     />
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-6 emotion-7"
       type="primary"
     />
   </div>
   <p
-    class="emotion-6 emotion-7"
+    class="emotion-8 emotion-9"
   >
     SelectorButton Text
   </p>

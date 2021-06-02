@@ -38,7 +38,7 @@ const Overlay = styled.div`
 `;
 
 const CrossIconContainer = styled.button`
-  ${buttonReset};
+  ${buttonReset}
   padding: 0;
   position: absolute;
   top: 8px;

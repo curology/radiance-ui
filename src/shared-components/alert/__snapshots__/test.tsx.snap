@@ -4,36 +4,40 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.emotion-7 {
+.emotion-0 {
   border: none;
   text-align: left;
   cursor: pointer;
@@ -47,40 +51,43 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
   animation: animation-0 350ms 1;
   -webkit-transition: 350ms;
   transition: 350ms;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: #332E54;
-  box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
+  box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 }
 
-.emotion-7:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-@media (min-width:768px) {
-  .emotion-7 {
+@media (min-width: 768px) {
+  .emotion-0 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
     margin: 0 auto 1rem;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.emotion-5 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -91,39 +98,39 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
   padding: 1rem;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   height: 1rem;
   width: 1rem;
   fill: #FFFFFF;
 }
 
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   color: #FFFFFF;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-3 {
+.emotion-7 {
   margin: -3px 0 0 1rem;
   max-height: none;
 }
 
 <button
-  class="emotion-7 emotion-8"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="#FFFFFF"
         height="16"
         viewBox="0 0 16 16"
@@ -137,7 +144,7 @@ exports[`Alert UI snapshots renders a default alert 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
     >
       Your email address was updated successfully!
     </div>
@@ -149,100 +156,112 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.emotion-7 {
+.emotion-0 {
   border: none;
   text-align: left;
   cursor: pointer;
@@ -256,40 +275,43 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
   animation: animation-0 350ms 1;
   -webkit-transition: 350ms;
   transition: 350ms;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: #332E54;
-  box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
+  box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 }
 
-.emotion-7:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-@media (min-width:768px) {
-  .emotion-7 {
+@media (min-width: 768px) {
+  .emotion-0 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
     margin: 0 auto 1rem;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.emotion-5 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -300,39 +322,39 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
   padding: 1rem;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   height: 1rem;
   width: 1rem;
   fill: #FFFFFF;
 }
 
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   color: #FFFFFF;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-3 {
+.emotion-7 {
   margin: -3px 0 0 1rem;
   max-height: none;
 }
 
 <button
-  class="emotion-7 emotion-8"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="#FFFFFF"
         height="16"
         viewBox="0 0 16 16"
@@ -346,7 +368,7 @@ exports[`Alert UI snapshots renders a sticky alert 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
     >
       Your email address was updated successfully!
     </div>
@@ -358,100 +380,112 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.emotion-7 {
+.emotion-0 {
   border: none;
   text-align: left;
   cursor: pointer;
@@ -465,40 +499,43 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
   animation: animation-0 350ms 1;
   -webkit-transition: 350ms;
   transition: 350ms;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: #332E54;
-  box-shadow: 0px 8px 24px rgba(51,46,84,0.05);
+  box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 }
 
-.emotion-7:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-@media (min-width:768px) {
-  .emotion-7 {
+@media (min-width: 768px) {
+  .emotion-0 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
     margin: 0 auto 1rem;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.emotion-5 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -webkit-align-items: flex-start;
   -webkit-box-align: flex-start;
@@ -509,39 +546,39 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
   padding: 1rem;
 }
 
-.emotion-1 svg {
+.emotion-4 svg {
   height: 1rem;
   width: 1rem;
   fill: #FFFFFF;
 }
 
-.emotion-0 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   color: #FFFFFF;
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-3 {
+.emotion-7 {
   margin: -3px 0 0 1rem;
   max-height: none;
 }
 
 <button
-  class="emotion-7 emotion-8"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="#FFFFFF"
         height="16"
         viewBox="0 0 16 16"
@@ -555,7 +592,7 @@ exports[`Alert UI snapshots renders custom component passed in content prop 1`] 
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
     >
       <div>
         <strong>
@@ -577,143 +614,112 @@ exports[`Alert UI snapshots renders error alert 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  color: #FFFFFF;
-  font-size: 0.875rem;
-  padding: 1rem;
-}
-
-.emotion-1 svg {
-  height: 1rem;
-  width: 1rem;
-  fill: #FFFFFF;
 }
 
 .emotion-0 {
-  display: block;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  color: #FFFFFF;
-  -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
-  transition: color 350ms,transform 350ms;
-}
-
-.emotion-3 {
-  margin: -3px 0 0 1rem;
-  max-height: none;
-}
-
-.emotion-7 {
   border: none;
   text-align: left;
   cursor: pointer;
@@ -727,40 +733,86 @@ exports[`Alert UI snapshots renders error alert 1`] = `
   animation: animation-0 350ms 1;
   -webkit-transition: 350ms;
   transition: 350ms;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: #BD200F;
-  box-shadow: 0px 8px 24px rgba(189,32,15,0.05);
+  box-shadow: 0px 8px 24px rgba(189, 32, 15, 0.05);
 }
 
-.emotion-7:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-@media (min-width:768px) {
-  .emotion-7 {
+@media (min-width: 768px) {
+  .emotion-0 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
     margin: 0 auto 1rem;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+.emotion-4 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #FFFFFF;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #FFFFFF;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
+  margin: -3px 0 0 1rem;
+  max-height: none;
+}
+
 <button
-  class="emotion-7 emotion-8"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="#FFFFFF"
         height="16"
         viewBox="0 0 16 16"
@@ -776,7 +828,7 @@ exports[`Alert UI snapshots renders error alert 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
     >
       Your email address was updated successfully!
     </div>
@@ -788,111 +840,76 @@ exports[`Alert UI snapshots renders success alert 1`] = `
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-0 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(0,-24px,0);
-    -ms-transform: translate3d(0,-24px,0);
-    transform: translate3d(0,-24px,0);
+    -webkit-transform: translate3d(0, -24px, 0);
+    -moz-transform: translate3d(0, -24px, 0);
+    -ms-transform: translate3d(0, -24px, 0);
+    transform: translate3d(0, -24px, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0px,0);
-    -ms-transform: translate3d(0,0px,0);
-    transform: translate3d(0,0px,0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes animation-1 {
   from {
     opacity: 0;
-    -webkit-transform: translate3d(24px,0,0);
-    -ms-transform: translate3d(24px,0,0);
-    transform: translate3d(24px,0,0);
+    -webkit-transform: translate3d(24px, 0, 0);
+    -moz-transform: translate3d(24px, 0, 0);
+    -ms-transform: translate3d(24px, 0, 0);
+    transform: translate3d(24px, 0, 0);
   }
 
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  color: #FFFFFF;
-  font-size: 0.875rem;
-  padding: 1rem;
-}
-
-.emotion-1 svg {
-  height: 1rem;
-  width: 1rem;
-  fill: #FFFFFF;
 }
 
 .emotion-0 {
-  display: block;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  color: #FFFFFF;
-  -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
-  transition: color 350ms,transform 350ms;
-}
-
-.emotion-3 {
-  margin: -3px 0 0 1rem;
-  max-height: none;
-}
-
-.emotion-7 {
   border: none;
   text-align: left;
   cursor: pointer;
@@ -906,40 +923,86 @@ exports[`Alert UI snapshots renders success alert 1`] = `
   animation: animation-0 350ms 1;
   -webkit-transition: 350ms;
   transition: 350ms;
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   background-color: #2B6E33;
-  box-shadow: 0px 8px 24px rgba(43,110,51,0.05);
+  box-shadow: 0px 8px 24px rgba(43, 110, 51, 0.05);
 }
 
-.emotion-7:focus {
+.emotion-0:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-@media (min-width:768px) {
-  .emotion-7 {
+@media (min-width: 768px) {
+  .emotion-0 {
     -webkit-animation: animation-1 350ms 1;
     animation: animation-1 350ms 1;
     margin: 0 auto 1rem;
-    -webkit-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  padding: 1rem;
+}
+
+.emotion-4 svg {
+  height: 1rem;
+  width: 1rem;
+  fill: #FFFFFF;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  color: #FFFFFF;
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
+  margin: -3px 0 0 1rem;
+  max-height: none;
+}
+
 <button
-  class="emotion-7 emotion-8"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-5 emotion-6"
+    class="emotion-2 emotion-3"
   >
     <div
-      class="emotion-1 emotion-2"
+      class="emotion-4 emotion-5"
     >
       <svg
-        class="emotion-0"
+        class="emotion-6"
         fill="#FFFFFF"
         height="16"
         viewBox="0 0 16 16"
@@ -953,7 +1016,7 @@ exports[`Alert UI snapshots renders success alert 1`] = `
       </svg>
     </div>
     <div
-      class="emotion-3 emotion-4"
+      class="emotion-7 emotion-8"
     >
       Your email address was updated successfully!
     </div>

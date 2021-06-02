@@ -11,7 +11,7 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 import { ANIMATION } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';
 

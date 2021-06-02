@@ -1,8 +1,8 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
+import type { ContainerComponentType } from './types';
 
 const clickableStyle = (theme: ThemeType) => `
   box-shadow: ${theme.BOX_SHADOWS.clickable};
@@ -65,28 +65,12 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-/**
- * This is the type returned by `styled.div`
- *
- * @see `node_modules/@emotion/styled-base/types/index.d.ts`
- */
-type StyledContainer = StyledComponent<
-  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  {
-    type?: ContainerType;
-  },
-  Record<string, unknown>
->;
-
-type CompositeContainer = StyledContainer & {
+type CompositeContainer = ContainerComponentType & {
   Divider: typeof Divider;
   Image: typeof Image;
   Section: typeof Section;
 };
 
-// Our reliance on setting dot.notation subcomponents directly on the
-// styled component is not well supported. CompositeContainer defines those
-// subcomponents ahead of time to account for styled.div limitations.
 const Container = styled.div<{ type?: ContainerType }>`
   ${({ theme, type }) => containerStyles(theme, type)};
 ` as CompositeContainer;
