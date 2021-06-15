@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Style from './style';
-
 import type { ThemeColors, ThemeType } from '../../constants';
 
 export type StatusType = 'primary' | 'success' | 'error' | 'white';
@@ -67,11 +66,11 @@ const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
  *
  * These chips can have a status value of Error, Primary, Success, or White. "White" does not have a low contrast version, and can be used on top of photos or illustrations.
  */
-export const Chip = ({
+export const Chip: React.FC<ChipProps> = ({
   isLowContrast = false,
   status = 'primary',
   text,
-}: ChipProps) => {
+}) => {
   const theme = useTheme();
 
   const { backgroundColor, textColor } = getStyles({

@@ -1,5 +1,14 @@
 # CHANGELOG
 
+# v22.0.0
+
+- [Dependencies] **BREAKING CHANGE** Upgrade Emotion from 10 to 11 ([#910](https://github.com/curology/radiance-ui/pull/910))
+- [TypeScript] Update Component type definitions to prevent `prop-types` errors in consumer applications ([#983](https://github.com/curology/radiance-ui/pull/983))
+- [DialogModal] Update `onCloseIconClick` type definition ([#984](https://github.com/curology/radiance-ui/pull/984))
+- [Babel] [Emotion] Set `autoLabel: 'always'` to maintain previous Emotion 10 behavior (fixing size regression) ([#1001](https://github.com/curology/radiance-ui/pull/1001))
+- [Tooltip] Refactor hover/click style application logic to remove `<Global />` style (deceasing bundle size) ([#1002](https://github.com/curology/radiance-ui/pull/1002))
+- [Container] Move `styled` definition used solely for TypeScript type in `./types.ts` file to remove it from bundle output ([#1003](https://github.com/curology/radiance-ui/pull/1003))
+
 # v21.0.0
 
 - [Components] **BREAKING CHANGE** Update `borderRadius` prop in `<Accordion />` and `<OptionButton />` to be theme key rather than values ([#930](https://github.com/curology/radiance-ui/pull/930))

@@ -10,10 +10,9 @@ import {
 import { Callout } from 'src/shared-components';
 import { text, boolean } from '@storybook/addon-knobs';
 import { BREAKPOINTS } from 'src/constants';
+import type { Meta } from '@storybook/react';
 
 import { LockGlyph, NeckGlyph, NoneGlyph } from '../../src/icons';
-
-import type { Meta } from '@storybook/react';
 
 export const Usage = () => (
   <React.Fragment>

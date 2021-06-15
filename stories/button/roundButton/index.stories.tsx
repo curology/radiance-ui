@@ -12,7 +12,9 @@ import { action } from '@storybook/addon-actions';
 import { RoundButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
+import type { Meta } from '@storybook/react';
+import type { ThemeColors } from 'src/constants/themes/types';
 
 import {
   ArrowLeftIcon,
@@ -20,9 +22,6 @@ import {
   CheckmarkIcon,
   CrossIcon,
 } from '../../../src/icons';
-
-import type { Meta } from '@storybook/react';
-import type { ThemeColors } from 'src/constants/themes/types';
 
 const ButtonsContainer = styled.div`
   display: flex;
@@ -153,7 +152,13 @@ export const WithControls = () => {
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
         icon={<CheckmarkIcon />}
-        textColor={text('textColor', '') as ThemeColors}
+        textColor={
+          text(
+            'textColor',
+            // @ts-expect-error -- Rely on component fallback
+            undefined,
+          ) as ThemeColors
+        }
       >
         {text('children', 'Click me!')}
       </RoundButton>

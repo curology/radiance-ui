@@ -18,7 +18,6 @@ import {
   setThemeLineHeight,
 } from '../../utils/themeStyles';
 import { isDefined } from '../../utils/isDefined';
-
 import type { BaseButtonStylesTypes, ButtonTypeWithAction } from './types';
 
 const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
@@ -135,12 +134,6 @@ const disabledStyles = (theme: ThemeType) => `
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
-
-  &:visited,
-  &:hover {
-    opacity: 1;
-    color: ${theme.COLORS.textDisabled};
-  }
 `;
 
 function parseTheme(

@@ -6,17 +6,18 @@ updates:
       interval: daily
       time: '07:00'
       timezone: America/Los_Angeles
-    open-pull-requests-limit: 20
+    open-pull-requests-limit: 30
     reviewers:
       - michaeljaltamirano
     assignees:
       - michaeljaltamirano
     ignore:
-      - dependency-name: '@babel/cli'
       - dependency-name: '@babel/plugin-proposal-class-properties'
       - dependency-name: '@babel/plugin-proposal-export-default-from'
+      - dependency-name: '@babel/plugin-proposal-export-namespace-from'
+      - dependency-name: '@babel/plugin-proposal-private-methods'
+      - dependency-name: '@babel/plugin-proposal-private-property-in-object'
       - dependency-name: '@babel/plugin-transform-parameters'
-      - dependency-name: '@babel/plugin-proposal-export-namespace-from from'
       - dependency-name: '@babel/preset-env'
       - dependency-name: '@babel/preset-react'
       - dependency-name: '@babel/preset-typescript'

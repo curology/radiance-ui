@@ -12,7 +12,6 @@ import {
 import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Accordion } from 'src/shared-components';
-
 import type { Meta } from '@storybook/react';
 
 const ACCORDION_STORY_ID_PREFIX = 'components-accordion--';

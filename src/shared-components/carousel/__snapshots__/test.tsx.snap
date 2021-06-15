@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] = `
+.emotion-0 {
+  max-width: 702px;
+}
+
 .emotion-2 {
-  overflow: hidden !important;
+  overflow: hidden!important;
   padding-bottom: 1.5rem;
 }
 
@@ -17,8 +21,8 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1.5rem;
   -webkit-user-select: none;
@@ -45,8 +49,8 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   overflow: hidden;
 }
@@ -62,13 +66,14 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 
 .emotion-2 .slick-slider .slick-track,
 .emotion-2 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  -o-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .emotion-2 .slick-track {
@@ -124,19 +129,21 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 }
 
 .emotion-2 .slick-slider {
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .emotion-2 .slick-dots {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
   bottom: -32px;
@@ -166,18 +173,14 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   background-color: #332E54;
 }
 
-.emotion-0 {
-  width: 311px !important;
+.emotion-4 {
+  width: 311px!important;
   min-height: 48px;
   margin: 0 0.5rem;
 }
 
-.emotion-4 {
-  max-width: 702px;
-}
-
 <div
-  class="emotion-4 emotion-5"
+  class="emotion-0 emotion-1"
 >
   <div
     class="emotion-2 emotion-3"
@@ -202,7 +205,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="emotion-4 emotion-5"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -220,12 +223,12 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 `;
 
 exports[`<Carousel /> UI snapshots renders with props 1`] = `
-.emotion-4 {
+.emotion-0 {
   max-width: 375px;
 }
 
 .emotion-2 {
-  overflow: hidden !important;
+  overflow: hidden!important;
   padding-bottom: 1.5rem;
 }
 
@@ -240,8 +243,8 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   padding: 0 1.5rem;
   -webkit-user-select: none;
@@ -268,8 +271,8 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   overflow: hidden;
 }
@@ -285,13 +288,14 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 
 .emotion-2 .slick-slider .slick-track,
 .emotion-2 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  -o-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .emotion-2 .slick-track {
@@ -347,19 +351,21 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
 }
 
 .emotion-2 .slick-slider {
+  -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 .emotion-2 .slick-dots {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
   bottom: -32px;
@@ -389,14 +395,14 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   background-color: #332E54;
 }
 
-.emotion-0 {
-  width: 311px !important;
+.emotion-4 {
+  width: 311px!important;
   min-height: 48px;
   margin: 0 0.5rem;
 }
 
 <div
-  class="emotion-4 emotion-5"
+  class="emotion-0 emotion-1"
 >
   <div
     class="emotion-2 emotion-3"
@@ -421,7 +427,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
           >
             <div>
               <div
-                class="emotion-0 emotion-1"
+                class="emotion-4 emotion-5"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >

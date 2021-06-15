@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, ErrorIcon, InfoIcon } from '../../icons';
 import Style from './style';
@@ -27,7 +27,11 @@ export interface BannerProps {
  *
  * Banners are not dismissable.
  */
-export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
+export const Banner: React.FC<BannerProps> = ({
+  content,
+  onClick,
+  type = 'default',
+}) => {
   const theme = useTheme();
   const Icon = bannerIconMapping[type];
 

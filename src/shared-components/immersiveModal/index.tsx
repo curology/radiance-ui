@@ -5,6 +5,7 @@ import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
 import { FocusScope } from '@react-aria/focus';
 
+import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { OffClickWrapper } from '../offClickWrapper';
 import { CrossIcon } from '../../icons';
 import Style from './style';
@@ -34,7 +35,10 @@ export interface ImmersiveModalProps {
   [key: string]: unknown;
 }
 
-const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
+interface ImmersiveModal extends React.FC<ImmersiveModalProps> {
+  Paragraph: typeof Style.Paragraph;
+}
+
 const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
 const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
@@ -59,14 +63,14 @@ const getModalDesktopScrollingElement = () =>
  *
  * `ImmersiveModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
-export const ImmersiveModal = ({
+export const ImmersiveModal: ImmersiveModal = ({
   children,
   footerContent = null,
   headerImage = null,
   onClose,
   title = '',
   ...rest
-}: ImmersiveModalProps) => {
+}) => {
   const [isClosing, setIsClosing] = useState(false);
   const [showMobileHeaderBar, setShowMobileHeaderBar] = useState(false);
   const [showDesktopHeaderBar, setShowDesktopHeaderBar] = useState(false);

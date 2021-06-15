@@ -1,7 +1,6 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import { baseButtonStyles } from '../../style';
-
 import type { ButtonType } from '../../types';
 import type { ThemeColors, ThemeType } from '../../../../constants';
 

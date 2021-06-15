@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';
 import Style from './style';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
-
 import type { ButtonType } from '../../types';
 
 export interface LinkButtonProps {
   /**
-   * Specifies the tag or element to be rendered
+   * Specifies the tag or element to be rendered, like an 'a' or 'span'
    */
-  as?: 'a' | React.ElementType;
+  as?: string | React.ElementType;
   buttonColor?: ThemeColors;
   /**
    * Determines the button's main style theme
@@ -32,6 +31,10 @@ export interface LinkButtonProps {
   [key: string]: unknown;
 }
 
+interface LinkButton extends React.FC<LinkButtonProps> {
+  Container: typeof Container;
+}
+
 /**
  * `LinkButton` will render a 'button-like' link for directing/linking to the path specified. This component can work with React Router's `Link`/`NavLink` by passing in the router component as a prop ---> `<LinkButton to='/path' as={Link}> ....`.
  *
@@ -39,7 +42,7 @@ export interface LinkButtonProps {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const LinkButton = ({
+export const LinkButton: LinkButton = ({
   as = 'a',
   buttonColor,
   buttonType = 'primary',
@@ -48,7 +51,7 @@ export const LinkButton = ({
   onClick = () => undefined,
   textColor,
   ...rest
-}: LinkButtonProps) => {
+}) => {
   const theme = useTheme();
   const ContainerTag = as;
   const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
@@ -90,5 +93,5 @@ LinkButton.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-  textColor: PropTypes.string,
+  textColor: COLORS_PROP_TYPES,
 };

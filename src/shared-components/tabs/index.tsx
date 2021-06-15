@@ -18,7 +18,7 @@ export interface TabsProps {
   }>;
 }
 
-export const Tabs = ({
+export const Tabs: React.FC<TabsProps> = ({
   initialActiveTabId = 1,
   onClick = () => undefined,
   tabItems,
@@ -54,6 +54,6 @@ Tabs.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       text: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
 };

@@ -9,7 +9,6 @@ import {
 } from '@storybook/addon-docs/blocks';
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
-
 import type { Meta } from '@storybook/react';
 
 export const Default = () => (

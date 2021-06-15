@@ -3,8 +3,9 @@ import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
+import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
 import Style from './style';
 import { Colors, primaryTheme, secondaryTheme } from '../../constants';
@@ -23,12 +24,15 @@ export interface DialogModalProps {
    * If provided, DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
    */
-  onCloseIconClick?: () => void;
+  onCloseIconClick?: (() => void) | null;
   title?: string;
   [key: string]: unknown;
 }
 
-const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
+interface DialogModal extends React.FC<DialogModalProps> {
+  Paragraph: typeof Style.Paragraph;
+}
+
 const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
   document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
@@ -42,13 +46,13 @@ const getDomNode = () =>
  *
  * `DialogModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
-export const DialogModal = ({
+export const DialogModal: DialogModal = ({
   backgroundColor,
   children,
   onCloseIconClick,
   title = '',
   ...rest
-}: DialogModalProps) => {
+}) => {
   const theme = useTheme();
   const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);

@@ -1,10 +1,16 @@
-import type { StorybookConfig } from '@storybook/core/types';
 const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const babelConfig = require('../babel.config');
 
-module.exports = {
+const toPath = (_path: string) => path.join(process.cwd(), _path);
+
+/**
+ * {@link https://storybook.js.org/docs/ember/configure/overview#configure-your-storybook-project Configure your storybook project}
+ *
+ * {@link https://github.com/storybookjs/storybook/blob/b3c4a8a4fd846977ef777d0e9f4aa5c77b0796e7/lib/core-common/src/types.ts#L224 June 2021 `next` types}
+ */
+const config = {
   /**
    * Storybook convention is to include "stories" in the filename, but it is also
    * a requirement for Storybook default configuration to work correctly
@@ -53,11 +59,30 @@ module.exports = {
       );
     }
 
+    /**
+     * Until Storybook migrates its own internal @emotion usage from
+     * v10 to v11, this allows us to maintain compatibility
+     */
+    const emotion11CompatibleConfig = {
+      ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          '@emotion/core': toPath('node_modules/@emotion/react'),
+          '@emotion/styled': toPath('node_modules/@emotion/styled'),
+          'emotion-theming': toPath('node_modules/@emotion/react'),
+        },
+      },
+    };
+
     // Return the altered config
-    return config;
+    return emotion11CompatibleConfig;
   },
   reactOptions: {
     fastRefresh: true,
     strictMode: true,
   },
-} as StorybookConfig;
+};
+
+module.exports = config;

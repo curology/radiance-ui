@@ -10,11 +10,10 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
+import type { Meta } from '@storybook/react';
 
 import { AcneGlyph } from '../../src/icons';
-
-import type { Meta } from '@storybook/react';
 
 export const Primary = () => {
   const [isActive, setIsActive] = React.useState(true);
