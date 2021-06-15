@@ -1,5 +1,3 @@
-import type { StorybookConfig } from '@storybook/react/types';
-
 const path = require('path');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
@@ -8,19 +6,11 @@ const babelConfig = require('../babel.config');
 const toPath = (_path: string) => path.join(process.cwd(), _path);
 
 /**
- * Storybook's types are as of this commit not up to date.
- * We extend the Config option based on their documentation.
- *
  * {@link https://storybook.js.org/docs/ember/configure/overview#configure-your-storybook-project Configure your storybook project}
  *
  * {@link https://github.com/storybookjs/storybook/blob/b3c4a8a4fd846977ef777d0e9f4aa5c77b0796e7/lib/core-common/src/types.ts#L224 June 2021 `next` types}
  */
-interface CustomStorybookConfig extends StorybookConfig {
-  logLevel?: string;
-  babel?: Record<string, unknown>;
-}
-
-const config: CustomStorybookConfig = {
+const config = {
   /**
    * Storybook convention is to include "stories" in the filename, but it is also
    * a requirement for Storybook default configuration to work correctly
