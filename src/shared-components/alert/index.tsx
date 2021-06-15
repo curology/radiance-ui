@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, ChevronIcon, ErrorIcon, InfoIcon } from '../../icons';
 import { Avatar } from '../avatar';
 import Style from './style';
 import { isDefined } from '../../utils/isDefined';
+import { useTruncateText } from './hooks';
 
 const ANIMATION_DELAY = 500;
 
@@ -29,6 +30,10 @@ export interface AlertProps {
   [key: string]: unknown;
 }
 
+interface Alert extends React.FC<AlertProps> {
+  Container: typeof Style.AlertsContainer;
+}
+
 /**
  * Alerts should be used to show notifications or messages from (providers, support, or system).
  *
@@ -48,7 +53,7 @@ export interface AlertProps {
  *
  * All alerts are dimissable by clicking on them. However, you can use the `duration` prop to determine if the alert is sticky or dismissed on a timer (in units of seconds).
  */
-export const Alert = (alertProps: AlertProps) => {
+export const Alert: Alert = (alertProps) => {
   const {
     avatarSrc = '',
     content,
@@ -63,7 +68,7 @@ export const Alert = (alertProps: AlertProps) => {
   const [exiting, setExiting] = useState(false);
   const [exited, setExited] = useState(false);
 
-  const contentText = useRef<HTMLDivElement>(null);
+  const { contentText } = useTruncateText(truncateText);
 
   let timer: number | undefined;
 
@@ -71,7 +76,6 @@ export const Alert = (alertProps: AlertProps) => {
     setExiting(true);
     window.clearTimeout(timer);
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { onExit: _onExit, ...otherProps } = alertProps;
 
     window.setTimeout(() => {
@@ -79,39 +83,6 @@ export const Alert = (alertProps: AlertProps) => {
       onExit(otherProps);
     }, ANIMATION_DELAY);
   };
-
-  useEffect(() => {
-    if (truncateText) {
-      const contentElement = contentText.current;
-      if (contentElement) {
-        const initialWords = contentElement.innerHTML;
-        const wordsArray = initialWords.split(' ');
-        /**
-         * TODO: Find better contentValues values for the logic.
-         * Secondary Theme truncated content gets stuck in the while loop because
-         * there are different dimensions at play.
-         */
-        const ARBITRARY_SECONDARY_OFFSET = 5;
-        while (
-          contentElement.scrollHeight >
-            contentElement.offsetHeight + ARBITRARY_SECONDARY_OFFSET &&
-          wordsArray.length !== 0
-        ) {
-          wordsArray.pop();
-          contentElement.innerHTML = `${wordsArray.join(' ')}...`;
-        }
-
-        /**
-         * If while loop pops all words due to element dimensions,
-         * prefer resetting without truncating to potentially
-         * broken functionality
-         */
-        if (wordsArray.length === 0) {
-          contentElement.innerHTML = initialWords;
-        }
-      }
-    }
-  });
 
   /**
    * Duration logic effect
@@ -169,9 +140,7 @@ export const Alert = (alertProps: AlertProps) => {
   );
 };
 
-Alert.Container = ({ children }: { children: React.ReactNode }) => (
-  <Style.AlertsContainer>{children}</Style.AlertsContainer>
-);
+Alert.Container = Style.AlertsContainer;
 
 Alert.propTypes = {
   avatarSrc: PropTypes.string,

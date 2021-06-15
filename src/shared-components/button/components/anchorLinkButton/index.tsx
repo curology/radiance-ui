@@ -25,22 +25,22 @@ type ButtonRefType =
  *
  * It is the only "Button" that does not extend the functionality/styling of our base Button component.
  */
-export const AnchorLinkButton = React.forwardRef(
-  (props: AnchorLinkButtonProps, ref: ButtonRefType) => {
-    const { children, onClick } = props;
+export const AnchorLinkButton: React.ForwardRefExoticComponent<
+  AnchorLinkButtonProps & React.RefAttributes<HTMLButtonElement>
+> = React.forwardRef((props: AnchorLinkButtonProps, ref: ButtonRefType) => {
+  const { children, onClick } = props;
 
-    return (
-      <button
-        ref={ref}
-        css={Style.anchorLinkButton}
-        onClick={onClick}
-        type="button"
-      >
-        {children}
-      </button>
-    );
-  },
-);
+  return (
+    <button
+      ref={ref}
+      css={Style.anchorLinkButton}
+      onClick={onClick}
+      type="button"
+    >
+      {children}
+    </button>
+  );
+});
 
 AnchorLinkButton.propTypes = {
   children: PropTypes.string.isRequired,

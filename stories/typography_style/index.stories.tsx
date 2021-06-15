@@ -7,8 +7,8 @@ import {
   Title,
 } from '@storybook/addon-docs/blocks';
 import { TYPOGRAPHY_STYLE } from 'src/shared-components';
-import type { Meta } from '@storybook/react';
 import { BREAKPOINTS } from 'src/constants';
+import type { Meta } from '@storybook/react';
 
 // Rule will be fixed with emotion 11 upgrade that has better typing,
 // but right now the css theme arg is any in `/stories` directory

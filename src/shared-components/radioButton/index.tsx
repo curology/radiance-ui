@@ -29,7 +29,7 @@ export interface RadioButtonProps {
  *
  * Note that a group of radio buttons must be composed by a parent component.
  */
-export const RadioButton = ({
+export const RadioButton: React.FC<RadioButtonProps> = ({
   checked,
   children = null,
   disabled = false,
@@ -38,7 +38,7 @@ export const RadioButton = ({
   size = 'small',
   type = 'primary',
   ...rest
-}: RadioButtonProps) => (
+}) => (
   <SelectorButton
     checked={checked}
     disabled={disabled}

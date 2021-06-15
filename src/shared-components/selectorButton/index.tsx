@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { css, useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
 import Style from './style';
@@ -25,7 +24,7 @@ export interface SelectorButtonProps {
   [key: string]: unknown;
 }
 
-export const SelectorButton = ({
+export const SelectorButton: React.FC<SelectorButtonProps> = ({
   checked,
   children = null,
   disabled = false,
@@ -35,7 +34,7 @@ export const SelectorButton = ({
   size = 'small',
   type = 'primary',
   ...rest
-}: SelectorButtonProps) => {
+}) => {
   const theme = useTheme();
 
   const checkedIcon =

@@ -1,5 +1,5 @@
 export default function throwOnUndefinedProperty<
-  T extends Record<string, unknown>
+  T extends Record<string, unknown>,
 >(obj: T): T {
   const handler = {
     get(target: T, property: string) {

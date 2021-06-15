@@ -15,11 +15,11 @@ export interface FadeInContainerProps {
   speed?: string;
 }
 
-export const FadeInContainer = ({
+export const FadeInContainer: React.FC<FadeInContainerProps> = ({
   children,
   slide = false,
   speed = '350ms',
-}: FadeInContainerProps) => (
+}) => (
   <Style.FadeInContainer withSlide={slide} animationSpeed={speed}>
     {children}
   </Style.FadeInContainer>

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import type { ThemeColors, ThemeType } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
+import type { ThemeColors, ThemeType } from '../../constants';
 import Style from './style';
 
 export interface IndicatorProps {
@@ -50,7 +50,10 @@ const getStyles = ({ theme, type }: GetStylesProps) => {
  * Indicators are used in navigation to help with wayfinding for messages and notifications.
  * It can also be used for non-navigational purposes for information-intensive pages.
  */
-export const Indicator = ({ text, type = 'error' }: IndicatorProps) => {
+export const Indicator: React.FC<IndicatorProps> = ({
+  text,
+  type = 'error',
+}) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getStyles({ theme, type });
 

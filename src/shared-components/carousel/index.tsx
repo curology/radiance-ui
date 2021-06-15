@@ -47,6 +47,12 @@ export interface CarouselProps {
   numCardsVisible: 1 | 2 | 3;
 }
 
+interface Carousel extends React.FC<CarouselProps> {
+  Card: typeof Style.Card;
+}
+
+// TODO-eslint: Reduce cognitive complexity of component
+/* eslint-disable sonarjs/cognitive-complexity */
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
  *
@@ -54,7 +60,7 @@ export interface CarouselProps {
  *
  * An array of `Carousel.Card` must be used for the carousel content. It includes the base styles for the Card which may be extended as shown above.
  */
-export const Carousel = ({
+export const Carousel: Carousel = ({
   autoplay = false,
   autoplaySpeed = 5000,
   bottomRightAlignedArrows = false,
@@ -65,7 +71,7 @@ export const Carousel = ({
   hideDots = false,
   infinite = false,
   numCardsVisible,
-}: CarouselProps) => {
+}) => {
   const getLastIndex = () => {
     const numberSlides = children.length;
     return numberSlides - numCardsVisible;
@@ -170,6 +176,7 @@ export const Carousel = ({
     </Style.OuterContainer>
   );
 };
+/* eslint-enable sonarjs/cognitive-complexity */
 
 Carousel.Card = Style.Card;
 
@@ -183,5 +190,5 @@ Carousel.propTypes = {
   hideArrows: PropTypes.bool,
   hideDots: PropTypes.bool,
   infinite: PropTypes.bool,
-  numCardsVisible: PropTypes.number.isRequired,
+  numCardsVisible: PropTypes.oneOf([1, 2, 3] as const).isRequired,
 };

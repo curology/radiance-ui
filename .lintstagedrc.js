@@ -9,4 +9,5 @@ module.exports = {
   ],
   '*.json': 'prettier --write',
   '*.yml': 'prettier --write',
+  'yarn.lock': 'yarn run yarn-deduplicate',
 };

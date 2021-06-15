@@ -32,7 +32,7 @@ const getTypeColor = (
 };
 
 interface ContainerProps {
-  borderRadius?: valueof<ThemeType['BORDER_RADIUS']>;
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
   containerType: ContainerType;
 }
 
@@ -45,7 +45,7 @@ const sharedContainerStyles = ({
   containerType,
   theme,
 }: SharedContainerStylesProps) => `
-  border-radius: ${borderRadius ?? theme.BORDER_RADIUS.small};
+  border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
   padding: ${SPACER.large};
   margin-bottom: ${SPACER.medium};
@@ -115,23 +115,11 @@ const getBaseIconWrapperStyles = ({
 `;
 
 const CheckmarkWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
-  ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({
-      buttonType,
-      optionType,
-      selected,
-      theme,
-    })}
+  ${getBaseIconWrapperStyles}
 `;
 
 const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
-  ${({ buttonType, optionType, selected, theme }) =>
-    getBaseIconWrapperStyles({
-      buttonType,
-      optionType,
-      selected,
-      theme,
-    })}
+  ${getBaseIconWrapperStyles}
   width: 48px;
   height: 48px;
 

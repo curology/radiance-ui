@@ -14,7 +14,15 @@ const getPresets = (modules) => [
   ],
   '@babel/react',
   '@babel/preset-typescript',
-  '@emotion/babel-preset-css-prop',
+  [
+    '@emotion/babel-preset-css-prop',
+    {
+      autoLabel: 'always',
+      labelFormat: '[local]',
+      useBuiltIns: false,
+      throwIfNamespace: true,
+    },
+  ],
 ];
 
 const plugins = [
@@ -22,6 +30,8 @@ const plugins = [
   '@babel/plugin-proposal-export-default-from',
   ['@babel/plugin-proposal-class-properties', { loose: true }],
   ['@babel/plugin-transform-parameters', { loose: true }],
+  ['@babel/plugin-proposal-private-methods', { loose: true }],
+  ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
 ];
 
 module.exports = {

@@ -1,22 +1,16 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState, useRef } from 'react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
-import type { ThemeType } from '../../constants';
 import { ChevronIcon } from '../../icons';
 import { Thumbnails } from './thumbnails';
 import Style from './style';
 import { keyboardKeys } from '../../constants/keyboardKeys';
-
-export type BorderRadiusValues =
-  | valueof<ThemeType['BORDER_RADIUS']>
-  | '0.25rem'
-  | '0.5rem'
-  | '2rem';
+import { BORDER_RADIUS_PROP_TYPES, ThemeType } from '../../constants';
 
 export interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
-  borderRadius?: BorderRadiusValues;
+  borderRadius?: keyof ThemeType['BORDER_RADIUS'];
   /** node(s) that will render only when expanded */
   children: React.ReactNode;
   /** when true, the accordion will be greyed out and the onClick prop will be disabled */
@@ -35,13 +29,20 @@ export interface AccordionProps {
   title: React.ReactNode;
 }
 
+interface Accordion extends React.FC<AccordionProps> {
+  Container: typeof Style.Container;
+  Content: typeof Style.Content;
+  Thumbnails: typeof Thumbnails;
+  Truncate: typeof Style.Truncate;
+}
+
 /**
  * A list of items that allows each item's content to be expanded and collapsed by clicking its title bar.
  *
  * The accordion component expands to reveal hidden information. They should be used when you need to fit a large amount of content but don't want to visually overwhelm the user.
  */
-export const Accordion = ({
-  borderRadius,
+export const Accordion: Accordion = ({
+  borderRadius = 'small',
   children,
   disabled = false,
   isOpen,
@@ -49,7 +50,7 @@ export const Accordion = ({
   onClick,
   rightAlignArrow = false,
   title,
-}: AccordionProps) => {
+}) => {
   const theme = useTheme();
   const [contentHeight, setContentHeight] = useState('0px');
 
@@ -118,7 +119,7 @@ Accordion.Thumbnails = Thumbnails;
 Accordion.Truncate = Style.Truncate;
 
 Accordion.propTypes = {
-  borderRadius: PropTypes.string,
+  borderRadius: BORDER_RADIUS_PROP_TYPES,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,

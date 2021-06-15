@@ -13,11 +13,11 @@ export interface OffClickWrapperProps {
   onOffClick: (event: KeyboardEvent | MouseEvent) => void;
 }
 
-export const OffClickWrapper = ({
+export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
   children,
   className,
   onOffClick,
-}: OffClickWrapperProps) => {
+}) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleKeyPress = (event: KeyboardEvent) => {
