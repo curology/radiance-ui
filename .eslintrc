@@ -3,7 +3,8 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./.eslint.tsconfig.json"
+    "project": "./.eslint.tsconfig.json",
+    "allowAutomaticSingleRunInference": true
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
