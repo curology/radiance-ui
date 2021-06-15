@@ -98,8 +98,8 @@
     "@types/lodash.round": "^4.0.6",
     "@types/lodash.throttle": "^4.1.6",
     "@types/lodash.uniqueid": "^4.0.6",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.7",
     "@types/react-slick": "^0.23.4",
     "@types/react-transition-group": "^4.4.0",
     "@types/tinycolor2": "^1.4.2",
@@ -150,8 +150,8 @@
     "lodash.throttle": "^4.1.1",
     "lodash.uniqueid": "^4.0.1",
     "prop-types": "^15.7.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-slick": "^0.27.13",
     "react-toggle-button": "^2.2.0",
     "react-transition-group": "^4.4.1",
@@ -160,8 +160,8 @@
   "peerDependencies": {
     "@emotion/react": "~11.4.0",
     "@emotion/styled": "~11.3.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "husky": {
     "hooks": {
