@@ -1,5 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import * as CONSTANTS from 'src/constants';
 import { Typography } from 'src/shared-components';
 
@@ -12,6 +12,7 @@ const {
   primaryTheme: _primaryTheme,
   secondaryTheme: _secondaryTheme,
   REACT_PORTAL_SECTION_ID: _REACT_PORTAL_SECTION_ID,
+  BORDER_RADIUS_PROP_TYPES: _BORDER_RADIUS_PROP_TYPES,
   ...VALID_CONSTANTS
 } = CONSTANTS;
 

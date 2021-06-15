@@ -1,21 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
-.emotion-4 {
+.emotion-0 {
   position: relative;
   width: 100%;
   text-align: left;
 }
 
-.emotion-4 > div:first-of-type:focus {
+.emotion-0>div:first-of-type:focus {
   outline: none;
 }
 
-.emotion-0 {
+.emotion-2 {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.05);
   background: #FFFFFF;
   background-image: none;
   width: 100%;
@@ -30,30 +31,31 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   white-space: nowrap;
   padding: 0 2rem 0 1rem;
   text-align: left;
+  -webkit-text-align-last: left;
   text-align-last: left;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
   cursor: pointer;
 }
 
-.emotion-0:hover {
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+.emotion-2:hover {
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.10);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
 
-.emotion-0:focus {
+.emotion-2:focus {
   outline: none;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.10);
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
 }
 
-.emotion-0::-moz-focus-inner {
+.emotion-2::-moz-focus-inner {
   border: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   right: 0;
   top: 0;
@@ -69,36 +71,35 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: start;
   -ms-flex-pack: start;
+  -webkit-justify-content: start;
   justify-content: start;
 }
 
-.emotion-2:hover {
+.emotion-3:hover {
   cursor: pointer;
 }
 
-.emotion-2 svg {
+.emotion-3 svg {
   -webkit-transition: -webkit-transform 350ms ease-in-out;
-  -webkit-transition: transform 350ms ease-in-out;
   transition: transform 350ms ease-in-out;
 }
 
-.emotion-1 {
+.emotion-5 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
 <div
-  class="emotion-4 emotion-5"
+  class="emotion-0 emotion-1"
 >
   <select
-    class="emotion-0"
+    class="emotion-2"
   >
     <option
       value="test1"
@@ -117,10 +118,10 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
     </option>
   </select>
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-3 emotion-4"
   >
     <svg
-      class="emotion-1"
+      class="emotion-5"
       fill="none"
       height="10"
       viewBox="0 0 16 16"

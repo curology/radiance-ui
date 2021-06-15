@@ -15,6 +15,7 @@ describe('<ImmersiveModal />', () => {
       <ImmersiveModal onClose={() => undefined} title={modalTitle}>
         <div>{modalBody}</div>
       </ImmersiveModal>,
+      { withPortalContainer: true },
     );
 
     expect(getAllByText(modalTitle).length > 0).toBe(true);

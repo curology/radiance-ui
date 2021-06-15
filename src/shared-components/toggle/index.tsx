@@ -1,4 +1,4 @@
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 import PropTypes from 'prop-types';
 import React from 'react';
 // @ts-expect-error: No @types, we should replace this dependency
@@ -24,13 +24,14 @@ const toggleInputStyles = {
 };
 
 /**
- * The `<Toggle>` component is usually wrapped in a `container` element (with a fixed `width` style for example). The toggle and label are spread in the container (`space-between`) from edge to edge.
+ * The `<Toggle>` component is usually wrapped in a `container` element (with a fixed `width` style for example).
+ * The toggle and label are spread in the container (`space-between`) from edge to edge.
  */
-export const Toggle = ({
+export const Toggle: React.FC<ToggleProps> = ({
   checked = false,
   label = '',
   onChange,
-}: ToggleProps) => {
+}) => {
   const theme = useTheme();
 
   return (

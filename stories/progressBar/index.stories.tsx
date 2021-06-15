@@ -1,7 +1,7 @@
 import React from 'react';
 import { text, select, number, color } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, useTheme } from '@emotion/react';
 import { ProgressBar } from 'src/shared-components';
 import { ANIMATION, PROGRESS_BAR_STATUS } from 'src/constants';
 import {
@@ -12,7 +12,6 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs/blocks';
-import { useTheme } from 'emotion-theming';
 import type { Meta } from '@storybook/react';
 import type { ThemeColors } from 'src/constants/themes/types';
 

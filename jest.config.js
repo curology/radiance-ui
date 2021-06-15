@@ -9,16 +9,21 @@ module.exports = {
     global: {
       branches: 50,
       functions: 66,
-      lines: 75,
-      statements: 75,
+      lines: 74,
+      statements: 74,
     },
   },
-  moduleDirectories: ['node_modules', './'],
   moduleNameMapper: {
+    'src/(.*)': '<rootDir>/src/$1',
     '\\.svg': '<rootDir>/tests/__mocks__/svgrMock.ts',
   },
   setupFilesAfterEnv: ['<rootDir>tests/setupTests.ts'],
-  snapshotSerializers: ['jest-emotion'],
+  snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
-  testPathIgnorePatterns: ['/node_modules/', '/lib/', '/__snapshots__'],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/lib*',
+    '/__snapshots__',
+    '/dist*',
+  ],
 };

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import { primaryButtonLoadingBackgroundColor } from '../../../../utils/themeStyles';
 import { isDefined } from '../../../../utils/isDefined';

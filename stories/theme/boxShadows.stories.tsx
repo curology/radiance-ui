@@ -1,9 +1,8 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import { Container } from 'src/shared-components';
-import { useTheme } from 'emotion-theming';
 
 const MainContainer = styled.div`
   padding: ${SPACER.xlarge};

@@ -1,6 +1,5 @@
 import React from 'react';
-import { css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { css, useTheme } from '@emotion/react';
 
 import useResetFocus from '../../utils/accessibility/useResetFocus';
 import { isDefined } from '../../utils/isDefined';
