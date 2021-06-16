@@ -171,6 +171,11 @@
   },
   "sideEffects": false,
   "browserslist": [
-    "> 0.01% in my stats and not safari < 10 and not ios_saf < 10 and not Android < 5 and not ie > 1"
+    "> 0.01% in my stats and not safari < 10 and not ios_saf < 10 and not Android < 5 and not ie > 1",
+    "ios_saf >= 10",
+    "safari >= 10",
+    "chrome >= 60",
+    "edge >= 15",
+    "firefox >= 55"
   ]
 }
