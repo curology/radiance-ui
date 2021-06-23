@@ -5,7 +5,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import {

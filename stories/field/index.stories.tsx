@@ -9,7 +9,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { FocusScope } from '@react-aria/focus';
 import type { Meta } from '@storybook/react';
 

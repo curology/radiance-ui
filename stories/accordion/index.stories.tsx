@@ -8,7 +8,7 @@ import {
   Anchor,
   Canvas,
   Story,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Accordion } from 'src/shared-components';

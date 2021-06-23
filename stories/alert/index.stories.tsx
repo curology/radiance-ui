@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';

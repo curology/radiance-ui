@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Avatar } from 'src/shared-components';
 import accountImg from 'shared/account.png';
 import personImg from 'shared/person.jpg';
