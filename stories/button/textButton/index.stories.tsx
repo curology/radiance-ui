@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { TextButton } from 'src/shared-components';
 import { action } from '@storybook/addon-actions';
 import type { Meta } from '@storybook/react';

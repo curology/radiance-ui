@@ -5,7 +5,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Typography } from 'src/shared-components';
 import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';

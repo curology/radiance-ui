@@ -9,7 +9,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { useTheme } from '@emotion/react';
 import type { Meta } from '@storybook/react';
 

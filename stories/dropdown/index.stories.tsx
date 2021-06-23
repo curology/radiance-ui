@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Dropdown, OptionType } from 'src/shared-components/dropdown';
 import { MobileDropdown } from 'src/shared-components/dropdown/mobileDropdown';
 import type { Meta } from '@storybook/react';

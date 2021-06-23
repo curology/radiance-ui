@@ -6,7 +6,7 @@ import {
   Source,
   Title,
   Stories,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
