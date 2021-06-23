@@ -26,4 +26,5 @@ module.exports = {
     '/__snapshots__',
     '/dist*',
   ],
+  timers: 'modern',
 };
