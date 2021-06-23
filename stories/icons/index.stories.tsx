@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, number, boolean } from '@storybook/addon-knobs';
 import * as iconComponents from 'src/icons/icons';
 import * as emojiComponents from 'src/icons/emojis';

@@ -5,7 +5,7 @@ import {
   Heading,
   Source,
   Stories,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 
 export * from './availableConstants.stories';

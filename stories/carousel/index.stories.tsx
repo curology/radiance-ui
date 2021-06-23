@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';

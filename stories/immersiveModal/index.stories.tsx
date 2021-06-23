@@ -8,7 +8,7 @@ import {
   Source,
   Story,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Button, ImmersiveModal } from 'src/shared-components';
 import { ANIMATION } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';

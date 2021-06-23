@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text } from '@storybook/addon-knobs';
 import { AnchorLinkButton } from 'src/shared-components';
 import type { Meta } from '@storybook/react';

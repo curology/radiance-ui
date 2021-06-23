@@ -8,7 +8,7 @@ import {
   Anchor,
   Canvas,
   Story,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import accountImage from 'shared/account.png';

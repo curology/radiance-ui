@@ -11,7 +11,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 import type { ThemeColors } from 'src/constants/themes/types';
 
