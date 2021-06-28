@@ -41,6 +41,13 @@ const defaultConfig = {
 export default [
   {
     ...defaultConfig,
+    output: {
+      file: 'dist/bundle.cjs',
+      format: 'cjs',
+    },
+  },
+  {
+    ...defaultConfig,
     preserveModules: true,
     output: [
       {

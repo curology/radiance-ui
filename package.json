@@ -3,7 +3,7 @@
   "version": "22.0.0",
   "description": "Curology's React based component library",
   "type": "module",
-  "main": "dist/bundle-es/index.js",
+  "main": "dist/bundle.cjs",
   "module": "dist/bundle-es/index.js",
   "files": [
     "dist",
