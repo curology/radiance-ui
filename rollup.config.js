@@ -41,16 +41,6 @@ const defaultConfig = {
 export default [
   {
     ...defaultConfig,
-    output: [
-      {
-        file: 'dist/bundle.js',
-        format: 'cjs',
-        name: 'radianceUi',
-      },
-    ],
-  },
-  {
-    ...defaultConfig,
     preserveModules: true,
     output: [
       {
