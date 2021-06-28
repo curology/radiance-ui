@@ -41,7 +41,7 @@
     "heroku-postbuild": "yarn run build-storybook",
     "tsc": "tsc",
     "chromatic": "chromatic --skip '@(eslint/**|dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/@testing-library/**|dependabot/npm_and_yarn/testing-library/**|dependabot/npm_and_yarn/jest**|dependabot/npm_and_yarn/husky**)' --project-token",
-    "bundlewatch": "bundlewatch --config bundlewatch.config.js"
+    "bundlewatch": "bundlewatch --config bundlewatch.config.json"
   },
   "repository": {
     "type": "git",
