@@ -1,13 +1,15 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
+import typescript from '@rollup/plugin-typescript';
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
 import path from 'path';
+import { defineConfig } from 'rollup'
 
 const extensions = ['.js', '.ts', '.tsx'];
 
-export default {
+export default defineConfig({
   input: 'src/index.ts',
   plugins: [
     svgr({
@@ -20,6 +22,7 @@ export default {
     commonjs({
       include: 'node_modules/**',
     }),
+    typescript(),
     babel({
       babelHelpers: 'runtime',
       extensions,
@@ -41,4 +44,4 @@ export default {
       format: 'esm',
     },
   ],
-};
+});
