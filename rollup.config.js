@@ -5,9 +5,6 @@ import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
 import path from 'path';
 
-// eslint-disable-next-line import/extensions
-import pkg from './package.json';
-
 const extensions = ['.js', '.ts', '.tsx'];
 
 const defaultConfig = {
@@ -30,12 +27,9 @@ const defaultConfig = {
     }),
     sizeSnapshot(),
   ],
-  /**
-   * @emotion/styled/base needs to be added explicitly because our
-   * @emotion/styled imports transpile specifically to @emotion/styled/base,
-   * which results in build errors if we do not include it.
-   */
-  external: [...Object.keys(pkg.dependencies), '@emotion/styled/base'],
+  // Note that this regex only works when using @rollup/plugin-node-resolve
+  external: /node_modules/,
+  preserveModules: true,
 };
 
 export default [
@@ -43,18 +37,16 @@ export default [
     ...defaultConfig,
     output: [
       {
-        file: 'dist/bundle.js',
+        dir: 'dist/cjs',
         format: 'cjs',
-        name: 'radianceUi',
       },
     ],
   },
   {
     ...defaultConfig,
-    preserveModules: true,
     output: [
       {
-        dir: 'dist/bundle-es',
+        dir: 'dist/esm',
         format: 'esm',
       },
     ],
