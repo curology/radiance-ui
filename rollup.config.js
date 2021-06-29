@@ -7,6 +7,8 @@ import svgr from '@svgr/rollup';
 import path from 'path';
 import { defineConfig } from 'rollup'
 
+import pkg from './package.json';
+
 const extensions = ['.js', '.ts', '.tsx'];
 
 const defaultOutputOptions = {
@@ -16,6 +18,24 @@ const defaultOutputOptions = {
 
 export default defineConfig({
   input: 'src/index.ts',
+  output: [
+    {
+      ...defaultOutputOptions,
+      format: 'cjs',
+      entryFileNames: '[name].cjs',
+    },
+    {
+      ...defaultOutputOptions,
+      format: 'esm',
+      entryFileNames: '[name].mjs',
+    },
+    {
+      ...defaultOutputOptions,
+      format: 'esm',
+      entryFileNames: '[name].module.js',
+    },
+  ],
+  preserveModules: true,
   plugins: [
     svgr({
       expandProps: 'end',
@@ -35,24 +55,5 @@ export default defineConfig({
     }),
     sizeSnapshot(),
   ],
-  // Note that this regex only works when using @rollup/plugin-node-resolve
-  external: /node_modules/,
-  preserveModules: true,
-  output: [
-    {
-      ...defaultOutputOptions,
-      format: 'cjs',
-      entryFileNames: '[name].cjs',
-    },
-    {
-      ...defaultOutputOptions,
-      format: 'esm',
-      entryFileNames: '[name].mjs',
-    },
-    {
-      ...defaultOutputOptions,
-      format: 'esm',
-      entryFileNames: '[name].module.js',
-    },
-  ],
+  external: Object.keys(pkg.dependencies).map((name) => new RegExp(`^${name}`)),
 });
