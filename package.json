@@ -14,10 +14,15 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
-    "./lib/*": {
-      "browser": "./dist/*/index.module.js",
-      "import": "./dist/*/index.mjs",
-      "require": "./dist/*/index.cjs"
+    "./lib/constants": {
+      "browser": "./dist/constants/index.module.js",
+      "import": "./dist/constants/index.mjs",
+      "require": "./dist/constants/index.cjs"
+    },
+    "./lib/icons": {
+      "browser": "./dist/icons/index.module.js",
+      "import": "./dist/icons/index.mjs",
+      "require": "./dist/icons/index.cjs"
     },
     "./package.json": "./package.json"
   },
