@@ -9,6 +9,11 @@ import { defineConfig } from 'rollup'
 
 const extensions = ['.js', '.ts', '.tsx'];
 
+const defaultOutputOptions = {
+  dir: 'dist',
+  exports: 'named',
+};
+
 export default defineConfig({
   input: 'src/index.ts',
   plugins: [
@@ -35,15 +40,19 @@ export default defineConfig({
   preserveModules: true,
   output: [
     {
-      dir: 'dist',
+      ...defaultOutputOptions,
       format: 'cjs',
       entryFileNames: '[name].cjs',
-      exports: 'named',
     },
     {
-      dir: 'dist',
+      ...defaultOutputOptions,
       format: 'esm',
-      exports: 'named',
+      entryFileNames: '[name].mjs',
+    },
+    {
+      ...defaultOutputOptions,
+      format: 'esm',
+      entryFileNames: '[name].module.js',
     },
   ],
 });

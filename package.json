@@ -10,11 +10,13 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "browser": "./dist/index.module.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
     "./lib/*": {
-      "import": "./dist/*/*.js",
+      "browser": "./dist/*/*.module.js",
+      "import": "./dist/*/*.mjs",
       "require": "./dist/*/*.cjs"
     },
     "./package.json": "./package.json"
