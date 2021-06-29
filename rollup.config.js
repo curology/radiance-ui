@@ -31,12 +31,6 @@ export default defineConfig({
     {
       ...defaultOutputOptions,
       format: 'esm',
-      entryFileNames: '[name].mjs',
-    },
-    {
-      ...defaultOutputOptions,
-      format: 'esm',
-      entryFileNames: '[name].module.js',
     },
   ],
   preserveModules: true,

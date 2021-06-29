@@ -10,18 +10,18 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "browser": "./dist/index.module.js",
-      "import": "./dist/index.mjs",
+      "browser": "./dist/index.js",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
     "./lib/constants": {
-      "browser": "./dist/constants/index.module.js",
-      "import": "./dist/constants/index.mjs",
+      "browser": "./dist/constants/index.js",
+      "import": "./dist/constants/index.js",
       "require": "./dist/constants/index.cjs"
     },
     "./lib/icons": {
-      "browser": "./dist/icons/index.module.js",
-      "import": "./dist/icons/index.mjs",
+      "browser": "./dist/icons/index.js",
+      "import": "./dist/icons/index.js",
       "require": "./dist/icons/index.cjs"
     },
     "./package.json": "./package.json"
