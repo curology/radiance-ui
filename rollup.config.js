@@ -7,7 +7,7 @@ import path from 'path';
 
 const extensions = ['.js', '.ts', '.tsx'];
 
-const defaultConfig = {
+export default {
   input: 'src/index.ts',
   plugins: [
     svgr({
@@ -30,26 +30,15 @@ const defaultConfig = {
   // Note that this regex only works when using @rollup/plugin-node-resolve
   external: /node_modules/,
   preserveModules: true,
+  output: [
+    {
+      dir: 'dist',
+      format: 'cjs',
+      entryFileNames: '[name].cjs',
+    },
+    {
+      dir: 'dist',
+      format: 'esm',
+    },
+  ],
 };
-
-export default [
-  {
-    ...defaultConfig,
-    output: [
-      {
-        dir: 'dist/cjs',
-        format: 'cjs',
-        entryFileNames: '[name].cjs',
-      },
-    ],
-  },
-  {
-    ...defaultConfig,
-    output: [
-      {
-        dir: 'dist/esm',
-        format: 'esm',
-      },
-    ],
-  },
-];

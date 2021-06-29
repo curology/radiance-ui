@@ -2,8 +2,8 @@
   "name": "radiance-ui",
   "version": "22.0.0",
   "description": "Curology's React based component library",
-  "main": "dist/cjs/index.cjs",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "files": [
     "dist",
     "lib",
