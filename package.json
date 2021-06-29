@@ -15,9 +15,9 @@
       "require": "./dist/index.cjs"
     },
     "./lib/*": {
-      "browser": "./dist/*/*.module.js",
-      "import": "./dist/*/*.mjs",
-      "require": "./dist/*/*.cjs"
+      "browser": "./dist/*/index.module.js",
+      "import": "./dist/*/index.mjs",
+      "require": "./dist/*/index.cjs"
     },
     "./package.json": "./package.json"
   },
