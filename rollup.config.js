@@ -17,7 +17,11 @@ const defaultOutputOptions = {
 };
 
 export default defineConfig({
-  input: 'src/index.ts',
+  input: [
+    'src/index.ts',
+    'src/constants/index.ts',
+    'src/icons/index.ts',
+  ],
   output: [
     {
       ...defaultOutputOptions,
