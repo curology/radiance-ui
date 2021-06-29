@@ -38,10 +38,12 @@ export default defineConfig({
       dir: 'dist',
       format: 'cjs',
       entryFileNames: '[name].cjs',
+      exports: 'named',
     },
     {
       dir: 'dist',
       format: 'esm',
+      exports: 'named',
     },
   ],
 });
