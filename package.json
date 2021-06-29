@@ -5,13 +5,20 @@
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "files": [
-    "dist",
-    "lib",
-    "lib/constants",
-    "lib/icons",
-    "lib/utils"
+    "dist"
   ],
-  "types": "./lib/index.d.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./lib/*": {
+      "import": "./dist/*/*.js",
+      "require": "./dist/*/*.cjs"
+    },
+    "./package.json": "./package.json"
+  },
   "engines": {
     "node": ">=12.13.0"
   },
