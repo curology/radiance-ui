@@ -24,6 +24,11 @@
       "import": "./dist/icons/index.js",
       "require": "./dist/icons/index.cjs"
     },
+    "./lib/utils": {
+      "browser": "./dist/utils/index.js",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.cjs"
+    },
     "./package.json": "./package.json"
   },
   "engines": {

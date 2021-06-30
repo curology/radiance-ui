@@ -21,6 +21,7 @@ export default defineConfig({
     'src/index.ts',
     'src/constants/index.ts',
     'src/icons/index.ts',
+    'src/utils/index.ts',
   ],
   output: [
     {
