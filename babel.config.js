@@ -7,7 +7,7 @@
  */
 const getPresets = (modules) => [
   [
-    '@babel/env',
+    '@babel/preset-env',
     {
       modules,
     },
