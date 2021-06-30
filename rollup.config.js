@@ -42,5 +42,7 @@ export default defineConfig({
       exclude: 'node_modules/**',
     }),
   ],
+  // Treat any bare import specifiers as well as subpaths of those as external,
+  // i.e. `@emotion/styled` and `@emotion/styled/base` should both be external.
   external: Object.keys(pkg.dependencies).map((name) => new RegExp(`^${name}`)),
 });
