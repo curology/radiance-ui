@@ -2,16 +2,35 @@
   "name": "radiance-ui",
   "version": "22.0.0",
   "description": "Curology's React based component library",
-  "main": "dist/bundle.js",
-  "module": "dist/bundle-es/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "files": [
-    "dist",
-    "lib",
-    "lib/constants",
-    "lib/icons",
-    "lib/utils"
+    "dist"
   ],
-  "types": "./lib/index.d.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "browser": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./lib/constants": {
+      "browser": "./dist/constants/index.js",
+      "import": "./dist/constants/index.js",
+      "require": "./dist/constants/index.cjs"
+    },
+    "./lib/icons": {
+      "browser": "./dist/icons/index.js",
+      "import": "./dist/icons/index.js",
+      "require": "./dist/icons/index.cjs"
+    },
+    "./lib/utils": {
+      "browser": "./dist/utils/index.js",
+      "import": "./dist/utils/index.js",
+      "require": "./dist/utils/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
   "engines": {
     "node": ">=12.13.0"
   },
@@ -20,9 +39,9 @@
     "storybook": "run-s build:icons:index storybook:dev",
     "storybook:dev": "start-storybook --port 9001 --config-dir .storybook --static-dir ./public",
     "build-storybook": "build-storybook --config-dir .storybook --output-dir .out --static-dir ./public",
-    "clean": "rimraf dist lib src/icons/**/svgs",
-    "build": "run-s clean && run-s build:icons:all && run-s tsc && run-p build:rollup build:babel && run-p bundlewatch",
-    "build:icons:all": "run-s clean && run-s build:icons build:icons:index",
+    "clean": "rimraf dist src/icons/**/svgs",
+    "build": "run-s build:icons:all build:rollup bundlewatch",
+    "build:icons:all": "run-s clean build:icons build:icons:index",
     "build:icons": "run-p build:icons:emojis build:icons:glyphs build:icons:icons build:icons:logos build:icons:navicons",
     "build:icons:emojis": "svgr --typescript --svgo-config='{\"plugins\": {\"removeViewBox\": false}}' src/svgs/emojis --out-dir src/icons/emojis/svgs",
     "build:icons:glyphs": "svgr --typescript --svgo-config='{\"plugins\": {\"removeViewBox\": false}}' src/svgs/glyphs --out-dir src/icons/glyphs/svgs",
@@ -36,12 +55,11 @@
     "build:icons:logos:index": "create-index src/icons/logos --extensions ts -o index.ts",
     "build:icons:navicons:index": "create-index src/icons/navIcons --extensions ts -o index.ts",
     "build:rollup": "rollup -c",
-    "build:babel": "babel src -d lib --extensions '.js,.ts,.tsx' --ignore '**/*.test.{js,ts,tsx}'",
     "publish-package": "run-s build && yarn publish",
     "heroku-postbuild": "yarn run build-storybook",
     "tsc": "tsc",
     "chromatic": "chromatic --skip '@(eslint/**|dependabot/npm_and_yarn/eslint**|dependabot/npm_and_yarn/typescript-eslint/**|dependabot/npm_and_yarn/types/**|dependabot/npm_and_yarn/rollup**|dependabot/npm_and_yarn/@rollup/**|dependabot/npm_and_yarn/@testing-library/**|dependabot/npm_and_yarn/testing-library/**|dependabot/npm_and_yarn/jest**|dependabot/npm_and_yarn/husky**)' --project-token",
-    "bundlewatch": "bundlewatch --config bundlewatch.config.js"
+    "bundlewatch": "bundlewatch --config bundlewatch.config.json"
   },
   "repository": {
     "type": "git",
@@ -67,6 +85,7 @@
     "@babel/plugin-proposal-private-methods": "^7.14.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
     "@babel/plugin-transform-parameters": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
@@ -75,8 +94,7 @@
     "@emotion/eslint-plugin": "^11.2.0",
     "@emotion/jest": "^11.3.0",
     "@rollup/plugin-babel": "^5.2.1",
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
     "@storybook/addon-a11y": "^6.3.0",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-docs": "^6.3.0",
@@ -135,13 +153,14 @@
     "regenerator-runtime": "^0.13.7",
     "rimraf": "^3.0.2",
     "rollup": "^2.26.11",
-    "rollup-plugin-size-snapshot": "0.12.0",
+    "tslib": "^2.3.0",
     "typescript": "^4.3.4",
     "webpack": "^4.41.2",
     "yarn-deduplicate": "^3.1.0",
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.14.6",
     "@emotion/react": "~11.4.0",
     "@emotion/styled": "~11.3.0",
     "@react-aria/focus": "^3.0.2",
