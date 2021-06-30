@@ -2,7 +2,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
-import { sizeSnapshot } from 'rollup-plugin-size-snapshot';
 import svgr from '@svgr/rollup';
 import path from 'path';
 import { defineConfig } from 'rollup'
@@ -52,7 +51,6 @@ export default defineConfig({
       extensions,
       exclude: 'node_modules/**',
     }),
-    sizeSnapshot(),
   ],
   external: Object.keys(pkg.dependencies).map((name) => new RegExp(`^${name}`)),
 });
