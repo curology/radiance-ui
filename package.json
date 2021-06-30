@@ -29,6 +29,7 @@
       "import": "./dist/utils/index.js",
       "require": "./dist/utils/index.cjs"
     },
+    "./theme.json": "./dist/theme.json",
     "./package.json": "./package.json"
   },
   "engines": {
