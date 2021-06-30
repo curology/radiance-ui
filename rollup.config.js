@@ -3,6 +3,8 @@ import typescript from '@rollup/plugin-typescript';
 import svgr from '@svgr/rollup';
 import { defineConfig } from 'rollup'
 
+import pkg from './package.json';
+
 const extensions = ['.js', '.ts', '.tsx'];
 
 const defaultOutputOptions = {
@@ -40,5 +42,5 @@ export default defineConfig({
       exclude: 'node_modules/**',
     }),
   ],
-  external: /node_modules/,
+  external: Object.keys(pkg.dependencies).map((name) => new RegExp(`^${name}`)),
 });
