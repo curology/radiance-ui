@@ -77,7 +77,6 @@ typings/
 
 # build files
 dist/
-lib/
 .out
 .size-snapshot.json
 

@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { boolean, select } from '@storybook/addon-knobs';
 import { VerificationMessages, Field } from 'src/shared-components';
 import type { Meta } from '@storybook/react';

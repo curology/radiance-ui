@@ -8,7 +8,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
