@@ -11,6 +11,7 @@ export * from './container';
 export * from './dialogModal';
 export * from './dropdown';
 export * from './field';
+export * from './globalStyles';
 export type { IconProps, RadianceIconComponent } from './icon';
 export * from './immersiveModal';
 export * from './indicator';
