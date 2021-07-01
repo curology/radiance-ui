@@ -1,6 +1,6 @@
 # CHANGELOG
 
-# Unreleased
+# V23.0.1
 
 - [Internal] Moved built files from `dist` to `lib`. This is neccessary for TypeScript to properly resolve paths like `radiance-ui/lib/constants`, because TypeScript is unable to parse conditional exports.
 
