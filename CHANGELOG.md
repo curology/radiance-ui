@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# Unreleased
+
+- [Internal] Moved built files from `dist` to `lib`. This is neccessary for TypeScript to properly resolve paths like `radiance-ui/lib/constants`, because TypeScript is unable to parse conditional exports.
+
 # v23.0.0
 
 - [Components] Added new `ResetStyles` and `BrandStyles` components to inject global styles. These replace the `utils/injectGlobalStyles/style` exports that were used for the same purpose. ([#1051)](https://github.com/curology/radiance-ui/pull/1051))

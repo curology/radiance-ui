@@ -1,3 +1,3 @@
-We write global `types` in `src/types` instead of a `types` directory at the root because in order for our TypeScript declaration files to not be deeply nested (e.g. `dist/src/constants`, instead of `dist/constants`, which is where we output our non-declaration source), `src` must be the "The longest common path of all non-declaration input files".
+We write global `types` in `src/types` instead of a `types` directory at the root because in order for our TypeScript declaration files to not be deeply nested (e.g. `lib/src/constants`, instead of `lib/constants`, which is where we output our non-declaration source), `src` must be the "The longest common path of all non-declaration input files".
 
 See: https://www.typescriptlang.org/tsconfig#outDir and https://www.typescriptlang.org/tsconfig#rootDir
