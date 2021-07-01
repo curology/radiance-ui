@@ -1,6 +1,6 @@
 # CHANGELOG
 
-# Unreleased
+# v23.0.0
 
 - [Components] Added new `ResetStyles` and `BrandStyles` components to inject global styles. These replace the `utils/injectGlobalStyles/style` exports that were used for the same purpose. ([#1051)](https://github.com/curology/radiance-ui/pull/1051))
 - [Internal] **BREAKING CHANGE** It's no longer possible to import files directly. You must use the documented entrypoints instead. This is only a breaking change if you were using undocumented imports ([#1049](https://github.com/curology/radiance-ui/pull/1049))
