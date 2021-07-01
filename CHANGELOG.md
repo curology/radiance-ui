@@ -2,7 +2,7 @@
 
 # V23.0.1
 
-- [Internal] Moved built files from `dist` to `lib`. This is neccessary for TypeScript to properly resolve paths like `radiance-ui/lib/constants`, because TypeScript is unable to parse conditional exports.
+- [Internal] Moved built files from `dist` to `lib`. This is neccessary for TypeScript to properly resolve paths like `radiance-ui/lib/constants`, because TypeScript is unable to parse conditional exports ([#1057](https://github.com/curology/radiance-ui/pull/1057))
 
 # v23.0.0
 
