@@ -22,7 +22,6 @@ module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: [
     '/node_modules/',
-    '/lib*',
     '/__snapshots__',
     '/dist*',
   ],
