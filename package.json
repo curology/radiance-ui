@@ -125,6 +125,7 @@
     "@typescript-eslint/parser": "^4.28.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "browserslist-ga-export": "^4.0.1",
     "bundlewatch": "^0.3.1",
     "chromatic": "^5.2.0",
     "circular-dependency-plugin": "^5.0.2",
@@ -188,5 +189,8 @@
       "pre-push": "yarn run test"
     }
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "browserslist": [
+    "> 0.005% in my stats and not safari < 10 and not ios_saf < 10 and not Android < 5 and not ie > 1"
+  ]
 }
