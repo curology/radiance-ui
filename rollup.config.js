@@ -8,7 +8,7 @@ import pkg from './package.json';
 const extensions = ['.js', '.ts', '.tsx'];
 
 const defaultOutputOptions = {
-  dir: 'dist',
+  dir: 'lib',
   exports: 'named',
 };
 
