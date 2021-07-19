@@ -57,6 +57,7 @@ export { default as LipBalmGlyph } from './lipBalmGlyph';
 export { default as LockGlyph } from './lockGlyph';
 export { default as LunchGlyph } from './lunchGlyph';
 export { default as MaleGlyph } from './maleGlyph';
+export { default as MelasmaGlyph } from './melasmaGlyph';
 export { default as MessageGlyph } from './messageGlyph';
 export { default as MetronidazoleGlyph } from './metronidazoleGlyph';
 export { default as MicellarWaterGlyph } from './micellarWaterGlyph';
