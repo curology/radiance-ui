@@ -1,5 +1,4 @@
 module.exports = {
-  '*.svg': ['node ./scripts/imagemin.mjs'],
   'src/**/*.{ts,tsx}': [
     'eslint --fix',
     () => 'tsc -p tsconfig.json --noEmit --emitDeclarationOnly false',
