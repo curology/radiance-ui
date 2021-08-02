@@ -1,6 +1,6 @@
 const defaultAllowedEnvironments = ['test', 'development', 'dev'];
 
-const environment = process.env['NODE_ENV'];
+const environment = process.env.NODE_ENV;
 
 const shouldShowForEnvironment = (
   allowedEnvironments = defaultAllowedEnvironments,
