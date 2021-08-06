@@ -70,6 +70,7 @@ export const DesktopDropdown = <T extends OptionType>({
           aria-haspopup="menu"
           role="button"
           ref={initialFocus}
+          aria-label="dropdown"
         >
           <div
             css={Style.dropdownInputStyle({
