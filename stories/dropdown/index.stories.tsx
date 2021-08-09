@@ -23,15 +23,17 @@ const DesktopContainer = styled(DropdownContainer)`
 `;
 
 const options = [
+  { value: -1, label: 'Please select an option', disabled: true },
   { value: 1, label: 'First option' },
-  { value: 2, label: 'Second option (disabled)', disabled: true },
+  { value: 2, label: 'Second option' },
   { value: '3', label: 'Third option' },
   { value: '4', label: 'Fourth option' },
 ];
 
 export const Desktop = () => {
-  const [selectedOption, setSelectedOption] =
-    useState<OptionType['value']>(undefined);
+  const [selectedOption, setSelectedOption] = useState<OptionType['value']>(
+    options[0].value,
+  );
 
   const onChange = ({ value }: OptionType) => {
     setSelectedOption(value);
@@ -39,7 +41,8 @@ export const Desktop = () => {
 
   return (
     <DesktopContainer>
-      <label>
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control -- TODO: Figure out form/label paradigm */}
+      <label style={{ display: 'unset' }}>
         Select an option:
         <Dropdown
           value={selectedOption}
@@ -65,13 +68,17 @@ export const Mobile = () => {
 
   return (
     <DropdownContainer>
-      <MobileDropdown
-        borderRadius="4px"
-        value={selectedOption}
-        options={options}
-        onMobileSelectChange={onChange}
-        textAlign="left"
-      />
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control -- TODO: Figure out form/label paradigm */}
+      <label style={{ display: 'unset' }}>
+        Select an option:
+        <MobileDropdown
+          borderRadius="4px"
+          value={selectedOption}
+          options={options}
+          onMobileSelectChange={onChange}
+          textAlign="left"
+        />
+      </label>
     </DropdownContainer>
   );
 };
