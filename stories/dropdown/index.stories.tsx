@@ -39,8 +39,14 @@ export const Desktop = () => {
 
   return (
     <DesktopContainer>
-      Select an option:
-      <Dropdown value={selectedOption} options={options} onChange={onChange} />
+      <label>
+        Select an option:
+        <Dropdown
+          value={selectedOption}
+          options={options}
+          onChange={onChange}
+        />
+      </label>
     </DesktopContainer>
   );
 };
@@ -59,7 +65,6 @@ export const Mobile = () => {
 
   return (
     <DropdownContainer>
-      Select an option:
       <MobileDropdown
         borderRadius="4px"
         value={selectedOption}
