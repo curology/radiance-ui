@@ -1,8 +1,12 @@
 # CHANGELOG
 
+# v24.1.0
+
+- [Icons] Add `<MelasmaGlyph />` for secondary theme ([#1080](https://github.com/curology/radiance-ui/pull/1080))
+
 # v24.0.0
 
-- [Internal] **BREAKING CHANGE** Build transpiles with `browserslist` configuration, so some older browsers (e.g. Edge 15-17) are no longer be supported.
+- [Internal] **BREAKING CHANGE** Build transpiles with `browserslist` configuration, so some older browsers (e.g. Edge 15-17) are no longer be supported ([#946](https://github.com/curology/radiance-ui/pull/946))
 
 # v23.0.1
 

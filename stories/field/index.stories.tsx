@@ -174,7 +174,7 @@ export const TextareaWithASuccessMessageAndHiddenIcon = () => (
 export const InputDisabled = () => (
   <FieldsContainer>
     <Field label="Input - disabled" disabled>
-      <Field.Input />
+      <Field.Input id="Input - disabled" />
     </Field>
   </FieldsContainer>
 );
