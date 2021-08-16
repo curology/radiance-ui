@@ -14,6 +14,7 @@ interface DesktopDropdownProps<T> {
   borderRadius: string;
   closeDropdown: () => void;
   currentOption?: T;
+  id?: string;
   isOpen: boolean;
   onDesktopSelectChange: (
     event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
@@ -29,6 +30,7 @@ export const DesktopDropdown = <T extends OptionType>({
   borderRadius,
   closeDropdown,
   currentOption,
+  id,
   isOpen,
   onDesktopSelectChange,
   options,
@@ -88,6 +90,7 @@ export const DesktopDropdown = <T extends OptionType>({
 
         <Style.DropdownOptionsContainer
           borderRadius={borderRadius}
+          id={id}
           isOpen={isOpen}
           optionsContainerMaxHeight={optionsContainerMaxHeight}
           role="menu"
@@ -102,15 +105,15 @@ export const DesktopDropdown = <T extends OptionType>({
               ...rest
             } = option;
 
-            const id = isDefined(optionValue)
+            const optionId = isDefined(optionValue)
               ? `${optionValue}`
               : `undefined-${index}`;
 
             return (
               <Style.DropdownOption
-                key={id}
+                key={optionId}
                 value={optionValue}
-                id={id}
+                id={optionId}
                 selected={value === optionValue}
                 disabled={disabled}
                 onClick={onDesktopSelectChange}
