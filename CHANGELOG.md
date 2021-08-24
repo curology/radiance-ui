@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v24.2.0
+
+- [Dropdown] Add optional id prop for improved form accessibility ([#1126](https://github.com/curology/radiance-ui/pull/1126))
+- [Peer Dependencies] Update `@emotion/react` to `11.4.1` ([#1113](https://github.com/curology/radiance-ui/pull/1113))
+
 # v24.1.0
 
 - [Icons] Add `<MelasmaGlyph />` for secondary theme ([#1080](https://github.com/curology/radiance-ui/pull/1080))
