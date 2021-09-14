@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v24.2.1
+
+- [Icons] Add CleanserGlyphSecondary ([#1152](https://github.com/curology/radiance-ui/pull/1152))
+
 # v24.2.0
 
 - [Dropdown] Add optional id prop for improved form accessibility ([#1126](https://github.com/curology/radiance-ui/pull/1126))
