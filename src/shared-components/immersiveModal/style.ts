@@ -56,8 +56,9 @@ const CrossIconContainer = styled.button`
   cursor: pointer;
 
   ${MEDIA_QUERIES.mdUp} {
-    top: 16px;
+    top: 64px;
     right: 16px;
+    position: fixed;
   }
 
   &:focus {
@@ -147,6 +148,7 @@ const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: none;
+  z-index: ${Z_SCALE.e2};
 
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showDesktopHeaderBar }): string =>

@@ -180,14 +180,14 @@ export const ImmersiveModal: ImmersiveModal = ({
                 className="modal-offclick-wrapper"
               >
                 <Style.MobileTopOverlay onClick={handleCloseIntent} />
-                <FocusScope contain restoreFocus>
+                <FocusScope contain restoreFocus autoFocus>
                   <Style.MainModalContentContainer
                     id={MODAL_DESKTOP_SCROLLING_ID}
                     hasHeaderImage={hasHeaderImage}
                   >
                     <Style.CrossIconContainer
                       onClick={handleCloseIntent}
-                      tabIndex={showDesktopHeaderBar ? -1 : 0}
+                      tabIndex={0}
                     >
                       <CrossIcon />
                     </Style.CrossIconContainer>
@@ -196,12 +196,6 @@ export const ImmersiveModal: ImmersiveModal = ({
                       showDesktopHeaderBar={showDesktopHeaderBar}
                     >
                       {title}
-                      <Style.CrossIconContainer
-                        onClick={handleCloseIntent}
-                        tabIndex={showDesktopHeaderBar ? 0 : -1}
-                      >
-                        <CrossIcon />
-                      </Style.CrossIconContainer>
                     </Style.DesktopHeaderBar>
 
                     {hasHeaderImage && (
