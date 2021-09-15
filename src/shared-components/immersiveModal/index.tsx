@@ -185,18 +185,22 @@ export const ImmersiveModal: ImmersiveModal = ({
                     id={MODAL_DESKTOP_SCROLLING_ID}
                     hasHeaderImage={hasHeaderImage}
                   >
-                    <Style.CrossIconContainer
-                      onClick={handleCloseIntent}
-                      tabIndex={0}
-                    >
-                      <CrossIcon />
-                    </Style.CrossIconContainer>
+                    {!showMobileHeaderBar && (
+                      <React.Fragment>
+                        <Style.CrossIconContainer
+                          onClick={handleCloseIntent}
+                          tabIndex={0}
+                        >
+                          <CrossIcon />
+                        </Style.CrossIconContainer>
 
-                    <Style.DesktopHeaderBar
-                      showDesktopHeaderBar={showDesktopHeaderBar}
-                    >
-                      {title}
-                    </Style.DesktopHeaderBar>
+                        <Style.DesktopHeaderBar
+                          showDesktopHeaderBar={showDesktopHeaderBar}
+                        >
+                          {showDesktopHeaderBar && title}
+                        </Style.DesktopHeaderBar>
+                      </React.Fragment>
+                    )}
 
                     {hasHeaderImage && (
                       <Style.HeaderImageContainer>

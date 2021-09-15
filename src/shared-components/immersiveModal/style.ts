@@ -56,7 +56,7 @@ const CrossIconContainer = styled.button`
   cursor: pointer;
 
   ${MEDIA_QUERIES.mdUp} {
-    top: 64px;
+    top: ${SPACER.x5large};
     right: 16px;
     position: fixed;
   }
