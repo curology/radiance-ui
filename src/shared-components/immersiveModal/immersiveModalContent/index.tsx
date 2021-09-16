@@ -82,6 +82,11 @@ export const ImmersiveModalContent = ({
       {hasHeaderImage && (
         <Style.HeaderImageContainer>{headerImage}</Style.HeaderImageContainer>
       )}
+      {/**
+       * Note: we normally do not want to add tabIndex to non-interactive elements,
+       * but it is necessary to make ImmersiveModal fully keyboard navigable when
+       * there  is scrollable content
+       */}
       <Style.ContentWithFooterContainer
         hasHeaderImage={hasHeaderImage}
         tabIndex={0}
