@@ -9,6 +9,8 @@ import {
   ThemeType,
 } from '../../constants';
 
+const MOBILE_TOP_OVERLAY_HEIGHT = '32px';
+
 const Overlay = styled.div`
   position: fixed;
   top: 0;
@@ -110,7 +112,7 @@ const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
 const MobileTopOverlay = styled.div`
   width: 100%;
   background: transparent;
-  height: 32px;
+  height: ${MOBILE_TOP_OVERLAY_HEIGHT};
 
   ${MEDIA_QUERIES.mdUp} {
     display: none;
@@ -154,6 +156,7 @@ export default {
   Overlay,
   MobileHeaderBar,
   MobileTopOverlay,
+  MOBILE_TOP_OVERLAY_HEIGHT,
   ModalContainer,
   Paragraph,
 };

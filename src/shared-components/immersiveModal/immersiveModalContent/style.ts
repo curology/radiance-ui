@@ -4,26 +4,29 @@ import { Typography } from '../../typography';
 import { MEDIA_QUERIES, SPACER, Z_SCALE, ANIMATION } from '../../../constants';
 import SharedStyles from '../style';
 
+const HEADER_IMAGE_HEIGHT_SMALL = '240px';
+const HEADER_IMAGE_HEIGHT_MD_UP = '264px';
+
 const HeaderImageContainer = styled.div`
-  min-height: 240px;
-  max-height: 240px;
+  min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+  max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
   width: 100%;
 
   img {
-    min-height: 240px;
-    max-height: 240px;
+    min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+    max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
     width: 100%;
     border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
     border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   }
 
   ${MEDIA_QUERIES.mdUp} {
-    min-height: 264px;
-    max-height: 264px;
+    min-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+    max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
 
     img {
-      height: 264px;
-      max-height: 264px;
+      height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+      max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
       border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
       border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     }
@@ -71,7 +74,12 @@ const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
+    hasHeaderImage
+      ? `calc(100% - ${
+          parseInt(HEADER_IMAGE_HEIGHT_SMALL, 10) +
+          parseInt(SharedStyles.MOBILE_TOP_OVERLAY_HEIGHT, 10)
+        }px)`
+      : `calc(100% - ${SharedStyles.MOBILE_TOP_OVERLAY_HEIGHT})`};
 
   ${MEDIA_QUERIES.mdUp} {
     border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
@@ -100,7 +108,7 @@ const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
         ? `${SPACER.x2large} ${SPACER.x4large} 0`
         : `72px ${SPACER.x2large} 0`};
     min-height: ${({ hasHeaderImage }): string =>
-      hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
+      hasHeaderImage ? `calc(100% - ${HEADER_IMAGE_HEIGHT_MD_UP})` : '100%'};
   }
 `;
 
