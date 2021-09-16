@@ -9,7 +9,11 @@ import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { OffClickWrapper } from '../offClickWrapper';
 import { CrossIcon } from '../../icons';
 import Style from './style';
-import { isDefined } from '../../utils/isDefined';
+import {
+  MODAL_DESKTOP_SCROLLING_ID,
+  MODAL_MOBILE_SCROLLING_ID,
+} from './constants';
+import { ImmersiveModalContent } from './immersiveModalContent';
 
 export interface ImmersiveModalProps {
   /**
@@ -38,9 +42,6 @@ export interface ImmersiveModalProps {
 interface ImmersiveModal extends React.FC<ImmersiveModalProps> {
   Paragraph: typeof Style.Paragraph;
 }
-
-const MODAL_MOBILE_SCROLLING_ID = 'modal-mobile-scrolling-id';
-const MODAL_DESKTOP_SCROLLING_ID = 'modal-desktop-scrolling-id';
 
 const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
@@ -148,8 +149,6 @@ export const ImmersiveModal: ImmersiveModal = ({
     };
   }, []);
 
-  const hasHeaderImage = isDefined(headerImage);
-
   return ReactDOM.createPortal(
     <Transition
       timeout={{
@@ -165,9 +164,9 @@ export const ImmersiveModal: ImmersiveModal = ({
         <React.Fragment>
           <Style.MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
             {title}
-            <Style.CrossIconContainer onClick={handleCloseIntent}>
+            <Style.CrossIconButton onClick={handleCloseIntent}>
               <CrossIcon />
-            </Style.CrossIconContainer>
+            </Style.CrossIconButton>
           </Style.MobileHeaderBar>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Style.Overlay className={transitionState} {...rest}>
@@ -181,46 +180,16 @@ export const ImmersiveModal: ImmersiveModal = ({
               >
                 <Style.MobileTopOverlay onClick={handleCloseIntent} />
                 <FocusScope contain restoreFocus autoFocus>
-                  <Style.MainModalContentContainer
-                    id={MODAL_DESKTOP_SCROLLING_ID}
-                    hasHeaderImage={hasHeaderImage}
+                  <ImmersiveModalContent
+                    footerContent={footerContent}
+                    headerImage={headerImage}
+                    showDesktopHeaderBar={showDesktopHeaderBar}
+                    showMobileHeaderBar={showMobileHeaderBar}
+                    title={title}
+                    handleCloseIntent={handleCloseIntent}
                   >
-                    {!showMobileHeaderBar && (
-                      <React.Fragment>
-                        <Style.CrossIconContainer
-                          onClick={handleCloseIntent}
-                          tabIndex={0}
-                        >
-                          <CrossIcon />
-                        </Style.CrossIconContainer>
-
-                        <Style.DesktopHeaderBar
-                          showDesktopHeaderBar={showDesktopHeaderBar}
-                        >
-                          {showDesktopHeaderBar && title}
-                        </Style.DesktopHeaderBar>
-                      </React.Fragment>
-                    )}
-
-                    {hasHeaderImage && (
-                      <Style.HeaderImageContainer>
-                        {headerImage}
-                      </Style.HeaderImageContainer>
-                    )}
-                    <Style.ContentWithFooterContainer
-                      hasHeaderImage={hasHeaderImage}
-                    >
-                      <div>
-                        {isDefined(title) && (
-                          <Style.ModalTitle>{title}</Style.ModalTitle>
-                        )}
-                        {children}
-                      </div>
-                      {isDefined(footerContent) && (
-                        <Style.ModalFooter>{footerContent}</Style.ModalFooter>
-                      )}
-                    </Style.ContentWithFooterContainer>
-                  </Style.MainModalContentContainer>
+                    {children}
+                  </ImmersiveModalContent>
                 </FocusScope>
               </OffClickWrapper>
             </Style.ModalContainer>

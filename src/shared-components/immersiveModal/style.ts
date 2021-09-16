@@ -37,7 +37,7 @@ const Overlay = styled.div`
   }
 `;
 
-const CrossIconContainer = styled.button`
+const CrossIconButton = styled.button<{ showDesktopHeaderBar?: boolean }>`
   ${buttonReset}
   padding: 0;
   position: absolute;
@@ -56,7 +56,8 @@ const CrossIconContainer = styled.button`
   cursor: pointer;
 
   ${MEDIA_QUERIES.mdUp} {
-    top: ${SPACER.x5large};
+    top: ${({ showDesktopHeaderBar }) =>
+      showDesktopHeaderBar === true ? SPACER.x5large : '4.5rem'};
     right: 16px;
     position: fixed;
   }
@@ -149,7 +150,6 @@ const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: none;
   z-index: ${Z_SCALE.e2};
-
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showDesktopHeaderBar }): string =>
       showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
@@ -159,10 +159,6 @@ const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
 
   ${MEDIA_QUERIES.mdUp} {
     display: flex;
-
-    ${CrossIconContainer} {
-      top: 8px;
-    }
   }
 `;
 
@@ -255,7 +251,7 @@ const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
 
 export default {
   ContentWithFooterContainer,
-  CrossIconContainer,
+  CrossIconButton,
   Overlay,
   DesktopHeaderBar,
   HeaderImageContainer,
