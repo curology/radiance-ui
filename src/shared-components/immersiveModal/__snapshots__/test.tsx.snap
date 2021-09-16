@@ -74,7 +74,7 @@ exports[`<ImmersiveModal /> renders immersive modal correctly 1`] = `
 
 @media (min-width: 768px) {
   .emotion-2 {
-    top: 4rem;
+    top: 4.5rem;
     right: 16px;
     position: fixed;
   }
