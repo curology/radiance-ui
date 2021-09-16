@@ -1,15 +1,15 @@
 import React from 'react';
 import { useFocusManager } from '@react-aria/focus';
 
-import { CrossIcon } from '../../icons';
-import Style from './style';
-import { isDefined } from '../../utils/isDefined';
+import { CrossIcon } from '../../../icons';
+import { isDefined } from '../../../utils/isDefined';
 import {
   CROSS_ICON_CONTAINER_ID,
   MODAL_DESKTOP_SCROLLING_ID,
-} from './constants';
-
-import type { ImmersiveModalProps } from '.';
+} from '../constants';
+import type { ImmersiveModalProps } from '..';
+import SharedStyles from '../style';
+import Style from './style';
 
 interface ImmersiveModalContentProps
   extends Pick<
@@ -21,6 +21,10 @@ interface ImmersiveModalContentProps
   showMobileHeaderBar: boolean;
 }
 
+/**
+ * We define a standalone component, ImmersiveModalContent, in order to add
+ * `useFocusManager` functionality, which only works as a child of <FocusScope>
+ */
 export const ImmersiveModalContent = ({
   footerContent,
   headerImage,
@@ -32,6 +36,13 @@ export const ImmersiveModalContent = ({
 }: ImmersiveModalContentProps) => {
   const focusManager = useFocusManager();
 
+  /**
+   * It is not typical modal behavior to be able to scroll. Consequently, our
+   * keyboard autofocus handling means when users try and scroll in the ImmersiveModal,
+   * nothing happens. We making the content of the container tabbable such that when the
+   * arrow keys are used (as in normal scroll behavior) we are able to break focus with
+   * the close button and allow scrolling of the content
+   */
   const onKeyDown = (event: React.KeyboardEvent) => {
     switch (event.key) {
       case 'ArrowDown':
@@ -57,14 +68,14 @@ export const ImmersiveModalContent = ({
           <Style.DesktopHeaderBar showDesktopHeaderBar={showDesktopHeaderBar}>
             <span>{title}</span>
           </Style.DesktopHeaderBar>
-          <Style.CrossIconButton
+          <SharedStyles.CrossIconButton
             id={CROSS_ICON_CONTAINER_ID}
             onClick={handleCloseIntent}
             showDesktopHeaderBar={showDesktopHeaderBar}
             onKeyDown={onKeyDown}
           >
             <CrossIcon />
-          </Style.CrossIconButton>
+          </SharedStyles.CrossIconButton>
         </React.Fragment>
       )}
 
