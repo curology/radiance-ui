@@ -39,7 +39,7 @@ export const ImmersiveModalContent = ({
   /**
    * It is not typical modal behavior to be able to scroll. Consequently, our
    * keyboard autofocus handling means when users try and scroll in the ImmersiveModal,
-   * nothing happens. We making the content of the container tabbable such that when the
+   * nothing happens. We make the content of the container tabbable such that when the
    * arrow keys are used (as in normal scroll behavior) we are able to break focus with
    * the close button and allow scrolling of the content
    */
