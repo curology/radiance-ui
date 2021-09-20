@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
-import { FocusScope } from '@react-aria/focus';
+import { FocusScope, useFocusManager } from '@react-aria/focus';
 
 import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { OffClickWrapper } from '../offClickWrapper';
@@ -49,6 +49,97 @@ const getModalMobileScrollingElement = () =>
   document.getElementById(MODAL_MOBILE_SCROLLING_ID);
 const getModalDesktopScrollingElement = () =>
   document.getElementById(MODAL_DESKTOP_SCROLLING_ID);
+
+interface ImmersiveModalContentProps
+  extends Pick<
+    ImmersiveModalProps,
+    'children' | 'footerContent' | 'headerImage' | 'title'
+  > {
+  handleCloseIntent: () => void;
+  showDesktopHeaderBar: boolean;
+  showMobileHeaderBar: boolean;
+}
+
+/**
+ * We define a standalone component, ImmersiveModalContent, in order to add
+ * `useFocusManager` functionality, which only works as a child of <FocusScope>
+ */
+const ImmersiveModalContent = ({
+  footerContent,
+  headerImage,
+  showDesktopHeaderBar,
+  showMobileHeaderBar,
+  title,
+  handleCloseIntent,
+  children,
+}: ImmersiveModalContentProps) => {
+  const focusManager = useFocusManager();
+
+  /**
+   * It is not typical modal behavior to be able to scroll. Consequently, our
+   * keyboard autofocus handling means when users try and scroll in the ImmersiveModal,
+   * nothing happens. We make the content of the container tabbable such that when the
+   * arrow keys are used (as in normal scroll behavior) we are able to break focus with
+   * the close button and allow scrolling of the content
+   */
+  const onKeyDown = (event: React.KeyboardEvent) => {
+    switch (event.key) {
+      case 'ArrowDown':
+        focusManager.focusNext({ wrap: true });
+        break;
+      case 'ArrowUp':
+        focusManager.focusPrevious({ wrap: true });
+        break;
+      default:
+        break;
+    }
+  };
+
+  const hasHeaderImage = isDefined(headerImage);
+
+  return (
+    <Style.MainModalContentContainer
+      id={MODAL_DESKTOP_SCROLLING_ID}
+      hasHeaderImage={hasHeaderImage}
+    >
+      {!showMobileHeaderBar && (
+        <React.Fragment>
+          <Style.DesktopHeaderBar showDesktopHeaderBar={showDesktopHeaderBar}>
+            <span>{title}</span>
+          </Style.DesktopHeaderBar>
+          <Style.CrossIconButton
+            onClick={handleCloseIntent}
+            showDesktopHeaderBar={showDesktopHeaderBar}
+            onKeyDown={onKeyDown}
+          >
+            <CrossIcon />
+          </Style.CrossIconButton>
+        </React.Fragment>
+      )}
+
+      {hasHeaderImage && (
+        <Style.HeaderImageContainer>{headerImage}</Style.HeaderImageContainer>
+      )}
+      {/**
+       * Note: we normally do not want to add tabIndex to non-interactive elements,
+       * but it is necessary to make ImmersiveModal fully keyboard navigable when
+       * there  is scrollable content
+       */}
+      <Style.ContentWithFooterContainer
+        hasHeaderImage={hasHeaderImage}
+        tabIndex={0}
+      >
+        <div>
+          {isDefined(title) && <Style.ModalTitle>{title}</Style.ModalTitle>}
+          <section>{children}</section>
+        </div>
+        {isDefined(footerContent) && (
+          <Style.ModalFooter>{footerContent}</Style.ModalFooter>
+        )}
+      </Style.ContentWithFooterContainer>
+    </Style.MainModalContentContainer>
+  );
+};
 
 /**
  * It is used to provide a layer on top of a page when we need to present more content and actions to patients.
@@ -148,8 +239,6 @@ export const ImmersiveModal: ImmersiveModal = ({
     };
   }, []);
 
-  const hasHeaderImage = isDefined(headerImage);
-
   return ReactDOM.createPortal(
     <Transition
       timeout={{
@@ -165,9 +254,9 @@ export const ImmersiveModal: ImmersiveModal = ({
         <React.Fragment>
           <Style.MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
             {title}
-            <Style.CrossIconContainer onClick={handleCloseIntent}>
+            <Style.CrossIconButton onClick={handleCloseIntent}>
               <CrossIcon />
-            </Style.CrossIconContainer>
+            </Style.CrossIconButton>
           </Style.MobileHeaderBar>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Style.Overlay className={transitionState} {...rest}>
@@ -180,49 +269,17 @@ export const ImmersiveModal: ImmersiveModal = ({
                 className="modal-offclick-wrapper"
               >
                 <Style.MobileTopOverlay onClick={handleCloseIntent} />
-                <FocusScope contain restoreFocus>
-                  <Style.MainModalContentContainer
-                    id={MODAL_DESKTOP_SCROLLING_ID}
-                    hasHeaderImage={hasHeaderImage}
+                <FocusScope contain restoreFocus autoFocus>
+                  <ImmersiveModalContent
+                    footerContent={footerContent}
+                    headerImage={headerImage}
+                    showDesktopHeaderBar={showDesktopHeaderBar}
+                    showMobileHeaderBar={showMobileHeaderBar}
+                    title={title}
+                    handleCloseIntent={handleCloseIntent}
                   >
-                    <Style.CrossIconContainer
-                      onClick={handleCloseIntent}
-                      tabIndex={showDesktopHeaderBar ? -1 : 0}
-                    >
-                      <CrossIcon />
-                    </Style.CrossIconContainer>
-
-                    <Style.DesktopHeaderBar
-                      showDesktopHeaderBar={showDesktopHeaderBar}
-                    >
-                      {title}
-                      <Style.CrossIconContainer
-                        onClick={handleCloseIntent}
-                        tabIndex={showDesktopHeaderBar ? 0 : -1}
-                      >
-                        <CrossIcon />
-                      </Style.CrossIconContainer>
-                    </Style.DesktopHeaderBar>
-
-                    {hasHeaderImage && (
-                      <Style.HeaderImageContainer>
-                        {headerImage}
-                      </Style.HeaderImageContainer>
-                    )}
-                    <Style.ContentWithFooterContainer
-                      hasHeaderImage={hasHeaderImage}
-                    >
-                      <div>
-                        {isDefined(title) && (
-                          <Style.ModalTitle>{title}</Style.ModalTitle>
-                        )}
-                        {children}
-                      </div>
-                      {isDefined(footerContent) && (
-                        <Style.ModalFooter>{footerContent}</Style.ModalFooter>
-                      )}
-                    </Style.ContentWithFooterContainer>
-                  </Style.MainModalContentContainer>
+                    {children}
+                  </ImmersiveModalContent>
                 </FocusScope>
               </OffClickWrapper>
             </Style.ModalContainer>

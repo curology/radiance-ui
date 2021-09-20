@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { buttonReset } from 'src/utils/styles/buttonReset';
 
+import { buttonReset } from '../../utils/styles/buttonReset';
 import { Typography } from '../typography';
 import {
   MEDIA_QUERIES,
@@ -9,6 +9,13 @@ import {
   ANIMATION,
   ThemeType,
 } from '../../constants';
+
+const MOBILE_TOP_OVERLAY_HEIGHT = '32px';
+const HEADER_IMAGE_HEIGHT_SMALL = '240px';
+const HEADER_IMAGE_HEIGHT_MD_UP = '264px';
+
+const EASE_OUT = 'ease-out';
+const EASE_IN = 'ease-in';
 
 const Overlay = styled.div`
   position: fixed;
@@ -37,7 +44,7 @@ const Overlay = styled.div`
   }
 `;
 
-const CrossIconContainer = styled.button`
+const CrossIconButton = styled.button<{ showDesktopHeaderBar?: boolean }>`
   ${buttonReset}
   padding: 0;
   position: absolute;
@@ -56,8 +63,13 @@ const CrossIconContainer = styled.button`
   cursor: pointer;
 
   ${MEDIA_QUERIES.mdUp} {
-    top: 16px;
+    top: ${({ showDesktopHeaderBar }) =>
+      showDesktopHeaderBar === true ? SPACER.x5large : '4.5rem'};
+    transition: top ${ANIMATION.defaultTiming}
+      ${({ showDesktopHeaderBar }) =>
+        showDesktopHeaderBar === true ? EASE_OUT : EASE_IN};
     right: 16px;
+    position: fixed;
   }
 
   &:focus {
@@ -67,25 +79,25 @@ const CrossIconContainer = styled.button`
 `;
 
 const HeaderImageContainer = styled.div`
-  min-height: 240px;
-  max-height: 240px;
+  min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+  max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
   width: 100%;
 
   img {
-    min-height: 240px;
-    max-height: 240px;
+    min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+    max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
     width: 100%;
     border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
     border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   }
 
   ${MEDIA_QUERIES.mdUp} {
-    min-height: 264px;
-    max-height: 264px;
+    min-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+    max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
 
     img {
-      height: 264px;
-      max-height: 264px;
+      height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+      max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
       border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
       border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     }
@@ -131,7 +143,7 @@ const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
 
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showMobileHeaderBar }): string =>
-    showMobileHeaderBar ? 'ease-out' : 'ease-in'};
+    showMobileHeaderBar ? EASE_OUT : EASE_IN};
   opacity: ${({ showMobileHeaderBar }): number =>
     showMobileHeaderBar ? 1 : 0};
 
@@ -147,27 +159,23 @@ const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: none;
-
+  z-index: ${Z_SCALE.e2};
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showDesktopHeaderBar }): string =>
-      showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
+      showDesktopHeaderBar ? EASE_OUT : EASE_IN};
 
   opacity: ${({ showDesktopHeaderBar }): number =>
     showDesktopHeaderBar ? 1 : 0};
 
   ${MEDIA_QUERIES.mdUp} {
     display: flex;
-
-    ${CrossIconContainer} {
-      top: 8px;
-    }
   }
 `;
 
 const MobileTopOverlay = styled.div`
   width: 100%;
   background: transparent;
-  height: 32px;
+  height: ${MOBILE_TOP_OVERLAY_HEIGHT};
 
   ${MEDIA_QUERIES.mdUp} {
     display: none;
@@ -218,7 +226,12 @@ const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
+    hasHeaderImage
+      ? `calc(100% - ${
+          parseInt(HEADER_IMAGE_HEIGHT_SMALL, 10) +
+          parseInt(MOBILE_TOP_OVERLAY_HEIGHT, 10)
+        }px)`
+      : `calc(100% - ${MOBILE_TOP_OVERLAY_HEIGHT})`};
 
   ${MEDIA_QUERIES.mdUp} {
     border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
@@ -247,14 +260,13 @@ const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
         ? `${SPACER.x2large} ${SPACER.x4large} 0`
         : `72px ${SPACER.x2large} 0`};
     min-height: ${({ hasHeaderImage }): string =>
-      hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
+      hasHeaderImage ? `calc(100% - ${HEADER_IMAGE_HEIGHT_MD_UP})` : '100%'};
   }
 `;
 
 export default {
   ContentWithFooterContainer,
-  CrossIconContainer,
-  Overlay,
+  CrossIconButton,
   DesktopHeaderBar,
   HeaderImageContainer,
   MainModalContentContainer,
@@ -263,5 +275,6 @@ export default {
   ModalContainer,
   ModalFooter,
   ModalTitle,
+  Overlay,
   Paragraph,
 };
