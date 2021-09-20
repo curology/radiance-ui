@@ -111,6 +111,7 @@ const ImmersiveModalContent = ({
             onClick={handleCloseIntent}
             showDesktopHeaderBar={showDesktopHeaderBar}
             onKeyDown={onKeyDown}
+            aria-label="Close modal"
           >
             <CrossIcon />
           </Style.CrossIconButton>
@@ -254,7 +255,10 @@ export const ImmersiveModal: ImmersiveModal = ({
         <React.Fragment>
           <Style.MobileHeaderBar showMobileHeaderBar={showMobileHeaderBar}>
             {title}
-            <Style.CrossIconButton onClick={handleCloseIntent}>
+            <Style.CrossIconButton
+              onClick={handleCloseIntent}
+              aria-label="Close modal"
+            >
               <CrossIcon />
             </Style.CrossIconButton>
           </Style.MobileHeaderBar>
