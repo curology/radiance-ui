@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 import { buttonReset } from '../../utils/styles/buttonReset';
+import { Typography } from '../typography';
 import {
   MEDIA_QUERIES,
   SPACER,
@@ -10,6 +11,11 @@ import {
 } from '../../constants';
 
 const MOBILE_TOP_OVERLAY_HEIGHT = '32px';
+const HEADER_IMAGE_HEIGHT_SMALL = '240px';
+const HEADER_IMAGE_HEIGHT_MD_UP = '264px';
+
+const EASE_OUT = 'ease-out';
+const EASE_IN = 'ease-in';
 
 const Overlay = styled.div`
   position: fixed;
@@ -56,6 +62,10 @@ const CrossIconButton = styled.button<{ showDesktopHeaderBar?: boolean }>`
   pointer-events: auto;
   cursor: pointer;
 
+  transition: top ${ANIMATION.defaultTiming}
+    ${({ showDesktopHeaderBar }) =>
+      showDesktopHeaderBar === true ? EASE_OUT : EASE_IN};
+
   ${MEDIA_QUERIES.mdUp} {
     top: ${({ showDesktopHeaderBar }) =>
       showDesktopHeaderBar === true ? SPACER.x5large : '4.5rem'};
@@ -69,12 +79,46 @@ const CrossIconButton = styled.button<{ showDesktopHeaderBar?: boolean }>`
   }
 `;
 
+const HeaderImageContainer = styled.div`
+  min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+  max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+  width: 100%;
+
+  img {
+    min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+    max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+    width: 100%;
+    border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+    border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  }
+
+  ${MEDIA_QUERIES.mdUp} {
+    min-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+    max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+
+    img {
+      height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+      max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+      border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+      border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+    }
+  }
+`;
+
+const ModalTitle = styled(Typography.Heading)`
+  margin-bottom: ${SPACER.small};
+`;
+
 const Paragraph = styled.p`
   margin-bottom: ${SPACER.large};
 
   &:last-of-type {
     margin-bottom: ${SPACER.xlarge};
   }
+`;
+
+const ModalFooter = styled.div`
+  margin-bottom: ${SPACER.xlarge};
 `;
 
 const commonHeaderBarStyles = (theme: ThemeType) => `
@@ -100,12 +144,32 @@ const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
 
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showMobileHeaderBar }): string =>
-    showMobileHeaderBar ? 'ease-out' : 'ease-in'};
+    showMobileHeaderBar ? EASE_OUT : EASE_IN};
   opacity: ${({ showMobileHeaderBar }): number =>
     showMobileHeaderBar ? 1 : 0};
 
   ${MEDIA_QUERIES.mdUp} {
     display: none;
+  }
+`;
+
+const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
+  ${({ theme }) => commonHeaderBarStyles(theme)}
+
+  top: 56px;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+  display: none;
+  z-index: ${Z_SCALE.e2};
+  transition: opacity ${ANIMATION.defaultTiming}
+    ${({ showDesktopHeaderBar }): string =>
+      showDesktopHeaderBar ? EASE_OUT : EASE_IN};
+
+  opacity: ${({ showDesktopHeaderBar }): number =>
+    showDesktopHeaderBar ? 1 : 0};
+
+  ${MEDIA_QUERIES.mdUp} {
+    display: flex;
   }
 `;
 
@@ -150,13 +214,68 @@ const ModalContainer = styled.div`
   }
 `;
 
+export interface HasHeaderImageProps {
+  hasHeaderImage: boolean;
+}
+
+// 32px comes from top overlay
+// 272px comes from 32px top overlay + 240px image
+const MainModalContentContainer = styled.div<HasHeaderImageProps>`
+  position: relative;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
+  background: ${({ theme }) => theme.COLORS.white};
+  height: ${({ hasHeaderImage }): string =>
+    hasHeaderImage
+      ? `calc(100% - ${
+          parseInt(HEADER_IMAGE_HEIGHT_SMALL, 10) +
+          parseInt(MOBILE_TOP_OVERLAY_HEIGHT, 10)
+        }px)`
+      : `calc(100% - ${MOBILE_TOP_OVERLAY_HEIGHT})`};
+
+  ${MEDIA_QUERIES.mdUp} {
+    border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
+    margin-top: 56px;
+    overflow-y: auto;
+    height: 100%;
+  }
+`;
+
+const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  min-height: 100%;
+  border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
+  background: ${({ theme }) => theme.COLORS.white};
+  padding: ${({ hasHeaderImage }): string =>
+    hasHeaderImage
+      ? `${SPACER.xlarge} ${SPACER.large} 0`
+      : `${SPACER.x4large} ${SPACER.large} 0`};
+
+  ${MEDIA_QUERIES.mdUp} {
+    padding: ${({ hasHeaderImage }): string =>
+      hasHeaderImage
+        ? `${SPACER.x2large} ${SPACER.x4large} 0`
+        : `72px ${SPACER.x2large} 0`};
+    min-height: ${({ hasHeaderImage }): string =>
+      hasHeaderImage ? `calc(100% - ${HEADER_IMAGE_HEIGHT_MD_UP})` : '100%'};
+  }
+`;
+
 export default {
-  commonHeaderBarStyles,
+  ContentWithFooterContainer,
   CrossIconButton,
-  Overlay,
+  DesktopHeaderBar,
+  HeaderImageContainer,
+  MainModalContentContainer,
   MobileHeaderBar,
   MobileTopOverlay,
-  MOBILE_TOP_OVERLAY_HEIGHT,
   ModalContainer,
+  ModalFooter,
+  ModalTitle,
+  Overlay,
   Paragraph,
 };
