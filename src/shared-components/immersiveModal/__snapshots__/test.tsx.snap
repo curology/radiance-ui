@@ -102,6 +102,7 @@ exports[`<ImmersiveModal /> renders immersive modal correctly 1`] = `
 >
   Immersive Modal Title
   <button
+    aria-label="Close modal"
     class="emotion-2 emotion-3"
   >
     <svg
