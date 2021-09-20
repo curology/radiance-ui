@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v24.3.0
+
+- [ImmersiveModal] Enhance keyboard navigation + controls ([#1159](https://github.com/curology/radiance-ui/pull/1159))
+
 # v24.2.1
 
 - [Icons] Add CleanserGlyphSecondary ([#1152](https://github.com/curology/radiance-ui/pull/1152))
