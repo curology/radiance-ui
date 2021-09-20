@@ -70,6 +70,8 @@ exports[`<ImmersiveModal /> renders immersive modal correctly 1`] = `
   align-items: center;
   pointer-events: auto;
   cursor: pointer;
+  -webkit-transition: top 350ms ease-in;
+  transition: top 350ms ease-in;
 }
 
 @media (min-width: 768px) {
