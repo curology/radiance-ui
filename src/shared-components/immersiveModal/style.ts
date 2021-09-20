@@ -62,13 +62,12 @@ const CrossIconButton = styled.button<{ showDesktopHeaderBar?: boolean }>`
   pointer-events: auto;
   cursor: pointer;
 
-  transition: top ${ANIMATION.defaultTiming}
-    ${({ showDesktopHeaderBar }) =>
-      showDesktopHeaderBar === true ? EASE_OUT : EASE_IN};
-
   ${MEDIA_QUERIES.mdUp} {
     top: ${({ showDesktopHeaderBar }) =>
       showDesktopHeaderBar === true ? SPACER.x5large : '4.5rem'};
+    transition: top ${ANIMATION.defaultTiming}
+      ${({ showDesktopHeaderBar }) =>
+        showDesktopHeaderBar === true ? EASE_OUT : EASE_IN};
     right: 16px;
     position: fixed;
   }
