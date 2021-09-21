@@ -84,6 +84,15 @@ const ImmersiveModalContent = ({
    */
   const onKeyDown = (event: React.KeyboardEvent) => {
     switch (event.key) {
+      case 'Tab':
+        /**
+         * We manually handle `Tab` events because the focusManager will skip the
+         * "tabbable" content container and choose the next properly focusable
+         * element instead. ArrowDown and ArrowUp still focus on the content
+         * container if there is scrollable content.
+         */
+        focusManager.focusNext({ wrap: true });
+        break;
       case 'ArrowDown':
         focusManager.focusNext({ wrap: true });
         break;
