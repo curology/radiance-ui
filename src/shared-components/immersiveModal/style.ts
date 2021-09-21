@@ -241,6 +241,19 @@ const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   }
 `;
 
+/**
+ * We allow for focus on the content container to improve keyboard controls,
+ * but divs are not typically focusable, so when the container has focus we
+ * do not want to show an outline to avoid confusing behavior.
+ *
+ * The browser scrollbar should be sufficient affordance for keyboard controls
+ */
+const contentWithFooterContainerFocus = `
+  &:focus {
+    outline: 0;
+  }
+`;
+
 const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   display: flex;
   flex-flow: column nowrap;
@@ -262,6 +275,8 @@ const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
     min-height: ${({ hasHeaderImage }): string =>
       hasHeaderImage ? `calc(100% - ${HEADER_IMAGE_HEIGHT_MD_UP})` : '100%'};
   }
+
+  ${contentWithFooterContainerFocus}
 `;
 
 export default {
