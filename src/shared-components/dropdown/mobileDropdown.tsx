@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { ChevronIcon } from '../../icons';
 import Style from './style';
@@ -8,6 +8,7 @@ import { OptionType, OptionValue } from '.';
 
 interface MobileDropdownProps<T> {
   borderRadius: string;
+  id?: string;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: T[];
   textAlign: 'left' | 'center';
@@ -21,6 +22,7 @@ interface MobileDropdownProps<T> {
  */
 export const MobileDropdown = <T extends OptionType>({
   borderRadius,
+  id,
   onMobileSelectChange,
   options,
   textAlign,
@@ -37,6 +39,7 @@ export const MobileDropdown = <T extends OptionType>({
           textAlign,
           theme,
         })}
+        id={id}
         value={value ?? ''}
         onChange={onMobileSelectChange}
       >

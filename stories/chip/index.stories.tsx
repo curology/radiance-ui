@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Chip } from 'src/shared-components';
 import { text, select } from '@storybook/addon-knobs';
 import { BREAKPOINTS, SPACER } from 'src/constants';

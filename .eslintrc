@@ -3,7 +3,8 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./.eslint.tsconfig.json"
+    "project": "./.eslint.tsconfig.json",
+    "allowAutomaticSingleRunInference": true
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -11,7 +12,7 @@
     "plugin:sonarjs/recommended",
     "curology"
   ],
-  "plugins": ["emotion"],
+  "plugins": ["@emotion"],
   "globals": {
     "document": false,
     "window": false
@@ -22,6 +23,9 @@
     }
   },
   "rules": {
+    "@emotion/pkg-renaming": "error",
+    "@emotion/no-vanilla": "error",
+    "@emotion/syntax-preference": ["error", "string"],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/ban-types": [
       "error",
@@ -103,7 +107,8 @@
         "jpg": "always",
         "png": "always",
         "svg": "always",
-        "stories": "always"
+        "stories": "always",
+        "mock": "always"
       }
     ],
     "jest/lowercase-name": [
@@ -136,7 +141,8 @@
       }
     ],
     "react/state-in-constructor": "off",
-    "react/static-property-placement": "off"
+    "react/static-property-placement": "off",
+    "sonarjs/no-nested-template-literals": "off"
   },
   "overrides": [
     {
@@ -144,10 +150,6 @@
       "rules": {
         "@typescript-eslint/no-unsafe-call": "off",
         "no-undef": "off",
-        "emotion/jsx-import": "error",
-        "emotion/no-vanilla": "error",
-        "emotion/import-from-emotion": "error",
-        "emotion/styled-import": "error",
         "react/jsx-props-no-spreading": "off"
       }
     },

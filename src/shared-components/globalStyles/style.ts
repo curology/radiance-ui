@@ -1,7 +1,7 @@
 import 'focus-visible';
 
-import type { ThemeType } from '../../constants';
 import { baseBodyStyles } from '../../shared-components/typography';
+import type { ThemeType } from '../../constants';
 
 /**
  * Enables use of the .focus-visible polyfill.

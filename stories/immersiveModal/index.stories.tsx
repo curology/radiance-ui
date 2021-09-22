@@ -8,11 +8,11 @@ import {
   Source,
   Story,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Button, ImmersiveModal } from 'src/shared-components';
-import type { Meta } from '@storybook/react';
 import { ANIMATION } from 'src/constants';
 import { modalStoryDecoratorForChromatic } from 'stories/utils';
+import type { Meta } from '@storybook/react';
 
 import headerImage from './headerImage.jpg';
 

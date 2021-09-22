@@ -8,9 +8,9 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+} from '@storybook/addon-docs';
 import { BREAKPOINTS } from 'src/constants';
+import type { Meta } from '@storybook/react';
 
 export const Usage = () => (
   <React.Fragment>

@@ -54,7 +54,7 @@ jobs:
   build-js:
     <<: *defaults
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
 
     steps:
       - checkout
@@ -70,7 +70,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
 
     steps:
       - checkout
@@ -86,7 +86,7 @@ jobs:
   lint-js:
     <<: *defaults
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
 
     steps:
       - checkout
@@ -103,7 +103,7 @@ jobs:
   test-js:
     <<: *defaults
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
 
     steps:
       - checkout
@@ -113,7 +113,7 @@ jobs:
       - <<: *prepare-environment
       - run:
           name: Run Jest Tests
-          command: yarn run jest --ci --runInBand --reporters=default --reporters=jest-junit
+          command: yarn run jest --ci --runInBand --colors --reporters=default --reporters=jest-junit
           environment:
             JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
       - store_test_results:
@@ -122,7 +122,7 @@ jobs:
   test-tsc:
     <<: *defaults
     docker:
-      - image: circleci/node:10-stretch
+      - image: circleci/node:12-stretch
 
     environment:
       NODE_OPTIONS: --max_old_space_size=4096

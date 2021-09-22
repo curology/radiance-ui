@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Style from './style';
-import type { ThemeColors, ThemeType } from '../../constants';
 import { isDefined } from '../../utils/isDefined';
+import type { ThemeColors, ThemeType } from '../../constants';
 
 export interface CalloutProps {
   /**
@@ -19,6 +19,10 @@ export interface CalloutProps {
    * Custom prop to draw on preset Callout styles
    */
   type?: 'error' | 'success';
+}
+
+interface Callout extends React.FC<CalloutProps> {
+  Container: typeof Style.ParentContainer;
 }
 
 /**
@@ -50,7 +54,7 @@ const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
  *
  * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs)
  */
-export const Callout = ({ children, icon, type }: CalloutProps) => {
+export const Callout: Callout = ({ children, icon, type }) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getCalloutStyles(theme, type);
 

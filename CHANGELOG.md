@@ -1,5 +1,51 @@
 # CHANGELOG
 
+# v24.3.0
+
+- [ImmersiveModal] Enhance keyboard navigation + controls ([#1159](https://github.com/curology/radiance-ui/pull/1159))
+
+# v24.2.1
+
+- [Icons] Add CleanserGlyphSecondary ([#1152](https://github.com/curology/radiance-ui/pull/1152))
+
+# v24.2.0
+
+- [Dropdown] Add optional id prop for improved form accessibility ([#1126](https://github.com/curology/radiance-ui/pull/1126))
+- [Peer Dependencies] Update `@emotion/react` to `11.4.1` ([#1113](https://github.com/curology/radiance-ui/pull/1113))
+
+# v24.1.0
+
+- [Icons] Add `<MelasmaGlyph />` for secondary theme ([#1080](https://github.com/curology/radiance-ui/pull/1080))
+
+# v24.0.0
+
+- [Internal] **BREAKING CHANGE** Build transpiles with `browserslist` configuration, so some older browsers (e.g. Edge 15-17) are no longer be supported ([#946](https://github.com/curology/radiance-ui/pull/946))
+
+# v23.0.1
+
+- [Internal] Moved built files from `dist` to `lib`. This is neccessary for TypeScript to properly resolve paths like `radiance-ui/lib/constants`, because TypeScript is unable to parse conditional exports ([#1057](https://github.com/curology/radiance-ui/pull/1057))
+
+# v23.0.0
+
+- [Components] Added new `ResetStyles` and `BrandStyles` components to inject global styles. These replace the `utils/injectGlobalStyles/style` exports that were used for the same purpose. ([#1051)](https://github.com/curology/radiance-ui/pull/1051))
+- [Internal] **BREAKING CHANGE** It's no longer possible to import files directly. You must use the documented entrypoints instead. This is only a breaking change if you were using undocumented imports ([#1049](https://github.com/curology/radiance-ui/pull/1049))
+- [Internal] **BREAKING CHANGE** It's no longer possible to import the un-bundled Babel output from `lib`. Importing `radiance-ui/lib/*` import specifiers will now import native ESM modules produced by Rollup ([#1049](https://github.com/curology/radiance-ui/pull/1049))
+- [Bundling] **BREAKING CHANGE** A UMD bundle is no longer provided. In the majority of cases the CJS and ESM formats should be preferred. If necessary you can re-bundle one of the other formats to UMD ([#1041](https://github.com/curology/radiance-ui/pull/1041))
+- [Bundling] The Common JS builds now includes all public entrypoints and the modules are no longer bundled into a single file ([#1049](https://github.com/curology/radiance-ui/pull/1049))
+- [Bundling] The ESM build now includes all public entrypoints ([#1049](https://github.com/curology/radiance-ui/pull/1049))
+- [Dependencies] The `@babel/runtime` package is now required separately instead of the helpers being bundled. This should reduce bundle size in most cases ([#1049](https://github.com/curology/radiance-ui/pull/1049))
+- [Dependencies] Bump react-transition-group from 4.4.1 to 4.4.2 ([#997](https://github.com/curology/radiance-ui/pull/997))
+- [Dependencies] Bump @react-aria/focus from 3.3.0 to 3.4.0 ([#1024](https://github.com/curology/radiance-ui/pull/1024))
+
+# v22.0.0
+
+- [Dependencies] **BREAKING CHANGE** Upgrade Emotion from 10 to 11 ([#910](https://github.com/curology/radiance-ui/pull/910))
+- [TypeScript] Update Component type definitions to prevent `prop-types` errors in consumer applications ([#983](https://github.com/curology/radiance-ui/pull/983))
+- [DialogModal] Update `onCloseIconClick` type definition ([#984](https://github.com/curology/radiance-ui/pull/984))
+- [Babel] [Emotion] Set `autoLabel: 'always'` to maintain previous Emotion 10 behavior (fixing size regression) ([#1001](https://github.com/curology/radiance-ui/pull/1001))
+- [Tooltip] Refactor hover/click style application logic to remove `<Global />` style (deceasing bundle size) ([#1002](https://github.com/curology/radiance-ui/pull/1002))
+- [Container] Move `styled` definition used solely for TypeScript type in `./types.ts` file to remove it from bundle output ([#1003](https://github.com/curology/radiance-ui/pull/1003))
+
 # v21.0.0
 
 - [Components] **BREAKING CHANGE** Update `borderRadius` prop in `<Accordion />` and `<OptionButton />` to be theme key rather than values ([#930](https://github.com/curology/radiance-ui/pull/930))

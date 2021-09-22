@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
 

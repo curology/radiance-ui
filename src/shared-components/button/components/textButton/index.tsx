@@ -19,12 +19,12 @@ export interface TextButtonProps {
  * The component renders with padding and should not be used inline within body text, etc.
  * Useful for rendering a chunk of text that can be clicked but can also be disabled if needed.
  */
-export const TextButton = ({
+export const TextButton: React.FC<TextButtonProps> = ({
   children,
   disabled = false,
   onClick = () => undefined,
   ...rest
-}: TextButtonProps) => (
+}) => (
   <Style.BaseTextButton
     disabled={disabled}
     onClick={

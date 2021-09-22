@@ -12,13 +12,13 @@ export interface ArrowProps {
   prev?: boolean;
 }
 
-const Arrow = ({
+const Arrow: React.FC<ArrowProps> = ({
   bottomRightAlignedArrows = false,
   disabled = false,
   next = false,
   onClick = () => undefined,
   prev = false,
-}: ArrowProps) => {
+}) => {
   const ArrowContainerComponent = bottomRightAlignedArrows
     ? Style.BottomRightAlignedArrowContainer
     : Style.ArrowContainer;

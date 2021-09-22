@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { boolean, select } from '@storybook/addon-knobs';
 import { VerificationMessages, Field } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
@@ -38,21 +38,27 @@ const messagesTypeOptions = {
 
 export const Error = () => (
   <FieldContainer>
-    <Field.Input />
+    <Field label="Error Input">
+      <Field.Input id="Error Input" />
+    </Field>
     <VerificationMessages messages={messages} type="error" centered />
   </FieldContainer>
 );
 
 export const Success = () => (
   <FieldContainer>
-    <Field.Input />
+    <Field label="Success Input">
+      <Field.Input id="Success Input" />
+    </Field>
     <VerificationMessages messages={messages} type="success" />
   </FieldContainer>
 );
 
 export const WithControls = () => (
   <FieldContainer>
-    <Field.Input />
+    <Field label="Control Input">
+      <Field.Input id="Control Input" />
+    </Field>
     <VerificationMessages
       messages={messages}
       type={select('type', messagesTypeOptions, 'error')}

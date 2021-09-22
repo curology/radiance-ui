@@ -6,8 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+} from '@storybook/addon-docs';
 import { text, number, boolean } from '@storybook/addon-knobs';
 import * as iconComponents from 'src/icons/icons';
 import * as emojiComponents from 'src/icons/emojis';
@@ -16,7 +15,8 @@ import * as logoComponents from 'src/icons/logos';
 import * as navIconComponents from 'src/icons/navIcons';
 import { Typography } from 'src/shared-components';
 import { BREAKPOINTS } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
+import type { Meta } from '@storybook/react';
 
 import { Icon as IconComponent } from '../../src/shared-components/icon';
 import { CameraIcon } from '../../src/icons';

@@ -9,9 +9,9 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+} from '@storybook/addon-docs';
 import { FocusScope } from '@react-aria/focus';
+import type { Meta } from '@storybook/react';
 
 const FieldsContainer = styled.div`
   margin: 1rem 0.5rem 2rem 0.5rem;
@@ -162,7 +162,11 @@ export const TextareaWithASuccessMessageAndHiddenIcon = () => (
       messagesType="success"
       hideMessagesIcon
     >
-      <Field.Textarea id="textarea-id" value="some answer" />
+      <Field.Textarea
+        id="textarea-id"
+        value="some answer"
+        onChange={() => undefined}
+      />
     </Field>
   </FieldsContainer>
 );
@@ -170,7 +174,7 @@ export const TextareaWithASuccessMessageAndHiddenIcon = () => (
 export const InputDisabled = () => (
   <FieldsContainer>
     <Field label="Input - disabled" disabled>
-      <Field.Input />
+      <Field.Input id="Input - disabled" />
     </Field>
   </FieldsContainer>
 );
