@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
-.emotion-8 {
+.emotion-0 {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -13,7 +13,6 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   align-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
   border-radius: 80px;
@@ -34,8 +33,52 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  border-radius: 80px;
+  width: 33.333333333333336%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #332E54;
+  font-weight: bold;
+  -webkit-transform: translate3d(0px, 0, 0);
+  -moz-transform: translate3d(0px, 0, 0);
+  -ms-transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
+  box-shadow: 0px 2px 4px rgba(51, 46, 84, 0.05);
+  border: none;
+}
+
+.emotion-2:focus {
+  box-shadow: inset 0px 0px 0px 2px #332E54;
+  outline: none;
+}
+
+.emotion-4 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   margin: 0;
   top: 0;
@@ -51,81 +94,37 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   width: 33.333333333333336%;
 }
 
-.emotion-2:focus {
+.emotion-4:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #332E54;
   z-index: 3;
 }
 
-.emotion-0 {
-  background: transparent;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  cursor: pointer;
-  margin: 0;
-  position: absolute;
-  border-radius: 80px;
-  width: 33.333333333333336%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: white;
-  -webkit-transition: -webkit-transform 0.22s cubic-bezier(0.22,1,0.36,1);
-  -webkit-transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
-  transition: transform 0.22s cubic-bezier(0.22,1,0.36,1);
-  color: #706D87;
-  font-size: 0.875rem;
-  line-height: 1.71;
-  color: #332E54;
-  font-weight: bold;
-  -webkit-transform: translate3d(0px,0,0);
-  -ms-transform: translate3d(0px,0,0);
-  transform: translate3d(0px,0,0);
-  box-shadow: 0px 2px 4px rgba(51,46,84,0.05);
-  border: none;
-}
-
-.emotion-0:focus {
-  box-shadow: inset 0px 0px 0px 2px #332E54;
-  outline: none;
-}
-
 <div
-  class="emotion-8 emotion-9"
+  class="emotion-0 emotion-1"
 >
   <button
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
     transform="translate3d(0px, 0, 0)"
     width="33.333333333333336"
   >
     Tab 1
   </button>
   <button
-    class="emotion-2 emotion-3"
+    class="emotion-4 emotion-5"
     disabled=""
     width="33.333333333333336"
   >
     Tab 1
   </button>
   <button
-    class="emotion-2 emotion-3"
+    class="emotion-4 emotion-5"
     width="33.333333333333336"
   >
     Tab 2
   </button>
   <button
-    class="emotion-2 emotion-3"
+    class="emotion-4 emotion-5"
     width="33.333333333333336"
   >
     Tab 3
