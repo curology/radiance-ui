@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import { ANIMATION, PROGRESS_BAR_STATUS, ThemeType } from '../../constants';
 
-import { ProgressBarStatusType } from '.';
+import type { ProgressBarStatusType } from '.';
 
 const loadingProgression = keyframes`
   from { transform: translateX(-100%); }
   to { transform: translateX(-5%); }
 `;
 
-export const OuterContainer = styled.div<{
+const OuterContainer = styled.div<{
   backgroundColor: string;
   barHeight: number;
   status: ProgressBarStatusType;
@@ -51,9 +51,9 @@ const getStatusStyles = (status: ProgressBarStatusType, theme: ThemeType) => {
   return baseStyles;
 };
 
-export const InnerBar = styled.div<{
-  barHeight: number;
+const InnerBar = styled.div<{
   barColor: string;
+  barHeight: number;
   loadingTime: string;
   status: ProgressBarStatusType;
 }>`
@@ -67,3 +67,5 @@ export const InnerBar = styled.div<{
 
   ${({ status, theme }) => getStatusStyles(status, theme)}
 `;
+
+export default { InnerBar, OuterContainer };

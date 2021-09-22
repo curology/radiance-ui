@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Style from './style';
-import { COLORS_PROP_TYPES, ThemeColors, ThemeType } from '../../constants';
+import { isDefined } from '../../utils/isDefined';
+import type { ThemeColors, ThemeType } from '../../constants';
 
 export interface CalloutProps {
   /**
@@ -11,33 +12,33 @@ export interface CalloutProps {
    */
   children: React.ReactNode;
   /**
-   * Color of the text and icon
-   */
-  color?: ThemeColors;
-  /**
    * Icon displayed inside the callout right aligned
    */
   icon?: React.ReactNode;
   /**
    * Custom prop to draw on preset Callout styles
    */
-  type?: 'success';
+  type?: 'error' | 'success';
+}
+
+interface Callout extends React.FC<CalloutProps> {
+  Container: typeof Style.ParentContainer;
 }
 
 /**
  * Pulls a specific styling preset based on available theme values and `type`
  */
-const getCalloutStyles = (
-  theme: ThemeType,
-  color?: ThemeColors,
-  type?: CalloutProps['type'],
-) => {
+const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
+  // Default values if no type provided
   let backgroundColor: ThemeColors = theme.COLORS.infoLight;
-  let textColor = color || theme.COLORS.primary;
+  let textColor: ThemeColors = theme.COLORS.primary;
 
   if (type === 'success') {
     backgroundColor = theme.COLORS.successLight;
     textColor = theme.COLORS.success;
+  } else if (type === 'error') {
+    backgroundColor = theme.COLORS.errorLight;
+    textColor = theme.COLORS.error;
   }
 
   return {
@@ -51,21 +52,18 @@ const getCalloutStyles = (
  *
  * `Callout` will cover the entirety of the container that holds it. You may optionally wrap it with `Callout.Container` which will set the `max-width` to `327px`.
  *
- * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels.
+ * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs)
  */
-export const Callout = ({
-  children,
-  color,
-  icon = null,
-  type,
-}: CalloutProps) => {
+export const Callout: Callout = ({ children, icon, type }) => {
   const theme = useTheme();
-  const { backgroundColor, textColor } = getCalloutStyles(theme, color, type);
+  const { backgroundColor, textColor } = getCalloutStyles(theme, type);
 
   return (
     <Style.CalloutContainer backgroundColor={backgroundColor}>
       <Style.Text textColor={textColor}>{children}</Style.Text>
-      {icon && <Style.Icon iconColor={textColor}>{icon}</Style.Icon>}
+      {isDefined(icon) && icon !== false && (
+        <Style.Icon iconColor={textColor}>{icon}</Style.Icon>
+      )}
     </Style.CalloutContainer>
   );
 };
@@ -74,6 +72,6 @@ Callout.Container = Style.ParentContainer;
 
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
-  color: COLORS_PROP_TYPES,
   icon: PropTypes.node,
+  type: PropTypes.oneOf(['error', 'success']),
 };

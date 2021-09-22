@@ -1,160 +1,160 @@
 version: 2
 
 aliases:
-    - &root ~/radiance-ui
+  - &root ~/radiance-ui
 
-    - &defaults
-        working_directory: *root
+  - &defaults
+    working_directory: *root
 
-    - &prepare-environment
-        run:
-            name: Prepare Environment
-            command: mkdir test-results
+  - &prepare-environment
+    run:
+      name: Prepare Environment
+      command: mkdir test-results
 
-    - &cache-yarn-key-base yarn-packages-v2-{{ arch }}-
-    - &cache-yarn-key yarn-packages-v2-{{ arch }}-{{ checksum "yarn.lock" }}
+  - &cache-yarn-key-base yarn-packages-v2-{{ arch }}-
+  - &cache-yarn-key yarn-packages-v2-{{ arch }}-{{ checksum "yarn.lock" }}
 
-    - &yarn-cache-restore
-        restore_cache:
-            keys:
-                - *cache-yarn-key
-                - *cache-yarn-key-base
+  - &yarn-cache-restore
+    restore_cache:
+      keys:
+        - *cache-yarn-key
+        - *cache-yarn-key-base
 
-    - &yarn-cache-save
-        save_cache:
-            key: *cache-yarn-key
-            paths:
-                - ~/.cache/yarn
+  - &yarn-cache-save
+    save_cache:
+      key: *cache-yarn-key
+      paths:
+        - ~/.cache/yarn
 
-    - &yarn-install
-        run:
-            name: Install Node Dependencies
-            command: yarn install --frozen-lockfile --non-interactive
+  - &yarn-install
+    run:
+      name: Install Node Dependencies
+      command: yarn install --frozen-lockfile --non-interactive
 
-    # Prospective merging against master.
-    - &prospective-merge
-        run:
-            name: Prospective Merge
-            command: |
-                if [[ ! -z "${CIRCLE_PULL_REQUEST}" ]]; then
-                    git pull --ff-only origin "refs/pull/${CIRCLE_PULL_REQUEST//*pull\//}/merge"
-                fi
-    
-    - &publish-to-chromatic
-        run:
-            name: Publish to Chromatic
-            command: |
-                if [ "${CIRCLE_BRANCH}" != "master" ]; then
-                    yarn chromatic ${CHROMATIC_PROJECT_TOKEN}
-                else
-                    yarn chromatic --auto-accept-changes ${CHROMATIC_PROJECT_TOKEN}
-                fi
+  # Prospective merging against master.
+  - &prospective-merge
+    run:
+      name: Prospective Merge
+      command: |
+        if [[ ! -z "${CIRCLE_PULL_REQUEST}" ]]; then
+            git pull --ff-only origin "refs/pull/${CIRCLE_PULL_REQUEST//*pull\//}/merge"
+        fi
+
+  - &publish-to-chromatic
+    run:
+      name: Publish to Chromatic
+      command: |
+        if [ "${CIRCLE_BRANCH}" != "master" ]; then
+            yarn chromatic ${CHROMATIC_PROJECT_TOKEN}
+        else
+            yarn chromatic --auto-accept-changes ${CHROMATIC_PROJECT_TOKEN}
+        fi
 
 jobs:
-    build-js:
-        <<: *defaults
-        docker:
-            - image: circleci/node:10-stretch
+  build-js:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12-stretch
 
-        steps:
-            - checkout
-            - <<: *prospective-merge
-            - <<: *yarn-cache-restore
-            - <<: *yarn-install
-            - <<: *yarn-cache-save
-            - persist_to_workspace:
-                root: *root
-                paths:
-                    - node_modules
-    
-    build:
-        <<: *defaults
-        docker:
-            - image: circleci/node:10-stretch
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - <<: *yarn-cache-restore
+      - <<: *yarn-install
+      - <<: *yarn-cache-save
+      - persist_to_workspace:
+          root: *root
+          paths:
+            - node_modules
 
-        steps:
-            - checkout
-            - <<: *prospective-merge
-            - attach_workspace:
-                at: *root
-            - <<: *prepare-environment
-            - run:
-                name: Build
-                command: yarn build
-            - <<: *publish-to-chromatic
+  build:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12-stretch
 
-    lint-js:
-        <<: *defaults
-        docker:
-            - image: circleci/node:10-stretch
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - attach_workspace:
+          at: *root
+      - <<: *prepare-environment
+      - run:
+          name: Build
+          command: yarn build
+      - <<: *publish-to-chromatic
 
-        steps:
-            - checkout
-            - <<: *prospective-merge
-            - attach_workspace:
-                at: *root
-            - <<: *prepare-environment
-            - run:
-                name: Run ESLint
-                command: yarn run eslint src/**/*.{ts,tsx} stories/**/*.{ts,tsx}
-            - store_test_results:
-                path: test-results
+  lint-js:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12-stretch
 
-    test-js:
-        <<: *defaults
-        docker:
-            - image: circleci/node:10-stretch
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - attach_workspace:
+          at: *root
+      - <<: *prepare-environment
+      - run:
+          name: Run ESLint
+          command: yarn run eslint src/**/*.{ts,tsx} stories/**/*.{ts,tsx}
+      - store_test_results:
+          path: test-results
 
-        steps:
-            - checkout
-            - <<: *prospective-merge
-            - attach_workspace:
-                at: *root
-            - <<: *prepare-environment
-            - run:
-                name: Run Jest Tests
-                command: yarn run jest --ci --runInBand --reporters=default --reporters=jest-junit
-                environment:
-                    JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
-            - store_test_results:
-                path: test-results
+  test-js:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12-stretch
 
-    test-tsc:
-        <<: *defaults
-        docker:
-            - image: circleci/node:10-stretch
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - attach_workspace:
+          at: *root
+      - <<: *prepare-environment
+      - run:
+          name: Run Jest Tests
+          command: yarn run jest --ci --runInBand --colors --reporters=default --reporters=jest-junit
+          environment:
+            JEST_JUNIT_OUTPUT: test-results/jest/junit-${CIRCLE_NODE_INDEX}.xml
+      - store_test_results:
+          path: test-results
 
-        environment:
-            NODE_OPTIONS: --max_old_space_size=4096
+  test-tsc:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12-stretch
 
-        steps:
-            - checkout
-            - <<: *prospective-merge
-            - attach_workspace:
-                at: *root
-            - <<: *prepare-environment
-            - run:
-                name: Run TypeScript type-checking
-                command: yarn run tsc -p tsconfig.json
-            - store_test_results:
-                path: test-results
+    environment:
+      NODE_OPTIONS: --max_old_space_size=4096
+
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - attach_workspace:
+          at: *root
+      - <<: *prepare-environment
+      - run:
+          name: Run TypeScript type-checking
+          command: yarn run tsc -p tsconfig.json
+      - store_test_results:
+          path: test-results
 
 workflows:
-    version: 2
-    
-    build-and-test:
-        jobs:
+  version: 2
+
+  build-and-test:
+    jobs:
+      - build-js
+      - lint-js:
+          requires:
             - build-js
-            - lint-js:
-                requires:
-                    - build-js
-            - test-js:
-                requires:
-                    - build-js
-            - test-tsc:
-                requires:
-                    - build-js
-            - build:
-                requires:
-                    - test-js
-                    - test-tsc
+      - test-js:
+          requires:
+            - build-js
+      - test-tsc:
+          requires:
+            - build-js
+      - build:
+          requires:
+            - test-js
+            - test-tsc

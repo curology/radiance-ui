@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "path": "lib/shared-components/!(typography)/**/index.js",
+      "maxSize": "20kB",
+      "compression": "none"
+    },
+    {
+      "path": "lib/shared-components/typography/index.js",
+      "maxSize": "100kB",
+      "compression": "none"
+    }
+  ]
+}

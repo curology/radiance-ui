@@ -1,5 +1,6 @@
 import React from 'react';
-import isObject from 'isobject';
+
+import isObject from '../../src/utils/isObject';
 
 interface ExpandedProxy extends ProxyConstructor {
   __isProxy: boolean;
@@ -12,27 +13,32 @@ const renderConstantsMap = (
 ) => {
   let sanitizedMap = constantMap;
 
-  if (constantMap.__isProxy) {
+  if ('__isProxy' in constantMap) {
     sanitizedMap = Object.assign({}, constantMap);
   }
 
-  sanitizedMap = Object.entries(sanitizedMap).reduce((memo, [key, value]) => {
-    const newMemo = Object.assign({}, memo);
+  sanitizedMap = Object.entries(sanitizedMap).reduce(
+    (memo, [key, untypedValue]) => {
+      const newMemo = Object.assign({}, memo);
+      const value = untypedValue as unknown;
 
-    if (isObject(value)) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const sanitizedValue = value.__isProxy ? Object.assign({}, value) : value;
+      if (isObject(value)) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
+        const sanitizedValue =
+          '__isProxy' in value ? Object.assign({}, value) : value;
 
-      Object.entries(sanitizedValue).forEach(([innerKey, innerValue]) => {
-        newMemo[`${key}.${innerKey}`] = innerValue;
-      });
-    } else {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-      newMemo[key] = value;
-    }
+        Object.entries(sanitizedValue).forEach(([innerKey, innerValue]) => {
+          newMemo[`${key}.${innerKey}`] = innerValue;
+        });
+      } else {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        newMemo[key] = value;
+      }
 
-    return newMemo;
-  }, {});
+      return newMemo;
+    },
+    {},
+  );
 
   return Object.keys(sanitizedMap).map((constant) => (
     <p key={constant}>

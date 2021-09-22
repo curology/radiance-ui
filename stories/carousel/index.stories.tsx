@@ -7,12 +7,12 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Carousel } from 'src/shared-components';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';
+import { useTheme } from '@emotion/react';
 import type { Meta } from '@storybook/react';
-import { useTheme } from 'emotion-theming';
 
 const Card = styled(Carousel.Card)`
   background-color: ${({ theme }) => theme.COLORS.border};
@@ -88,7 +88,7 @@ const CarouselContainer = styled.div<{ bgColor?: string }>`
   width: 375px;
   align-items: center;
   background-color: ${({ bgColor, theme }) =>
-    bgColor || theme.COLORS.background};
+    bgColor ?? theme.COLORS.background};
 `;
 
 export const SecondaryStyle = () => {

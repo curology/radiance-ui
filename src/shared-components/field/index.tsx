@@ -1,15 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
-import {
-  FieldContainer,
-  Label,
-  InputContainer,
-  Textarea,
-  Input,
-  HintItem,
-} from './style';
+import Style from './style';
 import { CheckmarkIcon, ErrorIcon } from '../../icons';
 import {
   VerificationMessages,
@@ -49,12 +42,17 @@ export interface FieldProps {
   messagesType?: MessagesTypes;
 }
 
+interface Field extends React.FC<FieldProps> {
+  Input: typeof Style.Input;
+  Textarea: typeof Style.Textarea;
+}
+
 /**
  * Field component uses VerificationMessages component internally along with extra styling for the input.
  *
  * If you don't need validation, label or hint message; you can use `Field.Input` or `Field.Textarea` directly without the `Field` wrapper.
  */
-export const Field = ({
+export const Field: Field = ({
   children: inputChild,
   disabled = false,
   hideMessagesIcon = false,
@@ -63,7 +61,7 @@ export const Field = ({
   labelFor = '',
   messages = {},
   messagesType = 'error',
-}: FieldProps) => {
+}) => {
   const theme = useTheme();
   const htmlFor = labelFor || label;
   const messagesKeys = Object.keys(messages);
@@ -82,31 +80,34 @@ export const Field = ({
     );
 
   return (
-    <FieldContainer>
+    <Style.FieldContainer>
       {!!label && (
-        <Label htmlFor={htmlFor} disabled={disabled}>
+        <Style.Label htmlFor={htmlFor} disabled={disabled}>
           {label}
-        </Label>
+        </Style.Label>
       )}
 
-      <InputContainer showMessages={showMessages} messagesType={messagesType}>
+      <Style.InputContainer
+        showMessages={showMessages}
+        messagesType={messagesType}
+      >
         {hideMessagesIcon || MessageIcon}
 
         {React.cloneElement(inputChild, {
           disabled,
         })}
 
-        {!!hintMessage && <HintItem>{hintMessage}</HintItem>}
+        {!!hintMessage && <Style.HintItem>{hintMessage}</Style.HintItem>}
 
         <VerificationMessages messages={messages} type={messagesType} />
-      </InputContainer>
-    </FieldContainer>
+      </Style.InputContainer>
+    </Style.FieldContainer>
   );
 };
 
-Field.Textarea = Textarea;
+Field.Textarea = Style.Textarea;
 
-Field.Input = Input;
+Field.Input = Style.Input;
 
 Field.propTypes = {
   children: PropTypes.element.isRequired,
@@ -115,6 +116,13 @@ Field.propTypes = {
   hintMessage: PropTypes.string,
   label: PropTypes.string,
   labelFor: PropTypes.string,
-  messages: PropTypes.objectOf(PropTypes.node),
+  messages: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string.isRequired),
+      PropTypes.arrayOf(PropTypes.element.isRequired),
+    ]).isRequired,
+  ),
   messagesType: PropTypes.oneOf(['error', 'success']),
 };

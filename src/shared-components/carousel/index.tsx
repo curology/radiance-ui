@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import Arrow from './arrow';
-import { OuterContainer, InnerContainer, Card } from './style';
+import Style from './style';
+import { isDefined } from '../../utils/isDefined';
 
 const FIRST_INDEX = 0;
 const BASE_SLIDER_CONFIG = {
@@ -46,6 +47,12 @@ export interface CarouselProps {
   numCardsVisible: 1 | 2 | 3;
 }
 
+interface Carousel extends React.FC<CarouselProps> {
+  Card: typeof Style.Card;
+}
+
+// TODO-eslint: Reduce cognitive complexity of component
+/* eslint-disable sonarjs/cognitive-complexity */
 /**
  * Carousels should be used to provide valuable information or additional context on a page. One of the best examples of a Carousel is for product recommendations.
  *
@@ -53,7 +60,7 @@ export interface CarouselProps {
  *
  * An array of `Carousel.Card` must be used for the carousel content. It includes the base styles for the Card which may be extended as shown above.
  */
-export const Carousel = ({
+export const Carousel: Carousel = ({
   autoplay = false,
   autoplaySpeed = 5000,
   bottomRightAlignedArrows = false,
@@ -64,7 +71,7 @@ export const Carousel = ({
   hideDots = false,
   infinite = false,
   numCardsVisible,
-}: CarouselProps) => {
+}) => {
   const getLastIndex = () => {
     const numberSlides = children.length;
     return numberSlides - numCardsVisible;
@@ -116,7 +123,7 @@ export const Carousel = ({
   };
 
   const onUserInteraction = () => {
-    if (timeoutIdRef.current) {
+    if (isDefined(timeoutIdRef.current)) {
       clearTimeout(timeoutIdRef.current);
     }
     hasUserInteractedRef.current = true;
@@ -156,18 +163,22 @@ export const Carousel = ({
   };
 
   return (
-    <OuterContainer numCardsVisible={numCardsVisible}>
-      <InnerContainer carouselType={carouselType} onClick={onUserInteraction}>
+    <Style.OuterContainer numCardsVisible={numCardsVisible}>
+      <Style.InnerContainer
+        carouselType={carouselType}
+        onClick={onUserInteraction}
+      >
         {/* eslint-disable-next-line react/jsx-props-no-spreading */}
         <Slider ref={slider} {...carouselSettings}>
           {children}
         </Slider>
-      </InnerContainer>
-    </OuterContainer>
+      </Style.InnerContainer>
+    </Style.OuterContainer>
   );
 };
+/* eslint-enable sonarjs/cognitive-complexity */
 
-Carousel.Card = Card;
+Carousel.Card = Style.Card;
 
 Carousel.propTypes = {
   autoplay: PropTypes.bool,
@@ -179,5 +190,5 @@ Carousel.propTypes = {
   hideArrows: PropTypes.bool,
   hideDots: PropTypes.bool,
   infinite: PropTypes.bool,
-  numCardsVisible: PropTypes.number.isRequired,
+  numCardsVisible: PropTypes.oneOf([1, 2, 3] as const).isRequired,
 };

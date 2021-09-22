@@ -1,26 +1,34 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
-import { ButtonType } from '../..';
-import { ThemeColors, ThemeType } from '../../../../constants';
 import { baseButtonStyles } from '../../style';
+import type { ButtonType } from '../../types';
+import type { ThemeColors, ThemeType } from '../../../../constants';
 
-export const linkButtonStyles = ({
-  disabled,
-  buttonType,
-  buttonColor,
-  textColor,
-  theme,
-}: {
-  disabled: boolean;
-  buttonType: ButtonType;
+interface LinkButtonStylesProps {
   buttonColor: ThemeColors;
+  buttonType: ButtonType;
+  disabled: boolean;
+  isFullWidth?: boolean;
+  isLoading?: boolean;
   textColor?: ThemeColors;
   theme: ThemeType;
-}) => css`
+}
+
+const linkButtonStyles = ({
+  buttonColor,
+  buttonType,
+  disabled,
+  isFullWidth = false,
+  isLoading = false,
+  textColor,
+  theme,
+}: LinkButtonStylesProps) => css`
   ${baseButtonStyles({
-    disabled,
-    buttonType,
     buttonColor,
+    buttonType,
+    disabled,
+    isFullWidth,
+    isLoading,
     textColor,
     theme,
   })}
@@ -33,3 +41,7 @@ export const linkButtonStyles = ({
   `
     : ''}
 `;
+
+export default {
+  linkButtonStyles,
+};

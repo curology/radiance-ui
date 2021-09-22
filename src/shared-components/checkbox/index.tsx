@@ -27,7 +27,7 @@ export interface CheckboxProps {
  *
  * `<Checkbox />` is a controlled component that represents a checkbox selection. This means that the `onClick` function should be used to change the checked state of the checkbox. Note that a group of checkbox buttons must be composed by a parent component.
  */
-export const Checkbox = ({
+export const Checkbox: React.FC<CheckboxProps> = ({
   checked,
   children = null,
   disabled = false,
@@ -36,7 +36,7 @@ export const Checkbox = ({
   size = 'small',
   type = 'primary',
   ...rest
-}: CheckboxProps) => (
+}) => (
   <SelectorButton
     checked={checked}
     disabled={disabled}
@@ -47,7 +47,9 @@ export const Checkbox = ({
             event:
               | React.MouseEvent<HTMLDivElement, MouseEvent>
               | React.KeyboardEvent,
-          ) => event.preventDefault()
+          ) => {
+            event.preventDefault();
+          }
         : onClick
     }
     selector="checkbox"

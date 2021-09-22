@@ -8,7 +8,7 @@ import {
   Anchor,
   Canvas,
   Story,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Accordion } from 'src/shared-components';
@@ -18,7 +18,9 @@ const ACCORDION_STORY_ID_PREFIX = 'components-accordion--';
 
 export const Standard = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleAccordion = () => setIsOpen(!isOpen);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -43,7 +45,9 @@ Standard.id = `${ACCORDION_STORY_ID_PREFIX}standard`;
 
 export const NoBorder = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const onClick = () => setIsOpen(!isOpen);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -67,7 +71,9 @@ NoBorder.id = `${ACCORDION_STORY_ID_PREFIX}no-border`;
 
 export const Disabled = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const onClick = () => setIsOpen(!isOpen);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -89,7 +95,9 @@ Disabled.id = `${ACCORDION_STORY_ID_PREFIX}disabled`;
 
 export const RightAlignedArrow = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleAccordion = () => setIsOpen(!isOpen);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>

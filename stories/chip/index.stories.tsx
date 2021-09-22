@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Chip } from 'src/shared-components';
 import { text, select } from '@storybook/addon-knobs';
 import { BREAKPOINTS, SPACER } from 'src/constants';
@@ -21,10 +21,21 @@ const ChipContainer = styled.div`
 
 export const Usage = () => (
   <ChipContainer>
-    <Chip status="default" text="Default" />
+    <div>
+      <h4>Default</h4>
+    </div>
+    <Chip status="primary" text="Primary" />
     <Chip status="error" text="Error" />
     <Chip status="success" text="Success" />
-    <Chip status="secondary" text="Secondary" />
+    <Chip status="white" text="White" />
+    <br />
+    <div>
+      <h4>Low Contrast</h4>
+    </div>
+    <Chip status="primary" isLowContrast text="Primary" />
+    <Chip status="error" isLowContrast text="Error" />
+    <Chip status="success" isLowContrast text="Success" />
+    <Chip status="white" isLowContrast text="White" />
   </ChipContainer>
 );
 
@@ -36,8 +47,8 @@ export const WithControls = () => (
   <Chip
     status={select(
       'status',
-      ['default', 'success', 'error', 'secondary'],
-      'default',
+      ['primary', 'success', 'error', 'white'],
+      'primary',
     )}
     text={text('text', 'Chip')}
   />

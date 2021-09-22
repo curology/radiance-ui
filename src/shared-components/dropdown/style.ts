@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import { SPACER, ANIMATION, ThemeType } from '../../constants';
 
@@ -10,7 +10,7 @@ export interface DropdownInputStyleProps {
   theme: ThemeType;
 }
 
-export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
+const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   position: relative;
   width: 100%;
   text-align: ${({ textAlign }) => textAlign};
@@ -22,7 +22,7 @@ export const DropdownContainer = styled.div<{ textAlign: 'left' | 'center' }>`
   }
 `;
 
-export const dropdownInputStyle = ({
+const dropdownInputStyle = ({
   borderRadius,
   shouldBeFullyRounded,
   textAlign,
@@ -79,7 +79,7 @@ export const dropdownInputStyle = ({
   `;
 };
 
-export const DropdownFocusContainer = styled.div`
+const DropdownFocusContainer = styled.div`
   &:focus {
     > div:first-of-type {
       box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
@@ -88,7 +88,7 @@ export const DropdownFocusContainer = styled.div`
   }
 `;
 
-export const IconContainer = styled.div`
+const IconContainer = styled.div`
   position: absolute;
   right: 0;
   top: 0;
@@ -109,10 +109,10 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const DropdownOptionsContainer = styled.ul<{
+const DropdownOptionsContainer = styled.ul<{
+  borderRadius: string;
   isOpen: boolean;
   optionsContainerMaxHeight: string;
-  borderRadius: string;
 }>`
   position: absolute;
   top: 100%;
@@ -150,9 +150,9 @@ export const DropdownOptionsContainer = styled.ul<{
   }
 `;
 
-export const DropdownOption = styled.li<{
-  selected: boolean;
+const DropdownOption = styled.li<{
   disabled: boolean;
+  selected: boolean;
 }>`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   min-height: ${SPACER.x4large};
@@ -195,3 +195,12 @@ export const DropdownOption = styled.li<{
       }
     `}
 `;
+
+export default {
+  DropdownContainer,
+  DropdownFocusContainer,
+  dropdownInputStyle,
+  DropdownOption,
+  DropdownOptionsContainer,
+  IconContainer,
+};

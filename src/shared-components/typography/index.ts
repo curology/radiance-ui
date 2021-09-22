@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
 import round from 'lodash.round';
 
-import { ThemeType } from '../../constants';
 import {
   setSecondaryHeadingFont,
   setButtonStyleFontWeight,
   setThemeLineHeight,
   setThemeFontWeight,
 } from '../../utils/themeStyles';
+import type { ThemeType } from '../../constants';
 
 const displayStyle = (theme: ThemeType) => `
   color: ${theme.COLORS.primary};
@@ -41,6 +41,12 @@ export const baseBodyStyles = (theme: ThemeType) => `
 
 const bodyStyle = (theme: ThemeType) => `
   ${baseBodyStyles(theme)}
+`;
+
+const bodyBoldStyle = (theme: ThemeType) => `
+  ${bodyStyle(theme)}
+  font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+  color: ${theme.COLORS.primary};
 `;
 
 const captionStyle = (theme: ThemeType) => `
@@ -97,11 +103,12 @@ const linkStyle = (theme: ThemeType) => `
   }
 `;
 
-export const style = {
+export const TYPOGRAPHY_STYLE = {
   display: displayStyle,
   heading: headingStyle,
   title: titleStyle,
   body: bodyStyle,
+  bodyBold: bodyBoldStyle,
   caption: captionStyle,
   error: errorStyle,
   success: successStyle,
@@ -109,6 +116,10 @@ export const style = {
   button: buttonStyle,
   link: linkStyle,
 } as const;
+
+const Bold = styled.strong`
+  ${({ theme }) => bodyBoldStyle(theme)}
+`;
 
 const Button = styled.span`
   ${({ theme }) => buttonStyle(theme)}
@@ -139,6 +150,7 @@ const Title = styled.h3`
 `;
 
 export const Typography = {
+  Bold,
   Button,
   Caption,
   Display,

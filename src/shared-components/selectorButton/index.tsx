@@ -1,16 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { css, useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
-import {
-  OuterContainer,
-  Selector,
-  SelectorContainer,
-  TextContainer,
-  SelectorIcon,
-} from './style';
+import Style from './style';
+import { isDefined } from '../../utils/isDefined';
 
 export type SelectorType = 'radio' | 'checkbox';
 export type SizeType = 'large' | 'small';
@@ -30,7 +24,7 @@ export interface SelectorButtonProps {
   [key: string]: unknown;
 }
 
-export const SelectorButton = ({
+export const SelectorButton: React.FC<SelectorButtonProps> = ({
   checked,
   children = null,
   disabled = false,
@@ -40,7 +34,7 @@ export const SelectorButton = ({
   size = 'small',
   type = 'primary',
   ...rest
-}: SelectorButtonProps) => {
+}) => {
   const theme = useTheme();
 
   const checkedIcon =
@@ -59,8 +53,9 @@ export const SelectorButton = ({
         `}
       />
     );
+
   return (
-    <OuterContainer
+    <Style.OuterContainer
       onClick={onClick}
       onKeyPress={onClick}
       tabIndex={0}
@@ -70,21 +65,23 @@ export const SelectorButton = ({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <SelectorContainer>
-        <SelectorIcon disabled={disabled}>
+      <Style.SelectorContainer>
+        <Style.SelectorIcon disabled={disabled}>
           {checked ? checkedIcon : size === 'large' && icon}
-        </SelectorIcon>
-        <Selector
+        </Style.SelectorIcon>
+        <Style.Selector
           type={type}
           selectorChecked={checked}
           disabled={disabled}
           selector={selector}
           selectorSize={size}
         />
-      </SelectorContainer>
+      </Style.SelectorContainer>
 
-      {children && <TextContainer>{children}</TextContainer>}
-    </OuterContainer>
+      {isDefined(children) && (
+        <Style.TextContainer>{children}</Style.TextContainer>
+      )}
+    </Style.OuterContainer>
   );
 };
 

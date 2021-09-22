@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { buttonReset } from 'src/utils/styles/buttonReset';
 
+import { buttonReset } from '../../utils/styles/buttonReset';
 import { Typography } from '../typography';
 import {
   MEDIA_QUERIES,
@@ -10,7 +10,14 @@ import {
   ThemeType,
 } from '../../constants';
 
-export const Overlay = styled.div`
+const MOBILE_TOP_OVERLAY_HEIGHT = '32px';
+const HEADER_IMAGE_HEIGHT_SMALL = '240px';
+const HEADER_IMAGE_HEIGHT_MD_UP = '264px';
+
+const EASE_OUT = 'ease-out';
+const EASE_IN = 'ease-in';
+
+const Overlay = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -18,7 +25,7 @@ export const Overlay = styled.div`
   left: 0;
   z-index: ${Z_SCALE.modal};
   overflow-y: auto;
-  background-color: rgba(58, 55, 75, 0.7);
+  background-color: ${({ theme }) => theme.COLORS.overlay};
   transition: opacity ${ANIMATION.defaultTiming}
     cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -37,8 +44,8 @@ export const Overlay = styled.div`
   }
 `;
 
-export const CrossIconContainer = styled.button`
-  ${buttonReset};
+const CrossIconButton = styled.button<{ showDesktopHeaderBar?: boolean }>`
+  ${buttonReset}
   padding: 0;
   position: absolute;
   top: 8px;
@@ -56,8 +63,13 @@ export const CrossIconContainer = styled.button`
   cursor: pointer;
 
   ${MEDIA_QUERIES.mdUp} {
-    top: 16px;
+    top: ${({ showDesktopHeaderBar }) =>
+      showDesktopHeaderBar === true ? SPACER.x5large : '4.5rem'};
+    transition: top ${ANIMATION.defaultTiming}
+      ${({ showDesktopHeaderBar }) =>
+        showDesktopHeaderBar === true ? EASE_OUT : EASE_IN};
     right: 16px;
+    position: fixed;
   }
 
   &:focus {
@@ -66,47 +78,45 @@ export const CrossIconContainer = styled.button`
   }
 `;
 
-export const HeaderImageContainer = styled.div`
-  min-height: 240px;
-  max-height: 240px;
+const HeaderImageContainer = styled.div`
+  min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+  max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
   width: 100%;
 
   img {
-    min-height: 240px;
-    max-height: 240px;
+    min-height: ${HEADER_IMAGE_HEIGHT_SMALL};
+    max-height: ${HEADER_IMAGE_HEIGHT_SMALL};
     width: 100%;
     border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
     border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   }
 
   ${MEDIA_QUERIES.mdUp} {
-    min-height: 264px;
-    max-height: 264px;
+    min-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+    max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
 
     img {
-      height: 264px;
-      max-height: 264px;
+      height: ${HEADER_IMAGE_HEIGHT_MD_UP};
+      max-height: ${HEADER_IMAGE_HEIGHT_MD_UP};
       border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
       border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
     }
   }
 `;
 
-export const ModalTitle = styled(Typography.Heading)`
+const ModalTitle = styled(Typography.Heading)`
   margin-bottom: ${SPACER.small};
 `;
 
-export const ModalBody = styled.div`
-  p {
-    margin-bottom: ${SPACER.large};
+const Paragraph = styled.p`
+  margin-bottom: ${SPACER.large};
 
-    &:last-of-type {
-      margin-bottom: ${SPACER.xlarge};
-    }
+  &:last-of-type {
+    margin-bottom: ${SPACER.xlarge};
   }
 `;
 
-export const ModalFooter = styled.div`
+const ModalFooter = styled.div`
   margin-bottom: ${SPACER.xlarge};
 `;
 
@@ -128,12 +138,12 @@ const commonHeaderBarStyles = (theme: ThemeType) => `
   pointer-events: none;
 `;
 
-export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
+const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   ${({ theme }) => commonHeaderBarStyles(theme)}
 
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showMobileHeaderBar }): string =>
-    showMobileHeaderBar ? 'ease-out' : 'ease-in'};
+    showMobileHeaderBar ? EASE_OUT : EASE_IN};
   opacity: ${({ showMobileHeaderBar }): number =>
     showMobileHeaderBar ? 1 : 0};
 
@@ -142,41 +152,37 @@ export const MobileHeaderBar = styled.div<{ showMobileHeaderBar: boolean }>`
   }
 `;
 
-export const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
+const DesktopHeaderBar = styled.div<{ showDesktopHeaderBar: boolean }>`
   ${({ theme }) => commonHeaderBarStyles(theme)}
 
   top: 56px;
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
   display: none;
-
+  z-index: ${Z_SCALE.e2};
   transition: opacity ${ANIMATION.defaultTiming}
     ${({ showDesktopHeaderBar }): string =>
-      showDesktopHeaderBar ? 'ease-out' : 'ease-in'};
+      showDesktopHeaderBar ? EASE_OUT : EASE_IN};
 
   opacity: ${({ showDesktopHeaderBar }): number =>
     showDesktopHeaderBar ? 1 : 0};
 
   ${MEDIA_QUERIES.mdUp} {
     display: flex;
-
-    ${CrossIconContainer} {
-      top: 8px;
-    }
   }
 `;
 
-export const MobileTopOverlay = styled.div`
+const MobileTopOverlay = styled.div`
   width: 100%;
   background: transparent;
-  height: 32px;
+  height: ${MOBILE_TOP_OVERLAY_HEIGHT};
 
   ${MEDIA_QUERIES.mdUp} {
     display: none;
   }
 `;
 
-export const ModalContainer = styled.div`
+const ModalContainer = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -213,14 +219,19 @@ export interface HasHeaderImageProps {
 
 // 32px comes from top overlay
 // 272px comes from 32px top overlay + 240px image
-export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
+const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   border-top-right-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.modal};
   background: ${({ theme }) => theme.COLORS.white};
   height: ${({ hasHeaderImage }): string =>
-    hasHeaderImage ? 'calc(100% - 272px)' : 'calc(100% - 32px)'};
+    hasHeaderImage
+      ? `calc(100% - ${
+          parseInt(HEADER_IMAGE_HEIGHT_SMALL, 10) +
+          parseInt(MOBILE_TOP_OVERLAY_HEIGHT, 10)
+        }px)`
+      : `calc(100% - ${MOBILE_TOP_OVERLAY_HEIGHT})`};
 
   ${MEDIA_QUERIES.mdUp} {
     border-radius: ${({ theme }) => theme.BORDER_RADIUS.medium};
@@ -230,7 +241,7 @@ export const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   }
 `;
 
-export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
+const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -249,6 +260,21 @@ export const ContentWithFooterContainer = styled.div<HasHeaderImageProps>`
         ? `${SPACER.x2large} ${SPACER.x4large} 0`
         : `72px ${SPACER.x2large} 0`};
     min-height: ${({ hasHeaderImage }): string =>
-      hasHeaderImage ? 'calc(100% - 264px)' : '100%'};
+      hasHeaderImage ? `calc(100% - ${HEADER_IMAGE_HEIGHT_MD_UP})` : '100%'};
   }
 `;
+
+export default {
+  ContentWithFooterContainer,
+  CrossIconButton,
+  DesktopHeaderBar,
+  HeaderImageContainer,
+  MainModalContentContainer,
+  MobileHeaderBar,
+  MobileTopOverlay,
+  ModalContainer,
+  ModalFooter,
+  ModalTitle,
+  Overlay,
+  Paragraph,
+};

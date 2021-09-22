@@ -1,8 +1,8 @@
-import { DetailedHTMLProps, HTMLAttributes } from 'react';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
+import type { ContainerComponentType } from './types';
 
 const clickableStyle = (theme: ThemeType) => `
   box-shadow: ${theme.BOX_SHADOWS.clickable};
@@ -19,7 +19,7 @@ const messageStyle = (theme: ThemeType) => `
   box-shadow: ${theme.BOX_SHADOWS.clickable};
 `;
 
-export type ContainerType = 'clickable' | 'message';
+export type ContainerType = 'clickable' | 'message' | 'none';
 
 const getContainerTypeStyles = (theme: ThemeType, type?: ContainerType) => {
   switch (type) {
@@ -27,19 +27,21 @@ const getContainerTypeStyles = (theme: ThemeType, type?: ContainerType) => {
       return messageStyle(theme);
     case 'clickable':
       return clickableStyle(theme);
+    case 'none':
+      return ``;
     default:
       return ``;
   }
 };
 
-export const containerStyles = (theme: ThemeType, type?: ContainerType) => `
+const containerStyles = (theme: ThemeType, type?: ContainerType) => `
   background-color: ${theme.COLORS.white};
   border: 1px solid ${theme.COLORS.border};
 
   ${getContainerTypeStyles(theme, type)}
 `;
 
-export const Section = styled.div`
+const Section = styled.div`
   padding: ${SPACER.large};
 
   ${MEDIA_QUERIES.lgUp} {
@@ -48,7 +50,7 @@ export const Section = styled.div`
   }
 `;
 
-export const Divider = styled.div`
+const Divider = styled.div`
   margin: 0 ${SPACER.large};
   border-bottom: ${({ theme }) => `1px solid ${theme.COLORS.border}`};
 
@@ -57,44 +59,28 @@ export const Divider = styled.div`
   }
 `;
 
-export const Image = styled.img`
+const Image = styled.img`
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 `;
 
-/**
- * This is the type returned by `styled.div`
- *
- * @see `node_modules/@emotion/styled-base/types/index.d.ts`
- */
-type StyledContainer = StyledComponent<
-  DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  {
-    type?: 'clickable' | 'message';
-  },
-  Record<string, unknown>
->;
-
-type CompositeContainer = StyledContainer & {
-  Section: typeof Section;
+type CompositeContainer = ContainerComponentType & {
   Divider: typeof Divider;
   Image: typeof Image;
+  Section: typeof Section;
 };
 
-// Our reliance on setting dot.notation subcomponents directly on the
-// styled component is not well supported. CompositeContainer defines those
-// subcomponents ahead of time to account for styled.div limitations.
 const Container = styled.div<{ type?: ContainerType }>`
   ${({ theme, type }) => containerStyles(theme, type)};
 ` as CompositeContainer;
 
-Container.Section = Section;
 Container.Divider = Divider;
 Container.Image = Image;
+Container.Section = Section;
 
 Container.propTypes = {
-  type: PropTypes.oneOf(['message', 'clickable']),
+  type: PropTypes.oneOf(['message', 'clickable', 'none']),
 };
 
-export { Container };
+export default { containerStyles, Container };

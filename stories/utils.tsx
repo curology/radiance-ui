@@ -1,6 +1,6 @@
 import React from 'react';
-import { StoryFnReactReturnType } from '@storybook/react/dist/client/preview/types';
 import isChromatic from 'chromatic/isChromatic';
+import type { StoryFnReactReturnType } from '@storybook/react/dist/ts3.9/client/preview/types';
 
 /**
  * Our DialogModal and ImmersiveModals are not fully captured by Chromatic

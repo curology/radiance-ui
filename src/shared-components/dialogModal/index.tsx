@@ -3,15 +3,11 @@ import React, { useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
+import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
-import {
-  Overlay,
-  ModalContainer,
-  ModalTitle,
-  CrossIconContainer,
-} from './style';
+import Style from './style';
 import { Colors, primaryTheme, secondaryTheme } from '../../constants';
 
 export interface DialogModalProps {
@@ -28,16 +24,18 @@ export interface DialogModalProps {
    * If provided, DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
    */
-  onCloseIconClick?: () => void;
+  onCloseIconClick?: (() => void) | null;
   title?: string;
   [key: string]: unknown;
 }
 
-const REACT_PORTAL_SECTION_ID = 'reactPortalSection';
-const getHtmlNode = () => document.querySelector('html') || document.body;
+interface DialogModal extends React.FC<DialogModalProps> {
+  Paragraph: typeof Style.Paragraph;
+}
+
+const getHtmlNode = () => document.querySelector('html') ?? document.body;
 const getDomNode = () =>
-  (document.getElementById(REACT_PORTAL_SECTION_ID) as HTMLElement) ||
-  document.body;
+  document.getElementById(REACT_PORTAL_SECTION_ID) ?? document.body;
 
 /**
  * Dialog modals shouldn't contain large content and should not scroll unless screen size dictates it. To display large amounts of content, use `Immersive modal` instead.
@@ -45,16 +43,18 @@ const getDomNode = () =>
  * Dialog modals require a user to make a choice between options and are not closable on click/tap outside. They may contain a close button if a close function is provided.
  *
  * Dialog Modals should always contain at least 1 button and the logic should close the modal at some point.
+ *
+ * `DialogModal.Paragraph` subcomponent may be used to add some margin to the paragraphs inside the modal body.
  */
-export const DialogModal = ({
+export const DialogModal: DialogModal = ({
   backgroundColor,
   children,
   onCloseIconClick,
   title = '',
   ...rest
-}: DialogModalProps) => {
+}) => {
   const theme = useTheme();
-  const backgroundColorWithTheme = backgroundColor || theme.COLORS.white;
+  const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
 
   const domNode = useRef<HTMLElement>(getDomNode());
@@ -64,7 +64,9 @@ export const DialogModal = ({
     domNode.current = getDomNode();
     htmlNode.current = getHtmlNode();
     htmlNode.current.classList.add('no-scroll');
-    return () => htmlNode.current.classList.remove('no-scroll');
+    return () => {
+      htmlNode.current.classList.remove('no-scroll');
+    };
   }, []);
 
   const handleCloseIntent = () => {
@@ -93,15 +95,15 @@ export const DialogModal = ({
     >
       {(transitionState): JSX.Element => (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <Overlay className={transitionState} {...rest}>
+        <Style.Overlay className={transitionState} {...rest}>
           <FocusScope contain restoreFocus autoFocus>
-            <ModalContainer
+            <Style.ModalContainer
               backgroundColor={backgroundColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
             >
               {onCloseIconClick && (
-                <CrossIconContainer
+                <Style.CrossIconContainer
                   backgroundColor={backgroundColorWithTheme}
                   onClick={handleCloseIntent}
                   role="button"
@@ -109,18 +111,20 @@ export const DialogModal = ({
                   aria-label="Close modal"
                 >
                   <CrossIcon />
-                </CrossIconContainer>
+                </Style.CrossIconContainer>
               )}
-              {!!title && <ModalTitle>{title}</ModalTitle>}
+              {!!title && <Style.ModalTitle>{title}</Style.ModalTitle>}
               {children}
-            </ModalContainer>
+            </Style.ModalContainer>
           </FocusScope>
-        </Overlay>
+        </Style.Overlay>
       )}
     </Transition>,
     domNode.current,
   );
 };
+
+DialogModal.Paragraph = Style.Paragraph;
 
 DialogModal.propTypes = {
   backgroundColor: PropTypes.oneOf([

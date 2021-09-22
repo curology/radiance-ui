@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { ButtonContents } from '../../style';
-import { BaseTextButton } from './style';
+import Style from './style';
 
 export interface TextButtonProps {
   /**
@@ -19,20 +19,28 @@ export interface TextButtonProps {
  * The component renders with padding and should not be used inline within body text, etc.
  * Useful for rendering a chunk of text that can be clicked but can also be disabled if needed.
  */
-export const TextButton = ({
+export const TextButton: React.FC<TextButtonProps> = ({
   children,
   disabled = false,
   onClick = () => undefined,
   ...rest
-}: TextButtonProps) => (
-  <BaseTextButton
+}) => (
+  <Style.BaseTextButton
     disabled={disabled}
-    onClick={!disabled ? onClick : (event) => event.preventDefault()}
+    onClick={
+      !disabled
+        ? onClick
+        : (event) => {
+            event.preventDefault();
+          }
+    }
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
-    <ButtonContents hasIcon={false}>{children}</ButtonContents>
-  </BaseTextButton>
+    <ButtonContents hasIcon={false} isFullWidth={false} isLoading={false}>
+      {children}
+    </ButtonContents>
+  </Style.BaseTextButton>
 );
 
 TextButton.propTypes = {

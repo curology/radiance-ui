@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Alert } from 'src/shared-components';
 import avatarImageSrc from 'shared/person.jpg';
 import type { Meta } from '@storybook/react';
@@ -63,7 +63,9 @@ export const WithCallToAction = () => (
     }
     type="error"
     ctaContent="Update Payment Method"
-    onExit={() => alert('cta alert clicked')}
+    onExit={() => {
+      alert('cta alert clicked');
+    }}
   />
 );
 
@@ -118,7 +120,7 @@ const ALERT_STORIES: AlertStories = {
           <ArgsTable />
           <Stories includePrimary />
           <Description>
-            Alert.Container Absolutely positions the alerts by default. (As
+            Alert.Container absolutely positions the alerts by default. (As
             such, it escapes the canvas container.)
           </Description>
         </React.Fragment>

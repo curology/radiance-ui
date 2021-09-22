@@ -6,13 +6,13 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
+import { useTheme } from '@emotion/react';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import type { ThemeColors } from 'src/constants/themes/types';
 
 export const Default = () => (
   <LinkButton.Container>
@@ -26,12 +26,12 @@ export const Default = () => (
 
 export const ReactRouterLink = () => {
   const MockLink = ({
-    to,
     children,
+    to,
     ...rest
   }: {
-    to: string;
     children: React.ReactNode;
+    to: string;
   }) => (
     // eslint-disable-next-line
     <a href={to} {...rest}>
@@ -92,7 +92,13 @@ export const WithControls = () => {
         buttonColor={select('buttonColor', theme.COLORS, theme.COLORS.primary)}
         disabled={boolean('disabled', false)}
         onClick={action('You clicked a button')}
-        textColor={text('textColor', '') as ThemeColors}
+        textColor={
+          text(
+            'textColor',
+            // @ts-expect-error -- Rely on component fallback
+            undefined,
+          ) as ThemeColors
+        }
       >
         {text('children', 'Click it!')}
       </LinkButton>

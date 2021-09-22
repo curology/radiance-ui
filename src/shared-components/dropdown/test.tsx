@@ -12,6 +12,8 @@ const options = [
   { value: 'test3', label: 'Test3' },
 ];
 
+const ON_CLICK_TEST = 'should be invoked onClick';
+
 describe('<Dropdown />', () => {
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
@@ -22,8 +24,8 @@ describe('<Dropdown />', () => {
       delete window.document.documentElement.ontouchstart;
 
       getByRole('combobox');
-      expect(getAllByRole('option').length).toBe(3);
-      expect(queryAllByRole('button').length).toBe(0);
+      expect(getAllByRole('option')).toHaveLength(3);
+      expect(queryAllByRole('button')).toHaveLength(0);
     });
   });
 
@@ -34,7 +36,7 @@ describe('<Dropdown />', () => {
       );
 
       // button only used in Desktop implementation
-      getByRole('button');
+      expect(getByRole('button')).toBeTruthy();
     });
   });
 });
@@ -55,7 +57,7 @@ describe('<MobileDropdown />', () => {
   });
 
   describe('onSelectChange callback', () => {
-    it('should be invoked onClick', () => {
+    it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getByRole } = render(
         <MobileDropdown
@@ -91,11 +93,11 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    getByRole('button', { name: 'Test1' });
+    expect(getByRole('button', { name: 'Test1' })).toBeTruthy();
   });
 
   describe('onSelectClick callback', () => {
-    it('should be invoked onClick', () => {
+    it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getByRole } = render(
         <DesktopDropdown
@@ -117,7 +119,7 @@ describe('<DesktopDropdown />', () => {
   });
 
   describe('onOptionClick callback', () => {
-    it('should be invoked onClick', () => {
+    it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getAllByRole } = render(
         <DesktopDropdown

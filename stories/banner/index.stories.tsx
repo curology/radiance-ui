@@ -6,7 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { Banner } from 'src/shared-components';
 import { select, text } from '@storybook/addon-knobs';
 import type { Meta } from '@storybook/react';
@@ -23,7 +23,9 @@ export const Default = () => (
 
 export const Clickable = () => (
   <Banner
-    onClick={() => alert('clicked!')}
+    onClick={() => {
+      alert('clicked!');
+    }}
     content={
       <React.Fragment>
         <strong>Clickable banner</strong> This is a banner with an onClick prop

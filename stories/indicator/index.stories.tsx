@@ -8,24 +8,23 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+} from '@storybook/addon-docs';
 import { BREAKPOINTS } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import type { Meta } from '@storybook/react';
 
-export const NumbersAndText = () => (
+export const Usage = () => (
   <React.Fragment>
-    <Indicator text="1" />
+    <Indicator type="error" text="1" />
     <br />
-    <Indicator text={999} />
+    <Indicator type="primary" text="+4" />
+    <br />
+    <Indicator type="success" text={999} />
+    <br />
+    <Indicator type="tertiary" text={4} />
+    <br />
+    <Indicator type="white" text="String" />
   </React.Fragment>
 );
-
-export const WithColor = () => {
-  const theme = useTheme();
-
-  return <Indicator text="+2" backgroundColor={theme.COLORS.primary} />;
-};
 
 export const WithControls = () => <Indicator text={text('text', '10')} />;
 

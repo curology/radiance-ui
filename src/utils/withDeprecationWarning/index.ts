@@ -8,9 +8,8 @@ export default function withDeprecationWarning<T extends object>(
 ): T {
   const handler = {
     get(target: T, property: string) {
-      const isDeprecatedProperty = Object.keys(deprecatedProperties).includes(
-        property,
-      );
+      const isDeprecatedProperty =
+        Object.keys(deprecatedProperties).includes(property);
       if (shouldShowForEnvironment() && isDeprecatedProperty) {
         // eslint-disable-next-line no-console
         console.warn(

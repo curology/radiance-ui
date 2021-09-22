@@ -1,7 +1,6 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css, useTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-import { useTheme } from 'emotion-theming';
 import { SPACER } from 'src/constants';
 import { Container } from 'src/shared-components';
 

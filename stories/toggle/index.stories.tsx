@@ -9,7 +9,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 
 const ToggleContainer = styled.div`
@@ -21,8 +21,12 @@ export const Usage = () => {
   const [checked, setChecked] = React.useState(false);
   const [secondChecked, setSecondChecked] = React.useState(true);
 
-  const onChange = () => setChecked(!checked);
-  const secondOnChange = () => setSecondChecked(!secondChecked);
+  const onChange = () => {
+    setChecked(!checked);
+  };
+  const secondOnChange = () => {
+    setSecondChecked(!secondChecked);
+  };
 
   return (
     <React.Fragment>

@@ -4,13 +4,13 @@ import { render } from 'src/tests/testingLibraryHelpers';
 import { Container } from './index';
 
 describe('Container UI snapshots', () => {
-  test('renders basic container', () => {
+  it('renders basic container', () => {
     const { container } = render(<Container>Container Content</Container>);
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders container helper components', () => {
+  it('renders container helper components', () => {
     const { container } = render(
       <Container>
         <Container.Section>Section 1</Container.Section>
@@ -26,7 +26,7 @@ describe('Container UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders clickable container', () => {
+  it('renders clickable container', () => {
     const { container } = render(
       <Container type="clickable">Container Content</Container>,
     );
@@ -34,7 +34,7 @@ describe('Container UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('renders message type container', () => {
+  it('renders message type container', () => {
     const { container } = render(
       <Container type="message">Container Content</Container>,
     );

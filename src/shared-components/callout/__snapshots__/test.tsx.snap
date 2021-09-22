@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
-.emotion-2 {
+.emotion-0 {
   background-color: #EEEDF7;
   padding: 1rem;
   border-radius: 8px;
@@ -9,12 +9,12 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -22,16 +22,16 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
   align-items: center;
 }
 
-.emotion-0 {
+.emotion-2 {
   color: #332E54;
   font-size: 0.875rem;
 }
 
 <div
-  class="emotion-2 emotion-3"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
   >
     Simple callout text. 
     <strong>
@@ -41,8 +41,8 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
 </div>
 `;
 
-exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`] = `
-.emotion-5 {
+exports[`<Callout /> UI snapshots renders callout with icon 1`] = `
+.emotion-0 {
   background-color: #EEEDF7;
   padding: 1rem;
   border-radius: 8px;
@@ -50,12 +50,12 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex-flow: row nowrap;
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -63,38 +63,38 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
   align-items: center;
 }
 
-.emotion-0 {
-  color: #706D87;
+.emotion-2 {
+  color: #332E54;
   font-size: 0.875rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   margin-left: 0.5rem;
 }
 
-.emotion-3 svg {
-  fill: #706D87;
+.emotion-4 svg {
+  fill: #332E54;
 }
 
-.emotion-3 svg path {
-  fill: #706D87;
+.emotion-4 svg path {
+  fill: #332E54;
 }
 
-.emotion-2 {
+.emotion-6 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
 <div
-  class="emotion-5 emotion-6"
+  class="emotion-0 emotion-1"
 >
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-2 emotion-3"
   >
     Callout text with 
     <strong>
@@ -103,10 +103,10 @@ exports[`<Callout /> UI snapshots renders callout with custom color and icon 1`]
      and icon.
   </div>
   <div
-    class="emotion-3 emotion-4"
+    class="emotion-4 emotion-5"
   >
     <svg
-      class="emotion-2"
+      class="emotion-6"
       fill="none"
       height="48"
       viewBox="0 0 48 48"

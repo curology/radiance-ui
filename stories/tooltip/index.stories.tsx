@@ -6,13 +6,13 @@ import {
   Source,
   Title,
   Stories,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, select, number, boolean } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER } from 'src/constants';
-import type { Meta } from '@storybook/react';
 import { ArrowAlignTypes, PositionTypes } from 'src/shared-components/tooltip';
+import type { Meta } from '@storybook/react';
 
 const TooltipContainer = styled.div<{ height?: string }>`
   max-width: 800px;

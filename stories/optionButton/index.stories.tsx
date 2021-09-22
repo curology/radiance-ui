@@ -9,10 +9,11 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 
 import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
+import { BREAKPOINTS } from '../../src/constants';
 
 const noop = () => undefined;
 
@@ -35,12 +36,18 @@ const OptionsContainer = styled.div`
   > button {
     width: 350px;
   }
+
+  > div {
+    width: 350px;
+  }
 `;
 
 export const Interactive = () => {
   const [active, setActive] = React.useState('');
 
-  const onClick = (value: string) => () => setActive(value);
+  const onClick = (value: string) => () => {
+    setActive(value);
+  };
 
   return (
     <ExampleContainer>
@@ -64,6 +71,10 @@ export const Interactive = () => {
       />
     </ExampleContainer>
   );
+};
+
+Interactive.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
 export const Checkboxes = () => (
@@ -103,6 +114,21 @@ export const Checkboxes = () => (
         onClick={noop}
         optionType="checkbox"
         buttonType="primary"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
+      <OptionButton
+        selected
+        text="Checkbox helper text"
+        onClick={noop}
+        optionType="checkbox"
+        buttonType="secondary"
+      />
+      <OptionButton
+        selected
+        text="Checkbox helper text"
+        onClick={noop}
+        optionType="checkbox"
+        buttonType="secondary"
         icon={<AcneGlyph width={32} height={32} />}
       />
     </OptionsContainer>
@@ -148,9 +174,46 @@ export const RadioButtons = () => (
         buttonType="primary"
         icon={<AcneGlyph width={32} height={32} />}
       />
+      <OptionButton
+        selected
+        text="Radio helper text"
+        onClick={noop}
+        optionType="radio"
+        buttonType="secondary"
+      />
+      <OptionButton
+        selected
+        text="Radio helper text"
+        onClick={noop}
+        optionType="radio"
+        buttonType="secondary"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
     </OptionsContainer>
   </FlexContainer>
 );
+
+export const OptionButtonNotClickable = () => (
+  <FlexContainer>
+    <OptionsContainer>
+      <OptionButton.NotClickable
+        text="Radio helper text"
+        optionType="radio"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
+      <OptionButton.NotClickable
+        text="Checkbox helper text"
+        subtext="subtext"
+        optionType="checkbox"
+        icon={<AcneGlyph width={32} height={32} />}
+      />
+    </OptionsContainer>
+  </FlexContainer>
+);
+
+OptionButtonNotClickable.parameters = {
+  chromatic: { viewports: [BREAKPOINTS.xs] },
+};
 
 export const WithControls = () => (
   <FlexContainer>

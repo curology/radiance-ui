@@ -1,7 +1,15 @@
+/**
+ * We do not use our pattern of anonymous default exports in this file because
+ * these styles are shared across all button components. To make the distinction
+ * between styles defined specifically for the components, and shared styles, we
+ * use named exports for the shared styles and anonymous default exports for the
+ * component-specific styles
+ */
+
 import styled from '@emotion/styled';
 import tinycolor from 'tinycolor2';
 
-import { style as TYPOGRAPHY_STYLE } from '../typography';
+import { TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 import {
@@ -9,8 +17,8 @@ import {
   primaryButtonBackgroundColor,
   setThemeLineHeight,
 } from '../../utils/themeStyles';
-
-import { ButtonTypeWithAction } from '.';
+import { isDefined } from '../../utils/isDefined';
+import type { BaseButtonStylesTypes, ButtonTypeWithAction } from './types';
 
 const primaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => {
   const backgroundColor = primaryButtonBackgroundColor(theme, buttonColor);
@@ -70,19 +78,20 @@ const tertiaryStyles = (buttonColor: ThemeColors) => `
   }
 `;
 
+const getQuarternaryColor = (buttonColor: ThemeColors, theme: ThemeType) => {
+  const textColors = textColorsAssociatedWithColors(theme);
+  const textButtonColor = textColors.get(buttonColor);
+
+  return textButtonColor
+    ? textButtonColor.tint2
+    : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString();
+};
+
 const quaternaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   border-color: transparent;
   background-color: transparent;
-  color: ${
-    textColorsAssociatedWithColors(theme)[buttonColor]
-      ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
-      : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
-  };
-  fill: ${
-    textColorsAssociatedWithColors(theme)[buttonColor]
-      ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
-      : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
-  };
+  color: ${getQuarternaryColor(buttonColor, theme)};
+  fill: ${getQuarternaryColor(buttonColor, theme)};
 
   &:hover,
   &:focus,
@@ -90,11 +99,7 @@ const quaternaryStyles = (buttonColor: ThemeColors, theme: ThemeType) => `
   &:not([href]):not([tabindex]):focus {
     opacity: 0.8;
     background-color: transparent;
-    color: ${
-      textColorsAssociatedWithColors(theme)[buttonColor]
-        ? textColorsAssociatedWithColors(theme)[buttonColor].tint2
-        : tinycolor(buttonColor).lighten(10).desaturate(50).toHexString()
-    };
+    color: ${getQuarternaryColor(buttonColor, theme)};
   }
 `;
 
@@ -129,12 +134,6 @@ const disabledStyles = (theme: ThemeType) => `
   color: ${theme.COLORS.textDisabled};
   cursor: not-allowed;
   fill: ${theme.COLORS.textDisabled};
-
-  &:visited,
-  &:hover {
-    opacity: 1;
-    color: ${theme.COLORS.textDisabled};
-  }
 `;
 
 function parseTheme(
@@ -160,16 +159,6 @@ function parseTheme(
     default:
       return primaryStyles(buttonColor, theme);
   }
-}
-
-export interface BaseButtonStylesTypes {
-  disabled: boolean;
-  buttonType: ButtonTypeWithAction;
-  buttonColor: ThemeColors;
-  isLoading?: boolean;
-  textColor?: ThemeColors;
-  isFullWidth?: boolean;
-  theme: ThemeType;
 }
 
 export const baseButtonStyles = ({
@@ -210,7 +199,7 @@ export const baseButtonStyles = ({
   ${isLoading ? loadingStyles : ''}
 
   ${
-    !!textColor && !disabled
+    isDefined(textColor) && !disabled
       ? `
     color: ${textColor};
     fill: ${textColor};
@@ -238,9 +227,9 @@ export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>`
 // align-items conditional fixes slight button height misalignment for truthy scenario
 // See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
 export const ButtonContents = styled.div<{
-  hasIcon?: boolean;
-  isFullWidth?: boolean;
-  isLoading?: boolean;
+  hasIcon: boolean;
+  isFullWidth: boolean;
+  isLoading: boolean;
 }>`
   align-items: ${({ hasIcon, isFullWidth, isLoading }) => {
     if (isFullWidth && isLoading && hasIcon) {
@@ -284,8 +273,8 @@ export const ButtonContents = styled.div<{
 `;
 
 export const ButtonText = styled.span<{
-  hasIcon?: boolean;
-  isLoading?: boolean;
+  hasIcon: boolean;
+  isLoading: boolean;
 }>`
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
   margin: 0;

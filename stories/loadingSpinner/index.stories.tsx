@@ -10,10 +10,10 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
+import { useTheme } from '@emotion/react';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import type { ThemeColors } from 'src/constants/themes/types';
 
 const SpinnerContainer = styled.div`
   position: relative;

@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, ErrorIcon, InfoIcon } from '../../icons';
-import {
-  BannerContainer,
-  MainContainer,
-  ContentContainer,
-  IconContainer,
-} from './style';
+import Style from './style';
 
 const bannerIconMapping = {
   success: CheckmarkIcon,
@@ -32,23 +27,27 @@ export interface BannerProps {
  *
  * Banners are not dismissable.
  */
-export const Banner = ({ content, onClick, type = 'default' }: BannerProps) => {
+export const Banner: React.FC<BannerProps> = ({
+  content,
+  onClick,
+  type = 'default',
+}) => {
   const theme = useTheme();
   const Icon = bannerIconMapping[type];
 
   return (
-    <BannerContainer
+    <Style.BannerContainer
       bannerType={type}
       onClick={onClick}
       tabIndex={onClick ? 0 : -1}
     >
-      <MainContainer>
-        <IconContainer>
+      <Style.MainContainer>
+        <Style.IconContainer>
           <Icon fill={theme.COLORS.white} />
-        </IconContainer>
-        <ContentContainer>{content}</ContentContainer>
-      </MainContainer>
-    </BannerContainer>
+        </Style.IconContainer>
+        <Style.ContentContainer>{content}</Style.ContentContainer>
+      </Style.MainContainer>
+    </Style.BannerContainer>
   );
 };
 

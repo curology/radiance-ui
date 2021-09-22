@@ -28,8 +28,8 @@ const ColorHex = styled.div`
 `;
 
 interface ColorProps {
-  colorName: string;
   colorHex: string;
+  colorName: string;
 }
 
 const Color = ({ colorName, colorHex }: ColorProps) => (

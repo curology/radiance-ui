@@ -6,13 +6,13 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import { text, select, boolean } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Button } from 'src/shared-components';
+import { useTheme } from '@emotion/react';
 import type { Meta } from '@storybook/react';
-import { ThemeColors } from 'src/constants/themes/types';
-import { useTheme } from 'emotion-theming';
+import type { ThemeColors } from 'src/constants/themes/types';
 
 import { CheckmarkIcon } from '../../src/icons';
 
@@ -196,7 +196,13 @@ export const WithControls = () => {
         isLoading={boolean('isLoading', false)}
         disabled={boolean('disabled', false)}
         onClick={action('button clicked')}
-        textColor={text('textColor', '') as ThemeColors}
+        textColor={
+          text(
+            'textColor',
+            // @ts-expect-error -- Rely on component fallback
+            undefined,
+          ) as ThemeColors
+        }
       >
         {text('children', 'Click me!')}
       </Button>

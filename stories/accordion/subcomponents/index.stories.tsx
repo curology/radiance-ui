@@ -8,7 +8,7 @@ import {
   Anchor,
   Canvas,
   Story,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 import accountImage from 'shared/account.png';
@@ -41,8 +41,9 @@ export const Thumbnails = () => {
     2: false,
   });
 
-  const toggleAccordion = (num: number) => () =>
+  const toggleAccordion = (num: keyof typeof isOpen) => () => {
     setIsOpen({ ...isOpen, [num]: !isOpen[num] });
+  };
 
   const srcs = [personImage, accountImage, personImage];
 
@@ -106,7 +107,9 @@ Thumbnails.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}thumbnails`;
 
 export const Truncate = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const onClick = () => setIsOpen(!isOpen);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div style={{ width: '400px' }}>
@@ -136,7 +139,9 @@ Truncate.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}truncate`;
 
 export const Container = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const onClick = () => setIsOpen(!isOpen);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <Accordion.Container>
@@ -181,8 +186,9 @@ export const Content = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const toggleAccordion = (accordion: keyof typeof initialState) => () =>
+  const toggleAccordion = (accordion: keyof typeof initialState) => () => {
     dispatch(accordion);
+  };
 
   return (
     <Accordion.Container>

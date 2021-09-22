@@ -7,7 +7,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 
 export const Usage = () => {
@@ -15,7 +15,9 @@ export const Usage = () => {
     'Click outside this container to call the onOffClick handler...',
   );
 
-  const handleOffClick = () => setText('You clicked outside the container!!!');
+  const handleOffClick = () => {
+    setText('You clicked outside the container!!!');
+  };
 
   return (
     <OffClickWrapper onOffClick={handleOffClick}>

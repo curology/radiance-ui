@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import { TabsContainer, TabItem } from './style';
+import Style from './style';
 
 interface TabType {
   id: number;
@@ -18,7 +18,7 @@ export interface TabsProps {
   }>;
 }
 
-export const Tabs = ({
+export const Tabs: React.FC<TabsProps> = ({
   initialActiveTabId = 1,
   onClick = () => undefined,
   tabItems,
@@ -31,17 +31,19 @@ export const Tabs = ({
   };
 
   return (
-    <TabsContainer>
+    <Style.TabsContainer>
       {tabItems.map((tab) => (
-        <TabItem
+        <Style.TabItem
           active={tab.id === activeTabId}
           key={tab.id}
-          onClick={() => onTabClick(tab)}
+          onClick={() => {
+            onTabClick(tab);
+          }}
         >
           {tab.text}
-        </TabItem>
+        </Style.TabItem>
       ))}
-    </TabsContainer>
+    </Style.TabsContainer>
   );
 };
 
@@ -52,6 +54,6 @@ Tabs.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       text: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
 };

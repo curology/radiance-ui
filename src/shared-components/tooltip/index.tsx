@@ -1,17 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Global } from '@emotion/core';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import { ArrowIcon } from '../../icons';
 import { OffClickWrapper } from '../offClickWrapper';
-import {
-  MainContainer,
-  Trigger,
-  TooltipBox,
-  TooltipContent,
-  ArrowImageContainer,
-} from './style';
+import Style from './style';
 
 export type ArrowAlignTypes = 'left' | 'middle' | 'right';
 
@@ -75,7 +68,7 @@ export interface TooltipProps {
  *
  * They can be triggered from an icon or another component (such as a navigation link)
  */
-export const Tooltip = ({
+export const Tooltip: React.FC<TooltipProps> = ({
   alignRightPercent = 0,
   alignTopPercent = 0,
   arrowAlign = 'middle',
@@ -90,27 +83,16 @@ export const Tooltip = ({
   nudgeRight = 0,
   nudgeTop = 0,
   position = 'top',
-}: TooltipProps) => {
+}) => {
   const theme = useTheme();
   const [clicked, setClicked] = useState(false);
   const [hovered, setHovered] = useState(false);
 
   const onClick = () => {
-    if (clicked) {
-      // if clicked is true, we're about to update to false so remove class
-      document?.querySelector('body')?.classList.remove('cursor-pointer');
-    } else {
-      document?.querySelector('body')?.classList.add('cursor-pointer');
-    }
-
     setClicked(!clicked);
   };
 
   const closeTooltip = () => {
-    if (clicked) {
-      document?.querySelector('body')?.classList.remove('cursor-pointer');
-    }
-
     setClicked(false);
     setHovered(false);
   };
@@ -119,25 +101,23 @@ export const Tooltip = ({
 
   return (
     <OffClickWrapper onOffClick={closeTooltip}>
-      <Global
-        styles={{
-          'body.cursor-pointer': {
-            cursor: 'pointer',
-          },
-        }}
-      />
-      <MainContainer>
-        <Trigger
+      <Style.MainContainer>
+        <Style.Trigger
           onClick={onClick}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          onMouseEnter={() => {
+            setHovered(true);
+          }}
+          onMouseLeave={() => {
+            setHovered(false);
+          }}
         >
           {children}
-        </Trigger>
-        <TooltipBox
+        </Style.Trigger>
+        <Style.TooltipBox
           alignRightPercent={alignRightPercent}
           alignTopPercent={alignTopPercent}
           arrowAlign={arrowAlign}
+          onClick={open ? onClick : undefined}
           displayTooltip={display}
           hasRestrictedWidth={hasRestrictedWidth}
           isSmall={isSmall}
@@ -148,12 +128,15 @@ export const Tooltip = ({
           open={open}
           position={position}
         >
-          <TooltipContent>{content}</TooltipContent>
-          <ArrowImageContainer arrowAlign={arrowAlign} position={position}>
+          <Style.TooltipContent>{content}</Style.TooltipContent>
+          <Style.ArrowImageContainer
+            arrowAlign={arrowAlign}
+            position={position}
+          >
             <ArrowIcon width={16} height={16} fill={theme.COLORS.primary} />
-          </ArrowImageContainer>
-        </TooltipBox>
-      </MainContainer>
+          </Style.ArrowImageContainer>
+        </Style.TooltipBox>
+      </Style.MainContainer>
     </OffClickWrapper>
   );
 };

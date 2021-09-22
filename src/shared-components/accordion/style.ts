@@ -2,14 +2,12 @@ import styled from '@emotion/styled';
 
 import { ANIMATION, BREAKPOINTS, SPACER, ThemeType } from '../../constants';
 
-import { BorderRadiusValues } from '.';
-
-export const Content = styled.div`
+const Content = styled.div`
   padding: ${SPACER.medium};
   width: 100%;
 `;
 
-export const ExpansionWrapper = styled.div<{ contentHeight: string }>`
+const ExpansionWrapper = styled.div<{ contentHeight: string }>`
   max-height: ${({ contentHeight }) => contentHeight};
   overflow: hidden;
   transition: max-height ${ANIMATION.defaultTiming} ease-in-out;
@@ -23,10 +21,10 @@ const getBorderStyle = (theme: ThemeType, isOpen: boolean) => `
   }
 `;
 
-export const AccordionBox = styled.div<{
-  noBorder: boolean;
-  isOpen: boolean;
+const AccordionBox = styled.div<{
   disabled: boolean;
+  isOpen: boolean;
+  noBorder: boolean;
 }>`
   ${({ noBorder, isOpen, theme }) =>
     !noBorder ? getBorderStyle(theme, isOpen) : ''}
@@ -47,7 +45,7 @@ export const AccordionBox = styled.div<{
       : ''};
 `;
 
-export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
+const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
   display: flex;
   align-items: center;
 
@@ -57,8 +55,8 @@ export const ArrowWrapper = styled.div<{ rightAlign: boolean }>`
       : `padding: 0 ${SPACER.medium};`};
 `;
 
-export const TitleWrapper = styled.div<{
-  borderRadius?: BorderRadiusValues;
+const TitleWrapper = styled.div<{
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
   disabled: boolean;
   isOpen: boolean;
 }>`
@@ -75,7 +73,8 @@ export const TitleWrapper = styled.div<{
     &:focus {
       ${({ borderRadius, isOpen, theme }) => {
         if (!isOpen) {
-          const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+          const borderRadiusValue = theme.BORDER_RADIUS[borderRadius];
+
           return `border-bottom-left-radius: ${borderRadiusValue}; 
                   border-bottom-right-radius: ${borderRadiusValue};`;
         }
@@ -85,7 +84,7 @@ export const TitleWrapper = styled.div<{
   }
 `;
 
-export const Truncate = styled.div`
+const Truncate = styled.div`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -96,15 +95,15 @@ export const Truncate = styled.div`
  * borderRadius must match borderRadius passed to main <Accordion />
  * component if opting out of default values.
  */
-export const Container = styled.div<{
-  borderRadius?: BorderRadiusValues;
+const Container = styled.div<{
+  borderRadius?: keyof ThemeType['BORDER_RADIUS'];
 }>`
   box-shadow: ${({ theme }) => theme.BOX_SHADOWS.clickable};
   background-color: ${({ theme }) => theme.COLORS.white};
   max-width: ${BREAKPOINTS.md}px;
 
-  ${({ borderRadius, theme }) => {
-    const borderRadiusValue = borderRadius || theme.BORDER_RADIUS.small;
+  ${({ borderRadius = 'small', theme }) => {
+    const borderRadiusValue = theme.BORDER_RADIUS[borderRadius];
 
     return `
     > div:first-of-type {
@@ -134,3 +133,13 @@ export const Container = styled.div<{
   `;
   }}
 `;
+
+export default {
+  AccordionBox,
+  ArrowWrapper,
+  Container,
+  Content,
+  ExpansionWrapper,
+  TitleWrapper,
+  Truncate,
+};

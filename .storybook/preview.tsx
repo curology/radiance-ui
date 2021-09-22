@@ -2,16 +2,12 @@ import React from 'react';
 import { addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import addons, { StoryContext, StoryGetter } from '@storybook/addons';
-import { Global } from '@emotion/core';
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider } from '@emotion/react';
 import Theme from './theme';
-import {
-  resetStyles,
-  brandStyles,
-} from '../src/utils/injectGlobalStyles/style';
 import { primaryTheme, secondaryTheme } from '../src/constants/themes';
-import { ThemeType } from '../src/constants/themes/types';
+import type { ThemeType } from '../src/constants/themes/types';
 import { BREAKPOINTS } from '../src/constants';
+import { BrandStyles, ResetStyles } from '../src';
 
 const ADDONS_REQUIRED_IN_OPTIONS = {
   isFullscreen: false,
@@ -102,8 +98,8 @@ const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Global styles={resetStyles} />
-      <Global styles={brandStyles(theme)} />
+      <ResetStyles />
+      <BrandStyles />
       <Story {...context} />
     </ThemeProvider>
   );

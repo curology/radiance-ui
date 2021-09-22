@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup } from 'react-transition-group';
 
-import { CenteredMessageList, MessageList, MessageItem } from './style';
+import Style from './style';
 import HelperTransition from '../../utils/helperTransition';
 import formatMessage from './formatMessage';
 
@@ -30,16 +30,18 @@ export interface VerificationMessagesProps {
  *
  * While it can be used as a standalone component, it is intended for use within the Field component.
  */
-export const VerificationMessages = ({
+export const VerificationMessages: React.FC<VerificationMessagesProps> = ({
   centered = false,
   messages = {},
   type = 'error',
-}: VerificationMessagesProps) => {
+}) => {
   const messageKeys = Object.keys(messages);
   const showMessages = messageKeys.length > 0;
 
   return (
-    <TransitionGroup component={centered ? CenteredMessageList : MessageList}>
+    <TransitionGroup
+      component={centered ? Style.CenteredMessageList : Style.MessageList}
+    >
       {showMessages ? (
         messageKeys
           .filter((key) => {
@@ -51,9 +53,9 @@ export const VerificationMessages = ({
           })
           .map((key) => (
             <HelperTransition key={key}>
-              <MessageItem type={type}>
+              <Style.MessageItem type={type}>
                 {formatMessage(messages[key])}
-              </MessageItem>
+              </Style.MessageItem>
             </HelperTransition>
           ))
       ) : (
@@ -65,6 +67,13 @@ export const VerificationMessages = ({
 
 VerificationMessages.propTypes = {
   centered: PropTypes.bool,
-  messages: PropTypes.objectOf(PropTypes.node),
+  messages: PropTypes.objectOf(
+    PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string.isRequired),
+      PropTypes.arrayOf(PropTypes.element.isRequired),
+    ]).isRequired,
+  ),
   type: PropTypes.oneOf(['error', 'success']),
 };

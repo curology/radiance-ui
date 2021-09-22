@@ -6,8 +6,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
-import type { Meta } from '@storybook/react';
+} from '@storybook/addon-docs';
 import { text, number, boolean } from '@storybook/addon-knobs';
 import * as iconComponents from 'src/icons/icons';
 import * as emojiComponents from 'src/icons/emojis';
@@ -16,7 +15,8 @@ import * as logoComponents from 'src/icons/logos';
 import * as navIconComponents from 'src/icons/navIcons';
 import { Typography } from 'src/shared-components';
 import { BREAKPOINTS } from 'src/constants';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
+import type { Meta } from '@storybook/react';
 
 import { Icon as IconComponent } from '../../src/shared-components/icon';
 import { CameraIcon } from '../../src/icons';
@@ -50,55 +50,42 @@ const shouldRenderIcon = (Icon: valueof<typeof iconComponents>) => {
   return renderedIcon !== null;
 };
 
+interface IconsProps {
+  icons:
+    | typeof logoComponents
+    | typeof iconComponents
+    | typeof emojiComponents
+    | typeof glyphComponents;
+}
+
+const Icons = ({ icons }: IconsProps) => {
+  const iconList = Object.entries(icons).map(([name, Icon]) => {
+    if (!shouldRenderIcon(Icon)) return null;
+
+    return (
+      <Style.IconContainer key={name}>
+        <Icon />
+        <Style.IconLabel>{name}</Style.IconLabel>
+      </Style.IconContainer>
+    );
+  });
+
+  return <Style.Icons>{iconList}</Style.Icons>;
+};
+
 export const IconLibrary = () => (
   <React.Fragment>
     <Typography.Heading>Logos</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(logoComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
-    </Style.Icons>
+    <Icons icons={logoComponents} />
 
     <Typography.Heading>Icons</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(iconComponents).map(([name, Icon]) => {
-        if (!shouldRenderIcon(Icon)) return null;
-
-        return (
-          <Style.IconContainer key={name}>
-            <Icon />
-            <Style.IconLabel>{name}</Style.IconLabel>
-          </Style.IconContainer>
-        );
-      })}
-    </Style.Icons>
+    <Icons icons={iconComponents} />
 
     <Typography.Heading>Emojis</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(emojiComponents).map(([name, Icon]) => (
-        <Style.IconContainer key={name}>
-          <Icon />
-          <Style.IconLabel>{name}</Style.IconLabel>
-        </Style.IconContainer>
-      ))}
-    </Style.Icons>
+    <Icons icons={emojiComponents} />
 
     <Typography.Heading>Glyphs</Typography.Heading>
-    <Style.Icons>
-      {Object.entries(glyphComponents).map(([name, Icon]) => {
-        if (!shouldRenderIcon(Icon)) return null;
-
-        return (
-          <Style.IconContainer key={name}>
-            <Icon />
-            <Style.IconLabel>{name}</Style.IconLabel>
-          </Style.IconContainer>
-        );
-      })}
-    </Style.Icons>
+    <Icons icons={glyphComponents} />
 
     <Typography.Heading>Nav Icons</Typography.Heading>
     <Style.Icons>

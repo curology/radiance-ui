@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import Loader from '../../shared-components/loader';
-import {
-  RoundButtonWrapper,
-  RoundButtonBase,
-  roundButtonLoader,
-  RoundButtonContainer,
-  roundButtonTextStyles,
-} from './style';
+import Style from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import { ButtonTypeWithAction } from '../..';
 import {
   deprecatedProperties,
   isLoadingPropFunction,
 } from '../../deprecatedPropsHandler';
 import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { isDefined } from '../../../../utils/isDefined';
+import type { ButtonTypeWithAction } from '../../types';
 
 export interface RoundButtonProps {
   buttonColor?: ThemeColors;
@@ -46,6 +41,10 @@ export interface RoundButtonProps {
   [key: string]: unknown;
 }
 
+interface RoundButton extends React.FC<RoundButtonProps> {
+  Container: typeof Style.RoundButtonContainer;
+}
+
 /**
  * `<RoundButton />` behaves mostly the same as `<Button />` except that it requires an `icon` prop since that is the main content placed with in the round button. Any children of the component will be rendered immediately below the round button.
  *
@@ -53,10 +52,10 @@ export interface RoundButtonProps {
  *
  * We should generally try to use the default button color when possible. Only for special cases should we need to use a different button color.
  */
-export const RoundButton = ({
+export const RoundButton: RoundButton = ({
   buttonColor,
   buttonType = 'primary',
-  children = '',
+  children,
   disabled = false,
   icon,
   isLoading = false,
@@ -64,20 +63,21 @@ export const RoundButton = ({
   onClick = () => undefined,
   textColor,
   ...rest
-}: RoundButtonProps) => {
+}) => {
   const theme = useTheme();
-  const buttonColorWithTheme = buttonColor || theme.COLORS.primary;
+  const buttonColorWithTheme = buttonColor ?? theme.COLORS.primary;
   const loadingVal = loading === undefined ? isLoading : loading;
 
   return (
-    <RoundButtonWrapper>
-      <RoundButtonBase
+    <Style.RoundButtonWrapper>
+      <Style.RoundButtonBase
         onClick={!disabled && !isLoading ? onClick : () => false}
         disabled={disabled}
         buttonType={buttonType}
         buttonColor={buttonColorWithTheme}
         isLoading={loadingVal}
         type="button"
+        isFullWidth={false}
         textColor={textColor}
         // eslint-disable-next-line react/jsx-props-no-spreading
         {...rest}
@@ -87,21 +87,27 @@ export const RoundButton = ({
           buttonColor={buttonColorWithTheme}
           buttonType={buttonType}
           disabled={disabled}
-          css={roundButtonLoader(disabled, theme)}
+          css={Style.roundButtonLoader(disabled, theme)}
           isLoading={loadingVal}
           textColor={textColor}
         />
-      </RoundButtonBase>
-      {children && (
-        <p css={roundButtonTextStyles(buttonColorWithTheme, theme, textColor)}>
+      </Style.RoundButtonBase>
+      {isDefined(children) && (
+        <p
+          css={Style.roundButtonTextStyles(
+            buttonColorWithTheme,
+            theme,
+            textColor,
+          )}
+        >
           {children}
         </p>
       )}
-    </RoundButtonWrapper>
+    </Style.RoundButtonWrapper>
   );
 };
 
-RoundButton.Container = RoundButtonContainer;
+RoundButton.Container = Style.RoundButtonContainer;
 
 RoundButton.propTypes = {
   buttonColor: COLORS_PROP_TYPES,
@@ -118,7 +124,7 @@ RoundButton.propTypes = {
   isLoading: PropTypes.bool,
   loading: isLoadingPropFunction,
   onClick: PropTypes.func,
-  textColor: PropTypes.string,
+  textColor: COLORS_PROP_TYPES,
 };
 
 export default withDeprecationWarning(RoundButton, deprecatedProperties);
