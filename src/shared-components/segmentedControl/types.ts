@@ -1,16 +1,16 @@
-export type SegmentedControlProps = {
+export interface SegmentedControlProps {
   /**
    * Initial segment id to display as active
    */
   initialActiveId?: number;
-  segmentItems: SegmentItemType[];
   /**
    * Callback invoked on `segmentItem` click
    */
   onClick?: (segment: SegmentItemType) => void;
-};
+  segmentItems: SegmentItemType[];
+}
 
-export type SegmentItemType = {
+export interface SegmentItemType {
   id: number;
   text: string;
-};
+}

@@ -4,7 +4,9 @@ import { SegmentsContainer, SegmentItem, Indicator } from './style';
 import { SegmentedControlProps, SegmentItemType } from './types';
 
 /**
- * The width of the top-level container is set to 100%, so it will expand to fill its parent container. Set a non-percentage `width` on the parent element during implementation to avoid stretched-out layout or animation effects.
+ * The width of the top-level container is set to 100%, so it will expand to fill its parent container.
+ *
+ * Set a non-percentage `width` on the parent element during implementation to avoid stretched-out layout or animation effects.
  */
 export const SegmentedControl: React.FC<SegmentedControlProps> = ({
   segmentItems,
@@ -24,9 +26,8 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
   const [activeSegmentText, setActiveSegmentText] = useState(() =>
     initialActiveItem ? initialActiveItem.text : segmentItems[0].text,
   );
-  const [activeSegmentIndex, setActiveSegmentIndex] = useState(
-    initialActiveIndex,
-  );
+  const [activeSegmentIndex, setActiveSegmentIndex] =
+    useState(initialActiveIndex);
   const targetRef = useRef<HTMLButtonElement>(null);
   const [transform, setTransform] = useState('');
   const [targetWidth, setTargetWidth] = useState(0);
@@ -47,7 +48,10 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
     setActiveSegmentText(segment.text);
     setActiveSegmentIndex(index);
     setTransform(`translate3d(${targetWidth * index}px, 0, 0)`);
-    return onClick ? onClick(segment) : null;
+
+    if (onClick) {
+      onClick(segment);
+    }
   };
 
   return (
@@ -60,7 +64,9 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
           width={segmentWidth}
           active={index === activeSegmentIndex}
           key={segment.id}
-          onClick={() => onSegmentClick(segment, index)}
+          onClick={() => {
+            onSegmentClick(segment, index);
+          }}
           disabled={index === activeSegmentIndex}
         >
           {segment.text}
