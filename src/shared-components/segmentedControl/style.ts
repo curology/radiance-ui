@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { SPACER } from '../../constants';
+import { SPACER, ThemeType } from '../../constants';
 import { TYPOGRAPHY_STYLE } from '../typography';
 
 interface SegmentItemProps {
@@ -16,13 +16,17 @@ interface IndicatorProps {
   width: number;
 }
 
+// This border radius value is only used for the SegmentedControl component.
+const getSegmentedControlBorderRadius = (theme: ThemeType) =>
+  theme.__type === 'primary' ? '80px' : '0';
+
 export const SegmentsContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border-radius: 80px;
+  border-radius: ${({ theme }) => getSegmentedControlBorderRadius(theme)};
   background-color: ${({ theme }) => theme.COLORS.border};
   padding: ${SPACER.xsmall};
   border: 4px solid ${({ theme }) => theme.COLORS.border};
@@ -40,7 +44,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   border: none;
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)};
   color: ${({ theme }) => theme.COLORS.primaryTint2};
-  border-radius: 80px;
+  border-radius: ${({ theme }) => getSegmentedControlBorderRadius(theme)};
   background-color: ${({ theme }) => theme.COLORS.border};
   width: ${({ width }) => `${width}%`};
   &:focus {
@@ -58,7 +62,7 @@ export const Indicator = styled.button<IndicatorProps>`
   cursor: pointer;
   margin: 0;
   position: absolute;
-  border-radius: 80px;
+  border-radius: ${({ theme }) => getSegmentedControlBorderRadius(theme)};
   width: ${({ width }) => `${width}%`};
   top: 0;
   left: 0;
