@@ -35,7 +35,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   top: 0;
   left: 0;
   bottom: 0;
-  border: 4px solid ${({ theme }) => theme.COLORS.border};
+  padding: ${SPACER.xsmall};
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)};
   color: ${({ theme }) => theme.COLORS.primaryTint2};
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
@@ -68,7 +68,6 @@ export const Indicator = styled.button<IndicatorProps>`
   color: ${({ theme }) => theme.COLORS.primary};
   font-weight: bold;
   transform: ${({ transform }) => transform};
-  box-shadow: 0px 2px 4px rgba(51, 46, 84, 0.05);
   border: 4px solid ${({ theme }) => theme.COLORS.border};
 
   &:focus {
