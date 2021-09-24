@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { SPACER, ThemeType } from '../../constants';
+import { SPACER } from '../../constants';
 import { TYPOGRAPHY_STYLE } from '../typography';
 
 interface SegmentItemProps {
@@ -16,17 +16,13 @@ interface IndicatorProps {
   width: number;
 }
 
-// This border radius value is only used for the SegmentedControl component.
-const getSegmentedControlBorderRadius = (theme: ThemeType) =>
-  theme.__type === 'primary' ? '80px' : '0';
-
 export const SegmentsContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border-radius: ${({ theme }) => getSegmentedControlBorderRadius(theme)};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background-color: ${({ theme }) => theme.COLORS.border};
   padding: ${SPACER.xsmall};
   border: 4px solid ${({ theme }) => theme.COLORS.border};
@@ -44,9 +40,10 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   border: none;
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)};
   color: ${({ theme }) => theme.COLORS.primaryTint2};
-  border-radius: ${({ theme }) => getSegmentedControlBorderRadius(theme)};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background-color: ${({ theme }) => theme.COLORS.border};
   width: ${({ width }) => `${width}%`};
+
   &:focus {
     outline: none;
     box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.COLORS.primary};
@@ -62,19 +59,20 @@ export const Indicator = styled.button<IndicatorProps>`
   cursor: pointer;
   margin: 0;
   position: absolute;
-  border-radius: ${({ theme }) => getSegmentedControlBorderRadius(theme)};
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   width: ${({ width }) => `${width}%`};
   top: 0;
   left: 0;
   bottom: 0;
   background-color: white;
-  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)};
   color: ${({ theme }) => theme.COLORS.primary};
   font-weight: bold;
   transform: ${({ transform }) => transform};
   box-shadow: 0px 2px 4px rgba(51, 46, 84, 0.05);
   border: none;
+
   &:focus {
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
     outline: none;
