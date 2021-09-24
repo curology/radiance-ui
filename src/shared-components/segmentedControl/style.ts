@@ -7,12 +7,12 @@ import { TYPOGRAPHY_STYLE } from '../typography';
 interface SegmentItemProps {
   active: boolean;
   onClick: () => void;
-  width: number;
+  segmentWidth: number;
 }
 
 interface IndicatorProps {
+  segmentWidth: number;
   transform: string;
-  width: number;
 }
 
 export const SegmentsContainer = styled.div`
@@ -23,7 +23,7 @@ export const SegmentsContainer = styled.div`
   position: relative;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background-color: ${({ theme }) => theme.COLORS.border};
-  padding: ${SPACER.xsmall};
+  padding: ${SPACER.xsmall} 0;
 `;
 
 export const SegmentItem = styled.button<SegmentItemProps>`
@@ -40,7 +40,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   color: ${({ theme }) => theme.COLORS.primaryTint2};
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background-color: ${({ theme }) => theme.COLORS.border};
-  width: ${({ width }) => `${width}%`};
+  width: ${({ segmentWidth }) => `${segmentWidth}%;`};
 
   &:focus {
     outline: none;
@@ -58,7 +58,7 @@ export const Indicator = styled.button<IndicatorProps>`
   margin: 0;
   position: absolute;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
-  width: ${({ width }) => `${width}%`};
+  width: ${({ segmentWidth }) => `${segmentWidth}%`};
   top: 0;
   left: 0;
   bottom: 0;

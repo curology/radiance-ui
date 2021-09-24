@@ -17,7 +17,7 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   position: relative;
   border-radius: 32px;
   background-color: #EDEDF0;
-  padding: 0.25rem;
+  padding: 0.25rem 0;
 }
 
 .emotion-2 {
@@ -105,26 +105,22 @@ exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
   <button
     class="emotion-2 emotion-3"
     transform="translate3d(0px, 0, 0)"
-    width="33.333333333333336"
   >
     Tab 1
   </button>
   <button
     class="emotion-4 emotion-5"
     disabled=""
-    width="33.333333333333336"
   >
     Tab 1
   </button>
   <button
     class="emotion-4 emotion-5"
-    width="33.333333333333336"
   >
     Tab 2
   </button>
   <button
     class="emotion-4 emotion-5"
-    width="33.333333333333336"
   >
     Tab 3
   </button>

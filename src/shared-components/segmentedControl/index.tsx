@@ -13,12 +13,16 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
   initialActiveId = 1,
   onClick,
 }) => {
-  if (segmentItems.length === 0) {
+  const itemsCount = segmentItems.length;
+
+  if (itemsCount === 0) {
     return null;
   }
+
   const initialActiveItem = segmentItems.find(
     (item: SegmentItemType) => item.id === initialActiveId,
   );
+
   const initialActiveIndex = initialActiveItem
     ? segmentItems.indexOf(initialActiveItem)
     : 0;
@@ -31,7 +35,7 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
   const targetRef = useRef<HTMLButtonElement>(null);
   const [transform, setTransform] = useState('');
   const [targetWidth, setTargetWidth] = useState(0);
-  const segmentWidth = 100 / segmentItems.length;
+  const segmentWidth = 100 / itemsCount;
 
   useEffect(() => {
     if (targetRef.current) {
@@ -53,15 +57,18 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
       onClick(segment);
     }
   };
-
   return (
     <SegmentsContainer>
-      <Indicator width={segmentWidth} transform={transform} ref={targetRef}>
+      <Indicator
+        segmentWidth={segmentWidth}
+        transform={transform}
+        ref={targetRef}
+      >
         {activeSegmentText}
       </Indicator>
       {segmentItems.map((segment, index) => (
         <SegmentItem
-          width={segmentWidth}
+          segmentWidth={segmentWidth}
           active={index === activeSegmentIndex}
           key={segment.id}
           onClick={() => {
