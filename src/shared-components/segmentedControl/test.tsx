@@ -12,7 +12,7 @@ const testSegmentedControl = {
 };
 
 describe('<SegmentedControl />', () => {
-  test('renders a regular segmented control', () => {
+  it('renders a regular segmented control', () => {
     const { container } = render(
       <SegmentedControl {...testSegmentedControl} />,
     );
@@ -20,7 +20,7 @@ describe('<SegmentedControl />', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  test('calls onClick when button is clicked', () => {
+  it('calls onClick when button is clicked', () => {
     const spy = jest.fn();
 
     const { getByRole } = render(
