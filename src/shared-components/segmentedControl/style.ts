@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { buttonReset } from 'src/utils/styles/buttonReset';
 
-import { SPACER } from '../../constants';
+import { SPACER, Z_SCALE } from '../../constants';
 import { TYPOGRAPHY_STYLE } from '../typography';
 
 interface SegmentItemProps {
@@ -17,6 +17,7 @@ interface IndicatorProps {
 
 export const SegmentsContainer = styled.div`
   width: 100%;
+  height: ${SPACER.x2large};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,7 +46,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   &:focus {
     outline: none;
     box-shadow: 0px 0px 0px 2px ${({ theme }) => theme.COLORS.primary};
-    z-index: 3;
+    z-index: ${Z_SCALE.e3};
   }
 `;
 
