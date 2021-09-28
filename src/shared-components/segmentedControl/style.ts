@@ -31,7 +31,7 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 ${SPACER.x2small};
   top: 0;
   left: 0;
   bottom: 0;

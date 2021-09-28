@@ -12,8 +12,8 @@ import {
 import type { Meta } from '@storybook/react';
 import { SegmentItemType } from 'src/shared-components/segmentedControl/types';
 
-const SegmentedControlContainer = styled.div<{ width?: string }>`
-  width: ${({ width = '500px' }) => width};
+const SegmentedControlContainer = styled.div<{ segmentedWidth?: number }>`
+  width: ${({ segmentedWidth = 500 }) => `${segmentedWidth}px`};
 `;
 
 /* eslint-disable no-console */
@@ -28,7 +28,7 @@ export const TwoItems = () => {
   };
 
   return (
-    <SegmentedControlContainer width="300px">
+    <SegmentedControlContainer segmentedWidth={344}>
       <SegmentedControl onClick={onClick} segmentItems={twoItems} />
     </SegmentedControlContainer>
   );
@@ -46,7 +46,7 @@ export const ThreeItems = () => {
   };
 
   return (
-    <SegmentedControlContainer>
+    <SegmentedControlContainer segmentedWidth={349}>
       <SegmentedControl onClick={onClick} segmentItems={threeItems} />
     </SegmentedControlContainer>
   );
