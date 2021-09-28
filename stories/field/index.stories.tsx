@@ -189,7 +189,6 @@ export const WithControls = () => (
   <FieldsContainer>
     <Field
       disabled={boolean('disabled', false)}
-      // @ts-expect-error: select + Field['message'] type compat issue
       messages={select('messages', messagesOptions, {})}
       messagesType={
         select('messagesType', messagesTypeOptions, 'error') as

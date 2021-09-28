@@ -6,14 +6,13 @@ import { TYPOGRAPHY_STYLE } from '../typography';
 
 interface SegmentItemProps {
   active: boolean;
-  key: number;
   onClick: () => void;
-  width: number;
+  segmentWidth: number;
 }
 
 interface IndicatorProps {
+  segmentWidth: number;
   transform: string;
-  width: number;
 }
 
 export const SegmentsContainer = styled.div`
@@ -24,8 +23,7 @@ export const SegmentsContainer = styled.div`
   position: relative;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background-color: ${({ theme }) => theme.COLORS.border};
-  padding: ${SPACER.xsmall};
-  border: 4px solid ${({ theme }) => theme.COLORS.border};
+  padding: ${SPACER.xsmall} 0;
 `;
 
 export const SegmentItem = styled.button<SegmentItemProps>`
@@ -33,16 +31,16 @@ export const SegmentItem = styled.button<SegmentItemProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 ${SPACER.x2small};
   top: 0;
   left: 0;
   bottom: 0;
-  border: none;
+  padding: ${SPACER.xsmall};
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)};
   color: ${({ theme }) => theme.COLORS.primaryTint2};
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
   background-color: ${({ theme }) => theme.COLORS.border};
-  width: ${({ width }) => `${width}%`};
+  width: ${({ segmentWidth }) => `${segmentWidth}%;`};
 
   &:focus {
     outline: none;
@@ -60,7 +58,7 @@ export const Indicator = styled.button<IndicatorProps>`
   margin: 0;
   position: absolute;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS.large};
-  width: ${({ width }) => `${width}%`};
+  width: ${({ segmentWidth }) => `${segmentWidth}%`};
   top: 0;
   left: 0;
   bottom: 0;
@@ -70,8 +68,7 @@ export const Indicator = styled.button<IndicatorProps>`
   color: ${({ theme }) => theme.COLORS.primary};
   font-weight: bold;
   transform: ${({ transform }) => transform};
-  box-shadow: 0px 2px 4px rgba(51, 46, 84, 0.05);
-  border: none;
+  border: 4px solid ${({ theme }) => theme.COLORS.border};
 
   &:focus {
     box-shadow: ${({ theme }) => theme.BOX_SHADOWS.focusInner};
