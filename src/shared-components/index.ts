@@ -20,6 +20,7 @@ export * from './offClickWrapper';
 export * from './optionButton';
 export * from './progressBar';
 export * from './radioButton';
+export * from './segmentedControl';
 export * from './tabs';
 export * from './toggle';
 export * from './tooltip';
