@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v24.4.0
+
+- [Components] Add SegmentedControl ([#405](https://github.com/curology/radiance-ui/pull/405))
+
 # v24.3.0
 
 - [ImmersiveModal] Enhance keyboard navigation + controls ([#1159](https://github.com/curology/radiance-ui/pull/1159))
