@@ -2,16 +2,16 @@ import { isDefined } from '.';
 
 describe('isDefined', () => {
   it('should return true for any argument that is neither null nor undefined', () => {
-    expect(isDefined('string')).toStrictEqual(true);
-    expect(isDefined(1)).toStrictEqual(true);
-    expect(isDefined([])).toStrictEqual(true);
-    expect(isDefined({})).toStrictEqual(true);
-    expect(isDefined(Symbol('Test'))).toStrictEqual(true);
+    expect(isDefined('string')).toBe(true);
+    expect(isDefined(1)).toBe(true);
+    expect(isDefined([])).toBe(true);
+    expect(isDefined({})).toBe(true);
+    expect(isDefined(Symbol('Test'))).toBe(true);
   });
 
   it('should return false for null and undefined', () => {
-    expect(isDefined(undefined)).toStrictEqual(false);
-    expect(isDefined(null)).toStrictEqual(false);
+    expect(isDefined(undefined)).toBe(false);
+    expect(isDefined(null)).toBe(false);
   });
 
   it('should filter out null and undefined values when provided as an argument to Array.prototype.filter()', () => {
