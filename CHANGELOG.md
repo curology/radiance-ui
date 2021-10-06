@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v24.6.0
+
+- [Icons] Add MakeupGlyph ([#1199](https://github.com/curology/radiance-ui/pull/1199))
+
 # v24.5.0
 
 - [Icons] Add CleanseGlyph, HydrateGlyph, and ProtectGlyph ([#1175](https://github.com/curology/radiance-ui/pull/#1175))
