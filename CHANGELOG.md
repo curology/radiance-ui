@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v24.5.0
+
+- [Icons] Add CleanseGlyph, HydrateGlyph, and ProtectGlyph ([#1175](https://github.com/curology/radiance-ui/pull/#1175))
+
 # v24.4.0
 
 - [Components] Add SegmentedControl ([#405](https://github.com/curology/radiance-ui/pull/405))
