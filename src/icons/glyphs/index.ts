@@ -56,6 +56,7 @@ export { default as LightbulbGlyph } from './lightbulbGlyph';
 export { default as LipBalmGlyph } from './lipBalmGlyph';
 export { default as LockGlyph } from './lockGlyph';
 export { default as LunchGlyph } from './lunchGlyph';
+export { default as MakeupGlyph } from './makeupGlyph';
 export { default as MaleGlyph } from './maleGlyph';
 export { default as MelasmaGlyph } from './melasmaGlyph';
 export { default as MessageGlyph } from './messageGlyph';
