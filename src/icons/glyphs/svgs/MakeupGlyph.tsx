@@ -3,18 +3,18 @@ import * as React from 'react';
 function SvgMakeupGlyph(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      fill="none"
+      width={48}
       height={48}
       viewBox="0 0 48 48"
-      width={48}
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
       <path
-        clipRule="evenodd"
-        d="M33.767 11.509h-2.044v2.338h3.5v1.25h-3.5v2.215h3.5v1.25h-3.5v2.586h2.044v1.25h-2.044v5.56h-1.25v-5.56h-2.044v-1.25h2.044v-2.586h-3.5v-1.25h3.5v-2.215h-3.5v-1.25h3.5V11.51h-2.044v-1.25h5.338zm-13.71 10.635V35.63h-4.125V22.143zm1.456-1.609h-7.037v16.58h7.037zm11.648 9.033v6.063h-4.004v-6.063zm1.456-1.609h-7.038v9.156h7.038z"
-        fill="currentColor"
         fillRule="evenodd"
+        clipRule="evenodd"
+        d="M31.952 13.25h-1.755v1.948h3.053v1.25h-3.053v1.838h3.053v1.25h-3.053v2.168h1.755v1.25h-1.755v4.888h-1.25v-4.888h-1.755v-1.25h1.755v-2.168h-3.054v-1.25h3.054v-1.838h-3.054v-1.25h3.054V13.25h-1.755V12h4.76v1.25zm-12.225 9.41v12.02h-3.679V22.66h3.679zm1.298-1.434H14.75v14.776h6.275V21.226zm10.386 8.05v5.403h-3.57v-5.403h3.57zm1.298-1.433h-6.275v8.16h6.275v-8.16z"
+        fill="currentColor"
       />
     </svg>
   );
