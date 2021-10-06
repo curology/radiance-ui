@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SegmentedControl /> renders a regular segmented control 1`] = `
+.emotion-0 {
+  width: 100%;
+  height: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 32px;
+  background-color: #EDEDF0;
+  padding: 0.25rem 0;
+}
+
+.emotion-2 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  border-radius: 32px;
+  width: 33.333333333333336%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #332E54;
+  font-weight: bold;
+  -webkit-transform: translate3d(0px, 0, 0);
+  -moz-transform: translate3d(0px, 0, 0);
+  -ms-transform: translate3d(0px, 0, 0);
+  transform: translate3d(0px, 0, 0);
+  border: 4px solid #EDEDF0;
+}
+
+.emotion-2:focus {
+  box-shadow: inset 0px 0px 0px 2px #332E54;
+  outline: none;
+}
+
+.emotion-4 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: 0 0.125rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 0.25rem;
+  color: #706D87;
+  font-size: 0.875rem;
+  line-height: 1.71;
+  color: #706D87;
+  border-radius: 32px;
+  background-color: #EDEDF0;
+  width: 33.333333333333336%;
+}
+
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #332E54;
+  z-index: 3;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <button
+    class="emotion-2 emotion-3"
+    transform="translate3d(0px, 0, 0)"
+  >
+    Tab 1
+  </button>
+  <button
+    class="emotion-4 emotion-5"
+    disabled=""
+  >
+    Tab 1
+  </button>
+  <button
+    class="emotion-4 emotion-5"
+  >
+    Tab 2
+  </button>
+  <button
+    class="emotion-4 emotion-5"
+  >
+    Tab 3
+  </button>
+</div>
+`;
