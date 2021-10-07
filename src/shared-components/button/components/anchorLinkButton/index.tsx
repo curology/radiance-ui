@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 
 import Style from './style';
 
-export interface AnchorLinkButtonProps {
+export interface AnchorLinkButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   /**
    * Text to be displayed
    */
@@ -28,10 +32,11 @@ type ButtonRefType =
 export const AnchorLinkButton: React.ForwardRefExoticComponent<
   AnchorLinkButtonProps & React.RefAttributes<HTMLButtonElement>
 > = React.forwardRef((props: AnchorLinkButtonProps, ref: ButtonRefType) => {
-  const { children, onClick } = props;
+  const { children, onClick, ...rest } = props;
 
   return (
     <button
+      {...rest}
       ref={ref}
       css={Style.anchorLinkButton}
       onClick={onClick}
