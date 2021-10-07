@@ -12,5 +12,18 @@ describe('<AnchorLinkButton/>', () => {
 
       expect(container.firstElementChild).toMatchSnapshot();
     });
+
+    it('passes down all valid button props to underlying button', () => {
+      const label = 'Click me for more information';
+
+      const { getByLabelText } = render(
+        <AnchorLinkButton onClick={() => undefined} aria-label={label}>
+          Click me
+        </AnchorLinkButton>,
+      );
+
+      const button = getByLabelText(label);
+      expect(button).toHaveTextContent('Click me');
+    });
   });
 });
