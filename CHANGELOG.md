@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v24.6.1
+
+- [AnchorLinkButton] Allow all valid HTMLButtonProps as props ([#1200](https://github.com/curology/radiance-ui/pull/1200))
+
 # v24.6.0
 
 - [Icons] Add MakeupGlyph ([#1199](https://github.com/curology/radiance-ui/pull/1199))
