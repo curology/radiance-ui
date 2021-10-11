@@ -53,6 +53,8 @@ export { default as HydrocortisoneGlyph } from './hydrocortisoneGlyph';
 export { default as HydroquinoneCycleGlyph } from './hydroquinoneCycleGlyph';
 export { default as HydroquinoneGlyph } from './hydroquinoneGlyph';
 export { default as IntersexGlyph } from './intersexGlyph';
+export { default as IvermectinGlyph } from './ivermectinGlyph';
+export { default as KetoconazoleGlyph } from './ketoconazoleGlyph';
 export { default as KojicAcidGlyph } from './kojicAcidGlyph';
 export { default as LightbulbGlyph } from './lightbulbGlyph';
 export { default as LipBalmGlyph } from './lipBalmGlyph';
