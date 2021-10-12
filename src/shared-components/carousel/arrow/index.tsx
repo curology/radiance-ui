@@ -31,6 +31,7 @@ const Arrow: React.FC<ArrowProps> = ({
           disabled={disabled}
           icon={<ArrowLeftIcon />}
           onClick={onClick}
+          aria-label="Previous item"
         />
       )}
       {next && (
@@ -39,6 +40,7 @@ const Arrow: React.FC<ArrowProps> = ({
           disabled={disabled}
           icon={<ArrowRightIcon />}
           onClick={onClick}
+          aria-label="Next item"
         />
       )}
     </ArrowContainerComponent>
