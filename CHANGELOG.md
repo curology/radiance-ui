@@ -1,4 +1,9 @@
 # CHANGELOG
+
+# v24.7.0
+- [Icons] Update KojicAcidGlyph ([#1214](https://github.com/curology/radiance-ui/pull/1214))
+- [Icons] Update AzelaicAcidGlyph ([#1214](https://github.com/curology/radiance-ui/pull/1214))
+
 # v24.6.2
 - [Icons] Add IvermectinGlyph([#1209](https://github.com/curology/radiance-ui/pull/1209))
 - [Icons] Add KetoconazoleGlyph([#1209](https://github.com/curology/radiance-ui/pull/1209))
