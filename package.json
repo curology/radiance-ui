@@ -126,7 +126,7 @@
     "babel-loader": "^8.1.0",
     "browserslist-ga-export": "^4.0.1",
     "bundlewatch": "^0.3.1",
-    "chromatic": "^5.2.0",
+    "chromatic": "^6.0.4",
     "circular-dependency-plugin": "^5.0.2",
     "create-index": "https://github.com/curology/create-index.git#2020-updates",
     "eslint": "^7.19.0",
