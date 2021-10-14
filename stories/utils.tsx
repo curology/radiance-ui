@@ -1,5 +1,5 @@
 import React from 'react';
-import isChromatic from 'chromatic/isChromatic';
+import isChromatic from 'chromatic';
 import type { StoryFnReactReturnType } from '@storybook/react/dist/ts3.9/client/preview/types';
 
 /**
