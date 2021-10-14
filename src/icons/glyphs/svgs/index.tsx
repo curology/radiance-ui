@@ -75,6 +75,8 @@ export { default as HydroquinoneCycleGlyphSecondary } from './HydroquinoneCycleG
 export { default as HydroquinoneGlyphSecondary } from './HydroquinoneGlyphSecondary'
 export { default as HydroquinoneGlyph } from './HydroquinoneGlyph'
 export { default as IntersexGlyphSecondary } from './IntersexGlyphSecondary'
+export { default as IvermectinGlyph } from './IvermectinGlyph'
+export { default as KetoconazoleGlyph } from './KetoconazoleGlyph'
 export { default as KojicAcidGlyphSecondary } from './KojicAcidGlyphSecondary'
 export { default as KojicAcidGlyph } from './KojicAcidGlyph'
 export { default as LightbulbGlyphSecondary } from './LightbulbGlyphSecondary'
