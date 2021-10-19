@@ -1230,10 +1230,10 @@
     "@emotion/utils" "0.11.3"
     babel-plugin-emotion "^10.0.27"
 
-"@emotion/eslint-plugin@^11.2.0":
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/@emotion/eslint-plugin/-/eslint-plugin-11.2.0.tgz#10cb154510728be9276b1cecee15917f26919c44"
-  integrity sha512-vpyeUtQKudpYjQ2hUG6vroVqSQiBn1Q37HBEck5wma9M+DmzaU8Uh8k5GffXfGcVzervPB3GCX5ip6n7toLmIQ==
+"@emotion/eslint-plugin@^11.5.0":
+  version "11.5.0"
+  resolved "https://registry.yarnpkg.com/@emotion/eslint-plugin/-/eslint-plugin-11.5.0.tgz#1bad513b0d557e9a2cbf91415d409113595400c2"
+  integrity sha512-AyjeBIHuFYQIMLB+t5VRqXGzMkrD98p9aCgxTxt0DGBjQa6ExDU5xvhbeSjLRClc1zIYkDmbNBbGB71RAVgqFw==
 
 "@emotion/hash@0.8.0", "@emotion/hash@^0.8.0":
   version "0.8.0"
@@ -1254,16 +1254,16 @@
   dependencies:
     "@emotion/memoize" "^0.7.4"
 
-"@emotion/jest@^11.3.0":
-  version "11.3.0"
-  resolved "https://registry.yarnpkg.com/@emotion/jest/-/jest-11.3.0.tgz#43bed6dcb47c8691b346cee231861ebc8f9b0016"
-  integrity sha512-LZqYc3yerhic1IvAcEwBLRs1DsUt3oY7Oz6n+e+HU32iYOK/vpfzlhgmQURE94BHfv6eCOj6DV38f3jSnIkBkQ==
+"@emotion/jest@^11.5.0":
+  version "11.5.0"
+  resolved "https://registry.yarnpkg.com/@emotion/jest/-/jest-11.5.0.tgz#db156dbb2f9b482893647cff841d7ad2b9efde80"
+  integrity sha512-bz791yTD1I9lyB+h0+nDahmMv4kf3d+hGj85QncY3qB8VwGe03zVxdKutgaTNg7gvsRFh3ovhQGbsbwOJZMXqQ==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@emotion/css-prettifier" "^1.0.0"
     chalk "^4.1.0"
     specificity "^0.4.1"
-    stylis "^4.0.3"
+    stylis "^4.0.10"
 
 "@emotion/memoize@0.7.4":
   version "0.7.4"
@@ -12061,15 +12061,10 @@ style-to-object@0.3.0, style-to-object@^0.3.0:
   dependencies:
     inline-style-parser "0.1.1"
 
-stylis@^4.0.10:
+stylis@^4.0.10, stylis@^4.0.3:
   version "4.0.10"
   resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.10.tgz#446512d1097197ab3f02fb3c258358c3f7a14240"
   integrity sha512-m3k+dk7QeJw660eIKRRn3xPF6uuvHs/FFzjX3HQ5ove0qYsiygoAhwn5a3IYKaZPo5LrYD0rfVmtv1gNY1uYwg==
-
-stylis@^4.0.3:
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/stylis/-/stylis-4.0.9.tgz#ae3d5283aa439225cf79dd2d0cf46f8bfd4ad393"
-  integrity sha512-ci7pEFNVW3YJiWEzqPOMsAjY6kgraZ3ZgBfQ5HYbNtLJEsQ0G46ejWZpfSSCp/FaSiCSGGhzL9O2lN+2cB6ong==
 
 supports-color@8.1.1, supports-color@^8.0.0:
   version "8.1.1"
