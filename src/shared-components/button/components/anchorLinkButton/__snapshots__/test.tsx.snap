@@ -15,7 +15,6 @@ exports[`<AnchorLinkButton/> UI snapshots to double-check regressions renders wi
   padding: 0;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  text-decoration-skip-ink: none;
   font-size: 0.875rem;
   border-radius: 4px;
 }
