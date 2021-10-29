@@ -1,10 +1,17 @@
 # CHANGELOG
 
+# v24.7.1
+
+- [AnchorLinkButton] Remove text-decoration-skip-ink style \ ([#1246](https://github.com/curology/radiance-ui/pull/1246))
+
 # v24.7.0
+
 - [Icons] Update KojicAcidGlyph ([#1214](https://github.com/curology/radiance-ui/pull/1214))
 - [Icons] Update AzelaicAcidGlyph ([#1214](https://github.com/curology/radiance-ui/pull/1214))
+- [Carousel] Add aria-label to Arrow component ([#1211](https://github.com/curology/radiance-ui/pull/1211))
 
 # v24.6.2
+
 - [Icons] Add IvermectinGlyph([#1209](https://github.com/curology/radiance-ui/pull/1209))
 - [Icons] Add KetoconazoleGlyph([#1209](https://github.com/curology/radiance-ui/pull/1209))
 
@@ -23,6 +30,7 @@
 # v24.4.0
 
 - [Components] Add SegmentedControl ([#405](https://github.com/curology/radiance-ui/pull/405))
+- [ImmersiveModal] Add aria-label to CrossIconButton ([#1167](https://github.com/curology/radiance-ui/pull/1167))
 
 # v24.3.0
 
