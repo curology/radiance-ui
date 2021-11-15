@@ -11,7 +11,7 @@ describe('<Button />', () => {
    * TODO: Fix Emotion 11 CI snapshot serializer order issue
    */
   // eslint-disable-next-line jest/no-disabled-tests
-  describe.skip('UI snapshots', () => {
+  describe('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
         <Button disabled onClick={() => undefined} icon={<CameraIcon />}>
