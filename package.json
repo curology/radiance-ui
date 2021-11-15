@@ -90,8 +90,8 @@
     "@babel/preset-typescript": "^7.15.0",
     "@babel/register": "^7.15.3",
     "@emotion/babel-preset-css-prop": "^11.2.0",
-    "@emotion/eslint-plugin": "^11.2.0",
-    "@emotion/jest": "^11.3.0",
+    "@emotion/eslint-plugin": "^11.5.0",
+    "@emotion/jest": "^11.6.0",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-typescript": "^8.2.1",
     "@storybook/addon-a11y": "^6.3.12",
@@ -162,7 +162,7 @@
   "dependencies": {
     "@babel/runtime": "^7.15.3",
     "@emotion/react": "11.6.0",
-    "@emotion/styled": "11.3.0",
+    "@emotion/styled": "11.6.0",
     "@react-aria/focus": "^3.0.2",
     "focus-visible": "^5.1.0",
     "lodash.round": "^4.0.4",
@@ -178,7 +178,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "11.6.0",
-    "@emotion/styled": "11.3.0",
+    "@emotion/styled": "11.6.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
