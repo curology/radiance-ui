@@ -162,7 +162,7 @@
   "dependencies": {
     "@babel/runtime": "^7.15.3",
     "@emotion/react": "11.4.1",
-    "@emotion/styled": "11.3.0",
+    "@emotion/styled": "11.6.0",
     "@react-aria/focus": "^3.0.2",
     "focus-visible": "^5.1.0",
     "lodash.round": "^4.0.4",
@@ -178,7 +178,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "11.4.1",
-    "@emotion/styled": "11.3.0",
+    "@emotion/styled": "11.6.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
