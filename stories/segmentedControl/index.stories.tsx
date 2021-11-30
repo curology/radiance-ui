@@ -40,16 +40,17 @@ interface SegmentedControlWithFocusScopeProps {
   segmentItems: SegmentItemType[];
 }
 
-const SegmentedControlWithFocusScope: React.FC<SegmentedControlWithFocusScopeProps> =
-  ({ onClick, segmentItems }) => {
-    const focusManager = useFocusManager();
+const SegmentedControlWithFocusScope: React.FC<
+  SegmentedControlWithFocusScopeProps
+> = ({ onClick, segmentItems }) => {
+  const focusManager = useFocusManager();
 
-    React.useEffect(() => {
-      focusManager.focusLast({ wrap: true });
-    }, []);
+  React.useEffect(() => {
+    focusManager.focusLast({ wrap: true });
+  }, []);
 
-    return <SegmentedControl onClick={onClick} segmentItems={segmentItems} />;
-  };
+  return <SegmentedControl onClick={onClick} segmentItems={segmentItems} />;
+};
 
 /**
  * TODO: Add regression test to currently-active tab focus state after figuring out why it does not
