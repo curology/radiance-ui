@@ -28,7 +28,11 @@ Usage.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
-const AVATAR_STORIES: Meta = {
+interface AvatarStories extends Meta {
+  title: string;
+}
+
+const AVATAR_STORIES: AvatarStories = {
   title: 'Components/Avatar',
   component: Avatar,
   parameters: {

@@ -64,6 +64,7 @@ const CHROMATIC_OPTIONS = {
 
 interface LoadingSpinnerStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const LOADING_SPINNER_STORIES: LoadingSpinnerStories = {

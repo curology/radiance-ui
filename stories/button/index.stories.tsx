@@ -214,7 +214,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const BUTTON_STORIES: Meta = {
+interface ButtonStories extends Meta {
+  title: string;
+}
+
+const BUTTON_STORIES: ButtonStories = {
   title: 'Components/Button/Button',
   component: Button,
   parameters: {

@@ -93,7 +93,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const RADIO_BUTTON_STORIES: Meta = {
+interface RadioButtonStories extends Meta {
+  title: string;
+}
+
+const RADIO_BUTTON_STORIES: RadioButtonStories = {
   title: 'Components/RadioButton',
   component: RadioButton,
   parameters: {

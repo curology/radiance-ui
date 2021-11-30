@@ -144,6 +144,7 @@ const CHROMATIC_OPTIONS = { chromatic: { delay: 2000 } } as const;
 
 interface CarouselStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const CAROUSEL_STORIES: CarouselStories = {
