@@ -118,32 +118,33 @@ export const OptionButton: OptionButton = ({
 /**
  * A presentational component to match the display of an OptionButton with an icon
  */
-export const OptionButtonNotClickable: React.FC<OptionButtonNotClickableProps> =
-  ({
-    borderRadius = DEFAULT_BORDER_RADIUS,
-    icon,
-    optionType,
-    subtext,
-    text,
-    ...rest
-  }) => (
-    <Style.DisplayContainer
-      borderRadius={borderRadius}
-      containerType="none"
-      // eslint-disable-next-line react/jsx-props-no-spreading
-      {...rest}
-    >
-      <OptionButtonContent
-        // The buttonType does not matter for this component
-        buttonType="primary"
-        icon={icon}
-        optionType={optionType}
-        selected={false}
-        subtext={subtext}
-        text={text}
-      />
-    </Style.DisplayContainer>
-  );
+export const OptionButtonNotClickable: React.FC<
+  OptionButtonNotClickableProps
+> = ({
+  borderRadius = DEFAULT_BORDER_RADIUS,
+  icon,
+  optionType,
+  subtext,
+  text,
+  ...rest
+}) => (
+  <Style.DisplayContainer
+    borderRadius={borderRadius}
+    containerType="none"
+    // eslint-disable-next-line react/jsx-props-no-spreading
+    {...rest}
+  >
+    <OptionButtonContent
+      // The buttonType does not matter for this component
+      buttonType="primary"
+      icon={icon}
+      optionType={optionType}
+      selected={false}
+      subtext={subtext}
+      text={text}
+    />
+  </Style.DisplayContainer>
+);
 
 /**
  * Similar OptionButton styling without click elements
