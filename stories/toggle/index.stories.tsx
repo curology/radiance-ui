@@ -48,7 +48,11 @@ export const Usage = () => {
   );
 };
 
-const TOGGLE_STORIES: Meta = {
+interface ToggleStories extends Meta {
+  title: string;
+}
+
+const TOGGLE_STORIES: ToggleStories = {
   title: 'Components/Toggle',
   component: Toggle,
   parameters: {

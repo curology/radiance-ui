@@ -209,7 +209,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const FIELD_STORIES: Meta = {
+interface FieldStories extends Meta {
+  title: string;
+}
+
+const FIELD_STORIES: FieldStories = {
   title: 'Components/Field',
   component: Field,
   parameters: {

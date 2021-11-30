@@ -122,7 +122,11 @@ Examples include "sun", "selfie", "pills".
 \n\nAfter adding the SVG file, run \`yarn run storybook\` and confirm the icon looks correct, and then open a PR with the changes.
 `;
 
-const ICONS_STORIES: Meta = {
+interface IconsStories extends Meta {
+  title: string;
+}
+
+const ICONS_STORIES: IconsStories = {
   title: 'Icons/Icon',
   component: IconComponent,
   parameters: {

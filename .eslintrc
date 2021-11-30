@@ -4,7 +4,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module",
     "project": "./.eslint.tsconfig.json",
-    "allowAutomaticSingleRunInference": true
+    "allowAutomaticSingleRunInference": false,
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking",

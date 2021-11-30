@@ -32,6 +32,7 @@ const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
 
 interface OffClickWrapperStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const OFF_CLICK_WRAPPER_STORIES: OffClickWrapperStories = {
