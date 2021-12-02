@@ -67,7 +67,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const BANNER_STORIES: Meta = {
+interface BannerStories extends Meta {
+  title: string;
+}
+
+const BANNER_STORIES: BannerStories = {
   title: 'Components/Banner',
   component: Banner,
   parameters: {

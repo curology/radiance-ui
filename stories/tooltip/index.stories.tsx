@@ -142,7 +142,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const TOOLTIP_STORIES: Meta = {
+interface TooltipStories extends Meta {
+  title: string;
+}
+
+const TOOLTIP_STORIES: TooltipStories = {
   title: 'Components/Tooltip',
   component: Tooltip,
   parameters: {

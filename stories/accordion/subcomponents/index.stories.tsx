@@ -212,7 +212,11 @@ export const Content = () => {
 
 Content.id = `${ACCORDION_SUBCOMPONENTS_STORY_ID_PREFIX}content`;
 
-const ACCORDION_SUBCOMPONENTS_STORIES: Meta = {
+interface AccordionSubcomponentsStories extends Meta {
+  title: string;
+}
+
+const ACCORDION_SUBCOMPONENTS_STORIES: AccordionSubcomponentsStories = {
   title: 'Components/Accordion/Subcomponents',
   parameters: {
     docs: {

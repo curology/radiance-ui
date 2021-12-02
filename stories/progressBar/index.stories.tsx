@@ -87,6 +87,7 @@ const CHROMATIC_OPTIONS = {
 
 interface ProgressBarStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const PROGRESS_BAR_STORIES: ProgressBarStories = {

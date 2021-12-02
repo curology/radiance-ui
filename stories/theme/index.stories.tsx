@@ -31,6 +31,7 @@ const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
 
 interface ThemeStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const THEME_STORIES: ThemeStories = {
