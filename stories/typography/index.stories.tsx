@@ -34,7 +34,11 @@ Usage.parameters = {
 
 const sourceCode = `<Typography.Display css={(theme) => emotionSerializedStyleValueWithTheme(theme)}>Override!</Typography.Display>`;
 
-const TYPOGRAPHY_STORIES: Meta = {
+interface TypographyStories extends Meta {
+  title: string;
+}
+
+const TYPOGRAPHY_STORIES: TypographyStories = {
   title: 'Components/Typography',
   parameters: {
     docs: {

@@ -21,7 +21,11 @@ export const Disabled = () => (
   <TextButton disabled>This text button is disabled</TextButton>
 );
 
-const TEXT_BUTTON_STORIES: Meta = {
+interface TextButtonStories extends Meta {
+  title: string;
+}
+
+const TEXT_BUTTON_STORIES: TextButtonStories = {
   title: 'Components/Button/TextButton',
   component: TextButton,
   parameters: {

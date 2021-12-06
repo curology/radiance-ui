@@ -58,7 +58,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const CHIP_STORIES: Meta = {
+interface Chipstories extends Meta {
+  title: string;
+}
+
+const CHIP_STORIES: Chipstories = {
   title: 'Components/Chip',
   component: Chip,
   parameters: {

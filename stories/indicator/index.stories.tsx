@@ -38,6 +38,7 @@ const CHROMATIC_OPTIONS = {
 
 interface IndicatoriStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const INDICATOR_STORIES: IndicatoriStories = {

@@ -110,7 +110,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const LINK_BUTTON_STORIES: Meta = {
+interface LinkButtonStories extends Meta {
+  title: string;
+}
+
+const LINK_BUTTON_STORIES: LinkButtonStories = {
   title: 'Components/Button/LinkButton',
   component: LinkButton,
   parameters: {

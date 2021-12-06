@@ -83,7 +83,11 @@ export const Mobile = () => {
   );
 };
 
-const DROPDOWN_STORIES: Meta = {
+interface DropdownStories extends Meta {
+  title: string;
+}
+
+const DROPDOWN_STORIES: DropdownStories = {
   title: 'Components/Dropdown',
   component: Dropdown,
   parameters: {
