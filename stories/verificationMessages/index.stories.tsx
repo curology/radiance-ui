@@ -71,7 +71,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const VERIFICATION_MESSAGES_STORIES: Meta = {
+interface VerificationMessagesStories extends Meta {
+  title: string;
+}
+
+const VERIFICATION_MESSAGES_STORIES: VerificationMessagesStories = {
   title: 'Components/VerificationMessages',
   component: VerificationMessages,
   parameters: {

@@ -36,7 +36,11 @@ Usage.parameters = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 };
 
-const TYPOGRAPHY_STYLE_STORIES: Meta = {
+interface TypographyStyleStories extends Meta {
+  title: string;
+}
+
+const TYPOGRAPHY_STYLE_STORIES: TypographyStyleStories = {
   title: 'Components/TYPOGRAPHY_STYLE',
   parameters: {
     docs: {

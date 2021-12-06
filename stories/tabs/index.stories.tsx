@@ -29,7 +29,11 @@ export const Usage = () => {
   );
 };
 
-const TABS_STORIES: Meta = {
+interface TabsStories extends Meta {
+  title: string;
+}
+
+const TABS_STORIES: TabsStories = {
   title: 'Components/Tabs',
   component: Tabs,
   parameters: {

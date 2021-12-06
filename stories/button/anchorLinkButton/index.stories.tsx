@@ -60,7 +60,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const ANCHOR_LINK_BUTTON_STORIES: Meta = {
+interface AnchorLinkButtonStories extends Meta {
+  title: string;
+}
+
+const ANCHOR_LINK_BUTTON_STORIES: AnchorLinkButtonStories = {
   title: 'Components/Button/AnchorLinkButton',
   component: AnchorLinkButton,
   parameters: {
