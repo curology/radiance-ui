@@ -221,6 +221,10 @@ export const brandStyles = (theme: ThemeType) => `
     transition-timing-function: ease-in-out;
   }
 
+  input {
+    color: ${theme.COLORS.primary};
+  }
+
   img {
     max-width: 100%;
   }
