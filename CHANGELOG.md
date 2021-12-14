@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v25.0.0
+
+- [Components] Default input color to theme primary for Global Styles ([#1308](https://github.com/curology/radiance-ui/pull/1308))
+
 # v24.7.1
 
 - [AnchorLinkButton] Remove text-decoration-skip-ink style \ ([#1246](https://github.com/curology/radiance-ui/pull/1246))
