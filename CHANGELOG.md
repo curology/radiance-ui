@@ -1,12 +1,19 @@
 # CHANGELOG
 
+# Unreleased
+
+# v25.0.1
+
+- [Internal] Allow node 14 ([#1313](https://github.com/curology/radiance-ui/pull/1313))
+- [Dependencies] Update @babel/runtime from 7.16.0 to 7.16.5 ([#1310](https://github.com/curology/radiance-ui/pull/1310))
+
 # v25.0.0
 
-- [Components] Default input color to theme primary for Global Styles ([#1308](https://github.com/curology/radiance-ui/pull/1308))
+- [Components] Update default button color to theme primary for Global Styles ([#1308](https://github.com/curology/radiance-ui/pull/1308))
 
 # v24.7.1
 
-- [AnchorLinkButton] Remove text-decoration-skip-ink style \ ([#1246](https://github.com/curology/radiance-ui/pull/1246))
+- [AnchorLinkButton] Remove text-decoration-skip-ink style ([#1246](https://github.com/curology/radiance-ui/pull/1246))
 
 # v24.7.0
 
