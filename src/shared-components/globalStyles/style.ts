@@ -221,6 +221,10 @@ export const brandStyles = (theme: ThemeType) => `
     transition-timing-function: ease-in-out;
   }
 
+  input:is([type="button"], [type="submit"], [type="reset"]), input[type="file"]::file-selector-button, button {
+    color: ${theme.COLORS.primary};
+  }
+
   img {
     max-width: 100%;
   }
