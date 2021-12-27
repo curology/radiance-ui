@@ -13,7 +13,6 @@ const anchorLinkButton = (theme: ThemeType) => css`
   border: none;
   padding: 0;
   text-decoration: underline;
-  text-decoration-skip-ink: none;
   font-size: ${theme.TYPOGRAPHY.fontSize.link};
   border-radius: ${theme.BORDER_RADIUS.small};
 `;

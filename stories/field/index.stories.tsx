@@ -189,7 +189,6 @@ export const WithControls = () => (
   <FieldsContainer>
     <Field
       disabled={boolean('disabled', false)}
-      // @ts-expect-error: select + Field['message'] type compat issue
       messages={select('messages', messagesOptions, {})}
       messagesType={
         select('messagesType', messagesTypeOptions, 'error') as
@@ -210,7 +209,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const FIELD_STORIES: Meta = {
+interface FieldStories extends Meta {
+  title: string;
+}
+
+const FIELD_STORIES: FieldStories = {
   title: 'Components/Field',
   component: Field,
   parameters: {

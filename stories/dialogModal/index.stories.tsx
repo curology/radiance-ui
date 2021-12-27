@@ -327,6 +327,7 @@ const CHROMATIC_OPTIONS = {
 
 interface DialogModalStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const DIALOG_MODAL_STORIES: DialogModalStories = {

@@ -61,7 +61,11 @@ MockContainer.parameters = {
   chromatic: { disable: true },
 };
 
-const CONTAINER_STORIES: Meta = {
+interface ContainerStories extends Meta {
+  title: string;
+}
+
+const CONTAINER_STORIES: ContainerStories = {
   title: 'Components/Container',
   component: MockContainer,
   parameters: {

@@ -24,37 +24,15 @@ updates:
       - dependency-name: '@babel/preset-react'
       - dependency-name: '@babel/preset-typescript'
       - dependency-name: '@babel/register'
-      - dependency-name: '@emotion/babel-preset-css-prop'
-        versions:
-          - '> 10.0.27'
-      - dependency-name: emotion-theming
-        versions:
-          - '> 10.0.27'
-      - dependency-name: eslint-plugin-emotion
-        versions:
-          - '> 10.0.27'
       - dependency-name: husky
         versions:
           - '>= 5.a'
           - '< 6'
-      - dependency-name: jest-emotion
-        versions:
-          - '> 10.0.32'
       - dependency-name: react-is
         versions:
           - '> 16.13.1'
-      - dependency-name: react-slick
-        versions:
-          - '>= 0.27.a'
-          - '< 0.28'
-      - dependency-name: regenerator-runtime
-        versions:
-          - '>= 0.13.6.a'
-          - '< 0.13.7'
-      - dependency-name: '@rollup/plugin-node-resolve'
-        versions:
-          - '>= 8.4.a'
-          - '< 8.5'
+      # Storybook should be updated like so: "npx sb@latest upgrade"
+      # https://storybook.js.org/blog/storybook-6-4/
       - dependency-name: '@storybook/addon-a11y'
       - dependency-name: '@storybook/addon-actions'
       - dependency-name: '@storybook/addon-docs'
@@ -65,10 +43,6 @@ updates:
       - dependency-name: '@storybook/react'
       - dependency-name: '@storybook/source-loader'
       - dependency-name: '@storybook/theming'
-      - dependency-name: '@svgr/rollup'
-        versions:
-          - '> 4.0.3'
-          - '< 5'
       - dependency-name: '@types/react'
         versions:
           - '>= 17.0.0.a'
@@ -81,7 +55,10 @@ updates:
       - dependency-name: '@types/react-test-renderer'
         versions:
           - '>= 17.0.0.a'
+      # Should be bumped in concert with @typescript-eslint/parser
       - dependency-name: '@typescript-eslint/eslint-plugin'
+      # TODO: Keep an eye on webpack4 vs. 5 for Storybook
+      # https://storybook.js.org/blog/storybook-for-webpack-5/
       - dependency-name: webpack
         versions:
           - '>= 5.a'
