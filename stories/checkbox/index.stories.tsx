@@ -73,7 +73,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const CHECKBOX_STORIES: Meta = {
+interface CheckboxStories extends Meta {
+  title: string;
+}
+
+const CHECKBOX_STORIES: CheckboxStories = {
   title: 'Components/Checkbox',
   component: Checkbox,
   parameters: {

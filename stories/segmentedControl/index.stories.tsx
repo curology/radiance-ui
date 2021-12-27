@@ -40,16 +40,17 @@ interface SegmentedControlWithFocusScopeProps {
   segmentItems: SegmentItemType[];
 }
 
-const SegmentedControlWithFocusScope: React.FC<SegmentedControlWithFocusScopeProps> =
-  ({ onClick, segmentItems }) => {
-    const focusManager = useFocusManager();
+const SegmentedControlWithFocusScope: React.FC<
+  SegmentedControlWithFocusScopeProps
+> = ({ onClick, segmentItems }) => {
+  const focusManager = useFocusManager();
 
-    React.useEffect(() => {
-      focusManager.focusLast({ wrap: true });
-    }, []);
+  React.useEffect(() => {
+    focusManager.focusLast({ wrap: true });
+  }, []);
 
-    return <SegmentedControl onClick={onClick} segmentItems={segmentItems} />;
-  };
+  return <SegmentedControl onClick={onClick} segmentItems={segmentItems} />;
+};
 
 /**
  * TODO: Add regression test to currently-active tab focus state after figuring out why it does not
@@ -120,7 +121,11 @@ export const ThreeItemsWithFocusOnLastItem = () => {
 
 /* eslint-enable no-console */
 
-const THEME_STORIES: Meta = {
+interface ThemeStories extends Meta {
+  title: string;
+}
+
+const THEME_STORIES: ThemeStories = {
   title: 'Components/SegmentedControl',
   component: SegmentedControl,
   parameters: {

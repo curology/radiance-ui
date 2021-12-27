@@ -1,5 +1,31 @@
 # CHANGELOG
 
+# Unreleased
+
+# v25.0.1
+
+- [Internal] Allow node 14 ([#1313](https://github.com/curology/radiance-ui/pull/1313))
+- [Dependencies] Update @babel/runtime from 7.16.0 to 7.16.5 ([#1310](https://github.com/curology/radiance-ui/pull/1310))
+
+# v25.0.0
+
+- [Components] Update default button color to theme primary for Global Styles ([#1308](https://github.com/curology/radiance-ui/pull/1308))
+
+# v24.7.1
+
+- [AnchorLinkButton] Remove text-decoration-skip-ink style ([#1246](https://github.com/curology/radiance-ui/pull/1246))
+
+# v24.7.0
+
+- [Icons] Update KojicAcidGlyph ([#1214](https://github.com/curology/radiance-ui/pull/1214))
+- [Icons] Update AzelaicAcidGlyph ([#1214](https://github.com/curology/radiance-ui/pull/1214))
+- [Carousel] Add aria-label to Arrow component ([#1211](https://github.com/curology/radiance-ui/pull/1211))
+
+# v24.6.2
+
+- [Icons] Add IvermectinGlyph([#1209](https://github.com/curology/radiance-ui/pull/1209))
+- [Icons] Add KetoconazoleGlyph([#1209](https://github.com/curology/radiance-ui/pull/1209))
+
 # v24.6.1
 
 - [AnchorLinkButton] Allow all valid HTMLButtonProps as props ([#1200](https://github.com/curology/radiance-ui/pull/1200))
@@ -15,6 +41,7 @@
 # v24.4.0
 
 - [Components] Add SegmentedControl ([#405](https://github.com/curology/radiance-ui/pull/405))
+- [ImmersiveModal] Add aria-label to CrossIconButton ([#1167](https://github.com/curology/radiance-ui/pull/1167))
 
 # v24.3.0
 

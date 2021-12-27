@@ -148,7 +148,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const ACCORDION_STORIES: Meta = {
+interface AccordionStories extends Meta {
+  title: string;
+}
+
+const ACCORDION_STORIES: AccordionStories = {
   title: 'Components/Accordion',
   component: Accordion,
   parameters: {
