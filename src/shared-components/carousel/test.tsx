@@ -4,7 +4,11 @@ import { render } from 'src/tests/testingLibraryHelpers';
 import './matchMedia.mock';
 import { Carousel } from './index';
 
-const cards = [<Carousel.Card key="card1">Card 1</Carousel.Card>];
+const cards = [
+  <Carousel.Card key="card1">Card 1</Carousel.Card>,
+  <Carousel.Card key="card2">Card 2</Carousel.Card>,
+  <Carousel.Card key="card3">Card 3</Carousel.Card>,
+];
 
 describe('<Carousel />', () => {
   /**
