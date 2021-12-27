@@ -1,291 +1,322 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] = `
-<<<<<<< HEAD
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
-.emotion-24 {
-  overflow: hidden !important;
-=======
 .emotion-0 {
   max-width: 702px;
 }
 
 .emotion-2 {
   overflow: hidden!important;
->>>>>>> master
   padding-bottom: 1.5rem;
 }
 
-.emotion-24 .slick-slider {
+.emotion-2 .slick-slider {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -314,7 +345,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-24 .slick-list {
+.emotion-2 .slick-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -330,26 +361,15 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   overflow: hidden;
 }
 
-.emotion-24 .slick-list:focus {
+.emotion-2 .slick-list:focus {
   outline: none;
 }
 
-.emotion-24 .slick-list.dragging {
+.emotion-2 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-<<<<<<< HEAD
-.emotion-24 .slick-slider .slick-track,
-.emotion-24 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  -o-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-=======
 .emotion-2 .slick-slider .slick-track,
 .emotion-2 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
@@ -360,10 +380,9 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
->>>>>>> master
 }
 
-.emotion-24 .slick-track {
+.emotion-2 .slick-track {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -375,34 +394,34 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   align-items: center;
 }
 
-.emotion-24 .slick-loading .slick-track {
+.emotion-2 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-.emotion-24 .slick-slide {
+.emotion-2 .slick-slide {
   display: none;
   float: left;
   height: 100%;
   min-height: 1px;
 }
 
-.emotion-24 .slick-slide.slick-loading img {
+.emotion-2 .slick-slide.slick-loading img {
   display: none;
 }
 
-.emotion-24 .slick-slide.dragging img {
+.emotion-2 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-.emotion-24 .slick-initialized .slick-slide {
+.emotion-2 .slick-initialized .slick-slide {
   display: block;
 }
 
-.emotion-24 .slick-loading .slick-slide {
+.emotion-2 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-.emotion-24 .slick-vertical .slick-slide {
+.emotion-2 .slick-vertical .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -411,34 +430,22 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   border: 1px solid transparent;
 }
 
-.emotion-24 .slick-arrow.slick-hidden {
+.emotion-2 .slick-arrow.slick-hidden {
   display: none;
 }
 
-<<<<<<< HEAD
-.emotion-24 .slick-slider {
-=======
 .emotion-2 .slick-slider {
   -webkit-box-flex-wrap: wrap;
->>>>>>> master
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-.emotion-24 .slick-dots {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-=======
 .emotion-2 .slick-dots {
   display: -webkit-box!important;
   display: -webkit-flex!important;
   display: -ms-flexbox!important;
   display: flex!important;
->>>>>>> master
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
@@ -448,7 +455,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   bottom: -32px;
 }
 
-.emotion-24 .slick-dots li {
+.emotion-2 .slick-dots li {
   border-radius: 50%;
   height: 0.25rem;
   width: 0.25rem;
@@ -456,24 +463,45 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   opacity: 0.25;
 }
 
-.emotion-24 .slick-dots li:first-of-type {
+.emotion-2 .slick-dots li:first-of-type {
   margin-left: 0.25rem;
 }
 
-.emotion-24 .slick-dots li button {
+.emotion-2 .slick-dots li button {
   display: none;
 }
 
-.emotion-24 .slick-dots li.slick-active {
+.emotion-2 .slick-dots li.slick-active {
   opacity: 1;
 }
 
-.emotion-24 .slick-dots li {
+.emotion-2 .slick-dots li {
   background-color: #332E54;
 }
 
-<<<<<<< HEAD
-.emotion-5 {
+.emotion-4 {
+  display: block;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: flex-end;
+  align-self: flex-end;
+  margin: 0.5rem;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-left: auto;
+}
+
+.emotion-4 button {
+  background-color: none;
+  border-color: #332E54;
+  color: #332E54;
+}
+
+.emotion-4 button:hover {
+  color: #332E54;
+}
+
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -486,23 +514,21 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-8 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border-radius: 4px;
   border-style: solid;
@@ -537,41 +563,35 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   padding: 0;
 }
 
-.emotion-3:hover {
+.emotion-8:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-8:active,
+.emotion-8:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-3:visited,
-.emotion-3:hover {
-  opacity: 1;
-  color: #C3C0CD;
-}
-
-.emotion-3 > svg {
+.emotion-8>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   margin: 0 auto;
 }
 
-.emotion-0 {
+.emotion-10 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-1 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -581,8 +601,8 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
@@ -595,7 +615,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   margin: -3px -3px 0 0;
 }
 
-.emotion-1 span {
+.emotion-11 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -603,66 +623,35 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   position: absolute;
 }
 
-.emotion-1 span:nth-of-type(1) {
+.emotion-11 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-1 span:nth-of-type(2) {
+.emotion-11 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-1 span:nth-of-type(3) {
+.emotion-11 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
-.emotion-1 span {
+.emotion-11 span {
   background-color: #FFFFFF;
 }
 
-.emotion-9 {
-  width: 311px !important;
-=======
-.emotion-4 {
+.emotion-13 {
   width: 311px!important;
->>>>>>> master
   min-height: 48px;
   margin: 0 0.5rem;
 }
 
-<<<<<<< HEAD
-.emotion-26 {
-  max-width: 702px;
-}
-
-.emotion-7 {
+.emotion-19 {
   display: block;
   -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
-  align-self: flex-end;
-  margin: 0.5rem;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2;
-  margin-left: auto;
-}
-
-.emotion-7 button {
-  background-color: none;
-  border-color: #332E54;
-  color: #332E54;
-}
-
-.emotion-7 button:hover {
-  color: #332E54;
-}
-
-.emotion-22 {
-  display: block;
-  -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
+  -ms-flex-item-align: flex-end;
   align-self: flex-end;
   margin: 0.5rem;
   -webkit-order: 3;
@@ -670,18 +659,16 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   order: 3;
 }
 
-.emotion-18 {
+.emotion-23 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border-radius: 4px;
   border-style: solid;
@@ -715,42 +702,42 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   padding: 0;
 }
 
-.emotion-18:hover {
+.emotion-23:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-18:active,
-.emotion-18:focus {
+.emotion-23:active,
+.emotion-23:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-18:visited,
-.emotion-18:hover {
+.emotion-23:visited,
+.emotion-23:hover {
   opacity: 0.8;
 }
 
-.emotion-18:focus,
-.emotion-18:not([href]):not([tabindex]):hover,
-.emotion-18:not([href]):not([tabindex]):focus {
+.emotion-23:focus,
+.emotion-23:not([href]):not([tabindex]):hover,
+.emotion-23:not([href]):not([tabindex]):focus {
   color: #FFFFFF;
 }
 
-.emotion-18:hover {
+.emotion-23:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
   opacity: 1;
 }
 
-.emotion-18 > svg {
+.emotion-23>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   margin: 0 auto;
 }
 
-.emotion-16 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -760,8 +747,8 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
@@ -774,7 +761,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   margin: -3px -3px 0 0;
 }
 
-.emotion-16 span {
+.emotion-26 span {
   background-color: #FFFFFF;
   border-radius: 50%;
   display: inline-block;
@@ -783,49 +770,46 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
   position: absolute;
 }
 
-.emotion-16 span:nth-of-type(1) {
+.emotion-26 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-16 span:nth-of-type(2) {
+.emotion-26 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-16 span:nth-of-type(3) {
+.emotion-26 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <div
-  class="emotion-26 emotion-27"
-=======
-<div
   class="emotion-0 emotion-1"
->>>>>>> master
 >
   <div
-    class="emotion-24 emotion-25"
+    class="emotion-2 emotion-3"
   >
     <div
       class="slick-slider slick-initialized"
       dir="ltr"
     >
       <div
-        class="emotion-7 emotion-8"
+        class="emotion-4 emotion-5"
         disabled=""
       >
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7"
         >
           <button
-            class="emotion-3 emotion-4"
+            aria-label="Previous item"
+            class="emotion-8 emotion-9"
             disabled=""
             type="button"
           >
             <svg
-              class="emotion-0"
+              class="emotion-10"
               fill="none"
               height="16"
               viewBox="0 0 16 16"
@@ -838,7 +822,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
               />
             </svg>
             <div
-              class="emotion-1 emotion-2"
+              class="emotion-11 emotion-12"
               disabled=""
             >
               <div>
@@ -866,11 +850,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
           >
             <div>
               <div
-<<<<<<< HEAD
-                class="emotion-9 emotion-10"
-=======
-                class="emotion-4 emotion-5"
->>>>>>> master
+                class="emotion-13 emotion-14"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -887,7 +867,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
           >
             <div>
               <div
-                class="emotion-9 emotion-10"
+                class="emotion-13 emotion-14"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -904,7 +884,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
           >
             <div>
               <div
-                class="emotion-9 emotion-10"
+                class="emotion-13 emotion-14"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -915,17 +895,18 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
         </div>
       </div>
       <div
-        class="emotion-22 emotion-8"
+        class="emotion-19 emotion-5"
       >
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7"
         >
           <button
-            class="emotion-18 emotion-4"
+            aria-label="Next item"
+            class="emotion-23 emotion-9"
             type="button"
           >
             <svg
-              class="emotion-0"
+              class="emotion-10"
               fill="none"
               height="16"
               viewBox="0 0 16 16"
@@ -938,7 +919,7 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
               />
             </svg>
             <div
-              class="emotion-16 emotion-2"
+              class="emotion-26 emotion-12"
             >
               <div>
                 <span />
@@ -955,205 +936,220 @@ exports[`<Carousel /> UI snapshots renders with bottom right aligned arrows 1`] 
 `;
 
 exports[`<Carousel /> UI snapshots renders with props 1`] = `
-<<<<<<< HEAD
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
-  }
-}
-
-@keyframes animation-0 {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
-  }
-
-  20% {
-    opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
-  }
-
-  35% {
-    opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
 @keyframes animation-0 {
   0% {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0) scale(1,1);
-    -ms-transform: translate3d(0,0,0) scale(1,1);
-    transform: translate3d(0,0,0) scale(1,1);
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
   }
 
   20% {
     opacity: .95;
-    -webkit-transform: translate3d(12px,0,0) scale(1,1);
-    -ms-transform: translate3d(12px,0,0) scale(1,1);
-    transform: translate3d(12px,0,0) scale(1,1);
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
   }
 
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0) scale(.85,.85);
-    -ms-transform: translate3d(16px,0,0) scale(.85,.85);
-    transform: translate3d(16px,0,0) scale(.85,.85);
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
   }
 
   100% {
     opacity: 0;
-    -webkit-transform: translate3d(16px,0,0);
-    -ms-transform: translate3d(16px,0,0);
-    transform: translate3d(16px,0,0);
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
   }
 }
 
-.emotion-26 {
-  max-width: 375px;
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(0, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(0, 0, 0) scale(1, 1);
+    transform: translate3d(0, 0, 0) scale(1, 1);
+  }
+
+  20% {
+    opacity: .95;
+    -webkit-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -moz-transform: translate3d(12px, 0, 0) scale(1, 1);
+    -ms-transform: translate3d(12px, 0, 0) scale(1, 1);
+    transform: translate3d(12px, 0, 0) scale(1, 1);
+  }
+
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -moz-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    -ms-transform: translate3d(16px, 0, 0) scale(.85, .85);
+    transform: translate3d(16px, 0, 0) scale(.85, .85);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(16px, 0, 0);
+    -moz-transform: translate3d(16px, 0, 0);
+    -ms-transform: translate3d(16px, 0, 0);
+    transform: translate3d(16px, 0, 0);
+  }
 }
 
-.emotion-24 {
-  overflow: hidden !important;
-=======
 .emotion-0 {
   max-width: 375px;
 }
 
 .emotion-2 {
   overflow: hidden!important;
->>>>>>> master
   padding-bottom: 1.5rem;
 }
 
-.emotion-24 .slick-slider {
+.emotion-2 .slick-slider {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1182,7 +1178,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-24 .slick-list {
+.emotion-2 .slick-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1198,26 +1194,15 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   overflow: hidden;
 }
 
-.emotion-24 .slick-list:focus {
+.emotion-2 .slick-list:focus {
   outline: none;
 }
 
-.emotion-24 .slick-list.dragging {
+.emotion-2 .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-<<<<<<< HEAD
-.emotion-24 .slick-slider .slick-track,
-.emotion-24 .slick-slider .slick-list {
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  -o-transform: translate3d(0,0,0);
-  -webkit-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
-=======
 .emotion-2 .slick-slider .slick-track,
 .emotion-2 .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
@@ -1228,10 +1213,9 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
->>>>>>> master
 }
 
-.emotion-24 .slick-track {
+.emotion-2 .slick-track {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1243,34 +1227,34 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   align-items: center;
 }
 
-.emotion-24 .slick-loading .slick-track {
+.emotion-2 .slick-loading .slick-track {
   visibility: hidden;
 }
 
-.emotion-24 .slick-slide {
+.emotion-2 .slick-slide {
   display: none;
   float: left;
   height: 100%;
   min-height: 1px;
 }
 
-.emotion-24 .slick-slide.slick-loading img {
+.emotion-2 .slick-slide.slick-loading img {
   display: none;
 }
 
-.emotion-24 .slick-slide.dragging img {
+.emotion-2 .slick-slide.dragging img {
   pointer-events: none;
 }
 
-.emotion-24 .slick-initialized .slick-slide {
+.emotion-2 .slick-initialized .slick-slide {
   display: block;
 }
 
-.emotion-24 .slick-loading .slick-slide {
+.emotion-2 .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-.emotion-24 .slick-vertical .slick-slide {
+.emotion-2 .slick-vertical .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1279,34 +1263,22 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   border: 1px solid transparent;
 }
 
-.emotion-24 .slick-arrow.slick-hidden {
+.emotion-2 .slick-arrow.slick-hidden {
   display: none;
 }
 
-<<<<<<< HEAD
-.emotion-24 .slick-slider {
-=======
 .emotion-2 .slick-slider {
   -webkit-box-flex-wrap: wrap;
->>>>>>> master
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-.emotion-24 .slick-dots {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-=======
 .emotion-2 .slick-dots {
   display: -webkit-box!important;
   display: -webkit-flex!important;
   display: -ms-flexbox!important;
   display: flex!important;
->>>>>>> master
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
@@ -1316,7 +1288,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   bottom: -32px;
 }
 
-.emotion-24 .slick-dots li {
+.emotion-2 .slick-dots li {
   border-radius: 50%;
   height: 0.25rem;
   width: 0.25rem;
@@ -1324,36 +1296,36 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   opacity: 0.25;
 }
 
-.emotion-24 .slick-dots li:first-of-type {
+.emotion-2 .slick-dots li:first-of-type {
   margin-left: 0.25rem;
 }
 
-.emotion-24 .slick-dots li button {
+.emotion-2 .slick-dots li button {
   display: none;
 }
 
-.emotion-24 .slick-dots li.slick-active {
+.emotion-2 .slick-dots li.slick-active {
   opacity: 1;
 }
 
-.emotion-24 .slick-dots li {
+.emotion-2 .slick-dots li {
   background-color: #332E54;
 }
 
-<<<<<<< HEAD
-.emotion-7 {
+.emotion-4 {
   position: absolute;
   top: 50%;
   z-index: 2000;
-  -webkit-transform: translate(0%,-50%);
-  -ms-transform: translate(0%,-50%);
-  transform: translate(0%,-50%);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
   display: block;
   left: 0.5rem;
   display: none;
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1366,23 +1338,21 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-8 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border-radius: 4px;
   border-style: solid;
@@ -1417,41 +1387,35 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   padding: 0;
 }
 
-.emotion-3:hover {
+.emotion-8:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-3:active,
-.emotion-3:focus {
+.emotion-8:active,
+.emotion-8:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-3:visited,
-.emotion-3:hover {
-  opacity: 1;
-  color: #C3C0CD;
-}
-
-.emotion-3 > svg {
+.emotion-8>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   margin: 0 auto;
 }
 
-.emotion-0 {
+.emotion-10 {
   display: block;
   -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: color 350ms,-webkit-transform 350ms;
-  -webkit-transition: color 350ms,transform 350ms;
   transition: color 350ms,transform 350ms;
 }
 
-.emotion-1 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1461,8 +1425,8 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
@@ -1475,7 +1439,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   margin: -3px -3px 0 0;
 }
 
-.emotion-1 span {
+.emotion-11 span {
   border-radius: 50%;
   display: inline-block;
   height: 4px;
@@ -1483,58 +1447,53 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-1 span:nth-of-type(1) {
+.emotion-11 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-1 span:nth-of-type(2) {
+.emotion-11 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-1 span:nth-of-type(3) {
+.emotion-11 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
-.emotion-1 span {
+.emotion-11 span {
   background-color: #FFFFFF;
 }
 
-.emotion-9 {
-  width: 311px !important;
-=======
-.emotion-4 {
+.emotion-13 {
   width: 311px!important;
->>>>>>> master
   min-height: 48px;
   margin: 0 0.5rem;
 }
 
-.emotion-22 {
+.emotion-19 {
   position: absolute;
   top: 50%;
   z-index: 2000;
-  -webkit-transform: translate(0%,-50%);
-  -ms-transform: translate(0%,-50%);
-  transform: translate(0%,-50%);
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
   display: block;
   right: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-23 {
   color: #524D6E;
   font-size: 0.75rem;
   line-height: 1.67;
   font-weight: bold;
-  -webkit-letter-spacing: 1px;
-  -moz-letter-spacing: 1px;
-  -ms-letter-spacing: 1px;
   letter-spacing: 1px;
   text-transform: uppercase;
   -webkit-appearance: none;
   -moz-appearance: none;
+  -ms-appearance: none;
   appearance: none;
   border-radius: 4px;
   border-style: solid;
@@ -1555,7 +1514,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   background-color: #FFFFFF;
   color: #332E54;
   fill: #332E54;
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.05);
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.05);
   min-width: 208px;
   max-width: 325px;
   width: -webkit-max-content;
@@ -1570,35 +1529,35 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   padding: 0;
 }
 
-.emotion-18:hover {
+.emotion-23:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
 }
 
-.emotion-18:active,
-.emotion-18:focus {
+.emotion-23:active,
+.emotion-23:focus {
   outline: none;
   box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
 }
 
-.emotion-18:hover {
-  box-shadow: 0px 8px 24px rgba(52,51,82,0.10);
+.emotion-23:hover {
+  box-shadow: 0px 8px 24px rgba(52, 51, 82, 0.10);
 }
 
-.emotion-18:hover {
+.emotion-23:hover {
   -webkit-transition: all 350ms ease-in-out;
   transition: all 350ms ease-in-out;
   opacity: 1;
 }
 
-.emotion-18 > svg {
+.emotion-23>svg {
   opacity: 1;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
   margin: 0 auto;
 }
 
-.emotion-16 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1608,8 +1567,8 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
   justify-content: flex-start;
   position: absolute;
   bottom: 0;
@@ -1622,7 +1581,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   margin: -3px -3px 0 0;
 }
 
-.emotion-16 span {
+.emotion-26 span {
   background-color: #332E54;
   border-radius: 50%;
   display: inline-block;
@@ -1631,49 +1590,46 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
   position: absolute;
 }
 
-.emotion-16 span:nth-of-type(1) {
+.emotion-26 span:nth-of-type(1) {
   -webkit-animation: animation-0 1750ms infinite linear;
   animation: animation-0 1750ms infinite linear;
 }
 
-.emotion-16 span:nth-of-type(2) {
+.emotion-26 span:nth-of-type(2) {
   -webkit-animation: animation-0 1750ms infinite linear -300ms;
   animation: animation-0 1750ms infinite linear -300ms;
 }
 
-.emotion-16 span:nth-of-type(3) {
+.emotion-26 span:nth-of-type(3) {
   -webkit-animation: animation-0 1750ms infinite linear -600ms;
   animation: animation-0 1750ms infinite linear -600ms;
 }
 
 <div
-<<<<<<< HEAD
-  class="emotion-26 emotion-27"
-=======
   class="emotion-0 emotion-1"
->>>>>>> master
 >
   <div
-    class="emotion-24 emotion-25"
+    class="emotion-2 emotion-3"
   >
     <div
       class="slick-slider slick-initialized"
       dir="ltr"
     >
       <div
-        class="emotion-7 emotion-8"
+        class="emotion-4 emotion-5"
         disabled=""
       >
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7"
         >
           <button
-            class="emotion-3 emotion-4"
+            aria-label="Previous item"
+            class="emotion-8 emotion-9"
             disabled=""
             type="button"
           >
             <svg
-              class="emotion-0"
+              class="emotion-10"
               fill="none"
               height="16"
               viewBox="0 0 16 16"
@@ -1686,7 +1642,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
               />
             </svg>
             <div
-              class="emotion-1 emotion-2"
+              class="emotion-11 emotion-12"
               disabled=""
             >
               <div>
@@ -1715,11 +1671,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
           >
             <div>
               <div
-<<<<<<< HEAD
-                class="emotion-9 emotion-10"
-=======
-                class="emotion-4 emotion-5"
->>>>>>> master
+                class="emotion-13 emotion-14"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -1736,7 +1688,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
           >
             <div>
               <div
-                class="emotion-9 emotion-10"
+                class="emotion-13 emotion-14"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -1753,7 +1705,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
           >
             <div>
               <div
-                class="emotion-9 emotion-10"
+                class="emotion-13 emotion-14"
                 style="width: 100%; display: inline-block;"
                 tabindex="-1"
               >
@@ -1764,17 +1716,18 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
         </div>
       </div>
       <div
-        class="emotion-22 emotion-8"
+        class="emotion-19 emotion-5"
       >
         <div
-          class="emotion-5 emotion-6"
+          class="emotion-6 emotion-7"
         >
           <button
-            class="emotion-18 emotion-4"
+            aria-label="Next item"
+            class="emotion-23 emotion-9"
             type="button"
           >
             <svg
-              class="emotion-0"
+              class="emotion-10"
               fill="none"
               height="16"
               viewBox="0 0 16 16"
@@ -1787,7 +1740,7 @@ exports[`<Carousel /> UI snapshots renders with props 1`] = `
               />
             </svg>
             <div
-              class="emotion-16 emotion-2"
+              class="emotion-26 emotion-12"
             >
               <div>
                 <span />
