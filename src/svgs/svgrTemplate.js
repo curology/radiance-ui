@@ -53,6 +53,8 @@ module.exports = template;
  * ]
  *
  * <title>Lock Glyph</title>
+ *
+ * @see https://astexplorer.net/#/gist/ac0c742afce8313d0008914be4cdb940/0031f6d07fada4ce2eb8bebfbb5857b2ba788174
  */
 function transformJSXExpressionContainerToJSXText(child) {
   // e.g. [{ type: 'JSXExpressionContainer', expression: { type: 'StringLiteral', value: 'Curology Logo' }}]
