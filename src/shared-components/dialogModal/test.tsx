@@ -13,7 +13,7 @@ describe('<DialogModal />', () => {
    * TODO: Fix Emotion 11 CI snapshot serializer order issue
    */
   // eslint-disable-next-line jest/no-disabled-tests
-  describe.skip('UI snapshots', () => {
+  describe('UI snapshots', () => {
     it('renders dialog modal with custom color', async () => {
       const { container, findByText } = render(
         <DialogModal backgroundColor={primaryTheme.COLORS.background}>

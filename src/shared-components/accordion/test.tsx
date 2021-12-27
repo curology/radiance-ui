@@ -15,7 +15,7 @@ describe('<Accordion />', () => {
    * TODO: Fix Emotion 11 CI snapshot serializer order issue
    */
   // eslint-disable-next-line jest/no-disabled-tests
-  describe.skip('UI snapshots', () => {
+  describe('UI snapshots', () => {
     it('renders regular accordion', () => {
       const { container } = render(<Accordion {...testAccordionProps} />);
 
