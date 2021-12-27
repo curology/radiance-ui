@@ -121,7 +121,11 @@ export const ThreeItemsWithFocusOnLastItem = () => {
 
 /* eslint-enable no-console */
 
-const THEME_STORIES: Meta = {
+interface ThemeStories extends Meta {
+  title: string;
+}
+
+const THEME_STORIES: ThemeStories = {
   title: 'Components/SegmentedControl',
   component: SegmentedControl,
   parameters: {

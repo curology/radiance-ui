@@ -225,6 +225,7 @@ const CHROMATIC_OPTIONS = {
 
 interface ImmersiveModalStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const IMMERSIVE_MODALS_STORIES: ImmersiveModalStories = {

@@ -10,7 +10,11 @@ import type { Meta } from '@storybook/react';
 
 export * from './availableConstants.stories';
 
-const CONSTANTS_STORIES: Meta = {
+interface ConstantsStories extends Meta {
+  title: string;
+}
+
+const CONSTANTS_STORIES: ConstantsStories = {
   title: 'CONSTANTS/Constants',
   parameters: {
     docs: {

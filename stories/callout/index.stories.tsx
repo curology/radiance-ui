@@ -73,8 +73,10 @@ WithControls.parameters = {
 const CHROMATIC_OPTIONS = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 } as const;
+
 interface CalloutStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const CALLOUT_STORIES: CalloutStories = {

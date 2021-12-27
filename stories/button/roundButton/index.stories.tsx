@@ -170,7 +170,11 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
-const ROUND_BUTTON_STORIES: Meta = {
+interface RoundButtonStories extends Meta {
+  title: string;
+}
+
+const ROUND_BUTTON_STORIES: RoundButtonStories = {
   title: 'Components/Button/RoundButton',
   component: RoundButton,
   parameters: {

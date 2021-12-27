@@ -57,6 +57,7 @@ const CHROMATIC_OPTIONS = {
 
 interface TransitionsStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const TRANSITIONS_STORIES: TransitionsStories = {

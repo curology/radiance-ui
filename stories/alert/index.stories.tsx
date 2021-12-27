@@ -99,6 +99,7 @@ const CHROMATIC_OPTIONS = { chromatic: { disable: true } } as const;
 
 interface AlertStories extends Meta {
   parameters: Meta['parameters'] & typeof CHROMATIC_OPTIONS;
+  title: string;
 }
 
 const ALERT_STORIES: AlertStories = {
