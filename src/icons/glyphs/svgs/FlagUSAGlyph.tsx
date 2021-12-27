@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 
-function SvgFlagUSAGlyph(props: SVGProps<SVGSVGElement>) {
+function SvgFlagUsaGlyph(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -56,4 +56,4 @@ function SvgFlagUSAGlyph(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export default SvgFlagUSAGlyph;
+export default SvgFlagUsaGlyph;
