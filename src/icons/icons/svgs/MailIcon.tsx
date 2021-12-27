@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgMailIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgMailIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,10 +11,11 @@ function SvgMailIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Mail Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M14.68 5.15V3.36H1.36v1.78l6.81 2.44 6.51-2.43zM.01 2.01h16.01v4.07L8.17 9 .01 6.08V2.01zM0 14.35l16 .01V8.17h-1.25v4.94l-13.5-.01V8.16H0v6.19z"
+        d="M14.68 5.15V3.36001H1.35999V5.14001L8.17001 7.58001L14.68 5.15ZM0.0100098 2.01001H16.02V6.08001L8.17001 9.00001L0.0100098 6.08001V2.01001ZM0 14.3499L16 14.3599V8.16991H14.75V13.1099L1.25 13.0999V8.15991H0V14.3499Z"
         fill="currentColor"
       />
     </svg>

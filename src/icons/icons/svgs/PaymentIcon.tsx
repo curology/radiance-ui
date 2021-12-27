@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgPaymentIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgPaymentIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgPaymentIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Payment Icon</title>
       <path
-        d="M.01 3.05v10h16v-10h-16zM14.76 4.3v1.95H1.26V4.3h13.5zm-13.5 7.5V7.5h13.5v4.3H1.26z"
+        d="M0.0100098 3.05005V13.05H16.01V3.05005H0.0100098ZM14.76 4.30005V6.25005H1.26001V4.30005H14.76ZM1.26001 11.8V7.50005H14.76V11.8H1.26001Z"
         fill="currentColor"
       />
     </svg>

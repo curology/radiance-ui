@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgDownloadIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgDownloadIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,10 +11,11 @@ function SvgDownloadIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Download Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M11.36 7.106L8.625 9.823V0h-1.25v9.794L4.746 7.112l-.892.875 3.7 3.775.44.45.446-.444 3.8-3.775-.88-.887zM-.025 10.338v5.691h16.05v-5.493h-1.25v4.243H1.225v-4.441h-1.25z"
+        d="M11.3595 7.10628L8.62497 9.8227V0H7.37497V9.79401L4.74632 7.11219L3.85363 7.98718L7.55363 11.762L7.99406 12.2114L8.44044 11.7679L12.2404 7.99309L11.3595 7.10628ZM-0.0250244 10.3377V15.404V16.029H0.599976H15.4H16.025V15.404V10.5364H14.775V14.779H1.22498V10.3377H-0.0250244Z"
         fill="currentColor"
       />
     </svg>

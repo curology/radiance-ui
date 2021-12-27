@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgMinusIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgMinusIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,7 +11,11 @@ function SvgMinusIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M16.01 7.42h-16v1.25h16V7.42z" fill="currentColor" />
+      <title>Minus Icon</title>
+      <path
+        d="M16.01 7.41992H0.0100098V8.66992H16.01V7.41992Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }

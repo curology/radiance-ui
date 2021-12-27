@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgHomeSelectedNavIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgHomeSelectedNavIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={20}
@@ -10,7 +11,11 @@ function SvgHomeSelectedNavIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M19 19.01V9.53l-8.99-8.52L1 9.26v9.75h18z" fill="currentColor" />
+      <title>Home Selected Nav Icon</title>
+      <path
+        d="M19 19.01V9.53001L10.01 1.01001L1 9.26001V19.01H19Z"
+        fill="currentColor"
+      />
     </svg>
   );
 }

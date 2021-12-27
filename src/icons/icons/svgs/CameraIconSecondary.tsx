@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgCameraIconSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgCameraIconSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,12 +11,17 @@ function SvgCameraIconSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Camera Icon</title>
       <path
-        d="M14.78 13.92H1.22C.55 13.92 0 13.37 0 12.7V3.22C0 2.55.55 2 1.22 2h13.55c.68 0 1.23.55 1.23 1.22v9.48c0 .67-.55 1.22-1.22 1.22zM1.5 12.42h13V3.5h-13v8.92z"
+        d="M14.78 13.92H1.22C0.55 13.92 0 13.37 0 12.7V3.22C0 2.55 0.55 2 1.22 2H14.77C15.45 2 16 2.55 16 3.22V12.7C16 13.37 15.45 13.92 14.78 13.92ZM1.5 12.42H14.5V3.5H1.5V12.42Z"
         fill="currentColor"
       />
       <path
-        d="M8 11.46c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5zm0-5.5c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM12.75 5.96c.41 0 .75-.34.75-.75s-.34-.75-.75-.75-.75.34-.75.75c0 .42.34.75.75.75z"
+        d="M8 11.46C6.07 11.46 4.5 9.89 4.5 7.96C4.5 6.03 6.07 4.46 8 4.46C9.93 4.46 11.5 6.03 11.5 7.96C11.5 9.89 9.93 11.46 8 11.46ZM8 5.96C6.9 5.96 6 6.86 6 7.96C6 9.06 6.9 9.96 8 9.96C9.1 9.96 10 9.06 10 7.96C10 6.86 9.1 5.96 8 5.96Z"
+        fill="currentColor"
+      />
+      <path
+        d="M12.75 5.96C13.16 5.96 13.5 5.62 13.5 5.21C13.5 4.8 13.16 4.46 12.75 4.46C12.34 4.46 12 4.8 12 5.21C12 5.63 12.34 5.96 12.75 5.96Z"
         fill="currentColor"
       />
     </svg>

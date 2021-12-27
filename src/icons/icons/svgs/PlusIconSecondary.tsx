@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgPlusIconSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgPlusIconSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgPlusIconSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Plus Icon</title>
       <path
-        d="M15.25 7.25h-6.5V.75C8.75.34 8.41 0 8 0s-.75.34-.75.75v6.5H.75C.34 7.25 0 7.59 0 8s.34.75.75.75h6.5v6.5c0 .41.34.75.75.75s.75-.34.75-.75v-6.5h6.5c.41 0 .75-.34.75-.75s-.34-.75-.75-.75z"
+        d="M15.25 7.25H8.75V0.75C8.75 0.34 8.41 0 8 0C7.59 0 7.25 0.34 7.25 0.75V7.25H0.75C0.34 7.25 0 7.59 0 8C0 8.41 0.34 8.75 0.75 8.75H7.25V15.25C7.25 15.66 7.59 16 8 16C8.41 16 8.75 15.66 8.75 15.25V8.75H15.25C15.66 8.75 16 8.41 16 8C16 7.59 15.66 7.25 15.25 7.25Z"
         fill="currentColor"
       />
     </svg>

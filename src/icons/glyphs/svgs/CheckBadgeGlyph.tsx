@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgCheckBadgeGlyph(props: React.SVGProps<SVGSVGElement>) {
+function SvgCheckBadgeGlyph(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,10 +11,11 @@ function SvgCheckBadgeGlyph(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Check Badge Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M14 8H33.004v23.259H29.06v8.551l-1-.748-4.51-3.374-4.922 3.588-.993.724v-8.74H14V8zm4.884 23.26h8.925v6.054l-3.88-2.903-.37-.277-.373.272-4.302 3.136v-6.283zM15.25 9.25v20.76h16.504V9.25H15.25zm7.507 13.579l3.738-3.86-.898-.869-3.295 3.402-1.316-1.322-.886.882 1.765 1.773.45.451.442-.457z"
+        d="M14 8H14.625H23.1387H32.3791H33.0041V8.625V30.6342V31.2592H32.3791H29.0587V38.5621V39.8102L28.0593 39.0625L23.5491 35.6882L18.627 39.2758L17.6339 39.9996V38.7707V31.2592H14.625H14V30.6342V8.625V8ZM18.8839 31.2592H27.8087V37.3139L23.9284 34.4108L23.5588 34.1343L23.1858 34.4062L18.8839 37.5418V31.2592ZM15.25 9.25V30.0092H31.7541V9.25H23.1387H15.25ZM22.757 22.829L26.4947 18.9696L25.5968 18.1L22.302 21.5021L20.986 20.18L20.1001 21.0619L21.8651 22.8351L22.3142 23.2863L22.757 22.829Z"
         fill="currentColor"
       />
     </svg>

@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgTranexamicAcidGlyph(props: React.SVGProps<SVGSVGElement>) {
+function SvgTranexamicAcidGlyph(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,16 +11,25 @@ function SvgTranexamicAcidGlyph(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Tranexamic Acid Glyph</title>
       <path
-        d="M24.03 17.12l-2.03.3.78 5.09-1.22.19-.78-5.09-2.03.31-.17-1.14 5.28-.8.17 1.14zM30.25 21.37l-1.33.2-.73-1.3-2.48.38-.31 1.46-1.33.2 1.46-6.6 1.34-.2 3.38 5.86zm-3.87-3.9l-.44 2.06 1.71-.26-1.04-1.84-.17-.33-.06.37z"
+        d="M24.03 17.12L22 17.42L22.78 22.51L21.56 22.7L20.78 17.61L18.75 17.92L18.58 16.78L23.86 15.98L24.03 17.12Z"
         fill="currentColor"
       />
       <path
-        d="M8 23.02L17 10l15.8 1.05 6.9 14.48-8.95 13.15-15.94-1.23L8 23.02zm7.66 13.26l14.52 1.12 8.15-11.98-6.28-13.18-14.39-.96-8.2 11.86 6.2 13.14z"
+        d="M30.25 21.37L28.92 21.57L28.19 20.27L25.71 20.65L25.4 22.11L24.07 22.31L25.53 15.71L26.87 15.51L30.25 21.37ZM26.38 17.47L25.94 19.53L27.65 19.27L26.61 17.43L26.44 17.1L26.38 17.47Z"
         fill="currentColor"
       />
       <path
-        d="M16.21 30.11l-2.7-6.3 6.96 1.16-4.26 5.14zm-.65-4.69l.99 2.32 1.57-1.89-2.56-.43zM27.69 34.05L22.4 27.6l8.53-1-3.24 7.45zm-2.88-5.47l2.54 3.1 1.56-3.58-4.1.48z"
+        d="M8 23.02L17 10L32.8 11.05L39.7 25.53L30.75 38.68L14.81 37.45L8 23.02ZM15.66 36.28L30.18 37.4L38.33 25.42L32.05 12.24L17.66 11.28L9.46 23.14L15.66 36.28Z"
+        fill="currentColor"
+      />
+      <path
+        d="M16.21 30.1101L13.51 23.8101L20.47 24.9701L16.21 30.1101ZM15.56 25.4201L16.55 27.7401L18.12 25.8501L15.56 25.4201Z"
+        fill="currentColor"
+      />
+      <path
+        d="M27.69 34.05L22.4 27.6L30.93 26.6L27.69 34.05ZM24.81 28.58L27.35 31.68L28.91 28.1L24.81 28.58Z"
         fill="currentColor"
       />
     </svg>

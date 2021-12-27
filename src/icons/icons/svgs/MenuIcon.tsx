@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgMenuIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgMenuIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,10 +11,11 @@ function SvgMenuIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Menu Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M16.02 1H0v1.25h16.02V1zm0 6.74H0v1.25h16.02V7.74zM0 14.48h8.72v1.25H0v-1.25z"
+        d="M16.02 1H0V2.25H16.02V1ZM16.02 7.73999H0V8.98999H16.02V7.73999ZM0 14.48H8.72V15.73H0V14.48Z"
         fill="currentColor"
       />
     </svg>

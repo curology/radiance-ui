@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgArrowLeftIconSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgArrowLeftIconSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgArrowLeftIconSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Arrow - Left Icon</title>
       <path
-        d="M15.25 7.21H3.75C5 6.28 6.19 4.85 6.19 2.75c0-.41-.34-.75-.75-.75s-.75.34-.75.75C4.69 5.94.58 7.2.54 7.21a.73.73 0 00-.54.73c.01.34.24.63.57.71.17.04 4.07 1.07 4.07 4.52 0 .41.34.75.75.75s.75-.34.75-.75c0-2.02-1.01-3.48-2.22-4.46h11.34c.41 0 .75-.34.75-.75s-.35-.75-.76-.75z"
+        d="M15.25 7.21H3.75001C5.00001 6.28 6.19001 4.85 6.19001 2.75C6.19001 2.34 5.85001 2 5.44001 2C5.03001 2 4.69001 2.34 4.69001 2.75C4.69001 5.94 0.580007 7.2 0.540007 7.21C0.210007 7.3 -0.0099931 7.6 6.8958e-06 7.94C0.0100069 8.28 0.240007 8.57 0.570007 8.65C0.740007 8.69 4.64001 9.72 4.64001 13.17C4.64001 13.58 4.98001 13.92 5.39001 13.92C5.80001 13.92 6.14001 13.58 6.14001 13.17C6.14001 11.15 5.13001 9.69 3.92001 8.71H15.26C15.67 8.71 16.01 8.37 16.01 7.96C16.01 7.55 15.66 7.21 15.25 7.21Z"
         fill="currentColor"
       />
     </svg>

@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgInfoIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgInfoIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,13 @@ function SvgInfoIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Info Icon</title>
       <path
-        d="M7.52 2a1 1 0 100-2 1 1 0 000 2zM8.55 14.73V4.74L6 4.73v1.25h1.3v8.75H6v1.25h3.85v-1.25h-1.3z"
+        d="M7.52 2C8.07229 2 8.52 1.55228 8.52 1C8.52 0.447715 8.07229 0 7.52 0C6.96772 0 6.52 0.447715 6.52 1C6.52 1.55228 6.96772 2 7.52 2Z"
+        fill="currentColor"
+      />
+      <path
+        d="M8.55 14.73V5.82998V4.73998L6 4.72998V5.97998H7.3V14.73H6V15.98H9.85V14.73H8.55Z"
         fill="currentColor"
       />
     </svg>

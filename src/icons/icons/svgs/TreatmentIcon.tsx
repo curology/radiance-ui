@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgTreatmentIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgTreatmentIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgTreatmentIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Treatment Icon</title>
       <path
-        d="M10.22 1.29v4.54h4.54v4.42h-4.54v4.54H5.8v-4.54H1.26V5.83H5.8V1.29h4.42zM11.47.04H4.55v4.54H.01v6.92h4.54v4.54h6.92V11.5h4.54V4.58h-4.54V.04z"
+        d="M10.22 1.28979V4.5798V5.8298H11.47H14.76V10.2498H11.47H10.22V11.4998V14.7898H5.80002V11.4998V10.2498H4.55002H1.26001V5.8298H4.55002H5.80002V4.5798V1.28979H10.22ZM11.47 0.0397949H4.55002V4.5798H0.0100098V11.4998H4.55002V16.0398H11.47V11.4998H16.01V4.5798H11.47V0.0397949Z"
         fill="currentColor"
       />
     </svg>

@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgSmileyEmojiSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgSmileyEmojiSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,12 +11,13 @@ function SvgSmileyEmojiSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Smiley Emoji</title>
       <path
-        d="M23.93 33.08h-.24c-3.06-.1-5.53-2.04-6.3-4.94a.749.749 0 111.45-.38c.59 2.24 2.51 3.74 4.89 3.82 1.97.07 4.45-.92 5.44-3.87a.749.749 0 111.42.48c-1 2.99-3.6 4.89-6.66 4.89z"
+        d="M23.93 33.08C23.85 33.08 23.77 33.08 23.69 33.08C20.63 32.98 18.16 31.04 17.39 28.14C17.28 27.74 17.52 27.33 17.92 27.22C18.32 27.11 18.73 27.35 18.84 27.76C19.43 30 21.35 31.5 23.73 31.58C25.7 31.65 28.18 30.66 29.17 27.71C29.3 27.32 29.72 27.11 30.12 27.24C30.51 27.37 30.72 27.8 30.59 28.19C29.59 31.18 26.99 33.08 23.93 33.08Z"
         fill="currentColor"
       />
       <path
-        d="M24 40c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm0-30.5C16 9.5 9.5 16 9.5 24S16 38.5 24 38.5 38.5 32 38.5 24 32 9.5 24 9.5z"
+        d="M24 40C15.18 40 8 32.82 8 24C8 15.18 15.18 8 24 8C32.82 8 40 15.18 40 24C40 32.82 32.82 40 24 40ZM24 9.5C16 9.5 9.5 16 9.5 24C9.5 32 16 38.5 24 38.5C32 38.5 38.5 32 38.5 24C38.5 16 32 9.5 24 9.5Z"
         fill="currentColor"
       />
     </svg>

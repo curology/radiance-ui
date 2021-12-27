@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgDropIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgDropIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgDropIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Drop Icon</title>
       <path
-        d="M7.95 16.05c-3.52 0-6.38-2.86-6.38-6.38 0-3.35 5.34-8.61 5.95-9.2l.43-.42.43.42c.61.59 5.95 5.85 5.95 9.2 0 3.52-2.86 6.38-6.38 6.38zm0-14.26C6.19 3.58 2.82 7.47 2.82 9.66c0 2.83 2.3 5.13 5.13 5.13s5.13-2.3 5.13-5.13c0-2.18-3.38-6.08-5.13-7.87z"
+        d="M7.95001 16.05C4.43001 16.05 1.57001 13.19 1.57001 9.67004C1.57001 6.32004 6.91001 1.06005 7.52001 0.470047L7.95001 0.0500488L8.38001 0.470047C8.99001 1.06005 14.33 6.32004 14.33 9.67004C14.33 13.19 11.47 16.05 7.95001 16.05ZM7.95001 1.79004C6.19001 3.58004 2.82001 7.47005 2.82001 9.66005C2.82001 12.49 5.12001 14.79 7.95001 14.79C10.78 14.79 13.08 12.49 13.08 9.66005C13.08 7.48005 9.70001 3.58004 7.95001 1.79004Z"
         fill="currentColor"
       />
     </svg>

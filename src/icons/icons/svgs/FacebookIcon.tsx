@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgFacebookIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgFacebookIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,10 +11,11 @@ function SvgFacebookIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Facebook Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M8.939 15.97V8.687h2.445l.366-2.84H8.94V4.035c0-.822.228-1.382 1.407-1.382h1.503V.111A20.127 20.127 0 009.66 0C7.49 0 6.007 1.323 6.007 3.753v2.094H3.556v2.839h2.451v7.285H8.94z"
+        d="M8.93887 15.9706V8.68567H11.3842L11.7503 5.84656H8.93887V4.0339C8.93887 3.21191 9.1671 2.65177 10.3459 2.65177L11.8493 2.65107V0.111789C11.5892 0.0772511 10.6968 0 9.65859 0C7.49098 0 6.00707 1.32307 6.00707 3.75281V5.84656H3.55554V8.68567H6.00707V15.9706H8.93887Z"
         fill="currentColor"
       />
     </svg>

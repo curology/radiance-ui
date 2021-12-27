@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgTextureGlyph(props: React.SVGProps<SVGSVGElement>) {
+function SvgTextureGlyph(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,10 +11,11 @@ function SvgTextureGlyph(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Texture Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M23.917 19.366l-7.661-7.643-7.38 7.555L8 18.42l8.246-8.42 7.652 7.632 7.35-7.613L40 18.012l-.818.906-7.876-7.204-7.389 7.652zm0 9.15l-7.661-7.632-7.38 7.545L8 27.582l8.246-8.43 7.652 7.632 7.35-7.613L40 27.173l-.818.896-7.876-7.204-7.389 7.652zm-7.661 1.52l7.661 7.632 7.39-7.652 7.875 7.204.818-.895-8.752-8.003-7.35 7.613-7.652-7.623L8 36.733l.876.847 7.38-7.544z"
+        d="M23.9173 19.3655L16.2556 11.7233L8.87617 19.2779L8 18.4212L16.2458 10.0001L23.8978 17.6326L31.248 10.0196L40 18.0123L39.1822 18.9177L31.3064 11.7135L23.9173 19.3655ZM23.9173 28.5166L16.2556 20.8841L8.87617 28.429L8 27.582L16.2458 19.1512L23.8978 26.7837L31.248 19.1707L40 27.1732L39.1822 28.0688L31.3064 20.8647L23.9173 28.5166ZM16.2556 30.0355L23.9173 37.668L31.3064 30.016L39.1822 37.2201L40 36.3245L31.248 28.3221L23.8978 35.9351L16.2458 28.3123L8 36.7334L8.87617 37.5804L16.2556 30.0355Z"
         fill="currentColor"
       />
     </svg>

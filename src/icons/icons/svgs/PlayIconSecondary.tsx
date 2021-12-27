@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgPlayIconSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgPlayIconSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgPlayIconSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Play Icon</title>
       <path
-        d="M1.752 16c-.14 0-.27-.04-.39-.11a.742.742 0 01-.36-.64V4c0-.41.34-.75.75-.75s.75.34.75.75v10.04L14.572 8 1.412 1.42a.75.75 0 01-.33-1.01c.18-.37.64-.51 1.01-.33l14.5 7.25c.25.13.41.39.41.67s-.16.54-.41.67l-14.5 7.25c-.11.05-.23.08-.34.08z"
+        d="M1.75247 16C1.61247 16 1.48247 15.96 1.36247 15.89C1.13247 15.75 1.00247 15.51 1.00247 15.25V4.00002C1.00247 3.59002 1.34247 3.25002 1.75247 3.25002C2.16247 3.25002 2.50247 3.59002 2.50247 4.00002V14.04L14.5725 8.00002L1.41247 1.42002C1.04247 1.23002 0.892465 0.780022 1.08247 0.410022C1.26247 0.040022 1.72247 -0.099978 2.09247 0.080022L16.5925 7.33002C16.8425 7.46002 17.0025 7.72002 17.0025 8.00002C17.0025 8.28002 16.8425 8.54002 16.5925 8.67002L2.09247 15.92C1.98247 15.97 1.86247 16 1.75247 16Z"
         fill="currentColor"
       />
     </svg>

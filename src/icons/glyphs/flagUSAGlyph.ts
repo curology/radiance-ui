@@ -1,4 +1,4 @@
-import { FlagUSAGlyph } from './svgs';
+import { FlagUsaGlyph } from './svgs';
 import { useIcon, IconProps } from '../../shared-components/icon';
 
-export default (props: IconProps) => useIcon(FlagUSAGlyph, FlagUSAGlyph, props);
+export default (props: IconProps) => useIcon(FlagUsaGlyph, FlagUsaGlyph, props);

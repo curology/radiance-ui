@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgTretinoinGlyphSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgTretinoinGlyphSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,8 +11,9 @@ function SvgTretinoinGlyphSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Tretinoin Glyph</title>
       <path
-        d="M29.78 20.45c-1.95 0-3.99.84-5.33 2.62V9.5h11.4a.749.749 0 100-1.5h-24.1c-.41 0-.75.34-.75.75s.34.75.75.75h11.2v29.75c0 .41.34.75.75.75s.75-.34.75-.75V28.07c0-4.83 3.35-6.12 5.33-6.12 5.07 0 5.33 5.68 5.33 6.82 0 .41.34.75.75.75s.75-.34.75-.75c-.01-3.83-1.8-8.32-6.83-8.32z"
+        d="M29.78 20.45C27.83 20.45 25.79 21.29 24.45 23.07V9.5H35.85C36.26 9.5 36.6 9.16 36.6 8.75C36.6 8.34 36.27 8 35.85 8H11.75C11.34 8 11 8.34 11 8.75C11 9.16 11.34 9.5 11.75 9.5H22.95V39.25C22.95 39.66 23.29 40 23.7 40C24.11 40 24.45 39.66 24.45 39.25V28.07C24.45 23.24 27.8 21.95 29.78 21.95C34.85 21.95 35.11 27.63 35.11 28.77C35.11 29.18 35.45 29.52 35.86 29.52C36.27 29.52 36.61 29.18 36.61 28.77C36.6 24.94 34.81 20.45 29.78 20.45Z"
         fill="currentColor"
       />
     </svg>

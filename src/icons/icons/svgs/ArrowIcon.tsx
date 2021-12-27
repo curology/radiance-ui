@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgArrowIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgArrowIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,10 @@ function SvgArrowIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Arrow</title>
       <path
-        d="M27.07 30.75a4.63 4.63 0 01-7.85 0L0 0h46.27z"
+        d="M27.8,39.8a4.63,4.63,0,0,1-7.85,0L.73,9.05H47Z"
+        transform="translate(-0.73 -9.05)"
         fill="currentColor"
       />
     </svg>

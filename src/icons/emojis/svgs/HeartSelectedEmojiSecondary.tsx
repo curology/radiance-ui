@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgHeartSelectedEmojiSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgHeartSelectedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,8 +11,9 @@ function SvgHeartSelectedEmojiSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Heart Selected Emoji</title>
       <path
-        d="M32.63 8c-3.45 0-4.85 2.07-5.98 3.73-.93 1.37-1.51 2.14-2.65 2.14-1.44 0-2.03-.82-2.94-2.26C20.04 10 18.78 8 15.37 8 10.69 8 8 11.55 8 17.73c0 4.74 2.72 9.73 7.85 14.44 3.1 2.84 7.56 7.54 7.6 7.59.15.16.34.24.55.24.21 0 .4-.08.54-.23.06-.06 5.64-5.95 7.6-7.81l.39-.37C35.14 29.15 40 24.6 40 17.94 40 11.35 37.52 8 32.63 8z"
+        d="M32.63 8C29.18 8 27.78 10.07 26.65 11.73C25.72 13.1 25.14 13.87 24 13.87C22.56 13.87 21.97 13.05 21.06 11.61C20.04 10 18.78 8 15.37 8C10.69 8 8 11.55 8 17.73C8 22.47 10.72 27.46 15.85 32.17C18.95 35.01 23.41 39.71 23.45 39.76C23.6 39.92 23.79 40 24 40C24.21 40 24.4 39.92 24.54 39.77C24.6 39.71 30.18 33.82 32.14 31.96L32.53 31.59C35.14 29.15 40 24.6 40 17.94C40 11.35 37.52 8 32.63 8Z"
         fill="currentColor"
       />
     </svg>
