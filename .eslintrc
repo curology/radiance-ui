@@ -120,6 +120,7 @@
     "jest/no-large-snapshots": "off",
     "jest/prefer-called-with": "off",
     "jest/prefer-expect-assertions": "off",
+    "jest/require-hook": "off",
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-underscore-dangle": [
