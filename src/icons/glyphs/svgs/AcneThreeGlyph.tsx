@@ -11,7 +11,6 @@ function SvgAcneThreeGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Acne Three Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

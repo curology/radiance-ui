@@ -11,7 +11,6 @@ function SvgUploadIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Upload Icon</title>
       <path
         d="M2.78 6.19c2.11 0 3.54-1.19 4.47-2.44v7.51c0 .41.34.75.75.75s.75-.34.75-.75V3.91c.99 1.21 2.45 2.23 4.47 2.23.41 0 .75-.34.75-.75s-.34-.75-.75-.75C9.76 4.64 8.73.74 8.69.57A.757.757 0 0 0 7.98 0c-.3-.01-.64.21-.73.54-.02.04-1.26 4.15-4.47 4.15a.749.749 0 1 0 0 1.5Z"
         fill="currentColor"

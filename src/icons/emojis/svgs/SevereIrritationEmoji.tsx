@@ -11,7 +11,6 @@ function SvgSevereIrritationEmoji(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Severe Irritation Emoji</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

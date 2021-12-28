@@ -11,7 +11,6 @@ function SvgSatisfiedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Satisfied Emoji</title>
       <path
         d="M24 40c-8.82 0-16-7.18-16-16S15.18 8 24 8c2.75 0 5.47.71 7.85 2.05.36.2.49.66.29 1.02s-.66.49-1.02.29A14.549 14.549 0 0 0 24 9.5C16 9.5 9.5 16 9.5 24S16 38.5 24 38.5 38.5 32 38.5 24c0-2.73-.76-5.38-2.2-7.68a.747.747 0 1 1 1.27-.79C39.16 18.06 40 20.99 40 24c0 8.82-7.18 16-16 16Z"
         fill="currentColor"

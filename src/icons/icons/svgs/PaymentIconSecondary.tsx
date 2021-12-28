@@ -11,7 +11,6 @@ function SvgPaymentIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Payment Icon</title>
       <path
         d="M14.8 2H.75C.34 2 0 2.34 0 2.75v2.29c0 .66.54 1.2 1.2 1.2h11.62c.41 0 .75-.34.75-.75s-.34-.75-.75-.75H1.5V3.5h13v8.94h-13V7.79c0-.41-.34-.75-.75-.75S0 7.38 0 7.79v4.95c0 .66.54 1.2 1.2 1.2h13.6c.66 0 1.2-.54 1.2-1.2V3.2c0-.66-.54-1.2-1.2-1.2Z"
         fill="currentColor"

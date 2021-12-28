@@ -11,7 +11,6 @@ function SvgFirmnessGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Firmness Glyph</title>
       <path
         d="M40 37.386H9.21a.878.878 0 0 1-.869-.714.882.882 0 0 1 .538-.993l27.831-11.34H9.22a.878.878 0 0 1-.868-.713.881.881 0 0 1 .538-.994l27.83-11.339H8V10h30.79c.434 0 .786.3.869.714a.882.882 0 0 1-.538.993L11.29 23.047h27.49c.434 0 .785.289.868.713a.875.875 0 0 1-.538.993l-27.83 11.34H40v1.293Z"
         fill="currentColor"

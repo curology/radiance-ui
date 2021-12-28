@@ -11,7 +11,6 @@ function SvgFlagUsaGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Flag - USA Glyph</title>
       <path
         d="M8 13v22h32V13H8Zm30.843 1.179v2.75H22.458v-2.75h16.385ZM22.458 25.57v-3.044h16.385v3.044H22.458Zm16.385 1.277v3.045H9.157v-3.045h29.686ZM22.458 21.25v-3.045h16.385v3.045H22.458ZM9.157 14.179h12.048V25.57H9.157V14.18Zm0 19.544v-2.652h29.686v2.652H9.157Z"
         fill="currentColor"

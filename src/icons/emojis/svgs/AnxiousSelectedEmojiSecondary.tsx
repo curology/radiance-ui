@@ -11,7 +11,6 @@ function SvgAnxiousSelectedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Anxious Selected Emoji</title>
       <path
         d="M31.37 19.2c0 2.28 1.75 3.89 3.94 3.89 2.41 0 3.94-1.61 3.94-4.05 0-1.73-1.17-2.85-2.09-4.08-1.73-2.32-1.86-6.24-1.86-6.24s0 3.7-1.92 6.18c-.93 1.23-2.01 2.6-2.01 4.3Z"
         fill="currentColor"

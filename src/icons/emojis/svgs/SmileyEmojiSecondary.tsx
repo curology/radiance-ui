@@ -11,7 +11,6 @@ function SvgSmileyEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Smiley Emoji</title>
       <path
         d="M23.93 33.08h-.24c-3.06-.1-5.53-2.04-6.3-4.94a.749.749 0 1 1 1.45-.38c.59 2.24 2.51 3.74 4.89 3.82 1.97.07 4.45-.92 5.44-3.87a.749.749 0 1 1 1.42.48c-1 2.99-3.6 4.89-6.66 4.89Z"
         fill="currentColor"

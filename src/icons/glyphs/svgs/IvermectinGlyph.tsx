@@ -11,7 +11,6 @@ function SvgIvermectinGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Ivermectin Ingredient Glyph</title>
       <path
         d="m17.898 16.052-1.067.612 3.136 5.462 1.067-.613-3.136-5.461ZM24.125 19.737l-.84-4.779-1.1.63.62 2.87.12.389-.28-.3-2.159-1.98-1.1.63 3.71 3.13 1.029-.59Z"
         fill="currentColor"

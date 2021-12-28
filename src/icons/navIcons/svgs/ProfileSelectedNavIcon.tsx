@@ -11,7 +11,6 @@ function SvgProfileSelectedNavIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Profile Selected Nav Icon</title>
       <path
         d="M10.05 14a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Z"
         fill="currentColor"

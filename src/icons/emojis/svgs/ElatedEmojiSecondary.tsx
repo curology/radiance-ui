@@ -11,7 +11,6 @@ function SvgElatedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Elated Emoji</title>
       <path
         d="M24 40c-8.82 0-16-7.18-16-16S15.18 8 24 8c.41 0 .75.34.75.75s-.34.75-.75.75C16 9.5 9.5 16 9.5 24S16 38.5 24 38.5 38.5 32 38.5 24c0-.41.34-.75.75-.75s.75.34.75.75c0 8.82-7.18 16-16 16Z"
         fill="currentColor"

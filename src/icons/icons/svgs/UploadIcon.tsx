@@ -11,7 +11,6 @@ function SvgUploadIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Upload Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

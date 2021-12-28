@@ -11,7 +11,6 @@ function SvgMildIrritationEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Mild Irritation Emoji</title>
       <path
         d="M24 40c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16Zm0-30.5C16 9.5 9.5 16 9.5 24S16 38.5 24 38.5 38.5 32 38.5 24 32 9.5 24 9.5Z"
         fill="currentColor"

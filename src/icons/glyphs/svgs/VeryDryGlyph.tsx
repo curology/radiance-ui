@@ -11,7 +11,6 @@ function SvgVeryDryGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Very Dry Glyph</title>
       <path
         d="m27.125 26.332-1.146.732 1.914 3 1.147-.731-1.915-3Z"
         fill="currentColor"

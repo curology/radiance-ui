@@ -11,7 +11,6 @@ function SvgTimeSometimesGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Time - Sometimes Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

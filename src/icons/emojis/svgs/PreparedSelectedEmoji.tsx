@@ -11,7 +11,6 @@ function SvgPreparedSelectedEmoji(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Prepared Selected Emoji</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

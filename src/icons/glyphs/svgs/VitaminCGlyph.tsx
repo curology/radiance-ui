@@ -11,7 +11,6 @@ function SvgVitaminCGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Vitamin-C Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

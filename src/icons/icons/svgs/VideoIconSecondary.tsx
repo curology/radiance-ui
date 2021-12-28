@@ -11,7 +11,6 @@ function SvgVideoIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Video Icon</title>
       <path
         d="M14.35 2H1.65C.74 2 0 2.74 0 3.65v8.64c0 .91.74 1.65 1.65 1.65h12.7c.91 0 1.65-.74 1.65-1.65V3.65C16 2.74 15.26 2 14.35 2Zm.15 10.29c0 .08-.07.15-.15.15H1.65c-.08 0-.15-.07-.15-.15V3.65c0-.08.07-.15.15-.15h12.7c.08 0 .15.07.15.15v8.64Z"
         fill="currentColor"

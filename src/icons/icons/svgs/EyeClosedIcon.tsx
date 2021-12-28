@@ -11,7 +11,6 @@ function SvgEyeClosedIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Eye Closed Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

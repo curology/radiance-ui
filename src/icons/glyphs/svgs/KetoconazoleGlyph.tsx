@@ -11,7 +11,6 @@ function SvgKetoconazoleGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Ketoconazole Ingredient Glyph</title>
       <path
         d="m19.02 19.16 2.64-2.21-1.45-.4-2.97 2.51.84-3.09-1.2-.32-1.65 6.08 1.19.33.35-1.27 1.17-.9 1.03 2.86 1.44.39-1.39-3.98Z"
         fill="currentColor"

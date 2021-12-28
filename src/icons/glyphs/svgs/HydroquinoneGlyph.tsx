@@ -11,7 +11,6 @@ function SvgHydroquinoneGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Hydroquinone Glyph</title>
       <path
         d="m33.08 11.24-16-1.24L8 23.24l6.93 14.48 16.01 1.24 9.08-13.24-6.94-14.48Zm-2.77 26.42-14.56-1.13-6.31-13.18L17.7 11.3l14.57 1.13 6.31 13.18-8.27 12.05Z"
         fill="currentColor"

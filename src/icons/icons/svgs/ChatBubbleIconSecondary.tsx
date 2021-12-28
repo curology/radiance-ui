@@ -11,7 +11,6 @@ function SvgChatBubbleIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Chat Bubble Icon</title>
       <path
         d="M4 6.5c-.83 0-1.5.67-1.5 1.5S3.17 9.5 4 9.5 5.5 8.83 5.5 8 4.83 6.5 4 6.5ZM8 6.5c-.83 0-1.5.67-1.5 1.5S7.17 9.5 8 9.5 9.5 8.83 9.5 8 8.83 6.5 8 6.5ZM12 6.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5Z"
         fill="currentColor"

@@ -11,7 +11,6 @@ function SvgEqualsIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Equals Icon</title>
       <path
         d="M11.331 5.625H4.678a.688.688 0 0 0-.683.682c0 .373.31.683.683.683h6.653c.373 0 .683-.31.683-.683a.688.688 0 0 0-.683-.682ZM11.331 9.02H4.678a.688.688 0 0 0-.683.682c0 .373.31.682.683.682h6.653c.373 0 .683-.309.683-.682a.688.688 0 0 0-.683-.683Z"
         fill="currentColor"

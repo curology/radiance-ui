@@ -11,7 +11,6 @@ function SvgSmileyEmoji(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Smiley Emoji</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

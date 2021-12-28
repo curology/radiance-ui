@@ -11,7 +11,6 @@ function SvgPillsGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Pills Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

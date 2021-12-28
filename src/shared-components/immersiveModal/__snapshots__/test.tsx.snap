@@ -113,9 +113,6 @@ exports[`<ImmersiveModal /> renders immersive modal correctly 1`] = `
       width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Cross Icon
-      </title>
       <path
         d="m16.01.93-.89-.88-7.11 7.1L.91.05.02.93l7.11 7.11-7.11 7.11.89.88 7.1-7.11 7.11 7.11.89-.88L8.9 8.04 16.01.93Z"
         fill="currentColor"

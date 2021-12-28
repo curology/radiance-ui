@@ -11,7 +11,6 @@ function SvgPlayIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Play Icon</title>
       <path
         d="m2 16.04 11.25-7.7L2 .03v16.01ZM3.25 2.51l7.85 5.8-7.85 5.37V2.51Z"
         fill="currentColor"

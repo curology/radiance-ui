@@ -11,7 +11,6 @@ function SvgResveratrolGlyphSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Resveratrol Glyph</title>
       <path
         d="M18.8 29.25c2.95-1.95 5.37-4.99 5.37-8.53v-1.88C24.16 12.55 16.93 8 12.06 8H8.75c-.41 0-.75.34-.75.75s.34.75.75.75h2.56v29.71c0 .41.34.75.75.75s.75-.34.75-.75v-7.69c1.47-.14 3.11-.66 4.69-1.5l7.37 9.64c.15.19.37.29.6.29.16 0 .32-.05.46-.15.33-.25.39-.72.14-1.05l-7.27-9.5ZM12.81 9.54c4.15.43 9.86 4.28 9.86 9.3v1.88c0 4.86-5.69 8.85-9.86 9.3V9.54Z"
         fill="currentColor"
