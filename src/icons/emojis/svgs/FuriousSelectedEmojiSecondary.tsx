@@ -11,7 +11,6 @@ function SvgFuriousSelectedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Furious Selected Emoji</title>
       <path
         d="M18.87 30.04c0 .74.6 1.34 1.34 1.34h.1v-2.69h-.1c-.74 0-1.34.61-1.34 1.35ZM26.19 28.69h-1.44v2.69h1.44v-2.69ZM23.25 28.69h-1.44v2.69h1.44v-2.69Z"
         fill="currentColor"

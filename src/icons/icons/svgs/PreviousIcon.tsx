@@ -11,7 +11,6 @@ function SvgPreviousIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Previous Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

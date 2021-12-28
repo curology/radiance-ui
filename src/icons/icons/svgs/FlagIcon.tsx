@@ -11,7 +11,6 @@ function SvgFlagIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Flag Icon</title>
       <path
         d="m15.94 9.13-3.97-4.44L15.9.07 0 0v16h1.25V9.07l14.69.06ZM13.22 1.3l-2.89 3.4 2.83 3.17-11.91-.05V1.25l11.97.05Z"
         fill="currentColor"

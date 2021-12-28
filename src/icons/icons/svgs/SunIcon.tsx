@@ -11,7 +11,6 @@ function SvgSunIcon(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Sun Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

@@ -11,7 +11,6 @@ function SvgCheckmarkIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Checkmark Icon</title>
       <path
         d="M6.56 16c-.35 0-.66-.25-.73-.6-.04-.19-.98-4.59-5.23-5.47a.75.75 0 0 1-.58-.89c.08-.41.48-.67.88-.58 2.88.6 4.51 2.48 5.4 4.09C7.15 9.13 9.36 3.26 14.88.1a.74.74 0 0 1 1.02.28c.21.36.08.82-.28 1.02-7.24 4.14-8.3 13.83-8.31 13.92a.76.76 0 0 1-.71.68h-.04Z"
         fill="currentColor"

@@ -11,7 +11,6 @@ function SvgGraphIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Graph Icon</title>
       <path
         d="M15.24 14.49H2.1c-.33 0-.6-.27-.6-.6V.75C1.5.34 1.16 0 .75 0S0 .34 0 .75v13.14c0 1.16.94 2.1 2.1 2.1h13.14c.41 0 .75-.34.75-.75s-.34-.75-.75-.75Z"
         fill="currentColor"

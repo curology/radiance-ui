@@ -11,7 +11,6 @@ function SvgNoMakeupGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>No Make-up Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

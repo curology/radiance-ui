@@ -11,7 +11,6 @@ function SvgHugEmoji(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Hug Emoji</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

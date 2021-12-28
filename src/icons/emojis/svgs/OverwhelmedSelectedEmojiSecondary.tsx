@@ -11,7 +11,6 @@ function SvgOverwhelmedSelectedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Overwhelmed Selected Emoji</title>
       <path
         d="M31.37 19.2c0 2.28 1.75 3.89 3.94 3.89 2.38 0 3.89-1.56 3.93-3.95-.45-1.41-1.09-2.74-1.9-3.95l-.18-.24c-.08-.11-.16-.23-.24-.35-.64-.88-1.37-1.69-2.18-2.42-.28.92-.71 1.89-1.35 2.72-.94 1.23-2.02 2.6-2.02 4.3Z"
         fill="currentColor"

@@ -11,7 +11,6 @@ function SvgSelfieGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Selfie Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

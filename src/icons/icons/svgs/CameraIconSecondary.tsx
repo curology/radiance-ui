@@ -11,7 +11,6 @@ function SvgCameraIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Camera Icon</title>
       <path
         d="M14.78 13.92H1.22C.55 13.92 0 13.37 0 12.7V3.22C0 2.55.55 2 1.22 2h13.55c.68 0 1.23.55 1.23 1.22v9.48c0 .67-.55 1.22-1.22 1.22ZM1.5 12.42h13V3.5h-13v8.92Z"
         fill="currentColor"

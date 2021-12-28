@@ -11,7 +11,6 @@ function SvgCircleCheckmarkIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Circle Checkmark Icon</title>
       <path
         d="M8 16c-4.414 0-8-3.586-8-8s3.586-8 8-8 8 3.586 8 8-3.586 8-8 8ZM8 1.365A6.642 6.642 0 0 0 1.365 8 6.642 6.642 0 0 0 8 14.635 6.642 6.642 0 0 0 14.635 8 6.642 6.642 0 0 0 8 1.365Z"
         fill="currentColor"

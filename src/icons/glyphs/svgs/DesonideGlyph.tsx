@@ -11,7 +11,6 @@ function SvgDesonideGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Desonide Glyph</title>
       <path
         d="M22.04 23.62c-.01 2.07-1.42 3.49-3.63 3.48l-2.62-.01.03-7 2.62.01c2.2.02 3.61 1.45 3.6 3.52Zm-4.86-2.24-.02 4.44h1.25c1.39.01 2.19-.8 2.2-2.21.01-1.4-.78-2.22-2.18-2.23h-1.25ZM28.57 24.6l-4.75-5.5 3.53-3.04 4.74 5.51-3.52 3.03Zm-2.98-5.37 3.11 3.61 1.64-1.41-3.11-3.61-1.64 1.41Z"
         fill="currentColor"

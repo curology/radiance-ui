@@ -11,7 +11,6 @@ function SvgPhoneIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Phone Icon</title>
       <path
         d="M8.38 13.78a.88.88 0 1 0 0-1.76.88.88 0 0 0 0 1.76ZM9.63 4.32c.41 0 .75-.34.75-.75s-.34-.75-.75-.75H7.14c-.41 0-.75.34-.75.75s.34.75.75.75h2.49Z"
         fill="currentColor"

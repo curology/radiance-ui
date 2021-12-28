@@ -11,7 +11,6 @@ function SvgNiacinamideGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Niacinamide Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

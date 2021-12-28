@@ -11,7 +11,6 @@ function SvgAhaBhaTonerSolutionGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>AHA-BHA Toner Solution</title>
       <path
         d="M25.623 24.8h3.836v1.3h-3.836l2.656 2.7-.886.9-2.655-2.7v3.8h-1.18V27l-2.656 2.7-.886-.9 2.656-2.7h-3.836v-1.3h3.836l-2.655-2.7.885-.9 2.655 2.7v-3.8h1.18v3.8l2.657-2.7.885.9-2.656 2.7Z"
         fill="currentColor"

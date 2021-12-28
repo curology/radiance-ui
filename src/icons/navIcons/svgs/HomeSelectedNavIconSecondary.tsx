@@ -11,7 +11,6 @@ function SvgHomeSelectedNavIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Home Selected Nav Icon</title>
       <path
         d="M14.623 5.665c-2.567-2.158-3.34-2.818-4.614-2.818-1.256 0-2.028.716-4.418 2.762-1.963 1.684-2.986 2.605-2.986 4.372v8.26c0 .233.186.429.428.429h13.944a.427.427 0 0 0 .428-.428v-8.13c-.01-1.75-.55-2.577-2.782-4.447Z"
         fill="currentColor"

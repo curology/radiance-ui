@@ -11,7 +11,6 @@ function SvgMetronidazoleGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Metronidazole Glyph</title>
       <path
         d="m28.24 21.68-1.23.19-.6-3.94-.09.57-.9 3.62-1.03.16-1.93-3.18-.26-.53.6 3.94-1.22.19-.95-6.23 1.41-.21L24.43 20l.19.34.09-.39 1.18-4.29 1.42-.22.93 6.24Z"
         fill="currentColor"

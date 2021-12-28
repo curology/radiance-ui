@@ -11,7 +11,6 @@ function SvgTreatmentPlanIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Treatment Plan Icon</title>
       <path
         d="M12.74 0H3.2C2.54 0 2 .54 2 1.2v13.6c0 .66.54 1.2 1.2 1.2h9.54c.66 0 1.2-.54 1.2-1.2V1.2c0-.66-.54-1.2-1.2-1.2Zm-.3 14.5H3.5v-13h8.94v13Z"
         fill="currentColor"

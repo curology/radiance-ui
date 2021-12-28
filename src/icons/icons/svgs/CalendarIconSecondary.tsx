@@ -11,7 +11,6 @@ function SvgCalendarIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Calendar Icon</title>
       <path
         d="M4.7 5.22a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM11.3 5.22a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
         fill="currentColor"

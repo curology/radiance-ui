@@ -11,7 +11,6 @@ function SvgUnsatisfiedEmoji(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Unsatisfied Emoji</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

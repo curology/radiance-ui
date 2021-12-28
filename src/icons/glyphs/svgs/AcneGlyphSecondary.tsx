@@ -11,7 +11,6 @@ function SvgAcneGlyphSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Acne Glyph</title>
       <path
         d="M24 30.15a6.52 6.52 0 1 0 0-13.04 6.52 6.52 0 0 0 0 13.04Z"
         fill="currentColor"

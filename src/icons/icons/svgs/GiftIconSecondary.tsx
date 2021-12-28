@@ -11,7 +11,6 @@ function SvgGiftIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Gift Icon</title>
       <path
         d="M7.99 13.72c.41 0 .75-.34.75-.75v-2.56h4.2c.41 0 .75-.34.75-.75s-.34-.75-.75-.75h-4.2V6.45c0-.41-.34-.75-.75-.75s-.75.34-.75.75v2.46H3.05c-.41 0-.75.34-.75.75s.34.75.75.75h4.19v2.56c0 .42.34.75.75.75Z"
         fill="currentColor"

@@ -11,7 +11,6 @@ function SvgClockSometimesGlyphSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Clock - Sometimes Glyph</title>
       <path
         d="M24 8C15.18 8 8 15.18 8 24s7.18 16 16 16 16-7.18 16-16S32.82 8 24 8Zm0 30.5C16 38.5 9.5 32 9.5 24S16 9.5 24 9.5 38.5 16 38.5 24 32 38.5 24 38.5Z"
         fill="currentColor"

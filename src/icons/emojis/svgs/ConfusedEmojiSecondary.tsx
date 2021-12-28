@@ -11,7 +11,6 @@ function SvgConfusedEmojiSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Confused Emoji</title>
       <path
         d="M24 40c-8.82 0-16-7.18-16-16S15.18 8 24 8c.41 0 .75.34.75.75s-.34.75-.75.75C16 9.5 9.5 16 9.5 24S16 38.5 24 38.5 38.5 32 38.5 24c0-2.35-.54-4.59-1.62-6.66a.746.746 0 0 1 .32-1.01c.37-.19.82-.05 1.01.32A15.99 15.99 0 0 1 40 24c0 8.82-7.18 16-16 16Z"
         fill="currentColor"

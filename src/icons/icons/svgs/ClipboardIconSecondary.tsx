@@ -11,7 +11,6 @@ function SvgClipboardIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Clipboard Icon</title>
       <path
         d="M13.19 0c-.41 0-.75.34-.75.75V14.5H3.5V.75C3.5.34 3.16 0 2.75 0S2 .34 2 .75v14.04c0 .67.54 1.21 1.2 1.21h9.54c.66 0 1.2-.54 1.2-1.21V.75c0-.41-.34-.75-.75-.75Z"
         fill="currentColor"

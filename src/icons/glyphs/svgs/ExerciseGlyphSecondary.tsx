@@ -11,7 +11,6 @@ function SvgExerciseGlyphSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Exercise Glyph</title>
       <path
         d="M12.94 26.73H8.75c-.41 0-.75.34-.75.75v11.77c0 .41.34.75.75.75h4.19c.41 0 .75-.34.75-.75V27.48c0-.41-.34-.75-.75-.75Zm-.75 11.77H9.5V28.23h2.69V38.5ZM39.25 26.73h-4.19c-.41 0-.75.34-.75.75v11.77c0 .41.34.75.75.75h4.19c.41 0 .75-.34.75-.75V27.48c0-.41-.34-.75-.75-.75ZM38.5 38.5h-2.69V28.23h2.69V38.5Z"
         fill="currentColor"

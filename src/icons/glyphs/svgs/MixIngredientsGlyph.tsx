@@ -11,7 +11,6 @@ function SvgMixIngredientsGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Mix Ingredients Glyph</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

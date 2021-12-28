@@ -11,7 +11,6 @@ function SvgTranexamicAcidGlyph(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <title>Tranexamic Acid Glyph</title>
       <path
         d="m24.03 17.12-2.03.3.78 5.09-1.22.19-.78-5.09-2.03.31-.17-1.14 5.28-.8.17 1.14ZM30.25 21.37l-1.33.2-.73-1.3-2.48.38-.31 1.46-1.33.2 1.46-6.6 1.34-.2 3.38 5.86Zm-3.87-3.9-.44 2.06 1.71-.26-1.04-1.84-.17-.33-.06.37Z"
         fill="currentColor"
