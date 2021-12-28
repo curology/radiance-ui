@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v26.0.2
+
+- [Components] Remove `<title>` prop added in [#1307](https://github.com/curology/radiance-ui/pull/1307) ([#1327](https://github.com/curology/radiance-ui/pull/1327))
+
 # v26.0.1
 
 - [Dependencies] Peg specific version of `@emotion/react`
@@ -8,6 +12,7 @@
 
 - [Dependencies] **BREAKING** Update React 16 to 17 ([#553](https://github.com/curology/radiance-ui/pull/553))
 - [Dependencies] Update compatible `@emotion` versions ([#1282](https://github.com/curology/radiance-ui/pull/1282))
+- [Dependencies] Update `@svgr/cli` from v5 to v6, remove `@svgr/rollup`, update config ([#1307](https://github.com/curology/radiance-ui/pull/1307))
 
 # v25.0.1
 
