@@ -63,9 +63,11 @@ export const DialogModal: DialogModal = ({
   useEffect(() => {
     domNode.current = getDomNode();
     htmlNode.current = getHtmlNode();
-    htmlNode.current.classList.add('no-scroll');
+    const htmlNodeInstance = htmlNode.current;
+
+    htmlNodeInstance.classList.add('no-scroll');
     return () => {
-      htmlNode.current.classList.remove('no-scroll');
+      htmlNodeInstance.classList.remove('no-scroll');
     };
   }, []);
 

@@ -205,34 +205,40 @@ export const ImmersiveModal: ImmersiveModal = ({
     modalMobileScrollingElement.current = getModalMobileScrollingElement();
     modalDesktopScrollingElement.current = getModalDesktopScrollingElement();
 
-    htmlNode.current.classList.add('no-scroll');
+    const htmlNodeInstance = htmlNode.current;
+    const modalMobileScrollingElementInstance =
+      modalMobileScrollingElement.current;
+    const modalDesktopScrollingElementInstance =
+      modalDesktopScrollingElement.current;
+
+    htmlNodeInstance.classList.add('no-scroll');
 
     if (
-      modalMobileScrollingElement.current &&
-      modalDesktopScrollingElement.current
+      modalMobileScrollingElementInstance &&
+      modalDesktopScrollingElementInstance
     ) {
-      modalMobileScrollingElement.current.addEventListener(
+      modalMobileScrollingElementInstance.addEventListener(
         'scroll',
         handleScroll,
       );
-      modalDesktopScrollingElement.current.addEventListener(
+      modalDesktopScrollingElementInstance.addEventListener(
         'scroll',
         handleScroll,
       );
     }
 
     return () => {
-      htmlNode.current.classList.remove('no-scroll');
+      htmlNodeInstance.classList.remove('no-scroll');
 
       if (
-        modalMobileScrollingElement.current &&
-        modalDesktopScrollingElement.current
+        modalMobileScrollingElementInstance &&
+        modalDesktopScrollingElementInstance
       ) {
-        modalMobileScrollingElement.current.removeEventListener(
+        modalMobileScrollingElementInstance.removeEventListener(
           'scroll',
           handleScroll,
         );
-        modalDesktopScrollingElement.current.removeEventListener(
+        modalDesktopScrollingElementInstance.removeEventListener(
           'scroll',
           handleScroll,
         );
