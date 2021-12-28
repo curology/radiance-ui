@@ -65,7 +65,7 @@ export const Accordion: Accordion = ({
     if (contentHeight !== nextHeight) {
       setContentHeight(nextHeight);
     }
-  });
+  }, [isOpen, contentHeight]);
 
   const handleKeyDown = (event: React.KeyboardEvent): void => {
     if (!disabled && event.key === keyboardKeys.enter) {
