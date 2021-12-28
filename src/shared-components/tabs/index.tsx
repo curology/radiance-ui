@@ -3,29 +3,26 @@ import React, { useState } from 'react';
 
 import Style from './style';
 
-interface TabType {
+export interface TabType {
   id: number;
   text: string;
 }
 
 // Hardcoding TabType below to show the actual type in the docs
-export interface TabsProps {
+export interface TabsProps<TabGeneric extends TabType> {
   initialActiveTabId?: number;
-  onClick?: (tab: TabType) => unknown;
-  tabItems: Array<{
-    id: number;
-    text: string;
-  }>;
+  onClick?: (tab: TabGeneric) => unknown;
+  tabItems: TabGeneric[];
 }
 
-export const Tabs: React.FC<TabsProps> = ({
+export const Tabs = <TabGeneric extends TabType>({
   initialActiveTabId = 1,
   onClick = () => undefined,
   tabItems,
-}: TabsProps) => {
+}: TabsProps<TabGeneric>) => {
   const [activeTabId, setActiveTabId] = useState(initialActiveTabId);
 
-  const onTabClick = (tab: TabType) => {
+  const onTabClick = (tab: TabGeneric) => {
     setActiveTabId(tab.id);
     onClick(tab);
   };
