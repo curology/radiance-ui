@@ -13,7 +13,7 @@ function SvgArrowLeftIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Arrow - Left Icon</title>
       <path
-        d="M16 7.21H2.41L8.74 0.889999L7.85 0L0 7.86L8.18 15.73L9.05 14.83L2.42 8.46H16V7.21Z"
+        d="M16 7.21H2.41L8.74.89 7.85 0 0 7.86l8.18 7.87.87-.9-6.63-6.37H16V7.21Z"
         fill="currentColor"
       />
     </svg>

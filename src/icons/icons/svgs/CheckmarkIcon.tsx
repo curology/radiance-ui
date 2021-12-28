@@ -13,7 +13,7 @@ function SvgCheckmarkIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Checkmark Icon</title>
       <path
-        d="M14.96 2L5.26 11.42L0.88 7.1L0 7.99L5.26 13.17L15.83 2.9L14.96 2Z"
+        d="m14.96 2-9.7 9.42L.88 7.1 0 7.99l5.26 5.18L15.83 2.9l-.87-.9Z"
         fill="currentColor"
       />
     </svg>

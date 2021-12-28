@@ -13,7 +13,7 @@ function SvgHomeIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Home Icon</title>
       <path
-        d="M8 2.21L14.25 8.14V14.25H10.79H5.21H1.75V7.92L8 2.21ZM8.01 0.5L0.5 7.37V15.5H5.21H10.8H15.5V7.6L8.01 0.5Z"
+        d="m8 2.21 6.25 5.93v6.11H1.75V7.92L8 2.21ZM8.01.5.5 7.37v8.13h15V7.6L8.01.5Z"
         fill="currentColor"
       />
     </svg>

@@ -13,8 +13,7 @@ function SvgArrowIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Arrow</title>
       <path
-        d="M27.8,39.8a4.63,4.63,0,0,1-7.85,0L.73,9.05H47Z"
-        transform="translate(-0.73 -9.05)"
+        d="M27.07 30.75a4.63 4.63 0 0 1-7.85 0L0 0h46.27Z"
         fill="currentColor"
       />
     </svg>

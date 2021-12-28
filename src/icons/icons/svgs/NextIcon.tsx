@@ -15,7 +15,7 @@ function SvgNextIcon(props: SVGProps<SVGSVGElement>) {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M12.02 8.34003L0.77002 16.04V0.0300293L12.02 8.34003ZM9.87003 8.31003L2.02002 2.51003V13.68L9.87003 8.31003ZM14.74 0.0500488H15.99V16.05H14.74V0.0500488Z"
+        d="M12.02 8.34.77 16.04V.03l11.25 8.31Zm-2.15-.03-7.85-5.8v11.17l7.85-5.37ZM14.74.05h1.25v16h-1.25v-16Z"
         fill="currentColor"
       />
     </svg>

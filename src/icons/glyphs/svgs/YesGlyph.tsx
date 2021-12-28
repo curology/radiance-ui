@@ -13,7 +13,7 @@ function SvgYesGlyph(props: SVGProps<SVGSVGElement>) {
     >
       <title>Yes Glyph</title>
       <path
-        d="M18.4999 36.8401L10.1099 28.4601L10.9999 27.5701L18.4099 34.9901L37.2799 12.3301L38.2399 13.1201L18.4999 36.8401Z"
+        d="m18.5 36.84-8.39-8.38.89-.89 7.41 7.42 18.87-22.66.96.79L18.5 36.84Z"
         fill="currentColor"
       />
     </svg>

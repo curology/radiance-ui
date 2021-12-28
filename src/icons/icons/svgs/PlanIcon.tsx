@@ -15,7 +15,7 @@ function SvgPlanIcon(props: SVGProps<SVGSVGElement>) {
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M1.25 1.25H12.75V14.75H1.25V1.25ZM0 0H1.25H12.75H14V1.25V14.75V16H12.75H1.25H0V14.75V1.25V0ZM3 4.625H11V3.375H3V4.625ZM11 7.625H3V6.375H11V7.625ZM3 10.625H7V9.375H3V10.625Z"
+        d="M1.25 1.25h11.5v13.5H1.25V1.25ZM0 0h14v16H0V0Zm3 4.625h8v-1.25H3v1.25Zm8 3H3v-1.25h8v1.25Zm-8 3h4v-1.25H3v1.25Z"
         fill="currentColor"
       />
     </svg>

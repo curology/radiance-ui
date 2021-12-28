@@ -12,10 +12,7 @@ function SvgHomeSelectedNavIcon(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <title>Home Selected Nav Icon</title>
-      <path
-        d="M19 19.01V9.53001L10.01 1.01001L1 9.26001V19.01H19Z"
-        fill="currentColor"
-      />
+      <path d="M19 19.01V9.53l-8.99-8.52L1 9.26v9.75h18Z" fill="currentColor" />
     </svg>
   );
 }

@@ -13,7 +13,7 @@ function SvgPlayIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Play Icon</title>
       <path
-        d="M2 16.04L13.25 8.34003L2 0.0300293V16.04ZM3.25 2.51003L11.1 8.31003L3.25 13.68V2.51003Z"
+        d="m2 16.04 11.25-7.7L2 .03v16.01ZM3.25 2.51l7.85 5.8-7.85 5.37V2.51Z"
         fill="currentColor"
       />
     </svg>

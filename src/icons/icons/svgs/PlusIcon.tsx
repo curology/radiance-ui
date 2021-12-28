@@ -13,7 +13,7 @@ function SvgPlusIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Plus Icon</title>
       <path
-        d="M16.01 7.42004H8.64001V0.0400391H7.39001V7.42004H0.0100098V8.67004H7.39001V16.04H8.64001V8.67004H16.01V7.42004Z"
+        d="M16.01 7.42H8.64V.04H7.39v7.38H.01v1.25h7.38v7.37h1.25V8.67h7.37V7.42Z"
         fill="currentColor"
       />
     </svg>

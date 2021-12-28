@@ -13,7 +13,7 @@ function SvgLightningIcon(props: SVGProps<SVGSVGElement>) {
     >
       <title>Lightning Icon</title>
       <path
-        d="M8.87003 16.0798L7.75002 15.4998L11.62 8.07983H2.15002L6.15002 0.079834L7.28002 0.649841L4.18002 6.81985H13.69L8.87003 16.0798Z"
+        d="m8.87 16.08-1.12-.58 3.87-7.42H2.15l4-8 1.13.57-3.1 6.17h9.51l-4.82 9.26Z"
         fill="currentColor"
       />
     </svg>

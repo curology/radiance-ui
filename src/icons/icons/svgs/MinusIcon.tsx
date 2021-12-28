@@ -12,10 +12,7 @@ function SvgMinusIcon(props: SVGProps<SVGSVGElement>) {
       {...props}
     >
       <title>Minus Icon</title>
-      <path
-        d="M16.01 7.41992H0.0100098V8.66992H16.01V7.41992Z"
-        fill="currentColor"
-      />
+      <path d="M16.01 7.42h-16v1.25h16V7.42Z" fill="currentColor" />
     </svg>
   );
 }
