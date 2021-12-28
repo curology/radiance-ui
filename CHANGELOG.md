@@ -1,6 +1,13 @@
 # CHANGELOG
 
-# Unreleased
+# v26.0.1
+
+- [Dependencies] Peg specific version of `@emotion/react`
+
+# v26.0.0
+
+- [Dependencies] **BREAKING** Update React 16 to 17 ([#553](https://github.com/curology/radiance-ui/pull/553))
+- [Dependencies] Update compatible `@emotion` versions ([#1282](https://github.com/curology/radiance-ui/pull/1282))
 
 # v25.0.1
 
