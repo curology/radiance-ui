@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgHomeIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgHomeIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgHomeIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Home Icon</title>
       <path
-        d="M8 2.21l6.25 5.93v6.11H1.75V7.92L8 2.21zM8.01.5L.5 7.37v8.13h15V7.6L8.01.5z"
+        d="m8 2.21 6.25 5.93v6.11H1.75V7.92L8 2.21ZM8.01.5.5 7.37v8.13h15V7.6L8.01.5Z"
         fill="currentColor"
       />
     </svg>

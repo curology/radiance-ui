@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgPauseIconSecondary(props: React.SVGProps<SVGSVGElement>) {
+function SvgPauseIconSecondary(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,10 +11,11 @@ function SvgPauseIconSecondary(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Pause Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M4.56 0a.96.96 0 00-.96.96v14.08a.96.96 0 001.92 0V.96A.96.96 0 004.56 0zm6.859 0a.96.96 0 00-.96.96v14.08a.96.96 0 001.92 0V.96a.96.96 0 00-.96-.96z"
+        d="M4.56 0a.96.96 0 0 0-.96.96v14.08a.96.96 0 0 0 1.92 0V.96A.96.96 0 0 0 4.56 0Zm6.859 0a.96.96 0 0 0-.96.96v14.08a.96.96 0 0 0 1.92 0V.96a.96.96 0 0 0-.96-.96Z"
         fill="currentColor"
       />
     </svg>

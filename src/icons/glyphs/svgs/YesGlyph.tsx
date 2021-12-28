@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgYesGlyph(props: React.SVGProps<SVGSVGElement>) {
+function SvgYesGlyph(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={48}
@@ -10,8 +11,9 @@ function SvgYesGlyph(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Yes Glyph</title>
       <path
-        d="M18.5 36.84l-8.39-8.38.89-.89 7.41 7.42 18.87-22.66.96.79L18.5 36.84z"
+        d="m18.5 36.84-8.39-8.38.89-.89 7.41 7.42 18.87-22.66.96.79L18.5 36.84Z"
         fill="currentColor"
       />
     </svg>

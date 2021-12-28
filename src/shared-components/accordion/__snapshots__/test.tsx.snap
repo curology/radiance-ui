@@ -106,8 +106,11 @@ exports[`<Accordion /> UI snapshots renders disabled accordion 1`] = `
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Chevron Icon
+        </title>
         <path
-          d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+          d="M6.88 12.88 6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44Z"
           fill="currentColor"
         />
       </svg>
@@ -222,8 +225,11 @@ exports[`<Accordion /> UI snapshots renders no border accordion 1`] = `
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Chevron Icon
+        </title>
         <path
-          d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+          d="M6.88 12.88 6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44Z"
           fill="currentColor"
         />
       </svg>
@@ -339,8 +345,11 @@ exports[`<Accordion /> UI snapshots renders regular accordion 1`] = `
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Chevron Icon
+        </title>
         <path
-          d="M6.88 12.88L6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44z"
+          d="M6.88 12.88 6 12l3.55-3.56L6 4.88 6.88 4l4.44 4.44-4.44 4.44Z"
           fill="currentColor"
         />
       </svg>

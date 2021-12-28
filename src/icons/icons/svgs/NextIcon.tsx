@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgNextIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgNextIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,10 +11,11 @@ function SvgNextIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Next Icon</title>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
-        d="M12.02 8.34L.77 16.04V.03l11.25 8.31zm-2.15-.03l-7.85-5.8v11.17l7.85-5.37zM14.74.05h1.25v16h-1.25v-16z"
+        d="M12.02 8.34.77 16.04V.03l11.25 8.31Zm-2.15-.03-7.85-5.8v11.17l7.85-5.37ZM14.74.05h1.25v16h-1.25v-16Z"
         fill="currentColor"
       />
     </svg>

@@ -126,8 +126,11 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
         width="16"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Checkmark Icon
+        </title>
         <path
-          d="M14.96 2l-9.7 9.42L.88 7.1 0 7.99l5.26 5.18L15.83 2.9l-.87-.9z"
+          d="m14.96 2-9.7 9.42L.88 7.1 0 7.99l5.26 5.18L15.83 2.9l-.87-.9Z"
           fill="currentColor"
         />
       </svg>
@@ -271,6 +274,9 @@ exports[`<SelectorButton /> UI snapshots when Icon added displays check mark for
         width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Circle Solid Icon
+        </title>
         <circle
           cx="8"
           cy="8"
@@ -420,6 +426,9 @@ exports[`<SelectorButton /> UI snapshots when checked type is primary 1`] = `
         width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Circle Solid Icon
+        </title>
         <circle
           cx="8"
           cy="8"
@@ -569,6 +578,9 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
         width="8"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          Circle Solid Icon
+        </title>
         <circle
           cx="8"
           cy="8"

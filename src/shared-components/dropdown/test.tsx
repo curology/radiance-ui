@@ -93,7 +93,7 @@ describe('<DesktopDropdown />', () => {
       />,
     );
 
-    expect(getByRole('button', { name: 'Test1' })).toBeTruthy();
+    expect(getByRole('button', { name: 'Test1 Chevron Icon' })).toBeTruthy();
   });
 
   describe('onSelectClick callback', () => {

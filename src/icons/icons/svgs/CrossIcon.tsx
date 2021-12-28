@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { SVGProps } from 'react';
 
-function SvgCrossIcon(props: React.SVGProps<SVGSVGElement>) {
+function SvgCrossIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={16}
@@ -10,8 +11,9 @@ function SvgCrossIcon(props: React.SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
+      <title>Cross Icon</title>
       <path
-        d="M16.01.93l-.89-.88-7.11 7.1L.91.05.02.93l7.11 7.11-7.11 7.11.89.88 7.1-7.11 7.11 7.11.89-.88L8.9 8.04 16.01.93z"
+        d="m16.01.93-.89-.88-7.11 7.1L.91.05.02.93l7.11 7.11-7.11 7.11.89.88 7.1-7.11 7.11 7.11.89-.88L8.9 8.04 16.01.93Z"
         fill="currentColor"
       />
     </svg>

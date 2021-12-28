@@ -1,7 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
-import svgr from '@svgr/rollup';
-import { defineConfig } from 'rollup'
+import { defineConfig } from 'rollup';
 
 import pkg from './package.json';
 
@@ -32,9 +31,6 @@ export default defineConfig({
   ],
   preserveModules: true,
   plugins: [
-    svgr({
-      expandProps: 'end',
-    }),
     typescript(),
     babel({
       babelHelpers: 'runtime',
