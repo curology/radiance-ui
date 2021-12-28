@@ -24,13 +24,6 @@ updates:
       - dependency-name: '@babel/preset-react'
       - dependency-name: '@babel/preset-typescript'
       - dependency-name: '@babel/register'
-      - dependency-name: husky
-        versions:
-          - '>= 5.a'
-          - '< 6'
-      - dependency-name: react-is
-        versions:
-          - '> 16.13.1'
       # Storybook should be updated like so: "npx sb@latest upgrade"
       # https://storybook.js.org/blog/storybook-6-4/
       - dependency-name: '@storybook/addon-a11y'
@@ -43,18 +36,6 @@ updates:
       - dependency-name: '@storybook/react'
       - dependency-name: '@storybook/source-loader'
       - dependency-name: '@storybook/theming'
-      - dependency-name: '@types/react'
-        versions:
-          - '>= 17.0.0.a'
-      - dependency-name: '@types/react'
-        versions:
-          - '>= 17.0.a'
-      - dependency-name: '@types/react-dom'
-        versions:
-          - '>= 17.0.0.a'
-      - dependency-name: '@types/react-test-renderer'
-        versions:
-          - '>= 17.0.0.a'
       # Should be bumped in concert with @typescript-eslint/parser
       - dependency-name: '@typescript-eslint/eslint-plugin'
       # TODO: Keep an eye on webpack4 vs. 5 for Storybook
