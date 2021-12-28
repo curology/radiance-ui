@@ -41,8 +41,8 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
   };
 
   useEffect(() => {
-    document.addEventListener('click', handleOffClick, false);
-    document.addEventListener('keydown', handleKeyPress, false);
+    document.addEventListener('click', handleOffClick, { capture: true });
+    document.addEventListener('keydown', handleKeyPress, { capture: true });
     return () => {
       document.removeEventListener('click', handleOffClick, false);
       document.removeEventListener('keydown', handleKeyPress, false);
