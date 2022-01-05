@@ -43,11 +43,12 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
 
     document.addEventListener('click', handleOffClick, { capture: true });
     document.addEventListener('keydown', handleKeyPress, { capture: true });
+
     return () => {
       document.removeEventListener('click', handleOffClick, false);
       document.removeEventListener('keydown', handleKeyPress, false);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- Update onOffClick usage to have referential integrity
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `onOffClick` prop not guaranteed to have referential integrity
   }, []);
 
   return (
