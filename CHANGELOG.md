@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v26.0.3
+
+- [Components] Update `addEventListener` logic in `OffClickWrapper` for React 17 compatibility; Update `DialogModal` and `ImmersiveModal` ref handling in `useEffect` for React 17 compatibility ([#1328](https://github.com/curology/radiance-ui/pull/1328))
+- [Tabs] Update `TabType` type definition to be Generic ([#1329](https://github.com/curology/radiance-ui/pull/1329))
+
 # v26.0.2
 
 - [Components] Remove `<title>` prop added in [#1307](https://github.com/curology/radiance-ui/pull/1307) ([#1327](https://github.com/curology/radiance-ui/pull/1327))
