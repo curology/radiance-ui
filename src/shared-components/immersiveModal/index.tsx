@@ -176,19 +176,6 @@ export const ImmersiveModal: ImmersiveModal = ({
     getModalDesktopScrollingElement(),
   );
 
-  const handleScroll = throttle(() => {
-    if (modalMobileScrollingElement.current) {
-      const shouldShowMobileHeaderBar =
-        modalMobileScrollingElement.current.scrollTop > 32;
-      setShowMobileHeaderBar(shouldShowMobileHeaderBar);
-    }
-    if (modalDesktopScrollingElement.current) {
-      const shouldShowDesktopHeaderBar =
-        modalDesktopScrollingElement.current.scrollTop > 32;
-      setShowDesktopHeaderBar(shouldShowDesktopHeaderBar);
-    }
-  }, 100);
-
   const handleCloseIntent = () => {
     if (isClosing) {
       return;
@@ -210,6 +197,19 @@ export const ImmersiveModal: ImmersiveModal = ({
       modalMobileScrollingElement.current;
     const modalDesktopScrollingElementInstance =
       modalDesktopScrollingElement.current;
+
+    const handleScroll = throttle(() => {
+      if (modalMobileScrollingElementInstance) {
+        const shouldShowMobileHeaderBar =
+          modalMobileScrollingElementInstance.scrollTop > 32;
+        setShowMobileHeaderBar(shouldShowMobileHeaderBar);
+      }
+      if (modalDesktopScrollingElementInstance) {
+        const shouldShowDesktopHeaderBar =
+          modalDesktopScrollingElementInstance.scrollTop > 32;
+        setShowDesktopHeaderBar(shouldShowDesktopHeaderBar);
+      }
+    }, 100);
 
     htmlNodeInstance.classList.add('no-scroll');
 

@@ -24,7 +24,7 @@ export interface AlertProps {
   content: React.ReactNode;
   ctaContent?: React.ReactNode;
   duration?: string | number;
-  onExit?: ((rest: Omit<AlertProps, 'onExit'>) => void) | (() => void);
+  onExit?: () => void;
   truncateText?: boolean;
   type?: AlertType;
   [key: string]: unknown;
@@ -59,7 +59,7 @@ export const Alert: Alert = (alertProps) => {
     content,
     ctaContent = null,
     duration = 3,
-    onExit = () => undefined,
+    onExit = undefined,
     truncateText = false,
     type = 'default',
     ...rest
@@ -67,22 +67,25 @@ export const Alert: Alert = (alertProps) => {
   const theme = useTheme();
   const [exiting, setExiting] = useState(false);
   const [exited, setExited] = useState(false);
+  const timer = React.useRef<number | undefined>(undefined);
 
   const { contentText } = useTruncateText(truncateText);
 
-  let timer: number | undefined;
-
-  const alertExitHandler = () => {
+  const alertExitHandler = React.useCallback(() => {
     setExiting(true);
-    window.clearTimeout(timer);
 
-    const { onExit: _onExit, ...otherProps } = alertProps;
+    if (isDefined(timer.current)) {
+      window.clearTimeout(timer.current);
+    }
 
     window.setTimeout(() => {
       setExited(true);
-      onExit(otherProps);
+
+      if (onExit) {
+        onExit();
+      }
     }, ANIMATION_DELAY);
-  };
+  }, [onExit]);
 
   /**
    * Duration logic effect
@@ -92,17 +95,17 @@ export const Alert: Alert = (alertProps) => {
       return;
     }
 
-    timer = window.setTimeout(
+    timer.current = window.setTimeout(
       alertExitHandler,
       Number(duration) * 1000 - ANIMATION_DELAY,
     );
 
     return () => {
-      if (isDefined(timer)) {
-        window.clearTimeout(timer);
+      if (isDefined(timer.current)) {
+        window.clearTimeout(timer.current);
       }
     };
-  }, []);
+  }, [alertExitHandler, ctaContent, duration]);
 
   if (exited) {
     return null;

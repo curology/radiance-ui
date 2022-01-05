@@ -144,8 +144,6 @@
     ],
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
     "sonarjs/no-nested-template-literals": "off"
   },
   "overrides": [

@@ -20,33 +20,34 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleKeyPress = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
-      onOffClick(event);
-    }
-  };
-
-  const handleOffClick = (event: MouseEvent) => {
-    const node = containerRef.current;
-
-    if (!node) {
-      return;
-    }
-
-    if (node.contains(event.target as Node)) {
-      return;
-    }
-
-    onOffClick(event);
-  };
-
   useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        onOffClick(event);
+      }
+    };
+
+    const handleOffClick = (event: MouseEvent) => {
+      const node = containerRef.current;
+
+      if (!node) {
+        return;
+      }
+
+      if (node.contains(event.target as Node)) {
+        return;
+      }
+
+      onOffClick(event);
+    };
+
     document.addEventListener('click', handleOffClick, { capture: true });
     document.addEventListener('keydown', handleKeyPress, { capture: true });
     return () => {
       document.removeEventListener('click', handleOffClick, false);
       document.removeEventListener('keydown', handleKeyPress, false);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- Update onOffClick usage to have referential integrity
   }, []);
 
   return (
