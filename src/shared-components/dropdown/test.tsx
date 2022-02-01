@@ -46,6 +46,7 @@ describe('<MobileDropdown />', () => {
     it('renders correctly', () => {
       const { container } = render(
         <MobileDropdown
+          onFocus={() => undefined}
           onMobileSelectChange={() => undefined}
           borderRadius="4px"
           options={options}
@@ -63,6 +64,7 @@ describe('<MobileDropdown />', () => {
         <MobileDropdown
           borderRadius="4px"
           options={options}
+          onFocus={() => undefined}
           onMobileSelectChange={spy}
           value=""
           textAlign="left"
@@ -72,6 +74,25 @@ describe('<MobileDropdown />', () => {
       const select = getByRole('combobox');
       fireEvent.change(select, { value: 'test1' });
 
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
+  describe('onFocus callback', () => {
+    it('should be invoked on focus', () => {
+      const spy = jest.fn();
+      const { getByRole } = render(
+        <MobileDropdown
+          borderRadius="4px"
+          options={options}
+          onFocus={spy}
+          onMobileSelectChange={() => undefined}
+          value=""
+          textAlign="left"
+        />,
+      );
+
+      userEvent.click(getByRole('combobox'));
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -86,6 +107,7 @@ describe('<DesktopDropdown />', () => {
         currentOption={{ value: 'test1', label: 'Test1' }}
         isOpen={false}
         onDesktopSelectChange={() => undefined}
+        onFocus={() => undefined}
         options={options}
         optionsContainerMaxHeight="250px"
         textAlign="left"
@@ -108,6 +130,7 @@ describe('<DesktopDropdown />', () => {
           optionsContainerMaxHeight="250px"
           closeDropdown={() => undefined}
           onDesktopSelectChange={() => undefined}
+          onFocus={() => undefined}
           textAlign="left"
           isOpen={false}
         />,
@@ -127,6 +150,7 @@ describe('<DesktopDropdown />', () => {
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onDesktopSelectChange={spy}
+          onFocus={() => undefined}
           isOpen
           optionsContainerMaxHeight="250px"
           toggleDropdown={() => null}
@@ -138,6 +162,29 @@ describe('<DesktopDropdown />', () => {
       const listItems = getAllByRole('menuitemradio');
       // Arbitrarily select last item
       userEvent.click(listItems[listItems.length - 1]);
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
+  describe('onFocus callback', () => {
+    it('should be invoked on focus', () => {
+      const spy = jest.fn();
+      render(
+        <DesktopDropdown
+          borderRadius="4px"
+          options={options}
+          currentOption={{ value: 'test1', label: 'Test1' }}
+          onDesktopSelectChange={() => undefined}
+          onFocus={spy}
+          isOpen
+          optionsContainerMaxHeight="250px"
+          toggleDropdown={() => null}
+          closeDropdown={() => null}
+          textAlign="left"
+        />,
+      );
+
+      userEvent.tab();
       expect(spy).toHaveBeenCalled();
     });
   });

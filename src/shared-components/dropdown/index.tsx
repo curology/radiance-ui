@@ -34,6 +34,10 @@ interface DropdownProps<T> {
    * The handler to be invoked on option change
    */
   onChange: (option: T) => void;
+  /**
+   * The handler to be invoked on focus
+   */
+  onFocus?: (event?: React.FocusEvent) => void;
   options: T[];
   /**
    * Specifies maximum height of the expanded dropdown
@@ -54,6 +58,7 @@ export const Dropdown = <T extends OptionType>({
   borderRadius,
   id,
   onChange,
+  onFocus,
   options,
   optionsContainerMaxHeight = '250px',
   textAlign = 'left',
@@ -114,12 +119,19 @@ export const Dropdown = <T extends OptionType>({
     closeDropdown();
   };
 
+  const handleOnFocus = (event: React.FocusEvent) => {
+    if (onFocus) {
+      onFocus(event);
+    }
+  };
+
   if (touchSupported) {
     return (
       <MobileDropdown
         borderRadius={borderRadiusValue}
         id={id}
         onMobileSelectChange={onMobileSelectChange}
+        onFocus={handleOnFocus}
         options={options}
         textAlign={textAlign}
         value={value}
@@ -137,6 +149,7 @@ export const Dropdown = <T extends OptionType>({
       id={id}
       isOpen={isOpen}
       onDesktopSelectChange={onDesktopSelectChange}
+      onFocus={handleOnFocus}
       options={options}
       optionsContainerMaxHeight={optionsContainerMaxHeight}
       textAlign={textAlign}
