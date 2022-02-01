@@ -17,6 +17,8 @@ const transformSvgFileNames = (fileName: string) =>
 
 const SVG_DIRECTORY_NAME = 'svgs';
 
+const SVGR_INDEX_NAME = 'index.ts';
+
 const testIconDirectory = (directory: string) => {
   describe(directory, () => {
     /**
@@ -54,7 +56,7 @@ const testSvgDirectory = (directory: string) => {
           path.resolve(__dirname, `${directory}/${SVG_DIRECTORY_NAME}`),
         )
         // Ignore index export, not present among svg files
-        .filter((file) => file !== 'index.tsx')
+        .filter((file) => file !== SVGR_INDEX_NAME)
         .map(transformSvgFileNames)
         .sort();
 
