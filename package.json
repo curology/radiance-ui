@@ -32,7 +32,7 @@
     "./package.json": "./package.json"
   },
   "engines": {
-    "node": "14.x || 16.x",
+    "node": ">14.x",
     "yarn": "1.x"
   },
   "scripts": {
