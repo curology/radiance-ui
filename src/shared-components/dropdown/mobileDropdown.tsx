@@ -9,7 +9,9 @@ import { OptionType, OptionValue } from '.';
 interface MobileDropdownProps<T> {
   borderRadius: string;
   id?: string;
-  onFocus: (event: React.FocusEvent<HTMLSelectElement>) => void;
+  onDropdownContainerFocus: (
+    event: React.FocusEvent<HTMLSelectElement>,
+  ) => void;
   onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: T[];
   textAlign: 'left' | 'center';
@@ -25,7 +27,7 @@ export const MobileDropdown = <T extends OptionType>({
   borderRadius,
   id,
   onMobileSelectChange,
-  onFocus,
+  onDropdownContainerFocus,
   options,
   textAlign,
   value,
@@ -44,7 +46,7 @@ export const MobileDropdown = <T extends OptionType>({
         id={id}
         value={value ?? ''}
         onChange={onMobileSelectChange}
-        onFocus={onFocus}
+        onFocus={onDropdownContainerFocus}
       >
         {options.map((option, index) => {
           let isDisabled = option.disabled;

@@ -46,7 +46,7 @@ describe('<MobileDropdown />', () => {
     it('renders correctly', () => {
       const { container } = render(
         <MobileDropdown
-          onFocus={() => undefined}
+          onDropdownContainerFocus={() => undefined}
           onMobileSelectChange={() => undefined}
           borderRadius="4px"
           options={options}
@@ -64,7 +64,7 @@ describe('<MobileDropdown />', () => {
         <MobileDropdown
           borderRadius="4px"
           options={options}
-          onFocus={() => undefined}
+          onDropdownContainerFocus={() => undefined}
           onMobileSelectChange={spy}
           value=""
           textAlign="left"
@@ -78,14 +78,14 @@ describe('<MobileDropdown />', () => {
     });
   });
 
-  describe('onFocus callback', () => {
+  describe('onDropdownContainerFocus callback', () => {
     it('should be invoked on focus', () => {
       const spy = jest.fn();
       const { getByRole } = render(
         <MobileDropdown
           borderRadius="4px"
           options={options}
-          onFocus={spy}
+          onDropdownContainerFocus={spy}
           onMobileSelectChange={() => undefined}
           value=""
           textAlign="left"
@@ -107,7 +107,7 @@ describe('<DesktopDropdown />', () => {
         currentOption={{ value: 'test1', label: 'Test1' }}
         isOpen={false}
         onDesktopSelectChange={() => undefined}
-        onFocus={() => undefined}
+        onDropdownContainerFocus={() => undefined}
         options={options}
         optionsContainerMaxHeight="250px"
         textAlign="left"
@@ -130,7 +130,7 @@ describe('<DesktopDropdown />', () => {
           optionsContainerMaxHeight="250px"
           closeDropdown={() => undefined}
           onDesktopSelectChange={() => undefined}
-          onFocus={() => undefined}
+          onDropdownContainerFocus={() => undefined}
           textAlign="left"
           isOpen={false}
         />,
@@ -150,7 +150,7 @@ describe('<DesktopDropdown />', () => {
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onDesktopSelectChange={spy}
-          onFocus={() => undefined}
+          onDropdownContainerFocus={() => undefined}
           isOpen
           optionsContainerMaxHeight="250px"
           toggleDropdown={() => null}
@@ -166,7 +166,7 @@ describe('<DesktopDropdown />', () => {
     });
   });
 
-  describe('onFocus callback', () => {
+  describe('onDropdownContainerFocus callback', () => {
     it('should be invoked on focus', () => {
       const spy = jest.fn();
       render(
@@ -175,7 +175,7 @@ describe('<DesktopDropdown />', () => {
           options={options}
           currentOption={{ value: 'test1', label: 'Test1' }}
           onDesktopSelectChange={() => undefined}
-          onFocus={spy}
+          onDropdownContainerFocus={spy}
           isOpen
           optionsContainerMaxHeight="250px"
           toggleDropdown={() => null}
