@@ -139,6 +139,26 @@ jobs:
       - store_test_results:
           path: test-results
 
+  test-tsc-stories:
+    <<: *defaults
+    docker:
+      - image: circleci/node:16-stretch
+
+    environment:
+      NODE_OPTIONS: --max_old_space_size=4096
+
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - attach_workspace:
+          at: *root
+      - <<: *prepare-environment
+      - run:
+          name: Run TypeScript type-checking on Storybook Stories
+          command: yarn run tsc -p stories/tsconfig.json
+      - store_test_results:
+          path: test-results
+
 workflows:
   version: 2
 
