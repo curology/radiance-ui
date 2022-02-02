@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v26.1.0
+
+- [Components] Add `onDropdownContainerFocus` prop to the `Dropdown` component ([#1374](https://github.com/curology/radiance-ui/pull/1374))
+
 # v26.0.4
 
 - [Tabs] Update the `tabItems` prop type definition for `as const` compatibility ([#1340](https://github.com/curology/radiance-ui/pull/1340))
