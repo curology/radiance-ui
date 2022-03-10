@@ -4,7 +4,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module",
     "project": "./.eslint.tsconfig.json",
-    "allowAutomaticSingleRunInference": false,
+    "allowAutomaticSingleRunInference": false
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -111,7 +111,7 @@
         "mock": "always"
       }
     ],
-    "jest/lowercase-name": [
+    "jest/prefer-lowercase-title": [
       "error",
       {
         "ignore": ["describe"]
@@ -129,6 +129,8 @@
         "allow": ["__isProxy", "__type"]
       }
     ],
+
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
