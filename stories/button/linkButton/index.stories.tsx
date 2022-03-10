@@ -24,21 +24,20 @@ export const Default = () => (
   </LinkButton.Container>
 );
 
-export const ReactRouterLink = () => {
-  const MockLink = ({
-    children,
-    to,
-    ...rest
-  }: {
-    children: React.ReactNode;
-    to: string;
-  }) => (
-    // eslint-disable-next-line
-    <a href={to} {...rest}>
-      {children}
-    </a>
-  );
+const MockLink = ({
+  children,
+  to,
+  ...rest
+}: {
+  children: React.ReactNode;
+  to: string;
+}) => (
+  <a href={to} {...rest}>
+    {children}
+  </a>
+);
 
+export const ReactRouterLink = () => {
   return (
     <LinkButton.Container>
       <LinkButton
