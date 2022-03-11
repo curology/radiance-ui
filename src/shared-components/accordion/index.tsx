@@ -53,19 +53,16 @@ export const Accordion: Accordion = ({
 }) => {
   const theme = useTheme();
   const [contentHeight, setContentHeight] = useState('0px');
-
   const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const nextHeight =
-      isOpen && contentRef.current
-        ? `${contentRef.current.clientHeight}px`
-        : '0px';
+  const nextHeight =
+    isOpen && contentRef.current
+      ? `${contentRef.current.clientHeight}px`
+      : '0px';
 
-    if (contentHeight !== nextHeight) {
-      setContentHeight(nextHeight);
-    }
-  }, [isOpen, contentHeight]);
+  useEffect(() => {
+    setContentHeight(nextHeight);
+  }, [nextHeight]);
 
   const handleKeyDown = (event: React.KeyboardEvent): void => {
     if (!disabled && event.key === keyboardKeys.enter) {
