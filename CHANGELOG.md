@@ -1,5 +1,14 @@
 # CHANGELOG
 
+# v26.1.0
+
+- [Components] Add `onDropdownContainerFocus` prop to the `Dropdown` component ([#1374](https://github.com/curology/radiance-ui/pull/1374))
+
+# v26.0.4
+
+- [Tabs] Update the `tabItems` prop type definition for `as const` compatibility ([#1340](https://github.com/curology/radiance-ui/pull/1340))
+- [Dependencies] Update `@babel` dependencies from `7.16.5` to `7.16.7` ([#1332](https://github.com/curology/radiance-ui/pull/1332))
+
 # v26.0.3
 
 - [Components] Update `addEventListener` logic in `OffClickWrapper` for React 17 compatibility; Update `DialogModal` and `ImmersiveModal` ref handling in `useEffect` for React 17 compatibility ([#1328](https://github.com/curology/radiance-ui/pull/1328))

@@ -59,6 +59,7 @@ export const VerificationMessages: React.FC<VerificationMessagesProps> = ({
             </HelperTransition>
           ))
       ) : (
+        // eslint-disable-next-line react/jsx-no-useless-fragment -- TransitionGroup type compatibility
         <React.Fragment />
       )}
     </TransitionGroup>

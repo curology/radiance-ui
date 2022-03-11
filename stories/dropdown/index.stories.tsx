@@ -77,6 +77,7 @@ export const Mobile = () => {
           options={options}
           onMobileSelectChange={onChange}
           textAlign="left"
+          onDropdownContainerFocus={() => undefined}
         />
       </label>
     </DropdownContainer>

@@ -11,7 +11,7 @@ export interface TabType {
 export interface TabsProps<TabGeneric extends TabType> {
   initialActiveTabId?: number;
   onClick?: (tab: TabGeneric) => unknown;
-  tabItems: TabGeneric[];
+  tabItems: readonly TabGeneric[];
 }
 
 export const Tabs = <TabGeneric extends TabType>({

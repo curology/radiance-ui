@@ -19,6 +19,7 @@ interface DesktopDropdownProps<T> {
   onDesktopSelectChange: (
     event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
   ) => void;
+  onDropdownContainerFocus: (event: React.FocusEvent<HTMLDivElement>) => void;
   options: T[];
   optionsContainerMaxHeight: string;
   textAlign: 'left' | 'center';
@@ -33,6 +34,7 @@ export const DesktopDropdown = <T extends OptionType>({
   id,
   isOpen,
   onDesktopSelectChange,
+  onDropdownContainerFocus,
   options,
   optionsContainerMaxHeight,
   textAlign,
@@ -72,6 +74,7 @@ export const DesktopDropdown = <T extends OptionType>({
           aria-haspopup="menu"
           role="button"
           ref={initialFocus}
+          onFocus={onDropdownContainerFocus}
         >
           <div
             css={Style.dropdownInputStyle({

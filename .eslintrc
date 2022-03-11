@@ -112,7 +112,7 @@
         "mock": "always"
       }
     ],
-    "jest/lowercase-name": [
+    "jest/prefer-lowercase-title": [
       "error",
       {
         "ignore": ["describe"]
@@ -121,6 +121,7 @@
     "jest/no-large-snapshots": "off",
     "jest/prefer-called-with": "off",
     "jest/prefer-expect-assertions": "off",
+    "jest/prefer-snapshot-hint": "off",
     "jest/require-hook": "off",
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "no-console": ["error", { "allow": ["warn", "error"] }],
@@ -130,6 +131,8 @@
         "allow": ["__isProxy", "__type"]
       }
     ],
+
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
