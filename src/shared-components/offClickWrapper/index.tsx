@@ -20,27 +20,27 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onOffClick(event);
-      }
-    };
-
-    const handleOffClick = (event: MouseEvent) => {
-      const node = containerRef.current;
-
-      if (!node) {
-        return;
-      }
-
-      if (node.contains(event.target as Node)) {
-        return;
-      }
-
+  const handleKeyPress = (event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
       onOffClick(event);
-    };
+    }
+  };
 
+  const handleOffClick = (event: MouseEvent) => {
+    const node = containerRef.current;
+
+    if (!node) {
+      return;
+    }
+
+    if (node.contains(event.target as Node)) {
+      return;
+    }
+
+    onOffClick(event);
+  };
+
+  useEffect(() => {
     document.addEventListener('click', handleOffClick, { capture: true });
     document.addEventListener('keydown', handleKeyPress, { capture: true });
 
@@ -48,6 +48,7 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
       document.removeEventListener('click', handleOffClick, false);
       document.removeEventListener('keydown', handleKeyPress, false);
     };
+    // Want to maintain existing behavior, but this eslint-disable indicates potential bug surface area.
     // eslint-disable-next-line react-hooks/exhaustive-deps -- `onOffClick` prop not guaranteed to have referential integrity
   }, []);
 
