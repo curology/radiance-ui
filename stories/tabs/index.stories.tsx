@@ -24,7 +24,11 @@ export const Usage = () => {
 
   return (
     <section>
-      <Tabs initialActiveTabId={1} tabItems={tabItems} onClick={onClickTab} />
+      <Tabs
+        initialActiveTabId={1}
+        tabItems={tabItems}
+        onClick={onClickTab}
+      />
     </section>
   );
 };
@@ -43,7 +47,10 @@ const TABS_STORIES: TabsStories = {
           <Title />
           <Description />
           <Heading>Usage:</Heading>
-          <Source language="tsx" code={"import { Tabs } from 'radiance-ui';"} />
+          <Source
+            language="tsx"
+            code={"import { Tabs } from 'radiance-ui';"}
+          />
           <Heading>Props:</Heading>
           <ArgsTable />
           <Stories includePrimary />

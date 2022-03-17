@@ -97,8 +97,15 @@ export const DialogModal: DialogModal = ({
     >
       {(transitionState): JSX.Element => (
         // eslint-disable-next-line react/jsx-props-no-spreading
-        <Style.Overlay className={transitionState} {...rest}>
-          <FocusScope contain restoreFocus autoFocus>
+        <Style.Overlay
+          className={transitionState}
+          {...rest}
+        >
+          <FocusScope
+            contain
+            restoreFocus
+            autoFocus
+          >
             <Style.ModalContainer
               backgroundColor={backgroundColorWithTheme}
               className={transitionState}

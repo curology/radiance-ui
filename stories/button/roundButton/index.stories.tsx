@@ -34,16 +34,28 @@ const ButtonsContainer = styled.div`
 export const Default = () => (
   <ButtonsContainer>
     <RoundButton icon={<CheckmarkIcon />}>Primary</RoundButton>
-    <RoundButton buttonType="secondary" icon={<ArrowRightIcon />}>
+    <RoundButton
+      buttonType="secondary"
+      icon={<ArrowRightIcon />}
+    >
       Secondary
     </RoundButton>
-    <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />}>
+    <RoundButton
+      buttonType="tertiary"
+      icon={<ArrowLeftIcon />}
+    >
       Tertiary
     </RoundButton>
-    <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />}>
+    <RoundButton
+      buttonType="quaternary"
+      icon={<ArrowRightIcon />}
+    >
       Quaternary
     </RoundButton>
-    <RoundButton buttonType="action" icon={<CrossIcon />}>
+    <RoundButton
+      buttonType="action"
+      icon={<CrossIcon />}
+    >
       Action
     </RoundButton>
   </ButtonsContainer>
@@ -51,19 +63,38 @@ export const Default = () => (
 
 export const Disabled = () => (
   <ButtonsContainer>
-    <RoundButton icon={<ArrowLeftIcon />} disabled>
+    <RoundButton
+      icon={<ArrowLeftIcon />}
+      disabled
+    >
       Primary
     </RoundButton>
-    <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} disabled>
+    <RoundButton
+      buttonType="secondary"
+      icon={<ArrowRightIcon />}
+      disabled
+    >
       Secondary
     </RoundButton>
-    <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} disabled>
+    <RoundButton
+      buttonType="tertiary"
+      icon={<ArrowLeftIcon />}
+      disabled
+    >
       Tertiary
     </RoundButton>
-    <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} disabled>
+    <RoundButton
+      buttonType="quaternary"
+      icon={<ArrowRightIcon />}
+      disabled
+    >
       Quaternary
     </RoundButton>
-    <RoundButton buttonType="action" icon={<CrossIcon />} disabled>
+    <RoundButton
+      buttonType="action"
+      icon={<CrossIcon />}
+      disabled
+    >
       Action
     </RoundButton>
   </ButtonsContainer>
@@ -71,19 +102,38 @@ export const Disabled = () => (
 
 export const Loading = () => (
   <ButtonsContainer>
-    <RoundButton icon={<ArrowLeftIcon />} isLoading>
+    <RoundButton
+      icon={<ArrowLeftIcon />}
+      isLoading
+    >
       Primary
     </RoundButton>
-    <RoundButton buttonType="secondary" icon={<ArrowRightIcon />} isLoading>
+    <RoundButton
+      buttonType="secondary"
+      icon={<ArrowRightIcon />}
+      isLoading
+    >
       Secondary
     </RoundButton>
-    <RoundButton buttonType="tertiary" icon={<ArrowLeftIcon />} isLoading>
+    <RoundButton
+      buttonType="tertiary"
+      icon={<ArrowLeftIcon />}
+      isLoading
+    >
       Tertiary
     </RoundButton>
-    <RoundButton buttonType="quaternary" icon={<ArrowRightIcon />} isLoading>
+    <RoundButton
+      buttonType="quaternary"
+      icon={<ArrowRightIcon />}
+      isLoading
+    >
       Quaternary
     </RoundButton>
-    <RoundButton buttonType="action" icon={<CrossIcon />} isLoading>
+    <RoundButton
+      buttonType="action"
+      icon={<CrossIcon />}
+      isLoading
+    >
       Action
     </RoundButton>
   </ButtonsContainer>
@@ -94,7 +144,10 @@ export const WithColor = () => {
 
   return (
     <ButtonsContainer>
-      <RoundButton buttonColor={theme.COLORS.error} icon={<CheckmarkIcon />}>
+      <RoundButton
+        buttonColor={theme.COLORS.error}
+        icon={<CheckmarkIcon />}
+      >
         Primary
       </RoundButton>
       <RoundButton

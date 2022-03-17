@@ -121,19 +121,30 @@ export const Alert: Alert = (alertProps) => {
       <Style.MainContainer>
         <Style.IconContainer hasAvatar={!!avatarSrc}>
           {avatarSrc ? (
-            <Avatar size="small" src={avatarSrc} alt="avatar" />
+            <Avatar
+              size="small"
+              src={avatarSrc}
+              alt="avatar"
+            />
           ) : (
             <Icon fill={theme.COLORS.white} />
           )}
         </Style.IconContainer>
-        <Style.ContentContainer truncateText={truncateText} ref={contentText}>
+        <Style.ContentContainer
+          truncateText={truncateText}
+          ref={contentText}
+        >
           {content}
         </Style.ContentContainer>
       </Style.MainContainer>
       {ctaContent && (
         <Style.CtaContent>
           <div>{ctaContent}</div>
-          <ChevronIcon fill={theme.COLORS.white} width={14} height={14} />
+          <ChevronIcon
+            fill={theme.COLORS.white}
+            width={14}
+            height={14}
+          />
         </Style.CtaContent>
       )}
     </Style.AlertContainer>

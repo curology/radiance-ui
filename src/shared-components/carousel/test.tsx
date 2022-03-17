@@ -26,7 +26,11 @@ describe('<Carousel />', () => {
 
     it('renders with bottom right aligned arrows', () => {
       const { container } = render(
-        <Carousel numCardsVisible={2} bottomRightAlignedArrows hideDots>
+        <Carousel
+          numCardsVisible={2}
+          bottomRightAlignedArrows
+          hideDots
+        >
           {cards}
         </Carousel>,
       );

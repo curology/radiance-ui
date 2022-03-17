@@ -39,7 +39,10 @@ export const Focused = () => {
 
   return (
     <AnchorLinkContainer>
-      <AnchorLinkButton ref={anchorLinkButtonRef} onClick={() => undefined}>
+      <AnchorLinkButton
+        ref={anchorLinkButtonRef}
+        onClick={() => undefined}
+      >
         Tips for taking photos
       </AnchorLinkButton>
     </AnchorLinkContainer>

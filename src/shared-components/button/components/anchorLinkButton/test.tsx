@@ -17,7 +17,10 @@ describe('<AnchorLinkButton/>', () => {
       const label = 'Click me for more information';
 
       const { getByLabelText } = render(
-        <AnchorLinkButton onClick={() => undefined} aria-label={label}>
+        <AnchorLinkButton
+          onClick={() => undefined}
+          aria-label={label}
+        >
           Click me
         </AnchorLinkButton>,
       );

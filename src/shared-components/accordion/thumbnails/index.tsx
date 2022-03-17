@@ -19,7 +19,10 @@ export const Thumbnails: React.FC<ThumbnailsProps> = ({ photoSrcs }) => {
 
     const firstThumbnail = (
       <Style.ImageContainer>
-        <Style.ThumbnailImage alt="" src={photoSrcs[0]} />
+        <Style.ThumbnailImage
+          alt=""
+          src={photoSrcs[0]}
+        />
       </Style.ImageContainer>
     );
 
@@ -28,7 +31,10 @@ export const Thumbnails: React.FC<ThumbnailsProps> = ({ photoSrcs }) => {
     if (photoSrcs.length === 2) {
       secondThumbnail = (
         <Style.ImageContainer>
-          <Style.ThumbnailImage alt="" src={photoSrcs[1]} />
+          <Style.ThumbnailImage
+            alt=""
+            src={photoSrcs[1]}
+          />
         </Style.ImageContainer>
       );
     } else if (photoSrcs.length > 2) {

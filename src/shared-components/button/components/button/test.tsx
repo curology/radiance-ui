@@ -14,7 +14,11 @@ describe('<Button />', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
-        <Button disabled onClick={() => undefined} icon={<CameraIcon />}>
+        <Button
+          disabled
+          onClick={() => undefined}
+          icon={<CameraIcon />}
+        >
           Button Text
         </Button>,
       );
@@ -37,7 +41,10 @@ describe('<Button />', () => {
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
       const { container } = render(
-        <Button disabled onClick={spy}>
+        <Button
+          disabled
+          onClick={spy}
+        >
           Button Text
         </Button>,
       );
@@ -51,7 +58,10 @@ describe('<Button />', () => {
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
       const { container } = render(
-        <Button isLoading onClick={spy}>
+        <Button
+          isLoading
+          onClick={spy}
+        >
           Button Text
         </Button>,
       );

@@ -50,7 +50,10 @@ const TYPOGRAPHY_STORIES: TypographyStories = {
             the designs specify that we do. In order to override the style, use
             the `css` prop or use `TYPOGRAPHY_STYLE` with a css prop:
           </Description>
-          <Source language="tsx" code={sourceCode} />
+          <Source
+            language="tsx"
+            code={sourceCode}
+          />
           <Heading>Usage:</Heading>
           <Source
             language="tsx"

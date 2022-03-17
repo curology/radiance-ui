@@ -9,14 +9,23 @@ describe('<Avatar />', () => {
 
   describe('UI snapshot', () => {
     it('renders the Avatar with default props', () => {
-      const { container } = render(<Avatar src={imageExample} alt="avatar" />);
+      const { container } = render(
+        <Avatar
+          src={imageExample}
+          alt="avatar"
+        />,
+      );
 
       expect(container.firstElementChild).toMatchSnapshot();
     });
 
     it('render with size medium styles', () => {
       const { container } = render(
-        <Avatar size="medium" src={imageExample} alt="avatar" />,
+        <Avatar
+          size="medium"
+          src={imageExample}
+          alt="avatar"
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
@@ -24,7 +33,11 @@ describe('<Avatar />', () => {
 
     it('render with size large styles', () => {
       const { container } = render(
-        <Avatar size="large" src={imageExample} alt="avatar" />,
+        <Avatar
+          size="large"
+          src={imageExample}
+          alt="avatar"
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();

@@ -269,7 +269,10 @@ export const ImmersiveModal: ImmersiveModal = ({
             </Style.CrossIconButton>
           </Style.MobileHeaderBar>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-          <Style.Overlay className={transitionState} {...rest}>
+          <Style.Overlay
+            className={transitionState}
+            {...rest}
+          >
             <Style.ModalContainer
               className={transitionState}
               id={MODAL_MOBILE_SCROLLING_ID}
@@ -279,7 +282,11 @@ export const ImmersiveModal: ImmersiveModal = ({
                 className="modal-offclick-wrapper"
               >
                 <Style.MobileTopOverlay onClick={handleCloseIntent} />
-                <FocusScope contain restoreFocus autoFocus>
+                <FocusScope
+                  contain
+                  restoreFocus
+                  autoFocus
+                >
                   <ImmersiveModalContent
                     footerContent={footerContent}
                     headerImage={headerImage}

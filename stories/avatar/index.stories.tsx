@@ -15,12 +15,36 @@ import type { Meta } from '@storybook/react';
 
 export const Usage = () => (
   <React.Fragment>
-    <Avatar src={personImg} size="small" alt="provider" />
-    <Avatar src={personImg} size="medium" alt="provider" />
-    <Avatar src={personImg} size="large" alt="provider" />
-    <Avatar src={accountImg} size="small" alt="" />
-    <Avatar src={accountImg} size="medium" alt="" />
-    <Avatar src={accountImg} size="large" alt="" />
+    <Avatar
+      src={personImg}
+      size="small"
+      alt="provider"
+    />
+    <Avatar
+      src={personImg}
+      size="medium"
+      alt="provider"
+    />
+    <Avatar
+      src={personImg}
+      size="large"
+      alt="provider"
+    />
+    <Avatar
+      src={accountImg}
+      size="small"
+      alt=""
+    />
+    <Avatar
+      src={accountImg}
+      size="medium"
+      alt=""
+    />
+    <Avatar
+      src={accountImg}
+      size="large"
+      alt=""
+    />
   </React.Fragment>
 );
 

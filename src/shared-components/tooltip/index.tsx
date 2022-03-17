@@ -133,7 +133,11 @@ export const Tooltip: React.FC<TooltipProps> = ({
             arrowAlign={arrowAlign}
             position={position}
           >
-            <ArrowIcon width={16} height={16} fill={theme.COLORS.primary} />
+            <ArrowIcon
+              width={16}
+              height={16}
+              fill={theme.COLORS.primary}
+            />
           </Style.ArrowImageContainer>
         </Style.TooltipBox>
       </Style.MainContainer>

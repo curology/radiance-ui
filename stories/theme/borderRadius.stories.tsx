@@ -26,7 +26,10 @@ export const BorderRadius = () => {
         `;
 
         return (
-          <Container key={borderRadiusKey} css={borderRadiusBoxStyles}>
+          <Container
+            key={borderRadiusKey}
+            css={borderRadiusBoxStyles}
+          >
             <Container.Section>
               <strong>Key:</strong> {borderRadiusKey}
               <br />

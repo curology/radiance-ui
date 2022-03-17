@@ -8,7 +8,11 @@ describe('<Toggle />', () => {
   describe('UI snapshot', () => {
     it('renders the component', () => {
       const { container } = render(
-        <Toggle checked={false} label={labelText} onChange={() => undefined} />,
+        <Toggle
+          checked={false}
+          label={labelText}
+          onChange={() => undefined}
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
@@ -18,7 +22,10 @@ describe('<Toggle />', () => {
   describe('when label is undefined', () => {
     it('does not render a label component', () => {
       const { container } = render(
-        <Toggle checked={false} onChange={() => undefined} />,
+        <Toggle
+          checked={false}
+          onChange={() => undefined}
+        />,
       );
       // TODO: Make <Label /> an actual label element and use @testing-library/react selector
       expect(container.querySelectorAll('span')).toHaveLength(0);
@@ -28,7 +35,11 @@ describe('<Toggle />', () => {
   describe('when label is a string', () => {
     it('renders a text component', () => {
       const { getByText } = render(
-        <Toggle checked={false} label={labelText} onChange={() => undefined} />,
+        <Toggle
+          checked={false}
+          label={labelText}
+          onChange={() => undefined}
+        />,
       );
 
       expect(getByText(labelText)).toBeTruthy();
@@ -38,7 +49,12 @@ describe('<Toggle />', () => {
   describe('when checkbox is clicked', () => {
     it('fires onChange function with correct argument when function exists', () => {
       const spy = jest.fn();
-      const { getByRole } = render(<Toggle checked={false} onChange={spy} />);
+      const { getByRole } = render(
+        <Toggle
+          checked={false}
+          onChange={spy}
+        />,
+      );
 
       userEvent.click(getByRole('checkbox'));
       expect(spy).toHaveBeenCalledWith(false);

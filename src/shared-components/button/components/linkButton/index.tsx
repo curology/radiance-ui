@@ -70,8 +70,15 @@ export const LinkButton: LinkButton = ({
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
-      <ButtonContents isLoading={false} isFullWidth={false} hasIcon={false}>
-        <ButtonText isLoading={false} hasIcon={false}>
+      <ButtonContents
+        isLoading={false}
+        isFullWidth={false}
+        hasIcon={false}
+      >
+        <ButtonText
+          isLoading={false}
+          hasIcon={false}
+        >
           {children}
         </ButtonText>
       </ButtonContents>

@@ -20,7 +20,10 @@ export const FadeInContainer: React.FC<FadeInContainerProps> = ({
   slide = false,
   speed = '350ms',
 }) => (
-  <Style.FadeInContainer withSlide={slide} animationSpeed={speed}>
+  <Style.FadeInContainer
+    withSlide={slide}
+    animationSpeed={speed}
+  >
     {children}
   </Style.FadeInContainer>
 );

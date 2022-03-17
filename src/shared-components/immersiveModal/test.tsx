@@ -12,7 +12,10 @@ const modalBody = (
 describe('<ImmersiveModal />', () => {
   it('render children content correctly', () => {
     const { getAllByText, getByText } = render(
-      <ImmersiveModal onClose={() => undefined} title={modalTitle}>
+      <ImmersiveModal
+        onClose={() => undefined}
+        title={modalTitle}
+      >
         <div>{modalBody}</div>
       </ImmersiveModal>,
       { withPortalContainer: true },
@@ -24,7 +27,10 @@ describe('<ImmersiveModal />', () => {
 
   it('renders immersive modal correctly', () => {
     const { container } = render(
-      <ImmersiveModal onClose={() => undefined} title={modalTitle}>
+      <ImmersiveModal
+        onClose={() => undefined}
+        title={modalTitle}
+      >
         <div>{modalBody}</div>
       </ImmersiveModal>,
       { withPortalContainer: true },

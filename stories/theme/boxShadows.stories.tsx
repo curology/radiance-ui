@@ -30,7 +30,10 @@ export const BoxShadows = () => {
         `;
 
         return (
-          <Container key={boxShadowKey} css={boxShadowBoxStyles}>
+          <Container
+            key={boxShadowKey}
+            css={boxShadowBoxStyles}
+          >
             <Container.Section>
               <strong>Key:</strong> {boxShadowKey}
               <br />

@@ -32,7 +32,10 @@ const MockLink = ({
   children: React.ReactNode;
   to: string;
 }) => (
-  <a href={to} {...rest}>
+  <a
+    href={to}
+    {...rest}
+  >
     {children}
   </a>
 );
@@ -61,16 +64,28 @@ export const WithColor = () => {
       >
         Primary
       </LinkButton>
-      <LinkButton buttonColor={theme.COLORS.error} buttonType="secondary">
+      <LinkButton
+        buttonColor={theme.COLORS.error}
+        buttonType="secondary"
+      >
         Secondary
       </LinkButton>
-      <LinkButton buttonColor={theme.COLORS.error} buttonType="tertiary">
+      <LinkButton
+        buttonColor={theme.COLORS.error}
+        buttonType="tertiary"
+      >
         Tertiary
       </LinkButton>
-      <LinkButton buttonColor={theme.COLORS.error} buttonType="quaternary">
+      <LinkButton
+        buttonColor={theme.COLORS.error}
+        buttonType="quaternary"
+      >
         Quaternary
       </LinkButton>
-      <LinkButton buttonColor={theme.COLORS.error} disabled>
+      <LinkButton
+        buttonColor={theme.COLORS.error}
+        disabled
+      >
         Disabled
       </LinkButton>
     </LinkButton.Container>

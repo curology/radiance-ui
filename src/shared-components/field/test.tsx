@@ -23,7 +23,10 @@ describe('<Field />', () => {
       const labelText = 'Test Label';
       const labelFor = 'for-input-id';
       const { container } = render(
-        <Field label={labelText} labelFor={labelFor}>
+        <Field
+          label={labelText}
+          labelFor={labelFor}
+        >
           <Field.Input />
         </Field>,
       );
@@ -56,7 +59,10 @@ describe('<Field />', () => {
       const maxLength = 'Maximum 6 characters';
       const messages = { maxLength };
       const { getAllByText } = render(
-        <Field messages={messages} messagesType="error">
+        <Field
+          messages={messages}
+          messagesType="error"
+        >
           <Field.Input />
         </Field>,
       );
@@ -69,7 +75,10 @@ describe('<Field />', () => {
       const success = 'Thanks for completing';
       const messages = { success: 'Thanks for completing' };
       const { getAllByText } = render(
-        <Field messages={messages} messagesType="success">
+        <Field
+          messages={messages}
+          messagesType="success"
+        >
           <Field.Input />
         </Field>,
       );

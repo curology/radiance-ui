@@ -8,7 +8,10 @@ describe('<LinkButton/>', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
-        <LinkButton onClick={() => undefined} href="#">
+        <LinkButton
+          onClick={() => undefined}
+          href="#"
+        >
           Click me!
         </LinkButton>,
       );
@@ -46,7 +49,11 @@ describe('<LinkButton/>', () => {
       const spy = jest.fn();
 
       const { container } = render(
-        <LinkButton disabled href="#" onClick={spy}>
+        <LinkButton
+          disabled
+          href="#"
+          onClick={spy}
+        >
           text
         </LinkButton>,
       );

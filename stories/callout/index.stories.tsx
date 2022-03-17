@@ -23,13 +23,19 @@ export const Usage = () => (
     </Callout.Container>
     <br />
     <Callout.Container>
-      <Callout type="success" icon={<LockGlyph />}>
+      <Callout
+        type="success"
+        icon={<LockGlyph />}
+      >
         Your photos are private and are used by your provider to treat your skin
       </Callout>
     </Callout.Container>
     <br />
     <Callout.Container>
-      <Callout type="error" icon={<NoneGlyph />}>
+      <Callout
+        type="error"
+        icon={<NoneGlyph />}
+      >
         <strong>Oops</strong>
         <br />
         Something is wrong with this page

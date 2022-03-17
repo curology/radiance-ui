@@ -41,7 +41,11 @@ export const Error = () => (
     <Field label="Error Input">
       <Field.Input id="Error Input" />
     </Field>
-    <VerificationMessages messages={messages} type="error" centered />
+    <VerificationMessages
+      messages={messages}
+      type="error"
+      centered
+    />
   </FieldContainer>
 );
 
@@ -50,7 +54,10 @@ export const Success = () => (
     <Field label="Success Input">
       <Field.Input id="Success Input" />
     </Field>
-    <VerificationMessages messages={messages} type="success" />
+    <VerificationMessages
+      messages={messages}
+      type="success"
+    />
   </FieldContainer>
 );
 

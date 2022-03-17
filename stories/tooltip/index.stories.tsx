@@ -36,7 +36,10 @@ const arrowAlignOptions = ['left', 'middle', 'right'];
 
 export const Default = () => (
   <TooltipContainer>
-    <Tooltip defaultOpen content="Tooltip Content goes here">
+    <Tooltip
+      defaultOpen
+      content="Tooltip Content goes here"
+    >
       This tooltip is always open
     </Tooltip>
     <Tooltip content="Tooltip Content goes here">
@@ -106,7 +109,11 @@ export const SmallTooltip = () => (
     >
       This tooltip is always open
     </Tooltip>
-    <Tooltip content={<strong>3 new</strong>} isSmall arrowAlign="middle">
+    <Tooltip
+      content={<strong>3 new</strong>}
+      isSmall
+      arrowAlign="middle"
+    >
       Hover here to trigger the small tooltip.
     </Tooltip>
   </TooltipContainer>

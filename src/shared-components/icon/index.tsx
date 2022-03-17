@@ -63,5 +63,10 @@ export const useIcon = (
 
   if (ThemeIcon === null) return null;
 
-  return <Icon IconComponent={ThemeIcon} {...props} />;
+  return (
+    <Icon
+      IconComponent={ThemeIcon}
+      {...props}
+    />
+  );
 };

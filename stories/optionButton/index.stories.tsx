@@ -91,7 +91,12 @@ export const Checkboxes = () => (
         onClick={noop}
         optionType="checkbox"
         buttonType="primary"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
       <OptionButton
         text="Main text"
@@ -114,7 +119,12 @@ export const Checkboxes = () => (
         onClick={noop}
         optionType="checkbox"
         buttonType="primary"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
       <OptionButton
         selected
@@ -129,7 +139,12 @@ export const Checkboxes = () => (
         onClick={noop}
         optionType="checkbox"
         buttonType="secondary"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
     </OptionsContainer>
   </FlexContainer>
@@ -149,7 +164,12 @@ export const RadioButtons = () => (
         onClick={noop}
         optionType="radio"
         buttonType="primary"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
       <OptionButton
         text="Main Text"
@@ -172,7 +192,12 @@ export const RadioButtons = () => (
         onClick={noop}
         optionType="radio"
         buttonType="primary"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
       <OptionButton
         selected
@@ -187,7 +212,12 @@ export const RadioButtons = () => (
         onClick={noop}
         optionType="radio"
         buttonType="secondary"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
     </OptionsContainer>
   </FlexContainer>
@@ -199,13 +229,23 @@ export const OptionButtonNotClickable = () => (
       <OptionButton.NotClickable
         text="Radio helper text"
         optionType="radio"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
       <OptionButton.NotClickable
         text="Checkbox helper text"
         subtext="subtext"
         optionType="checkbox"
-        icon={<AcneGlyph width={32} height={32} />}
+        icon={
+          <AcneGlyph
+            width={32}
+            height={32}
+          />
+        }
       />
     </OptionsContainer>
   </FlexContainer>
@@ -234,7 +274,12 @@ export const WithControls = () => (
           optionType={select('optionType', ['radio', 'checkbox'], 'checkbox')}
           buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
           selected={boolean('selected', false)}
-          icon={<AcneGlyph width={32} height={32} />}
+          icon={
+            <AcneGlyph
+              width={32}
+              height={32}
+            />
+          }
         />
       </ExampleContainer>
     </OptionsContainer>

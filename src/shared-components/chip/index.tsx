@@ -80,7 +80,10 @@ export const Chip: React.FC<ChipProps> = ({
   });
 
   return (
-    <Style.ChipStyles backgroundColor={backgroundColor} textColor={textColor}>
+    <Style.ChipStyles
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+    >
       <Style.ChipText>{text}</Style.ChipText>
     </Style.ChipStyles>
   );

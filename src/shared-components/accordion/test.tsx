@@ -24,7 +24,10 @@ describe('<Accordion />', () => {
 
     it('renders no border accordion', () => {
       const { container } = render(
-        <Accordion {...testAccordionProps} noBorder />,
+        <Accordion
+          {...testAccordionProps}
+          noBorder
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
@@ -32,7 +35,10 @@ describe('<Accordion />', () => {
 
     it('renders disabled accordion', () => {
       const { container } = render(
-        <Accordion {...testAccordionProps} disabled />,
+        <Accordion
+          {...testAccordionProps}
+          disabled
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
@@ -43,7 +49,10 @@ describe('<Accordion />', () => {
     const spy = jest.fn();
 
     const { getByRole } = render(
-      <Accordion {...testAccordionProps} onClick={spy} />,
+      <Accordion
+        {...testAccordionProps}
+        onClick={spy}
+      />,
     );
 
     userEvent.click(getByRole('button'));

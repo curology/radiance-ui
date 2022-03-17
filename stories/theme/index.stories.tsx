@@ -87,10 +87,22 @@ const THEME_STORIES: ThemeStories = {
             </li>
           </ol>
           <h3>Examples:</h3>
-          <Source language="tsx" code={styledComponentSource} />
-          <Source language="tsx" code={cssPropSource} />
-          <Source language="tsx" code={useThemeSource} />
-          <Source language="tsx" code={globalSource} />
+          <Source
+            language="tsx"
+            code={styledComponentSource}
+          />
+          <Source
+            language="tsx"
+            code={cssPropSource}
+          />
+          <Source
+            language="tsx"
+            code={useThemeSource}
+          />
+          <Source
+            language="tsx"
+            code={globalSource}
+          />
           <Stories includePrimary />
         </React.Fragment>
       ),

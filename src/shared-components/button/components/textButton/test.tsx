@@ -34,7 +34,10 @@ describe('<TextButton />', () => {
     it('should not be clickable if disabled', () => {
       const spy = jest.fn();
       const { getByRole } = render(
-        <TextButton disabled onClick={spy}>
+        <TextButton
+          disabled
+          onClick={spy}
+        >
           Button Text
         </TextButton>,
       );

@@ -137,7 +137,10 @@ export const InputWithAHint = () => (
         labelFor="input-hint"
         hintMessage="This hint appears on focus"
       >
-        <Field.Input id="input-hint" type="text" />
+        <Field.Input
+          id="input-hint"
+          type="text"
+        />
       </Field>
     </FocusScope>
   </FieldsContainer>
@@ -145,7 +148,10 @@ export const InputWithAHint = () => (
 
 export const TextAreaNoHintNoValidation = () => (
   <FieldsContainer>
-    <Field label="Textarea - no hint - no validation" labelFor="textarea-id">
+    <Field
+      label="Textarea - no hint - no validation"
+      labelFor="textarea-id"
+    >
       <Field.Textarea id="textarea-id" />
     </Field>
   </FieldsContainer>
@@ -173,7 +179,10 @@ export const TextareaWithASuccessMessageAndHiddenIcon = () => (
 
 export const InputDisabled = () => (
   <FieldsContainer>
-    <Field label="Input - disabled" disabled>
+    <Field
+      label="Input - disabled"
+      disabled
+    >
       <Field.Input id="Input - disabled" />
     </Field>
   </FieldsContainer>

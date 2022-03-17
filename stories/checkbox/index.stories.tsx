@@ -17,10 +17,16 @@ import { AcneGlyph } from '../../src/icons';
 
 export const Primary = () => (
   <React.Fragment>
-    <Checkbox type="primary" checked>
+    <Checkbox
+      type="primary"
+      checked
+    >
       This is a primary checkbox
     </Checkbox>
-    <Checkbox type="primary" checked={false}>
+    <Checkbox
+      type="primary"
+      checked={false}
+    >
       This is an unchecked primary checkbox
     </Checkbox>
   </React.Fragment>
@@ -28,10 +34,16 @@ export const Primary = () => (
 
 export const Secondary = () => (
   <React.Fragment>
-    <Checkbox type="secondary" checked>
+    <Checkbox
+      type="secondary"
+      checked
+    >
       This is a secondary checkbox
     </Checkbox>
-    <Checkbox type="secondary" checked={false}>
+    <Checkbox
+      type="secondary"
+      checked={false}
+    >
       This is an unchecked secondary checkbox
     </Checkbox>
   </React.Fragment>
@@ -39,10 +51,16 @@ export const Secondary = () => (
 
 export const Disabled = () => (
   <React.Fragment>
-    <Checkbox disabled checked>
+    <Checkbox
+      disabled
+      checked
+    >
       This is a secondary checkbox
     </Checkbox>
-    <Checkbox disabled checked={false}>
+    <Checkbox
+      disabled
+      checked={false}
+    >
       This is an unchecked secondary checkbox
     </Checkbox>
   </React.Fragment>
@@ -59,7 +77,11 @@ export const WithControls = () => {
       onClick={action('checkbox clicked')}
       icon={
         boolean('icon', false) ? (
-          <AcneGlyph width={40} height={40} fill={theme.COLORS.primary} />
+          <AcneGlyph
+            width={40}
+            height={40}
+            fill={theme.COLORS.primary}
+          />
         ) : null
       }
       size={select('size', ['large', 'small'], 'large')}

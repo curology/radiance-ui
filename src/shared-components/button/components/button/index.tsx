@@ -100,7 +100,10 @@ const Button: Button = ({
         isLoading={loadingVal}
       >
         {icon}
-        <ButtonText hasIcon={hasIcon} isLoading={loadingVal}>
+        <ButtonText
+          hasIcon={hasIcon}
+          isLoading={loadingVal}
+        >
           {children}
         </ButtonText>
       </ButtonContents>

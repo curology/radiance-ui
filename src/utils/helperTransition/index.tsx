@@ -45,7 +45,10 @@ const HelperTransition = ({
   ...props
 }: HelperTransitionParamsType) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <Transition timeout={350} {...props}>
+  <Transition
+    timeout={350}
+    {...props}
+  >
     {(transitionState) =>
       React.cloneElement(child, {
         style: getStyleForTransitionState(transitionState),

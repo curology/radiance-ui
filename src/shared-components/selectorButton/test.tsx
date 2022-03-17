@@ -10,7 +10,10 @@ describe('<SelectorButton />', () => {
   describe('UI snapshots', () => {
     it('when children is undefined', () => {
       const { container } = render(
-        <SelectorButton checked={false} onClick={() => undefined} />,
+        <SelectorButton
+          checked={false}
+          onClick={() => undefined}
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();
@@ -18,7 +21,10 @@ describe('<SelectorButton />', () => {
 
     it('when children is a node', () => {
       const { container } = render(
-        <SelectorButton checked={false} onClick={() => undefined}>
+        <SelectorButton
+          checked={false}
+          onClick={() => undefined}
+        >
           SelectorButton Text
         </SelectorButton>,
       );
@@ -28,7 +34,11 @@ describe('<SelectorButton />', () => {
 
     it('when checked type is primary', () => {
       const { container } = render(
-        <SelectorButton checked onClick={() => undefined} type="primary">
+        <SelectorButton
+          checked
+          onClick={() => undefined}
+          type="primary"
+        >
           SelectorButton Text
         </SelectorButton>,
       );
@@ -38,7 +48,11 @@ describe('<SelectorButton />', () => {
 
     it('when checked type is secondary', () => {
       const { container } = render(
-        <SelectorButton checked onClick={() => undefined} type="secondary">
+        <SelectorButton
+          checked
+          onClick={() => undefined}
+          type="secondary"
+        >
           SelectorButton Text
         </SelectorButton>,
       );
@@ -163,7 +177,10 @@ describe('<SelectorButton />', () => {
     it('is invoked on click', () => {
       const spy = jest.fn();
       const { container } = render(
-        <SelectorButton checked={false} onClick={spy} />,
+        <SelectorButton
+          checked={false}
+          onClick={spy}
+        />,
       );
 
       assert(container.firstElementChild);
@@ -189,7 +206,10 @@ describe('<SelectorButton />', () => {
     it('is invoked when enter is pressed', () => {
       const spy = jest.fn();
       const { container } = render(
-        <SelectorButton checked={false} onClick={spy} />,
+        <SelectorButton
+          checked={false}
+          onClick={spy}
+        />,
       );
 
       assert(container.firstElementChild);

@@ -31,7 +31,10 @@ const cards = [
 export const OneCard = () => <Carousel numCardsVisible={1}>{cards}</Carousel>;
 
 export const TwoCardsInfinite = () => (
-  <Carousel numCardsVisible={2} infinite>
+  <Carousel
+    numCardsVisible={2}
+    infinite
+  >
     {cards}
   </Carousel>
 );
@@ -41,7 +44,10 @@ export const ThreeCards = () => (
 );
 
 export const Autoplay5Seconds = () => (
-  <Carousel numCardsVisible={1} autoplay>
+  <Carousel
+    numCardsVisible={1}
+    autoplay
+  >
     {cards}
   </Carousel>
 );
@@ -52,7 +58,11 @@ Autoplay5Seconds.parameters = {
 };
 
 export const AutoplayInfinite = () => (
-  <Carousel numCardsVisible={1} autoplay infinite>
+  <Carousel
+    numCardsVisible={1}
+    autoplay
+    infinite
+  >
     {cards}
   </Carousel>
 );
@@ -63,13 +73,19 @@ AutoplayInfinite.parameters = {
 };
 
 export const HideDots = () => (
-  <Carousel numCardsVisible={1} hideDots>
+  <Carousel
+    numCardsVisible={1}
+    hideDots
+  >
     {cards}
   </Carousel>
 );
 
 export const HideArrows = () => (
-  <Carousel numCardsVisible={1} hideArrows>
+  <Carousel
+    numCardsVisible={1}
+    hideArrows
+  >
     {cards}
   </Carousel>
 );
@@ -77,7 +93,10 @@ export const HideArrows = () => (
 HideArrows.storyName = 'Hide Arrows (swipe to navigate)';
 
 export const BottomRightAlignedArrows = () => (
-  <Carousel numCardsVisible={2} bottomRightAlignedArrows>
+  <Carousel
+    numCardsVisible={2}
+    bottomRightAlignedArrows
+  >
     {cards}
   </Carousel>
 );
@@ -96,7 +115,10 @@ export const SecondaryStyle = () => {
 
   return (
     <CarouselContainer bgColor={theme.COLORS.secondary}>
-      <Carousel numCardsVisible={1} carouselType="secondary">
+      <Carousel
+        numCardsVisible={1}
+        carouselType="secondary"
+      >
         {cards}
       </Carousel>
     </CarouselContainer>

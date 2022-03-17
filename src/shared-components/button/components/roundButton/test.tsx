@@ -13,7 +13,11 @@ describe('<RoundButton />', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
-        <RoundButton disabled onClick={() => undefined} icon={<CameraIcon />}>
+        <RoundButton
+          disabled
+          onClick={() => undefined}
+          icon={<CameraIcon />}
+        >
           Button Text
         </RoundButton>,
       );
@@ -26,7 +30,10 @@ describe('<RoundButton />', () => {
     it('should be invoked onClick', () => {
       const spy = jest.fn();
       const { getByRole } = render(
-        <RoundButton onClick={spy} icon={<CameraIcon />}>
+        <RoundButton
+          onClick={spy}
+          icon={<CameraIcon />}
+        >
           Button Text
         </RoundButton>,
       );
@@ -38,7 +45,11 @@ describe('<RoundButton />', () => {
     it('should not be invoked if disabled', () => {
       const spy = jest.fn();
       const { getByRole } = render(
-        <RoundButton disabled onClick={spy} icon={<CameraIcon />}>
+        <RoundButton
+          disabled
+          onClick={spy}
+          icon={<CameraIcon />}
+        >
           Button Text
         </RoundButton>,
       );
@@ -50,7 +61,11 @@ describe('<RoundButton />', () => {
     it('should not be invoked if loading', () => {
       const spy = jest.fn();
       const { getByRole } = render(
-        <RoundButton isLoading onClick={spy} icon={<CameraIcon />}>
+        <RoundButton
+          isLoading
+          onClick={spy}
+          icon={<CameraIcon />}
+        >
           Button Text
         </RoundButton>,
       );

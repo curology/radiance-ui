@@ -21,34 +21,68 @@ const noop = () => undefined;
 export const Default = () => (
   <Button.Container>
     <Button onClick={noop}>Primary Button</Button>
-    <Button onClick={noop} buttonType="secondary">
+    <Button
+      onClick={noop}
+      buttonType="secondary"
+    >
       Secondary Button
     </Button>
-    <Button onClick={noop} buttonType="tertiary">
+    <Button
+      onClick={noop}
+      buttonType="tertiary"
+    >
       Tertiary Button
     </Button>
-    <Button onClick={noop} buttonType="quaternary">
+    <Button
+      onClick={noop}
+      buttonType="quaternary"
+    >
       Quaternary Button
     </Button>
-    <Button onClick={noop} disabled>
+    <Button
+      onClick={noop}
+      disabled
+    >
       Disabled Button
     </Button>
-    <Button onClick={noop} isFullWidth>
+    <Button
+      onClick={noop}
+      isFullWidth
+    >
       Full Width Button
     </Button>
-    <Button onClick={noop} isLoading>
+    <Button
+      onClick={noop}
+      isLoading
+    >
       Primary Loading
     </Button>
-    <Button onClick={noop} isLoading buttonType="secondary">
+    <Button
+      onClick={noop}
+      isLoading
+      buttonType="secondary"
+    >
       Secondary Loading
     </Button>
-    <Button onClick={noop} buttonType="tertiary" isLoading>
+    <Button
+      onClick={noop}
+      buttonType="tertiary"
+      isLoading
+    >
       Tertiary Loading
     </Button>
-    <Button onClick={noop} buttonType="quaternary" isLoading>
+    <Button
+      onClick={noop}
+      buttonType="quaternary"
+      isLoading
+    >
       Quaternary Loading
     </Button>
-    <Button onClick={noop} isFullWidth isLoading>
+    <Button
+      onClick={noop}
+      isFullWidth
+      isLoading
+    >
       Full Width Loading
     </Button>
   </Button.Container>
@@ -56,25 +90,52 @@ export const Default = () => (
 
 export const WithIcon = () => (
   <Button.Container>
-    <Button onClick={noop} icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      icon={<CheckmarkIcon />}
+    >
       Primary Button
     </Button>
-    <Button onClick={noop} buttonType="secondary" icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      buttonType="secondary"
+      icon={<CheckmarkIcon />}
+    >
       Secondary Button
     </Button>
-    <Button onClick={noop} buttonType="tertiary" icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      buttonType="tertiary"
+      icon={<CheckmarkIcon />}
+    >
       Tertiary Button
     </Button>
-    <Button onClick={noop} buttonType="quaternary" icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      buttonType="quaternary"
+      icon={<CheckmarkIcon />}
+    >
       Quaternary Button
     </Button>
-    <Button onClick={noop} disabled icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      disabled
+      icon={<CheckmarkIcon />}
+    >
       Disabled Button
     </Button>
-    <Button onClick={noop} isFullWidth icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      isFullWidth
+      icon={<CheckmarkIcon />}
+    >
       Full Width Button
     </Button>
-    <Button onClick={noop} isLoading icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      isLoading
+      icon={<CheckmarkIcon />}
+    >
       Primary Loading
     </Button>
     <Button
@@ -101,7 +162,12 @@ export const WithIcon = () => (
     >
       Quaternary Loading
     </Button>
-    <Button onClick={noop} isLoading isFullWidth icon={<CheckmarkIcon />}>
+    <Button
+      onClick={noop}
+      isLoading
+      isFullWidth
+      icon={<CheckmarkIcon />}
+    >
       Full Width Loading
     </Button>
   </Button.Container>
@@ -112,7 +178,10 @@ export const WithColor = () => {
 
   return (
     <Button.Container>
-      <Button onClick={noop} buttonColor={theme.COLORS.error}>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+      >
         Primary Button
       </Button>
       <Button
@@ -136,13 +205,25 @@ export const WithColor = () => {
       >
         Quaternary Button
       </Button>
-      <Button onClick={noop} buttonColor={theme.COLORS.error} disabled>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        disabled
+      >
         Disabled Button
       </Button>
-      <Button onClick={noop} buttonColor={theme.COLORS.error} isFullWidth>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        isFullWidth
+      >
         Full Width Button
       </Button>
-      <Button onClick={noop} buttonColor={theme.COLORS.error} isLoading>
+      <Button
+        onClick={noop}
+        buttonColor={theme.COLORS.error}
+        isLoading
+      >
         Primary Loading
       </Button>
       <Button

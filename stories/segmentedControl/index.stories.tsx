@@ -30,7 +30,10 @@ export const TwoItems = () => {
 
   return (
     <SegmentedControlContainer segmentedWidth={344}>
-      <SegmentedControl onClick={onClick} segmentItems={twoItems} />
+      <SegmentedControl
+        onClick={onClick}
+        segmentItems={twoItems}
+      />
     </SegmentedControlContainer>
   );
 };
@@ -49,7 +52,12 @@ const SegmentedControlWithFocusScope: React.FC<
     focusManager.focusLast({ wrap: true });
   }, []);
 
-  return <SegmentedControl onClick={onClick} segmentItems={segmentItems} />;
+  return (
+    <SegmentedControl
+      onClick={onClick}
+      segmentItems={segmentItems}
+    />
+  );
 };
 
 /**
@@ -68,7 +76,11 @@ export const TwoItemsWithFocusOnLastItem = () => {
 
   return (
     <SegmentedControlContainer segmentedWidth={344}>
-      <FocusScope autoFocus contain restoreFocus>
+      <FocusScope
+        autoFocus
+        contain
+        restoreFocus
+      >
         <SegmentedControlWithFocusScope
           onClick={onClick}
           segmentItems={twoItems}
@@ -91,7 +103,10 @@ export const ThreeItems = () => {
 
   return (
     <SegmentedControlContainer segmentedWidth={349}>
-      <SegmentedControl onClick={onClick} segmentItems={threeItems} />
+      <SegmentedControl
+        onClick={onClick}
+        segmentItems={threeItems}
+      />
     </SegmentedControlContainer>
   );
 };
@@ -109,7 +124,11 @@ export const ThreeItemsWithFocusOnLastItem = () => {
 
   return (
     <SegmentedControlContainer segmentedWidth={349}>
-      <FocusScope autoFocus contain restoreFocus>
+      <FocusScope
+        autoFocus
+        contain
+        restoreFocus
+      >
         <SegmentedControlWithFocusScope
           onClick={onClick}
           segmentItems={threeItems}

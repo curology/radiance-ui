@@ -23,20 +23,33 @@ describe('Alert UI snapshots', () => {
   });
 
   it('renders success alert', () => {
-    const { container } = render(<Alert content={alertText} type="success" />);
+    const { container } = render(
+      <Alert
+        content={alertText}
+        type="success"
+      />,
+    );
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
   it('renders error alert', () => {
-    const { container } = render(<Alert content={alertText} type="error" />);
+    const { container } = render(
+      <Alert
+        content={alertText}
+        type="error"
+      />,
+    );
 
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
   it('renders a sticky alert', () => {
     const { container } = render(
-      <Alert content={alertText} duration="sticky" />,
+      <Alert
+        content={alertText}
+        duration="sticky"
+      />,
     );
 
     expect(container.firstElementChild).toMatchSnapshot();

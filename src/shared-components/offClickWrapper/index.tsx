@@ -50,7 +50,10 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
   }, []);
 
   return (
-    <div ref={containerRef} className={className}>
+    <div
+      ref={containerRef}
+      className={className}
+    >
       {children}
     </div>
   );

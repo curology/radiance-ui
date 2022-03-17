@@ -10,7 +10,11 @@ export interface AvatarProps {
 }
 
 export const Avatar: React.FC<AvatarProps> = ({ alt, size = 'small', src }) => (
-  <Style.AvatarImage alt={alt} avatarSize={size} src={src} />
+  <Style.AvatarImage
+    alt={alt}
+    avatarSize={size}
+    src={src}
+  />
 );
 
 Avatar.propTypes = {

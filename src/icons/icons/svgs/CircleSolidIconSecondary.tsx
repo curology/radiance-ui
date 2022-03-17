@@ -11,7 +11,12 @@ function SvgCircleSolidIconSecondary(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <circle cx={8} cy={8} r={4} fill="currentColor" />
+      <circle
+        cx={8}
+        cy={8}
+        r={4}
+        fill="currentColor"
+      />
     </svg>
   );
 }

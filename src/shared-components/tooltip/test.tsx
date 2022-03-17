@@ -7,7 +7,10 @@ describe('<Tooltip />', () => {
   describe('UI snapshot', () => {
     it('renders content and children', () => {
       const { container } = render(
-        <Tooltip position="bottom" content="Tooltip Content">
+        <Tooltip
+          position="bottom"
+          content="Tooltip Content"
+        >
           Tooltip Trigger
         </Tooltip>,
       );

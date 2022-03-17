@@ -19,7 +19,11 @@ describe('<Dropdown />', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
       const { getByRole, getAllByRole, queryAllByRole } = render(
-        <Dropdown value="test1" options={options} onChange={() => undefined} />,
+        <Dropdown
+          value="test1"
+          options={options}
+          onChange={() => undefined}
+        />,
       );
       delete window.document.documentElement.ontouchstart;
 
@@ -32,7 +36,11 @@ describe('<Dropdown />', () => {
   describe('when on non-touch screen', () => {
     it('renders <DesktopDropdown />', () => {
       const { getByRole } = render(
-        <Dropdown value="test1" options={options} onChange={() => null} />,
+        <Dropdown
+          value="test1"
+          options={options}
+          onChange={() => null}
+        />,
       );
 
       // button only used in Desktop implementation

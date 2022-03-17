@@ -24,18 +24,46 @@ export const Usage = () => (
     <div>
       <h4>Default</h4>
     </div>
-    <Chip status="primary" text="Primary" />
-    <Chip status="error" text="Error" />
-    <Chip status="success" text="Success" />
-    <Chip status="white" text="White" />
+    <Chip
+      status="primary"
+      text="Primary"
+    />
+    <Chip
+      status="error"
+      text="Error"
+    />
+    <Chip
+      status="success"
+      text="Success"
+    />
+    <Chip
+      status="white"
+      text="White"
+    />
     <br />
     <div>
       <h4>Low Contrast</h4>
     </div>
-    <Chip status="primary" isLowContrast text="Primary" />
-    <Chip status="error" isLowContrast text="Error" />
-    <Chip status="success" isLowContrast text="Success" />
-    <Chip status="white" isLowContrast text="White" />
+    <Chip
+      status="primary"
+      isLowContrast
+      text="Primary"
+    />
+    <Chip
+      status="error"
+      isLowContrast
+      text="Error"
+    />
+    <Chip
+      status="success"
+      isLowContrast
+      text="Success"
+    />
+    <Chip
+      status="white"
+      isLowContrast
+      text="White"
+    />
   </ChipContainer>
 );
 
@@ -72,7 +100,10 @@ const CHIP_STORIES: Chipstories = {
           <Title />
           <Description />
           <Heading>Usage:</Heading>
-          <Source language="tsx" code={"import { Chip } from 'radiance-ui';"} />
+          <Source
+            language="tsx"
+            code={"import { Chip } from 'radiance-ui';"}
+          />
           <Heading>Props:</Heading>
           <ArgsTable />
           <Stories includePrimary />

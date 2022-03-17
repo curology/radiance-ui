@@ -15,7 +15,10 @@ describe('<FadeInContainer />', () => {
 
     it('renders with slide and speed props set', () => {
       const { container } = render(
-        <FadeInContainer slide speed="500ms">
+        <FadeInContainer
+          slide
+          speed="500ms"
+        >
           FadeInContainer Content Here
         </FadeInContainer>,
       );

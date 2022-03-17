@@ -24,7 +24,11 @@ export const COLORS = () => {
       {colorKeys.map((colorKey) => {
         const colorHex = theme.COLORS[colorKey];
         return (
-          <Color key={colorKey} colorName={colorKey} colorHex={colorHex} />
+          <Color
+            key={colorKey}
+            colorName={colorKey}
+            colorHex={colorHex}
+          />
         );
       })}
     </MainContainer>

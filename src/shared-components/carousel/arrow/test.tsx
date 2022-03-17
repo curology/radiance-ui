@@ -7,7 +7,11 @@ describe('<Arrow />', () => {
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
-        <Arrow prev disabled={false} onClick={() => undefined} />,
+        <Arrow
+          prev
+          disabled={false}
+          onClick={() => undefined}
+        />,
         { withPortalContainer: true },
       );
 

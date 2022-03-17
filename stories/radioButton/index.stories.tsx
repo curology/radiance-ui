@@ -79,7 +79,11 @@ export const WithControls = () => {
       onClick={(action('radio button clicked'), () => undefined)}
       icon={
         boolean('icon', false) ? (
-          <AcneGlyph width={40} height={40} fill={theme.COLORS.primary} />
+          <AcneGlyph
+            width={40}
+            height={40}
+            fill={theme.COLORS.primary}
+          />
         ) : null
       }
       size={select('size', ['large', 'small'], 'small')}

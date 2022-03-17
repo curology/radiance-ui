@@ -24,7 +24,10 @@ describe('<SegmentedControl />', () => {
     const spy = jest.fn();
 
     const { getByRole } = render(
-      <SegmentedControl {...testSegmentedControl} onClick={spy} />,
+      <SegmentedControl
+        {...testSegmentedControl}
+        onClick={spy}
+      />,
     );
 
     const button = getByRole('button', { name: 'Tab 3' });

@@ -1,6 +1,7 @@
 {
   "semi": true,
   "singleQuote": true,
+  "singleAttributePerLine": true,
   "trailingComma": "all",
   "endOfLine": "lf",
   "arrowParens": "always"

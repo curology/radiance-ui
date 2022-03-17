@@ -45,7 +45,11 @@ describe('<VerificationMessages />', () => {
       };
 
       const { container } = render(
-        <VerificationMessages messages={messages} centered type="success" />,
+        <VerificationMessages
+          messages={messages}
+          centered
+          type="success"
+        />,
       );
 
       expect(container.firstElementChild).toMatchSnapshot();

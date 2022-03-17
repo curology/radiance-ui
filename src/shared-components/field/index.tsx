@@ -82,7 +82,10 @@ export const Field: Field = ({
   return (
     <Style.FieldContainer>
       {!!label && (
-        <Style.Label htmlFor={htmlFor} disabled={disabled}>
+        <Style.Label
+          htmlFor={htmlFor}
+          disabled={disabled}
+        >
           {label}
         </Style.Label>
       )}
@@ -99,7 +102,10 @@ export const Field: Field = ({
 
         {!!hintMessage && <Style.HintItem>{hintMessage}</Style.HintItem>}
 
-        <VerificationMessages messages={messages} type={messagesType} />
+        <VerificationMessages
+          messages={messages}
+          type={messagesType}
+        />
       </Style.InputContainer>
     </Style.FieldContainer>
   );

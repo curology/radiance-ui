@@ -24,7 +24,11 @@ const Arrow: React.FC<ArrowProps> = ({
     : Style.ArrowContainer;
 
   return (
-    <ArrowContainerComponent prev={prev} next={next} disabled={disabled}>
+    <ArrowContainerComponent
+      prev={prev}
+      next={next}
+      disabled={disabled}
+    >
       {prev && (
         <RoundButton
           buttonType={bottomRightAlignedArrows ? 'primary' : 'action'}

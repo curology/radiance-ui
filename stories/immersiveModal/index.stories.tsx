@@ -53,7 +53,10 @@ export const WithFooterButtons = () => {
           onClose={onClose}
           footerContent={
             <Button.Container>
-              <Button isFullWidth onClick={onClose}>
+              <Button
+                isFullWidth
+                onClick={onClose}
+              >
                 cta content
               </Button>
             </Button.Container>
@@ -90,7 +93,10 @@ export const WithFooterButtonsOpened = () => {
           onClose={onClose}
           footerContent={
             <Button.Container>
-              <Button isFullWidth onClick={onClose}>
+              <Button
+                isFullWidth
+                onClick={onClose}
+              >
                 cta content
               </Button>
             </Button.Container>
@@ -123,7 +129,12 @@ export const WithHeaderImage = () => {
       {withImageHeader && (
         <ImmersiveModal
           onClose={onClose}
-          headerImage={<img src={headerImage} alt="header" />}
+          headerImage={
+            <img
+              src={headerImage}
+              alt="header"
+            />
+          }
           title="With image as header"
         >
           <LoremIpsumBlock repeat={8} />
@@ -154,7 +165,12 @@ export const WithHeaderImageOpened = () => {
       {withImageHeader && (
         <ImmersiveModal
           onClose={onClose}
-          headerImage={<img src={headerImage} alt="header" />}
+          headerImage={
+            <img
+              src={headerImage}
+              alt="header"
+            />
+          }
           title="With image as header"
         >
           <LoremIpsumBlock repeat={8} />
@@ -181,7 +197,10 @@ export const WithScrollingContent = () => {
     <React.Fragment>
       <Button onClick={onClick}>with scrolling content</Button>
       {withScrolling && (
-        <ImmersiveModal onClose={onClose} title="Immersive modal title">
+        <ImmersiveModal
+          onClose={onClose}
+          title="Immersive modal title"
+        >
           <LoremIpsumBlock repeat={16} />
         </ImmersiveModal>
       )}
@@ -208,7 +227,10 @@ export const WithScrollingContentOpened = () => {
     <React.Fragment>
       <Button onClick={onClick}>with scrolling content</Button>
       {withScrolling && (
-        <ImmersiveModal onClose={onClose} title="Immersive modal title">
+        <ImmersiveModal
+          onClose={onClose}
+          title="Immersive modal title"
+        >
           <LoremIpsumBlock repeat={16} />
         </ImmersiveModal>
       )}

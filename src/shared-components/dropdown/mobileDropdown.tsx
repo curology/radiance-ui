@@ -69,7 +69,10 @@ export const MobileDropdown = <T extends OptionType>({
         })}
       </select>
       <Style.IconContainer>
-        <ChevronIcon width={10} height={10} />
+        <ChevronIcon
+          width={10}
+          height={10}
+        />
       </Style.IconContainer>
     </Style.DropdownContainer>
   );
