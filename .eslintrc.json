@@ -10,7 +10,7 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/all",
     "plugin:sonarjs/recommended",
-    "curology"
+    "plugin:curology/recommended"
   ],
   "plugins": ["@emotion"],
   "globals": {
