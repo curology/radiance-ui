@@ -7,11 +7,10 @@
     "allowAutomaticSingleRunInference": false
   },
   "extends": [
-    "eslint:all",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/all",
     "plugin:sonarjs/recommended",
-    "plugin:curology/recommended"
+    "curology"
   ],
   "plugins": ["@emotion"],
   "globals": {
