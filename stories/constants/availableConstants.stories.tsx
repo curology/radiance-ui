@@ -7,8 +7,10 @@ import renderConstantsMap from './renderConstantsMap';
 
 const {
   COLORS_PROP_TYPES: _COLORS_PROP_TYPES,
-  // TODO-theming: Add to story once finalized,
-  // otherwise visual tests will fail with every change
+  /*
+   * TODO-theming: Add to story once finalized,
+   * otherwise visual tests will fail with every change
+   */
   primaryTheme: _primaryTheme,
   secondaryTheme: _secondaryTheme,
   REACT_PORTAL_SECTION_ID: _REACT_PORTAL_SECTION_ID,

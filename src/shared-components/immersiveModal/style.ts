@@ -217,8 +217,10 @@ export interface HasHeaderImageProps {
   hasHeaderImage: boolean;
 }
 
-// 32px comes from top overlay
-// 272px comes from 32px top overlay + 240px image
+/*
+ * 32px comes from top overlay
+ * 272px comes from 32px top overlay + 240px image
+ */
 const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};

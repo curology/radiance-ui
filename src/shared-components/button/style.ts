@@ -224,8 +224,10 @@ export const ButtonBase = styled.button<Omit<BaseButtonStylesTypes, 'theme'>>`
   ${baseButtonStyles}
 `;
 
-// align-items conditional fixes slight button height misalignment for truthy scenario
-// See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
+/*
+ * align-items conditional fixes slight button height misalignment for truthy scenario
+ * See screenshot in: https://github.com/PocketDerm/radiance-ui/pull/129#issue-292994081
+ */
 export const ButtonContents = styled.div<{
   hasIcon: boolean;
   isFullWidth: boolean;
