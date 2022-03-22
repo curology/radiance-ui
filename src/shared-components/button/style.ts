@@ -13,8 +13,8 @@ import { TYPOGRAPHY_STYLE } from '../typography';
 import { ANIMATION, SPACER, ThemeColors, ThemeType } from '../../constants';
 import { textColorsAssociatedWithColors } from './constants';
 import {
-  primaryButtonFontColor,
   primaryButtonBackgroundColor,
+  primaryButtonFontColor,
   setThemeLineHeight,
 } from '../../utils/themeStyles';
 import { isDefined } from '../../utils/isDefined';

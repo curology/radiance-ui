@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import { buttonReset } from '../../utils/styles/buttonReset';
 import { Typography } from '../typography';
 import {
+  ANIMATION,
   MEDIA_QUERIES,
   SPACER,
-  Z_SCALE,
-  ANIMATION,
   ThemeType,
+  Z_SCALE,
 } from '../../constants';
 
 const MOBILE_TOP_OVERLAY_HEIGHT = '32px';

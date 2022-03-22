@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { SPACER, ANIMATION, ThemeType } from '../../constants';
+import { ANIMATION, SPACER, ThemeType } from '../../constants';
 
 export interface DropdownInputStyleProps {
   borderRadius: string;

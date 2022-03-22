@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
-import { MEDIA_QUERIES, SPACER, ANIMATION, ThemeType } from '../../constants';
+import { ANIMATION, MEDIA_QUERIES, SPACER, ThemeType } from '../../constants';
 
 import type { AlertType } from '.';
 

@@ -1,5 +1,5 @@
 import { VeryOilyGlyph, VeryOilyGlyphSecondary } from './svgs';
-import { useIcon, IconProps } from '../../shared-components/icon';
+import { IconProps, useIcon } from '../../shared-components/icon';
 
 export default (props: IconProps) =>
   useIcon(VeryOilyGlyph, VeryOilyGlyphSecondary, props);
