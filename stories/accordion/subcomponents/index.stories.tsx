@@ -1,13 +1,13 @@
 import React, { useReducer, useState } from 'react';
 import {
+  Anchor,
   ArgsTable,
+  Canvas,
   Description,
   Heading,
   Source,
-  Title,
-  Anchor,
-  Canvas,
   Story,
+  Title,
 } from '@storybook/addon-docs';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';

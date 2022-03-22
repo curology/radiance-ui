@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { Indicator, SegmentItem, SegmentsContainer } from './style';
-import { SegmentItemType, SegmentedControlProps } from './types';
+import { SegmentedControlProps, SegmentItemType } from './types';
 
 /**
  * The width of the top-level container is set to 100%, so it will expand to fill its parent container.

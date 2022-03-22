@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import {
+  Anchor,
   ArgsTable,
+  Canvas,
   Description,
   Heading,
   Source,
-  Title,
-  Anchor,
-  Canvas,
   Story,
+  Title,
 } from '@storybook/addon-docs';
-import { text, boolean } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Accordion } from 'src/shared-components';
 import type { Meta } from '@storybook/react';

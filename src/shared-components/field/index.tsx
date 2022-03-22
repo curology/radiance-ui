@@ -5,8 +5,8 @@ import { useTheme } from '@emotion/react';
 import Style from './style';
 import { CheckmarkIcon, ErrorIcon } from '../../icons';
 import {
-  MessageType,
   MessagesTypes,
+  MessageType,
   VerificationMessages,
 } from '../verificationMessages';
 
