@@ -84,8 +84,10 @@ const determineAlternateTextColor = (
     .desaturate(50)
     .toHexString();
 
-  // loose readability contrast level
-  // https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+  /*
+   * loose readability contrast level
+   * https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html
+   */
   const contrastLevel: tinycolor.WCAG2Options = { level: 'AA', size: 'large' };
 
   const lighterIsReadable = tinycolor.isReadable(

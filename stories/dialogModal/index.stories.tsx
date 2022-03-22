@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { DialogModal, Button } from 'src/shared-components';
+import { Button, DialogModal } from 'src/shared-components';
 import {
+  Anchor,
   ArgsTable,
   Canvas,
   Description,
   Heading,
-  Anchor,
   Source,
   Story,
   Title,

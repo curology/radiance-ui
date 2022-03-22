@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { text, number } from '@storybook/addon-knobs';
+import { number, text } from '@storybook/addon-knobs';
 import { LoadingSpinner } from 'src/shared-components';
 import { BREAKPOINTS } from 'src/constants';
 import {

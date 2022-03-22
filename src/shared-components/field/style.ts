@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
-import { SPACER, ANIMATION, ThemeType } from '../../constants';
+import { ANIMATION, SPACER, ThemeType } from '../../constants';
 import { setThemeLineHeight } from '../../utils/themeStyles';
 import type { MessagesTypes } from '../verificationMessages';
 

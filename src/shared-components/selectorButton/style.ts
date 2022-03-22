@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { SPACER, ANIMATION, ThemeType } from '../../constants';
+import { ANIMATION, SPACER, ThemeType } from '../../constants';
 
 import type { SelectorType, SizeType, StyleType } from '.';
 

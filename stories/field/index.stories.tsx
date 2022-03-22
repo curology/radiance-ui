@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import { Field, MessageType } from 'src/shared-components';
 import {
   ArgsTable,

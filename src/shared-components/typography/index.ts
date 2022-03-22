@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import round from 'lodash.round';
 
 import {
-  setSecondaryHeadingFont,
   setButtonStyleFontWeight,
-  setThemeLineHeight,
+  setSecondaryHeadingFont,
   setThemeFontWeight,
+  setThemeLineHeight,
 } from '../../utils/themeStyles';
 import type { ThemeType } from '../../constants';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, boolean, select } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { RadioButton } from 'src/shared-components';
 import {

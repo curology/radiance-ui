@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, userEvent, render } from 'src/tests/testingLibraryHelpers';
+import { act, render, userEvent } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
 
 import { Alert } from './index';

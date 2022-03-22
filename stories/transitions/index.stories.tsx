@@ -6,12 +6,12 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs';
-import { text, boolean } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import {
+  Container,
   FadeInContainer,
   opacityInAnimationStyle,
-  Container,
 } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 

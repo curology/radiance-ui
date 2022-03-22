@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-import { SegmentsContainer, SegmentItem, Indicator } from './style';
+import { Indicator, SegmentItem, SegmentsContainer } from './style';
 import { SegmentedControlProps, SegmentItemType } from './types';
 
 /**

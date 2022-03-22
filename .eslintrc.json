@@ -123,6 +123,7 @@
     "jest/prefer-snapshot-hint": "off",
     "jest/require-hook": "off",
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
+    "multiline-comment-style": "warn",
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-underscore-dangle": [
       "warn",
@@ -146,7 +147,17 @@
     ],
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
-    "sonarjs/no-nested-template-literals": "off"
+    "sonarjs/no-nested-template-literals": "off",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ]
   },
   "overrides": [
     {

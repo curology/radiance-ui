@@ -4,10 +4,10 @@ import {
   Description,
   Heading,
   Source,
-  Title,
   Stories,
+  Title,
 } from '@storybook/addon-docs';
-import { text, select, number, boolean } from '@storybook/addon-knobs';
+import { boolean, number, select, text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { Tooltip } from 'src/shared-components';
 import { SPACER } from 'src/constants';

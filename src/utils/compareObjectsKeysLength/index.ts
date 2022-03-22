@@ -28,8 +28,10 @@ const compareObjectsKeysLength = (
       return compareObjectsKeysLength(obj1Val, obj2Val);
     }
 
-    // Check if property value is null or undefined, neither of which are valid
-    // theme values, which means there was not a complementary key found
+    /*
+     * Check if property value is null or undefined, neither of which are valid
+     * theme values, which means there was not a complementary key found
+     */
     if (obj2Val == null) {
       console.error(
         `Key "${key}" missing in obj2:${stringifyObjects(obj1, obj2)}`,

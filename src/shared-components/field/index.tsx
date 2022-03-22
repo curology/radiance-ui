@@ -5,9 +5,9 @@ import { useTheme } from '@emotion/react';
 import Style from './style';
 import { CheckmarkIcon, ErrorIcon } from '../../icons';
 import {
-  VerificationMessages,
   MessagesTypes,
   MessageType,
+  VerificationMessages,
 } from '../verificationMessages';
 
 export interface FieldProps {
