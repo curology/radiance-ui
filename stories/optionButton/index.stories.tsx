@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import { OptionButton } from 'src/shared-components';
 import styled from '@emotion/styled';
 import {

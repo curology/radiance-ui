@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  Title,
   Description,
   Heading,
   Source,
   Stories,
+  Title,
 } from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 

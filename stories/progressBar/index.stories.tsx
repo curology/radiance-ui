@@ -1,5 +1,5 @@
 import React from 'react';
-import { text, select, number, color } from '@storybook/addon-knobs';
+import { color, number, select, text } from '@storybook/addon-knobs';
 import styled from '@emotion/styled';
 import { css, useTheme } from '@emotion/react';
 import { ProgressBar } from 'src/shared-components';

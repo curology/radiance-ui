@@ -9,7 +9,7 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import { boolean, select } from '@storybook/addon-knobs';
-import { VerificationMessages, Field } from 'src/shared-components';
+import { Field, VerificationMessages } from 'src/shared-components';
 import type { Meta } from '@storybook/react';
 
 const FieldContainer = styled.div`
