@@ -7,7 +7,7 @@
     "allowAutomaticSingleRunInference": false
   },
   "extends": [
-    "eslint:recommended",
+    "eslint:all",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/all",
     "plugin:sonarjs/recommended",
@@ -148,7 +148,17 @@
     ],
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
-    "sonarjs/no-nested-template-literals": "off"
+    "sonarjs/no-nested-template-literals": "off",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ]
   },
   "overrides": [
     {
