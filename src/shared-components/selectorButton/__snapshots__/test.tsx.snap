@@ -533,8 +533,8 @@ exports[`<SelectorButton /> UI snapshots when checked type is secondary 1`] = `
   -webkit-transition: background-color 350ms;
   transition: background-color 350ms;
   border-radius: 50%;
-  background-color: #A6A1E2;
-  border-color: #A6A1E2;
+  background-color: #939BF0;
+  border-color: #939BF0;
 }
 
 .emotion-7:active,
