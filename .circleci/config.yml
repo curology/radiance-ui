@@ -54,7 +54,7 @@ jobs:
   build-js:
     <<: *defaults
     docker:
-      - image: cimg/node:16-stretch
+      - image: cimg/lts
 
     steps:
       - checkout
@@ -70,7 +70,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: cimg/node:16-stretch
+      - image: cimg/lts
 
     steps:
       - checkout
@@ -86,7 +86,7 @@ jobs:
   lint-js:
     <<: *defaults
     docker:
-      - image: cimg/node:16-stretch
+      - image: cimg/lts
 
     steps:
       - checkout
@@ -103,7 +103,7 @@ jobs:
   test-js:
     <<: *defaults
     docker:
-      - image: cimg/node:16-stretch
+      - image: cimg/lts
 
     steps:
       - checkout
@@ -122,7 +122,7 @@ jobs:
   test-tsc:
     <<: *defaults
     docker:
-      - image: cimg/node:16-stretch
+      - image: cimg/lts
 
     environment:
       NODE_OPTIONS: --max_old_space_size=4096
@@ -142,7 +142,7 @@ jobs:
   test-tsc-stories:
     <<: *defaults
     docker:
-      - image: cimg/node:16-stretch
+      - image: cimg/lts
 
     environment:
       NODE_OPTIONS: --max_old_space_size=4096
