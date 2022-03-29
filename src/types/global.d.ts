@@ -33,8 +33,10 @@ declare global {
     export = SvgComponent;
   }
 
-  // No built-in utility counterpart to keyof--this allows us
-  // to use it without worrying about importing it everywhere
+  /*
+   * No built-in utility counterpart to keyof--this allows us
+   * to use it without worrying about importing it everywhere
+   */
   type valueof<T> = T[keyof T];
 
   namespace NodeJS {

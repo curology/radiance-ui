@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { OffClickWrapper, Container } from 'src/shared-components';
+import { Container, OffClickWrapper } from 'src/shared-components';
 import {
   ArgsTable,
   Description,

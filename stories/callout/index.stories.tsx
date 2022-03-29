@@ -8,7 +8,7 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import { Callout } from 'src/shared-components';
-import { text, boolean } from '@storybook/addon-knobs';
+import { boolean, text } from '@storybook/addon-knobs';
 import { BREAKPOINTS } from 'src/constants';
 import type { Meta } from '@storybook/react';
 
