@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render,  } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
 
 import { AcneGlyph } from '../../icons';
@@ -38,9 +38,9 @@ describe('<OptionButton />', () => {
   });
 
   describe('onClick callback', () => {
-    it('is invoked when clicked', () => {
+    it('is invoked when clicked', async () => {
       const spy = jest.fn();
-      const { container } = render(
+      const { container, user} = render(
         <OptionButton
           onClick={spy}
           text="checkbox text"
@@ -50,7 +50,7 @@ describe('<OptionButton />', () => {
 
       assert(container.firstElementChild);
 
-      userEvent.click(container.firstElementChild);
+      await user.click(container.firstElementChild);
       expect(spy).toHaveBeenCalled();
     });
   });

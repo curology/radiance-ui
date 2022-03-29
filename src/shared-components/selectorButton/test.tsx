@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
 
 import { AcneOneGlyph } from '../../icons';
@@ -160,40 +160,26 @@ describe('<SelectorButton />', () => {
   });
 
   describe('onClick callback', () => {
-    it('is invoked on click', () => {
+    it('is invoked on click', async () => {
       const spy = jest.fn();
-      const { container } = render(
+      const { container, user } = render(
         <SelectorButton checked={false} onClick={spy} />,
       );
 
       assert(container.firstElementChild);
-      userEvent.click(container.firstElementChild);
+      await user.click(container.firstElementChild);
 
       expect(spy).toHaveBeenCalled();
     });
-
-    it('does nothing when no onClick is set', () => {
-      const { container } = render(<SelectorButton checked={false} />);
-
-      // Just check that no exception is thrown
-      expect(() => {
-        assert(container.firstElementChild);
-        userEvent.click(container.firstElementChild);
-      }).not.toThrow();
-      expect(() => {
-        assert(container.firstElementChild);
-        userEvent.type(container.firstElementChild, '{enter}');
-      }).not.toThrow();
-    });
-
-    it('is invoked when enter is pressed', () => {
+    
+    it('is invoked when enter is pressed', async () => {
       const spy = jest.fn();
-      const { container } = render(
+      const { container, user } = render(
         <SelectorButton checked={false} onClick={spy} />,
       );
 
       assert(container.firstElementChild);
-      userEvent.type(container.firstElementChild, '{enter}');
+      await user.type(container.firstElementChild, '{enter}');
 
       expect(spy).toHaveBeenCalled();
     });

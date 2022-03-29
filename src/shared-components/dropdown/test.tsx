@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
 
 import { DesktopDropdown } from './desktopDropdown';
 import { MobileDropdown } from './mobileDropdown';
@@ -79,9 +79,9 @@ describe('<MobileDropdown />', () => {
   });
 
   describe('onDropdownContainerFocus callback', () => {
-    it('should be invoked on focus', () => {
+    it('should be invoked on focus', async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <MobileDropdown
           borderRadius="4px"
           options={options}
@@ -92,7 +92,7 @@ describe('<MobileDropdown />', () => {
         />,
       );
 
-      userEvent.click(getByRole('combobox'));
+      await user.click(getByRole('combobox'));
       expect(spy).toHaveBeenCalled();
     });
   });
@@ -119,9 +119,9 @@ describe('<DesktopDropdown />', () => {
   });
 
   describe('onSelectClick callback', () => {
-    it(`${ON_CLICK_TEST}`, () => {
+    it(`${ON_CLICK_TEST}`, async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -136,15 +136,15 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      userEvent.click(getByRole('button'));
+      await user.click(getByRole('button'));
       expect(spy).toHaveBeenCalled();
     });
   });
 
   describe('onOptionClick callback', () => {
-    it(`${ON_CLICK_TEST}`, () => {
+    it(`${ON_CLICK_TEST}`, async () => {
       const spy = jest.fn();
-      const { getAllByRole } = render(
+      const { getAllByRole, user } = render(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -161,15 +161,15 @@ describe('<DesktopDropdown />', () => {
 
       const listItems = getAllByRole('menuitemradio');
       // Arbitrarily select last item
-      userEvent.click(listItems[listItems.length - 1]);
+      await user.click(listItems[listItems.length - 1]);
       expect(spy).toHaveBeenCalled();
     });
   });
 
   describe('onDropdownContainerFocus callback', () => {
-    it('should be invoked on focus', () => {
+    it('should be invoked on focus', async () => {
       const spy = jest.fn();
-      render(
+      const { user } = render(
         <DesktopDropdown
           borderRadius="4px"
           options={options}
@@ -184,7 +184,7 @@ describe('<DesktopDropdown />', () => {
         />,
       );
 
-      userEvent.tab();
+      await user.tab();
       expect(spy).toHaveBeenCalled();
     });
   });

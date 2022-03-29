@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render,  } from 'src/tests/testingLibraryHelpers';
 
 import { Banner } from './index';
 
@@ -26,13 +26,13 @@ describe('Banner UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  it('banner with click handler', () => {
+  it('banner with click handler', async () => {
     const spy = jest.fn();
-    const { getByRole } = render(
+    const { getByRole, user } = render(
       <Banner content="Banner with click handler" onClick={spy} />,
     );
 
-    userEvent.click(getByRole('button'));
+    await user.click(getByRole('button'));
     expect(spy).toHaveBeenCalled();
   });
 });

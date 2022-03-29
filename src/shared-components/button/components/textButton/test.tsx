@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { TextButton } from './index';
 
@@ -20,26 +20,26 @@ describe('<TextButton />', () => {
   });
 
   describe('onClick callback', () => {
-    it('should invoke onClick', () => {
+    it('should invoke onClick', async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <TextButton onClick={spy}>Button Text</TextButton>,
       );
 
-      userEvent.click(getByRole('button'));
+      await user.click(getByRole('button'));
 
       expect(spy).toHaveBeenCalled();
     });
 
-    it('should not be clickable if disabled', () => {
+    it('should not be clickable if disabled', async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <TextButton disabled onClick={spy}>
           Button Text
         </TextButton>,
       );
 
-      userEvent.click(getByRole('button'));
+      await user.click(getByRole('button'));
 
       expect(spy).not.toHaveBeenCalled();
     });
