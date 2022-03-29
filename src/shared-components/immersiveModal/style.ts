@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import { buttonReset } from '../../utils/styles/buttonReset';
 import { Typography } from '../typography';
 import {
+  ANIMATION,
   MEDIA_QUERIES,
   SPACER,
-  Z_SCALE,
-  ANIMATION,
   ThemeType,
+  Z_SCALE,
 } from '../../constants';
 
 const MOBILE_TOP_OVERLAY_HEIGHT = '32px';
@@ -217,8 +217,10 @@ export interface HasHeaderImageProps {
   hasHeaderImage: boolean;
 }
 
-// 32px comes from top overlay
-// 272px comes from 32px top overlay + 240px image
+/*
+ * 32px comes from top overlay
+ * 272px comes from 32px top overlay + 240px image
+ */
 const MainModalContentContainer = styled.div<HasHeaderImageProps>`
   position: relative;
   border-top-left-radius: ${({ theme }) => theme.BORDER_RADIUS.large};

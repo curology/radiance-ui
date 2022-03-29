@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import { SPACER, MEDIA_QUERIES, ThemeType } from '../../constants';
+import { MEDIA_QUERIES, SPACER, ThemeType } from '../../constants';
 import type { ContainerComponentType } from './types';
 
 const clickableStyle = (theme: ThemeType) => `

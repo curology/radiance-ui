@@ -7,7 +7,7 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { Button } from 'src/shared-components';
 import { useTheme } from '@emotion/react';

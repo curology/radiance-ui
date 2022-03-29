@@ -7,7 +7,7 @@ import {
   Stories,
   Title,
 } from '@storybook/addon-docs';
-import { text, select, boolean } from '@storybook/addon-knobs';
+import { boolean, select, text } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { LinkButton } from 'src/shared-components';
 import { useTheme } from '@emotion/react';
@@ -24,21 +24,20 @@ export const Default = () => (
   </LinkButton.Container>
 );
 
-export const ReactRouterLink = () => {
-  const MockLink = ({
-    children,
-    to,
-    ...rest
-  }: {
-    children: React.ReactNode;
-    to: string;
-  }) => (
-    // eslint-disable-next-line
-    <a href={to} {...rest}>
-      {children}
-    </a>
-  );
+const MockLink = ({
+  children,
+  to,
+  ...rest
+}: {
+  children: React.ReactNode;
+  to: string;
+}) => (
+  <a href={to} {...rest}>
+    {children}
+  </a>
+);
 
+export const ReactRouterLink = () => {
   return (
     <LinkButton.Container>
       <LinkButton

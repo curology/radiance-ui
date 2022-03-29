@@ -36,7 +36,7 @@ describe('<DialogModal />', () => {
 
     const body = await findByText(bodyString);
 
-    expect(getAllByText(modalTitle).length > 0).toBe(true);
+    expect(getAllByText(modalTitle).length).toBeGreaterThan(0);
     expect(body).toBeInTheDocument();
   });
 });

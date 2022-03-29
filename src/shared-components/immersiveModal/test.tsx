@@ -18,7 +18,7 @@ describe('<ImmersiveModal />', () => {
       { withPortalContainer: true },
     );
 
-    expect(getAllByText(modalTitle).length > 0).toBe(true);
+    expect(getAllByText(modalTitle).length).toBeGreaterThan(0);
     expect(getByText(bodyString)).toBeInTheDocument();
   });
 

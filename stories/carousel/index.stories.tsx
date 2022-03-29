@@ -9,7 +9,7 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import { Carousel } from 'src/shared-components';
-import { text, select, number, boolean } from '@storybook/addon-knobs';
+import { boolean, number, select, text } from '@storybook/addon-knobs';
 import { SPACER } from 'src/constants';
 import { useTheme } from '@emotion/react';
 import type { Meta } from '@storybook/react';

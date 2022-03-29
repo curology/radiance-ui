@@ -51,8 +51,10 @@ export const MobileDropdown = <T extends OptionType>({
         {options.map((option, index) => {
           let isDisabled = option.disabled;
 
-          // Covers the case where default value is disabled
-          // In mobile you cannot have a selected value as disabled option
+          /*
+           * Covers the case where default value is disabled
+           * In mobile you cannot have a selected value as disabled option
+           */
           if (option.value === value) {
             isDisabled = false;
           }

@@ -11,7 +11,8 @@ import { useRef } from 'react';
  *    <button onClick={() => resetFocus() }>Click Here to send focus to the First Button!</button>
  *  </React.Fragment>
  * );
- *  */
+ *
+ */
 const useResetFocus = <T extends HTMLElement>() => {
   const ref = useRef<T>(null);
 

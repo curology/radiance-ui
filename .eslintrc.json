@@ -4,7 +4,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module",
     "project": "./.eslint.tsconfig.json",
-    "allowAutomaticSingleRunInference": false,
+    "allowAutomaticSingleRunInference": false
   },
   "extends": [
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -111,7 +111,7 @@
         "mock": "always"
       }
     ],
-    "jest/lowercase-name": [
+    "jest/prefer-lowercase-title": [
       "error",
       {
         "ignore": ["describe"]
@@ -120,8 +120,10 @@
     "jest/no-large-snapshots": "off",
     "jest/prefer-called-with": "off",
     "jest/prefer-expect-assertions": "off",
+    "jest/prefer-snapshot-hint": "off",
     "jest/require-hook": "off",
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
+    "multiline-comment-style": "warn",
     "no-console": ["error", { "allow": ["warn", "error"] }],
     "no-underscore-dangle": [
       "warn",
@@ -129,6 +131,8 @@
         "allow": ["__isProxy", "__type"]
       }
     ],
+
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
@@ -143,7 +147,17 @@
     ],
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
-    "sonarjs/no-nested-template-literals": "off"
+    "sonarjs/no-nested-template-literals": "off",
+    "sort-imports": [
+      "warn",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ]
   },
   "overrides": [
     {
