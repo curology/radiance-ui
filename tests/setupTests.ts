@@ -1,1 +1,1 @@
-import '@testing-library/jest-dom'; // Allows async in tests
+import '@testing-library/jest-dom';

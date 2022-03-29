@@ -171,7 +171,7 @@ describe('<SelectorButton />', () => {
 
       expect(spy).toHaveBeenCalled();
     });
-    
+
     it('is invoked when enter is pressed', async () => {
       const spy = jest.fn();
       const { container, user } = render(

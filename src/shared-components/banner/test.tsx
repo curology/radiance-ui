@@ -1,5 +1,5 @@
 import React from 'react';
-import { render,  } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Banner } from './index';
 
