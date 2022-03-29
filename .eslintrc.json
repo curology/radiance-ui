@@ -148,6 +148,7 @@
     ],
     "react/state-in-constructor": "off",
     "react/static-property-placement": "off",
+    "react-hooks/exhaustive-deps": "error",
     "sonarjs/no-nested-template-literals": "off",
     "sort-imports": [
       "warn",
