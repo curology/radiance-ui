@@ -1,0 +1,12 @@
+p1 
+red FF5E4D --> wasabi DEFAAB
+nude F2D6C7 --> cool 2 E6E3ED
+racing green 254233 --> warm base 212121
+Green CAD1B4 --> Warm 1 F7F2EE
+Burnt Orange AC6A27 --> E0D9CF
+
+p2
+Secondary 1 A6A1E2 --> 939BF0 (still secondary, etc.)
+Secondary 2 B8B4E8 --> B8BCFF
+Secondary 3 CAC7EE --> DCDEFF
+Secondary 4 F7F6FD --> F5F5FF
