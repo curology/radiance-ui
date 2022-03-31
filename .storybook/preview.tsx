@@ -69,7 +69,7 @@ export const globalTypes = {
   },
 };
 
-const getTheme = (theme: ThemeType['type']) => {
+const getTheme = (theme: ThemeType['__type']) => {
   if (theme === primaryTheme.__type) return primaryTheme;
   if (theme === secondaryTheme.__type) return secondaryTheme;
 
