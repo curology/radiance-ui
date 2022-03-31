@@ -1,15 +1,11 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { CameraIcon } from '../../../../icons';
 
 import { RoundButton } from './index';
 
 describe('<RoundButton />', () => {
-  /**
-   * TODO: Fix Emotion 11 CI snapshot serializer order issue
-   */
-  // eslint-disable-next-line jest/no-disabled-tests
   describe('UI snapshots', () => {
     it('renders with props', () => {
       const { container } = render(
@@ -23,39 +19,39 @@ describe('<RoundButton />', () => {
   });
 
   describe('onClick callback', () => {
-    it('should be invoked onClick', () => {
+    it('should be invoked onClick', async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <RoundButton onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>,
       );
 
-      userEvent.click(getByRole('button'));
+      await user.click(getByRole('button'));
       expect(spy).toHaveBeenCalled();
     });
 
-    it('should not be invoked if disabled', () => {
+    it('should not be invoked if disabled', async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <RoundButton disabled onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>,
       );
 
-      userEvent.click(getByRole('button'));
+      await user.click(getByRole('button'));
       expect(spy).not.toHaveBeenCalled();
     });
 
-    it('should not be invoked if loading', () => {
+    it('should not be invoked if loading', async () => {
       const spy = jest.fn();
-      const { getByRole } = render(
+      const { getByRole, user } = render(
         <RoundButton isLoading onClick={spy} icon={<CameraIcon />}>
           Button Text
         </RoundButton>,
       );
 
-      userEvent.click(getByRole('button'));
+      await user.click(getByRole('button'));
       expect(spy).not.toHaveBeenCalled();
     });
   });
