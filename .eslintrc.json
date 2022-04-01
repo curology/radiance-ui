@@ -10,6 +10,7 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/all",
     "plugin:sonarjs/recommended",
+    "plugin:storybook/recommended",
     "curology"
   ],
   "plugins": ["@emotion"],
@@ -157,7 +158,9 @@
         "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
         "allowSeparatedGroups": true
       }
-    ]
+    ],
+    "storybook/default-exports": "off",
+    "storybook/story-exports": "off"
   },
   "overrides": [
     {
