@@ -6366,10 +6366,10 @@ eslint-plugin-babel@^5.3.1:
   dependencies:
     eslint-rule-composer "^0.3.0"
 
-eslint-plugin-curology@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-curology/-/eslint-plugin-curology-1.0.1.tgz#c31b4567c51cd5989de8ee7e8ec73ffad1caf348"
-  integrity sha512-TJ1s4kxUvO47+NgePRJb4Vnz5AwC8V7FKyBnlhdqkZ78MRvncWoGTqzohMwirm0/yVZXSnd82+E+7C4UE488BQ==
+eslint-plugin-curology@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-curology/-/eslint-plugin-curology-1.0.2.tgz#a1b93dabfea2d5701f8cae7749bc59195cba1e2d"
+  integrity sha512-k/f2ZND5d5Ja6fU1bmsAnFANwzKnBKiaI24DsmFoMh2tBCY90LdxipS2a5aQ8iS0hcdKXYfCgGG+X8hYIah63Q==
 
 eslint-plugin-cypress@^2.12.1:
   version "2.12.1"
