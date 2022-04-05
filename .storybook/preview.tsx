@@ -1,7 +1,7 @@
 import React from 'react';
-import { addParameters } from '@storybook/react';
+import { addParameters, Story } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-import addons, { StoryContext, StoryGetter } from '@storybook/addons';
+import addons, { StoryContext } from '@storybook/addons';
 import { ThemeProvider } from '@emotion/react';
 import Theme from './theme';
 import { primaryTheme, secondaryTheme } from '../src/constants/themes';
@@ -76,7 +76,7 @@ const getTheme = (theme: ThemeType['__type']) => {
   throw new Error('No Theme Found');
 };
 
-const withThemeProvider = (Story: StoryGetter, context: StoryContext) => {
+const withThemeProvider = (Story: Story, context: StoryContext) => {
   const getStoryTheme = (): ThemeType => {
     const {
       parameters: { theme },
