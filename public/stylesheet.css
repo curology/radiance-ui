@@ -1,0 +1,40 @@
+/* Includes just woff2 for Chromatic testing */
+
+@font-face {
+  font-family: 'nocturno';
+  src: url('/fonts/WF-029669-009918-001560-fa6dd062b0c32d6d9a297bd175bb0381.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'larssiet';
+  src: url('/fonts/34535B_1_0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'larssiet';
+  font-weight: bold;
+  src: url('/fonts/34535B_0_0.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quadrant-text';
+  src: url('/fonts/QuadrantText-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quadrant-text';
+  font-style: italic;
+  src: url('/fonts/QuadrantText-RegularItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quadrant-text-mono';
+  src: url('/fonts/QuadrantTextMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'quadrant-text-mono';
+  font-style: italic;
+  src: url('/fonts/QuadrantTextMono-RegularItalic.woff2') format('woff2');
+}
