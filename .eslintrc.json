@@ -11,7 +11,7 @@
     "plugin:jest/all",
     "plugin:sonarjs/recommended",
     "plugin:storybook/recommended",
-    "curology"
+    "plugin:curology/recommended"
   ],
   "plugins": ["@emotion"],
   "globals": {
