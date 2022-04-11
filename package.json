@@ -78,7 +78,7 @@
   },
   "homepage": "https://github.com/PocketDerm/radiance-ui#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.8",
+    "@babel/core": "^7.17.9",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
     "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
@@ -132,7 +132,7 @@
     "babel-loader": "^8.1.0",
     "browserslist-ga-export": "^4.0.1",
     "bundlewatch": "^0.3.1",
-    "chromatic": "^6.0.4",
+    "chromatic": "^6.5.4",
     "circular-dependency-plugin": "^5.0.2",
     "create-index": "https://github.com/curology/create-index.git#2020-updates",
     "eslint": "^8.10.0",
@@ -167,7 +167,7 @@
     "yarn-run-all": "^3.1.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.17.8",
+    "@babel/runtime": "^7.17.9",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "@react-aria/focus": "^3.0.2",
