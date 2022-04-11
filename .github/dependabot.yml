@@ -36,6 +36,8 @@ updates:
       - dependency-name: '@storybook/react'
       - dependency-name: '@storybook/source-loader'
       - dependency-name: '@storybook/theming'
+      - dependency-name: '@storybook/builder-webpack5'
+      - dependency-name: '@storybook/manager-webpack5'
       # Should be bumped in concert with @typescript-eslint/parser
       - dependency-name: '@typescript-eslint/eslint-plugin'
       # TODO: Keep an eye on webpack4 vs. 5 for Storybook
