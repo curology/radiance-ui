@@ -59,31 +59,26 @@ const config = {
       );
     }
 
-    /**
-     * Until Storybook migrates its own internal @emotion usage from
-     * v10 to v11, this allows us to maintain compatibility
-     */
-    const emotion11CompatibleConfig = {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          '@emotion/core': toPath('node_modules/@emotion/react'),
-          '@emotion/styled': toPath('node_modules/@emotion/styled'),
-          'emotion-theming': toPath('node_modules/@emotion/react'),
-        },
-      },
-    };
-
-    // Return the altered config
-    return emotion11CompatibleConfig;
+    return config;
   },
   reactOptions: {
     fastRefresh: true,
-    // TODO: Does not play well with emotion theming
-    // strictMode: true,
+    /**
+     * `strictMode: true` results in the app breaking from violating the rules of hooks,
+     * likely due to underlying @emotion usage by Storybook internals
+     */
+    strictMode: false,
   },
+  staticDirs: ['../public'],
+  core: {
+    builder: 'webpack5',
+  },
+  features: {
+    babelModeV7: true,
+    emotionAlias: false,
+    storyStoreV7: false,
+  },
+  framework: '@storybook/react',
 };
 
 module.exports = config;

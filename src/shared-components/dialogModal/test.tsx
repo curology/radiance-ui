@@ -9,32 +9,28 @@ const bodyString = 'Dialog Modal Children Content';
 const modalBody = <DialogModal.Paragraph>{bodyString}</DialogModal.Paragraph>;
 
 describe('<DialogModal />', () => {
-  /**
-   * TODO: Fix Emotion 11 CI snapshot serializer order issue
-   */
-  // eslint-disable-next-line jest/no-disabled-tests
   describe('UI snapshots', () => {
-    it('renders dialog modal with custom color', async () => {
-      const { container, findByText } = render(
+    it('renders dialog modal with custom color', () => {
+      const { container, getByText } = render(
         <DialogModal backgroundColor={primaryTheme.COLORS.background}>
           <div>{modalBody}</div>
         </DialogModal>,
         { withPortalContainer: true },
       );
 
-      await findByText(bodyString);
+      getByText(bodyString);
 
       expect(container).toMatchSnapshot();
     });
   });
 
-  it('render children content correctly', async () => {
-    const { getAllByText, findByText } = render(
+  it('render children content correctly', () => {
+    const { getAllByText, getByText } = render(
       <DialogModal title={modalTitle}>{modalBody}</DialogModal>,
       { withPortalContainer: true },
     );
 
-    const body = await findByText(bodyString);
+    const body = getByText(bodyString);
 
     expect(getAllByText(modalTitle).length).toBeGreaterThan(0);
     expect(body).toBeInTheDocument();
