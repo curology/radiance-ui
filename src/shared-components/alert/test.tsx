@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { act, render } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
 
 import { Alert } from './index';
@@ -50,19 +50,20 @@ describe('Alert UI snapshots', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  it('alert onExit is triggered on click', () => {
+  it('alert onExit is triggered on click', async () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const { container } = render(
+    const { container, user } = render(
       <Alert
         content={<CustomContentComponent />}
         onExit={spy}
         duration="sticky"
       />,
+      { userEventOptions: { delay: null } },
     );
 
     assert(container.firstElementChild);
-    userEvent.click(container.firstElementChild);
+    await user.click(container.firstElementChild);
 
     act(() => {
       jest.runAllTimers();
@@ -71,20 +72,21 @@ describe('Alert UI snapshots', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('alert with custom CTA', () => {
+  it('alert with custom CTA', async () => {
     jest.useFakeTimers();
     const spy = jest.fn();
-    const { container } = render(
+    const { container, user } = render(
       <Alert
         content={<CustomContentComponent />}
         type="error"
         ctaContent="Update Payment Method"
         onExit={spy}
       />,
+      { userEventOptions: { delay: null } },
     );
 
     assert(container.firstElementChild);
-    userEvent.click(container.firstElementChild);
+    await user.click(container.firstElementChild);
 
     act(() => {
       jest.runAllTimers();

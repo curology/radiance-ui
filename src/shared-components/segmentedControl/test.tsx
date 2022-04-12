@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { SegmentedControl } from './index';
 
@@ -20,16 +20,16 @@ describe('<SegmentedControl />', () => {
     expect(container.firstElementChild).toMatchSnapshot();
   });
 
-  it('calls onClick when button is clicked', () => {
+  it('calls onClick when button is clicked', async () => {
     const spy = jest.fn();
 
-    const { getByRole } = render(
+    const { getByRole, user } = render(
       <SegmentedControl {...testSegmentedControl} onClick={spy} />,
     );
 
     const button = getByRole('button', { name: 'Tab 3' });
 
-    userEvent.click(button);
+    await user.click(button);
     expect(spy).toHaveBeenCalled();
   });
 });
