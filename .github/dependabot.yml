@@ -40,9 +40,3 @@ updates:
       - dependency-name: '@storybook/manager-webpack5'
       # Should be bumped in concert with @typescript-eslint/parser
       - dependency-name: '@typescript-eslint/eslint-plugin'
-      # TODO: Keep an eye on webpack4 vs. 5 for Storybook
-      # https://storybook.js.org/blog/storybook-for-webpack-5/
-      - dependency-name: webpack
-        versions:
-          - '>= 5.a'
-          - '< 6'
