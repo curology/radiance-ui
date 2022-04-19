@@ -57,9 +57,15 @@ export const Accordion: Accordion = ({
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const refStyles =
+      contentRef.current && window.getComputedStyle(contentRef.current);
+    const marginTopBottom = refStyles
+      ? parseFloat(refStyles.marginTop) + parseFloat(refStyles.marginBottom)
+      : 0;
+
     const nextHeight =
       isOpen && contentRef.current
-        ? `${contentRef.current.clientHeight}px`
+        ? `${contentRef.current.offsetHeight + marginTopBottom}px`
         : '0px';
 
     if (contentHeight !== nextHeight) {
