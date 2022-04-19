@@ -3154,9 +3154,9 @@
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
 "@types/lodash.round@^4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.round/-/lodash.round-4.0.6.tgz#dddd13d478baffaef66b5b65b88978140253fad3"
-  integrity sha512-4/fs+g0BRnsJZMg0Nl5zHbx4rvo2J6KeDBPsgNvDZ1WKl4/wPOn3yiA7VURP+W0ZgUUQHEpEuLCFRfdW/h5ONg==
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@types/lodash.round/-/lodash.round-4.0.7.tgz#a296263a8778b8edf2314166bae88a7b300e21d5"
+  integrity sha512-lgRgfO+XY9FPR52+f2d8LTdTXxEgfcCRr8sii6jS506LjcBh1xaA/Waf1gvGLgp8P4CnmMZIoXtvBc5PUraHBg==
   dependencies:
     "@types/lodash" "*"
 
