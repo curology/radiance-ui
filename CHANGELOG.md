@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v26.3.0
+
+- [Icons] Add CleanserMoisturizerDuoGlyph([#1518](https://github.com/curology/radiance-ui/pull/1518))
+
 # v26.2.0
 
 - [Dependencies] Set new `peerDependency` requirements for `@emotion/react` and `@emotion/styled` for minor version updates ([#1480](https://github.com/curology/radiance-ui/pull/1480))
