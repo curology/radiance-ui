@@ -21,6 +21,7 @@ export { default as ChestGlyph } from './ChestGlyph';
 export { default as CleanseGlyph } from './CleanseGlyph';
 export { default as CleanserGlyphSecondary } from './CleanserGlyphSecondary';
 export { default as CleanserGlyph } from './CleanserGlyph';
+export { default as CleanserMoisturizerDuoGlyph } from './CleanserMoisturizerDuoGlyph';
 export { default as ClindamycinGlyph } from './ClindamycinGlyph';
 export { default as ClockAlwaysGlyphSecondary } from './ClockAlwaysGlyphSecondary';
 export { default as ClockAlwaysGlyph } from './ClockAlwaysGlyph';
