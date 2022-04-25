@@ -13,6 +13,9 @@ module.exports = {
       statements: 74,
     },
   },
+  fakeTimers: {
+    enableGlobally: false,
+  },
   moduleNameMapper: {
     'src/(.*)': '<rootDir>/src/$1',
     '\\.svg': '<rootDir>/tests/__mocks__/svgrMock.ts',
@@ -21,5 +24,4 @@ module.exports = {
   snapshotSerializers: ['@emotion/jest/serializer'],
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules/', '/__snapshots__', '/dist*'],
-  timers: 'real',
 };
