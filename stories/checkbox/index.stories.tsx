@@ -81,19 +81,19 @@ export const Disabled = () => (
 export const Icon = () => (
   <React.Fragment>
     <Checkbox type="primary" checked size="small" icon={<AcneGlyph />}>
-      This is a primary (small) checkbox
+      This is a primary (small) checkbox with an icon prop.
     </Checkbox>
     <Checkbox type="primary" checked={false} size="small" icon={<AcneGlyph />}>
-      This is an unchecked primary (small) checkbox
+      This is an unchecked primary (small) checkbox with an icon prop.
     </Checkbox>
     <Checkbox type="primary" checked size="large" icon={<AcneGlyph />}>
-      This is a primary (large) checkbox
+      This is a primary (large) checkbox with an icon prop.
     </Checkbox>
     <Checkbox type="primary" checked={false} size="large" icon={<AcneGlyph />}>
-      This is an unchecked primary (large) checkbox
+      This is an unchecked primary (large) checkbox with an icon prop.
     </Checkbox>
     <Checkbox type="secondary" checked size="small" icon={<AcneGlyph />}>
-      This is a secondary (small) checkbox
+      This is a secondary (small) checkbox with an icon prop.
     </Checkbox>
     <Checkbox
       type="secondary"
@@ -101,10 +101,10 @@ export const Icon = () => (
       size="small"
       icon={<AcneGlyph />}
     >
-      This is an unchecked secondary (small) checkbox
+      This is an unchecked secondary (small) checkbox with an icon prop.
     </Checkbox>
     <Checkbox type="secondary" checked size="large" icon={<AcneGlyph />}>
-      This is a secondary (large) checkbox
+      This is a secondary (large) checkbox with an icon prop.
     </Checkbox>
     <Checkbox
       type="secondary"
@@ -112,7 +112,7 @@ export const Icon = () => (
       size="large"
       icon={<AcneGlyph />}
     >
-      This is an unchecked secondary (large) checkbox
+      This is an unchecked secondary (large) checkbox with an icon prop.
     </Checkbox>
   </React.Fragment>
 );
