@@ -23,6 +23,12 @@ export const Primary = () => (
     <Checkbox type="primary" checked={false}>
       This is an unchecked primary checkbox
     </Checkbox>
+    <Checkbox type="primary" checked size="large">
+      This is a large primary checkbox
+    </Checkbox>
+    <Checkbox type="primary" checked={false} size="large">
+      This is an unchecked large primary checkbox
+    </Checkbox>
   </React.Fragment>
 );
 
@@ -34,16 +40,79 @@ export const Secondary = () => (
     <Checkbox type="secondary" checked={false}>
       This is an unchecked secondary checkbox
     </Checkbox>
+    <Checkbox type="secondary" checked size="large">
+      This is a large secondary checkbox
+    </Checkbox>
+    <Checkbox type="secondary" checked={false} size="large">
+      This is an unchecked large secondary checkbox
+    </Checkbox>
   </React.Fragment>
 );
 
 export const Disabled = () => (
   <React.Fragment>
     <Checkbox disabled checked>
-      This is a secondary checkbox
+      This is a disabled checkbox
     </Checkbox>
     <Checkbox disabled checked={false}>
-      This is an unchecked secondary checkbox
+      This is an unchecked disabled checkbox
+    </Checkbox>
+    <Checkbox disabled checked size="large">
+      This is a large disabled checkbox
+    </Checkbox>
+    <Checkbox disabled checked={false} size="large">
+      This is an unchecked large disabled checkbox
+    </Checkbox>
+    <Checkbox type="secondary" disabled checked>
+      This is a secondary disabled checkbox
+    </Checkbox>
+    <Checkbox type="secondary" disabled checked={false}>
+      This is an unchecked secondary disabled checkbox
+    </Checkbox>
+    <Checkbox type="secondary" disabled checked size="large">
+      This is a large secondary disabled checkbox
+    </Checkbox>
+    <Checkbox type="secondary" disabled checked={false} size="large">
+      This is an unchecked large secondary disabled checkbox
+    </Checkbox>
+  </React.Fragment>
+);
+
+export const Icon = () => (
+  <React.Fragment>
+    <Checkbox type="primary" checked size="small" icon={<AcneGlyph />}>
+      This is a primary (small) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox type="primary" checked={false} size="small" icon={<AcneGlyph />}>
+      This is an unchecked primary (small) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox type="primary" checked size="large" icon={<AcneGlyph />}>
+      This is a primary (large) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox type="primary" checked={false} size="large" icon={<AcneGlyph />}>
+      This is an unchecked primary (large) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox type="secondary" checked size="small" icon={<AcneGlyph />}>
+      This is a secondary (small) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox
+      type="secondary"
+      checked={false}
+      size="small"
+      icon={<AcneGlyph />}
+    >
+      This is an unchecked secondary (small) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox type="secondary" checked size="large" icon={<AcneGlyph />}>
+      This is a secondary (large) checkbox with an icon prop.
+    </Checkbox>
+    <Checkbox
+      type="secondary"
+      checked={false}
+      size="large"
+      icon={<AcneGlyph />}
+    >
+      This is an unchecked secondary (large) checkbox with an icon prop.
     </Checkbox>
   </React.Fragment>
 );

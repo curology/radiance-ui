@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 import { assert } from 'src/utils/assert';
 
 import { LinkButton } from './index';
@@ -31,28 +31,30 @@ describe('<LinkButton/>', () => {
   });
 
   describe('onClick callback', () => {
-    it('should be invoked onClick', () => {
+    it('should be invoked onClick', async () => {
       const spy = jest.fn();
 
-      const { container } = render(<LinkButton onClick={spy}>text</LinkButton>);
+      const { container, user } = render(
+        <LinkButton onClick={spy}>text</LinkButton>,
+      );
 
       assert(container.firstElementChild);
-      userEvent.click(container.firstElementChild);
+      await user.click(container.firstElementChild);
 
       expect(spy).toHaveBeenCalled();
     });
 
-    it('should not be invoked if disabled', () => {
+    it('should not be invoked if disabled', async () => {
       const spy = jest.fn();
 
-      const { container } = render(
+      const { container, user } = render(
         <LinkButton disabled href="#" onClick={spy}>
           text
         </LinkButton>,
       );
 
       assert(container.firstElementChild);
-      userEvent.click(container.firstElementChild);
+      await user.click(container.firstElementChild);
 
       expect(spy).not.toHaveBeenCalled();
     });

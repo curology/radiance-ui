@@ -17,6 +17,7 @@ export { default as CheckBadgeGlyph } from './checkBadgeGlyph';
 export { default as ChestGlyph } from './chestGlyph';
 export { default as CleanseGlyph } from './cleanseGlyph';
 export { default as CleanserGlyph } from './cleanserGlyph';
+export { default as CleanserMoisturizerDuoGlyph } from './cleanserMoisturizerDuoGlyph';
 export { default as ClindamycinGlyph } from './clindamycinGlyph';
 export { default as ClockAlwaysGlyph } from './clockAlwaysGlyph';
 export { default as ClockMostOfTheTimeGlyph } from './clockMostOfTheTimeGlyph';

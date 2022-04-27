@@ -7,10 +7,6 @@ updates:
       time: '07:00'
       timezone: America/Los_Angeles
     open-pull-requests-limit: 30
-    reviewers:
-      - michaeljaltamirano
-    assignees:
-      - michaeljaltamirano
     ignore:
       # All Babel deps should be bumped together
       - dependency-name: '@babel/plugin-proposal-class-properties'
@@ -24,6 +20,8 @@ updates:
       - dependency-name: '@babel/preset-react'
       - dependency-name: '@babel/preset-typescript'
       - dependency-name: '@babel/register'
+      # SHould be bumped in concert with jest
+      - dependency-name: 'jest-environment-jsdom'
       # Storybook should be updated like so: "npx sb@latest upgrade"
       # https://storybook.js.org/blog/storybook-6-4/
       - dependency-name: '@storybook/addon-a11y'
@@ -33,9 +31,15 @@ updates:
       - dependency-name: '@storybook/addon-knobs'
       - dependency-name: '@storybook/addon-links'
       - dependency-name: '@storybook/addon-storysource'
+      - dependency-name: '@storybook/addons'
+      - dependency-name: '@storybook/api'
+      - dependency-name: '@storybook/components'
+      - dependency-name: '@storybook/core-events'
       - dependency-name: '@storybook/react'
       - dependency-name: '@storybook/source-loader'
       - dependency-name: '@storybook/theming'
+      - dependency-name: '@storybook/builder-webpack5'
+      - dependency-name: '@storybook/manager-webpack5'
       # Should be bumped in concert with @typescript-eslint/parser
       - dependency-name: '@typescript-eslint/eslint-plugin'
       # TODO: Keep an eye on webpack4 vs. 5 for Storybook

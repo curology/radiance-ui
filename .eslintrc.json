@@ -11,7 +11,8 @@
     "plugin:jest/all",
     "plugin:sonarjs/recommended",
     "plugin:react-hooks/recommended",
-    "curology"
+    "plugin:storybook/recommended",
+    "plugin:curology/recommended"
   ],
   "plugins": ["@emotion"],
   "globals": {
@@ -159,7 +160,9 @@
         "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
         "allowSeparatedGroups": true
       }
-    ]
+    ],
+    "storybook/default-exports": "off",
+    "storybook/story-exports": "off"
   },
   "overrides": [
     {

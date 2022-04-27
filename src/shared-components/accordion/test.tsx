@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, userEvent } from 'src/tests/testingLibraryHelpers';
+import { render } from 'src/tests/testingLibraryHelpers';
 
 import { Accordion } from './index';
 
@@ -11,10 +11,6 @@ const testAccordionProps = {
 };
 
 describe('<Accordion />', () => {
-  /**
-   * TODO: Fix Emotion 11 CI snapshot serializer order issue
-   */
-  // eslint-disable-next-line jest/no-disabled-tests
   describe('UI snapshots', () => {
     it('renders regular accordion', () => {
       const { container } = render(<Accordion {...testAccordionProps} />);
@@ -39,14 +35,14 @@ describe('<Accordion />', () => {
     });
   });
 
-  it('invokes onClick when title is clicked', () => {
+  it('invokes onClick when title is clicked', async () => {
     const spy = jest.fn();
 
-    const { getByRole } = render(
+    const { getByRole, user } = render(
       <Accordion {...testAccordionProps} onClick={spy} />,
     );
 
-    userEvent.click(getByRole('button'));
+    await user.click(getByRole('button'));
 
     expect(spy).toHaveBeenCalled();
   });

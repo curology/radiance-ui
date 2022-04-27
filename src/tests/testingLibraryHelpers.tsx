@@ -1,12 +1,20 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import * as ReactTestingLibrary from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { primaryTheme, REACT_PORTAL_SECTION_ID, ThemeType } from '../constants';
 
+type UserEventSetup = typeof userEvent.setup;
+
 interface RenderOptions extends ReactTestingLibrary.RenderOptions {
   theme?: ThemeType;
+  userEventOptions?: Parameters<UserEventSetup>[number];
   withPortalContainer?: boolean;
+}
+
+interface RenderReturn extends ReactTestingLibrary.RenderResult {
+  user: ReturnType<UserEventSetup>;
 }
 
 /**
@@ -30,24 +38,27 @@ const addPortalContainer = () => {
 const customRender = (
   Component: React.ReactElement,
   options: RenderOptions = {},
-): ReactTestingLibrary.RenderResult => {
+): RenderReturn => {
   const {
     theme = primaryTheme,
     container,
     withPortalContainer = false,
+    userEventOptions,
     ...rest
   } = options;
 
-  return ReactTestingLibrary.render(Component, {
-    container: withPortalContainer ? addPortalContainer() : container,
-    wrapper: ({ children }) => (
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    ),
-    ...rest,
-  });
+  return {
+    ...ReactTestingLibrary.render(Component, {
+      container: withPortalContainer ? addPortalContainer() : container,
+      wrapper: ({ children }) => (
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      ),
+      ...rest,
+    }),
+    user: userEvent.setup(userEventOptions),
+  };
 };
 
 export * from '@testing-library/react';
-export { default as userEvent } from '@testing-library/user-event';
 
 export { customRender as render };

@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v26.3.0
+
+- [Icons] Add CleanserMoisturizerDuoGlyph([#1518](https://github.com/curology/radiance-ui/pull/1518))
+
+# v26.2.0
+
+- [Dependencies] Set new `peerDependency` requirements for `@emotion/react` and `@emotion/styled` for minor version updates ([#1480](https://github.com/curology/radiance-ui/pull/1480))
+
 # v26.1.0
 
 - [Components] Add `onDropdownContainerFocus` prop to the `Dropdown` component ([#1374](https://github.com/curology/radiance-ui/pull/1374))
