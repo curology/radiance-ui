@@ -8,7 +8,7 @@ updates:
       timezone: America/Los_Angeles
     open-pull-requests-limit: 30
     ignore:
-      # All Babel deps should be bumped together
+      # All Babel deps should be bumped together: `yarn add @babel/core @babel/runtime @babel/plugin-proposal-class-properties @babel/plugin-proposal-export-default-from @babel/plugin-proposal-export-namespace-from @babel/plugin-proposal-private-methods @babel/plugin-proposal-private-property-in-object @babel/plugin-transform-parameters @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/register`
       - dependency-name: '@babel/plugin-proposal-class-properties'
       - dependency-name: '@babel/plugin-proposal-export-default-from'
       - dependency-name: '@babel/plugin-proposal-export-namespace-from'
@@ -20,7 +20,7 @@ updates:
       - dependency-name: '@babel/preset-react'
       - dependency-name: '@babel/preset-typescript'
       - dependency-name: '@babel/register'
-      # SHould be bumped in concert with jest
+      # SHould be bumped in concert with jest: `yarn add jest jest-environment-jsdom`
       - dependency-name: 'jest-environment-jsdom'
       # Storybook should be updated like so: "npx sb@latest upgrade"
       # https://storybook.js.org/blog/storybook-6-4/
@@ -40,11 +40,5 @@ updates:
       - dependency-name: '@storybook/theming'
       - dependency-name: '@storybook/builder-webpack5'
       - dependency-name: '@storybook/manager-webpack5'
-      # Should be bumped in concert with @typescript-eslint/parser
+      # Should be bumped in concert with @typescript-eslint/parser: `yarn add @typescript-eslint/eslint-plugin@latest  @typescript-eslint/parser@latest`
       - dependency-name: '@typescript-eslint/eslint-plugin'
-      # TODO: Keep an eye on webpack4 vs. 5 for Storybook
-      # https://storybook.js.org/blog/storybook-for-webpack-5/
-      - dependency-name: webpack
-        versions:
-          - '>= 5.a'
-          - '< 6'
