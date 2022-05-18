@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v26.4.0
+- [Themes] Add Tertiary Theme for MPO Views ([#1565](https://github.com/curology/radiance-ui/pull/1565))
+
 # v26.3.0
 
 - [Icons] Add CleanserMoisturizerDuoGlyph([#1518](https://github.com/curology/radiance-ui/pull/1518))
