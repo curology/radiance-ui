@@ -11720,9 +11720,9 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     inherits "^2.0.1"
 
 rollup@^2.26.11:
-  version "2.71.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.71.1.tgz#82b259af7733dfd1224a8171013aaaad02971a22"
-  integrity sha512-lMZk3XfUBGjrrZQpvPSoXcZSfKcJ2Bgn+Z0L1MoW2V8Wh7BVM+LOBJTPo16yul2MwL59cXedzW1ruq3rCjSRgw==
+  version "2.74.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.74.0.tgz#4f460e7979b8ed1f3aa0489059480a504de28b4a"
+  integrity sha512-RRwXTX5+ObPJhcMV6zP3RdHvy90/lBOUfbzL7IKkFjMJGAqeBGZiv9nZWm/DoTESaTE3GBkkzbU9QVN2AuCkjw==
   optionalDependencies:
     fsevents "~2.3.2"
 
