@@ -59,7 +59,7 @@ export const useIcon = (
 ) => {
   const theme = useTheme();
 
-  const ThemeIcon = theme.__type === 'primary' ? PrimaryIcon : SecondaryIcon;
+  const ThemeIcon = (theme.__type === 'primary' || theme.__type === 'tertiary') ? PrimaryIcon : SecondaryIcon;
 
   if (ThemeIcon === null) return null;
 
