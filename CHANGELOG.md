@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v26.4.1
+- [Themes] Add Tertiary Theme type conditions to icon and functional style rendering ([#1578](https://github.com/curology/radiance-ui/pull/1578))
+
 # v26.4.0
 - [Themes] Add Tertiary Theme for MPO Views ([#1565](https://github.com/curology/radiance-ui/pull/1565))
 
