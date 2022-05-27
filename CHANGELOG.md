@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v26.4.2
+- [TypeScript] Add onClick SyntheticEvent argument to AnchorLinkButtonProps interface ([1584](https://github.com/curology/radiance-ui/pull/1584))
+
 # v26.4.1
 - [Themes] Add Tertiary Theme type conditions to icon and functional style rendering ([#1578](https://github.com/curology/radiance-ui/pull/1578))
 

@@ -12,7 +12,7 @@ export interface AnchorLinkButtonProps
    * Text to be displayed
    */
   children: string;
-  onClick: () => void;
+  onClick: (event: React.SyntheticEvent<HTMLButtonElement>) => void;
 }
 
 type ButtonRefType =
