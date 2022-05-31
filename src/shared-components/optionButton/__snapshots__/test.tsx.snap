@@ -107,6 +107,7 @@ exports[`<OptionButton /> UI snapshots checkbox selected, without custom icon 1`
 }
 
 <button
+  aria-checked="true"
   class="emotion-0 emotion-1"
   role="checkbox"
   type="button"
