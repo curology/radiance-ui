@@ -100,6 +100,7 @@ export const OptionButton: OptionButton = ({
     onClick={onClick}
     type="button"
     role={optionType}
+    aria-checked={selected}
     containerType="clickable"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
