@@ -79,6 +79,9 @@ export const Field: Field = ({
       />
     );
 
+  const { id } = inputChild.props as Record<'id', string | undefined>;
+  const isInvalid = showMessages && messagesType === 'error';
+
   return (
     <Style.FieldContainer>
       {!!label && (
@@ -95,11 +98,16 @@ export const Field: Field = ({
 
         {React.cloneElement(inputChild, {
           disabled,
+          'aria-invalid': isInvalid || undefined,
         })}
 
         {!!hintMessage && <Style.HintItem>{hintMessage}</Style.HintItem>}
 
-        <VerificationMessages messages={messages} type={messagesType} />
+        <VerificationMessages
+          messages={messages}
+          type={messagesType}
+          inputId={id}
+        />
       </Style.InputContainer>
     </Style.FieldContainer>
   );
