@@ -26,44 +26,60 @@ exports[`<VerificationMessages /> UI snapshot renders with default props and som
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
-    <strong>
-      Uh oh!
-    </strong>
-     This field is required
+    <output
+      role="alert"
+    >
+      <strong>
+        Uh oh!
+      </strong>
+       This field is required
+    </output>
   </li>
   <li
     class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
-    <strong>
-      Uh oh!
-    </strong>
-     Must be at least 3 characters
+    <output
+      role="alert"
+    >
+      <strong>
+        Uh oh!
+      </strong>
+       Must be at least 3 characters
+    </output>
   </li>
   <li
     class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
-    Must contain 1 number
-    , 
-    Must contain 1 symbol
+    <output
+      role="alert"
+    >
+      Must contain 1 number
+      , 
+      Must contain 1 symbol
+    </output>
   </li>
   <li
     class="emotion-2 emotion-3"
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="error"
   >
-    <strong>
-      1
-    </strong>
-     one
-    , 
-    <strong>
-      2
-    </strong>
-     two
+    <output
+      role="alert"
+    >
+      <strong>
+        1
+      </strong>
+       one
+      , 
+      <strong>
+        2
+      </strong>
+       two
+    </output>
   </li>
 </ul>
 `;
@@ -95,10 +111,14 @@ exports[`<VerificationMessages /> UI snapshot renders with non-default props 1`]
     style="opacity: 1; max-height: 48px; transition-duration: 350ms; transition-property: max-height, opacity; transition-timing-function: ease-in-out;"
     type="success"
   >
-    <strong>
-      Congrats!
-    </strong>
-     Your app was approved
+    <output
+      role="alert"
+    >
+      <strong>
+        Congrats!
+      </strong>
+       Your app was approved
+    </output>
   </li>
 </ul>
 `;
