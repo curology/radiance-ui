@@ -1,15 +1,23 @@
 # CHANGELOG
 
+# v26.4.4
+
+- [Accessibility] Add screen reader indicator for invalid input ([1621](https://github.com/curology/radiance-ui/pull/1621))
+
 # v26.4.3
+
 - [Accessibility] Add aria-checked to OptionButton ([1593](https://github.com/curology/radiance-ui/pull/1593))
 
 # v26.4.2
+
 - [TypeScript] Add onClick SyntheticEvent argument to AnchorLinkButtonProps interface ([1584](https://github.com/curology/radiance-ui/pull/1584))
 
 # v26.4.1
+
 - [Themes] Add Tertiary Theme type conditions to icon and functional style rendering ([#1578](https://github.com/curology/radiance-ui/pull/1578))
 
 # v26.4.0
+
 - [Themes] Add Tertiary Theme for MPO Views ([#1565](https://github.com/curology/radiance-ui/pull/1565))
 
 # v26.3.0
