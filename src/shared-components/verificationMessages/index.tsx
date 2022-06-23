@@ -14,6 +14,7 @@ export interface VerificationMessagesProps {
    * Centers the messages
    */
   centered?: boolean;
+  inputId?: string;
   /**
    * Object of key and React Node message pair. It also accepts an array of React Node as value
    */
@@ -32,6 +33,7 @@ export interface VerificationMessagesProps {
  */
 export const VerificationMessages: React.FC<VerificationMessagesProps> = ({
   centered = false,
+  inputId,
   messages = {},
   type = 'error',
 }) => {
@@ -54,7 +56,9 @@ export const VerificationMessages: React.FC<VerificationMessagesProps> = ({
           .map((key) => (
             <HelperTransition key={key}>
               <Style.MessageItem type={type}>
-                {formatMessage(messages[key])}
+                <output htmlFor={inputId} role="alert">
+                  {formatMessage(messages[key])}
+                </output>
               </Style.MessageItem>
             </HelperTransition>
           ))
