@@ -1253,9 +1253,9 @@
     "@emotion/memoize" "^0.7.4"
 
 "@emotion/jest@^11.9.1":
-  version "11.9.1"
-  resolved "https://registry.yarnpkg.com/@emotion/jest/-/jest-11.9.1.tgz#65224814552eab6acb923504e597c6f6b67e90d6"
-  integrity sha512-JFf9yBA6a7fKrKCWMmjODGRcgBnjiQsl9AakP1y7oRJ6B147ZKPo8DgzHUZ5qQkI06GKAWwYU1vKROInc7SYVA==
+  version "11.9.4"
+  resolved "https://registry.yarnpkg.com/@emotion/jest/-/jest-11.9.4.tgz#7ffb693f05baee5649a167fcb149d85bb655d3c2"
+  integrity sha512-dbV8gAOHyRTsPeARs4hEruHZ1eSgfOsYnShPRM2c+QoUxtKWrFN7toNDq9uwFrTV2lSul5G1HtgxAIQcWKyM/g==
   dependencies:
     "@babel/runtime" "^7.13.10"
     "@emotion/css-prettifier" "^1.0.1"
