@@ -2,7 +2,7 @@ import isObject from '../isObject';
 
 // eslint-disable-next-line @typescript-eslint/consistent-indexed-object-style
 interface RecursiveObjectType {
-  [key: string]: string | number | this | null;
+  [key: string]: string | number | JSX.Element | this | null;
 }
 
 const stringifyObjects = (

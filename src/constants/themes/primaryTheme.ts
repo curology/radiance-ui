@@ -3,6 +3,7 @@ import PRIMARY_BORDER_RADIUS from '../borderRadius/primary';
 import PRIMARY_BOX_SHADOWS from '../boxShadows/primary';
 import PRIMARY_FONTS from '../fonts/primary';
 import { PRIMARY_TYPOGRAPHY } from '../typography/primary';
+import { LogoPrimary } from '../../icons/logos/svgs';
 
 export const primaryTheme = {
   __type: 'primary',
@@ -11,4 +12,5 @@ export const primaryTheme = {
   COLORS: PRIMARY_COLORS,
   FONTS: PRIMARY_FONTS,
   TYPOGRAPHY: PRIMARY_TYPOGRAPHY,
+  LOGO: LogoPrimary({}),
 } as const;
