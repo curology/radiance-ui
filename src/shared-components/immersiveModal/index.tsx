@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import throttle from 'lodash.throttle';
 import { FocusScope, useFocusManager } from '@react-aria/focus';
+import { useDialog } from '@react-aria/dialog';
 
 import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { OffClickWrapper } from '../offClickWrapper';
@@ -73,7 +74,14 @@ const ImmersiveModalContent = ({
   handleCloseIntent,
   children,
 }: ImmersiveModalContentProps) => {
+  const ref = React.useRef(null);
   const focusManager = useFocusManager();
+  /**
+   * Exposes ARIA dialog role to assistive technology, i.e., announces to users with
+   * screen readers that they are in a dialog component, thereby making apparent
+   * additional accessibility functionality (e.g., exiting dialog with "Esc" key)
+   */
+  const { dialogProps, titleProps } = useDialog({ role: 'dialog' }, ref);
 
   /**
    * It is not typical modal behavior to be able to scroll. Consequently, our
@@ -101,10 +109,15 @@ const ImmersiveModalContent = ({
     <Style.MainModalContentContainer
       id={MODAL_DESKTOP_SCROLLING_ID}
       hasHeaderImage={hasHeaderImage}
+      ref={ref}
+      {...dialogProps}
     >
       {!showMobileHeaderBar && (
         <React.Fragment>
-          <Style.DesktopHeaderBar showDesktopHeaderBar={showDesktopHeaderBar}>
+          <Style.DesktopHeaderBar
+            {...titleProps}
+            showDesktopHeaderBar={showDesktopHeaderBar}
+          >
             <span>{title}</span>
           </Style.DesktopHeaderBar>
           <Style.CrossIconButton
