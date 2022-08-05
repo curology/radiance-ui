@@ -3,12 +3,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
+import { useDialog } from '@react-aria/dialog';
 import { useTheme } from '@emotion/react';
 
 import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
 import Style from './style';
-import { Colors, primaryTheme, secondaryTheme, tertiaryTheme } from '../../constants';
+import {
+  Colors,
+  primaryTheme,
+  secondaryTheme,
+  tertiaryTheme,
+} from '../../constants';
 
 export interface DialogModalProps {
   /**
@@ -53,6 +59,14 @@ export const DialogModal: DialogModal = ({
   title = '',
   ...rest
 }) => {
+  const ref = React.useRef(null);
+  /**
+   * Exposes ARIA dialog role to assistive technology, i.e., announces to users with
+   * screen readers that they are in a dialog component, thereby making apparent
+   * additional accessibility functionality (e.g., exiting dialog with "Esc" key)
+   */
+  const { dialogProps, titleProps } = useDialog({ role: 'alertdialog' }, ref);
+
   const theme = useTheme();
   const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
@@ -103,6 +117,8 @@ export const DialogModal: DialogModal = ({
               backgroundColor={backgroundColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
+              ref={ref}
+              {...dialogProps}
             >
               {onCloseIconClick && (
                 <Style.CrossIconContainer
@@ -115,7 +131,9 @@ export const DialogModal: DialogModal = ({
                   <CrossIcon />
                 </Style.CrossIconContainer>
               )}
-              {!!title && <Style.ModalTitle>{title}</Style.ModalTitle>}
+              {!!title && (
+                <Style.ModalTitle {...titleProps}>{title}</Style.ModalTitle>
+              )}
               {children}
             </Style.ModalContainer>
           </FocusScope>
