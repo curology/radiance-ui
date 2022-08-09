@@ -2987,9 +2987,9 @@
     svgo "^2.5.0"
 
 "@testing-library/dom@^8.0.0":
-  version "8.13.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.13.0.tgz#bc00bdd64c7d8b40841e27a70211399ad3af46f5"
-  integrity sha512-9VHgfIatKNXQNaZTtLnalIy0jNZzY35a4S3oi08YAt9Hv1VsfZ/DfA45lM8D/UhtHBGJ4/lGwp0PZkVndRkoOQ==
+  version "8.17.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.17.0.tgz#618627241d3e687350dd36c049af9995d2990db2"
+  integrity sha512-Dq42l6uIM4ND9mp/r+XOBEGbRnw7zqnYqdzIzCGAOm6VRlTw2YefQP7kTXMZtzqk1R/E5WdH5xka4+0jfgiltw==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/runtime" "^7.12.5"
