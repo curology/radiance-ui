@@ -150,7 +150,7 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-sonarjs": "^0.13.0",
-    "eslint-plugin-storybook": "^0.5.8",
+    "eslint-plugin-storybook": "^0.6.4",
     "husky": "^7.0.4",
     "isobject": "^4.0.0",
     "jest": "^28.0.2",
