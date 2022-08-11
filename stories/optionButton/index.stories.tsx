@@ -11,6 +11,7 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
+import personImg from 'shared/person.jpg';
 
 import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
 import { BREAKPOINTS } from '../../src/constants';
@@ -242,6 +243,34 @@ export const WithControls = () => (
 );
 
 WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
+export const WithImage = () => (
+  <FlexContainer>
+    <OptionsContainer>
+      <ExampleContainer>
+        <OptionButton
+          text="Helper text"
+          subtext="subtext"
+          onClick={noop}
+          optionType="radio"
+          image={personImg}
+          borderRadius="medium"
+        />
+        <OptionButton
+          text="Helper text"
+          onClick={noop}
+          optionType="radio"
+          image={personImg}
+          borderRadius="medium"
+        />
+      </ExampleContainer>
+    </OptionsContainer>
+  </FlexContainer>
+);
+
+WithImage.parameters = {
   chromatic: { disable: true },
 };
 

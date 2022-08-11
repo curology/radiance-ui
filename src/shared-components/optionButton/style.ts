@@ -143,14 +143,24 @@ const TextContainer = styled.div`
   margin-left: ${SPACER.medium};
 `;
 
-const Text = styled.div`
+const Text = styled.div<{bold: boolean}>`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
+  ${({ bold, theme }) =>
+    bold &&
+    `
+      font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+    `}
 `;
 
 const SubText = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
+`;
+
+const ImageContainer = styled.div<{image: string}>`
+  width:100%;
+  background-image: url(${({image})=> image});
 `;
 
 export default {
@@ -162,4 +172,5 @@ export default {
   SubText,
   Text,
   TextContainer,
+  ImageContainer,
 };

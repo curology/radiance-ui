@@ -20,21 +20,57 @@ export interface OptionButtonProps {
   selected?: boolean;
   subtext?: React.ReactNode;
   text: string;
+  image?: string;
   [key: string]: unknown;
 }
 
 export interface OptionButtonNotClickableProps
   extends Pick<
     OptionButtonProps,
-    'borderRadius' | 'icon' | 'optionType' | 'subtext' | 'text'
+    'borderRadius' | 'icon' | 'optionType' | 'subtext' | 'text' | 'image'
   > {
   icon: JSX.Element;
 }
 
 export type OptionButtonContentProps = Pick<
   OptionButtonProps,
-  'buttonType' | 'icon' | 'optionType' | 'selected' | 'subtext' | 'text'
+  'buttonType' | 'icon' | 'optionType' | 'selected' | 'subtext' | 'text' | 'image'
 >;
+
+export type OptionButtonButtonProps = Pick<
+  OptionButtonProps,
+  'buttonType' | 'icon' | 'optionType' | 'selected'
+>;
+
+export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
+  buttonType = 'primary',
+  icon,
+  optionType,
+  selected = false,
+}) => {
+  if (isDefined(icon) && icon !== false) {
+    return (
+      <Style.IconWrapper
+        selected={selected}
+        optionType={optionType}
+        buttonType={buttonType}
+      >
+        {selected ? <CheckmarkIcon /> : icon}
+      </Style.IconWrapper>
+    );
+  }
+
+  return (
+    <Style.CheckmarkWrapper
+        selected={selected}
+        optionType={optionType}
+        buttonType={buttonType}
+      >
+        <CheckmarkIcon />
+      </Style.CheckmarkWrapper>
+  )
+};
+
 
 const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   buttonType = 'primary',
@@ -43,30 +79,31 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   selected = false,
   subtext,
   text,
+  image = '',
 }) => (
   <Style.FlexContainer>
     {/**
      * We sometimes use && conditionals such that we are passing in `false` as a value
      */}
-    {isDefined(icon) && icon !== false ? (
-      <Style.IconWrapper
+    {!!image ? (
+      <Style.ImageContainer image={image}>
+        <OptionButtonButton
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
-      >
-        {selected ? <CheckmarkIcon /> : icon}
-      </Style.IconWrapper>
+        icon={icon}
+      />
+      </Style.ImageContainer>
     ) : (
-      <Style.CheckmarkWrapper
+      <OptionButtonButton
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
-      >
-        <CheckmarkIcon />
-      </Style.CheckmarkWrapper>
+        icon={icon}
+      />
     )}
     <Style.TextContainer>
-      <Style.Text>{text}</Style.Text>
+      <Style.Text bold={!!image}>{text}</Style.Text>
       {isDefined(subtext) && <Style.SubText>{subtext}</Style.SubText>}
     </Style.TextContainer>
   </Style.FlexContainer>
@@ -93,6 +130,7 @@ export const OptionButton: OptionButton = ({
   selected,
   subtext,
   text,
+  image = '',
   ...rest
 }) => (
   <Style.ClickableContainer
@@ -112,6 +150,7 @@ export const OptionButton: OptionButton = ({
       selected={selected}
       subtext={subtext}
       text={text}
+      image={image}
     />
   </Style.ClickableContainer>
 );
@@ -127,6 +166,7 @@ export const OptionButtonNotClickable: React.FC<
   optionType,
   subtext,
   text,
+  image = '',
   ...rest
 }) => (
   <Style.DisplayContainer
@@ -143,6 +183,7 @@ export const OptionButtonNotClickable: React.FC<
       selected={false}
       subtext={subtext}
       text={text}
+      image={image}
     />
   </Style.DisplayContainer>
 );
@@ -161,4 +202,5 @@ OptionButton.propTypes = {
   selected: PropTypes.bool,
   subtext: PropTypes.node,
   text: PropTypes.string.isRequired,
+  image: PropTypes.string,
 };
