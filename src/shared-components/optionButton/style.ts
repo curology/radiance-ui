@@ -164,10 +164,17 @@ const SubText = styled.div`
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
 
-const ImageContainer = styled.div<{ borderRadius: string; image: string }>`
+const ImageContainer = styled.div<{
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
+  image: string;
+}>`
   width: 100%;
   height: 25rem;
   padding: ${SPACER.medium};
+  border-top-left-radius: ${({ theme, borderRadius }) =>
+    theme.BORDER_RADIUS[borderRadius]};
+  border-top-right-radius: ${({ theme, borderRadius }) =>
+    theme.BORDER_RADIUS[borderRadius]};
   background-image: url(${({ image }) => image});
 `;
 
