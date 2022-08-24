@@ -34,6 +34,7 @@ const getTypeColor = (
 interface ContainerProps {
   borderRadius: keyof ThemeType['BORDER_RADIUS'];
   containerType: ContainerType;
+  containsImage?: boolean;
 }
 
 interface SharedContainerStylesProps extends ContainerProps {
@@ -44,10 +45,11 @@ const sharedContainerStyles = ({
   borderRadius,
   containerType,
   theme,
+  containsImage = false,
 }: SharedContainerStylesProps) => `
   border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
-  padding: ${SPACER.large};
+  padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: 100%;
   text-align: left;
@@ -66,9 +68,9 @@ const ClickableContainer = styled.button<ContainerProps>`
   }
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div<{ containsImage: boolean }>`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row ${({ containsImage }) => (containsImage ? 'wrap' : 'nowrap')};
   justify-content: flex-start;
   align-items: center;
 `;
@@ -139,11 +141,15 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
     `};
 `;
 
-const TextContainer = styled.div`
+const TextContainer = styled.div<{ containsImage: boolean }>`
   margin-left: ${SPACER.medium};
+  margin-bottom: ${({ containsImage }) =>
+    containsImage ? SPACER.medium : 'unset'};
+  margin-top: ${({ containsImage }) =>
+    containsImage ? SPACER.medium : 'unset'};
 `;
 
-const Text = styled.div<{bold: boolean}>`
+const Text = styled.div<{ bold: boolean }>`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
   ${({ bold, theme }) =>
@@ -158,9 +164,11 @@ const SubText = styled.div`
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
 `;
 
-const ImageContainer = styled.div<{image: string}>`
-  width:100%;
-  background-image: url(${({image})=> image});
+const ImageContainer = styled.div<{ borderRadius: string; image: string }>`
+  width: 100%;
+  height: 25rem;
+  padding: ${SPACER.medium};
+  background-image: url(${({ image }) => image});
 `;
 
 export default {

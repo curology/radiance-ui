@@ -15,12 +15,12 @@ export interface OptionButtonProps {
    * Show custom icon in the unselected state
    */
   icon?: React.ReactNode;
+  image?: string;
   onClick: () => void;
   optionType: 'radio' | 'checkbox';
   selected?: boolean;
   subtext?: React.ReactNode;
   text: string;
-  image?: string;
   [key: string]: unknown;
 }
 
@@ -34,7 +34,14 @@ export interface OptionButtonNotClickableProps
 
 export type OptionButtonContentProps = Pick<
   OptionButtonProps,
-  'buttonType' | 'icon' | 'optionType' | 'selected' | 'subtext' | 'text' | 'image'
+  | 'buttonType'
+  | 'icon'
+  | 'optionType'
+  | 'selected'
+  | 'subtext'
+  | 'text'
+  | 'image'
+  | 'borderRadius'
 >;
 
 export type OptionButtonButtonProps = Pick<
@@ -62,15 +69,14 @@ export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
 
   return (
     <Style.CheckmarkWrapper
-        selected={selected}
-        optionType={optionType}
-        buttonType={buttonType}
-      >
-        <CheckmarkIcon />
-      </Style.CheckmarkWrapper>
-  )
+      selected={selected}
+      optionType={optionType}
+      buttonType={buttonType}
+    >
+      <CheckmarkIcon />
+    </Style.CheckmarkWrapper>
+  );
 };
-
 
 const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   buttonType = 'primary',
@@ -80,19 +86,20 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   subtext,
   text,
   image = '',
+  borderRadius = DEFAULT_BORDER_RADIUS,
 }) => (
-  <Style.FlexContainer>
+  <Style.FlexContainer containsImage={!!image}>
     {/**
      * We sometimes use && conditionals such that we are passing in `false` as a value
      */}
-    {!!image ? (
-      <Style.ImageContainer image={image}>
+    {image ? (
+      <Style.ImageContainer image={image} borderRadius={borderRadius}>
         <OptionButtonButton
-        selected={selected}
-        optionType={optionType}
-        buttonType={buttonType}
-        icon={icon}
-      />
+          selected={selected}
+          optionType={optionType}
+          buttonType={buttonType}
+          icon={icon}
+        />
       </Style.ImageContainer>
     ) : (
       <OptionButtonButton
@@ -102,7 +109,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
         icon={icon}
       />
     )}
-    <Style.TextContainer>
+    <Style.TextContainer containsImage={!!image}>
       <Style.Text bold={!!image}>{text}</Style.Text>
       {isDefined(subtext) && <Style.SubText>{subtext}</Style.SubText>}
     </Style.TextContainer>
@@ -140,6 +147,7 @@ export const OptionButton: OptionButton = ({
     role={optionType}
     aria-checked={selected}
     containerType="clickable"
+    containsImage={!!image}
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
@@ -151,6 +159,7 @@ export const OptionButton: OptionButton = ({
       subtext={subtext}
       text={text}
       image={image}
+      borderRadius={borderRadius}
     />
   </Style.ClickableContainer>
 );
