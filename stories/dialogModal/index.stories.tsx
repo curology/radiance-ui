@@ -121,14 +121,14 @@ export const DefaultOpened = () => {
 };
 
 export const WithColor = () => {
-  const [withColor, setWithColor] = useState(false);
+  const [withColor, setOpenModalWithColor] = useState(false);
   const theme = useTheme();
 
   return (
     <React.Fragment>
       <Button
         onClick={() => {
-          setWithColor(true);
+          setOpenModalWithColor(true);
         }}
       >
         open dialog modal
@@ -139,7 +139,7 @@ export const WithColor = () => {
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
           onClose={() => {
-            setWithColor(false);
+            setOpenModalWithColor(false);
           }}
         >
           <DialogModal.Paragraph>
@@ -150,7 +150,7 @@ export const WithColor = () => {
             <Button
               isFullWidth
               onClick={() => {
-                setWithColor(false);
+                setOpenModalWithColor(false);
               }}
             >
               Yes, remove
@@ -158,7 +158,7 @@ export const WithColor = () => {
             <Button
               isFullWidth
               onClick={() => {
-                setWithColor(false);
+                setOpenModalWithColor(false);
               }}
               buttonType="tertiary"
             >
@@ -177,14 +177,14 @@ WithColor.parameters = {
 };
 
 export const WithColorOpened = () => {
-  const [withColor, setWithColor] = useState(true);
+  const [withColor, setOpenModalWithColor] = useState(true);
   const theme = useTheme();
 
   return (
     <React.Fragment>
       <Button
         onClick={() => {
-          setWithColor(true);
+          setOpenModalWithColor(true);
         }}
       >
         open dialog modal
@@ -195,7 +195,7 @@ export const WithColorOpened = () => {
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
           onClose={() => {
-            setWithColor(false);
+            setOpenModalWithColor(false);
           }}
         >
           <DialogModal.Paragraph>
@@ -206,7 +206,7 @@ export const WithColorOpened = () => {
             <Button
               isFullWidth
               onClick={() => {
-                setWithColor(false);
+                setOpenModalWithColor(false);
               }}
             >
               Yes, remove
@@ -214,7 +214,7 @@ export const WithColorOpened = () => {
             <Button
               isFullWidth
               onClick={() => {
-                setWithColor(false);
+                setOpenModalWithColor(false);
               }}
               buttonType="tertiary"
             >
