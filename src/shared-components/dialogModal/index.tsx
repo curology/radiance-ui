@@ -27,10 +27,10 @@ export interface DialogModalProps {
    */
   children: React.ReactNode;
   /**
-   * If provided, DialogModal displays a Close Icon positioned top-right.
+   * DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
    */
-  onCloseIconClick?: (() => void) | null;
+  onClose: () => void;
   title?: string;
   [key: string]: unknown;
 }
@@ -55,7 +55,7 @@ const getDomNode = () =>
 export const DialogModal: DialogModal = ({
   backgroundColor,
   children,
-  onCloseIconClick,
+  onClose,
   title = '',
   ...rest
 }) => {
@@ -86,9 +86,9 @@ export const DialogModal: DialogModal = ({
   }, []);
 
   const handleCloseIntent = () => {
-    if (onCloseIconClick) {
+    if (onClose) {
       setIsClosing(true);
-      setTimeout(onCloseIconClick, 350);
+      setTimeout(onClose, 350);
     }
   };
 
@@ -120,17 +120,15 @@ export const DialogModal: DialogModal = ({
               ref={ref}
               {...dialogProps}
             >
-              {onCloseIconClick && (
-                <Style.CrossIconContainer
-                  backgroundColor={backgroundColorWithTheme}
-                  onClick={handleCloseIntent}
-                  role="button"
-                  tabIndex={0}
-                  aria-label="Close modal"
-                >
-                  <CrossIcon />
-                </Style.CrossIconContainer>
-              )}
+              <Style.CrossIconContainer
+                backgroundColor={backgroundColorWithTheme}
+                onClick={handleCloseIntent}
+                role="button"
+                tabIndex={0}
+                aria-label="Close modal"
+              >
+                <CrossIcon />
+              </Style.CrossIconContainer>
               {!!title && (
                 <Style.ModalTitle {...titleProps}>{title}</Style.ModalTitle>
               )}
@@ -153,6 +151,6 @@ DialogModal.propTypes = {
     tertiaryTheme.COLORS.background,
   ]),
   children: PropTypes.node.isRequired,
-  onCloseIconClick: PropTypes.func,
+  onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
 };
