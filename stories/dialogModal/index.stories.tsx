@@ -31,7 +31,12 @@ export const Default = () => {
       </Button>
 
       {openModal && (
-        <DialogModal title="Heads up!">
+        <DialogModal
+          title="Heads up!"
+          onClose={() => {
+            setOpenModal(false);
+          }}
+        >
           <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
@@ -80,7 +85,12 @@ export const DefaultOpened = () => {
       </Button>
 
       {openModal && (
-        <DialogModal title="Heads up!">
+        <DialogModal
+          title="Heads up!"
+          onClose={() => {
+            setOpenModal(false);
+          }}
+        >
           <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
             too. Just the custom bottle will be sent your way!
@@ -128,6 +138,9 @@ export const WithColor = () => {
         <DialogModal
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
+          onClose={() => {
+            setWithColor(false);
+          }}
         >
           <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
@@ -181,6 +194,9 @@ export const WithColorOpened = () => {
         <DialogModal
           title="Heads up!"
           backgroundColor={theme.COLORS.background}
+          onClose={() => {
+            setWithColor(false);
+          }}
         >
           <DialogModal.Paragraph>
             This will remove the cleanser and moisturizer from your free trial,
@@ -232,7 +248,7 @@ export const WithCloseIcon = () => {
       {withCloseIcon && (
         <DialogModal
           title="Heads up!"
-          onCloseIconClick={() => {
+          onClose={() => {
             setWithCloseIcon(false);
           }}
         >
@@ -285,7 +301,7 @@ export const WithCloseIconOpened = () => {
       {withCloseIcon && (
         <DialogModal
           title="Heads up!"
-          onCloseIconClick={() => {
+          onClose={() => {
             setWithCloseIcon(false);
           }}
         >
