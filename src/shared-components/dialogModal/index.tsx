@@ -86,10 +86,8 @@ export const DialogModal: DialogModal = ({
   }, []);
 
   const handleCloseIntent = () => {
-    if (onClose) {
-      setIsClosing(true);
-      setTimeout(onClose, 350);
-    }
+    setIsClosing(true);
+    setTimeout(onClose, 350);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent): void => {
