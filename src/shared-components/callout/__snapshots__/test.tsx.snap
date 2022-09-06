@@ -41,6 +41,84 @@ exports[`<Callout /> UI snapshots renders a simple callout 1`] = `
 </div>
 `;
 
+exports[`<Callout /> UI snapshots renders callout with close (X) icon 1`] = `
+.emotion-0 {
+  background-color: #EEEDF7;
+  padding: 1rem;
+  border-radius: 8px;
+  display: block;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  float: right;
+  height: 16px;
+  margin-left: 1rem;
+  pointer-events: auto;
+  width: 16px;
+}
+
+.emotion-2:focus {
+  outline: none;
+}
+
+.emotion-4 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-5 {
+  color: #332E54;
+  font-size: 0.875rem;
+}
+
+<div
+  class="emotion-0 emotion-1"
+>
+  <div
+    aria-label="Close callout"
+    class="emotion-2 emotion-3"
+    role="button"
+    tabindex="0"
+  >
+    <svg
+      class="emotion-4"
+      fill="none"
+      height="16"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="m16.01.93-.89-.88-7.11 7.1L.91.05.02.93l7.11 7.11-7.11 7.11.89.88 7.1-7.11 7.11 7.11.89-.88L8.9 8.04 16.01.93Z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="emotion-5 emotion-6"
+  >
+    Callout text with text and close (X) icon
+  </div>
+</div>
+`;
+
 exports[`<Callout /> UI snapshots renders callout with icon 1`] = `
 .emotion-0 {
   background-color: #EEEDF7;
