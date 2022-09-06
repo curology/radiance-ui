@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 
+import { buttonReset } from '../../utils/styles/buttonReset';
 import { Typography } from '../typography';
 import { Colors, MEDIA_QUERIES, SPACER, Z_SCALE } from '../../constants';
 
@@ -90,9 +91,11 @@ const ModalTitle = styled(Typography.Title)`
   margin-bottom: ${SPACER.small};
 `;
 
-const CrossIconContainer = styled.div<{
+const CrossIconContainer = styled.button<{
   backgroundColor: Colors['background'] | Colors['white'];
 }>`
+  ${buttonReset}
+  padding: 0;
   position: absolute;
   top: 8px;
   right: 12px;
