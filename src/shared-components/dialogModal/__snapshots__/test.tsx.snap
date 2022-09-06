@@ -103,6 +103,9 @@ exports[`<DialogModal /> UI snapshots renders dialog modal with custom color 1`]
 }
 
 .emotion-4 {
+  background: transparent;
+  border: none;
+  padding: 0;
   position: absolute;
   top: 8px;
   right: 12px;
@@ -176,10 +179,9 @@ exports[`<DialogModal /> UI snapshots renders dialog modal with custom color 1`]
       role="alertdialog"
       tabindex="-1"
     >
-      <div
+      <button
         aria-label="Close modal"
         class="emotion-4 emotion-5"
-        role="button"
         tabindex="0"
       >
         <svg
@@ -195,7 +197,7 @@ exports[`<DialogModal /> UI snapshots renders dialog modal with custom color 1`]
             fill="currentColor"
           />
         </svg>
-      </div>
+      </button>
       <div>
         <p
           class="emotion-7 emotion-8"
