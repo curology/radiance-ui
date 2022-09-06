@@ -121,7 +121,6 @@ export const DialogModal: DialogModal = ({
               <Style.CrossIconContainer
                 backgroundColor={backgroundColorWithTheme}
                 onClick={handleCloseIntent}
-                role="button"
                 tabIndex={0}
                 aria-label="Close modal"
               >
