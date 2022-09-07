@@ -70,6 +70,31 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+export const WithCloseIcon = () => (
+  <Callout
+    onClose={() => {
+      alert('onClose callback called.');
+    }}
+  >
+    <span role="img" aria-label="Heart">
+      ❤️
+    </span>{' '}
+    This callout has a close (X) icon that calls the <strong>onClose</strong>{' '}
+    callback when clicked. It also has a lot of text to demonstrate that the
+    text wraps around the close icon. Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Vivamus vel sem scelerisque ex euismod laoreet non eu
+    nulla. Cras est lacus, faucibus id finibus id, blandit sit amet nunc. Nullam
+    sagittis odio non ante malesuada eleifend. Cras efficitur nulla non dui
+    euismod maximus. Donec euismod massa in ligula aliquet sollicitudin. In hac
+    habitasse platea dictumst. Quisque sollicitudin, massa vel ullamcorper
+    pharetra, tortor risus mollis nisi, et ultrices justo lectus lobortis lorem.
+    Pellentesque imperdiet turpis sed lobortis convallis. Aliquam sit amet
+    cursus nisl. Curabitur sed metus nec tellus tristique convallis vehicula ut
+    velit. Morbi egestas ultricies magna quis vulputate. Sed sollicitudin neque
+    et tortor finibus, nec vehicula tortor rutrum.
+  </Callout>
+);
+
 const CHROMATIC_OPTIONS = {
   chromatic: { viewports: [BREAKPOINTS.xs] },
 } as const;
