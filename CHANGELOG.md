@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v27.0.0
+
+- [Accessibility] Add @react-aria/dialog package to modals for additional screenreader functionality and makes `onClick` prop required for `DialogModal` for accessibility ([1706](https://github.com/curology/radiance-ui/pull/1706))
+
 # v26.5.0
 
 - [Components] Add `onClose` prop to callout component for making the component dismissable ([1721](https://github.com/curology/radiance-ui/pull/1721))
