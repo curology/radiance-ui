@@ -65,6 +65,7 @@ exports[`<Callout /> UI snapshots renders callout with close (X) icon 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  border: 0;
   border-radius: 50%;
   cursor: pointer;
   display: -webkit-box;
@@ -105,10 +106,9 @@ exports[`<Callout /> UI snapshots renders callout with close (X) icon 1`] = `
 <div
   class="emotion-0 emotion-1"
 >
-  <a
+  <button
     aria-label="Close callout"
     class="emotion-2 emotion-3"
-    href=""
   >
     <svg
       class="emotion-4"
@@ -123,7 +123,7 @@ exports[`<Callout /> UI snapshots renders callout with close (X) icon 1`] = `
         fill="currentColor"
       />
     </svg>
-  </a>
+  </button>
   <div
     class="emotion-5 emotion-6"
   >

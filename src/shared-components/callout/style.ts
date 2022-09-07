@@ -40,8 +40,9 @@ const Icon = styled.div<{
   }
 `;
 
-const CrossIconContainer = styled.a`
+const CrossIconContainer = styled.button`
   align-items: center;
+  border: 0;
   border-radius: 50%;
   cursor: pointer;
   display: flex;

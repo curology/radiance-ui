@@ -71,7 +71,6 @@ export const Callout: Callout = ({ children, icon, onClose, type }) => {
       {!!onClose && (
         <Style.CrossIconContainer
           aria-label="Close callout"
-          href=""
           onClick={(evt) => {
             onClose();
             evt.preventDefault();
