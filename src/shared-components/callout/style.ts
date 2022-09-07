@@ -40,15 +40,20 @@ const Icon = styled.div<{
   }
 `;
 
-const CrossIconContainer = styled.div`
+const CrossIconContainer = styled.a`
+  align-items: center;
+  border-radius: 50%;
   cursor: pointer;
+  display: flex;
   float: right;
-  height: 16px;
-  margin-left: ${SPACER.medium};
+  height: 40px;
+  justify-content: center;
+  margin: -12px -12px 0 0;
   pointer-events: auto;
-  width: 16px;
+  width: 40px;
 
   &:focus {
+    border: #332e54 solid 2px;
     outline: none;
   }
 `;
