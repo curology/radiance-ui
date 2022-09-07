@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v26.5.0
+
+- [Components] Add `onClose` prop to callout component for making the component dismissable ([1721](https://github.com/curology/radiance-ui/pull/1721))
+
 # v26.4.4
 
 - [Accessibility] Add screen reader indicator for invalid input ([1621](https://github.com/curology/radiance-ui/pull/1621))
