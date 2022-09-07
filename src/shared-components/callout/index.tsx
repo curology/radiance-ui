@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
+import { CrossIcon } from '../../icons';
 import Style from './style';
 import { isDefined } from '../../utils/isDefined';
 import type { ThemeColors, ThemeType } from '../../constants';
@@ -15,6 +16,10 @@ export interface CalloutProps {
    * Icon displayed inside the callout right aligned
    */
   icon?: React.ReactNode;
+  /**
+   * Callback used to display a close (X) icon for closing the callout as well as executing logic upon clicking the close icon
+   */
+  onClose?: () => void;
   /**
    * Custom prop to draw on preset Callout styles
    */
@@ -52,14 +57,22 @@ const getCalloutStyles = (theme: ThemeType, type?: CalloutProps['type']) => {
  *
  * `Callout` will cover the entirety of the container that holds it. You may optionally wrap it with `Callout.Container` which will set the `max-width` to `327px`.
  *
- * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs)
+ * If you use a glyph as callout icon the recommended dimesions are 48x48 pixels (which is the default for Glyphs).
  */
-export const Callout: Callout = ({ children, icon, type }) => {
+export const Callout: Callout = ({ children, icon, onClose, type }) => {
   const theme = useTheme();
   const { backgroundColor, textColor } = getCalloutStyles(theme, type);
 
   return (
-    <Style.CalloutContainer backgroundColor={backgroundColor}>
+    <Style.CalloutContainer
+      backgroundColor={backgroundColor}
+      displayCloseIcon={!!onClose}
+    >
+      {!!onClose && (
+        <Style.CrossIconContainer aria-label="Close callout" onClick={onClose}>
+          <CrossIcon />
+        </Style.CrossIconContainer>
+      )}
       <Style.Text textColor={textColor}>{children}</Style.Text>
       {isDefined(icon) && icon !== false && (
         <Style.Icon iconColor={textColor}>{icon}</Style.Icon>
@@ -73,5 +86,6 @@ Callout.Container = Style.ParentContainer;
 Callout.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node,
+  onClose: PropTypes.func,
   type: PropTypes.oneOf(['error', 'success']),
 };

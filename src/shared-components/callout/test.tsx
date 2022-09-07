@@ -25,5 +25,18 @@ describe('<Callout />', () => {
 
       expect(container.firstElementChild).toMatchSnapshot();
     });
+    it('renders callout with close (X) icon', () => {
+      const { container } = render(
+        <Callout
+          onClose={() => {
+            return null;
+          }}
+        >
+          Callout text with text and close (X) icon
+        </Callout>,
+      );
+
+      expect(container.firstElementChild).toMatchSnapshot();
+    });
   });
 });
