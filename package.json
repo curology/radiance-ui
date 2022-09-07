@@ -169,7 +169,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
-    "@emotion/react": "11.9.0",
+    "@emotion/react": "11.10.4",
     "@emotion/styled": "11.8.1",
     "@react-aria/dialog": "^3.3.0",
     "@react-aria/focus": "^3.0.2",
@@ -186,7 +186,7 @@
     "tinycolor2": "^1.4.1"
   },
   "peerDependencies": {
-    "@emotion/react": "11.9.0",
+    "@emotion/react": "11.10.4",
     "@emotion/styled": "11.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
