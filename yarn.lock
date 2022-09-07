@@ -1776,6 +1776,18 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.9.1.tgz#7f554e7368c9ab679a11f4a042ca17149d70cf12"
   integrity sha512-DvJbbn3dUgMxDnJLH+RZQPnXak1h4ZVYQ7CWiFWjQwBFkVajT4rfw2PdpHLTSTwxrYfnoEXkuBiwkDm6tPMQeA==
 
+"@react-aria/dialog@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@react-aria/dialog/-/dialog-3.3.0.tgz#7e355f99343c061d4b4d85c4bba1408bc8b675e0"
+  integrity sha512-kzJLjIYIRpK+ASOpOSY56sE6l+rpmk4QvIqTjrqlynXdneGVgNVu3OxX37U73Zn53is7ivbT+TugCzHTgle0qg==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    "@react-aria/focus" "^3.7.0"
+    "@react-aria/utils" "^3.13.2"
+    "@react-stately/overlays" "^3.4.0"
+    "@react-types/dialog" "^3.4.2"
+    "@react-types/shared" "^3.14.0"
+
 "@react-aria/focus@^3.0.2":
   version "3.5.5"
   resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.5.5.tgz#d5e3eb7af8612e8dafda214746084766e55c4b01"
@@ -1786,6 +1798,26 @@
     "@react-aria/utils" "^3.12.0"
     "@react-types/shared" "^3.12.0"
     clsx "^1.1.1"
+
+"@react-aria/focus@^3.7.0":
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/@react-aria/focus/-/focus-3.7.0.tgz#6a90dc99da64bd145e3eeacf3097a29a0342f709"
+  integrity sha512-LydZSLBLEUklakM0Ogdk17F3f/Uwaj5Nl1mfcK8HhrroGT8A8XH0KjA9D6gM6JGHgxZemx0ufOgxhQZeBGQMQw==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    "@react-aria/interactions" "^3.10.0"
+    "@react-aria/utils" "^3.13.2"
+    "@react-types/shared" "^3.14.0"
+    clsx "^1.1.1"
+
+"@react-aria/interactions@^3.10.0":
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/@react-aria/interactions/-/interactions-3.10.0.tgz#d60cc42c3904c1578f9c356fba4bab7003102dee"
+  integrity sha512-Lp74VfF+EskT3IqK2MBMdJpJU48p60+YkMbgtoDF6LudNO8jw0nxcsvnimPriTSkZWINRpajG/9sIa0EIDcQKw==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    "@react-aria/utils" "^3.13.2"
+    "@react-types/shared" "^3.14.0"
 
 "@react-aria/interactions@^3.8.4":
   version "3.8.4"
@@ -1803,6 +1835,13 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
+"@react-aria/ssr@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@react-aria/ssr/-/ssr-3.3.0.tgz#25e81daf0c7a270a4a891159d8d984578e4512d8"
+  integrity sha512-yNqUDuOVZIUGP81R87BJVi/ZUZp/nYOBXbPsRe7oltJOfErQZD+UezMpw4vM2KRz18cURffvmC8tJ6JTeyDtaQ==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+
 "@react-aria/utils@^3.12.0":
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.12.0.tgz#39d0f37525e050356c4de725c85d9b10e7a5c0d9"
@@ -1814,6 +1853,26 @@
     "@react-types/shared" "^3.12.0"
     clsx "^1.1.1"
 
+"@react-aria/utils@^3.13.2":
+  version "3.13.2"
+  resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.13.2.tgz#c28bc96e940a8a84c3e69a19f483c9f060584580"
+  integrity sha512-VTI8tv9m/BxE/lPTNCZN1fcHuY540xm+HT1vg2ZQCryudUWvzQkHi+h0z32DhiGHhvRFIGdH/enf3psip7ZLTQ==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    "@react-aria/ssr" "^3.3.0"
+    "@react-stately/utils" "^3.5.1"
+    "@react-types/shared" "^3.14.0"
+    clsx "^1.1.1"
+
+"@react-stately/overlays@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@react-stately/overlays/-/overlays-3.4.0.tgz#4023d0c7cd48363fe046e5b6084d703ac461c907"
+  integrity sha512-jXVm1V91lWOKh73cFvE9W9JtAE8idSWEUtFlVrlBI/jh0ZOt148UlRVWgHrm7FhaUpyvOFNUyfidRmKMuB+hgw==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+    "@react-stately/utils" "^3.5.1"
+    "@react-types/overlays" "^3.6.2"
+
 "@react-stately/utils@^3.4.1":
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/@react-stately/utils/-/utils-3.4.1.tgz#56f049aa1704d338968b5973c796ee606e9c0c62"
@@ -1821,10 +1880,37 @@
   dependencies:
     "@babel/runtime" "^7.6.2"
 
+"@react-stately/utils@^3.5.1":
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/@react-stately/utils/-/utils-3.5.1.tgz#502de762e5d33e892347c5f58053674e06d3bc92"
+  integrity sha512-INeQ5Er2Jm+db8Py4upKBtgfzp3UYgwXYmbU/XJn49Xw27ktuimH9e37qP3bgHaReb5L3g8IrGs38tJUpnGPHA==
+  dependencies:
+    "@babel/runtime" "^7.6.2"
+
+"@react-types/dialog@^3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@react-types/dialog/-/dialog-3.4.2.tgz#509ac6998b6d7bedd2b8150306054389fee7ce61"
+  integrity sha512-ub5KrXuN0VELqIKDKuj+ySalcliIneuVnwnX83XbW+xSs9/zFo5WwALU0YxP77rzwIyuu6ziQ8CUZ7rHhLa0hQ==
+  dependencies:
+    "@react-types/overlays" "^3.6.2"
+    "@react-types/shared" "^3.14.0"
+
+"@react-types/overlays@^3.6.2":
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/@react-types/overlays/-/overlays-3.6.2.tgz#f11f8abe5073ca7a80d3beada018b715af25859c"
+  integrity sha512-ag9UCIlcNCvMHBORRksdLnQK3ef+CEbrt+TydOxBAxAf+87fXJ/0H6hP/4QTebEA2ixA0qz8CFga81S8ZGnOsQ==
+  dependencies:
+    "@react-types/shared" "^3.14.0"
+
 "@react-types/shared@^3.12.0":
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.12.0.tgz#31a53fcec5c3159fd0d5c67f7e3f3876c7d19908"
   integrity sha512-faGr9xOjtMlkQPfA1i36iUmWS/hpPPtxIwdAtBi6p7rCejmShMLFZ2YN4DxzbJUCVubF2S1+rMMIKuXG17DkEw==
+
+"@react-types/shared@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.14.0.tgz#240991d6672f32ecd2a172111e163be0fe0778f2"
+  integrity sha512-K069Bh/P0qV3zUG8kqabeO8beAUlFdyVPvpcNVPjRl+0Q9NDS9mfdQbmUa0LqdVo5e6jRPdos77Ylflkrz8wcw==
 
 "@rollup/plugin-babel@^5.2.1":
   version "5.3.1"

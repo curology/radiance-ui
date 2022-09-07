@@ -3,12 +3,18 @@ import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
 import { FocusScope } from '@react-aria/focus';
+import { useDialog } from '@react-aria/dialog';
 import { useTheme } from '@emotion/react';
 
 import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
 import Style from './style';
-import { Colors, primaryTheme, secondaryTheme, tertiaryTheme } from '../../constants';
+import {
+  Colors,
+  primaryTheme,
+  secondaryTheme,
+  tertiaryTheme,
+} from '../../constants';
 
 export interface DialogModalProps {
   /**
@@ -21,10 +27,10 @@ export interface DialogModalProps {
    */
   children: React.ReactNode;
   /**
-   * If provided, DialogModal displays a Close Icon positioned top-right.
+   * DialogModal displays a Close Icon positioned top-right.
    * This function must contain the logic for closing the modal.
    */
-  onCloseIconClick?: (() => void) | null;
+  onClose: () => void;
   title?: string;
   [key: string]: unknown;
 }
@@ -49,10 +55,18 @@ const getDomNode = () =>
 export const DialogModal: DialogModal = ({
   backgroundColor,
   children,
-  onCloseIconClick,
+  onClose,
   title = '',
   ...rest
 }) => {
+  const ref = React.useRef(null);
+  /**
+   * Exposes ARIA dialog role to assistive technology, i.e., announces to users with
+   * screen readers that they are in a dialog component, thereby making apparent
+   * additional accessibility functionality (e.g., exiting dialog with "Esc" key)
+   */
+  const { dialogProps, titleProps } = useDialog({ role: 'alertdialog' }, ref);
+
   const theme = useTheme();
   const backgroundColorWithTheme = backgroundColor ?? theme.COLORS.white;
   const [isClosing, setIsClosing] = useState(false);
@@ -72,10 +86,8 @@ export const DialogModal: DialogModal = ({
   }, []);
 
   const handleCloseIntent = () => {
-    if (onCloseIconClick) {
-      setIsClosing(true);
-      setTimeout(onCloseIconClick, 350);
-    }
+    setIsClosing(true);
+    setTimeout(onClose, 350);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent): void => {
@@ -103,19 +115,20 @@ export const DialogModal: DialogModal = ({
               backgroundColor={backgroundColorWithTheme}
               className={transitionState}
               onKeyDown={handleKeyDown}
+              ref={ref}
+              {...dialogProps}
             >
-              {onCloseIconClick && (
-                <Style.CrossIconContainer
-                  backgroundColor={backgroundColorWithTheme}
-                  onClick={handleCloseIntent}
-                  role="button"
-                  tabIndex={0}
-                  aria-label="Close modal"
-                >
-                  <CrossIcon />
-                </Style.CrossIconContainer>
+              <Style.CrossIconContainer
+                backgroundColor={backgroundColorWithTheme}
+                onClick={handleCloseIntent}
+                tabIndex={0}
+                aria-label="Close modal"
+              >
+                <CrossIcon />
+              </Style.CrossIconContainer>
+              {!!title && (
+                <Style.ModalTitle {...titleProps}>{title}</Style.ModalTitle>
               )}
-              {!!title && <Style.ModalTitle>{title}</Style.ModalTitle>}
               {children}
             </Style.ModalContainer>
           </FocusScope>
@@ -135,6 +148,6 @@ DialogModal.propTypes = {
     tertiaryTheme.COLORS.background,
   ]),
   children: PropTypes.node.isRequired,
-  onCloseIconClick: PropTypes.func,
+  onClose: PropTypes.func.isRequired,
   title: PropTypes.string,
 };
