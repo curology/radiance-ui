@@ -148,7 +148,8 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
 `;
 
 const TextContainer = styled.div<{ containsImage: boolean; height: string }>`
-  margin-left: ${SPACER.small};
+  margin-left: ${({ containsImage }) =>
+    containsImage ? SPACER.small : SPACER.medium};
   padding-top: ${({ containsImage }) =>
     containsImage ? SPACER.medium : 'unset'};
   height: ${({ height }) => height};
