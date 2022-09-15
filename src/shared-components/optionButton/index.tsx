@@ -93,7 +93,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   text,
   image = '',
   borderRadius = DEFAULT_BORDER_RADIUS,
-  textContainerHeight = 'unset',
+  textContainerHeight,
 }) => (
   <Style.FlexContainer containsImage={!!image}>
     {/**
@@ -148,7 +148,7 @@ export const OptionButton: OptionButton = ({
   subtext,
   text,
   image = '',
-  textContainerHeight = 'unset',
+  textContainerHeight,
   ...rest
 }) => (
   <Style.ClickableContainer

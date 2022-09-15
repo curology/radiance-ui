@@ -153,7 +153,7 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
     `};
 `;
 
-const TextContainer = styled.div<{ containsImage: boolean; height: string }>`
+const TextContainer = styled.div<{ containsImage: boolean; height?: string }>`
   margin-left: ${({ containsImage }) =>
     containsImage ? SPACER.small : SPACER.medium};
   ${({ containsImage }) =>
@@ -162,7 +162,7 @@ const TextContainer = styled.div<{ containsImage: boolean; height: string }>`
       padding-top: ${SPACER.medium};
     `};
   ${({ height }) =>
-    height &&
+    height !== undefined &&
     `
       height: ${height};
     `};
