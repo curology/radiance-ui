@@ -50,7 +50,13 @@ const sharedContainerStyles = ({
 }: SharedContainerStylesProps) => `
   border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
-  border: ${containsImage ? 'none' : 'inherit'};
+  ${
+    containsImage
+      ? `
+      border: none;
+    `
+      : ''
+  }
   padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: ${containsImage ? '156px' : '100%'};
@@ -150,9 +156,16 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
 const TextContainer = styled.div<{ containsImage: boolean; height: string }>`
   margin-left: ${({ containsImage }) =>
     containsImage ? SPACER.small : SPACER.medium};
-  padding-top: ${({ containsImage }) =>
-    containsImage ? SPACER.medium : 'unset'};
-  height: ${({ height }) => height};
+  ${({ containsImage }) =>
+    containsImage &&
+    `
+      padding-top: ${SPACER.medium};
+    `};
+  ${({ height }) =>
+    height &&
+    `
+      height: ${height};
+    `};
 `;
 
 const Text = styled.div<{ bold: boolean }>`
