@@ -47,12 +47,12 @@ export type OptionButtonContentProps = Pick<
   | 'textContainerHeight'
 >;
 
-export type OptionButtonButtonProps = Pick<
+export type OptionButtonIconProps = Pick<
   OptionButtonProps,
   'buttonType' | 'icon' | 'optionType' | 'selected' | 'withImageBackground'
 >;
 
-export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
+export const OptionButtonIcon: React.FC<OptionButtonIconProps> = ({
   buttonType = 'primary',
   icon,
   optionType,
@@ -101,7 +101,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
      */}
     {image ? (
       <Style.ImageContainer borderRadius={borderRadius}>
-        <OptionButtonButton
+        <OptionButtonIcon
           selected={selected}
           optionType={optionType}
           buttonType={buttonType}
@@ -111,7 +111,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
         <Style.Image src={image} />
       </Style.ImageContainer>
     ) : (
-      <OptionButtonButton
+      <OptionButtonIcon
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
