@@ -21,6 +21,8 @@ export interface OptionButtonProps {
   selected?: boolean;
   subtext?: React.ReactNode;
   text: string;
+  textContainerHeight?: string;
+  withImageBackground?: boolean;
   [key: string]: unknown;
 }
 
@@ -42,11 +44,12 @@ export type OptionButtonContentProps = Pick<
   | 'text'
   | 'image'
   | 'borderRadius'
+  | 'textContainerHeight'
 >;
 
 export type OptionButtonButtonProps = Pick<
   OptionButtonProps,
-  'buttonType' | 'icon' | 'optionType' | 'selected'
+  'buttonType' | 'icon' | 'optionType' | 'selected' | 'withImageBackground'
 >;
 
 export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
@@ -54,6 +57,7 @@ export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
   icon,
   optionType,
   selected = false,
+  withImageBackground = false,
 }) => {
   if (isDefined(icon) && icon !== false) {
     return (
@@ -61,6 +65,7 @@ export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
+        withImageBackground={withImageBackground}
       >
         {selected ? <CheckmarkIcon /> : icon}
       </Style.IconWrapper>
@@ -72,6 +77,7 @@ export const OptionButtonButton: React.FC<OptionButtonButtonProps> = ({
       selected={selected}
       optionType={optionType}
       buttonType={buttonType}
+      withImageBackground={withImageBackground}
     >
       <CheckmarkIcon />
     </Style.CheckmarkWrapper>
@@ -87,19 +93,22 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   text,
   image = '',
   borderRadius = DEFAULT_BORDER_RADIUS,
+  textContainerHeight = 'unset',
 }) => (
   <Style.FlexContainer containsImage={!!image}>
     {/**
      * We sometimes use && conditionals such that we are passing in `false` as a value
      */}
     {image ? (
-      <Style.ImageContainer image={image} borderRadius={borderRadius}>
+      <Style.ImageContainer borderRadius={borderRadius}>
         <OptionButtonButton
           selected={selected}
           optionType={optionType}
           buttonType={buttonType}
           icon={icon}
+          withImageBackground
         />
+        <Style.Image src={image} />
       </Style.ImageContainer>
     ) : (
       <OptionButtonButton
@@ -109,7 +118,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
         icon={icon}
       />
     )}
-    <Style.TextContainer containsImage={!!image}>
+    <Style.TextContainer containsImage={!!image} height={textContainerHeight}>
       <Style.Text bold={!!image}>{text}</Style.Text>
       {isDefined(subtext) && <Style.SubText>{subtext}</Style.SubText>}
     </Style.TextContainer>
@@ -118,6 +127,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
 
 interface OptionButton extends React.FC<OptionButtonProps> {
   NotClickable: typeof OptionButtonNotClickable;
+  height?: string;
 }
 
 /**
@@ -138,6 +148,7 @@ export const OptionButton: OptionButton = ({
   subtext,
   text,
   image = '',
+  textContainerHeight = 'unset',
   ...rest
 }) => (
   <Style.ClickableContainer
@@ -160,6 +171,7 @@ export const OptionButton: OptionButton = ({
       text={text}
       image={image}
       borderRadius={borderRadius}
+      textContainerHeight={textContainerHeight}
     />
   </Style.ClickableContainer>
 );

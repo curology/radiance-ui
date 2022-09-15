@@ -10,6 +10,7 @@ export interface BaseIconWrapperStylesProps {
   optionType?: 'radio' | 'checkbox';
   selected: boolean;
   theme: ThemeType;
+  withImageBackground: boolean;
 }
 
 const getOptionTypeStyles = (
@@ -49,9 +50,10 @@ const sharedContainerStyles = ({
 }: SharedContainerStylesProps) => `
   border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
+  border: ${containsImage ? 'none' : 'inherit'};
   padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
-  width: 100%;
+  width: ${containsImage ? '156px' : '100%'};
   text-align: left;
 `;
 
@@ -118,6 +120,10 @@ const getBaseIconWrapperStyles = ({
 
 const CheckmarkWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
   ${getBaseIconWrapperStyles}
+  position: ${({ withImageBackground }) =>
+    withImageBackground ? 'absolute' : 'static'};
+  margin: ${({ withImageBackground }) =>
+    withImageBackground ? '10px' : 'unset'};
 `;
 
 const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
@@ -141,12 +147,11 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
     `};
 `;
 
-const TextContainer = styled.div<{ containsImage: boolean }>`
-  margin-left: ${SPACER.medium};
-  margin-bottom: ${({ containsImage }) =>
+const TextContainer = styled.div<{ containsImage: boolean; height: string }>`
+  margin-left: ${SPACER.small};
+  padding-top: ${({ containsImage }) =>
     containsImage ? SPACER.medium : 'unset'};
-  margin-top: ${({ containsImage }) =>
-    containsImage ? SPACER.medium : 'unset'};
+  height: ${({ height }) => height};
 `;
 
 const Text = styled.div<{ bold: boolean }>`
@@ -166,16 +171,20 @@ const SubText = styled.div`
 
 const ImageContainer = styled.div<{
   borderRadius: keyof ThemeType['BORDER_RADIUS'];
-  image: string;
 }>`
   width: 100%;
-  height: 25rem;
-  padding: ${SPACER.medium};
+  position: relative;
   border-top-left-radius: ${({ theme, borderRadius }) =>
     theme.BORDER_RADIUS[borderRadius]};
   border-top-right-radius: ${({ theme, borderRadius }) =>
     theme.BORDER_RADIUS[borderRadius]};
-  background-image: url(${({ image }) => image});
+`;
+
+const Image = styled.img`
+  width: inherit;
+  border-radius: inherit;
+  height: 154px;
+  object-fit: cover;
 `;
 
 export default {
@@ -188,4 +197,5 @@ export default {
   Text,
   TextContainer,
   ImageContainer,
+  Image,
 };

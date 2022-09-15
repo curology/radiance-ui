@@ -11,16 +11,20 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
-import personImg from 'shared/person.jpg';
+import personImg from 'shared/lifestyleImg.jpg';
 
 import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
 import { BREAKPOINTS } from '../../src/constants';
 
 const noop = () => undefined;
 
-const ExampleContainer = styled.div`
+const ExampleContainer = styled.div<{ containsImage: boolean }>`
   margin: 0 auto;
-  max-width: 350px;
+  max-width: ${({ containsImage }) => (containsImage ? 'unset' : '350px')};
+  display: ${({ containsImage }) => (containsImage ? 'flex' : 'unset')};
+  justify-content: ${({ containsImage }) =>
+    containsImage ? 'space-between' : 'unset'};
+  flex-wrap: ${({ containsImage }) => (containsImage ? 'wrap' : 'unset')};
 `;
 
 const FlexContainer = styled.div`
@@ -51,7 +55,7 @@ export const Interactive = () => {
   };
 
   return (
-    <ExampleContainer>
+    <ExampleContainer containsImage={false}>
       <OptionButton
         selected={active === 'improving'}
         text="Improving"
@@ -219,7 +223,7 @@ OptionButtonNotClickable.parameters = {
 export const WithControls = () => (
   <FlexContainer>
     <OptionsContainer>
-      <ExampleContainer>
+      <ExampleContainer containsImage={false}>
         <OptionButton
           text={text('text', 'Helper text')}
           subtext={text('subtext', 'subtext')}
@@ -249,21 +253,23 @@ WithControls.parameters = {
 export const WithImage = () => (
   <FlexContainer>
     <OptionsContainer>
-      <ExampleContainer>
+      <ExampleContainer containsImage>
         <OptionButton
           text="Helper text"
-          subtext="subtext"
+          subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit, et dolore magna aliqua."
           onClick={noop}
           optionType="radio"
           image={personImg}
-          borderRadius="medium"
+          borderRadius="small"
+          textContainerHeight="150px"
         />
         <OptionButton
           text="Helper text"
           onClick={noop}
           optionType="radio"
           image={personImg}
-          borderRadius="medium"
+          borderRadius="small"
+          textContainerHeight="150px"
         />
       </ExampleContainer>
     </OptionsContainer>
