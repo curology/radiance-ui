@@ -9,7 +9,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs';
+} from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
 import personImg from 'shared/lifestyleImg.jpg';
 
