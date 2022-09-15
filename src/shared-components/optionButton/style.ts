@@ -126,10 +126,12 @@ const getBaseIconWrapperStyles = ({
 
 const CheckmarkWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
   ${getBaseIconWrapperStyles}
-  position: ${({ withImageBackground }) =>
-    withImageBackground ? 'absolute' : 'static'};
-  margin: ${({ withImageBackground }) =>
-    withImageBackground ? '10px' : 'unset'};
+  ${({ withImageBackground }) =>
+    withImageBackground &&
+    `
+      position: absolute;
+      margin: 10px;
+   `};
 `;
 
 const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
