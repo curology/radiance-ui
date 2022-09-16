@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v27.1.0
+- [Components] Add `image` and `textContainerHeight` props to the `OptionButton` component
+
 # v27.0.0
 
 - [Accessibility] Add @react-aria/dialog package to modals for additional screenreader functionality and makes `onClick` prop required for `DialogModal` for accessibility ([1706](https://github.com/curology/radiance-ui/pull/1706))
