@@ -21,7 +21,7 @@ export interface OptionButtonProps {
   selected?: boolean;
   subtext?: React.ReactNode;
   text: string;
-  textContainerHeight?: string;
+  textContainerHeight?: number;
   withImageBackground?: boolean;
   [key: string]: unknown;
 }

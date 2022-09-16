@@ -261,7 +261,7 @@ export const WithImage = () => (
           optionType="radio"
           image={personImg}
           borderRadius="small"
-          textContainerHeight="150px"
+          textContainerHeight={150}
         />
         <OptionButton
           text="Helper text"
@@ -269,7 +269,7 @@ export const WithImage = () => (
           optionType="radio"
           image={personImg}
           borderRadius="small"
-          textContainerHeight="150px"
+          textContainerHeight={150}
         />
       </ExampleContainer>
     </OptionsContainer>

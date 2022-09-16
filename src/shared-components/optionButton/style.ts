@@ -51,12 +51,11 @@ const sharedContainerStyles = ({
   border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
   ${
-    containsImage
-      ? `
+    containsImage &&
+    `
       border: none;
     `
-      : ''
-  }
+  };
   padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: ${containsImage ? '156px' : '100%'};
@@ -155,7 +154,7 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
     `};
 `;
 
-const TextContainer = styled.div<{ containsImage: boolean; height?: string }>`
+const TextContainer = styled.div<{ containsImage: boolean; height?: number }>`
   margin-left: ${({ containsImage }) =>
     containsImage ? SPACER.small : SPACER.medium};
   ${({ containsImage }) =>
@@ -166,7 +165,7 @@ const TextContainer = styled.div<{ containsImage: boolean; height?: string }>`
   ${({ height }) =>
     height !== undefined &&
     `
-      height: ${height};
+      height: ${height}px;
     `};
 `;
 
