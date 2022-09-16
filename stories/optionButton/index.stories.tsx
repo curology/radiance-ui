@@ -9,17 +9,25 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs';
+} from '@storybook/addon-docs/blocks';
 import type { Meta } from '@storybook/react';
+import personImg from 'shared/lifestyleImg.jpg';
 
 import { AcneGlyph, MinusIcon, PlusIcon } from '../../src/icons';
 import { BREAKPOINTS } from '../../src/constants';
 
 const noop = () => undefined;
 
-const ExampleContainer = styled.div`
+const ExampleContainer = styled.div<{ containsImage: boolean }>`
   margin: 0 auto;
-  max-width: 350px;
+  max-width: ${({ containsImage }) => (containsImage ? 'unset' : '350px')};
+  ${({ containsImage }) =>
+    containsImage &&
+    `
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        `};
 `;
 
 const FlexContainer = styled.div`
@@ -50,7 +58,7 @@ export const Interactive = () => {
   };
 
   return (
-    <ExampleContainer>
+    <ExampleContainer containsImage={false}>
       <OptionButton
         selected={active === 'improving'}
         text="Improving"
@@ -218,7 +226,7 @@ OptionButtonNotClickable.parameters = {
 export const WithControls = () => (
   <FlexContainer>
     <OptionsContainer>
-      <ExampleContainer>
+      <ExampleContainer containsImage={false}>
         <OptionButton
           text={text('text', 'Helper text')}
           subtext={text('subtext', 'subtext')}
@@ -242,6 +250,36 @@ export const WithControls = () => (
 );
 
 WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
+export const WithImage = () => (
+  <FlexContainer>
+    <OptionsContainer>
+      <ExampleContainer containsImage>
+        <OptionButton
+          text="Helper text"
+          subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit, et dolore magna aliqua."
+          onClick={noop}
+          optionType="radio"
+          image={personImg}
+          borderRadius="small"
+          textContainerHeight={150}
+        />
+        <OptionButton
+          text="Helper text"
+          onClick={noop}
+          optionType="radio"
+          image={personImg}
+          borderRadius="small"
+          textContainerHeight={150}
+        />
+      </ExampleContainer>
+    </OptionsContainer>
+  </FlexContainer>
+);
+
+WithImage.parameters = {
   chromatic: { disable: true },
 };
 

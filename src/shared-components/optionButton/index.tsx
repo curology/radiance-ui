@@ -15,26 +15,74 @@ export interface OptionButtonProps {
    * Show custom icon in the unselected state
    */
   icon?: React.ReactNode;
+  image?: string;
   onClick: () => void;
   optionType: 'radio' | 'checkbox';
   selected?: boolean;
   subtext?: React.ReactNode;
   text: string;
+  textContainerHeight?: number;
+  withImageBackground?: boolean;
   [key: string]: unknown;
 }
 
 export interface OptionButtonNotClickableProps
   extends Pick<
     OptionButtonProps,
-    'borderRadius' | 'icon' | 'optionType' | 'subtext' | 'text'
+    'borderRadius' | 'icon' | 'optionType' | 'subtext' | 'text' | 'image'
   > {
   icon: JSX.Element;
 }
 
 export type OptionButtonContentProps = Pick<
   OptionButtonProps,
-  'buttonType' | 'icon' | 'optionType' | 'selected' | 'subtext' | 'text'
+  | 'buttonType'
+  | 'icon'
+  | 'optionType'
+  | 'selected'
+  | 'subtext'
+  | 'text'
+  | 'image'
+  | 'borderRadius'
+  | 'textContainerHeight'
 >;
+
+export type OptionButtonIconProps = Pick<
+  OptionButtonProps,
+  'buttonType' | 'icon' | 'optionType' | 'selected' | 'withImageBackground'
+>;
+
+export const OptionButtonIcon: React.FC<OptionButtonIconProps> = ({
+  buttonType = 'primary',
+  icon,
+  optionType,
+  selected = false,
+  withImageBackground = false,
+}) => {
+  if (isDefined(icon) && icon !== false) {
+    return (
+      <Style.IconWrapper
+        selected={selected}
+        optionType={optionType}
+        buttonType={buttonType}
+        withImageBackground={withImageBackground}
+      >
+        {selected ? <CheckmarkIcon /> : icon}
+      </Style.IconWrapper>
+    );
+  }
+
+  return (
+    <Style.CheckmarkWrapper
+      selected={selected}
+      optionType={optionType}
+      buttonType={buttonType}
+      withImageBackground={withImageBackground}
+    >
+      <CheckmarkIcon />
+    </Style.CheckmarkWrapper>
+  );
+};
 
 const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   buttonType = 'primary',
@@ -43,30 +91,35 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   selected = false,
   subtext,
   text,
+  image = '',
+  borderRadius = DEFAULT_BORDER_RADIUS,
+  textContainerHeight,
 }) => (
-  <Style.FlexContainer>
+  <Style.FlexContainer containsImage={!!image}>
     {/**
      * We sometimes use && conditionals such that we are passing in `false` as a value
      */}
-    {isDefined(icon) && icon !== false ? (
-      <Style.IconWrapper
-        selected={selected}
-        optionType={optionType}
-        buttonType={buttonType}
-      >
-        {selected ? <CheckmarkIcon /> : icon}
-      </Style.IconWrapper>
+    {image ? (
+      <Style.ImageContainer borderRadius={borderRadius}>
+        <OptionButtonIcon
+          selected={selected}
+          optionType={optionType}
+          buttonType={buttonType}
+          icon={icon}
+          withImageBackground
+        />
+        <Style.Image src={image} />
+      </Style.ImageContainer>
     ) : (
-      <Style.CheckmarkWrapper
+      <OptionButtonIcon
         selected={selected}
         optionType={optionType}
         buttonType={buttonType}
-      >
-        <CheckmarkIcon />
-      </Style.CheckmarkWrapper>
+        icon={icon}
+      />
     )}
-    <Style.TextContainer>
-      <Style.Text>{text}</Style.Text>
+    <Style.TextContainer containsImage={!!image} height={textContainerHeight}>
+      <Style.Text bold={!!image}>{text}</Style.Text>
       {isDefined(subtext) && <Style.SubText>{subtext}</Style.SubText>}
     </Style.TextContainer>
   </Style.FlexContainer>
@@ -74,6 +127,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
 
 interface OptionButton extends React.FC<OptionButtonProps> {
   NotClickable: typeof OptionButtonNotClickable;
+  height?: string;
 }
 
 /**
@@ -93,6 +147,8 @@ export const OptionButton: OptionButton = ({
   selected,
   subtext,
   text,
+  image = '',
+  textContainerHeight,
   ...rest
 }) => (
   <Style.ClickableContainer
@@ -102,6 +158,7 @@ export const OptionButton: OptionButton = ({
     role={optionType}
     aria-checked={selected}
     containerType="clickable"
+    containsImage={!!image}
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...rest}
   >
@@ -112,6 +169,9 @@ export const OptionButton: OptionButton = ({
       selected={selected}
       subtext={subtext}
       text={text}
+      image={image}
+      borderRadius={borderRadius}
+      textContainerHeight={textContainerHeight}
     />
   </Style.ClickableContainer>
 );
@@ -127,6 +187,7 @@ export const OptionButtonNotClickable: React.FC<
   optionType,
   subtext,
   text,
+  image = '',
   ...rest
 }) => (
   <Style.DisplayContainer
@@ -143,6 +204,7 @@ export const OptionButtonNotClickable: React.FC<
       selected={false}
       subtext={subtext}
       text={text}
+      image={image}
     />
   </Style.DisplayContainer>
 );
@@ -161,4 +223,6 @@ OptionButton.propTypes = {
   selected: PropTypes.bool,
   subtext: PropTypes.node,
   text: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  textContainerHeight: PropTypes.number,
 };

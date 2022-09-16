@@ -10,6 +10,7 @@ export interface BaseIconWrapperStylesProps {
   optionType?: 'radio' | 'checkbox';
   selected: boolean;
   theme: ThemeType;
+  withImageBackground: boolean;
 }
 
 const getOptionTypeStyles = (
@@ -34,6 +35,7 @@ const getTypeColor = (
 interface ContainerProps {
   borderRadius: keyof ThemeType['BORDER_RADIUS'];
   containerType: ContainerType;
+  containsImage?: boolean;
 }
 
 interface SharedContainerStylesProps extends ContainerProps {
@@ -44,12 +46,19 @@ const sharedContainerStyles = ({
   borderRadius,
   containerType,
   theme,
+  containsImage = false,
 }: SharedContainerStylesProps) => `
   border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
-  padding: ${SPACER.large};
+  ${
+    containsImage &&
+    `
+      border: none;
+    `
+  };
+  padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
-  width: 100%;
+  width: ${containsImage ? '156px' : '100%'};
   text-align: left;
 `;
 
@@ -66,9 +75,9 @@ const ClickableContainer = styled.button<ContainerProps>`
   }
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div<{ containsImage: boolean }>`
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row ${({ containsImage }) => (containsImage ? 'wrap' : 'nowrap')};
   justify-content: flex-start;
   align-items: center;
 `;
@@ -116,6 +125,12 @@ const getBaseIconWrapperStyles = ({
 
 const CheckmarkWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
   ${getBaseIconWrapperStyles}
+  ${({ withImageBackground }) =>
+    withImageBackground &&
+    `
+      position: absolute;
+      margin: 10px;
+   `};
 `;
 
 const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
@@ -139,18 +154,52 @@ const IconWrapper = styled.div<Omit<BaseIconWrapperStylesProps, 'theme'>>`
     `};
 `;
 
-const TextContainer = styled.div`
-  margin-left: ${SPACER.medium};
+const TextContainer = styled.div<{ containsImage: boolean; height?: number }>`
+  margin-left: ${({ containsImage }) =>
+    containsImage ? SPACER.small : SPACER.medium};
+  ${({ containsImage }) =>
+    containsImage &&
+    `
+      padding-top: ${SPACER.medium};
+    `};
+  ${({ height }) =>
+    height !== undefined &&
+    `
+      height: ${height}px;
+    `};
 `;
 
-const Text = styled.div`
+const Text = styled.div<{ bold: boolean }>`
   color: ${({ theme }) => theme.COLORS.primaryTint1};
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
+  ${({ bold, theme }) =>
+    bold &&
+    `
+      font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};
+    `}
 `;
 
 const SubText = styled.div`
   ${({ theme }) => TYPOGRAPHY_STYLE.caption(theme)}
   line-height: ${({ theme }) => setThemeLineHeight(theme, '1.5')};
+`;
+
+const ImageContainer = styled.div<{
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
+}>`
+  width: 100%;
+  position: relative;
+  border-top-left-radius: ${({ theme, borderRadius }) =>
+    theme.BORDER_RADIUS[borderRadius]};
+  border-top-right-radius: ${({ theme, borderRadius }) =>
+    theme.BORDER_RADIUS[borderRadius]};
+`;
+
+const Image = styled.img`
+  width: inherit;
+  border-radius: inherit;
+  height: 154px;
+  object-fit: cover;
 `;
 
 export default {
@@ -162,4 +211,6 @@ export default {
   SubText,
   Text,
   TextContainer,
+  ImageContainer,
+  Image,
 };

@@ -8,7 +8,7 @@ import {
   Source,
   Stories,
   Title,
-} from '@storybook/addon-docs/blocks';
+} from '@storybook/addon-docs';
 import type { Meta } from '@storybook/react';
 import { SegmentItemType } from 'src/shared-components/segmentedControl/types';
 import { FocusScope, useFocusManager } from '@react-aria/focus';
