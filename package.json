@@ -1,6 +1,6 @@
 {
   "name": "radiance-ui",
-  "version": "26.4.4",
+  "version": "27.0.0",
   "description": "Curology's React based component library",
   "main": "lib/index.cjs",
   "module": "lib/index.js",
@@ -171,6 +171,7 @@
     "@babel/runtime": "^7.17.9",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
+    "@react-aria/dialog": "^3.3.0",
     "@react-aria/focus": "^3.0.2",
     "focus-visible": "^5.1.0",
     "lodash.round": "^4.0.4",

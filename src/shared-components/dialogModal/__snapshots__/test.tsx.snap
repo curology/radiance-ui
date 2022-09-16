@@ -103,10 +103,64 @@ exports[`<DialogModal /> UI snapshots renders dialog modal with custom color 1`]
 }
 
 .emotion-4 {
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  z-index: 2000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F8F8FA;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .emotion-4 {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+.emotion-4:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #FFFFFF,0px 0px 0px 4px #332E54;
+}
+
+.emotion-6 {
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: color 350ms,-webkit-transform 350ms;
+  transition: color 350ms,transform 350ms;
+}
+
+.emotion-7 {
   margin-bottom: 1.5rem;
 }
 
-.emotion-4:last-of-type {
+.emotion-7:last-of-type {
   margin-bottom: 2rem;
 }
 
@@ -122,10 +176,31 @@ exports[`<DialogModal /> UI snapshots renders dialog modal with custom color 1`]
     />
     <div
       class="entering emotion-2 emotion-3"
+      role="alertdialog"
+      tabindex="-1"
     >
+      <button
+        aria-label="Close modal"
+        class="emotion-4 emotion-5"
+        tabindex="0"
+      >
+        <svg
+          class="emotion-6"
+          fill="none"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m16.01.93-.89-.88-7.11 7.1L.91.05.02.93l7.11 7.11-7.11 7.11.89.88 7.1-7.11 7.11 7.11.89-.88L8.9 8.04 16.01.93Z"
+            fill="currentColor"
+          />
+        </svg>
+      </button>
       <div>
         <p
-          class="emotion-4 emotion-5"
+          class="emotion-7 emotion-8"
         >
           Dialog Modal Children Content
         </p>

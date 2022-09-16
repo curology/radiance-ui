@@ -12,7 +12,7 @@ describe('<DialogModal />', () => {
   describe('UI snapshots', () => {
     it('renders dialog modal with custom color', () => {
       const { container, getByText } = render(
-        <DialogModal backgroundColor={primaryTheme.COLORS.background}>
+        <DialogModal backgroundColor={primaryTheme.COLORS.background} onClose={() => undefined}>
           <div>{modalBody}</div>
         </DialogModal>,
         { withPortalContainer: true },
@@ -26,7 +26,7 @@ describe('<DialogModal />', () => {
 
   it('render children content correctly', () => {
     const { getAllByText, getByText } = render(
-      <DialogModal title={modalTitle}>{modalBody}</DialogModal>,
+      <DialogModal title={modalTitle} onClose={() => undefined}>{modalBody}</DialogModal>,
       { withPortalContainer: true },
     );
 
