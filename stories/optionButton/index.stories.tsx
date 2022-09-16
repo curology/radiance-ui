@@ -21,10 +21,13 @@ const noop = () => undefined;
 const ExampleContainer = styled.div<{ containsImage: boolean }>`
   margin: 0 auto;
   max-width: ${({ containsImage }) => (containsImage ? 'unset' : '350px')};
-  display: ${({ containsImage }) => (containsImage ? 'flex' : 'unset')};
-  justify-content: ${({ containsImage }) =>
-    containsImage ? 'space-between' : 'unset'};
-  flex-wrap: ${({ containsImage }) => (containsImage ? 'wrap' : 'unset')};
+  ${({ containsImage }) =>
+    containsImage &&
+    `
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        `};
 `;
 
 const FlexContainer = styled.div`
