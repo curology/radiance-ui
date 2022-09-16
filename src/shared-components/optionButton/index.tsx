@@ -223,4 +223,6 @@ OptionButton.propTypes = {
   selected: PropTypes.bool,
   subtext: PropTypes.node,
   text: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  textContainerHeight: PropTypes.number,
 };
