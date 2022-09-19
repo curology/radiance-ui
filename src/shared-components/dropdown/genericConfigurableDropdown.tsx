@@ -37,7 +37,7 @@ export const GenericConfigurableDropdown = <T extends OptionType>({
   const theme = useTheme();
 
   return (
-    <Style.DropdownContainer textAlign={textAlign} >
+    <Style.DropdownContainer textAlign={textAlign}>
       <select
         css={Style.dropdownInputStyle({
           borderRadius,

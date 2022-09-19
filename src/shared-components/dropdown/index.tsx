@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
-import { GenericConfigurableDropdown } from './genericConfigurableDropdown'
+
+import { GenericConfigurableDropdown } from './genericConfigurableDropdown';
 
 export type OptionValue = string | number;
 
@@ -36,10 +37,6 @@ interface DropdownProps<T> {
    */
   onDropdownContainerFocus?: (event?: React.FocusEvent) => void;
   options: T[];
-  /**
-   * Specifies maximum height of the expanded dropdown
-   */
-  optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
   /**
    * The currently selected option
@@ -61,12 +58,10 @@ export const Dropdown = <T extends OptionType>({
   value,
 }: DropdownProps<T>) => {
   const theme = useTheme();
-  //const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
   const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
-  const onSelectChange = (
-    event: React.ChangeEvent<HTMLSelectElement>,
-  ) => {
+  const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { target } = event;
     const { selectedIndex, selectedOptions } = target;
     const selectedOption = options[selectedIndex];
@@ -108,7 +103,6 @@ Dropdown.propTypes = {
       disabled: PropTypes.bool,
     }).isRequired,
   ).isRequired,
-  optionsContainerMaxHeight: PropTypes.string,
   textAlign: PropTypes.oneOf(['left', 'center']),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

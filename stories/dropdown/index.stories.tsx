@@ -45,7 +45,6 @@ const options = [
   { value: 20, label: 'Twentieth option' },
   { value: '21', label: 'Twenty-First option' },
   { value: '22', label: 'Twenty-Second option' },
-
 ];
 
 export const Desktop = () => {
@@ -94,7 +93,7 @@ export const Mobile = () => {
           value={selectedOption}
           options={options}
           onSelectChange={onChange}
-          preventDisabledDefaultOption={true}
+          preventDisabledDefaultOption
           textAlign="left"
           onDropdownContainerFocus={() => undefined}
         />

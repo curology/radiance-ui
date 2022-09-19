@@ -1,21 +1,22 @@
 import React from 'react';
 import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
 
-import { Dropdown } from './index';
 import { GenericConfigurableDropdown } from './genericConfigurableDropdown';
+
+import { Dropdown } from './index';
 
 const options = [
   { value: 'test1', label: 'Test1' },
   { value: 'test2', label: 'Test2' },
   { value: 'test3', label: 'Test3' },
 ];
-const options_with_disabled_first_option= [
-  { value: 'test1', label: 'Test1', disabled: true},
+const optionsWithDisabledFirstOption = [
+  { value: 'test1', label: 'Test1', disabled: true },
   { value: 'test2', label: 'Test2' },
   { value: 'test3', label: 'Test3' },
 ];
 
-const options_with_disabled_non_first_option= [
+const optionsWithDisabledNonFirstOption = [
   { value: 'test1', label: 'Test1' },
   { value: 'test2', label: 'Test2', disabled: true },
   { value: 'test3', label: 'Test3' },
@@ -36,32 +37,40 @@ describe('<Dropdown />', () => {
       expect(getAllByRole('option')).toHaveLength(3);
       expect(queryAllByRole('button')).toHaveLength(0);
     });
-    
+
     describe('when passed an option array with disabled elements', () => {
       it('removes disabled attribute from first/default option', () => {
         window.document.documentElement.ontouchstart = () => undefined;
         const { getByRole, getAllByRole } = render(
-          <Dropdown value="test1" options={options_with_disabled_first_option} onChange={() => undefined} />,
+          <Dropdown
+            value="test1"
+            options={optionsWithDisabledFirstOption}
+            onChange={() => undefined}
+          />,
         );
         delete window.document.documentElement.ontouchstart;
 
         getByRole('combobox');
-        let options = getAllByRole('option');
-        expect(options).toHaveLength(3);
-        expect(options[0]).not.toBeDisabled();
+        const resultOptions = getAllByRole('option');
+        expect(resultOptions).toHaveLength(3);
+        expect(resultOptions[0]).not.toBeDisabled();
       });
 
       it('leaves disabled attribute from non-first/default option', () => {
         window.document.documentElement.ontouchstart = () => undefined;
         const { getByRole, getAllByRole } = render(
-          <Dropdown value="test1" options={options_with_disabled_non_first_option} onChange={() => undefined} />,
+          <Dropdown
+            value="test1"
+            options={optionsWithDisabledNonFirstOption}
+            onChange={() => undefined}
+          />,
         );
         delete window.document.documentElement.ontouchstart;
 
         getByRole('combobox');
-        let options = getAllByRole('option');
-        expect(options).toHaveLength(3);
-        expect(options[1]).toBeDisabled()
+        const resultOptions = getAllByRole('option');
+        expect(resultOptions).toHaveLength(3);
+        expect(resultOptions[1]).toBeDisabled();
       });
     });
   });
@@ -75,7 +84,7 @@ describe('<GenericConfigurableDropdown />', () => {
           onDropdownContainerFocus={() => undefined}
           onSelectChange={() => undefined}
           borderRadius="4px"
-          preventDisabledDefaultOption={true}
+          preventDisabledDefaultOption
           options={options}
           textAlign="left"
         />,
@@ -90,7 +99,7 @@ describe('<GenericConfigurableDropdown />', () => {
       const { getByRole } = render(
         <GenericConfigurableDropdown
           borderRadius="4px"
-          preventDisabledDefaultOption={true}
+          preventDisabledDefaultOption
           options={options}
           onDropdownContainerFocus={() => undefined}
           onSelectChange={spy}
@@ -112,7 +121,7 @@ describe('<GenericConfigurableDropdown />', () => {
       const { getByRole, user } = render(
         <GenericConfigurableDropdown
           borderRadius="4px"
-          preventDisabledDefaultOption={true}
+          preventDisabledDefaultOption
           options={options}
           onDropdownContainerFocus={spy}
           onSelectChange={() => undefined}
@@ -126,4 +135,3 @@ describe('<GenericConfigurableDropdown />', () => {
     });
   });
 });
-
