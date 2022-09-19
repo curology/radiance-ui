@@ -1,14 +1,23 @@
 import React from 'react';
 import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
 
-import { DesktopDropdown } from './desktopDropdown';
-import { MobileDropdown } from './mobileDropdown';
-
 import { Dropdown } from './index';
+import { GenericConfigurableDropdown } from './genericConfigurableDropdown';
 
 const options = [
   { value: 'test1', label: 'Test1' },
   { value: 'test2', label: 'Test2' },
+  { value: 'test3', label: 'Test3' },
+];
+const options_with_disabled_first_option= [
+  { value: 'test1', label: 'Test1', disabled: true},
+  { value: 'test2', label: 'Test2' },
+  { value: 'test3', label: 'Test3' },
+];
+
+const options_with_disabled_non_first_option= [
+  { value: 'test1', label: 'Test1' },
+  { value: 'test2', label: 'Test2', disabled: true },
   { value: 'test3', label: 'Test3' },
 ];
 
@@ -27,28 +36,46 @@ describe('<Dropdown />', () => {
       expect(getAllByRole('option')).toHaveLength(3);
       expect(queryAllByRole('button')).toHaveLength(0);
     });
-  });
+    
+    describe('when passed an option array with disabled elements', () => {
+      it('removes disabled attribute from first/default option', () => {
+        window.document.documentElement.ontouchstart = () => undefined;
+        const { getByRole, getAllByRole } = render(
+          <Dropdown value="test1" options={options_with_disabled_first_option} onChange={() => undefined} />,
+        );
+        delete window.document.documentElement.ontouchstart;
 
-  describe('when on non-touch screen', () => {
-    it('renders <DesktopDropdown />', () => {
-      const { getByRole } = render(
-        <Dropdown value="test1" options={options} onChange={() => null} />,
-      );
+        getByRole('combobox');
+        let options = getAllByRole('option');
+        expect(options).toHaveLength(3);
+        expect(options[0]).not.toBeDisabled();
+      });
 
-      // button only used in Desktop implementation
-      expect(getByRole('button')).toBeTruthy();
+      it('leaves disabled attribute from non-first/default option', () => {
+        window.document.documentElement.ontouchstart = () => undefined;
+        const { getByRole, getAllByRole } = render(
+          <Dropdown value="test1" options={options_with_disabled_non_first_option} onChange={() => undefined} />,
+        );
+        delete window.document.documentElement.ontouchstart;
+
+        getByRole('combobox');
+        let options = getAllByRole('option');
+        expect(options).toHaveLength(3);
+        expect(options[1]).toBeDisabled()
+      });
     });
   });
 });
 
-describe('<MobileDropdown />', () => {
+describe('<GenericConfigurableDropdown />', () => {
   describe('UI snapshots', () => {
     it('renders correctly', () => {
       const { container } = render(
-        <MobileDropdown
+        <GenericConfigurableDropdown
           onDropdownContainerFocus={() => undefined}
-          onMobileSelectChange={() => undefined}
+          onSelectChange={() => undefined}
           borderRadius="4px"
+          preventDisabledDefaultOption={true}
           options={options}
           textAlign="left"
         />,
@@ -61,11 +88,12 @@ describe('<MobileDropdown />', () => {
     it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
       const { getByRole } = render(
-        <MobileDropdown
+        <GenericConfigurableDropdown
           borderRadius="4px"
+          preventDisabledDefaultOption={true}
           options={options}
           onDropdownContainerFocus={() => undefined}
-          onMobileSelectChange={spy}
+          onSelectChange={spy}
           value=""
           textAlign="left"
         />,
@@ -82,11 +110,12 @@ describe('<MobileDropdown />', () => {
     it('should be invoked on focus', async () => {
       const spy = jest.fn();
       const { getByRole, user } = render(
-        <MobileDropdown
+        <GenericConfigurableDropdown
           borderRadius="4px"
+          preventDisabledDefaultOption={true}
           options={options}
           onDropdownContainerFocus={spy}
-          onMobileSelectChange={() => undefined}
+          onSelectChange={() => undefined}
           value=""
           textAlign="left"
         />,
@@ -98,94 +127,3 @@ describe('<MobileDropdown />', () => {
   });
 });
 
-describe('<DesktopDropdown />', () => {
-  it('renders the current option text', () => {
-    const { getByRole } = render(
-      <DesktopDropdown
-        borderRadius="4px"
-        closeDropdown={() => undefined}
-        currentOption={{ value: 'test1', label: 'Test1' }}
-        isOpen={false}
-        onDesktopSelectChange={() => undefined}
-        onDropdownContainerFocus={() => undefined}
-        options={options}
-        optionsContainerMaxHeight="250px"
-        textAlign="left"
-        toggleDropdown={() => undefined}
-      />,
-    );
-
-    expect(getByRole('button', { name: 'Test1' })).toBeTruthy();
-  });
-
-  describe('onSelectClick callback', () => {
-    it(`${ON_CLICK_TEST}`, async () => {
-      const spy = jest.fn();
-      const { getByRole, user } = render(
-        <DesktopDropdown
-          borderRadius="4px"
-          options={options}
-          currentOption={{ value: 'test1', label: 'Test1' }}
-          toggleDropdown={spy}
-          optionsContainerMaxHeight="250px"
-          closeDropdown={() => undefined}
-          onDesktopSelectChange={() => undefined}
-          onDropdownContainerFocus={() => undefined}
-          textAlign="left"
-          isOpen={false}
-        />,
-      );
-
-      await user.click(getByRole('button'));
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onOptionClick callback', () => {
-    it(`${ON_CLICK_TEST}`, async () => {
-      const spy = jest.fn();
-      const { getAllByRole, user } = render(
-        <DesktopDropdown
-          borderRadius="4px"
-          options={options}
-          currentOption={{ value: 'test1', label: 'Test1' }}
-          onDesktopSelectChange={spy}
-          onDropdownContainerFocus={() => undefined}
-          isOpen
-          optionsContainerMaxHeight="250px"
-          toggleDropdown={() => null}
-          closeDropdown={() => null}
-          textAlign="left"
-        />,
-      );
-
-      const listItems = getAllByRole('menuitemradio');
-      // Arbitrarily select last item
-      await user.click(listItems[listItems.length - 1]);
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onDropdownContainerFocus callback', () => {
-    it('should be invoked on focus', async () => {
-      const spy = jest.fn();
-      const { user } = render(
-        <DesktopDropdown
-          borderRadius="4px"
-          options={options}
-          currentOption={{ value: 'test1', label: 'Test1' }}
-          onDesktopSelectChange={() => undefined}
-          onDropdownContainerFocus={spy}
-          isOpen
-          optionsContainerMaxHeight="250px"
-          toggleDropdown={() => null}
-          closeDropdown={() => null}
-          textAlign="left"
-        />,
-      );
-
-      await user.tab();
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-});

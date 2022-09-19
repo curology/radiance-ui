@@ -9,7 +9,7 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import { Dropdown, OptionType } from 'src/shared-components/dropdown';
-import { MobileDropdown } from 'src/shared-components/dropdown/mobileDropdown';
+import { GenericConfigurableDropdown } from 'src/shared-components/dropdown/genericConfigurableDropdown';
 import type { Meta } from '@storybook/react';
 
 const DropdownContainer = styled.div`
@@ -27,7 +27,25 @@ const options = [
   { value: 1, label: 'First option' },
   { value: 2, label: 'Second option' },
   { value: '3', label: 'Third option' },
-  { value: '4', label: 'Fourth option' },
+  { value: '5', label: 'Fifth option' },
+  { value: '6', label: 'Sixth option' },
+  { value: '7', label: 'Seventh option' },
+  { value: '8', label: 'Eighth option' },
+  { value: '9', label: 'Nineth option' },
+  { value: 10, label: 'Tenth option' },
+  { value: 11, label: 'Eleventh option' },
+  { value: 12, label: 'Twelveth option' },
+  { value: 13, label: 'Thirteenth option' },
+  { value: 14, label: 'Fourteenth option' },
+  { value: 15, label: 'Fifteenth option' },
+  { value: 16, label: 'Sixteenth option' },
+  { value: 17, label: 'Seventeenth option' },
+  { value: 18, label: 'Eighteenth option' },
+  { value: 19, label: 'Nineteenth option' },
+  { value: 20, label: 'Twentieth option' },
+  { value: '21', label: 'Twenty-First option' },
+  { value: '22', label: 'Twenty-Second option' },
+
 ];
 
 export const Desktop = () => {
@@ -71,11 +89,12 @@ export const Mobile = () => {
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control -- TODO: Figure out form/label paradigm */}
       <label style={{ display: 'unset' }}>
         Select an option:
-        <MobileDropdown
+        <GenericConfigurableDropdown
           borderRadius="4px"
           value={selectedOption}
           options={options}
-          onMobileSelectChange={onChange}
+          onSelectChange={onChange}
+          preventDisabledDefaultOption={true}
           textAlign="left"
           onDropdownContainerFocus={() => undefined}
         />
@@ -105,9 +124,9 @@ const DROPDOWN_STORIES: DropdownStories = {
           <Heading>Dropdown Props:</Heading>
           <ArgsTable of={Dropdown} />
           <Stories includePrimary />
-          <Description of={MobileDropdown} />
+          <Description of={GenericConfigurableDropdown} />
           <Heading>MobileDropdown Props:</Heading>
-          <ArgsTable of={MobileDropdown} />
+          <ArgsTable of={GenericConfigurableDropdown} />
         </React.Fragment>
       ),
     },

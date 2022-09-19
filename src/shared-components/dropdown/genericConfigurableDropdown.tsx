@@ -6,36 +6,38 @@ import Style from './style';
 
 import { OptionType, OptionValue } from '.';
 
-interface MobileDropdownProps<T> {
+interface GenericConfigurableDropdownProps<T> {
   borderRadius: string;
   id?: string;
   onDropdownContainerFocus: (
     event: React.FocusEvent<HTMLSelectElement>,
   ) => void;
-  onMobileSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
   options: T[];
+  preventDisabledDefaultOption: boolean;
   textAlign: 'left' | 'center';
   value?: OptionValue;
 }
 
 /**
- * The mobile dropdown is built into the `<Dropdown />` component and cannot be used individually.
+ * The generic configurable dropdown is built into the `<Dropdown />` component and cannot be used individually.
  *
- * `<Dropdown /> ` will determine if the user is on a mobile device and render a true `select` tag with `option`(s).
+ * `<Dropdown /> ` will determine if the user is on a mobile device and render the `select` element by providing mobile-friendly config options
  */
-export const MobileDropdown = <T extends OptionType>({
+export const GenericConfigurableDropdown = <T extends OptionType>({
   borderRadius,
   id,
-  onMobileSelectChange,
+  onSelectChange,
   onDropdownContainerFocus,
   options,
+  preventDisabledDefaultOption,
   textAlign,
   value,
-}: MobileDropdownProps<T>) => {
+}: GenericConfigurableDropdownProps<T>) => {
   const theme = useTheme();
 
   return (
-    <Style.DropdownContainer textAlign={textAlign}>
+    <Style.DropdownContainer textAlign={textAlign} >
       <select
         css={Style.dropdownInputStyle({
           borderRadius,
@@ -45,7 +47,7 @@ export const MobileDropdown = <T extends OptionType>({
         })}
         id={id}
         value={value ?? ''}
-        onChange={onMobileSelectChange}
+        onChange={onSelectChange}
         onFocus={onDropdownContainerFocus}
       >
         {options.map((option, index) => {
@@ -55,7 +57,7 @@ export const MobileDropdown = <T extends OptionType>({
            * Covers the case where default value is disabled
            * In mobile you cannot have a selected value as disabled option
            */
-          if (option.value === value) {
+          if (option.value === value && preventDisabledDefaultOption) {
             isDisabled = false;
           }
 
@@ -71,7 +73,7 @@ export const MobileDropdown = <T extends OptionType>({
         })}
       </select>
       <Style.IconContainer>
-        <ChevronIcon width={10} height={10} />
+        <ChevronIcon width={15} height={15} />
       </Style.IconContainer>
     </Style.DropdownContainer>
   );

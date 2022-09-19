@@ -82,3 +82,9 @@ lib/
 
 # JetBrains
 .idea/
+
+# Yalc data for local component library development
+.yalc
+yalc.lock
+
+

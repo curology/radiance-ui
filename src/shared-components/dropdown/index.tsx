@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
-
-import { MobileDropdown } from './mobileDropdown';
-import { DesktopDropdown } from './desktopDropdown';
-import { isDefined } from '../../utils/isDefined';
+import { GenericConfigurableDropdown } from './genericConfigurableDropdown'
 
 export type OptionValue = string | number;
 
@@ -60,24 +57,14 @@ export const Dropdown = <T extends OptionType>({
   onChange,
   onDropdownContainerFocus,
   options,
-  optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
 }: DropdownProps<T>) => {
   const theme = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
+  //const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
   const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
-
-  const toggleDropdown = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
-  };
-
-  const closeDropdown = () => {
-    setIsOpen(false);
-  };
-
-  const onMobileSelectChange = (
+  const onSelectChange = (
     event: React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const { target } = event;
@@ -87,36 +74,6 @@ export const Dropdown = <T extends OptionType>({
     if (selectedOptions.length) {
       onChange(selectedOption);
     }
-
-    closeDropdown();
-  };
-
-  const onDesktopSelectChange = (
-    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
-  ) => {
-    const { currentTarget } = event;
-
-    if (currentTarget.hasAttribute('disabled')) {
-      return;
-    }
-
-    // Next Value may be returned as null if the value of <li> is undefined. We want to cast to the real value of undefined
-    const nextValue = currentTarget.getAttribute('value') ?? undefined;
-
-    const selectedOption = options.find((option) => {
-      const { value: optionValue } = option;
-
-      // This covers numbers and strings. <li> value is always returned as string. Falsy case covers undefined.
-      return isDefined(optionValue)
-        ? `${optionValue}` === nextValue
-        : optionValue === nextValue;
-    });
-
-    if (selectedOption) {
-      onChange(selectedOption);
-    }
-
-    closeDropdown();
   };
 
   const handleOnDropdownContainerFocus = (event: React.FocusEvent) => {
@@ -125,35 +82,16 @@ export const Dropdown = <T extends OptionType>({
     }
   };
 
-  if (touchSupported) {
-    return (
-      <MobileDropdown
-        borderRadius={borderRadiusValue}
-        id={id}
-        onMobileSelectChange={onMobileSelectChange}
-        onDropdownContainerFocus={handleOnDropdownContainerFocus}
-        options={options}
-        textAlign={textAlign}
-        value={value}
-      />
-    );
-  }
-
-  const currentOption = options.find((option) => option.value === value);
-
+  // if (touchSupported) {}
   return (
-    <DesktopDropdown
+    <GenericConfigurableDropdown
       borderRadius={borderRadiusValue}
-      closeDropdown={closeDropdown}
-      currentOption={currentOption}
       id={id}
-      isOpen={isOpen}
-      onDesktopSelectChange={onDesktopSelectChange}
       onDropdownContainerFocus={handleOnDropdownContainerFocus}
+      onSelectChange={onSelectChange}
+      preventDisabledDefaultOption={touchSupported}
       options={options}
-      optionsContainerMaxHeight={optionsContainerMaxHeight}
       textAlign={textAlign}
-      toggleDropdown={toggleDropdown}
       value={value}
     />
   );
