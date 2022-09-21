@@ -7,15 +7,39 @@ import Style from './style';
 import { OptionType, OptionValue } from '.';
 
 interface GenericConfigurableDropdownProps<T> {
+  /**
+   * Style option for borderRadius of the select element.
+   */
   borderRadius: string;
+  /**
+   * ID for label associated control.
+   */
   id?: string;
+  /**
+   * The handler to be invoked on focus.
+   */
   onDropdownContainerFocus: (
     event: React.FocusEvent<HTMLSelectElement>,
   ) => void;
+  /**
+   * The handler to be invoked on option change.
+   */
   onSelectChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  /**
+   * List of options for the select to display.
+   */
   options: T[];
+  /**
+   * Indicates whether or not the select should be allowed to initialize its default value to a disabled value. Should be 'true' for mobile contexts.
+   */
   preventDisabledDefaultOption: boolean;
+  /**
+   * Style option for text-alignment of the select.
+   */
   textAlign: 'left' | 'center';
+  /**
+   * The currently selected option.
+   */
   value?: OptionValue;
 }
 
@@ -30,7 +54,7 @@ export const GenericConfigurableDropdown = <T extends OptionType>({
   onSelectChange,
   onDropdownContainerFocus,
   options,
-  preventDisabledDefaultOption,
+  preventDisabledDefaultOption = false,
   textAlign,
   value,
 }: GenericConfigurableDropdownProps<T>) => {
