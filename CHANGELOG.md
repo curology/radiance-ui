@@ -1,6 +1,11 @@
 # CHANGELOG
 
+# v27.2.0
+
+- [Colors] Update `secondaryTint4` color
+
 # v27.1.0
+
 - [Components] Add `image` and `textContainerHeight` props to the `OptionButton` component
 
 # v27.0.0
