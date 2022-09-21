@@ -10,7 +10,7 @@ const PRIMARY_COLORS = {
   secondaryTint1: '#B8B4E8',
   secondaryTint2: '#CAC7EE',
   secondaryTint3: '#EFEEF7',
-  secondaryTint4: '#EFEEF7',
+  secondaryTint4: '#F7F6FD',
   tertiary: '#F8F8FA',
   tertiaryTint1: '#F8F8FA',
   tertiaryTint2: '#F8F8FA',
