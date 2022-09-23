@@ -58,7 +58,7 @@ const sharedContainerStyles = ({
   };
   padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
-  width: ${containsImage ? '156px' : '100%'};
+  width: ${containsImage ? '151px' : '100%'};
   text-align: left;
 `;
 
@@ -161,6 +161,7 @@ const TextContainer = styled.div<{ containsImage: boolean; height?: number }>`
     containsImage &&
     `
       padding-top: ${SPACER.medium};
+      margin-right: ${SPACER.small};
     `};
   ${({ height }) =>
     height !== undefined &&
