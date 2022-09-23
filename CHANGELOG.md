@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v27.2.1
+
+- [Components] Update `width` and `margin` on `OptionButton`
+
 # v27.2.0
 
 - [Colors] Update `secondaryTint4` color
