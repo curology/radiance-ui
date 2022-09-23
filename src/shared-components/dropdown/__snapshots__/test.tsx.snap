@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<GenericConfigurableDropdown /> UI snapshots renders correctly 1`] = `
+exports[`<Dropdown /> UI snapshots renders correctly 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;

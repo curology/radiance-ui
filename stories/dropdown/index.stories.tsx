@@ -9,7 +9,6 @@ import {
   Title,
 } from '@storybook/addon-docs';
 import { Dropdown, OptionType } from 'src/shared-components/dropdown';
-import { GenericConfigurableDropdown } from 'src/shared-components/dropdown/genericConfigurableDropdown';
 import type { Meta } from '@storybook/react';
 
 const DropdownContainer = styled.div`
@@ -27,10 +26,11 @@ const options = [
   { value: 1, label: 'First option' },
   { value: 2, label: 'Second option' },
   { value: '3', label: 'Third option' },
+  { value: '4', label: 'Fourth option' },
   { value: '5', label: 'Fifth option' },
 ];
 
-export const Desktop = () => {
+export const Default = () => {
   const [selectedOption, setSelectedOption] = useState<OptionType['value']>(
     options[0].value,
   );
@@ -51,37 +51,6 @@ export const Desktop = () => {
         />
       </label>
     </DesktopContainer>
-  );
-};
-
-export const Mobile = () => {
-  const [selectedOption, setSelectedOption] =
-    useState<OptionType['value']>(undefined);
-
-  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const { value, selectedOptions } = event.target;
-
-    if (selectedOptions.length) {
-      setSelectedOption(value);
-    }
-  };
-
-  return (
-    <DropdownContainer>
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control -- TODO: Figure out form/label paradigm */}
-      <label style={{ display: 'unset' }}>
-        Select an option:
-        <GenericConfigurableDropdown
-          borderRadius="4px"
-          value={selectedOption}
-          options={options}
-          onSelectChange={onChange}
-          preventDisabledDefaultOption
-          textAlign="left"
-          onDropdownContainerFocus={() => undefined}
-        />
-      </label>
-    </DropdownContainer>
   );
 };
 
@@ -106,9 +75,6 @@ const DROPDOWN_STORIES: DropdownStories = {
           <Heading>Dropdown Props:</Heading>
           <ArgsTable of={Dropdown} />
           <Stories includePrimary />
-          <Description of={GenericConfigurableDropdown} />
-          <Heading>GenericConfigurableDropdown Props:</Heading>
-          <ArgsTable of={GenericConfigurableDropdown} />
         </React.Fragment>
       ),
     },

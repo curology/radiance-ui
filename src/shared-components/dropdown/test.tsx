@@ -1,8 +1,6 @@
 import React from 'react';
 import { fireEvent, render } from 'src/tests/testingLibraryHelpers';
 
-import { GenericConfigurableDropdown } from './genericConfigurableDropdown';
-
 import { Dropdown } from './index';
 
 const options = [
@@ -25,6 +23,42 @@ const optionsWithDisabledNonFirstOption = [
 const ON_CLICK_TEST = 'should be invoked onClick';
 
 describe('<Dropdown />', () => {
+  describe('UI snapshots', () => {
+    it('renders correctly', () => {
+      const { container } = render(
+        <Dropdown value="test1" options={options} onChange={() => undefined} />,
+      );
+      expect(container.firstElementChild).toMatchSnapshot();
+    });
+  });
+
+  describe('onSelectChange callback', () => {
+    it(`${ON_CLICK_TEST}`, () => {
+      const spy = jest.fn();
+      const { getByRole } = render(
+        <Dropdown value="test1" options={options} onChange={spy} />,
+      );
+
+      const select = getByRole('combobox');
+      fireEvent.change(select, { value: 'test1' });
+
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
+  describe('onDropdownContainerFocus callback', () => {
+    it('should be invoked on focus', async () => {
+      const spy = jest.fn();
+      const { getByRole, user } = render(
+        <Dropdown value="test1" options={options} onChange={()=> null} onDropdownContainerFocus={spy} />
+
+      );
+
+      await user.click(getByRole('combobox'));
+      expect(spy).toHaveBeenCalled();
+    });
+  });
+
   describe('on touch screen', () => {
     it('renders <MobileDropdown />', () => {
       window.document.documentElement.ontouchstart = () => undefined;
@@ -72,66 +106,6 @@ describe('<Dropdown />', () => {
         expect(resultOptions).toHaveLength(3);
         expect(resultOptions[1]).toBeDisabled();
       });
-    });
-  });
-});
-
-describe('<GenericConfigurableDropdown />', () => {
-  describe('UI snapshots', () => {
-    it('renders correctly', () => {
-      const { container } = render(
-        <GenericConfigurableDropdown
-          onDropdownContainerFocus={() => undefined}
-          onSelectChange={() => undefined}
-          borderRadius="4px"
-          preventDisabledDefaultOption
-          options={options}
-          textAlign="left"
-        />,
-      );
-      expect(container.firstElementChild).toMatchSnapshot();
-    });
-  });
-
-  describe('onSelectChange callback', () => {
-    it(`${ON_CLICK_TEST}`, () => {
-      const spy = jest.fn();
-      const { getByRole } = render(
-        <GenericConfigurableDropdown
-          borderRadius="4px"
-          preventDisabledDefaultOption
-          options={options}
-          onDropdownContainerFocus={() => undefined}
-          onSelectChange={spy}
-          value=""
-          textAlign="left"
-        />,
-      );
-
-      const select = getByRole('combobox');
-      fireEvent.change(select, { value: 'test1' });
-
-      expect(spy).toHaveBeenCalled();
-    });
-  });
-
-  describe('onDropdownContainerFocus callback', () => {
-    it('should be invoked on focus', async () => {
-      const spy = jest.fn();
-      const { getByRole, user } = render(
-        <GenericConfigurableDropdown
-          borderRadius="4px"
-          preventDisabledDefaultOption
-          options={options}
-          onDropdownContainerFocus={spy}
-          onSelectChange={() => undefined}
-          value=""
-          textAlign="left"
-        />,
-      );
-
-      await user.click(getByRole('combobox'));
-      expect(spy).toHaveBeenCalled();
     });
   });
 });

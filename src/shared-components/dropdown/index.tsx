@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-import { GenericConfigurableDropdown } from './genericConfigurableDropdown';
+
+import { ChevronIcon } from '../../icons';
+import Style from './style';
 
 export type OptionValue = string | number;
 
@@ -46,7 +48,7 @@ interface DropdownProps<T> {
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
- * This ships with a mobile implementation that will handle mobile devices automatically.
+ * This ships with a mobile-friendly implementation that will handle mobile devices automatically.
  */
 export const Dropdown = <T extends OptionType>({
   borderRadius,
@@ -58,9 +60,7 @@ export const Dropdown = <T extends OptionType>({
   value,
 }: DropdownProps<T>) => {
   const theme = useTheme();
-  // const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
-  const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
   const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { target } = event;
     const { selectedIndex, selectedOptions } = target;
@@ -77,18 +77,46 @@ export const Dropdown = <T extends OptionType>({
     }
   };
 
-  // if (touchSupported) {}
   return (
-    <GenericConfigurableDropdown
-      borderRadius={borderRadiusValue}
-      id={id}
-      onDropdownContainerFocus={handleOnDropdownContainerFocus}
-      onSelectChange={onSelectChange}
-      preventDisabledDefaultOption={touchSupported}
-      options={options}
-      textAlign={textAlign}
-      value={value}
-    />
+
+    <Style.DropdownContainer textAlign={textAlign}>
+      <select
+        css={Style.dropdownInputStyle({
+          borderRadius: borderRadius ?? theme.BORDER_RADIUS.small,
+          shouldBeFullyRounded: true,
+          textAlign,
+          theme,
+        })}
+        id={id}
+        value={value ?? ''}
+        onChange={onSelectChange}
+        onFocus={handleOnDropdownContainerFocus}
+      >
+        {options.map((option, index) => {
+          let isDisabled = option.disabled;
+
+          /*
+           * We use touchSupported to prevent setting the default value to disabled
+           */
+          if (option.value === value && touchSupported) {
+            isDisabled = false;
+          }
+
+          return (
+            <option
+              key={option.value ?? `undefined-${index}`}
+              value={option.value}
+              disabled={isDisabled}
+            >
+              {option.label}
+            </option>
+          );
+        })}
+      </select>
+      <Style.IconContainer>
+        <ChevronIcon width={15} height={15} />
+      </Style.IconContainer>
+    </Style.DropdownContainer>
   );
 };
 
