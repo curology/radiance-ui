@@ -50,12 +50,6 @@ const sharedContainerStyles = ({
 }: SharedContainerStylesProps) => `
   border-radius: ${theme.BORDER_RADIUS[borderRadius]};
   ${ContainerStyle.containerStyles(theme, containerType)}
-  ${
-    containsImage &&
-    `
-      border: none;
-    `
-  };
   padding: ${containsImage ? 'unset' : SPACER.large};
   margin-bottom: ${SPACER.medium};
   width: ${containsImage ? '151px' : '100%'};
@@ -196,9 +190,12 @@ const ImageContainer = styled.div<{
     theme.BORDER_RADIUS[borderRadius]};
 `;
 
-const Image = styled.img`
+const Image = styled.img<{
+  borderRadius: number;
+}>`
   width: inherit;
-  border-radius: inherit;
+  border-top-left-radius: ${({ borderRadius }) => borderRadius}px;
+  border-top-right-radius: ${({ borderRadius }) => borderRadius}px;
   height: 154px;
   object-fit: cover;
 `;
