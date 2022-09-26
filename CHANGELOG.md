@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v27.2.3
+
+- [Components] Add `border` and update `border-radius` of `OptionButton`. Add `alt` tag to `OptionButton`.
+
 # v27.2.2
 
 - [Accessibility] Fixed an issue with Dropdown's desktop implementation where keyboard navigation was not functional.
