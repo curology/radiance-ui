@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v27.2.2
+
+- [Accessibility] Fixed an issue with Dropdown's desktop implementation where keyboard navigation was not functional.
+
 # v27.2.1
 
 - [Components] Update `width` and `margin` on `OptionButton`
