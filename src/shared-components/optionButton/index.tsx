@@ -10,6 +10,7 @@ import PRIMARY_BORDER_RADIUS from '../../constants/borderRadius/primary';
 const DEFAULT_BORDER_RADIUS = 'small';
 
 export interface OptionButtonProps {
+  alt?: string;
   borderRadius?: keyof ThemeType['BORDER_RADIUS'];
   buttonType?: 'primary' | 'secondary';
   /**
@@ -46,6 +47,7 @@ export type OptionButtonContentProps = Pick<
   | 'image'
   | 'borderRadius'
   | 'textContainerHeight'
+  | 'alt'
 >;
 
 export type OptionButtonIconProps = Pick<
@@ -95,6 +97,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   image = '',
   borderRadius = DEFAULT_BORDER_RADIUS,
   textContainerHeight,
+  alt = '',
 }) => {
   /*
    * Hack for adjusting the border radius for the image. Since the image is smaller than its container,
@@ -116,7 +119,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
             icon={icon}
             withImageBackground
           />
-          <Style.Image src={image} borderRadius={imageBorderRadius} />
+          <Style.Image src={image} borderRadius={imageBorderRadius} alt={alt} />
         </Style.ImageContainer>
       ) : (
         <OptionButtonIcon
@@ -158,6 +161,7 @@ export const OptionButton: OptionButton = ({
   text,
   image = '',
   textContainerHeight,
+  alt = '',
   ...rest
 }) => (
   <Style.ClickableContainer
@@ -181,6 +185,7 @@ export const OptionButton: OptionButton = ({
       image={image}
       borderRadius={borderRadius}
       textContainerHeight={textContainerHeight}
+      alt={alt}
     />
   </Style.ClickableContainer>
 );

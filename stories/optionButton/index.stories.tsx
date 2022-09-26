@@ -265,6 +265,7 @@ export const WithImage = () => (
           image={personImg}
           borderRadius="small"
           textContainerHeight={150}
+          alt="Profile of person"
         />
         <OptionButton
           text="Helper text"
@@ -273,6 +274,7 @@ export const WithImage = () => (
           image={personImg}
           borderRadius="small"
           textContainerHeight={150}
+          alt="Profile of person"
         />
       </ExampleContainer>
     </OptionsContainer>
