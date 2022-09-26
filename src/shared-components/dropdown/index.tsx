@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-
 import { ChevronIcon } from '../../icons';
 import Style from './style';
 
@@ -78,7 +77,6 @@ export const Dropdown = <T extends OptionType>({
   };
 
   return (
-
     <Style.DropdownContainer textAlign={textAlign}>
       <select
         css={Style.dropdownInputStyle({

@@ -50,8 +50,12 @@ describe('<Dropdown />', () => {
     it('should be invoked on focus', async () => {
       const spy = jest.fn();
       const { getByRole, user } = render(
-        <Dropdown value="test1" options={options} onChange={()=> null} onDropdownContainerFocus={spy} />
-
+        <Dropdown
+          value="test1"
+          options={options}
+          onChange={() => null}
+          onDropdownContainerFocus={spy}
+        />,
       );
 
       await user.click(getByRole('combobox'));
@@ -60,7 +64,7 @@ describe('<Dropdown />', () => {
   });
 
   describe('on touch screen', () => {
-    it('renders <MobileDropdown />', () => {
+    it('renders <Dropdown /> correctly', () => {
       window.document.documentElement.ontouchstart = () => undefined;
       const { getByRole, getAllByRole, queryAllByRole } = render(
         <Dropdown value="test1" options={options} onChange={() => undefined} />,
