@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
+exports[`<Dropdown /> UI snapshots renders correctly 1`] = `
 .emotion-0 {
   position: relative;
   width: 100%;
@@ -123,9 +123,9 @@ exports[`<MobileDropdown /> UI snapshots renders correctly 1`] = `
     <svg
       class="emotion-5"
       fill="none"
-      height="10"
+      height="15"
       viewBox="0 0 16 16"
-      width="10"
+      width="15"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-import { MobileDropdown } from './mobileDropdown';
-import { DesktopDropdown } from './desktopDropdown';
-import { isDefined } from '../../utils/isDefined';
+import { ChevronIcon } from '../../icons';
+import Style from './style';
 
 export type OptionValue = string | number;
 
@@ -39,10 +38,6 @@ interface DropdownProps<T> {
    */
   onDropdownContainerFocus?: (event?: React.FocusEvent) => void;
   options: T[];
-  /**
-   * Specifies maximum height of the expanded dropdown
-   */
-  optionsContainerMaxHeight?: string;
   textAlign?: 'left' | 'center';
   /**
    * The currently selected option
@@ -52,7 +47,7 @@ interface DropdownProps<T> {
 
 /**
  * `<Dropdown />` is a controlled component and should be wrapped by a parent to control the dropdown's state.
- * This ships with a mobile implementation that will handle mobile devices automatically.
+ * This ships with a mobile-friendly implementation that will handle mobile devices automatically.
  */
 export const Dropdown = <T extends OptionType>({
   borderRadius,
@@ -60,26 +55,12 @@ export const Dropdown = <T extends OptionType>({
   onChange,
   onDropdownContainerFocus,
   options,
-  optionsContainerMaxHeight = '250px',
   textAlign = 'left',
   value,
 }: DropdownProps<T>) => {
   const theme = useTheme();
-  const [isOpen, setIsOpen] = useState(false);
   const touchSupported = 'ontouchstart' in document.documentElement;
-  const borderRadiusValue = borderRadius ?? theme.BORDER_RADIUS.small;
-
-  const toggleDropdown = () => {
-    setIsOpen((prevIsOpen) => !prevIsOpen);
-  };
-
-  const closeDropdown = () => {
-    setIsOpen(false);
-  };
-
-  const onMobileSelectChange = (
-    event: React.ChangeEvent<HTMLSelectElement>,
-  ) => {
+  const onSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const { target } = event;
     const { selectedIndex, selectedOptions } = target;
     const selectedOption = options[selectedIndex];
@@ -87,36 +68,6 @@ export const Dropdown = <T extends OptionType>({
     if (selectedOptions.length) {
       onChange(selectedOption);
     }
-
-    closeDropdown();
-  };
-
-  const onDesktopSelectChange = (
-    event: React.MouseEvent<HTMLLIElement> | React.KeyboardEvent<HTMLLIElement>,
-  ) => {
-    const { currentTarget } = event;
-
-    if (currentTarget.hasAttribute('disabled')) {
-      return;
-    }
-
-    // Next Value may be returned as null if the value of <li> is undefined. We want to cast to the real value of undefined
-    const nextValue = currentTarget.getAttribute('value') ?? undefined;
-
-    const selectedOption = options.find((option) => {
-      const { value: optionValue } = option;
-
-      // This covers numbers and strings. <li> value is always returned as string. Falsy case covers undefined.
-      return isDefined(optionValue)
-        ? `${optionValue}` === nextValue
-        : optionValue === nextValue;
-    });
-
-    if (selectedOption) {
-      onChange(selectedOption);
-    }
-
-    closeDropdown();
   };
 
   const handleOnDropdownContainerFocus = (event: React.FocusEvent) => {
@@ -125,37 +76,45 @@ export const Dropdown = <T extends OptionType>({
     }
   };
 
-  if (touchSupported) {
-    return (
-      <MobileDropdown
-        borderRadius={borderRadiusValue}
-        id={id}
-        onMobileSelectChange={onMobileSelectChange}
-        onDropdownContainerFocus={handleOnDropdownContainerFocus}
-        options={options}
-        textAlign={textAlign}
-        value={value}
-      />
-    );
-  }
-
-  const currentOption = options.find((option) => option.value === value);
-
   return (
-    <DesktopDropdown
-      borderRadius={borderRadiusValue}
-      closeDropdown={closeDropdown}
-      currentOption={currentOption}
-      id={id}
-      isOpen={isOpen}
-      onDesktopSelectChange={onDesktopSelectChange}
-      onDropdownContainerFocus={handleOnDropdownContainerFocus}
-      options={options}
-      optionsContainerMaxHeight={optionsContainerMaxHeight}
-      textAlign={textAlign}
-      toggleDropdown={toggleDropdown}
-      value={value}
-    />
+    <Style.DropdownContainer textAlign={textAlign}>
+      <select
+        css={Style.dropdownInputStyle({
+          borderRadius: borderRadius ?? theme.BORDER_RADIUS.small,
+          shouldBeFullyRounded: true,
+          textAlign,
+          theme,
+        })}
+        id={id}
+        value={value ?? ''}
+        onChange={onSelectChange}
+        onFocus={handleOnDropdownContainerFocus}
+      >
+        {options.map((option, index) => {
+          let isDisabled = option.disabled;
+
+          /*
+           * We use touchSupported to prevent setting the default value to disabled
+           */
+          if (option.value === value && touchSupported) {
+            isDisabled = false;
+          }
+
+          return (
+            <option
+              key={option.value ?? `undefined-${index}`}
+              value={option.value}
+              disabled={isDisabled}
+            >
+              {option.label}
+            </option>
+          );
+        })}
+      </select>
+      <Style.IconContainer>
+        <ChevronIcon width={15} height={15} />
+      </Style.IconContainer>
+    </Style.DropdownContainer>
   );
 };
 
@@ -170,7 +129,6 @@ Dropdown.propTypes = {
       disabled: PropTypes.bool,
     }).isRequired,
   ).isRequired,
-  optionsContainerMaxHeight: PropTypes.string,
   textAlign: PropTypes.oneOf(['left', 'center']),
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
