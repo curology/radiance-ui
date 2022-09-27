@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v27.2.4
+
+- [Accessibility] Add `ariaLabel` optional parameter for Dropdown component.
+
 # v27.2.3
 
 - [Components] Add `border` and update `border-radius` of `OptionButton`. Add `alt` tag to `OptionButton`.
