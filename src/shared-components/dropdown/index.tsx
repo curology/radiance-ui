@@ -24,6 +24,10 @@ export interface OptionType {
 }
 
 interface DropdownProps<T> {
+  /**
+   * An optional prop to allow for the select to have an aria-label attribute added for applications where a standalone label isn't ideal.
+   */
+  ariaLabel?: string | undefined;
   borderRadius?: string;
   /**
    * ID for label associated control
@@ -57,6 +61,7 @@ export const Dropdown = <T extends OptionType>({
   options,
   textAlign = 'left',
   value,
+  ariaLabel,
 }: DropdownProps<T>) => {
   const theme = useTheme();
   const touchSupported = 'ontouchstart' in document.documentElement;
@@ -87,6 +92,7 @@ export const Dropdown = <T extends OptionType>({
         })}
         id={id}
         value={value ?? ''}
+        aria-label={ariaLabel}
         onChange={onSelectChange}
         onFocus={handleOnDropdownContainerFocus}
       >
@@ -119,6 +125,7 @@ export const Dropdown = <T extends OptionType>({
 };
 
 Dropdown.propTypes = {
+  ariaLabel: PropTypes.string,
   borderRadius: PropTypes.string,
   id: PropTypes.string,
   onChange: PropTypes.func.isRequired,
