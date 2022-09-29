@@ -32,6 +32,27 @@ describe('<Dropdown />', () => {
     });
   });
 
+  describe('Optional Aria Label prop', () => {
+    it('renders correctly with optional label provided', () => {
+      const { getByRole } = render(
+        <Dropdown
+          value="test1"
+          ariaLabel="TEST"
+          options={options}
+          onChange={() => undefined}
+        />,
+      );
+      expect(getByRole('combobox')).toHaveAttribute('aria-label');
+    });
+
+    it('renders correctly with optional label excluded', () => {
+      const { getByRole } = render(
+        <Dropdown value="test1" options={options} onChange={() => undefined} />,
+      );
+      expect(getByRole('combobox')).not.toHaveAttribute('aria-label');
+    });
+  });
+
   describe('onSelectChange callback', () => {
     it(`${ON_CLICK_TEST}`, () => {
       const spy = jest.fn();
