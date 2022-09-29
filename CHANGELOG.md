@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v27.2.5
+
+- [Components] Update `border-radius` of `Image` styled component inside `OptionButton`.
+
 # v27.2.4
 
 - [Accessibility] Add `ariaLabel` optional parameter for Dropdown component.
