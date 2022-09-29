@@ -263,7 +263,6 @@ export const WithImage = () => (
           onClick={noop}
           optionType="radio"
           image={personImg}
-          borderRadius="small"
           textContainerHeight={150}
           alt="Profile of person"
         />
@@ -272,7 +271,6 @@ export const WithImage = () => (
           onClick={noop}
           optionType="radio"
           image={personImg}
-          borderRadius="small"
           textContainerHeight={150}
           alt="Profile of person"
         />

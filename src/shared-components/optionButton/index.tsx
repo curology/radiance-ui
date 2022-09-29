@@ -5,7 +5,6 @@ import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
 import { BORDER_RADIUS_PROP_TYPES, ThemeType } from '../../constants';
-import PRIMARY_BORDER_RADIUS from '../../constants/borderRadius/primary';
 
 const DEFAULT_BORDER_RADIUS = 'small';
 
@@ -99,12 +98,6 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
   textContainerHeight,
   alt = '',
 }) => {
-  /*
-   * Hack for adjusting the border radius for the image. Since the image is smaller than its container,
-   * inheriting the border radius from its parent leaves a gap between the elements.
-   */
-  const imageBorderRadius =
-    parseInt(PRIMARY_BORDER_RADIUS[borderRadius], 10) - 1;
   return (
     <Style.FlexContainer containsImage={!!image}>
       {/**
@@ -119,7 +112,7 @@ const OptionButtonContent: React.FC<OptionButtonContentProps> = ({
             icon={icon}
             withImageBackground
           />
-          <Style.Image src={image} borderRadius={imageBorderRadius} alt={alt} />
+          <Style.Image src={image} borderRadius={borderRadius} alt={alt} />
         </Style.ImageContainer>
       ) : (
         <OptionButtonIcon

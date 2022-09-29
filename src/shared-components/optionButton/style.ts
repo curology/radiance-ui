@@ -191,11 +191,27 @@ const ImageContainer = styled.div<{
 `;
 
 const Image = styled.img<{
-  borderRadius: number;
+  borderRadius: keyof ThemeType['BORDER_RADIUS'];
 }>`
   width: inherit;
-  border-top-left-radius: ${({ borderRadius }) => borderRadius}px;
-  border-top-right-radius: ${({ borderRadius }) => borderRadius}px;
+  ${({ theme, borderRadius }) => {
+    /*
+     * Hack for adjusting the border radius for the image. Since the image is smaller than its container,
+     * inheriting the border radius from its parent leaves a gap between the elements.
+     */
+    const convertedBorderRadius = parseInt(
+      theme.BORDER_RADIUS[borderRadius],
+      10,
+    );
+    const adjustedBorderRadius =
+      convertedBorderRadius > 0
+        ? convertedBorderRadius - 1
+        : convertedBorderRadius;
+    return `
+      border-top-left-radius: ${adjustedBorderRadius}px;
+      border-top-right-radius: ${adjustedBorderRadius}px;
+    `;
+  }}
   height: 154px;
   object-fit: cover;
 `;
