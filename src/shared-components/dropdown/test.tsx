@@ -10,7 +10,12 @@ const options = [
 ];
 const optionsWithDisabledFirstOption = [
   { value: 'test1', label: 'Test1', disabled: true },
-  { value: 'test2', label: 'Test2' },
+  {
+    value: 'test2',
+    label: 'Test2',
+    disabled: false,
+    'data-test-id': 'additionalIDtest',
+  },
   { value: 'test3', label: 'Test3' },
 ];
 
@@ -37,9 +42,10 @@ describe('<Dropdown />', () => {
       const { getByRole } = render(
         <Dropdown
           value="test1"
-          ariaLabel="TEST"
           options={options}
           onChange={() => undefined}
+          aria-label="example of additional ...rest attribute"
+          data-test-id="additionalTestingID"
         />,
       );
       expect(getByRole('combobox')).toHaveAttribute('aria-label');

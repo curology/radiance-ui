@@ -24,7 +24,11 @@ const DesktopContainer = styled(DropdownContainer)`
 const options = [
   { value: -1, label: 'Please select an option', disabled: true },
   { value: 1, label: 'First option' },
-  { value: 2, label: 'Second option' },
+  {
+    value: '2',
+    label: 'Second Option',
+    'data-test-id': 'additionalIDtest',
+  },
   { value: '3', label: 'Third option' },
   { value: '4', label: 'Fourth option' },
   { value: '5', label: 'Fifth option' },
@@ -48,6 +52,8 @@ export const Default = () => {
           value={selectedOption}
           options={options}
           onChange={onChange}
+          aria-label="example of additional ...rest attribute"
+          data-test-id="additionalTestingID"
         />
       </label>
     </DesktopContainer>
