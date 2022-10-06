@@ -102,16 +102,19 @@ exports[`<Dropdown /> UI snapshots renders correctly 1`] = `
     class="emotion-2"
   >
     <option
+      label="Test1"
       value="test1"
     >
       Test1
     </option>
     <option
+      label="Test2"
       value="test2"
     >
       Test2
     </option>
     <option
+      label="Test3"
       value="test3"
     >
       Test3

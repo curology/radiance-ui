@@ -97,7 +97,8 @@ export const Dropdown = <T extends OptionType>({
         {...rest}
       >
         {options.map((option, index) => {
-          let isDisabled = option.disabled;
+          const { value: optionValue, disabled, ...optionsRest } = option;
+          let isDisabled = disabled;
           /*
            * We use touchSupported to prevent setting the default value to disabled
            */
@@ -107,10 +108,10 @@ export const Dropdown = <T extends OptionType>({
 
           return (
             <option
-              key={option.value ?? `undefined-${index}`}
-              value={option.value}
+              key={optionValue ?? `undefined-${index}`}
+              value={optionValue}
               disabled={isDisabled}
-              {...option} // additional spread attributes
+              {...optionsRest} // additional spread attributes
             >
               {option.label}
             </option>
