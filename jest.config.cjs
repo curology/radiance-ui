@@ -17,7 +17,7 @@ module.exports = {
     enableGlobally: false,
   },
   moduleNameMapper: {
-    'src/(.*)': '<rootDir>/src/$1',
+    '^src/(.*)': '<rootDir>/src/$1',
     '\\.svg': '<rootDir>/tests/__mocks__/svgrMock.ts',
   },
   setupFilesAfterEnv: ['<rootDir>tests/setupTests.ts'],

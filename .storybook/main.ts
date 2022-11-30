@@ -72,6 +72,7 @@ const config = {
   staticDirs: ['../public'],
   core: {
     builder: 'webpack5',
+    disableTelemetry: true,
   },
   features: {
     babelModeV7: true,
