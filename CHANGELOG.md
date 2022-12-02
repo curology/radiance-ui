@@ -1,5 +1,13 @@
 # CHANGELOG
 
+# v28.0.0
+
+- [Dependencies] Update `react` to 18.2.0 and adjust peer-dependencies to allow `react` 17 or 18.
+- [Dependencies] Update Storybook related packages to 6.5.13.
+- [Dependencies] Update `@react-aria/dialog` to 3.4.1.
+- [Dependencies] Update `@react-aria/focus` to 3.10.0.
+- [Components] **BREAKING** Remove usage of PropTypes.
+
 # v27.2.5
 
 - [Components] Update `border-radius` of `Image` styled component inside `OptionButton`.
