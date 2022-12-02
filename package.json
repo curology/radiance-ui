@@ -94,7 +94,7 @@
     "@emotion/eslint-plugin": "^11.7.0",
     "@emotion/jest": "^11.9.1",
     "@emotion/react": "11.9.0",
-    "@emotion/styled": "11.8.1",
+    "@emotion/styled": "11.10.5",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-typescript": "^8.2.1",
     "@storybook/addon-a11y": "^6.5.13",
@@ -186,7 +186,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "11.9.0",
-    "@emotion/styled": "11.8.1",
+    "@emotion/styled": "11.10.5",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
