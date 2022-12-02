@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
@@ -315,11 +314,3 @@ export const ImmersiveModal: ImmersiveModal = ({
 };
 
 ImmersiveModal.Paragraph = Style.Paragraph;
-
-ImmersiveModal.propTypes = {
-  children: PropTypes.node.isRequired,
-  footerContent: PropTypes.node,
-  headerImage: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
-};

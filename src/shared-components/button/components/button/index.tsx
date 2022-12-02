@@ -1,15 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Loader from '../../shared-components/loader';
 import Container from '../../shared-components/container';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import {
-  deprecatedProperties,
-  isLoadingPropFunction,
-} from '../../deprecatedPropsHandler';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { deprecatedProperties } from '../../deprecatedPropsHandler';
+import { ThemeColors } from '../../../../constants';
 import { isDefined } from '../../../../utils/isDefined';
 import { ButtonBase, ButtonContents, ButtonText } from '../../style';
 import type { ButtonType } from '../../types';
@@ -117,24 +113,6 @@ const Button: Button = ({
 };
 
 Button.Container = Container;
-
-Button.propTypes = {
-  buttonColor: COLORS_PROP_TYPES,
-  buttonType: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-  ]),
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  icon: PropTypes.node,
-  isFullWidth: PropTypes.bool,
-  isLoading: PropTypes.bool,
-  loading: isLoadingPropFunction,
-  onClick: PropTypes.func,
-  textColor: COLORS_PROP_TYPES,
-};
 
 const ButtonComponent = withDeprecationWarning(Button, deprecatedProperties);
 

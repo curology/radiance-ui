@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 const SECONDARY_COLORS = {
   primary: '#2D2926',
   primaryTint1: '#2D2926',
@@ -38,9 +36,5 @@ const SECONDARY_COLORS = {
   white: '#FFFDF2',
   transparent: 'transparent',
 } as const;
-
-export const SECONDARY_COLORS_PROP_TYPES = PropTypes.oneOf(
-  Object.values(SECONDARY_COLORS),
-);
 
 export default SECONDARY_COLORS;

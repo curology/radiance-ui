@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { ButtonContents } from '../../style';
 import Style from './style';
@@ -42,9 +41,3 @@ export const TextButton: React.FC<TextButtonProps> = ({
     </ButtonContents>
   </Style.BaseTextButton>
 );
-
-TextButton.propTypes = {
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-};

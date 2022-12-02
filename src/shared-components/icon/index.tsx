@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Style from './style';
@@ -42,16 +41,6 @@ export const Icon: React.FC<IconProps & { IconComponent: SVGComponent }> = ({
   />
 );
 
-Icon.propTypes = {
-  className: PropTypes.string,
-  displayInline: PropTypes.bool,
-  fill: PropTypes.string,
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  IconComponent: PropTypes.func.isRequired,
-  rotate: PropTypes.number,
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-};
-
 export const useIcon = (
   PrimaryIcon: SVGComponent | null,
   SecondaryIcon: SVGComponent | null,
@@ -59,7 +48,10 @@ export const useIcon = (
 ) => {
   const theme = useTheme();
 
-  const ThemeIcon = (theme.__type === 'primary' || theme.__type === 'tertiary') ? PrimaryIcon : SecondaryIcon;
+  const ThemeIcon =
+    theme.__type === 'primary' || theme.__type === 'tertiary'
+      ? PrimaryIcon
+      : SecondaryIcon;
 
   if (ThemeIcon === null) return null;
 

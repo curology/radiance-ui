@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import { useTheme } from '@emotion/react';
 
@@ -116,21 +115,3 @@ export const Field: Field = ({
 Field.Textarea = Style.Textarea;
 
 Field.Input = Style.Input;
-
-Field.propTypes = {
-  children: PropTypes.element.isRequired,
-  disabled: PropTypes.bool,
-  hideMessagesIcon: PropTypes.bool,
-  hintMessage: PropTypes.string,
-  label: PropTypes.string,
-  labelFor: PropTypes.string,
-  messages: PropTypes.objectOf(
-    PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string.isRequired),
-      PropTypes.arrayOf(PropTypes.element.isRequired),
-    ]).isRequired,
-  ),
-  messagesType: PropTypes.oneOf(['error', 'success']),
-};

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from '@emotion/react';
 
@@ -6,7 +5,7 @@ import { ChevronIcon } from '../../icons';
 import { Thumbnails } from './thumbnails';
 import Style from './style';
 import { keyboardKeys } from '../../constants/keyboardKeys';
-import { BORDER_RADIUS_PROP_TYPES, ThemeType } from '../../constants';
+import { ThemeType } from '../../constants';
 
 export interface AccordionProps {
   /** Sets the border-radius of Accordion.Container, AccordionBox, and TitleWrapper */
@@ -117,14 +116,3 @@ Accordion.Content = Style.Content;
 Accordion.Thumbnails = Thumbnails;
 
 Accordion.Truncate = Style.Truncate;
-
-Accordion.propTypes = {
-  borderRadius: BORDER_RADIUS_PROP_TYPES,
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  isOpen: PropTypes.bool.isRequired,
-  noBorder: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
-  rightAlignArrow: PropTypes.bool,
-  title: PropTypes.node.isRequired,
-};

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Transition } from 'react-transition-group';
@@ -9,12 +8,7 @@ import { useTheme } from '@emotion/react';
 import { REACT_PORTAL_SECTION_ID } from '../../constants/portals';
 import { CrossIcon } from '../../icons';
 import Style from './style';
-import {
-  Colors,
-  primaryTheme,
-  secondaryTheme,
-  tertiaryTheme,
-} from '../../constants';
+import { Colors } from '../../constants';
 
 export interface DialogModalProps {
   /**
@@ -140,14 +134,3 @@ export const DialogModal: DialogModal = ({
 };
 
 DialogModal.Paragraph = Style.Paragraph;
-
-DialogModal.propTypes = {
-  backgroundColor: PropTypes.oneOf([
-    primaryTheme.COLORS.background,
-    secondaryTheme.COLORS.background,
-    tertiaryTheme.COLORS.background,
-  ]),
-  children: PropTypes.node.isRequired,
-  onClose: PropTypes.func.isRequired,
-  title: PropTypes.string,
-};

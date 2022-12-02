@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import { ChevronIcon } from '../../icons';
@@ -122,20 +121,4 @@ export const Dropdown = <T extends OptionType>({
       </Style.IconContainer>
     </Style.DropdownContainer>
   );
-};
-
-Dropdown.propTypes = {
-  ariaLabel: PropTypes.string,
-  borderRadius: PropTypes.string,
-  id: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  options: PropTypes.arrayOf(
-    PropTypes.shape({
-      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      label: PropTypes.string.isRequired,
-      disabled: PropTypes.bool,
-    }).isRequired,
-  ).isRequired,
-  textAlign: PropTypes.oneOf(['left', 'center']),
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

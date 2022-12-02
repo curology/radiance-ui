@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { SPACER } from 'src/constants';
 
@@ -40,8 +39,4 @@ const Color = ({ colorName, colorHex }: ColorProps) => (
   </ColorContainer>
 );
 
-Color.propTypes = {
-  colorName: PropTypes.string.isRequired,
-  colorHex: PropTypes.string.isRequired,
-};
 export default Color;

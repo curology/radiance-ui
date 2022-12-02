@@ -1,12 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
-import {
-  COLORS_PROP_TYPES,
-  PROGRESS_BAR_STATUS,
-  ThemeColors,
-} from '../../constants';
+import { PROGRESS_BAR_STATUS, ThemeColors } from '../../constants';
 import Style from './style';
 
 export type ProgressBarStatusType = valueof<typeof PROGRESS_BAR_STATUS>;
@@ -60,16 +55,4 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
       />
     </Style.OuterContainer>
   );
-};
-
-ProgressBar.propTypes = {
-  backgroundColor: COLORS_PROP_TYPES,
-  barColor: COLORS_PROP_TYPES,
-  height: PropTypes.number,
-  loadingTime: PropTypes.string,
-  status: PropTypes.oneOf([
-    PROGRESS_BAR_STATUS.loading,
-    PROGRESS_BAR_STATUS.success,
-    PROGRESS_BAR_STATUS.error,
-  ]).isRequired,
 };

@@ -1,15 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Loader from '../../shared-components/loader';
 import Style from './style';
 import withDeprecationWarning from '../../../../utils/withDeprecationWarning';
-import {
-  deprecatedProperties,
-  isLoadingPropFunction,
-} from '../../deprecatedPropsHandler';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { deprecatedProperties } from '../../deprecatedPropsHandler';
+import { ThemeColors } from '../../../../constants';
 import { isDefined } from '../../../../utils/isDefined';
 import type { ButtonTypeWithAction } from '../../types';
 
@@ -108,23 +104,5 @@ export const RoundButton: RoundButton = ({
 };
 
 RoundButton.Container = Style.RoundButtonContainer;
-
-RoundButton.propTypes = {
-  buttonColor: COLORS_PROP_TYPES,
-  buttonType: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-    'action',
-  ]),
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  icon: PropTypes.node.isRequired,
-  isLoading: PropTypes.bool,
-  loading: isLoadingPropFunction,
-  onClick: PropTypes.func,
-  textColor: COLORS_PROP_TYPES,
-};
 
 export default withDeprecationWarning(RoundButton, deprecatedProperties);

@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Style from './style';
 import { CheckmarkIcon } from '../../icons';
 import { isDefined } from '../../utils/isDefined';
-import { BORDER_RADIUS_PROP_TYPES, ThemeType } from '../../constants';
+import { ThemeType } from '../../constants';
 
 const DEFAULT_BORDER_RADIUS = 'small';
 
@@ -220,16 +219,3 @@ export const OptionButtonNotClickable: React.FC<
  * Similar OptionButton styling without click elements
  */
 OptionButton.NotClickable = OptionButtonNotClickable;
-
-OptionButton.propTypes = {
-  borderRadius: BORDER_RADIUS_PROP_TYPES,
-  buttonType: PropTypes.oneOf(['primary', 'secondary']),
-  icon: PropTypes.node,
-  onClick: PropTypes.func.isRequired,
-  optionType: PropTypes.oneOf(['radio', 'checkbox'] as const).isRequired,
-  selected: PropTypes.bool,
-  subtext: PropTypes.node,
-  text: PropTypes.string.isRequired,
-  image: PropTypes.string,
-  textContainerHeight: PropTypes.number,
-};
