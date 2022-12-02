@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { TransitionGroup } from 'react-transition-group';
 
 import Style from './style';
@@ -68,17 +67,4 @@ export const VerificationMessages: React.FC<VerificationMessagesProps> = ({
       )}
     </TransitionGroup>
   );
-};
-
-VerificationMessages.propTypes = {
-  centered: PropTypes.bool,
-  messages: PropTypes.objectOf(
-    PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.string,
-      PropTypes.arrayOf(PropTypes.string.isRequired),
-      PropTypes.arrayOf(PropTypes.element.isRequired),
-    ]).isRequired,
-  ),
-  type: PropTypes.oneOf(['error', 'success']),
 };

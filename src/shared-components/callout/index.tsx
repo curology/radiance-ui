@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import { CrossIcon } from '../../icons';
@@ -82,10 +81,3 @@ export const Callout: Callout = ({ children, icon, onClose, type }) => {
 };
 
 Callout.Container = Style.ParentContainer;
-
-Callout.propTypes = {
-  children: PropTypes.node.isRequired,
-  icon: PropTypes.node,
-  onClose: PropTypes.func,
-  type: PropTypes.oneOf(['error', 'success']),
-};

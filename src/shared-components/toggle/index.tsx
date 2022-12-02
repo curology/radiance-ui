@@ -1,5 +1,4 @@
 import { useTheme } from '@emotion/react';
-import PropTypes from 'prop-types';
 import React from 'react';
 // @ts-expect-error: No @types, we should replace this dependency
 import ToggleButton from 'react-toggle-button';
@@ -65,10 +64,4 @@ export const Toggle: React.FC<ToggleProps> = ({
       </Style.ReactToggleButtonContainer>
     </Style.Container>
   );
-};
-
-Toggle.propTypes = {
-  checked: PropTypes.bool,
-  label: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
 };

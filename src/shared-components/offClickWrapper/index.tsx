@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 
 export interface OffClickWrapperProps {
   /**
@@ -54,10 +53,4 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
       {children}
     </div>
   );
-};
-
-OffClickWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  onOffClick: PropTypes.func.isRequired,
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import type { ThemeColors, ThemeType } from '../../constants';
@@ -65,9 +64,4 @@ export const Indicator: React.FC<IndicatorProps> = ({
       <div>{text}</div>
     </Style.IndicatorContainer>
   );
-};
-
-Indicator.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  type: PropTypes.oneOf(['error', 'primary', 'success', 'tertiary', 'white']),
 };

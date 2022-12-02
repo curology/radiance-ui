@@ -1,11 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Container from '../../shared-components/container';
 import { ButtonContents, ButtonText } from '../../style';
 import Style from './style';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../../../constants';
+import { ThemeColors } from '../../../../constants';
 import type { ButtonType } from '../../types';
 
 export interface LinkButtonProps {
@@ -80,18 +79,3 @@ export const LinkButton: LinkButton = ({
 };
 
 LinkButton.Container = Container;
-
-LinkButton.propTypes = {
-  as: PropTypes.oneOfType([PropTypes.string, PropTypes.elementType]),
-  buttonColor: COLORS_PROP_TYPES,
-  buttonType: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'tertiary',
-    'quaternary',
-  ]),
-  children: PropTypes.node.isRequired,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  textColor: COLORS_PROP_TYPES,
-};

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 
 import Arrow from './arrow';
@@ -179,16 +178,3 @@ export const Carousel: Carousel = ({
 /* eslint-enable sonarjs/cognitive-complexity */
 
 Carousel.Card = Style.Card;
-
-Carousel.propTypes = {
-  autoplay: PropTypes.bool,
-  autoplaySpeed: PropTypes.number,
-  bottomRightAlignedArrows: PropTypes.bool,
-  carouselType: PropTypes.oneOf(['primary', 'secondary']),
-  centerMode: PropTypes.bool,
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
-  hideArrows: PropTypes.bool,
-  hideDots: PropTypes.bool,
-  infinite: PropTypes.bool,
-  numCardsVisible: PropTypes.oneOf([1, 2, 3] as const).isRequired,
-};

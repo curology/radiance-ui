@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { SelectorButton, SizeType, StyleType } from '../selectorButton';
 
@@ -61,18 +60,5 @@ export const Checkbox: React.FC<CheckboxProps> = ({
     {children}
   </SelectorButton>
 );
-
-Checkbox.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  disabled: PropTypes.bool,
-  icon: PropTypes.node,
-  onClick: PropTypes.func,
-  size: PropTypes.oneOf(['large', 'small']),
-  type: PropTypes.oneOf(['primary', 'secondary']),
-};
 
 export default Checkbox;

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Style from './style';
 
@@ -46,8 +45,3 @@ export const AnchorLinkButton: React.ForwardRefExoticComponent<
     </button>
   );
 });
-
-AnchorLinkButton.propTypes = {
-  children: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-};

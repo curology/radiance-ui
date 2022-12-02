@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css, useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, CircleSolidIcon } from '../../icons';
@@ -83,18 +82,4 @@ export const SelectorButton: React.FC<SelectorButtonProps> = ({
       )}
     </Style.OuterContainer>
   );
-};
-
-SelectorButton.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  disabled: PropTypes.bool,
-  icon: PropTypes.node,
-  onClick: PropTypes.func,
-  selector: PropTypes.oneOf(['radio', 'checkbox']),
-  size: PropTypes.oneOf(['large', 'small']),
-  type: PropTypes.oneOf(['primary', 'secondary']),
 };

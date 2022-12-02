@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import Style from './style';
@@ -42,15 +41,4 @@ export const Tabs = <TabGeneric extends TabType>({
       ))}
     </Style.TabsContainer>
   );
-};
-
-Tabs.propTypes = {
-  initialActiveTabId: PropTypes.number,
-  onClick: PropTypes.func,
-  tabItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired,
-    }).isRequired,
-  ).isRequired,
 };

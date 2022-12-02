@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import { ArrowIcon } from '../../icons';
@@ -139,24 +138,4 @@ export const Tooltip: React.FC<TooltipProps> = ({
       </Style.MainContainer>
     </OffClickWrapper>
   );
-};
-
-Tooltip.propTypes = {
-  alignRightPercent: PropTypes.number,
-  alignTopPercent: PropTypes.number,
-  arrowAlign: PropTypes.oneOf(['left', 'middle', 'right']),
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  content: PropTypes.node,
-  defaultOpen: PropTypes.bool,
-  display: PropTypes.bool,
-  hasRestrictedWidth: PropTypes.bool,
-  isSmall: PropTypes.bool,
-  nudgeBottom: PropTypes.number,
-  nudgeLeft: PropTypes.number,
-  nudgeRight: PropTypes.number,
-  nudgeTop: PropTypes.number,
-  position: PropTypes.oneOf(['top', 'bottom']),
 };

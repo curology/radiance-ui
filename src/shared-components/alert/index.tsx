@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, ChevronIcon, ErrorIcon, InfoIcon } from '../../icons';
@@ -141,13 +140,3 @@ export const Alert: Alert = (alertProps) => {
 };
 
 Alert.Container = Style.AlertsContainer;
-
-Alert.propTypes = {
-  avatarSrc: PropTypes.string,
-  content: PropTypes.node.isRequired,
-  ctaContent: PropTypes.node,
-  duration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  onExit: PropTypes.func,
-  truncateText: PropTypes.bool,
-  type: PropTypes.oneOf(['success', 'error', 'default', 'danger']),
-};

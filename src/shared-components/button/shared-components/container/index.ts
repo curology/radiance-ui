@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import { MEDIA_QUERIES, SPACER } from '../../../../constants';
@@ -48,10 +47,5 @@ const ButtonContainer = styled.div<{ flex?: boolean; reverse?: boolean }>`
     ${({ flex = false }) => flex && flexMdUpStyles};
   }
 `;
-
-ButtonContainer.propTypes = {
-  flex: PropTypes.bool,
-  reverse: PropTypes.bool,
-};
 
 export default ButtonContainer;

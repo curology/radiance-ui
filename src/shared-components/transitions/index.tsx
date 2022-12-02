@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Style from './style';
 
@@ -24,12 +23,6 @@ export const FadeInContainer: React.FC<FadeInContainerProps> = ({
     {children}
   </Style.FadeInContainer>
 );
-
-FadeInContainer.propTypes = {
-  children: PropTypes.node.isRequired,
-  slide: PropTypes.bool,
-  speed: PropTypes.string,
-};
 
 const { opacityInAnimationStyle } = Style;
 

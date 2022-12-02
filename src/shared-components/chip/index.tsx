@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Style from './style';
@@ -84,10 +83,4 @@ export const Chip: React.FC<ChipProps> = ({
       <Style.ChipText>{text}</Style.ChipText>
     </Style.ChipStyles>
   );
-};
-
-Chip.propTypes = {
-  isLowContrast: PropTypes.bool,
-  status: PropTypes.oneOf(['primary', 'success', 'error', 'white']),
-  text: PropTypes.string.isRequired,
 };

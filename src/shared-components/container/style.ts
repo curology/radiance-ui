@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import PropTypes from 'prop-types';
 
 import { MEDIA_QUERIES, SPACER, ThemeType } from '../../constants';
 import type { ContainerComponentType } from './types';
@@ -78,9 +77,5 @@ const Container = styled.div<{ type?: ContainerType }>`
 Container.Divider = Divider;
 Container.Image = Image;
 Container.Section = Section;
-
-Container.propTypes = {
-  type: PropTypes.oneOf(['message', 'clickable', 'none']),
-};
 
 export default { containerStyles, Container };

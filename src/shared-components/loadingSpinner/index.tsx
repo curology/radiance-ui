@@ -1,9 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import Style from './style';
-import { COLORS_PROP_TYPES, ThemeColors } from '../../constants';
+import { ThemeColors } from '../../constants';
 
 export interface LoadingSpinnerProps {
   /**
@@ -67,12 +66,4 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       </Style.Overlay>
     </Style.LoadingSpinnerContainer>
   );
-};
-
-LoadingSpinner.propTypes = {
-  bgColor: COLORS_PROP_TYPES,
-  color: COLORS_PROP_TYPES,
-  duration: PropTypes.number,
-  size: PropTypes.string,
-  translateX: PropTypes.string,
 };

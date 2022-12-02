@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useTheme } from '@emotion/react';
 
 import { CheckmarkIcon, ErrorIcon, InfoIcon } from '../../icons';
@@ -49,10 +48,4 @@ export const Banner: React.FC<BannerProps> = ({
       </Style.MainContainer>
     </Style.BannerContainer>
   );
-};
-
-Banner.propTypes = {
-  content: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-  type: PropTypes.oneOf(['default', 'success', 'error', 'danger']),
 };
