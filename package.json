@@ -187,8 +187,8 @@
   "peerDependencies": {
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
-    "react": "^17.0.0 | ^18.0.0",
-    "react-dom": "^17.0.0 | ^18.0.0"
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "husky": {
     "hooks": {
