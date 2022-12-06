@@ -159,6 +159,24 @@ jobs:
       - store_test_results:
           path: test-results
 
+  publish-to-pages:
+    <<: *defaults
+    docker:
+      - image: cimg/node:18.1
+
+    steps:
+      - checkout
+      - <<: *prospective-merge
+      - attach_workspace:
+          at: *root
+      - <<: *prepare-environment
+      - run:
+          name: Build Storybook
+          command: yarn run build-storybook
+      - run:
+          name: Publish to Cloudflare Pages
+          command: npx wrangler pages publish .out --project-name=radiance-ui
+
 workflows:
   version: 2
 
@@ -175,6 +193,10 @@ workflows:
           requires:
             - build-js
       - build:
+          requires:
+            - test-js
+            - test-tsc
+      - publish-to-pages:
           requires:
             - test-js
             - test-tsc
