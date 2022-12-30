@@ -27,6 +27,7 @@ export const Usage = () => (
     <Chip status="primary" text="Primary" />
     <Chip status="error" text="Error" />
     <Chip status="success" text="Success" />
+    <Chip status="info" text="Info" />
     <Chip status="white" text="White" />
     <br />
     <div>
@@ -35,6 +36,7 @@ export const Usage = () => (
     <Chip status="primary" isLowContrast text="Primary" />
     <Chip status="error" isLowContrast text="Error" />
     <Chip status="success" isLowContrast text="Success" />
+    <Chip status="info" isLowContrast text="Info" />
     <Chip status="white" isLowContrast text="White" />
   </ChipContainer>
 );
@@ -47,7 +49,7 @@ export const WithControls = () => (
   <Chip
     status={select(
       'status',
-      ['primary', 'success', 'error', 'white'],
+      ['primary', 'success', 'error', 'info', 'white'],
       'primary',
     )}
     text={text('text', 'Chip')}

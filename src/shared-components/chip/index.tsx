@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react';
 import Style from './style';
 import type { ThemeColors, ThemeType } from '../../constants';
 
-export type StatusType = 'primary' | 'success' | 'error' | 'white';
+export type StatusType = 'primary' | 'success' | 'error' | 'info' | 'white';
 
 export interface ChipProps {
   isLowContrast?: boolean;
@@ -43,6 +43,16 @@ const getStyles = ({ isLowContrast, status, theme }: GetStylesProps) => {
     if (isLowContrast) {
       backgroundColor = theme.COLORS.successBorder;
       textColor = theme.COLORS.success;
+    }
+  }
+
+  if (status === 'info') {
+    backgroundColor = theme.COLORS.info;
+    textColor = theme.COLORS.white;
+
+    if (isLowContrast) {
+      backgroundColor = theme.COLORS.infoLight;
+      textColor = theme.COLORS.info;
     }
   }
 
