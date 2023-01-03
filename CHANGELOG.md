@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# v28.1.0
+- [Components] Update Chip element to have additional level: info.
+
+# v28.0.1
+- [Dependencies] Fix invalid peer-dependency constraints
+
 # v28.0.0
 
 - [Dependencies] Update `react` to 18.2.0 and adjust peer-dependencies to allow `react` 17 or 18.
