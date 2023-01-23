@@ -130,6 +130,7 @@ export { default as RocketshipGlyph } from './RocketshipGlyph';
 export { default as SelfieGlyphSecondary } from './SelfieGlyphSecondary';
 export { default as SelfieGlyph } from './SelfieGlyph';
 export { default as SleepGlyphSecondary } from './SleepGlyphSecondary';
+export { default as SpironolactoneGlyph } from './SpironolactoneGlyph';
 export { default as StressGlyphSecondary } from './StressGlyphSecondary';
 export { default as SunGlyphSecondary } from './SunGlyphSecondary';
 export { default as SunGlyph } from './SunGlyph';

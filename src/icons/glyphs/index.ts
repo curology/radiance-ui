@@ -89,6 +89,7 @@ export { default as RichMoisturizerGlyph } from './richMoisturizerGlyph';
 export { default as RocketshipGlyph } from './rocketshipGlyph';
 export { default as SelfieGlyph } from './selfieGlyph';
 export { default as SleepGlyph } from './sleepGlyph';
+export { default as SpironolactoneGlyph } from './spironolactoneGlyph';
 export { default as StressGlyph } from './stressGlyph';
 export { default as SunGlyph } from './sunGlyph';
 export { default as SunMoonGlyph } from './sunMoonGlyph';
