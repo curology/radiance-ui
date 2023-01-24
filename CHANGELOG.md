@@ -1,5 +1,8 @@
 # CHANGELOG
 
+# v28.1.1
+- Added spironolactone glyph  ([#1847](https://github.com/curology/radiance-ui/pull/1847))
+
 # v28.1.0
 - [Components] Update Chip element to have additional level: info.
 
