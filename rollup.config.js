@@ -27,6 +27,7 @@ export default defineConfig({
     {
       ...defaultOutputOptions,
       format: 'esm',
+      entryFileNames: '[name].mjs',
     },
   ],
   preserveModules: true,
