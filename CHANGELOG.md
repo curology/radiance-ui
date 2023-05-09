@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v29.0.0
+
+- Update to use explicit ESM and CJS exports
+
 # v28.1.1
 - Added spironolactone glyph  ([#1847](https://github.com/curology/radiance-ui/pull/1847))
 
