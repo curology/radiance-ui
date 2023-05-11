@@ -1,6 +1,6 @@
 {
   "name": "radiance-ui",
-  "version": "29.0.0",
+  "version": "29.0.1",
   "description": "Curology's React based component library",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
@@ -12,42 +12,42 @@
     ".": {
       "module": {
         "browser": "./lib/index.mjs",
-        "default": "./lib/index.mjs",
-        "worker": "./lib/index.mjs"
+        "worker": "./lib/index.mjs",
+        "default": "./lib/index.mjs"
       },
       "import": "./lib/index.mjs",
-      "default": "./lib/index.cjs",
-      "require": "./lib/index.cjs"
+      "require": "./lib/index.cjs",
+      "default": "./lib/index.cjs"
     },
     "./lib/constants": {
       "module": {
         "browser": "./lib/constants/index.mjs",
-        "default": "./lib/constants/index.mjs",
-        "worker": "./lib/constants/index.mjs"
+        "worker": "./lib/constants/index.mjs",
+        "default": "./lib/constants/index.mjs"
       },
       "import": "./lib/constants/index.mjs",
-      "default": "./lib/constants/index.cjs",
-      "require": "./lib/constants/index.cjs"
+      "require": "./lib/constants/index.cjs",
+      "default": "./lib/constants/index.cjs"
     },
     "./lib/icons": {
       "module": {
         "browser": "./lib/icons/index.mjs",
-        "default": "./lib/icons/index.mjs",
-        "worker": "./lib/icons/index.mjs"
+        "worker": "./lib/icons/index.mjs",
+        "default": "./lib/icons/index.mjs"
       },
       "import": "./lib/icons/index.mjs",
-      "default": "./lib/icons/index.cjs",
-      "require": "./lib/icons/index.cjs"
+      "require": "./lib/icons/index.cjs",
+      "default": "./lib/icons/index.cjs"
     },
     "./lib/utils": {
       "module": {
         "browser": "./lib/utils/index.mjs",
-        "default": "./lib/utils/index.mjs",
-        "worker": "./lib/utils/index.mjs"
+        "worker": "./lib/utils/index.mjs",
+        "default": "./lib/utils/index.mjs"
       },
       "import": "./lib/utils/index.mjs",
-      "default": "./lib/utils/index.cjs",
-      "require": "./lib/utils/index.cjs"
+      "require": "./lib/utils/index.cjs",
+      "default": "./lib/utils/index.cjs"
     },
     "./package.json": "./package.json"
   },
