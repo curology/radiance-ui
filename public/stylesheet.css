@@ -7,14 +7,16 @@
 }
 
 @font-face {
-  font-family: 'larssiet';
-  src: url('/fonts/34535B_1_0.woff2') format('woff2');
+  font-family: 'skintype-text';
+  src: url('/fonts/skintype-text/SkintypeText-Regular.woff2') format('woff2'),
+  url('/fonts/skintype-text/SkintypeText-Regular.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'larssiet';
+  font-family: 'skintype-text-bold';
   font-weight: bold;
-  src: url('/fonts/34535B_0_0.woff2') format('woff2');
+  src: url('/fonts/skintype-text/SkintypeText-Bold.woff2') format('woff2'),
+  url('/fonts/skintype-text/SkintypeText-Bold.otf') format('otf');
 }
 
 @font-face {
