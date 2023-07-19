@@ -7,6 +7,13 @@
 }
 
 @font-face {
+  font-family: 'skintype-display';
+  font-weight: bold;
+  src: url('/fonts/skintype-display/SkintypeDisplay-BoldB.woff2') format('woff2'),
+  url('/fonts/skintype-display/SkintypeDisplay-BoldB.woff') format('woff');
+}
+
+@font-face {
   font-family: 'skintype-text';
   src: url('/fonts/skintype-text/SkintypeText-Regular.woff2') format('woff2'),
   url('/fonts/skintype-text/SkintypeText-Regular.otf') format('otf');
