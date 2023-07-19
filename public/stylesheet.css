@@ -14,9 +14,9 @@
 }
 
 @font-face {
-  font-family: 'skintype-text';
-  src: url('/fonts/skintype-text/SkintypeText-Regular.woff2') format('woff2'),
-  url('/fonts/skintype-text/SkintypeText-Regular.otf') format('otf');
+  font-family: 'skintype-text-medium';
+  src: url('/fonts/skintype-text/SkintypeText-Medium.woff2') format('woff2'),
+  url('/fonts/skintype-text/SkintypeText-Medium.otf') format('otf');
 }
 
 @font-face {
