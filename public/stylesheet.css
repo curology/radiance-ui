@@ -7,23 +7,30 @@
 }
 
 @font-face {
-  font-family: 'skintype-display';
+  font-family: 'Skintype Display';
   font-weight: bold;
   src: url('/fonts/skintype-display/SkintypeDisplay-BoldB.woff2') format('woff2'),
   url('/fonts/skintype-display/SkintypeDisplay-BoldB.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'skintype-text-medium';
+  font-family: 'Skintype Text Medium';
   src: url('/fonts/skintype-text/SkintypeText-Medium.woff2') format('woff2'),
   url('/fonts/skintype-text/SkintypeText-Medium.otf') format('otf');
 }
 
 @font-face {
-  font-family: 'skintype-text-bold';
+  font-family: 'Skintype Text';
   font-weight: bold;
   src: url('/fonts/skintype-text/SkintypeText-Bold.woff2') format('woff2'),
   url('/fonts/skintype-text/SkintypeText-Bold.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Skintype Text';
+  font-weight: normal;
+  src: url('/fonts/skintype-text/SkintypeText-Regular.woff2') format('woff2'),
+  url('/fonts/skintype-text/SkintypeText-Regular.otf') format('otf');
 }
 
 @font-face {
