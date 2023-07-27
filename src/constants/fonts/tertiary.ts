@@ -1,8 +1,7 @@
 const TERTIARY_FONTS = {
   headerFont:
-    "'larssiet', 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, Verdana, sans-serif",
-  baseFont:
-    "'atkinson-hyperlegible', sans-serif",
+    "'Skintype Display', 'Century Gothic', CenturyGothic, AppleGothic, Verdana, sans-serif",
+  baseFont: "'atkinson-hyperlegible', sans-serif",
   monoFont: "'apercu mono', 'Lucida Console', Monaco, monospace",
 } as const;
 
