@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v30.0.0
+
+- Remove all references to 'Avant Garde'/avantgarde font
+- Replace all uses of larssiet font with Skintype Text Medium or Skintype Display (as appropriate)
+
 # v29.0.0
 
 - Update to use explicit ESM and CJS exports
