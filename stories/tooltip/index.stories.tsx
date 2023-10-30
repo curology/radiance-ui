@@ -122,6 +122,7 @@ export const WithControls = () => (
       }
       content={text('Content', 'This is the tooltip text')}
       defaultOpen={boolean('defaultOpen', true)}
+      disableHover={boolean('disableHover', false)}
       display={boolean('display', true)}
       hasRestrictedWidth={boolean('hasRestrictedWidth', false)}
       isSmall={boolean('isSmall', false)}

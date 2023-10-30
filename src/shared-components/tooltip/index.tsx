@@ -32,6 +32,10 @@ export interface TooltipProps {
    */
   defaultOpen?: boolean;
   /**
+   * When true, the tooltip will open on click only and not on hover
+   */
+  disableHover?: boolean;
+  /**
    * Programatically control the tooltip to never show (false) or function as normal (true)
    */
   display?: boolean;
@@ -74,6 +78,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
   children,
   content = '',
   defaultOpen = false,
+  disableHover = false,
   display = true,
   hasRestrictedWidth = false,
   isSmall = false,
@@ -96,6 +101,20 @@ export const Tooltip: React.FC<TooltipProps> = ({
     setHovered(false);
   };
 
+  const handleMouseEnter = () => {
+    if (disableHover) {
+      return;
+    }
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (disableHover) {
+      return;
+    }
+    setHovered(false);
+  };
+
   const open = defaultOpen || clicked || hovered;
 
   return (
@@ -103,12 +122,8 @@ export const Tooltip: React.FC<TooltipProps> = ({
       <Style.MainContainer>
         <Style.Trigger
           onClick={onClick}
-          onMouseEnter={() => {
-            setHovered(true);
-          }}
-          onMouseLeave={() => {
-            setHovered(false);
-          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {children}
         </Style.Trigger>
