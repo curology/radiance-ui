@@ -109,9 +109,6 @@ export const Tooltip: React.FC<TooltipProps> = ({
   };
 
   const handleMouseLeave = () => {
-    if (disableHover) {
-      return;
-    }
     setHovered(false);
   };
 
