@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.1.0
+
+- [Components] Add optional `disableHover` to Tooltip component.
+
 # v30.0.0
 
 - Remove all references to 'Avant Garde'/avantgarde font
@@ -10,12 +14,15 @@
 - Update to use explicit ESM and CJS exports
 
 # v28.1.1
-- Added spironolactone glyph  ([#1847](https://github.com/curology/radiance-ui/pull/1847))
+
+- Added spironolactone glyph ([#1847](https://github.com/curology/radiance-ui/pull/1847))
 
 # v28.1.0
+
 - [Components] Update Chip element to have additional level: info.
 
 # v28.0.1
+
 - [Dependencies] Fix invalid peer-dependency constraints
 
 # v28.0.0
