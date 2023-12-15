@@ -14,6 +14,7 @@ export { default as AzelaicAcidGlyph } from './AzelaicAcidGlyph';
 export { default as BodySunscreenGlyph } from './BodySunscreenGlyph';
 export { default as BreakGlyphSecondary } from './BreakGlyphSecondary';
 export { default as BreakGlyph } from './BreakGlyph';
+export { default as CaffeineGlyph } from './CaffeineGlyph';
 export { default as CheckBadgeGlyphSecondary } from './CheckBadgeGlyphSecondary';
 export { default as CheckBadgeGlyph } from './CheckBadgeGlyph';
 export { default as ChestGlyphSecondary } from './ChestGlyphSecondary';

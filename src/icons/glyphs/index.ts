@@ -13,6 +13,7 @@ export { default as AntiAgingGlyph } from './antiAgingGlyph';
 export { default as AzelaicAcidGlyph } from './azelaicAcidGlyph';
 export { default as BodySunscreenGlyph } from './bodySunscreenGlyph';
 export { default as BreakGlyph } from './breakGlyph';
+export { default as CaffeineGlyph } from './caffeineGlyph';
 export { default as CheckBadgeGlyph } from './checkBadgeGlyph';
 export { default as ChestGlyph } from './chestGlyph';
 export { default as CleanseGlyph } from './cleanseGlyph';
