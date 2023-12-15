@@ -47,6 +47,7 @@ export { default as FlagUkGlyph } from './flagUkGlyph';
 export { default as FlagUsaGlyph } from './flagUsaGlyph';
 export { default as FormulaChangeGlyph } from './formulaChangeGlyph';
 export { default as GlobeGlyph } from './globeGlyph';
+export { default as GlycerinGlyph } from './glycerinGlyph';
 export { default as GreenTeaGlyph } from './greenTeaGlyph';
 export { default as HandWithCreamGlyph } from './handWithCreamGlyph';
 export { default as HydrateGlyph } from './hydrateGlyph';

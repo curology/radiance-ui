@@ -67,6 +67,7 @@ export { default as FlagUsaGlyph } from './FlagUsaGlyph';
 export { default as FormulaChangeGlyphSecondary } from './FormulaChangeGlyphSecondary';
 export { default as FormulaChangeGlyph } from './FormulaChangeGlyph';
 export { default as GlobeGlyph } from './GlobeGlyph';
+export { default as GlycerinGlyph } from './GlycerinGlyph';
 export { default as GreenTeaGlyphSecondary } from './GreenTeaGlyphSecondary';
 export { default as HandWithCreamGlyphSecondary } from './HandWithCreamGlyphSecondary';
 export { default as HydrateGlyph } from './HydrateGlyph';
