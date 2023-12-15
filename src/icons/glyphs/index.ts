@@ -35,6 +35,7 @@ export { default as DexpanthenolGlyph } from './dexpanthenolGlyph';
 export { default as DropperGlyph } from './dropperGlyph';
 export { default as ExerciseGlyph } from './exerciseGlyph';
 export { default as ExfoliatingMaskGlyph } from './exfoliatingMaskGlyph';
+export { default as EyeClosedGlyph } from './eyeClosedGlyph';
 export { default as EyecreamGlyph } from './eyecreamGlyph';
 export { default as FaceGlyph } from './faceGlyph';
 export { default as FemaleGlyph } from './femaleGlyph';

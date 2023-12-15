@@ -50,6 +50,7 @@ export { default as DropperGlyphSecondary } from './DropperGlyphSecondary';
 export { default as DropperGlyph } from './DropperGlyph';
 export { default as ExerciseGlyphSecondary } from './ExerciseGlyphSecondary';
 export { default as ExfoliatingMaskGlyph } from './ExfoliatingMaskGlyph';
+export { default as EyeClosedGlyph } from './EyeClosedGlyph';
 export { default as EyecreamGlyph } from './EyecreamGlyph';
 export { default as FaceGlyphSecondary } from './FaceGlyphSecondary';
 export { default as FaceGlyph } from './FaceGlyph';
