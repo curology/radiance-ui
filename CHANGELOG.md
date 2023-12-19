@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# v30.1.1
+
+- [Icons] Add EyeClosedGlyph
+- [Icons] Add CaffeineGlyph for Agency
+- [Icons] Add GlycerinGlyph for Agency
+
 # v30.1.0
 
 - [Components] Add optional `disableHover` to Tooltip component.
