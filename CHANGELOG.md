@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.1.2
+
+- [Icons] Fix GlycerinGlyph
+
 # v30.1.1
 
 - [Icons] Add EyeClosedGlyph
