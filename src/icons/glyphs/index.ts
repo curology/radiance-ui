@@ -29,6 +29,7 @@ export { default as CombinationGlyph } from './combinationGlyph';
 export { default as ConsultHistoryGlyph } from './consultHistoryGlyph';
 export { default as CourseGlyph } from './courseGlyph';
 export { default as CycleGlyph } from './cycleGlyph';
+export { default as DarkCirclesGlyph } from './darkCirclesGlyph';
 export { default as DarkSpotFormulaGlyph } from './darkSpotFormulaGlyph';
 export { default as DarkSpotsGlyph } from './darkSpotsGlyph';
 export { default as DesonideGlyph } from './desonideGlyph';
