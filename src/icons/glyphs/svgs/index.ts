@@ -42,6 +42,7 @@ export { default as CourseGlyphSecondary } from './CourseGlyphSecondary';
 export { default as CourseGlyph } from './CourseGlyph';
 export { default as CycleGlyphSecondary } from './CycleGlyphSecondary';
 export { default as CycleGlyph } from './CycleGlyph';
+export { default as DarkCirclesGlyph } from './DarkCirclesGlyph';
 export { default as DarkSpotFormulaGlyphSecondary } from './DarkSpotFormulaGlyphSecondary';
 export { default as DarkSpotsGlyphSecondary } from './DarkSpotsGlyphSecondary';
 export { default as DarkSpotsGlyph } from './DarkSpotsGlyph';
