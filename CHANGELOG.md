@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.1.3
+
+- [Icons] Add DarkCirclesGlyph for Agency
+
 # v30.1.2
 
 - [Icons] Fix GlycerinGlyph
