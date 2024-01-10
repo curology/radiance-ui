@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.1.4
+
+- [Icons] Fix DarkCirclesGlyph
+
 # v30.1.3
 
 - [Icons] Add DarkCirclesGlyph for Agency
