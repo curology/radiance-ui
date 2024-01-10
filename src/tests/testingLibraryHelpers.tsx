@@ -24,7 +24,7 @@ interface RenderReturn extends ReactTestingLibrary.RenderResult {
  * container in their unit test** will have test failures on CI due to
  * serialization order being off.
  */
-const usePortalContainer = () => {
+const addPortalContainer = () => {
   const portalContainer = document.createElement('div');
   portalContainer.setAttribute('id', REACT_PORTAL_SECTION_ID);
   document.body.appendChild(portalContainer);
@@ -49,7 +49,7 @@ const customRender = (
 
   return {
     ...ReactTestingLibrary.render(Component, {
-      container: withPortalContainer ? usePortalContainer() : container,
+      container: withPortalContainer ? addPortalContainer() : container,
       wrapper: ({ children }) => (
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
       ),

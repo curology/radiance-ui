@@ -42,10 +42,13 @@ export const OffClickWrapper: React.FC<OffClickWrapperProps> = ({
   useEffect(() => {
     document.addEventListener('click', handleOffClick, { capture: true });
     document.addEventListener('keydown', handleKeyPress, { capture: true });
+
     return () => {
       document.removeEventListener('click', handleOffClick, false);
       document.removeEventListener('keydown', handleKeyPress, false);
     };
+    // Want to maintain existing behavior, but this eslint-disable indicates potential bug surface area.
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- `onOffClick` prop not guaranteed to have referential integrity
   }, []);
 
   return (

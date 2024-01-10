@@ -7,7 +7,6 @@ export interface TabType {
   text: string;
 }
 
-// Hardcoding TabType below to show the actual type in the docs
 export interface TabsProps<TabGeneric extends TabType> {
   initialActiveTabId?: number;
   onClick?: (tab: TabGeneric) => unknown;

@@ -53,21 +53,25 @@ export const Success = () => (
   />
 );
 
-export const WithCallToAction = () => (
-  <Alert
-    content={
-      <React.Fragment>
-        <strong>Whoops!</strong> There was an error updating your address,
-        please try again later
-      </React.Fragment>
-    }
-    type="error"
-    ctaContent="Update Payment Method"
-    onExit={() => {
-      alert('cta alert clicked');
-    }}
-  />
-);
+export const WithCallToAction = () => {
+  const ctaClick = React.useCallback(() => {
+    alert('cta alert clicked');
+  }, []);
+
+  return (
+    <Alert
+      content={
+        <React.Fragment>
+          <strong>Whoops!</strong> There was an error updating your address,
+          please try again later
+        </React.Fragment>
+      }
+      type="error"
+      ctaContent="Update Payment Method"
+      onExit={ctaClick}
+    />
+  );
+};
 
 export const WithImage = () => (
   <Alert
