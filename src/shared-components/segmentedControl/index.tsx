@@ -15,10 +15,6 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
 }) => {
   const itemsCount = segmentItems.length;
 
-  if (itemsCount === 0) {
-    return null;
-  }
-
   const initialActiveItem = segmentItems.find(
     (item: SegmentItemType) => item.id === initialActiveId,
   );
@@ -42,11 +38,11 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
       setTargetWidth(targetRef.current.offsetWidth);
       setTransform(
         `translate3d(${
-          targetRef.current.offsetWidth * activeSegmentIndex
+          targetRef.current.offsetWidth * initialActiveIndex
         }px, 0, 0)`,
       );
     }
-  }, [targetRef]);
+  }, [initialActiveIndex]);
 
   const onSegmentClick = (segment: SegmentItemType, index: number) => {
     setActiveSegmentText(segment.text);
@@ -57,6 +53,10 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
       onClick(segment);
     }
   };
+
+  if (itemsCount === 0) {
+    return null;
+  }
 
   return (
     <SegmentsContainer>

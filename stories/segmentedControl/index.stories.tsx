@@ -47,7 +47,7 @@ const SegmentedControlWithFocusScope: React.FC<
 
   React.useEffect(() => {
     focusManager.focusLast({ wrap: true });
-  }, []);
+  }, [focusManager]);
 
   return <SegmentedControl onClick={onClick} segmentItems={segmentItems} />;
 };
