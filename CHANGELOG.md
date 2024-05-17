@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.2.0
+
+- [Components] Add optional `isRequired` and `displayRequiredOrOptionalText` props to Accordion component.
+
 # v30.1.4
 
 - [Icons] Fix DarkCirclesGlyph
