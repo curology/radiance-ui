@@ -158,7 +158,9 @@ export const WithRequiredTag = () => {
     <Accordion.Container>
       <Accordion
         title={
-          <Accordion.Content>This is Accordion with required/optional tag</Accordion.Content>
+          <Accordion.Content>
+            This is Accordion with required/optional tag
+          </Accordion.Content>
         }
         noBorder
         isOpen={isOpen}
