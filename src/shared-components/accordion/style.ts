@@ -141,7 +141,6 @@ const Tag = styled.div`
   font-size: 0.75rem;
   font-weight: normal;
   padding: ${SPACER.medium} 0;
-  width: 100%;
 `;
 
 export default {
