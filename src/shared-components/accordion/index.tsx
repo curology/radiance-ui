@@ -19,7 +19,7 @@ export interface AccordionProps {
   /** show if the photo is required */
   isRequired?: boolean;
   /** when true, shows Required/Optional tag */
-  showRequiredTag?: boolean;
+  displayRequiredOrOptionalText?: boolean;
   /** when true, border lines between accordions and title/children nodes will disappear */
   noBorder?: boolean;
   /** invoked when title node is clicked */
@@ -50,7 +50,7 @@ export const Accordion: Accordion = ({
   disabled = false,
   isOpen,
   isRequired = false,
-  showRequiredTag = false,
+  displayRequiredOrOptionalText = false,
   noBorder = false,
   onClick,
   rightAlignArrow = false,
@@ -100,7 +100,7 @@ export const Accordion: Accordion = ({
         aria-expanded={isOpen}
       >
         <Style.Truncate>{title}</Style.Truncate>
-        {showRequiredTag && <Style.Tag>{isRequired ? 'Required' : 'Optional'}</Style.Tag>}
+        {displayRequiredOrOptionalText && <Style.Tag>{isRequired ? 'Required' : 'Optional'}</Style.Tag>}
         <Style.ArrowWrapper rightAlign={!!rightAlignArrow}>
           <ChevronIcon rotate={isOpen ? 90 : 0} fill={theme.COLORS.primary} />
         </Style.ArrowWrapper>

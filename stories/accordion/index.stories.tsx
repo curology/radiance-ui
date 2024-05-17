@@ -165,7 +165,7 @@ export const WithRequiredTag = () => {
         noBorder
         isOpen={isOpen}
         isRequired={boolean('isRequired', true)}
-        showRequiredTag={boolean('showRequiredTag', true)}
+        displayRequiredOrOptionalText={boolean('displayRequiredOrOptionalText', true)}
         onClick={onClick}
       >
         <Accordion.Content>
