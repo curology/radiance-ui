@@ -134,12 +134,22 @@ const Container = styled.div<{
   }}
 `;
 
+const Tag = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  font-weight: normal;
+  padding: ${SPACER.medium} 0;
+`;
+
 export default {
   AccordionBox,
   ArrowWrapper,
   Container,
   Content,
   ExpansionWrapper,
+  Tag,
   TitleWrapper,
   Truncate,
 };

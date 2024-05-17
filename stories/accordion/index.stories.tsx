@@ -148,6 +148,43 @@ WithControls.parameters = {
   chromatic: { disable: true },
 };
 
+export const WithRequiredTag = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const onClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <Accordion.Container>
+      <Accordion
+        title={
+          <Accordion.Content>
+            This is Accordion with required/optional tag
+          </Accordion.Content>
+        }
+        noBorder
+        isOpen={isOpen}
+        isRequired={boolean('isRequired', true)}
+        displayRequiredOrOptionalText={boolean(
+          'displayRequiredOrOptionalText',
+          true,
+        )}
+        onClick={onClick}
+      >
+        <Accordion.Content>
+          This is styled with Accordion.Content
+        </Accordion.Content>
+      </Accordion>
+    </Accordion.Container>
+  );
+};
+
+WithControls.id = `${ACCORDION_STORY_ID_PREFIX}with-required-tag`;
+
+WithControls.parameters = {
+  chromatic: { disable: true },
+};
+
 interface AccordionStories extends Meta {
   title: string;
 }
