@@ -1,30 +1,36 @@
 import { primaryTheme } from './primaryTheme';
 import { secondaryTheme } from './secondaryTheme';
+import { secondaryRebrandTheme } from './secondaryRebrandTheme';
 import { tertiaryTheme } from './tertiaryTheme';
 
 type BorderRadius =
   | typeof primaryTheme['BORDER_RADIUS']
   | typeof secondaryTheme['BORDER_RADIUS']
+  | typeof secondaryRebrandTheme['BORDER_RADIUS']
   | typeof tertiaryTheme['BORDER_RADIUS'];
 
 type BoxShadows =
   | typeof primaryTheme['BOX_SHADOWS']
   | typeof secondaryTheme['BOX_SHADOWS']
+  | typeof secondaryRebrandTheme['BOX_SHADOWS']
   | typeof tertiaryTheme['BOX_SHADOWS'];
 
 export type Colors =
   | typeof primaryTheme['COLORS']
   | typeof secondaryTheme['COLORS']
+  | typeof secondaryRebrandTheme['COLORS']
   | typeof tertiaryTheme['COLORS'];
 
 type Fonts =
   | typeof primaryTheme['FONTS']
   | typeof secondaryTheme['FONTS']
+  | typeof secondaryRebrandTheme['FONTS']
   | typeof tertiaryTheme['FONTS'];
 
 type Typography =
   | typeof primaryTheme['TYPOGRAPHY']
   | typeof secondaryTheme['TYPOGRAPHY']
+  | typeof secondaryRebrandTheme['TYPOGRAPHY']
   | typeof tertiaryTheme['TYPOGRAPHY'];
 
 export type ThemeColors = valueof<Colors>;
@@ -35,5 +41,5 @@ export interface ThemeType {
   COLORS: Colors;
   FONTS: Fonts;
   TYPOGRAPHY: Typography;
-  __type: 'primary' | 'secondary' | 'tertiary';
+  __type: 'primary' | 'secondary' | 'secondaryRebrand' | 'tertiary';
 }
