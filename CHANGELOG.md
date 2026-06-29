@@ -1,5 +1,10 @@
 # CHANGELOG
 
+# v30.3.0
+
+- [Theme] Added `secondaryRebrand` theme that is a functional duplicate of `secondary` to be used for the Agency rebrand project. 
+
+
 # v30.2.0
 
 - [Components] Add optional `isRequired` and `displayRequiredOrOptionalText` props to Accordion component.
