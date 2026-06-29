@@ -15,6 +15,7 @@ import { textColorsAssociatedWithColors } from './constants';
 import {
   primaryButtonBackgroundColor,
   primaryButtonFontColor,
+  setButtonBorderRadius,
   setThemeLineHeight,
 } from '../../utils/themeStyles';
 import { isDefined } from '../../utils/isDefined';
@@ -172,7 +173,7 @@ export const baseButtonStyles = ({
 }: BaseButtonStylesTypes) => `
   ${TYPOGRAPHY_STYLE.button(theme)}
   appearance: none;
-  border-radius: ${theme.BORDER_RADIUS.small};
+  border-radius: ${setButtonBorderRadius(theme)};
   border-style: solid;
   border-width: 1px;
   cursor: pointer;

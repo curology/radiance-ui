@@ -26,9 +26,15 @@ const THEME_FAMILY: Record<
   secondaryRebrand: 'secondaryRebrand',
 };
 
+export const setHeadingColor = (theme: ThemeType) =>
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
+    ? theme.COLORS.secondary
+    : theme.COLORS.primary;
+
 export const primaryButtonFontColor = (theme: ThemeType) =>
   THEME_FAMILY[theme.__type] === 'primary' ||
-  THEME_FAMILY[theme.__type] === 'tertiary'
+  THEME_FAMILY[theme.__type] === 'tertiary' ||
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
     ? theme.COLORS.white
     : theme.COLORS.primary;
 
@@ -36,15 +42,19 @@ export const primaryButtonBackgroundColor = (
   theme: ThemeType,
   buttonColor: ThemeColors,
 ) => {
-  if (
-    buttonColor === theme.COLORS.primary &&
-    (THEME_FAMILY[theme.__type] === 'secondary' ||
-      THEME_FAMILY[theme.__type] === 'secondaryRebrand')
-  ) {
+  // If buttonColor is not COLORS.primary then it is custom, return as is
+  if (buttonColor !== theme.COLORS.primary) {
+    return buttonColor;
+  }
+
+  if (THEME_FAMILY[theme.__type] === 'secondaryRebrand') {
+    return theme.COLORS.backgroundDark;
+  }
+
+  if (THEME_FAMILY[theme.__type] === 'secondary') {
     return theme.COLORS.secondary;
   }
 
-  // If buttonColor is not COLORS.primary then it is custom, return as is
   return buttonColor;
 };
 
@@ -54,6 +64,10 @@ export const primaryButtonLoadingBackgroundColor = (theme: ThemeType) =>
     ? theme.COLORS.white
     : theme.COLORS.primary;
 
+export const setButtonBorderRadius = (theme: ThemeType) =>
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
+    ? '360px'
+    : theme.BORDER_RADIUS.small;
 /**
  * We use theme.FONTS.baseFont for all primary styles, but use a
  * different secondary font for Display, Heading, and Title styles
@@ -66,9 +80,13 @@ export const setSecondaryHeadingFont = (theme: ThemeType) =>
 
 export const setButtonStyleFontWeight = (theme: ThemeType) =>
   THEME_FAMILY[theme.__type] === 'primary' ||
-  THEME_FAMILY[theme.__type] === 'tertiary'
+  THEME_FAMILY[theme.__type] === 'tertiary' ||
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
     ? `font-weight: ${theme.TYPOGRAPHY.fontWeight.bold};`
     : '';
+
+export const setButtonTextTransform = (theme: ThemeType) =>
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand' ? 'none' : 'uppercase';
 
 export const setThemeLineHeight = (
   theme: ThemeType,

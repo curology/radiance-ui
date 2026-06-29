@@ -3,6 +3,8 @@ import round from 'lodash.round';
 
 import {
   setButtonStyleFontWeight,
+  setButtonTextTransform,
+  setHeadingColor,
   setSecondaryHeadingFont,
   setThemeFontWeight,
   setThemeLineHeight,
@@ -10,7 +12,7 @@ import {
 import type { ThemeType } from '../../constants';
 
 const displayStyle = (theme: ThemeType) => `
-  color: ${theme.COLORS.primary};
+  color: ${setHeadingColor(theme)};
   font-size: ${theme.TYPOGRAPHY.fontSize.display};
   font-weight: ${setThemeFontWeight(theme)};
   line-height: ${setThemeLineHeight(theme, round(48 / 36, 2))};
@@ -18,7 +20,7 @@ const displayStyle = (theme: ThemeType) => `
 `;
 
 const headingStyle = (theme: ThemeType) => `
-  color: ${theme.COLORS.primary};
+  color: ${setHeadingColor(theme)};
   font-size: ${theme.TYPOGRAPHY.fontSize.heading};
   font-weight: ${setThemeFontWeight(theme)};
   line-height: ${setThemeLineHeight(theme, round(40 / 24, 2))};
@@ -26,7 +28,7 @@ const headingStyle = (theme: ThemeType) => `
 `;
 
 const titleStyle = (theme: ThemeType) => `
-  color: ${theme.COLORS.primary};
+  color: ${setHeadingColor(theme)};
   font-size: ${theme.TYPOGRAPHY.fontSize.title};
   line-height: ${setThemeLineHeight(theme, round(32 / 20, 2))};
   font-weight: ${setThemeFontWeight(theme)};
@@ -77,7 +79,7 @@ const buttonStyle = (theme: ThemeType) => `
   line-height: ${setThemeLineHeight(theme, round(20 / 12, 2))};
   ${setButtonStyleFontWeight(theme)}
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: ${setButtonTextTransform(theme)};
 `;
 
 /**

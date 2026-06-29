@@ -1,24 +1,24 @@
 const fontSize = {
   /**
-   * 36px
+   * 32px
    */
-  display: '2.25rem',
+  display: '2rem',
+  /**
+   * 32px
+   */
+  heading: '2rem',
   /**
    * 24px
    */
-  heading: '1.5rem',
+  title: '1.5rem',
   /**
-   * 20px
+   * 14px
    */
-  title: '1.25rem',
+  body: '0.875rem',
   /**
-   * 16px
+   * 14px
    */
-  body: '1rem',
-  /**
-   * 16px
-   */
-  bodyBold: '1rem',
+  bodyBold: '0.875rem',
   /**
    * 14px
    */
@@ -28,9 +28,9 @@ const fontSize = {
    */
   link: '0.875rem',
   /**
-   * 14px
+   * 16px
    */
-  button: '0.875rem',
+  button: '1rem',
   /**
    * 12px
    */

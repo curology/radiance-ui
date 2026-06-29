@@ -4,7 +4,12 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import addons, { StoryContext } from '@storybook/addons';
 import { ThemeProvider } from '@emotion/react';
 import Theme from './theme';
-import { primaryTheme, secondaryTheme, tertiaryTheme } from '../src/constants/themes';
+import {
+  primaryTheme,
+  secondaryTheme,
+  secondaryRebrandTheme,
+  tertiaryTheme,
+} from '../src/constants/themes';
 import type { ThemeType } from '../src/constants/themes/types';
 import { BREAKPOINTS } from '../src/constants';
 import { BrandStyles, ResetStyles } from '../src';
@@ -68,6 +73,10 @@ export const globalTypes = {
           value: tertiaryTheme.__type,
           title: 'Tertiary Theme',
         },
+        {
+          value: secondaryRebrandTheme.__type,
+          title: 'Secondary Rebrand Theme',
+        },
       ],
     },
   },
@@ -77,6 +86,7 @@ const getTheme = (theme: ThemeType['__type']) => {
   if (theme === primaryTheme.__type) return primaryTheme;
   if (theme === secondaryTheme.__type) return secondaryTheme;
   if (theme === tertiaryTheme.__type) return tertiaryTheme;
+  if (theme === secondaryRebrandTheme.__type) return secondaryRebrandTheme;
 
   throw new Error('No Theme Found');
 };
