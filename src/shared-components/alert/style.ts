@@ -32,7 +32,10 @@ const fadeInMobile = keyframes`
 `;
 
 const defaultAlertStyles = (theme: ThemeType) => `
-  background-color: ${theme.COLORS.primary};
+  background-color: ${( theme.__type === 'secondaryRebrand'
+      ? theme.COLORS.backgroundDark
+      : theme.COLORS.primary
+  )};
   box-shadow: 0px 8px 24px rgba(51, 46, 84, 0.05);
 `;
 

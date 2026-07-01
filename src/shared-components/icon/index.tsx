@@ -45,13 +45,19 @@ export const useIcon = (
   PrimaryIcon: SVGComponent | null,
   SecondaryIcon: SVGComponent | null,
   props: IconProps,
+  /*
+   * Optional; defaults to the secondary icon so existing callers are unaffected
+   * and the rebrand theme falls back to secondary until a rebrand icon is passed.
+   */
+  SecondaryRebrandIcon: SVGComponent | null = SecondaryIcon,
 ) => {
   const theme = useTheme();
 
-  const ThemeIcon =
-    theme.__type === 'primary' || theme.__type === 'tertiary'
-      ? PrimaryIcon
-      : SecondaryIcon;
+  let ThemeIcon: SVGComponent | null;
+  if (theme.__type === 'secondaryRebrand') ThemeIcon = SecondaryRebrandIcon;
+  else if (theme.__type === 'primary' || theme.__type === 'tertiary')
+    ThemeIcon = PrimaryIcon;
+  else ThemeIcon = SecondaryIcon;
 
   if (ThemeIcon === null) return null;
 

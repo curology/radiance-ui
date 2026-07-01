@@ -214,7 +214,11 @@ export const brandStyles = (theme: ThemeType) => `
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     ${baseBodyStyles(theme)}
-    background-color: ${theme.COLORS.white};
+    background-color: ${
+      theme.__type === 'secondaryRebrand'
+        ? theme.COLORS.background
+        : theme.COLORS.white
+    };
     font-family: ${theme.FONTS.baseFont};
     font-weight: ${theme.TYPOGRAPHY.fontWeight.normal};
     margin: 0;
