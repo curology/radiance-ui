@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.3.1
+
+- [Theme] Added unique type, colors, logo, and styling for `secondaryRebrand` theme
+
 # v30.3.0
 
 - [Theme] Added `secondaryRebrand` theme that is a functional duplicate of `secondary` to be used for the Agency rebrand project. 

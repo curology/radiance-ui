@@ -40,6 +40,8 @@ Documentation around usage can be found in the respective Docs page of every com
 You'll need access to publish to NPM so this part only applies to a few
 people (mostly within the Curology organization). 
 
+You'll have to log into npm (https://www.npmjs.com/login) using the credentials found in the `Tech - Product Engineering` 1Password vault. Use the recovery codes when prompted for 2fa OTP. Each code can only be used once. Regen codes when done.
+
 1. Once approved in Github and Chromatic (if applicable), merge your PR(s) into master.
 2. Check out the master branch, fetch and pull.
 3. Commit an update to the CHANGELOG.md file with details.
