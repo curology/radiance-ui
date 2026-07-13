@@ -2,7 +2,11 @@ import styled from '@emotion/styled';
 
 import { TYPOGRAPHY_STYLE } from '../typography';
 import { SPACER, ThemeColors } from '../../constants';
-import { applyPrimaryThemeVerticalOffset } from '../../utils/themeStyles';
+import {
+  applyPrimaryThemeVerticalOffset,
+  setChipBackgroundColor,
+  setChipTextColor,
+} from '../../utils/themeStyles';
 
 const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
@@ -24,10 +28,11 @@ const ChipStyles = styled.div<ChipStylesProps>`
   justify-content: center;
   align-items: center;
   padding: 0 ${SPACER.small};
-  background-color: ${({ backgroundColor }) => backgroundColor};
+  background-color: ${({ theme, backgroundColor }) =>
+    setChipBackgroundColor(theme, backgroundColor)};
 
   ${ChipText} {
-    color: ${({ textColor }) => textColor};
+    color: ${({ theme, textColor }) => setChipTextColor(theme, textColor)};
   }
 `;
 

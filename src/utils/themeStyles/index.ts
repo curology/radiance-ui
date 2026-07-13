@@ -68,6 +68,19 @@ export const setButtonBorderRadius = (theme: ThemeType) =>
   THEME_FAMILY[theme.__type] === 'secondaryRebrand'
     ? '360px'
     : theme.BORDER_RADIUS.small;
+
+export const setChipBackgroundColor = (
+  theme: ThemeType,
+  backgroundColor: ThemeColors,
+) =>
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
+    ? theme.COLORS.defaultLight
+    : backgroundColor;
+
+export const setChipTextColor = (theme: ThemeType, textColor: ThemeColors) =>
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
+    ? theme.COLORS.default
+    : textColor;
 /**
  * We use theme.FONTS.baseFont for all primary styles, but use a
  * different secondary font for Display, Heading, and Title styles

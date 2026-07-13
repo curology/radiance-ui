@@ -45,7 +45,11 @@ const SelectorIcon = styled.div<{ disabled: boolean }>`
 
 const primarySelectorStyle = (checked: boolean, theme: ThemeType) => `
   background-color: ${checked ? theme.COLORS.primary : 'transparent'};
-  border-color: ${theme.COLORS.primary};
+  border-color: ${
+    theme.__type === 'secondaryRebrand'
+      ? theme.COLORS.border
+      : theme.COLORS.primary
+  };
 `;
 
 const secondarySelectorStyle = (checked: boolean, theme: ThemeType) => `

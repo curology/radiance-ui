@@ -12,6 +12,10 @@ const fontSize = {
    */
   title: '1.25rem',
   /**
+   * 20px
+   */
+  subtitle: '1.25rem',
+  /**
    * 16px
    */
   body: '1rem',

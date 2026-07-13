@@ -35,6 +35,14 @@ const titleStyle = (theme: ThemeType) => `
   ${setSecondaryHeadingFont(theme)}
 `;
 
+const subtitleStyle = (theme: ThemeType) => `
+  color: ${setHeadingColor(theme)};
+  font-size: ${theme.TYPOGRAPHY.fontSize.subtitle};
+  line-height: ${setThemeLineHeight(theme, round(32 / 20, 2))};
+  font-weight: ${setThemeFontWeight(theme)};
+  ${setSecondaryHeadingFont(theme)}
+`;
+
 export const baseBodyStyles = (theme: ThemeType) => `
   color: ${theme.COLORS.primaryTint1};
   font-size: ${theme.TYPOGRAPHY.fontSize.body};
@@ -109,6 +117,7 @@ export const TYPOGRAPHY_STYLE = {
   display: displayStyle,
   heading: headingStyle,
   title: titleStyle,
+  subtitle: subtitleStyle,
   body: bodyStyle,
   bodyBold: bodyBoldStyle,
   caption: captionStyle,
@@ -144,6 +153,9 @@ const Label = styled.label`
 const Link = styled.a`
   ${({ theme }) => linkStyle(theme)}
 `;
+const Subtitle = styled.h4`
+  ${({ theme }) => subtitleStyle(theme)}
+`;
 const Success = styled.p`
   ${({ theme }) => successStyle(theme)}
 `;
@@ -160,6 +172,7 @@ export const Typography = {
   Heading,
   Label,
   Link,
+  Subtitle,
   Success,
   Title,
 } as const;

@@ -1,6 +1,6 @@
 {
   "name": "radiance-ui",
-  "version": "30.3.1",
+  "version": "30.3.2",
   "description": "Curology's React based component library",
   "main": "lib/index.cjs",
   "module": "lib/index.js",
@@ -87,7 +87,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PocketDerm/radiance-ui.git"
+    "url": "git+https://github.com/curology/radiance-ui.git"
   },
   "keywords": [
     "curology",
@@ -97,9 +97,9 @@
   "author": "Curology <engineering@curology.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PocketDerm/radiance-ui/issues"
+    "url": "https://github.com/curology/radiance-ui/issues"
   },
-  "homepage": "https://github.com/PocketDerm/radiance-ui#readme",
+  "homepage": "https://github.com/curology/radiance-ui#readme",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
