@@ -1,6 +1,6 @@
 {
   "name": "radiance-ui",
-  "version": "30.3.1",
+  "version": "30.3.2",
   "description": "Curology's React based component library",
   "main": "lib/index.cjs",
   "module": "lib/index.js",
