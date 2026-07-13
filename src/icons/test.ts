@@ -7,10 +7,11 @@ import fs from 'fs';
  * @example
  * transformFileName("SomeIconPrimary.tsx") === "someicon"
  * transformFileName("SomeIconSecondary.tsx") === "someicon"
+ * transformFileName("SomeIconSecondaryRebrand.tsx") === "someicon"
  * transformFileName("someIcon.ts") === "someicon"
  */
 const transformIconFileNames = (fileName: string) =>
-  fileName.toLowerCase().replace(/(-|.tsx$|.ts$|primary|secondary)/g, '');
+  fileName.toLowerCase().replace(/(-|.tsx$|.ts$|primary|secondary|rebrand)/g, '');
 
 const transformSvgFileNames = (fileName: string) =>
   fileName.toLowerCase().replace(/(-|.tsx$|.ts$|.svg$)/g, '');
