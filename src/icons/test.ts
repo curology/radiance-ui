@@ -11,7 +11,9 @@ import fs from 'fs';
  * transformFileName("someIcon.ts") === "someicon"
  */
 const transformIconFileNames = (fileName: string) =>
-  fileName.toLowerCase().replace(/(-|.tsx$|.ts$|primary|secondary|rebrand)/g, '');
+  fileName
+    .toLowerCase()
+    .replace(/(-|.tsx$|.ts$|primary|secondary|rebrand)/g, '');
 
 const transformSvgFileNames = (fileName: string) =>
   fileName.toLowerCase().replace(/(-|.tsx$|.ts$|.svg$)/g, '');
