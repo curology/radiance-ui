@@ -13,6 +13,7 @@ const {
    */
   primaryTheme: _primaryTheme,
   secondaryTheme: _secondaryTheme,
+  secondaryRebrandTheme: _secondaryRebrandTheme,
   tertiaryTheme: _tertiaryTheme,
   REACT_PORTAL_SECTION_ID: _REACT_PORTAL_SECTION_ID,
   BORDER_RADIUS_PROP_TYPES: _BORDER_RADIUS_PROP_TYPES,
