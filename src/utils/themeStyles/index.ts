@@ -81,6 +81,11 @@ export const setChipTextColor = (theme: ThemeType, textColor: ThemeColors) =>
   THEME_FAMILY[theme.__type] === 'secondaryRebrand'
     ? theme.COLORS.default
     : textColor;
+
+export const setChipFontWeight = (theme: ThemeType) =>
+  THEME_FAMILY[theme.__type] === 'secondaryRebrand'
+    ? theme.TYPOGRAPHY.fontWeight.normal
+    : theme.TYPOGRAPHY.fontWeight.bold;
 /**
  * We use theme.FONTS.baseFont for all primary styles, but use a
  * different secondary font for Display, Heading, and Title styles

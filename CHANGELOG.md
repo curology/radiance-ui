@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.3.3
+
+- [Components] fixing error and success colors and chip text font weight for `secondaryRebrand`
+
 # v30.3.2
 
 - [Components] Added subtitle font size to all themes, with only `secondaryRebrand` haveing the only unique size for that definition. Includes specific chip styling for `secondaryRebrand`
