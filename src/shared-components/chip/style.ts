@@ -5,12 +5,13 @@ import { SPACER, ThemeColors } from '../../constants';
 import {
   applyPrimaryThemeVerticalOffset,
   setChipBackgroundColor,
+  setChipFontWeight,
   setChipTextColor,
 } from '../../utils/themeStyles';
 
 const ChipText = styled.span`
   ${({ theme }) => TYPOGRAPHY_STYLE.label(theme)}
-  font-weight: ${({ theme }) => theme.TYPOGRAPHY.fontWeight.bold};
+  font-weight: ${({ theme }) => setChipFontWeight(theme)};
   ${({ theme }) => applyPrimaryThemeVerticalOffset(theme)};
 `;
 
