@@ -45,6 +45,7 @@ You'll have to log into npm (https://www.npmjs.com/login) using the credentials 
 1. Once approved in Github and Chromatic (if applicable), merge your PR(s) into master.
 2. Check out the master branch, fetch and pull.
 3. Commit an update to the CHANGELOG.md file with details.
+4. Run `npm login` and use the creds in the `Tech - Product Engineering` 1Password vault.
 4. Run `yarn run publish-package` to build the bundled files and publish
    to NPM.
 5. Push changes made to `package.json` to remote repository
