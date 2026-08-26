@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# v30.4.0
+
+- [Theme] `secondaryRebrand` now sets `borderRadius.medium` to `8px`, `borderRadius.large` to `32px`, `boxShadows.clickable` to `0px 8px 24px rgba(52, 51, 82, 0.05)` and `boxShadows.modal` to `0px -8px 24px rgba(52, 51, 82, 0.05)`, diverging from the `secondary` theme it was forked from. Legacy Agency was deliberately square and shadowless, and used a warm `rgba(45, 41, 38, …)` sheet shadow; the rebrand design is not and does not. This gives cards their `8px` corners, restores the `32px` top edge on `ImmersiveModal` and `DialogModal`, gives clickable surfaces their shadow, and corrects the modal sheet shadow to the colour the design specifies. `borderRadius.small` and `boxShadows.clickableHover` intentionally keep their `secondary` values — the rebrand design has no evidence for changing either.
+
 # v30.3.3
 
 - [Components] fixing error and success colors and chip text font weight for `secondaryRebrand`
