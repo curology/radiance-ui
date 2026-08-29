@@ -108,7 +108,7 @@ const Selector = styled.div<{
   }
 `;
 
-const TextContainer = styled.p`
+const TextContainer = styled.div`
   margin-left: ${SPACER.medium};
   margin-top: ${SPACER.xsmall};
   min-width: 125px;
